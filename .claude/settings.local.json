@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(node -e ' *)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(cp \"/root/.claude/projects/-home-user-FeedSolve-landing-page-/184f2ef1-b63c-4b18-98c5-6ec7ceccbfa9/tool-results/webfetch-1777108229031-eqak21.bin\" /tmp/template.gz)",
+      "Bash(gunzip -f /tmp/template.gz)",
+      "Read(//tmp/**)"
     ]
   }
 }
