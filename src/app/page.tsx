@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import {
   ArrowRight,
   Play,
@@ -57,16 +58,6 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-function useScrollNavbar() {
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return scrolled;
-}
-
 function useCounter(target: number, duration = 1200) {
   const [value, setValue] = useState(0);
   const started = useRef(false);
@@ -84,83 +75,6 @@ function useCounter(target: number, duration = 1200) {
     return () => clearTimeout(timer);
   }, [target, duration]);
   return value;
-}
-
-function Navbar() {
-  const scrolled = useScrollNavbar();
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const closeMobileMenu = () => setMenuOpen(false);
-
-  useEffect(() => {
-    const onScroll = () => closeMobileMenu();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return (
-    <>
-      <nav id="navbar" className={scrolled ? "scrolled" : ""}>
-        <div className="nav-inner">
-          <a href="#hero" className="nav-logo">
-            <Image src="/logo.png" alt="FeedSolve" width={34} height={34} />
-            <span className="nav-logo-text">FeedSolve</span>
-          </a>
-          <ul className="nav-links">
-            <li>
-              <a href="#solution">Product</a>
-            </li>
-            <li>
-              <a href="#pricing">Pricing</a>
-            </li>
-            <li>
-              <a href="#demo">Demo</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
-          </ul>
-          <div className="nav-actions">
-            <a href="#" className="btn-ghost">
-              Login
-            </a>
-            <a href="#" className="btn-primary teal">
-              Try Now
-            </a>
-            <button
-              className={`nav-hamburger${menuOpen ? " open" : ""}`}
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </nav>
-      <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
-        <a href="#solution" onClick={closeMobileMenu}>
-          Product
-        </a>
-        <a href="#pricing" onClick={closeMobileMenu}>
-          Pricing
-        </a>
-        <a href="#demo" onClick={closeMobileMenu}>
-          Demo
-        </a>
-        <a href="/blog" onClick={closeMobileMenu}>
-          Blog
-        </a>
-        <a href="#" onClick={closeMobileMenu}>
-          Login
-        </a>
-        <a href="#" className="mobile-cta" onClick={closeMobileMenu}>
-          Try Now It&apos;s Free
-        </a>
-      </div>
-    </>
-  );
 }
 
 function Hero() {
@@ -189,7 +103,7 @@ function Hero() {
             every issue to resolution with a simple link and QR code.
           </p>
           <div className="hero-ctas">
-            <a href="#" className="btn-primary teal">
+            <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
               Try Now <ArrowRight size={16} />
             </a>
             <a href="#demo" className="btn-outline">
@@ -1128,9 +1042,9 @@ function Pricing() {
                 ))}
               </div>
               {plan.tier === "Free" ? (
-                <button className={plan.ctaClass}>{plan.cta}</button>
+                <a href="https://app.feedsolve.com/signup" className={plan.ctaClass} target="_blank" rel="noopener noreferrer">{plan.cta}</a>
               ) : (
-                <a href="#" className={plan.ctaClass}>
+                <a href="https://app.feedsolve.com/signup" className={plan.ctaClass} target="_blank" rel="noopener noreferrer">
                   {plan.cta}
                 </a>
               )}
@@ -1481,7 +1395,7 @@ function FinalCTA() {
         </h2>
         <p>Start collecting and resolving feedback today.</p>
         <div className="cta-btns">
-          <a href="#" className="btn-primary teal">
+          <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
             Try Now It&apos;s Free <ArrowRight size={17} />
           </a>
         </div>
@@ -1490,32 +1404,6 @@ function FinalCTA() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer>
-      <div className="footer-inner">
-        <div className="footer-logo">
-          <Image src="/logo.png" alt="FeedSolve" width={28} height={28} />
-          <span className="footer-logo-text">FeedSolve</span>
-        </div>
-        <div className="footer-links">
-          <a href="#solution">Product</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#">Contact</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms</a>
-        </div>
-      </div>
-      <div className="footer-copy">
-        © 2026 FeedSolve. All rights reserved. &nbsp;·&nbsp; A product of{" "}
-        <strong style={{ color: "rgba(255,255,255,0.45)", fontWeight: 600 }}>
-          Lumora Ventures Pvt. Ltd.
-        </strong>
-      </div>
-    </footer>
   );
 }
 

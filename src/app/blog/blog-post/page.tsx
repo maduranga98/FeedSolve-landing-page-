@@ -1,78 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import {
   ArrowRight, ChevronRight, Flame, Calendar, Clock, Eye,
   Check, X, MessageCircle, Mail, ClipboardList,
   Link as LinkIcon, Share2, ExternalLink,
 } from "lucide-react";
-
-function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  return (
-    <>
-      <nav className="scrolled">
-        <div className="nav-inner">
-          <Link href="/" className="nav-logo">
-            <Image src="/feedsolve.png" alt="FeedSolve" width={34} height={34} />
-            <span className="nav-logo-text">FeedSolve</span>
-          </Link>
-          <ul className="nav-links">
-            <li><Link href="/#solution">Product</Link></li>
-            <li><Link href="/#pricing">Pricing</Link></li>
-            <li><Link href="/#demo">Demo</Link></li>
-            <li><Link href="/blog" style={{ color: "var(--navy)", fontWeight: 600 }}>Blog</Link></li>
-          </ul>
-          <div className="nav-actions">
-            <a href="#" className="btn-ghost">Login</a>
-            <a href="#" className="btn-primary teal">Try Now</a>
-            <button
-              className={`nav-hamburger${menuOpen ? " open" : ""}`}
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Menu"
-            >
-              <span></span><span></span><span></span>
-            </button>
-          </div>
-        </div>
-      </nav>
-      <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
-        <Link href="/#solution" onClick={() => setMenuOpen(false)}>Product</Link>
-        <Link href="/#pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
-        <Link href="/#demo" onClick={() => setMenuOpen(false)}>Demo</Link>
-        <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-        <a href="#">Login</a>
-        <a href="#" className="mobile-cta">Try Now It&apos;s Free</a>
-      </div>
-    </>
-  );
-}
-
-function Footer() {
-  return (
-    <footer>
-      <div className="footer-inner">
-        <div className="footer-logo">
-          <Image src="/feedsolve.png" alt="FeedSolve" width={28} height={28} />
-          <span className="footer-logo-text">FeedSolve</span>
-        </div>
-        <div className="footer-links">
-          <Link href="/#solution">Product</Link>
-          <Link href="/#pricing">Pricing</Link>
-          <Link href="/blog">Blog</Link>
-          <a href="#">Contact</a>
-          <a href="#">Privacy Policy</a>
-        </div>
-      </div>
-      <div className="footer-copy">
-        © 2026 FeedSolve. All rights reserved. &nbsp;·&nbsp; A product of{" "}
-        <strong style={{ color: "rgba(255,255,255,0.45)", fontWeight: 600 }}>Lumora Ventures Pvt. Ltd.</strong>
-      </div>
-    </footer>
-  );
-}
 
 const tocSections = [
   { id: "sec-1", label: "The WhatsApp trap" },
@@ -117,7 +53,7 @@ export default function BlogPost() {
         <div className="reading-progress-fill" style={{ width: `${progress}%` }} />
       </div>
 
-      <Navbar />
+      <Navbar variant="blog" />
 
       {/* ARTICLE LAYOUT */}
       <div className="article-wrap">
@@ -461,7 +397,7 @@ export default function BlogPost() {
         </div>
       </div>
 
-      <Footer />
+      <Footer variant="blog" />
     </>
   );
 }
