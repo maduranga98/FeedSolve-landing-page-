@@ -54,5 +54,6 @@
         ]
       }
     ]
+    "cleanUrls": true
   }
 }
