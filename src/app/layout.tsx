@@ -25,10 +25,46 @@ const lora = Lora({
   display: "swap",
 });
 
+const SITE_URL = "https://feedsolve-e9483.web.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "FeedSolve — Stop losing complaints. Start closing them.",
   description:
     "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+  openGraph: {
+    title: "FeedSolve — Stop losing complaints. Start closing them.",
+    description:
+      "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+    url: SITE_URL,
+    siteName: "FeedSolve",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FeedSolve — Stop losing complaints. Start closing them.",
+    description:
+      "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "FeedSolve",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.webp`,
+  description:
+    "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+  sameAs: [],
 };
 
 export default function RootLayout({
@@ -38,7 +74,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable}`}>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
