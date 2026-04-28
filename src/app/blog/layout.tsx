@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "Practical guides, case studies, and ideas for teams who take customer feedback seriously.",
   },
   alternates: {
-    canonical: "https://feedsolve-e9483.web.app/blog",
+    canonical: "https://feedsolve.com/blog",
   },
 };
 

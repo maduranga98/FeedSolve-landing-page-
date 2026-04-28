@@ -25,7 +25,7 @@ const lora = Lora({
   display: "swap",
 });
 
-const SITE_URL = "https://feedsolve-e9483.web.app";
+const SITE_URL = "https://feedsolve.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

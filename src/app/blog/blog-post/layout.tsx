@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "Most businesses run their entire complaints process through a WhatsApp group. Here is why that breaks down at scale and what to do instead.",
   },
   alternates: {
-    canonical: "https://feedsolve-e9483.web.app/blog/blog-post",
+    canonical: "https://feedsolve.com/blog/blog-post",
   },
 };
 

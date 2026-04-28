@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://feedsolve-e9483.web.app";
+  const baseUrl = "https://feedsolve.com";
 
   return [
     {
