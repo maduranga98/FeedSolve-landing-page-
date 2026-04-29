@@ -6,20 +6,45 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   ArrowRight, BookOpen, Star, Search, ChevronLeft, ChevronRight,
-  MessageCircle, ArrowDown, XCircle,
+  MessageCircle, ArrowDown, XCircle, CheckCircle2,
 } from "lucide-react";
+import blogData from "@/data/blog.json";
 
 const categories = [
   { id: "all", label: "All Posts" },
   { id: "operations", label: "Operations" },
   { id: "qr", label: "QR Codes" },
-  { id: "product", label: "Product" },
   { id: "guides", label: "Guides" },
-  { id: "casestudy", label: "Case Studies" },
+  { id: "product", label: "Product" },
+  { id: "comparison", label: "Comparison" },
 ];
 
-const posts = [
-  {
+const excerpts: Record<number, string> = {
+  1: "The percentage of complaints your team actually resolves — and why tracking it matters more than NPS.",
+  2: "Collect feedback via QR code without requiring login. Here's how to set one up in minutes.",
+  3: "Replace WhatsApp threads with a structured supplier feedback tool — with QR boards and resolution tracking.",
+  4: "Give guests a QR code to report issues instantly, and resolve them before they become public reviews.",
+  5: "Replace the physical suggestion box with a digital version that includes tracking codes and a resolution workflow.",
+  6: "Give residents a QR code to submit maintenance requests — and track every issue to resolution.",
+  7: "Requiring registration before submission reduces response rates by 40–70%. Here's what to use instead.",
+  8: "A 5-stage Kanban model that moves complaints from received to resolved with full accountability.",
+  9: "One is a survey builder, the other is a feedback resolution platform. See which fits your use case.",
+  10: "Close channel blind spots with structured distributor feedback — tracking codes and resolution workflow built in.",
+};
+
+const postVisuals: Record<number, {
+  cat: string;
+  imgBg: string;
+  img: React.ReactNode;
+  tagLabel: string;
+  tagStyle: { background: string; color: string };
+  avatarBg: string;
+  avatarInitials: string;
+  author: string;
+  date: string;
+  readTime: string;
+}> = {
+  1: {
     cat: "operations",
     imgBg: "linear-gradient(135deg,#E8F4F8 0%,#C8E6C9 100%)",
     img: (
@@ -35,15 +60,12 @@ const posts = [
     tagLabel: "Operations",
     tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
     avatarBg: "var(--navy)",
-    avatarInitials: "SR",
-    title: "How to build a zero-leakage complaint resolution process",
-    excerpt: "A step-by-step guide to making sure every single complaint your business receives is logged, assigned, and closed.",
-    author: "Shreya Rao",
-    date: "Apr 12, 2026",
-    readTime: "4 min",
-    href: "/blog/blog-post",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 25, 2026",
+    readTime: "5 min",
   },
-  {
+  2: {
     cat: "qr",
     imgBg: "linear-gradient(135deg,#EEF2FF 0%,#E8F4F8 100%)",
     img: (
@@ -66,112 +88,206 @@ const posts = [
     tagLabel: "QR Codes",
     tagStyle: { background: "#EEF2FF", color: "#3730A3" },
     avatarBg: "var(--teal)",
-    avatarInitials: "MJ",
-    title: "5 places to put your feedback QR code that actually get scanned",
-    excerpt: "Most QR codes never get scanned. These placement strategies change that and drive real, actionable feedback.",
-    author: "Mehul Joshi",
-    date: "Apr 7, 2026",
-    readTime: "3 min",
-    href: "/blog/blog-post",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 22, 2026",
+    readTime: "4 min",
   },
-  {
-    cat: "guides",
+  3: {
+    cat: "operations",
+    imgBg: "linear-gradient(135deg,#E8F4F8 0%,#E0F2F1 100%)",
+    img: (
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <rect x="20" y="15" width="40" height="50" rx="5" fill="white" opacity="0.9" />
+        <rect x="30" y="10" width="20" height="8" rx="3" fill="#1E3557" opacity="0.6" />
+        <rect x="28" y="28" width="24" height="3" rx="1.5" fill="#3A8FA5" />
+        <rect x="28" y="35" width="18" height="3" rx="1.5" fill="#7A94AD" />
+        <rect x="28" y="42" width="20" height="3" rx="1.5" fill="#7A94AD" />
+        <circle cx="50" cy="52" r="8" fill="#3A8FA5" />
+        <path d="M46 52l3 3 5-5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    tagLabel: "Operations",
+    tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
+    avatarBg: "var(--navy)",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 18, 2026",
+    readTime: "4 min",
+  },
+  4: {
+    cat: "qr",
     imgBg: "linear-gradient(135deg,#FFF8E1 0%,#FFE0B2 100%)",
     img: (
       <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-        <rect x="18" y="15" width="44" height="50" rx="5" fill="white" opacity="0.9" />
-        <rect x="26" y="25" width="28" height="3" rx="1.5" fill="#E65100" opacity="0.7" />
-        <rect x="26" y="32" width="20" height="2.5" rx="1.25" fill="#7A94AD" />
-        <rect x="26" y="38" width="24" height="2.5" rx="1.25" fill="#7A94AD" />
-        <rect x="26" y="44" width="16" height="2.5" rx="1.25" fill="#7A94AD" />
-        <circle cx="52" cy="52" r="10" fill="#F57F17" />
-        <path d="M48 52l3 3 6-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="40" cy="40" r="22" fill="white" opacity="0.9" />
+        <circle cx="40" cy="40" r="16" fill="none" stroke="#E65100" strokeWidth="1.5" opacity="0.4" />
+        <rect x="25" y="34" width="3" height="14" rx="1.5" fill="#E65100" opacity="0.7" />
+        <rect x="52" y="34" width="3" height="14" rx="1.5" fill="#E65100" opacity="0.7" />
+        <circle cx="40" cy="42" r="3" fill="#E65100" opacity="0.4" />
+      </svg>
+    ),
+    tagLabel: "QR Codes",
+    tagStyle: { background: "#FFF8E1", color: "#E65100" },
+    avatarBg: "#E65100",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 15, 2026",
+    readTime: "4 min",
+  },
+  5: {
+    cat: "guides",
+    imgBg: "linear-gradient(135deg,#FFF8E1 0%,#FFECB3 100%)",
+    img: (
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <rect x="15" y="25" width="50" height="35" rx="5" fill="white" opacity="0.9" />
+        <rect x="15" y="25" width="50" height="10" rx="5" fill="#F57F17" opacity="0.2" />
+        <rect x="25" y="40" width="20" height="3" rx="1.5" fill="#7A94AD" />
+        <rect x="25" y="46" width="15" height="3" rx="1.5" fill="#7A94AD" />
+        <path d="M55 35L55 50" stroke="#F57F17" strokeWidth="2" strokeLinecap="round" />
+        <path d="M50 40L55 35L60 40" stroke="#F57F17" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     tagLabel: "Guides",
     tagStyle: { background: "#FFF8E1", color: "#E65100" },
     avatarBg: "#E65100",
-    avatarInitials: "NK",
-    title: "The complete guide to complaint management for small businesses",
-    excerpt: "From first contact to resolution, here is everything you need to handle customer complaints professionally and efficiently.",
-    author: "Nisha Kumar",
-    date: "Apr 3, 2026",
-    readTime: "7 min",
-    href: "/blog/blog-post",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 11, 2026",
+    readTime: "4 min",
   },
-  {
+  6: {
+    cat: "operations",
+    imgBg: "linear-gradient(135deg,#E8EAF6 0%,#E8F4F8 100%)",
+    img: (
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <rect x="20" y="20" width="40" height="45" rx="4" fill="white" opacity="0.9" />
+        <rect x="26" y="26" width="8" height="8" rx="1" fill="#1E3557" opacity="0.4" />
+        <rect x="38" y="26" width="8" height="8" rx="1" fill="#1E3557" opacity="0.4" />
+        <rect x="26" y="38" width="8" height="8" rx="1" fill="#1E3557" opacity="0.4" />
+        <rect x="38" y="38" width="8" height="8" rx="1" fill="#1E3557" opacity="0.4" />
+        <rect x="32" y="52" width="16" height="13" rx="2" fill="#3A8FA5" opacity="0.5" />
+      </svg>
+    ),
+    tagLabel: "Operations",
+    tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
+    avatarBg: "var(--navy)",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 8, 2026",
+    readTime: "3 min",
+  },
+  7: {
     cat: "product",
     imgBg: "linear-gradient(135deg,#F3E5F5 0%,#E8EAF6 100%)",
     img: (
       <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-        <rect x="12" y="18" width="56" height="36" rx="6" fill="white" opacity="0.9" />
-        <rect x="20" y="28" width="12" height="3" rx="1.5" fill="#7B1FA2" opacity="0.6" />
-        <rect x="36" y="28" width="12" height="3" rx="1.5" fill="#3730A3" opacity="0.6" />
-        <rect x="52" y="28" width="8" height="3" rx="1.5" fill="#3A8FA5" opacity="0.6" />
-        <rect x="20" y="35" width="8" height="8" rx="2" fill="#7B1FA2" opacity="0.3" />
-        <rect x="32" y="35" width="8" height="8" rx="2" fill="#3730A3" opacity="0.3" />
-        <rect x="44" y="35" width="8" height="8" rx="2" fill="#3A8FA5" opacity="0.5" />
-        <rect x="56" y="35" width="4" height="8" rx="1" fill="#3A8FA5" opacity="0.8" />
-        <rect x="28" y="58" width="24" height="4" rx="2" fill="white" opacity="0.6" />
+        <rect x="18" y="15" width="44" height="50" rx="5" fill="white" opacity="0.9" />
+        <rect x="26" y="25" width="28" height="3" rx="1.5" fill="#7B1FA2" opacity="0.5" />
+        <rect x="26" y="32" width="20" height="3" rx="1.5" fill="#7A94AD" />
+        <rect x="26" y="39" width="24" height="3" rx="1.5" fill="#7A94AD" />
+        <rect x="26" y="46" width="16" height="3" rx="1.5" fill="#7A94AD" />
+        <circle cx="52" cy="54" r="8" fill="#7B1FA2" opacity="0.3" />
+        <path d="M49 54h6M52 51v6" stroke="#7B1FA2" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     tagLabel: "Product",
     tagStyle: { background: "#F3E5F5", color: "#7B1FA2" },
     avatarBg: "#7B1FA2",
-    avatarInitials: "PS",
-    title: "New in FeedSolve: Custom fields, bulk actions, and more",
-    excerpt: "April 2026 product update. Here is everything we shipped this month and what it means for your feedback workflow.",
-    author: "Priya Shah",
-    date: "Apr 1, 2026",
-    readTime: "2 min",
-    href: "/blog/blog-post",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 4, 2026",
+    readTime: "4 min",
   },
-  {
-    cat: "casestudy",
-    imgBg: "linear-gradient(135deg,#E8F5E9 0%,#E8F4F8 100%)",
+  8: {
+    cat: "guides",
+    imgBg: "linear-gradient(135deg,#E8F4F8 0%,#C8E6C9 100%)",
     img: (
       <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-        <rect x="16" y="24" width="48" height="32" rx="5" fill="white" opacity="0.9" />
-        <path d="M24 44 L32 36 L40 41 L50 32 L56 38" stroke="#3A8FA5" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="32" cy="36" r="3" fill="#3A8FA5" />
-        <circle cx="40" cy="41" r="3" fill="#3A8FA5" />
-        <circle cx="50" cy="32" r="3" fill="#2E7D32" />
-        <circle cx="24" cy="44" r="3" fill="#7A94AD" />
+        <rect x="10" y="18" width="18" height="44" rx="4" fill="white" opacity="0.9" />
+        <rect x="14" y="24" width="10" height="3" rx="1.5" fill="#E65100" opacity="0.6" />
+        <rect x="14" y="30" width="10" height="6" rx="2" fill="#E65100" opacity="0.2" />
+        <rect x="14" y="39" width="10" height="6" rx="2" fill="#E65100" opacity="0.2" />
+        <rect x="31" y="18" width="18" height="44" rx="4" fill="white" opacity="0.9" />
+        <rect x="35" y="24" width="10" height="3" rx="1.5" fill="#3A8FA5" opacity="0.6" />
+        <rect x="35" y="30" width="10" height="6" rx="2" fill="#3A8FA5" opacity="0.2" />
+        <rect x="52" y="18" width="18" height="44" rx="4" fill="white" opacity="0.9" />
+        <rect x="56" y="24" width="10" height="3" rx="1.5" fill="#2E7D32" opacity="0.6" />
+        <rect x="56" y="30" width="10" height="6" rx="2" fill="#2E7D32" opacity="0.2" />
+        <rect x="56" y="39" width="10" height="6" rx="2" fill="#2E7D32" opacity="0.2" />
       </svg>
     ),
-    tagLabel: "Case Study",
-    tagStyle: { background: "#E8F5E9", color: "#2E7D32" },
-    avatarBg: "#2E7D32",
-    avatarInitials: "TR",
-    title: "How Zest Foods reduced customer complaints by 68% in 90 days",
-    excerpt: "A real story from a food manufacturing company that switched from WhatsApp to FeedSolve and transformed their quality control.",
-    author: "Team FeedSolve",
-    date: "Mar 28, 2026",
-    readTime: "6 min",
-    href: "/blog/blog-post",
+    tagLabel: "Guides",
+    tagStyle: { background: "#FFF8E1", color: "#E65100" },
+    avatarBg: "#E65100",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Apr 1, 2026",
+    readTime: "5 min",
   },
-  {
-    cat: "operations",
-    imgBg: "linear-gradient(135deg,#FCE4EC 0%,#FFF3E0 100%)",
+  9: {
+    cat: "comparison",
+    imgBg: "linear-gradient(135deg,#F3E5F5 0%,#E8EAF6 100%)",
     img: (
       <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-        <circle cx="40" cy="40" r="22" fill="white" opacity="0.8" />
-        <path d="M40 25 L40 40 L50 47" stroke="#C62828" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="40" cy="40" r="3" fill="#C62828" />
+        <rect x="10" y="28" width="24" height="24" rx="4" fill="white" opacity="0.9" />
+        <rect x="14" y="34" width="16" height="3" rx="1.5" fill="#7B1FA2" opacity="0.5" />
+        <rect x="14" y="40" width="12" height="3" rx="1.5" fill="#7A94AD" />
+        <rect x="46" y="28" width="24" height="24" rx="4" fill="white" opacity="0.9" />
+        <rect x="50" y="34" width="16" height="3" rx="1.5" fill="#3A8FA5" />
+        <rect x="50" y="40" width="12" height="3" rx="1.5" fill="#3A8FA5" opacity="0.5" />
+        <path d="M30 52L40 60L50 52" stroke="#3A8FA5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    tagLabel: "Comparison",
+    tagStyle: { background: "#F3E5F5", color: "#7B1FA2" },
+    avatarBg: "#7B1FA2",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Mar 28, 2026",
+    readTime: "3 min",
+  },
+  10: {
+    cat: "operations",
+    imgBg: "linear-gradient(135deg,#E8F4F8 0%,#E0F7FA 100%)",
+    img: (
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <rect x="10" y="30" width="38" height="24" rx="4" fill="white" opacity="0.9" />
+        <rect x="48" y="36" width="22" height="18" rx="3" fill="white" opacity="0.9" />
+        <rect x="14" y="35" width="30" height="3" rx="1.5" fill="#3A8FA5" opacity="0.5" />
+        <rect x="14" y="42" width="20" height="3" rx="1.5" fill="#7A94AD" />
+        <circle cx="22" cy="58" r="5" fill="#1E3557" opacity="0.6" />
+        <circle cx="58" cy="58" r="5" fill="#1E3557" opacity="0.6" />
       </svg>
     ),
     tagLabel: "Operations",
-    tagStyle: { background: "#FCE4EC", color: "#C62828" },
-    avatarBg: "#C62828",
-    avatarInitials: "DR",
-    title: "Response time benchmarks: How fast should you resolve a complaint?",
-    excerpt: "Data from 10,000 complaints shows what resolution timelines look like across industries and what customers expect.",
-    author: "Dev Rathi",
-    date: "Mar 22, 2026",
-    readTime: "5 min",
-    href: "/blog/blog-post",
+    tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
+    avatarBg: "var(--navy)",
+    avatarInitials: "FS",
+    author: "FeedSolve Team",
+    date: "Mar 25, 2026",
+    readTime: "4 min",
   },
-];
+};
+
+const posts = blogData.map((blog) => {
+  const v = postVisuals[blog.id];
+  return {
+    cat: v.cat,
+    imgBg: v.imgBg,
+    img: v.img,
+    tagLabel: v.tagLabel,
+    tagStyle: v.tagStyle,
+    avatarBg: v.avatarBg,
+    avatarInitials: v.avatarInitials,
+    title: blog.meta.title,
+    excerpt: excerpts[blog.id],
+    author: v.author,
+    date: v.date,
+    readTime: v.readTime,
+    href: blog.meta.slug,
+  };
+});
 
 export default function BlogPage() {
   const [activeCat, setActiveCat] = useState("all");
@@ -231,34 +347,34 @@ export default function BlogPage() {
               <div className="listing-fp-tag">
                 <Star size={11} /> Featured
               </div>
-              <h2>Why WhatsApp is killing your customer feedback loop</h2>
+              <h2>{blogData[0].meta.title}</h2>
               <p className="listing-featured-desc">
-                Most businesses run their entire complaints process through a WhatsApp group. Here is why that breaks down at scale and what to do instead.
+                Feedback resolution rate measures how many complaints your team actually resolves. Learn why it matters more than NPS for SMBs — and how to improve it fast.
               </p>
               <div className="listing-post-meta">
-                <div className="listing-author-avatar" style={{ background: "var(--teal)" }}>AK</div>
+                <div className="listing-author-avatar" style={{ background: "var(--teal)" }}>FS</div>
                 <div className="listing-post-meta-text">
-                  <div className="meta-name">Aryan Kumar</div>
-                  <div className="meta-date">Apr 18, 2026 · 5 min read</div>
+                  <div className="meta-name">FeedSolve Team</div>
+                  <div className="meta-date">Apr 25, 2026 · 5 min read</div>
                 </div>
               </div>
-              <Link href="/blog/blog-post" className="btn-primary teal">
+              <Link href={blogData[0].meta.slug} className="btn-primary teal">
                 Read full post <ArrowRight size={15} />
               </Link>
             </div>
             <div className="listing-fp-visual">
               <div className="listing-fp-stat-row">
                 <div className="listing-fp-stat">
-                  <div className="listing-fp-stat-n">73%</div>
-                  <div className="listing-fp-stat-l">Complaints lost in chat apps</div>
+                  <div className="listing-fp-stat-n">80%</div>
+                  <div className="listing-fp-stat-l">Healthy resolution rate</div>
                 </div>
                 <div className="listing-fp-stat">
-                  <div className="listing-fp-stat-n">4x</div>
-                  <div className="listing-fp-stat-l">Faster resolution with tracking</div>
+                  <div className="listing-fp-stat-n">95%</div>
+                  <div className="listing-fp-stat-l">Companies collect feedback</div>
                 </div>
                 <div className="listing-fp-stat">
-                  <div className="listing-fp-stat-n">91%</div>
-                  <div className="listing-fp-stat-l">Customers want a follow-up</div>
+                  <div className="listing-fp-stat-n">5%</div>
+                  <div className="listing-fp-stat-l">Track resolution</div>
                 </div>
               </div>
               <div
@@ -279,17 +395,17 @@ export default function BlogPage() {
                     marginBottom: 10,
                   }}
                 >
-                  Typical complaint journey
+                  The resolution gap
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "rgba(255,255,255,0.55)" }}>
-                    <MessageCircle size={12} style={{ color: "#25D366" }} /> Customer sends WhatsApp message
+                    <MessageCircle size={12} style={{ color: "#3A8FA5" }} /> Feedback submitted
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "rgba(255,255,255,0.55)" }}>
-                    <ArrowDown size={12} style={{ color: "rgba(255,255,255,0.3)" }} /> Gets buried under 47 other messages
+                    <ArrowDown size={12} style={{ color: "rgba(255,255,255,0.3)" }} /> No tracking or ownership
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "rgba(255,255,255,0.55)" }}>
-                    <XCircle size={12} style={{ color: "#FF6B6B" }} /> Forgotten. Never resolved.
+                    <XCircle size={12} style={{ color: "#FF6B6B" }} /> Issue never resolved
                   </div>
                 </div>
               </div>

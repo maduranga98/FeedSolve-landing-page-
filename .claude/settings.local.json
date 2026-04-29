@@ -7,7 +7,8 @@
       "Bash(gunzip -f /tmp/template.gz)",
       "Read(//tmp/**)",
       "Bash(npx next *)",
-      "Bash(npx sharp-cli *)"
+      "Bash(npx sharp-cli *)",
+      "Bash(curl *)"
     ]
   }
 }

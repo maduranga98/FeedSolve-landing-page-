@@ -57,6 +57,7 @@ import {
   X,
   ChevronDown,
 } from "lucide-react";
+import blogData from "@/data/blog.json";
 
 function useCounter(target: number, duration = 1200) {
   const [value, setValue] = useState(0);
@@ -1121,7 +1122,30 @@ function FAQ() {
   );
 }
 
+const landingBlogCards = [
+  {
+    stripe: "var(--teal)",
+    tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" } as React.CSSProperties,
+    tagLabel: "Operations",
+    blogId: 1,
+  },
+  {
+    stripe: "#6366F1",
+    tagStyle: { background: "#EEF2FF", color: "#3730A3" } as React.CSSProperties,
+    tagLabel: "QR Codes",
+    blogId: 2,
+  },
+  {
+    stripe: "#16A34A",
+    tagStyle: { background: "#F0FDF4", color: "#16A34A" } as React.CSSProperties,
+    tagLabel: "Operations",
+    blogId: 3,
+  },
+];
+
 function Blog() {
+  const featuredBlog = blogData[0];
+
   return (
     <section id="blog">
       <div className="container">
@@ -1141,30 +1165,28 @@ function Blog() {
           </a>
         </div>
 
-        <a href="/blog/blog-post" className="blog-featured">
+        <a href={featuredBlog.meta.slug} className="blog-featured">
           <div className="blog-featured-content">
             <div>
               <div className="blog-featured-tag">
                 <Star size={11} /> Featured
               </div>
               <h3>
-                Why WhatsApp is killing your
+                {featuredBlog.meta.title.split(" ").slice(0, 6).join(" ")}
                 <br />
-                customer feedback loop
+                {featuredBlog.meta.title.split(" ").slice(6).join(" ")}
               </h3>
               <p className="blog-featured-desc">
-                Most businesses run their entire complaints process through a
-                WhatsApp group. Here is why that breaks down at scale — and what
-                to do instead.
+                {featuredBlog.content.quick_answer_box.slice(0, 180)}...
               </p>
             </div>
             <div className="blog-featured-footer">
               <div className="blog-author">
-                <div className="blog-author-avatar">AK</div>
+                <div className="blog-author-avatar">FS</div>
                 <div>
-                  <div className="blog-author-name">Aryan Kumar</div>
+                  <div className="blog-author-name">FeedSolve Team</div>
                   <div className="blog-author-meta">
-                    Apr 18, 2026 · 5 min read
+                    Apr 25, 2026 · 5 min read
                   </div>
                 </div>
               </div>
@@ -1174,9 +1196,9 @@ function Blog() {
             </div>
           </div>
           <div className="blog-featured-visual">
-            <div className="visual-panel-label">The difference</div>
+            <div className="visual-panel-label">The resolution gap</div>
             <div className="visual-panel-block">
-              <div className="visual-panel-block-label">Without FeedSolve</div>
+              <div className="visual-panel-block-label">Without tracking</div>
               <div className="visual-panel-row">
                 <div
                   className="visual-panel-icon"
@@ -1188,7 +1210,7 @@ function Blog() {
                   className="visual-panel-row-text"
                   style={{ color: "rgba(255,255,255,0.55)" }}
                 >
-                  3 complaints via WhatsApp
+                  Complaints via WhatsApp
                 </div>
                 <div
                   className="visual-panel-badge"
@@ -1211,7 +1233,7 @@ function Blog() {
                   className="visual-panel-row-text"
                   style={{ color: "rgba(255,255,255,0.55)" }}
                 >
-                  2 complaints via email
+                  Feedback buried in email
                 </div>
                 <div
                   className="visual-panel-badge"
@@ -1242,7 +1264,7 @@ function Blog() {
                   className="visual-panel-row-text"
                   style={{ color: "rgba(255,255,255,0.7)" }}
                 >
-                  5 complaints, all tracked
+                  All complaints tracked
                 </div>
                 <div
                   className="visual-panel-badge"
@@ -1265,7 +1287,7 @@ function Blog() {
                   className="visual-panel-row-text"
                   style={{ color: "rgba(255,255,255,0.7)" }}
                 >
-                  Customers notified
+                  Submitters notified
                 </div>
                 <div
                   className="visual-panel-badge"
@@ -1282,103 +1304,40 @@ function Blog() {
         </a>
 
         <div className="blog-cards">
-          <a href="/blog" className="blog-card">
-            <div
-              className="blog-card-stripe"
-              style={{ background: "var(--teal)" }}
-            ></div>
-            <div className="blog-card-body">
-              <div
-                className="blog-card-tag"
-                style={{ background: "var(--teal-pale)", color: "var(--teal)" }}
-              >
-                Operations
-              </div>
-              <h3>How to build a zero-leakage complaint resolution process</h3>
-              <p>
-                A step-by-step guide to making sure every complaint is logged,
-                assigned, and closed.
-              </p>
-              <div className="blog-card-footer">
+          {landingBlogCards.map((card) => {
+            const blog = blogData.find((b) => b.id === card.blogId);
+            if (!blog) return null;
+            return (
+              <a key={blog.id} href={blog.meta.slug} className="blog-card">
                 <div
-                  className="blog-card-avatar"
-                  style={{ background: "var(--navy)" }}
-                >
-                  SR
+                  className="blog-card-stripe"
+                  style={{ background: card.stripe }}
+                ></div>
+                <div className="blog-card-body">
+                  <div
+                    className="blog-card-tag"
+                    style={card.tagStyle}
+                  >
+                    {card.tagLabel}
+                  </div>
+                  <h3>{blog.meta.title}</h3>
+                  <p>{blog.content.quick_answer_box.slice(0, 120)}...</p>
+                  <div className="blog-card-footer">
+                    <div
+                      className="blog-card-avatar"
+                      style={{ background: card.stripe }}
+                    >
+                      FS
+                    </div>
+                    <div className="blog-card-author">FeedSolve Team · 5 min</div>
+                    <span className="blog-card-read">
+                      Read <ArrowRight size={13} />
+                    </span>
+                  </div>
                 </div>
-                <div className="blog-card-author">Shreya Rao · 4 min</div>
-                <span className="blog-card-read">
-                  Read <ArrowRight size={13} />
-                </span>
-              </div>
-            </div>
-          </a>
-          <a href="/blog" className="blog-card">
-            <div
-              className="blog-card-stripe"
-              style={{ background: "#6366F1" }}
-            ></div>
-            <div className="blog-card-body">
-              <div
-                className="blog-card-tag"
-                style={{ background: "#EEF2FF", color: "#3730A3" }}
-              >
-                QR Codes
-              </div>
-              <h3>
-                5 places to put your feedback QR code that actually get scanned
-              </h3>
-              <p>
-                Placement strategies that drive real, actionable feedback from
-                your customers.
-              </p>
-              <div className="blog-card-footer">
-                <div
-                  className="blog-card-avatar"
-                  style={{ background: "var(--teal)" }}
-                >
-                  MJ
-                </div>
-                <div className="blog-card-author">Mehul Joshi · 3 min</div>
-                <span className="blog-card-read">
-                  Read <ArrowRight size={13} />
-                </span>
-              </div>
-            </div>
-          </a>
-          <a href="/blog" className="blog-card">
-            <div
-              className="blog-card-stripe"
-              style={{ background: "#16A34A" }}
-            ></div>
-            <div className="blog-card-body">
-              <div
-                className="blog-card-tag"
-                style={{ background: "#F0FDF4", color: "#16A34A" }}
-              >
-                Case Study
-              </div>
-              <h3>
-                How Zest Foods reduced customer complaints by 68% in 90 days
-              </h3>
-              <p>
-                A real story from food manufacturing to quality control
-                transformation.
-              </p>
-              <div className="blog-card-footer">
-                <div
-                  className="blog-card-avatar"
-                  style={{ background: "#16A34A" }}
-                >
-                  TR
-                </div>
-                <div className="blog-card-author">Team FeedSolve · 6 min</div>
-                <span className="blog-card-read">
-                  Read <ArrowRight size={13} />
-                </span>
-              </div>
-            </div>
-          </a>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
