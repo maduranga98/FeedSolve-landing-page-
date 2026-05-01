@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,7 +9,7 @@ import {
   Check, X, MessageCircle, Link as LinkIcon, Share2, ExternalLink,
   QrCode, Hash, TrendingUp, ClipboardList,
 } from "lucide-react";
-import blogData from "@/data/blog.json";
+
 
 const categoryIcons: Record<string, { icon: React.ReactNode; bg: string }> = {
   "Operations": { icon: <ClipboardList size={22} style={{ color: "var(--teal)" }} />, bg: "var(--teal-pale)" },
@@ -29,7 +29,7 @@ const tagMap: Record<string, { label: string; color: string }> = {
   casestudy: { label: "Case Study", color: "#2E7D32" },
 };
 
-function getCategoryForBlog(blog: typeof blogData[0]): string {
+function getCategoryForBlog(blog: any): string {
   const kw = blog.meta.primary_keyword.toLowerCase();
   if (kw.includes("qr") || kw.includes("restaurant")) return "qr";
   if (kw.includes("workflow") || kw.includes("resolution rate") || kw.includes("supplier") || kw.includes("tenant") || kw.includes("distributor") || kw.includes("suggestion")) return "operations";
@@ -38,45 +38,51 @@ function getCategoryForBlog(blog: typeof blogData[0]): string {
   return "guides";
 }
 
-function getReadTime(blog: typeof blogData[0]): string {
+function getReadTime(blog: any): string {
   const wc = blog.meta.target_word_count;
   const avg = parseInt(wc.replace(/[^0-9]/g, "").slice(0, 4));
   return `${Math.max(3, Math.round(avg / 300))} min`;
 }
 
-export default function BlogPostClient({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
+export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherPosts: any[] }) {
   const [progress, setProgress] = useState(0);
 
-  const blog = blogData.find((b) => b.meta.slug === `/blog/${slug}`);
   const cat = blog ? getCategoryForBlog(blog) : "operations";
   const catInfo = tagMap[cat] || tagMap.operations;
 
-  const tocSections = blog
-    ? blog.content.sections
-        .filter((s) => !s.heading.startsWith("H2: FAQs"))
-        .map((s, i) => ({
-          id: `sec-${i}`,
-          label: s.heading.replace("H2: ", ""),
-        }))
-    : [];
+  const tocSections = useMemo(() => {
+    if (!blog) return [];
+    return blog.content.sections
+      .filter((s: any) => !s.heading.startsWith("H2: FAQs"))
+      .map((s: any, i: number) => ({
+        id: `sec-${i}`,
+        label: s.heading.replace("H2: ", ""),
+      }));
+  }, [blog]);
 
   const [activeToc, setActiveToc] = useState(tocSections[0]?.id || "");
 
   useEffect(() => {
+    let ticking = false;
     const onScroll = () => {
-      const body = document.body;
-      const html = document.documentElement;
-      const scrollTop = window.scrollY;
-      const docHeight = Math.max(body.scrollHeight, html.scrollHeight) - window.innerHeight;
-      setProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const body = document.body;
+          const html = document.documentElement;
+          const scrollTop = window.scrollY;
+          const docHeight = Math.max(body.scrollHeight, html.scrollHeight) - window.innerHeight;
+          setProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
 
-      let active = tocSections[0]?.id || "";
-      tocSections.forEach(({ id }) => {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top < 120) active = id;
-      });
-      setActiveToc(active);
+          let active = tocSections[0]?.id || "";
+          tocSections.forEach(({ id }: { id: string }) => {
+            const el = document.getElementById(id);
+            if (el && el.getBoundingClientRect().top < 120) active = id;
+          });
+          setActiveToc(active);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -103,8 +109,6 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
       </>
     );
   }
-
-  const otherPosts = blogData.filter((b) => b.id !== blog.id).slice(0, 3);
 
   return (
     <>
@@ -149,14 +153,22 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
           {/* Hero illustration */}
           <div className="article-hero-img">
             <div className="ahi-left">
-              <h3>Key takeaways</h3>
-              <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 14, lineHeight: 1.7 }}>
-                {blog.content.quick_answer_box}
-              </p>
+              <h2 style={{ fontSize: 18, fontWeight: 700, color: "white", marginBottom: 12 }}>Key takeaways</h2>
+              {blog.content.key_takeaways ? (
+                <ul style={{ color: "rgba(255,255,255,0.7)", fontSize: 14, lineHeight: 1.7, margin: 0, paddingLeft: 18, listStyle: "disc" }}>
+                  {blog.content.key_takeaways.map((point: any, i: number) => (
+                    <li key={i} style={{ marginBottom: 8 }}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 14, lineHeight: 1.7 }}>
+                  {blog.content.quick_answer_box}
+                </p>
+              )}
             </div>
             <div className="ahi-right">
               <div className="ahi-right-label">In this article</div>
-              {tocSections.slice(0, 4).map(({ label }, i) => (
+              {tocSections.slice(0, 4).map(({ label }: { label: string }, i: number) => (
                 <div key={i} className="ahi-channel" style={{ background: "rgba(58,143,165,0.1)" }}>
                   <div className="ahi-channel-icon" style={{ background: "var(--teal)", fontSize: 12, fontWeight: 700, width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center" }}>
                     {i + 1}
@@ -174,7 +186,7 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
             <p>{blog.content.quick_answer_box}</p>
           </div>
 
-          {blog.content.sections.map((section, i) => {
+          {blog.content.sections.map((section: any, i: number) => {
             const isFaq = section.heading.startsWith("H2: FAQs");
             const headingText = section.heading.replace("H2: ", "");
             const sectionId = `sec-${i}`;
@@ -185,7 +197,7 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
                   <h2 id={sectionId}>{headingText}</h2>
                   {section.key_points && (
                     <div style={{ display: "flex", flexDirection: "column", gap: 12, margin: "20px 0" }}>
-                      {section.key_points.map((point, j) => (
+                      {section.key_points.map((point: any, j: number) => (
                         <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                           <div style={{
                             minWidth: 24, height: 24, borderRadius: "50%",
@@ -207,15 +219,15 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
                     <table>
                       <thead>
                         <tr>
-                          {section.comparison_table.columns.map((col) => (
+                          {section.comparison_table.columns.map((col: string) => (
                             <th key={col}>{col}</th>
                           ))}
                         </tr>
                       </thead>
                       <tbody>
-                        {section.comparison_table.rows.map((row, ri) => (
+                        {section.comparison_table.rows.map((row: string[], ri: number) => (
                           <tr key={ri}>
-                            {row.map((cell, ci) => (
+                            {row.map((cell: string, ci: number) => (
                               <td key={ci} className={ci === 0 ? "" : cell.startsWith("✅") ? "ct-good" : cell.startsWith("❌") ? "ct-bad" : ""}>
                                 <div className="comp-tick">
                                   {cell.startsWith("✅") && <Check size={14} />}
@@ -233,7 +245,7 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
 
                 {isFaq && section.faqs && (
                   <div style={{ display: "flex", flexDirection: "column", gap: 16, margin: "20px 0" }}>
-                    {section.faqs.map((faq, fi) => (
+                    {section.faqs.map((faq: any, fi: number) => (
                       <div key={fi} style={{
                         background: "var(--bg)",
                         borderRadius: 12, padding: "20px 24px",
@@ -297,7 +309,7 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
         <aside className="article-sidebar">
           <div className="sidebar-card">
             <div className="sidebar-card-title">In this article</div>
-            {tocSections.map(({ id, label }, i) => (
+            {tocSections.map(({ id, label }: { id: string; label: string }, i: number) => (
               <a
                 key={id}
                 href={`#${id}`}
@@ -319,7 +331,7 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
 
           <div className="sidebar-card">
             <div className="sidebar-card-title">Related posts</div>
-            {otherPosts.slice(0, 3).map((other) => {
+            {otherPosts.slice(0, 3).map((other: any) => {
               const otherCat = getCategoryForBlog(other);
               const otherCatInfo = tagMap[otherCat] || tagMap.operations;
               const catIcon = categoryIcons[otherCatInfo.label] || categoryIcons["Operations"];
@@ -341,7 +353,7 @@ export default function BlogPostClient({ params }: { params: Promise<{ slug: str
       <div className="more-posts-section">
         <h2>More from the blog</h2>
         <div className="more-grid">
-          {otherPosts.slice(0, 3).map((other) => {
+          {otherPosts.slice(0, 3).map((other: any) => {
             const otherCat = getCategoryForBlog(other);
             const otherCatInfo = tagMap[otherCat] || tagMap.operations;
             return (

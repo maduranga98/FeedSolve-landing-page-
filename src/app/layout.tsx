@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, DM_Sans, Lora } from "next/font/google";
 import "./globals.css";
 
@@ -40,12 +40,14 @@ export const metadata: Metadata = {
     siteName: "FeedSolve",
     locale: "en_US",
     type: "website",
+    images: [`${SITE_URL}/feedsolve.webp`],
   },
   twitter: {
     card: "summary_large_image",
     title: "FeedSolve — Stop losing complaints. Start closing them.",
     description:
       "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+    images: [`${SITE_URL}/feedsolve.webp`],
   },
   robots: {
     index: true,
@@ -54,6 +56,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1E3557",
 };
 
 const jsonLd = {
@@ -73,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable}`}>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"

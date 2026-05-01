@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -270,8 +270,27 @@ const postVisuals: Record<number, {
   },
 };
 
+const defaultVisual = {
+  cat: "guides",
+  imgBg: "linear-gradient(135deg,#E8F4F8 0%,#E0F7FA 100%)",
+  img: (
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+      <rect x="20" y="20" width="40" height="40" rx="8" fill="white" opacity="0.9" />
+      <rect x="30" y="35" width="20" height="3" rx="1.5" fill="#3A8FA5" />
+      <rect x="30" y="42" width="14" height="3" rx="1.5" fill="#7A94AD" />
+    </svg>
+  ),
+  tagLabel: "Article",
+  tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
+  avatarBg: "var(--navy)",
+  avatarInitials: "FS",
+  author: "FeedSolve Team",
+  date: "Mar 2026",
+  readTime: "4 min",
+};
+
 const posts = blogData.map((blog) => {
-  const v = postVisuals[blog.id];
+  const v = postVisuals[blog.id] ?? defaultVisual;
   return {
     cat: v.cat,
     imgBg: v.imgBg,
@@ -281,7 +300,7 @@ const posts = blogData.map((blog) => {
     avatarBg: v.avatarBg,
     avatarInitials: v.avatarInitials,
     title: blog.meta.title,
-    excerpt: excerpts[blog.id],
+    excerpt: excerpts[blog.id] ?? blog.meta.meta_description,
     author: v.author,
     date: v.date,
     readTime: v.readTime,
@@ -289,10 +308,28 @@ const posts = blogData.map((blog) => {
   };
 });
 
+const POSTS_PER_PAGE = 5;
+
 export default function BlogPage() {
   const [activeCat, setActiveCat] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const visiblePosts = activeCat === "all" ? posts : posts.filter((p) => p.cat === activeCat);
+  const filteredPosts = posts.filter((p) => {
+    const matchesCat = activeCat === "all" || p.cat === activeCat;
+    if (!searchQuery.trim()) return matchesCat;
+    const q = searchQuery.toLowerCase();
+    const matchesSearch = p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q);
+    return matchesCat && matchesSearch;
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const visiblePosts = filteredPosts.slice(start, start + POSTS_PER_PAGE);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCat, searchQuery]);
 
   return (
     <>
@@ -318,7 +355,16 @@ export default function BlogPage() {
         <p>Practical guides, case studies, and ideas for teams who take customer feedback seriously.</p>
         <div className="blog-hero-search">
           <Search size={16} />
-          <input type="text" placeholder="Search articles..." />
+          <label htmlFor="blog-search" className="sr-only">Search articles</label>
+          <input
+            id="blog-search"
+            type="search"
+            placeholder="Search articles..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            autoComplete="off"
+            aria-label="Search articles"
+          />
         </div>
       </div>
 
@@ -341,7 +387,7 @@ export default function BlogPage() {
       <div className="blog-main">
 
         {/* FEATURED POST — only when showing all */}
-        {activeCat === "all" && (
+        {activeCat === "all" && !searchQuery.trim() && (
           <div className="listing-featured">
             <div>
               <div className="listing-fp-tag">
@@ -434,14 +480,42 @@ export default function BlogPage() {
           ))}
         </div>
 
+        {visiblePosts.length === 0 && (
+          <div style={{ textAlign: "center", padding: "60px 20px", color: "var(--text-mid)" }}>
+            <p style={{ fontSize: 16 }}>No posts found.</p>
+          </div>
+        )}
+
         {/* PAGINATION */}
-        <div className="pagination">
-          <button className="page-btn"><ChevronLeft size={14} /></button>
-          <button className="page-btn active">1</button>
-          <button className="page-btn">2</button>
-          <button className="page-btn">3</button>
-          <button className="page-btn"><ChevronRight size={14} /></button>
-        </div>
+        {totalPages > 1 && (
+          <div className="pagination">
+            <button
+              className="page-btn"
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              style={{ opacity: currentPage === 1 ? 0.4 : 1 }}
+            >
+              <ChevronLeft size={14} />
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                className={`page-btn${currentPage === page ? " active" : ""}`}
+                onClick={() => setCurrentPage(page)}
+              >
+                {page}
+              </button>
+            ))}
+            <button
+              className="page-btn"
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              style={{ opacity: currentPage === totalPages ? 0.4 : 1 }}
+            >
+              <ChevronRight size={14} />
+            </button>
+          </div>
+        )}
 
         {/* NEWSLETTER */}
         <div className="newsletter-bar">
@@ -452,10 +526,19 @@ export default function BlogPage() {
             </p>
           </div>
           <div>
-            <div className="newsletter-form">
-              <input type="email" placeholder="you@company.com" />
-              <button>Subscribe</button>
-            </div>
+            <form className="newsletter-form" onSubmit={(e) => e.preventDefault()} aria-label="Newsletter subscription">
+              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+              <input
+                id="newsletter-email"
+                type="email"
+                name="email"
+                placeholder="you@company.com"
+                autoComplete="email"
+                required
+                aria-required="true"
+              />
+              <button type="submit">Subscribe</button>
+            </form>
             <div className="newsletter-note">Join 1,200+ operators. Unsubscribe anytime.</div>
           </div>
         </div>

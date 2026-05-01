@@ -85,12 +85,21 @@
           "anchor": "QR feedback board for manufacturers",
           "url": "/blog/qr-feedback-board-manufacturing"
         },
-        { "anchor": "FeedSolve pricing", "url": "/pricing" }
+        {
+          "anchor": "FeedSolve pricing",
+          "url": "/pricing"
+        }
       ],
-      "writer_notes": "Do not use 'close the feedback loop' as a headline — it is over-used by Canny, Medallia, and SurveyMonkey. FeedSolve's angle is operational accountability, not customer sentiment. Tone should be direct and practical — imagine a factory operations manager reading this on a phone between shifts."
+      "writer_notes": "Do not use 'close the feedback loop' as a headline — it is over-used by Canny, Medallia, and SurveyMonkey. FeedSolve's angle is operational accountability, not customer sentiment. Tone should be direct and practical — imagine a factory operations manager reading this on a phone between shifts.",
+      "key_takeaways": [
+        "Feedback resolution rate = (Resolved ÷ Total) × 100 — the only metric that proves your feedback process actually works",
+        "Most SMBs discover resolution rates below 40% because feedback arrives in fragmented channels with no single owner",
+        "A healthy resolution rate for SMBs is above 80%; tracking it requires a dashboard, not a monthly report",
+        "Resolution rate measures what you *did*; NPS/CSAT measure how customers *feel* — both matter, but only resolution rate shows operational performance",
+        "The 5-stage Kanban workflow (Received → In Review → In Progress → Resolved → Closed) turns passive collection into accountable action"
+      ]
     }
   },
-
   {
     "id": 2,
     "meta": {
@@ -177,12 +186,21 @@
           "anchor": "QR feedback for restaurants",
           "url": "/blog/qr-feedback-restaurants"
         },
-        { "anchor": "create your first feedback board", "url": "/signup" }
+        {
+          "anchor": "create your first feedback board",
+          "url": "/signup"
+        }
       ],
-      "writer_notes": "Avoid the phrase 'digital transformation' — it reads as enterprise fluff to an SMB operations manager. Keep tone practical. Include a short visual description of what the QR code + form + tracking page flow looks like even if no actual image is placed — describe it so the reader can picture it."
+      "writer_notes": "Avoid the phrase 'digital transformation' — it reads as enterprise fluff to an SMB operations manager. Keep tone practical. Include a short visual description of what the QR code + form + tracking page flow looks like even if no actual image is placed — describe it so the reader can picture it.",
+      "key_takeaways": [
+        "A QR code feedback board turns any physical surface into a zero-friction feedback channel — no app, no login, no account",
+        "Unlike survey tools that use QR as a distribution channel, a feedback board is a workflow tool with tracking codes and resolution status",
+        "Each board gets a unique QR code; businesses can run multiple boards for different locations or stakeholder types",
+        "The submitter receives a tracking code (#FSV-XXXX) like a parcel number and can check progress anytime without logging in",
+        "Setup takes minutes: create board → define categories → copy QR code → print and place anywhere"
+      ]
     }
   },
-
   {
     "id": 3,
     "meta": {
@@ -271,12 +289,21 @@
           "anchor": "feedback resolution rate",
           "url": "/blog/feedback-resolution-rate"
         },
-        { "anchor": "start your free board", "url": "/signup" }
+        {
+          "anchor": "start your free board",
+          "url": "/signup"
+        }
       ],
-      "writer_notes": "This is a buying-intent post — don't be shy about naming FeedSolve as the solution from H2 onwards. Reference the competitor comparison table to show why lightweight tools are better than QMS or help desks for this use case. Avoid 'digital transformation' and 'enterprise-grade.' Use concrete numbers (employee count, price point, setup time) to ground the SMB framing."
+      "writer_notes": "This is a buying-intent post — don't be shy about naming FeedSolve as the solution from H2 onwards. Reference the competitor comparison table to show why lightweight tools are better than QMS or help desks for this use case. Avoid 'digital transformation' and 'enterprise-grade.' Use concrete numbers (employee count, price point, setup time) to ground the SMB framing.",
+      "key_takeaways": [
+        "WhatsApp and email destroy supplier quality data — no searchable record, no assignment, no accountability, no audit trail",
+        "A supplier feedback tool needs: zero-friction submission, structured categories, internal workflow, public reply, and resolution rate metric",
+        "Enterprise QMS (AssurX, TrackWise) is overkill for 50-person manufacturers; help desks are built for customer support, not external supplier intake",
+        "FeedSolve bridges the gap: structured intake, Kanban resolution, tracking codes, and resolution rate dashboard at $19–$49/month",
+        "Typical onboarding for a 50-person manufacturer: under 30 minutes — no implementation consultants required"
+      ]
     }
   },
-
   {
     "id": 4,
     "meta": {
@@ -370,10 +397,16 @@
           "url": "/solutions/restaurants"
         }
       ],
-      "writer_notes": "Lead with the emotional angle — a complaint that gets resolved is an opportunity, not a crisis. The Google Review angle is strong click-bait for this audience. Do not position this as a replacement for Google Reviews — frame it as a first-pass filter that gives the restaurant a chance to respond. Include a vivid example scenario (table 12, 8:45 PM) to make the workflow tangible."
+      "writer_notes": "Lead with the emotional angle — a complaint that gets resolved is an opportunity, not a crisis. The Google Review angle is strong click-bait for this audience. Do not position this as a replacement for Google Reviews — frame it as a first-pass filter that gives the restaurant a chance to respond. Include a vivid example scenario (table 12, 8:45 PM) to make the workflow tangible.",
+      "key_takeaways": [
+        "A restaurant feedback QR code on every table captures complaints before they become Google Reviews — the recovery paradox means resolved complaints create more loyalty than no complaints at all",
+        "Guests prefer discreet digital channels over flagging a server; QR codes reduce social awkwardness and increase submission rates",
+        "The submission form should load in under 3 seconds with minimal fields: Category, Description, optional email, and anonymous toggle",
+        "Internal workflow: manager gets notified → assigns to kitchen or floor team → resolves → sends public reply → guest tracks via tracking code",
+        "QR feedback boards and Google Review QR codes can coexist — the board gives you a chance to recover before the guest goes public"
+      ]
     }
   },
-
   {
     "id": 5,
     "meta": {
@@ -458,13 +491,25 @@
           "anchor": "QR code feedback board",
           "url": "/blog/qr-code-feedback-board"
         },
-        { "anchor": "how tracking codes work", "url": "/features/tracking" },
-        { "anchor": "free plan for small businesses", "url": "/pricing" }
+        {
+          "anchor": "how tracking codes work",
+          "url": "/features/tracking"
+        },
+        {
+          "anchor": "free plan for small businesses",
+          "url": "/pricing"
+        }
       ],
-      "writer_notes": "The physical suggestion box metaphor is your strongest hook — lean into it hard in the intro. This is a TOFU post so the CTA should be soft: 'try a free board' rather than 'buy now.' Avoid enterprise language entirely. Use 'your team,' 'your business,' 'your customers' — not 'stakeholders' or 'end-users.'"
+      "writer_notes": "The physical suggestion box metaphor is your strongest hook — lean into it hard in the intro. This is a TOFU post so the CTA should be soft: 'try a free board' rather than 'buy now.' Avoid enterprise language entirely. Use 'your team,' 'your business,' 'your customers' — not 'stakeholders' or 'end-users.'",
+      "key_takeaways": [
+        "Physical suggestion boxes are passive black holes — the collection mechanism was fine, but zero workflow and zero feedback-back killed them",
+        "A digital suggestion box adds: unique tracking codes, Kanban workflow, team assignment, public replies, and resolution rate analytics",
+        "Google Forms and Typeform are still digital black holes — no resolution workflow, no tracking code, no accountability",
+        "Five real-world placements: restaurant tables, factory floor posters, clinic waiting rooms, property lobby boards, and retail POS counters",
+        "Anonymous mode is critical for employee-facing feedback where psychological safety matters"
+      ]
     }
   },
-
   {
     "id": 6,
     "meta": {
@@ -553,12 +598,21 @@
           "anchor": "QR code feedback board overview",
           "url": "/blog/qr-code-feedback-board"
         },
-        { "anchor": "create a free property feedback board", "url": "/signup" }
+        {
+          "anchor": "create a free property feedback board",
+          "url": "/signup"
+        }
       ],
-      "writer_notes": "Use concrete scenario writing — the 'Unit 14B, #FSV-7734' example makes the workflow tangible. This post has high buying intent so the CTA should appear at least twice — once mid-article and once at the close. Keep the competitor comparison fair and factual — don't bash AppFolio; position FeedSolve as purpose-built for complaint resolution specifically."
+      "writer_notes": "Use concrete scenario writing — the 'Unit 14B, #FSV-7734' example makes the workflow tangible. This post has high buying intent so the CTA should appear at least twice — once mid-article and once at the close. Keep the competitor comparison fair and factual — don't bash AppFolio; position FeedSolve as purpose-built for complaint resolution specifically.",
+      "key_takeaways": [
+        "WhatsApp and phone call complaints are unstructured, unassignable, and untrackable — when a tenant calls twice, it's because they saw no evidence the first message was received",
+        "A tenant complaint portal needs: zero-friction submission (QR or link), structured categories, tracking code, internal workflow, and public reply",
+        "Property management software (AppFolio, Buildium) treats maintenance as a sub-feature; FeedSolve is purpose-built for complaint resolution",
+        "Real workflow example: Unit 14B scans lobby QR → submits plumbing issue → gets #FSV-7734 → manager assigns contractor → fixes → tenant sees reply on tracking page",
+        "Full audit trail provides verifiable records for legal disputes and maintenance accountability"
+      ]
     }
   },
-
   {
     "id": 7,
     "meta": {
@@ -641,13 +695,25 @@
           "anchor": "QR code feedback board mechanics",
           "url": "/blog/qr-code-feedback-board"
         },
-        { "anchor": "how tracking codes work", "url": "/features/tracking" },
-        { "anchor": "FeedSolve free plan", "url": "/pricing" }
+        {
+          "anchor": "how tracking codes work",
+          "url": "/features/tracking"
+        },
+        {
+          "anchor": "FeedSolve free plan",
+          "url": "/pricing"
+        }
       ],
-      "writer_notes": "This is an educational, empathy-led post — the reader is frustrated with low response rates and looking for validation that login requirements are the problem. Use strong before/after framing. The courier/parcel tracking analogy is your strongest trust-builder for the no-login mechanics — lean on it."
+      "writer_notes": "This is an educational, empathy-led post — the reader is frustrated with low response rates and looking for validation that login requirements are the problem. Use strong before/after framing. The courier/parcel tracking analogy is your strongest trust-builder for the no-login mechanics — lean on it.",
+      "key_takeaways": [
+        "Requiring login before feedback submission eliminates 40–70% of responses — the complaint impulse dies with every friction point",
+        "External stakeholders (suppliers, distributors, customers) will not create accounts in your system to tell you something is wrong",
+        "No-login forms enable: anonymous submissions, QR-code distribution, higher response volume from passive touchpoints, and accessibility for non-tech-savvy users",
+        "Tracking works via unique codes (#FSV-XXXX) and a public tracking page — the courier/parcel model applied to feedback",
+        "Login-required systems are only appropriate for internal employee portals or regulated industries; for external SMB feedback, no-login is the right default"
+      ]
     }
   },
-
   {
     "id": 8,
     "meta": {
@@ -743,10 +809,16 @@
           "url": "/features/dashboard"
         }
       ],
-      "writer_notes": "This is the most process-heavy post in the set — it should read like a practical operations guide, not a marketing piece. Use numbered lists liberally. The five-stage Kanban model should be described clearly enough that a reader could implement it in a spreadsheet if they wanted to — then the CTA shows them FeedSolve does it automatically. Avoid 'enterprise' framing entirely."
+      "writer_notes": "This is the most process-heavy post in the set — it should read like a practical operations guide, not a marketing piece. Use numbered lists liberally. The five-stage Kanban model should be described clearly enough that a reader could implement it in a spreadsheet if they wanted to — then the CTA shows them FeedSolve does it automatically. Avoid 'enterprise' framing entirely.",
+      "key_takeaways": [
+        "Most SMB complaint processes stall at intake — complaints arrive via WhatsApp, email, and phone simultaneously with no single owner",
+        "The 5-stage Kanban: Received → In Review → In Progress → Resolved → Closed, with a sixth optional Escalated state",
+        "Each stage has clear roles: receiver (dashboard monitor), reviewer/assigner (team lead), resolver (assigned owner), and replier (customer-facing role)",
+        "Primary KPI: resolution rate %; secondary: average resolution time; tertiary: submissions by category and monthly trends",
+        "Red flags: submissions in 'In Review' >72 hours, >20% closed without public reply, reopen rate >10%"
+      ]
     }
   },
-
   {
     "id": 9,
     "meta": {
@@ -846,12 +918,21 @@
           "anchor": "QR code feedback board",
           "url": "/blog/qr-code-feedback-board"
         },
-        { "anchor": "FeedSolve pricing", "url": "/pricing" }
+        {
+          "anchor": "FeedSolve pricing",
+          "url": "/pricing"
+        }
       ],
-      "writer_notes": "Keep tone fair and factual — this is a comparison page, not a hit piece. Acknowledge Typeform's genuine strengths (conversational forms, conditional logic, NPS templates). The comparison table is the anchor of this post — make sure it renders cleanly. End with the 'Both if' use case recommendation to avoid appearing one-sided, which increases trust."
+      "writer_notes": "Keep tone fair and factual — this is a comparison page, not a hit piece. Acknowledge Typeform's genuine strengths (conversational forms, conditional logic, NPS templates). The comparison table is the anchor of this post — make sure it renders cleanly. End with the 'Both if' use case recommendation to avoid appearing one-sided, which increases trust.",
+      "key_takeaways": [
+        "Typeform is a form and survey builder optimized for beautiful data collection; FeedSolve is a feedback resolution platform built around operational closure",
+        "Typeform stops at the last screen — no resolution workflow, tracking codes, public replies, or resolution rate metrics",
+        "FeedSolve starts where Typeform ends: QR code intake → zero-login submission → tracking code → Kanban workflow → public reply → resolution dashboard",
+        "Choose Typeform for: branded surveys, conditional logic, NPS/CSAT, quiz funnels. Choose FeedSolve for: operational complaints from external stakeholders that must be assigned, tracked, and resolved",
+        "Both can coexist — Typeform for periodic satisfaction surveys, FeedSolve for ongoing operational complaint management"
+      ]
     }
   },
-
   {
     "id": 10,
     "meta": {
@@ -944,7 +1025,593 @@
           "url": "/signup"
         }
       ],
-      "writer_notes": "This is the most commercially specific post in the set — target language is 'FMCG,' 'logistics,' '3PL,' 'channel partner.' Avoid using 'end user' or 'consumer' when you mean 'distributor' — the B2B channel framing is the whole point. The resolution rate as a trust-building metric for distributor relationships is a strong and underused angle — expand on it in the measurement section."
+      "writer_notes": "This is the most commercially specific post in the set — target language is 'FMCG,' 'logistics,' '3PL,' 'channel partner.' Avoid using 'end user' or 'consumer' when you mean 'distributor' — the B2B channel framing is the whole point. The resolution rate as a trust-building metric for distributor relationships is a strong and underused angle — expand on it in the measurement section.",
+      "key_takeaways": [
+        "FMCG and logistics companies have channel blind spots — distributors absorb retailer complaints before escalating, and you find out months too late",
+        "A distributor feedback tool needs: no-login submission, structured channel categories, anonymous mode, tracking codes, and public replies",
+        "Multi-board setup: separate boards for Distributor Issues, Retailer Feedback, Logistics Complaints — each with unique QR codes and analytics",
+        "Resolution rate by board reveals staffing problems: 40% resolution on distributor board vs. 85% on retail board signals a process gap",
+        "Present annual resolution rates to distributor partners as a service quality metric — it builds trust and differentiates you from competitors"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "meta": {
+      "title": "How to Close the Feedback Loop: From Collection to Resolution in 4 Steps",
+      "meta_description": "95% of businesses collect feedback but only 5% resolve it effectively. Learn the 4-stage feedback loop closure workflow that turns complaints into retained customers.",
+      "slug": "/blog/close-the-feedback-loop",
+      "primary_keyword": "close the feedback loop",
+      "secondary_keywords": [
+        "feedback loop closure",
+        "close feedback loops",
+        "customer feedback resolution",
+        "feedback resolution workflow"
+      ],
+      "target_audience": "SMB operations managers and CX leaders (20–500 employees) who collect customer feedback but struggle to ensure every complaint gets resolved",
+      "search_intent": "Informational — reader understands feedback collection but wants to master the resolution phase that competitors ignore",
+      "funnel_stage": "TOFU / MOFU",
+      "content_type": "Pillar",
+      "target_word_count": "1,800–2,200 words"
+    },
+    "content": {
+      "quick_answer_box": "Closing the feedback loop is a four-stage operational workflow: (1) Capture — receive feedback through any channel, (2) Triage — categorize and assign to the right owner, (3) Resolve — act, communicate status, and document the fix, and (4) Confirm — verify satisfaction and prevent recurrence. Most tools stop at stage one. FeedSolve operates across all four, achieving 95%+ resolution rates vs. the industry baseline of ~40%.",
+      "h1": "How to Close the Feedback Loop: From Collection to Resolution in 4 Steps",
+      "sections": [
+        {
+          "heading": "H2: The Feedback Collection Trap: Why 95% of Businesses Never Close the Loop",
+          "key_points": [
+            "Organizations spend billions on surveys, NPS scores, and review monitoring. Yet 95% collect feedback; only 5% track resolution effectively.",
+            "The other 90% aggregate data into dashboards that nobody acts on — creating what we call the 'suggestion graveyard.'",
+            "An unresolved complaint doesn't disappear — it amplifies. Customers whose issues are ignored tell 3× more people than those who received poor service but got a response.",
+            "The gap between collection and resolution is FeedSolve's core market opportunity — competitors invest in collection vocabulary, but the resolution phase remains critically underserved in SEO and in practice."
+          ]
+        },
+        {
+          "heading": "H2: Stage 1 — Capture: Universal Intake Without Friction",
+          "key_points": [
+            "Feedback arrives via QR codes, web forms, email, API, and physical touchpoints. FeedSolve's universal inbox consolidates all channels into one queue.",
+            "Zero-login submission is essential — requiring account creation kills 40–70% of responses, especially from external stakeholders like suppliers and distributors.",
+            "Context-aware intake: each QR code carries metadata (table number, delivery ID, product batch) so submissions arrive pre-categorized.",
+            "The capture stage is where most form builders (Typeform, Google Forms) and survey platforms (SurveyMonkey) stop — they treat submission as the finish line."
+          ]
+        },
+        {
+          "heading": "H2: Stage 2 — Triage: Smart Routing That Eliminates Delays",
+          "key_points": [
+            "Manual sorting in spreadsheets creates 3-5 day delays before anyone sees a complaint. Auto-routing by keyword, category, or source eliminates this bottleneck.",
+            "Route by rules: 'Billing' → Finance, 'Defect' → Quality Assurance, 'Table 3' → floor manager on duty.",
+            "Priority tags and escalation rules: if a high-priority issue sits untouched for 15 minutes, notify the supervisor. If 1 hour, escalate to the director.",
+            "Duplicate detection clusters similar submissions automatically — e.g., 12 customers reporting the same delivery delay routes as one prioritized issue."
+          ]
+        },
+        {
+          "heading": "H2: Stage 3 — Resolve: Action, Documentation, and Communication",
+          "key_points": [
+            "The assigned owner investigates, fixes, and documents the resolution with internal notes and file attachments.",
+            "Status transparency: submitters see real-time progress — Received → Under Review → In Progress → Resolved — via their unique tracking code.",
+            "Public reply closes the loop formally: 'We're sorry about your experience. We've retrained our kitchen on this dish and would love to have you back.'",
+            "FeedSolve measures 4× faster resolution vs. chat-based handling and 91% customer satisfaction improvement when loops close within 24 hours."
+          ]
+        },
+        {
+          "heading": "H2: Stage 4 — Confirm: Verification and Prevention",
+          "key_points": [
+            "Send a one-question follow-up: 'Was this resolved to your satisfaction?' Reopen automatically if the answer is no.",
+            "Track reopen rates: >10% indicates rushed or incomplete fixes. FeedSolve users maintain <5% reopen rates.",
+            "Build trend reports from closed issues: monthly supplier scorecards, recurring defect categories, resolution time by team member.",
+            "Resolution rate becomes a leading indicator of operational maturity — not just a CX metric, but a business health metric."
+          ]
+        },
+        {
+          "heading": "H2: FAQs",
+          "faqs": [
+            {
+              "question": "What does 'close the feedback loop' actually mean?",
+              "answer": "Closing the feedback loop means completing the full operational cycle from receiving feedback to resolving the issue and communicating the outcome back to the submitter. It is not a metaphor — it is a measurable workflow with four stages: Capture, Triage, Resolve, and Confirm. Only when all four stages are executed does the loop truly close."
+            },
+            {
+              "question": "Why do most feedback tools fail at closing the loop?",
+              "answer": "Most feedback tools are built for data collection and analysis — surveys, NPS scores, review aggregation. They treat the submission as the endpoint. Closing the loop requires assignment, status tracking, resolution documentation, and two-way communication back to the submitter — capabilities that form builders and survey platforms simply do not include."
+            },
+            {
+              "question": "How long should it take to close a feedback loop?",
+              "answer": "For operational SMBs, a target of 24–48 hours for standard complaints and 4 hours for high-priority issues is achievable with the right workflow. FeedSolve's average time-to-first-response is 4 minutes, and median time-to-close is 1.2 days — significantly faster than the industry baseline of 5-7 days."
+            }
+          ]
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "feedback resolution rate",
+          "url": "/blog/feedback-resolution-rate"
+        },
+        {
+          "anchor": "QR code feedback board",
+          "url": "/blog/qr-code-feedback-board"
+        },
+        {
+          "anchor": "complaint resolution workflow",
+          "url": "/blog/complaint-resolution-workflow-smb"
+        },
+        {
+          "anchor": "FeedSolve pricing",
+          "url": "/pricing"
+        }
+      ],
+      "writer_notes": "This is FeedSolve's category ownership post for 'close the feedback loop' — a term used by Canny, Medallia, and SurveyMonkey but never tied to operational resolution. FeedSolve's angle is the 4-stage operational workflow, not customer sentiment. Tone should be authoritative and process-driven. Include the 95%/5% stat prominently — it is the strongest hook in the competitive analysis.",
+      "key_takeaways": [
+        "95% of businesses collect feedback but only 5% resolve it effectively — the other 90% operate as data aggregators, not resolution engines",
+        "Closing the loop is a 4-stage operational workflow: Capture → Triage → Resolve → Confirm — most tools stop at stage one",
+        "Capture requires universal intake with zero-login submission; Triage needs auto-routing with escalation timeouts",
+        "Resolve demands status transparency and public replies; Confirm requires satisfaction verification and reopen tracking",
+        "FeedSolve achieves 95%+ resolution rates vs. the industry baseline of ~40% by operating across all four stages"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "meta": {
+      "title": "QR Code Feedback System: The Complete Setup Guide for Any Business",
+      "meta_description": "Deploy a QR code feedback system in under 2 minutes. No login required, instant setup, and automatic issue routing for restaurants, manufacturers, and logistics teams.",
+      "slug": "/blog/qr-code-feedback-system",
+      "primary_keyword": "QR code feedback system",
+      "secondary_keywords": [
+        "QR code feedback",
+        "no login required feedback",
+        "restaurant table feedback",
+        "scan to feedback",
+        "QR complaint form"
+      ],
+      "target_audience": "Business owners and operations managers in manufacturing, F&B, logistics, and real estate who need a frictionless way for external stakeholders to submit feedback without creating accounts",
+      "search_intent": "Informational / Commercial — reader knows QR codes and wants to understand how they apply to feedback collection specifically; they are evaluating options before committing to a tool",
+      "funnel_stage": "TOFU / MOFU",
+      "content_type": "Pillar",
+      "target_word_count": "1,600–2,000 words"
+    },
+    "content": {
+      "quick_answer_box": "A QR code feedback system generates scannable codes that link directly to a feedback form. When someone scans the code with their phone camera, they land on a mobile-optimized form — pre-filled with context like table number, delivery ID, or product batch. The submitter receives a unique tracking code and can monitor resolution progress without any account. This approach removes all friction from the submission process, making it ideal for physical locations like factory floors, restaurant tables, delivery vehicles, or reception desks.",
+      "h1": "QR Code Feedback System: The Complete Setup Guide for Any Business",
+      "sections": [
+        {
+          "heading": "H2: Why QR Codes Are the Future of Operational Feedback",
+          "key_points": [
+            "Most businesses collect feedback the hard way — long URLs, mandatory sign-ups, and forms that customers abandon halfway through.",
+            "A QR code feedback system eliminates every point of friction: scan, submit, done. No app downloads. No login required.",
+            "QR code usage in Southeast Asia and the Middle East is culturally familiar — high smartphone penetration makes this the default collection method.",
+            "FeedSolve's QR code functionality enables physical touchpoint integration — restaurant table feedback, manufacturing supplier reporting, logistics delivery documentation — with zero authentication barriers."
+          ]
+        },
+        {
+          "heading": "H2: How a QR Code Feedback System Works",
+          "key_points": [
+            "Unique board URL + auto-generated QR code → print and place anywhere.",
+            "Context-aware: each QR code carries metadata (Table 5, Dock B, Batch #1024) so submissions arrive pre-categorized.",
+            "Real-time routing: submissions automatically assign to the right team member based on category or location.",
+            "The submitter receives a tracking code (#FSV-XXXX) — like a parcel number — and can check progress at any time without logging in."
+          ]
+        },
+        {
+          "heading": "H2: Use Cases by Industry",
+          "key_points": [
+            "Restaurants & Hospitality: Place QR codes on table tents or receipts. Diners scan and rate their experience while still seated. Issues route to the floor manager instantly — not days later in a review aggregator.",
+            "Manufacturing & Supply Chain: Attach QR codes to supplier delivery notes or production line stations. Workers report defects or material issues without logging into enterprise software.",
+            "Logistics & Field Services: Drivers and delivery recipients scan codes to document condition, timestamp arrival, or flag damages. Every submission becomes a trackable issue with automatic escalation rules.",
+            "Property Management: QR codes in lobbies and welcome letters let tenants submit maintenance requests without calling or emailing."
+          ]
+        },
+        {
+          "heading": "H2: Setting Up Your First QR Code Feedback Loop in 2 Minutes",
+          "key_points": [
+            "Step 1: Create your form — define fields (rating, category, description, photo upload).",
+            "Step 2: Generate contextual QR codes — link each code to specific metadata.",
+            "Step 3: Print and deploy — table tents, stickers, delivery slips, or safety signage.",
+            "Step 4: Configure routing rules — auto-assign by category, location, or urgency.",
+            "Step 5: Track resolution — monitor open rates, response times, and closure metrics in one dashboard.",
+            "FeedSolve's setup benchmark is deliberate: operational in under 2 minutes with no IT tickets or implementation consultants."
+          ]
+        },
+        {
+          "heading": "H2: QR Feedback System vs. Traditional Survey Tools",
+          "key_points": [
+            "Survey tools (Zonka, SurveyMonkey) use QR as a distribution channel for surveys — the result is data in a spreadsheet.",
+            "A QR feedback system is a workflow tool — submissions become trackable items with statuses, assignments, and replies.",
+            "Surveys ask 'how did we do?' — feedback systems ask 'what should we fix?' and then actually fix it.",
+            "The submitter gets a tracking code and can check progress at any time — surveys offer no such mechanism."
+          ]
+        },
+        {
+          "heading": "H2: FAQs",
+          "faqs": [
+            {
+              "question": "Does the person scanning the QR code need to log in or create an account?",
+              "answer": "No. A QR code feedback system is designed for zero-friction submission. The person who scans the code can fill in and submit the form immediately — no login, no password, no app installation required. They receive a unique tracking code they can use to check the status of their submission later."
+            },
+            {
+              "question": "Can I create multiple QR codes for different locations or stakeholder types?",
+              "answer": "Yes. Most QR feedback platforms allow you to create multiple boards — one for customer feedback, one for supplier issues, one for distributor complaints — each with its own QR code, category set, and submission link. This keeps feedback organized by source from the moment of submission."
+            },
+            {
+              "question": "What happens to submissions after someone scans the QR code and submits feedback?",
+              "answer": "Submissions appear in the company's internal dashboard, where team members can assign them, set priority, add internal notes, change the status, and send a public reply. The submitter can track progress using their tracking code on the public tracking page."
+            }
+          ]
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "close the feedback loop",
+          "url": "/blog/close-the-feedback-loop"
+        },
+        {
+          "anchor": "feedback resolution rate",
+          "url": "/blog/feedback-resolution-rate"
+        },
+        {
+          "anchor": "restaurant feedback QR code",
+          "url": "/blog/restaurant-feedback-qr-code"
+        },
+        {
+          "anchor": "create your first feedback board",
+          "url": "/signup"
+        }
+      ],
+      "writer_notes": "This is FeedSolve's flagship QR code post — it must own the 'QR code feedback system' keyword against all competitors. Avoid 'digital transformation' language; keep tone practical. The 2-minute setup claim must be substantiated with the actual step-by-step. Include the Southeast Asia/Middle East QR familiarity stat if sourced.",
+      "key_takeaways": [
+        "A QR code feedback system generates scannable codes linking to mobile-optimized forms with pre-filled context — table number, delivery ID, product batch",
+        "Zero-login submission is essential: requiring account creation kills 40–70% of responses, especially from external stakeholders",
+        "Industry applications: restaurant table cards, factory floor posters, delivery vehicle stickers, property lobby notices, clinic waiting rooms",
+        "Unlike survey tools that use QR as distribution, a feedback system is a workflow tool with tracking codes, assignments, and resolution status",
+        "FeedSolve's setup takes under 2 minutes: create form → generate QR → configure routing → track resolution in one dashboard"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "meta": {
+      "title": "Simple Zendesk Alternative: Fast Feedback Setup Without Enterprise Complexity",
+      "meta_description": "Looking for a simple Zendesk alternative? FeedSolve offers 2-minute setup, flat pricing, and complaint tracking without the certification course. See the comparison.",
+      "slug": "/blog/simple-zendesk-alternative",
+      "primary_keyword": "simple Zendesk alternative",
+      "secondary_keywords": [
+        "fast feedback setup",
+        "easy complaint tracking",
+        "2-minute setup",
+        "Zendesk alternative for SMB",
+        "lightweight help desk"
+      ],
+      "target_audience": "SMB owners and operations managers currently using or evaluating Zendesk who find it overkill for their complaint tracking needs",
+      "search_intent": "Commercial Investigation — reader is actively comparing Zendesk to simpler alternatives",
+      "funnel_stage": "MOFU / BOFU",
+      "content_type": "Comparison",
+      "target_word_count": "1,300–1,600 words"
+    },
+    "content": {
+      "quick_answer_box": "Zendesk is powerful but complex — multi-tiered routing, custom triggers, and implementation timelines that stretch across quarters. For teams that need to track complaints and close feedback loops without a certification course, the overhead hurts more than it helps. FeedSolve is a simple Zendesk alternative that offers 2-minute setup, flat team pricing, and a resolution-first workflow built for SMBs — not enterprise IT departments.",
+      "h1": "Simple Zendesk Alternative: Fast Feedback Setup Without Enterprise Complexity",
+      "sections": [
+        {
+          "heading": "H2: When Enterprise Help Desks Are Overkill",
+          "key_points": [
+            "Zendesk is powerful. It's also complex — multi-tiered routing, custom triggers, and implementation timelines that stretch across quarters.",
+            "For teams that need to track complaints and close feedback loops without a certification course, the overhead hurts more than it helps.",
+            "The real cost of complexity: when routing rules require a PhD to configure, simple complaints sit unassigned for days.",
+            "FeedSolve's 'under 2 minutes' standard is deliberate — in 120 seconds you can create your first form, configure auto-assignment, generate a QR code, and invite your team."
+          ]
+        },
+        {
+          "heading": "H2: What 'Simple' Actually Means",
+          "key_points": [
+            "Form building: Pre-built templates and drag-and-drop vs. Zendesk's custom ticket fields and conditional logic builder.",
+            "User management: Invite by email, assign by dropdown vs. role-based permissions, groups, and organizations.",
+            "Routing: 'If category = X, assign to Y' vs. triggers, automations, and macros.",
+            "Reporting: Resolution rate, response time, trend lines vs. Explore dashboard and custom queries.",
+            "Pricing: Flat team pricing with no per-seat penalties vs. $19-$99/agent/month."
+          ]
+        },
+        {
+          "heading": "H2: Who Needs a Simple Alternative?",
+          "key_points": [
+            "Small Customer Success Teams: 3 people handling feedback for 500 customers. You need visibility into what's open, who's handling it, and whether it closed — not a 40-hour implementation.",
+            "Restaurant & Hospitality Groups: Floor managers rotate weekly. Training on complex software isn't feasible. A simple complaint tracker that works from a phone browser is essential.",
+            "Manufacturing Quality Teams: Supplier issues, production defects, and safety observations need immediate routing to engineers — not a ticket queue that sits for days.",
+            "Field Service Operations: Technicians in the field submit feedback from job sites. They need a mobile form, not a desktop help desk portal."
+          ]
+        },
+        {
+          "heading": "H2: Easy Complaint Tracking: The Core Workflow",
+          "key_points": [
+            "Submit: Customer, employee, or supplier fills a form (web, QR, email, API).",
+            "Route: Auto-assign based on category, location, or urgency.",
+            "Act: Owner updates status, adds notes, uploads evidence.",
+            "Close: Mark resolved, notify submitter, archive for reporting.",
+            "Every action is visible in a single dashboard. No tab-switching between 'tickets,' 'views,' and 'explore.'"
+          ]
+        },
+        {
+          "heading": "H2: Migration Path: From Zendesk to FeedSolve",
+          "key_points": [
+            "Moving doesn't mean starting over. FeedSolve imports historical ticket data (CSV export → structured issues), customer contact lists, and existing category structures.",
+            "Most teams are operational within a day, not a quarter.",
+            "FeedSolve's flat pricing means your team focuses on closing issues, not managing software seats.",
+            "Target keywords for this section: 'simple Zendesk alternative,' 'fast feedback setup,' 'easy complaint tracking'"
+          ]
+        },
+        {
+          "heading": "H2: FAQs",
+          "faqs": [
+            {
+              "question": "Is FeedSolve really cheaper than Zendesk?",
+              "answer": "FeedSolve offers a free plan and paid plans starting at $19/month with flat team pricing — no per-seat penalties. Zendesk's paid tiers start at $19/agent/month and scale to $99/agent/month for full features. For a 5-person team, that's $95-$495/month with Zendesk vs. flat pricing with FeedSolve."
+            },
+            {
+              "question": "Can I import my Zendesk tickets into FeedSolve?",
+              "answer": "Yes. FeedSolve supports CSV import of historical ticket data, including customer contact lists and existing category structures. Most teams complete migration and are fully operational within a single day."
+            },
+            {
+              "question": "Does FeedSolve have the automation features Zendesk offers?",
+              "answer": "FeedSolve focuses on essential automation: auto-assignment by category, escalation rules, and status notifications. It does not replicate Zendesk's full trigger/automation engine. If you need enterprise-grade conditional logic and 50+ custom triggers, Zendesk remains the better fit. If you need fast complaint resolution with minimal configuration, FeedSolve is the simpler alternative."
+            }
+          ]
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "complaint resolution workflow",
+          "url": "/blog/complaint-resolution-workflow-smb"
+        },
+        {
+          "anchor": "feedback resolution rate",
+          "url": "/blog/feedback-resolution-rate"
+        },
+        {
+          "anchor": "FeedSolve vs Typeform",
+          "url": "/blog/feedsolve-vs-typeform"
+        },
+        {
+          "anchor": "FeedSolve pricing",
+          "url": "/pricing"
+        }
+      ],
+      "writer_notes": "This is a direct comparison page — keep tone fair and factual. Acknowledge Zendesk's genuine strengths for enterprise use cases, then position FeedSolve as the purpose-built alternative for SMBs that need resolution, not tickets. The 'under 2 minutes' claim and flat pricing are the strongest differentiators.",
+      "key_takeaways": [
+        "Zendesk is powerful but complex — implementation timelines stretch across quarters, and routing rules require certification-level knowledge",
+        "FeedSolve is a simple Zendesk alternative with 2-minute setup, flat team pricing, and resolution-first workflow built for SMBs",
+        "Key simplifications: pre-built templates vs. custom ticket fields, invite-by-email vs. role-based permissions, 'If X then Y' routing vs. triggers/automations/macros",
+        "Ideal for: small customer success teams, rotating restaurant managers, manufacturing quality teams, and field service technicians",
+        "Migration takes a day, not a quarter — CSV import of historical tickets, contacts, and categories with no implementation consultants"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "meta": {
+      "title": "Track Every Issue: How SMBs Achieve 100% Feedback Accountability",
+      "meta_description": "Stop losing complaints. Learn how to track every issue from submission to resolution with zero loss, automatic routing, and a real-time resolution rate dashboard.",
+      "slug": "/blog/track-every-issue",
+      "primary_keyword": "track every issue",
+      "secondary_keywords": [
+        "issue tracker",
+        "feedback accountability",
+        "100% issue tracking",
+        "complaint tracking system",
+        "zero feedback loss"
+      ],
+      "target_audience": "SMB operations managers who have experienced feedback falling through cracks and want absolute accountability",
+      "search_intent": "Informational / Commercial — reader has a specific pain point (lost complaints) and wants a solution framework",
+      "funnel_stage": "TOFU / MOFU",
+      "content_type": "Pillar",
+      "target_word_count": "1,500–1,900 words"
+    },
+    "content": {
+      "quick_answer_box": "Tracking every issue requires three layers of protection: (1) Universal intake — consolidate all channels (QR, web, email, API) into one queue so nothing arrives in a black hole, (2) Failsafe routing — auto-assignment with escalation if items sit unassigned, and (3) Immutable audit trail — every submission is timestamped and stored with full history. FeedSolve's architecture achieves 100% issue tracking with zero loss through these three layers, plus real-time resolution rate visibility.",
+      "h1": "Track Every Issue: How SMBs Achieve 100% Feedback Accountability",
+      "sections": [
+        {
+          "heading": "H2: The Hidden Cost of Lost Complaints",
+          "key_points": [
+            "When feedback arrives via email, Slack, phone calls, review sites, and hallway conversations, 60%+ falls through cracks.",
+            "An unacknowledged complaint is worse than no feedback at all — it signals to the submitter that their voice doesn't matter.",
+            "For B2B contexts, lost supplier feedback directly impacts quality metrics, contract renewals, and audit compliance.",
+            "The 95% vs 5% gap: 95% of organizations collect feedback; only 5% track resolution effectively — meaning 90% operate as data aggregators, not resolution engines."
+          ]
+        },
+        {
+          "heading": "H2: Layer 1 — Universal Intake: One Queue for Every Channel",
+          "key_points": [
+            "Web forms, QR codes, email forwarding, API, Zendesk import — all route to one unified queue.",
+            "No more checking six different inboxes. No more 'I thought you were handling that.'",
+            "Auto-categorization by keyword and source eliminates manual triage delays.",
+            "Duplicate detection clusters similar submissions — e.g., 12 customers reporting the same delivery delay — so they don't create 12 separate tickets."
+          ]
+        },
+        {
+          "heading": "H2: Layer 2 — Failsafe Routing: Nothing Sits Unassigned",
+          "key_points": [
+            "Auto-routing by category, location, or urgency ensures every submission has an owner from minute one.",
+            "Escalation rules: if unassigned after 15 minutes, notify the supervisor. If 1 hour, escalate to the director.",
+            "Round-robin and load-balancing options distribute work evenly across team members.",
+            "The 'track every issue' commitment requires absolute claims — FeedSolve's failsafe routing substantiates this with configurable timeout rules."
+          ]
+        },
+        {
+          "heading": "H2: Layer 3 — Immutable Audit Trail: Every Action Logged",
+          "key_points": [
+            "Every submission is timestamped with its full history: status changes, internal notes, assignee changes, and public replies.",
+            "Exportable records for compliance: ISO 9001, IATF 16949, and customer dispute resolution.",
+            "Searchable archive: find any issue by keyword, date, category, or submitter tracking code.",
+            "The audit trail transforms feedback from informal communication into verifiable business records."
+          ]
+        },
+        {
+          "heading": "H2: The Resolution Rate Dashboard: Visibility Changes Behavior",
+          "key_points": [
+            "Resolution rate displayed prominently drives accountability — what gets measured gets managed.",
+            "Secondary metrics: average resolution time, submissions by category, unresolved backlog count, reopen rate.",
+            "Monthly trend tracking: resolution rate improving over time is the leading indicator of operational maturity.",
+            "Red flags: submissions sitting in 'In Review' for >72 hours; >20% of complaints marked 'Closed' without a public reply."
+          ]
+        },
+        {
+          "heading": "H2: FAQs",
+          "faqs": [
+            {
+              "question": "How does FeedSolve prevent feedback from getting lost?",
+              "answer": "FeedSolve prevents loss at three levels: (1) Universal intake consolidates all channels into one queue, (2) Failsafe auto-routing with escalation timeouts ensures nothing sits unassigned, and (3) An immutable audit trail stores every submission with full history. Combined, these layers achieve 100% issue tracking with zero loss."
+            },
+            {
+              "question": "Can I track issues from multiple locations or stakeholder types?",
+              "answer": "Yes. FeedSolve supports multiple feedback boards — each with its own QR code, category set, and routing rules. All submissions from all boards appear in a single internal dashboard, filterable by board, status, category, or date. This is ideal for businesses with multiple locations, separate customer and supplier channels, or different property portfolios."
+            },
+            {
+              "question": "What happens if a team member leaves — do their assigned issues get lost?",
+              "answer": "No. FeedSolve's assignment system includes reassign rules and supervisor oversight. If an issue is assigned to a team member who is unavailable, escalation rules automatically notify the supervisor. Additionally, all issues remain visible in the dashboard regardless of assignee status, so nothing is tied to a single person's presence."
+            }
+          ]
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "feedback resolution rate",
+          "url": "/blog/feedback-resolution-rate"
+        },
+        {
+          "anchor": "complaint resolution workflow",
+          "url": "/blog/complaint-resolution-workflow-smb"
+        },
+        {
+          "anchor": "QR code feedback board",
+          "url": "/blog/qr-code-feedback-board"
+        },
+        {
+          "anchor": "FeedSolve dashboard",
+          "url": "/features/dashboard"
+        }
+      ],
+      "writer_notes": "This post owns the 'track every issue' keyword cluster — it must feel authoritative and absolute. The three-layer architecture (intake, routing, audit) is the core framework. Substantiate the 100% claim with the failsafe mechanics. Tone should be reassuring to operations managers who have been burned by lost complaints before.",
+      "key_takeaways": [
+        "60%+ of feedback falls through cracks when it arrives via email, Slack, phone, review sites, and hallway conversations simultaneously",
+        "100% issue tracking requires three layers: universal intake (one queue for all channels), failsafe routing (auto-assignment with escalation), and immutable audit trail",
+        "Universal intake consolidates QR, web, email, API into one queue with auto-categorization and duplicate detection",
+        "Failsafe routing: auto-assign by category/location with 15-minute supervisor notification and 1-hour director escalation if unassigned",
+        "The resolution rate dashboard drives accountability — what gets measured gets managed; monthly trend tracking shows operational maturity"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "meta": {
+      "title": "Partner Complaint Tracking: How B2B Companies Manage Channel and Alliance Issues",
+      "meta_description": "B2B partner and distributor complaints disappear in email threads. Learn how structured partner complaint tracking with QR codes and resolution workflows closes the loop.",
+      "slug": "/blog/partner-complaint-tracking",
+      "primary_keyword": "partner complaint tracking",
+      "secondary_keywords": [
+        "channel partner feedback",
+        "alliance complaint management",
+        "B2B complaint tracker",
+        "distributor issue tracking",
+        "supplier complaint tracking"
+      ],
+      "target_audience": "B2B company owners, channel managers, and alliance directors managing 5+ partners who currently handle complaints via informal channels",
+      "search_intent": "Commercial — high buying intent; reader is actively searching for a tool to manage partner or channel complaints",
+      "funnel_stage": "MOFU / BOFU",
+      "content_type": "Cluster / Landing Page",
+      "target_word_count": "1,400–1,700 words"
+    },
+    "content": {
+      "quick_answer_box": "Partner complaint tracking is a structured system that gives channel partners, distributors, and alliance members a zero-friction way to submit complaints and concerns — instead of using email or WhatsApp. The best B2B complaint trackers include a shareable link or QR code for submission, a Kanban-style resolution workflow for the internal team, and a tracking code so partners can verify their issues are being addressed. This is especially critical for FMCG, logistics, and manufacturing companies where channel blind spots can destroy relationships before headquarters ever hears about them.",
+      "h1": "Partner Complaint Tracking: How B2B Companies Manage Channel and Alliance Issues",
+      "sections": [
+        {
+          "heading": "H2: Your Partners Are Absorbing Problems You Don't Even Know About",
+          "key_points": [
+            "Channel blind spot: B2B companies are often the last to hear about recurring product or delivery issues because partners absorb complaints at the next tier before escalating.",
+            "The barrier to escalation: there is no easy, structured channel. Calling the account manager means disrupting a relationship. Email threads get lost or ignored.",
+            "The consequence: partners quietly deprioritize your product or route, and you find out at the quarterly review — months too late.",
+            "What's needed: a low-friction feedback channel that feels professional, not burdensome — with full accountability and tracking."
+          ]
+        },
+        {
+          "heading": "H2: What Partner Complaint Tracking Needs to Do Differently",
+          "key_points": [
+            "No login required — partners will not create accounts in your internal system.",
+            "Structured categories relevant to the channel relationship: Delivery Delay, Short-Shipment, Damaged Goods, Invoice Discrepancy, Product Defect, Market Return, Promotional Issue.",
+            "Anonymous mode option: useful for partners who want to flag concerns without putting the business relationship at risk.",
+            "Tracking code: partner submits a complaint at 9 AM and can check at 5 PM whether it's been assigned or resolved — without following up by phone.",
+            "Public reply: the company closes the loop formally rather than via a WhatsApp message that may never be seen."
+          ]
+        },
+        {
+          "heading": "H2: Structuring Your Partner Feedback by Relationship Type",
+          "key_points": [
+            "One board per stakeholder type: 'Distributor Issues,' 'Retailer Feedback,' 'Logistics Partner Complaints,' 'Field Sales Reports.'",
+            "Each board has its own QR code and shareable link — distribute the link to all partners in your next trade communication.",
+            "Multi-board analytics: compare resolution rate across partner categories to identify which channel is generating the most friction.",
+            "Board-level categories can be customized: a 3PL partner board has different categories from a retail chain feedback board."
+          ]
+        },
+        {
+          "heading": "H2: Measuring Channel Health With Resolution Rate",
+          "key_points": [
+            "Resolution rate % by board — a distributor board at 40% resolution rate vs. a retail board at 85% signals a staffing or process problem in the distributor-facing team.",
+            "Average resolution time by category — if 'Damaged Goods' takes 10 days to resolve and 'Invoice Discrepancy' takes 2 days, that's a packaging or logistics problem worth investigating.",
+            "Monthly submission volume trends — a spike in submissions from a specific partner region may precede churn if unaddressed.",
+            "Present resolution rate to partners annually as a service quality metric — it builds trust and differentiates your company from competitors who operate in the dark."
+          ]
+        },
+        {
+          "heading": "H2: FeedSolve vs. Generic Tools for Partner Complaint Tracking",
+          "key_points": [
+            "Enterprise CRMs (Salesforce, HubSpot) track partner relationships but lack structured complaint intake and resolution workflows.",
+            "Help desks (Zendesk, Freshdesk) require partners to create accounts or manage email threads — adds friction to already delicate relationships.",
+            "Shared inboxes (Gmail, Outlook) have no resolution workflow, no tracking codes, no status updates, and no resolution rate metric.",
+            "FeedSolve: purpose-built for zero-friction submission, Kanban resolution, tracking codes, and resolution rate dashboard — setup in under 30 minutes, starting free."
+          ]
+        },
+        {
+          "heading": "H2: FAQs",
+          "faqs": [
+            {
+              "question": "Do my partners need to download anything to submit complaints?",
+              "answer": "No. Partners access the feedback board via a web link or QR code on any smartphone or computer. No app, no login, no password. They receive a tracking code on submission and can check progress at any time via the public tracking page."
+            },
+            {
+              "question": "Can I keep feedback from one partner visible only to their account manager?",
+              "answer": "You can assign submissions to specific team members, and internal notes are only visible within your team dashboard. While all team members with dashboard access can see all submissions by default, submission-level assignment and role-based access controls are available on higher-tier plans."
+            },
+            {
+              "question": "How is this different from just asking partners to email complaints to a shared inbox?",
+              "answer": "A shared inbox has no resolution workflow, no tracking codes, no status updates, no resolution rate metric, and no structured categories. Complaints arrive in unstructured text and are subject to being lost, duplicated, or forgotten when team members change. A feedback board structures every complaint from the moment of submission and provides both parties with a formal record of resolution."
+            }
+          ]
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "distributor feedback tool",
+          "url": "/blog/distributor-feedback-tool-fmcg-logistics"
+        },
+        {
+          "anchor": "supplier feedback tool for manufacturers",
+          "url": "/blog/supplier-feedback-tool-manufacturers"
+        },
+        {
+          "anchor": "complaint resolution workflow",
+          "url": "/blog/complaint-resolution-workflow-smb"
+        },
+        {
+          "anchor": "start a free partner feedback board",
+          "url": "/signup"
+        }
+      ],
+      "writer_notes": "This post targets the 'partner complaint tracking' and 'channel partner feedback' keywords — low search volume but high B2B deal value. Use concrete scenario writing (Unit 14B, #FSV-7734 style examples adapted for B2B). The resolution rate as a trust-building metric for partner relationships is a strong and underused angle. Avoid 'end user' or 'consumer' language — the B2B channel framing is the whole point.",
+      "key_takeaways": [
+        "B2B channel blind spots destroy relationships — partners absorb complaints at the next tier before escalating, and headquarters finds out months too late",
+        "Partner complaint tracking requires: no-login submission, structured channel categories (Delivery Delay, Damaged Goods, Invoice Discrepancy), anonymous mode, and tracking codes",
+        "Multi-board analytics compare resolution rates across partner types — a 40% distributor rate vs. 85% retail rate signals a staffing gap",
+        "Present annual resolution rates to partners as a service quality metric — it builds trust and differentiates you from competitors operating in the dark",
+        "FeedSolve setup takes under 30 minutes: create partner board → define categories → distribute QR/link → track resolution across all channels"
+      ]
     }
   }
 ]
