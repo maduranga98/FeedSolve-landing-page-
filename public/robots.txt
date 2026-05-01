@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://feedsolve-e9483.web.app/sitemap.xml
+Sitemap: https://feedsolve.com/sitemap.xml
