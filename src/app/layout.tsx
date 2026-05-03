@@ -40,7 +40,14 @@ export const metadata: Metadata = {
     siteName: "FeedSolve",
     locale: "en_US",
     type: "website",
-    images: [`${SITE_URL}/feedsolve.webp`],
+    images: [
+      {
+        url: `${SITE_URL}/feedsolve.webp`,
+        width: 1200,
+        height: 630,
+        alt: "FeedSolve — Feedback tracking and resolution platform",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -49,6 +56,7 @@ export const metadata: Metadata = {
       "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
     images: [`${SITE_URL}/feedsolve.webp`],
   },
+  manifest: "/manifest.json",
   robots: {
     index: true,
     follow: true,
