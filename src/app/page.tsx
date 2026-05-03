@@ -1105,6 +1105,15 @@ function FAQ() {
               <div
                 className="faq-q"
                 onClick={() => setOpenIdx(i === openIdx ? -1 : i)}
+                role="button"
+                aria-expanded={i === openIdx}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setOpenIdx(i === openIdx ? -1 : i);
+                  }
+                }}
               >
                 {faq.q}
                 <div className="faq-arrow">
@@ -1368,23 +1377,82 @@ function FinalCTA() {
   );
 }
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
+const softwareAppJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "FeedSolve",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+  url: "https://feedsolve.com",
+  image: "https://feedsolve.com/feedsolve.webp",
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "FeedSolve",
+  url: "https://feedsolve.com",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://feedsolve.com/blog?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Steps />
-      <Problem />
-      <Solution />
-      <Demo />
-      <UseCases />
-      <Diff />
-      <BeforeAfter />
-      <Pricing />
-      <FAQ />
-      <Blog />
-      <FinalCTA />
+      <main>
+        <Hero />
+        <Steps />
+        <Problem />
+        <Solution />
+        <Demo />
+        <UseCases />
+        <Diff />
+        <BeforeAfter />
+        <Pricing />
+        <FAQ />
+        <Blog />
+        <FinalCTA />
+      </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
     </>
   );
 }

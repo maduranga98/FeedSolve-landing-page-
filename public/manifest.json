@@ -1,0 +1,21 @@
+{
+  "name": "FeedSolve",
+  "short_name": "FeedSolve",
+  "description": "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F7F4",
+  "theme_color": "#1E3557",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
