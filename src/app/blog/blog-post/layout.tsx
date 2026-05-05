@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Why WhatsApp is killing your customer feedback loop — FeedSolve Blog",
+ title: "Why WhatsApp is killing your customer feedback loop - FeedSolve Blog",
+ description:
+  "Most businesses run their entire complaints process through a WhatsApp group. Here is why that breaks down at scale and what to do instead.",
+ openGraph: {
+  title: "Why WhatsApp is killing your customer feedback loop - FeedSolve Blog",
   description:
-    "Most businesses run their entire complaints process through a WhatsApp group. Here is why that breaks down at scale and what to do instead.",
-  openGraph: {
-    title: "Why WhatsApp is killing your customer feedback loop — FeedSolve Blog",
-    description:
-      "Most businesses run their entire complaints process through a WhatsApp group. Here is why that breaks down at scale and what to do instead.",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/blog/blog-post",
-  },
+   "Most businesses run their entire complaints process through a WhatsApp group. Here is why that breaks down at scale and what to do instead.",
+ },
+ alternates: {
+  canonical: "https://feedsolve.com/blog/blog-post",
+ },
 };
 
 export default function BlogPostLayout({
-  children,
+ children,
 }: {
-  children: React.ReactNode;
+ children: React.ReactNode;
 }) {
-  return children;
+ return children;
 }
