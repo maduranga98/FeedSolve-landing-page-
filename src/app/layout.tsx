@@ -110,69 +110,6 @@ const organizationJsonLd = {
  sameAs: [],
 };
 
-const faqPageJsonLd = {
- "@context": "https://schema.org",
- "@type": "FAQPage",
- mainEntity: [
-  {
-   "@type": "Question",
-   name: "Do submitters need an account?",
-   acceptedAnswer: {
-    "@type": "Answer",
-    text: "No. Anyone can submit feedback without logging in. You share a link or QR code, they fill in the form. Zero friction for your customers, suppliers, or partners.",
-   },
-  },
-  {
-   "@type": "Question",
-   name: "Can feedback be anonymous?",
-   acceptedAnswer: {
-    "@type": "Answer",
-    text: "Yes. You can enable anonymous submissions per board. Submitters still get a unique tracking code even when submitting anonymously.",
-   },
-  },
-  {
-   "@type": "Question",
-   name: "How long does setup take?",
-   acceptedAnswer: {
-    "@type": "Answer",
-    text: "Less than 2 minutes. Create an account, name your board, and share the link. No configuration required to get started collecting and tracking.",
-   },
-  },
-  {
-   "@type": "Question",
-   name: "Do I need a demo or sales call?",
-   acceptedAnswer: {
-    "@type": "Answer",
-    text: "No. Just click Try Now and start immediately. No gatekeeping, no onboarding calls required.",
-   },
-  },
-  {
-   "@type": "Question",
-   name: "Can I upgrade later?",
-   acceptedAnswer: {
-    "@type": "Answer",
-    text: "Yes. Start on the free plan and upgrade anytime as your usage grows. No data lost, no migrations, no downtime.",
-   },
-  },
-  {
-   "@type": "Question",
-   name: "Can I add my company logo and brand colors to the QR code?",
-   acceptedAnswer: {
-    "@type": "Answer",
-    text: "Yes. FeedSolve lets you customize your QR codes with your company logo, brand colors, and style. Branded QR codes are available on Growth and Pro plans and help your feedback boards look like a natural part of your business.",
-   },
-  },
-  {
-   "@type": "Question",
-   name: "Can submitters use the feedback form in their own language?",
-   acceptedAnswer: {
-    "@type": "Answer",
-    text: "Yes. FeedSolve supports multi-language submission forms so your customers, suppliers, and partners can submit feedback in their preferred language. This is especially useful for businesses operating across regions like South Asia, the Middle East, and East Africa.",
-   },
-  },
- ],
-};
-
 export default function RootLayout({
  children,
 }: Readonly<{
@@ -188,10 +125,6 @@ export default function RootLayout({
     <script
      type="application/ld+json"
      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-    />
-    <script
-     type="application/ld+json"
-     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
     />
     {children}
    </body>
