@@ -63,7 +63,7 @@ export default function BlogPost() {
      <div className="article-breadcrumb">
       <Link href="/">Home</Link>
       <ChevronRight size={13} />
-      <Link href="/blog">Blog</Link>
+      <Link href="/blog/">Blog</Link>
       <ChevronRight size={13} />
       <span>WhatsApp and Feedback</span>
      </div>
@@ -287,7 +287,7 @@ export default function BlogPost() {
       <div className="article-tags-row">
        <span className="article-tags-label">Tags</span>
        {["Operations", "Complaints", "WhatsApp", "Customer Experience", "Feedback"].map((tag) => (
-        <Link key={tag} href="/blog" className="article-tag-chip">{tag}</Link>
+        <Link key={tag} href="/blog/" className="article-tag-chip">{tag}</Link>
        ))}
       </div>
       <div className="share-row">
@@ -345,21 +345,21 @@ export default function BlogPost() {
       <div className="sidebar-card-title">Related posts</div>
       {[
        {
-        href: "/blog/blog-post",
+        href: "/blog/blog-post/",
         iconBg: "var(--teal-pale)",
         icon: <ClipboardList size={22} style={{ color: "var(--teal)" }} />,
         title: "Zero-leakage complaint resolution process",
         meta: "4 min read",
        },
        {
-        href: "/blog/blog-post",
+        href: "/blog/blog-post/",
         iconBg: "#EEF2FF",
         icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3730A3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 17h3M17 14v6M20 17h-3"/></svg>,
         title: "5 places to put your feedback QR code",
         meta: "3 min read",
        },
        {
-        href: "/blog/blog-post",
+        href: "/blog/blog-post/",
         iconBg: "#E8F5E9",
         icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>,
         title: "Zest Foods case study: 68% reduction in complaints",
@@ -387,7 +387,7 @@ export default function BlogPost() {
       { tag: "QR Codes", tagColor: "#3730A3", title: "5 places to put your feedback QR code that actually get scanned", desc: "Placement strategies that drive real, actionable feedback.", meta: "Mehul Joshi · Apr 7, 2026" },
       { tag: "Case Study", tagColor: "#2E7D32", title: "How Zest Foods reduced customer complaints by 68% in 90 days", desc: "A real story from food manufacturing to quality control transformation.", meta: "Team FeedSolve · Mar 28, 2026" },
      ].map(({ tag, tagColor, title, desc, meta }, i) => (
-      <Link key={i} href="/blog/blog-post" className="more-card">
+      <Link key={i} href="/blog/blog-post/" className="more-card">
        <div className="more-tag" style={{ color: tagColor }}>{tag}</div>
        <h3>{title}</h3>
        <p>{desc}</p>

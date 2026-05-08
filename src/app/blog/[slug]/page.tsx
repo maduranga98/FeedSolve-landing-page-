@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import blogData from "@/data/blog.json";
 import BlogPostClient from "./BlogPostClient";
 
+const SITE_URL = "https://feedsolve.com";
+const withTrailingSlash = (path: string) => (path === "/" ? path : `${path.replace(/\/$/, "")}/`);
+const absoluteUrl = (path: string) => `${SITE_URL}${withTrailingSlash(path)}`;
+
 export function generateStaticParams() {
  return blogData.map((blog) => ({
   slug: blog.meta.slug.replace("/blog/", ""),
@@ -24,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   openGraph: {
    title: blog.meta.title,
    description: blog.meta.meta_description,
-   url: `https://feedsolve.com${blog.meta.slug}`,
+   url: absoluteUrl(blog.meta.slug),
    siteName: "FeedSolve",
    locale: "en_US",
    type: "article",
@@ -39,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
    follow: true,
   },
   alternates: {
-   canonical: `https://feedsolve.com${blog.meta.slug}`,
+   canonical: absoluteUrl(blog.meta.slug),
   },
  };
 }
@@ -64,18 +68,18 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   "@type": "BlogPosting",
   headline: blog.meta.title,
   description: blog.meta.meta_description,
-  url: `https://feedsolve.com${blog.meta.slug}`,
-  datePublished: (blog.content as any).date_published ?? "2026-04-01",
-  dateModified: (blog.content as any).date_modified ?? "2026-04-01",
+  url: absoluteUrl(blog.meta.slug),
+  datePublished: "2026-04-01",
+  dateModified: "2026-04-01",
   author: {
    "@type": "Organization",
    name: "FeedSolve Team",
-   url: "https://feedsolve.com",
+   url: `${SITE_URL}/`,
   },
   publisher: {
    "@type": "Organization",
    name: "FeedSolve",
-   url: "https://feedsolve.com",
+   url: `${SITE_URL}/`,
    logo: {
     "@type": "ImageObject",
     url: "https://feedsolve.com/logo.webp",
@@ -83,7 +87,7 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   },
   mainEntityOfPage: {
    "@type": "WebPage",
-   "@id": `https://feedsolve.com${blog.meta.slug}`,
+   "@id": absoluteUrl(blog.meta.slug),
   },
  };
 

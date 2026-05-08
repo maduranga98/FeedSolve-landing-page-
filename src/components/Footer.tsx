@@ -29,7 +29,7 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
         <div className="footer-links">
           <LinkComponent {...linkProps(productHref)}>Product</LinkComponent>
           <LinkComponent {...linkProps(pricingHref)}>Pricing</LinkComponent>
-          {variant === "blog" && <Link href="/blog">Blog</Link>}
+          {variant === "blog" && <Link href="/blog/">Blog</Link>}
           <a href="mailto:hello@feedsolve.com">Contact</a>
           <a href="/privacy">Privacy Policy</a>
           {variant === "home" && <a href="/terms">Terms</a>}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
    "Practical guides, case studies, and ideas for teams who take customer feedback seriously.",
  },
  alternates: {
-  canonical: "https://feedsolve.com/blog",
+  canonical: "https://feedsolve.com/blog/",
  },
 };
 
@@ -18,8 +18,8 @@ const breadcrumbJsonLd = {
  "@context": "https://schema.org",
  "@type": "BreadcrumbList",
  itemListElement: [
-  { "@type": "ListItem", position: 1, name: "Home", item: "https://feedsolve.com" },
-  { "@type": "ListItem", position: 2, name: "Blog", item: "https://feedsolve.com/blog" },
+  { "@type": "ListItem", position: 1, name: "Home", item: "https://feedsolve.com/" },
+  { "@type": "ListItem", position: 2, name: "Blog", item: "https://feedsolve.com/blog/" },
  ],
 };
 
