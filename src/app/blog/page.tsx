@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
  ArrowRight, BookOpen, Star, Search, ChevronLeft, ChevronRight,
- MessageCircle, ArrowDown, XCircle, CheckCircle2,
+ MessageCircle, ArrowDown, XCircle,
 } from "lucide-react";
 import blogData from "@/data/blog.json";
 
@@ -304,7 +304,7 @@ const posts = blogData.map((blog) => {
   author: v.author,
   date: v.date,
   readTime: v.readTime,
-  href: blog.meta.slug,
+  href: `${blog.meta.slug}/`,
  };
 });
 
@@ -327,9 +327,15 @@ export default function BlogPage() {
  const start = (currentPage - 1) * POSTS_PER_PAGE;
  const visiblePosts = filteredPosts.slice(start, start + POSTS_PER_PAGE);
 
- useEffect(() => {
+ const handleCategoryChange = (cat: string) => {
+  setActiveCat(cat);
   setCurrentPage(1);
- }, [activeCat, searchQuery]);
+ };
+
+ const handleSearchChange = (value: string) => {
+  setSearchQuery(value);
+  setCurrentPage(1);
+ };
 
  return (
   <>
@@ -361,7 +367,7 @@ export default function BlogPage() {
       type="search"
       placeholder="Search articles..."
       value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)}
+      onChange={(e) => handleSearchChange(e.target.value)}
       autoComplete="off"
       aria-label="Search articles"
      />
@@ -375,7 +381,7 @@ export default function BlogPage() {
       <button
        key={cat.id}
        className={`cat-btn${activeCat === cat.id ? " active" : ""}`}
-       onClick={() => setActiveCat(cat.id)}
+       onClick={() => handleCategoryChange(cat.id)}
       >
        {cat.label}
       </button>
@@ -404,7 +410,7 @@ export default function BlogPage() {
          <div className="meta-date">Apr 25, 2026 · 5 min read</div>
         </div>
        </div>
-       <Link href={blogData[0].meta.slug} className="btn-primary teal">
+       <Link href={`${blogData[0].meta.slug}/`} className="btn-primary teal">
         Read full post <ArrowRight size={15} />
        </Link>
       </div>

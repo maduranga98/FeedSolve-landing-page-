@@ -9,8 +9,12 @@ export const metadata: Metadata = {
   description:
    "Most businesses run their entire complaints process through a WhatsApp group. Here is why that breaks down at scale and what to do instead.",
  },
+ robots: {
+  index: false,
+  follow: true,
+ },
  alternates: {
-  canonical: "https://feedsolve.com/blog/blog-post",
+  canonical: "https://feedsolve.com/blog/blog-post/",
  },
 };
 

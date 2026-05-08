@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   title: "FeedSolve - Feedback Management & Complaint Tracking Software for SMBs",
   description:
    "Collect feedback from customers and suppliers via branded QR codes. Assign, track, and resolve complaints - in any language. Free to start, no credit card.",
-  url: SITE_URL,
+  url: `${SITE_URL}/`,
   siteName: "FeedSolve",
   locale: "en_US",
   type: "website",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   follow: true,
  },
  alternates: {
-  canonical: SITE_URL,
+  canonical: `${SITE_URL}/`,
  },
  icons: {
   icon: "/favicon.ico",
@@ -87,7 +87,7 @@ const softwareApplicationJsonLd = {
  operatingSystem: "Web",
  description:
   "FeedSolve is feedback management and complaint resolution software for SMBs. Collect feedback via branded QR codes or shareable links - no login needed for submitters. Assign issues to your team, resolve every submission, and let submitters track progress with a unique tracking code. Supports multi-language submission forms.",
- url: "https://feedsolve.com",
+ url: "https://feedsolve.com/",
  offers: [
   { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
   { "@type": "Offer", name: "Starter", price: "19", priceCurrency: "USD", billingPeriod: "P1M" },
@@ -100,7 +100,7 @@ const organizationJsonLd = {
  "@context": "https://schema.org",
  "@type": "Organization",
  name: "FeedSolve",
- url: "https://feedsolve.com",
+ url: "https://feedsolve.com/",
  logo: "https://feedsolve.com/logo.webp",
  contactPoint: {
   "@type": "ContactPoint",

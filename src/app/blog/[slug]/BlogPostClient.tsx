@@ -5,11 +5,44 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
- ArrowRight, ChevronRight, Calendar, Clock, Eye,
- Check, X, MessageCircle, Link as LinkIcon, Share2, ExternalLink,
+ ArrowRight, ChevronRight, Calendar, Clock,
+ Check, X, Link as LinkIcon, Share2, ExternalLink,
  QrCode, Hash, TrendingUp, ClipboardList,
 } from "lucide-react";
 
+type BlogFaq = {
+ question: string;
+ answer: string;
+};
+
+type BlogSection = {
+ heading: string;
+ key_points?: string[];
+ body?: string[];
+ examples?: string[];
+ checklist?: string[];
+ table?: { headers: string[]; rows: string[][] };
+ comparison_table?: { columns: string[]; rows: string[][] };
+ faqs?: BlogFaq[];
+};
+
+type BlogPost = {
+ id: number;
+ meta: {
+  title: string;
+  slug: string;
+  primary_keyword: string;
+  secondary_keywords: string[];
+  meta_description: string;
+  target_word_count: string;
+ };
+ content: {
+  quick_answer_box: string;
+  h1: string;
+  key_takeaways?: string[];
+  sections: BlogSection[];
+ };
+};
 
 const categoryIcons: Record<string, { icon: React.ReactNode; bg: string }> = {
  "Operations": { icon: <ClipboardList size={22} style={{ color: "var(--teal)" }} />, bg: "var(--teal-pale)" },
@@ -29,7 +62,7 @@ const tagMap: Record<string, { label: string; color: string }> = {
  casestudy: { label: "Case Study", color: "#2E7D32" },
 };
 
-function getCategoryForBlog(blog: any): string {
+function getCategoryForBlog(blog: BlogPost): string {
  const kw = blog.meta.primary_keyword.toLowerCase();
  if (kw.includes("qr") || kw.includes("restaurant")) return "qr";
  if (kw.includes("workflow") || kw.includes("resolution rate") || kw.includes("supplier") || kw.includes("tenant") || kw.includes("distributor") || kw.includes("suggestion")) return "operations";
@@ -38,13 +71,13 @@ function getCategoryForBlog(blog: any): string {
  return "guides";
 }
 
-function getReadTime(blog: any): string {
+function getReadTime(blog: BlogPost): string {
  const wc = blog.meta.target_word_count;
  const avg = parseInt(wc.replace(/[^0-9]/g, "").slice(0, 4));
  return `${Math.max(3, Math.round(avg / 300))} min`;
 }
 
-export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherPosts: any[] }) {
+export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; otherPosts: BlogPost[] }) {
  const [progress, setProgress] = useState(0);
 
  const cat = blog ? getCategoryForBlog(blog) : "operations";
@@ -53,8 +86,8 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
  const tocSections = useMemo(() => {
   if (!blog) return [];
   return blog.content.sections
-   .filter((s: any) => !s.heading.startsWith("H2: FAQs"))
-   .map((s: any, i: number) => ({
+   .filter((s: BlogSection) => !s.heading.startsWith("H2: FAQs"))
+   .map((s: BlogSection, i: number) => ({
     id: `sec-${i}`,
     label: s.heading.replace("H2: ", ""),
    }));
@@ -101,7 +134,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
     <div style={{ maxWidth: 700, margin: "120px auto", textAlign: "center", padding: 40 }}>
      <h1>Post not found</h1>
      <p>The blog post you&apos;re looking for doesn&apos;t exist.</p>
-     <Link href="/blog" className="btn-primary teal" style={{ display: "inline-flex", marginTop: 20 }}>
+     <Link href="/blog/" className="btn-primary teal" style={{ display: "inline-flex", marginTop: 20 }}>
       Back to Blog <ArrowRight size={15} />
      </Link>
     </div>
@@ -124,7 +157,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
      <div className="article-breadcrumb">
       <Link href="/">Home</Link>
       <ChevronRight size={13} />
-      <Link href="/blog">Blog</Link>
+      <Link href="/blog/">Blog</Link>
       <ChevronRight size={13} />
       <span>{blog.meta.title.split(" ").slice(0, 4).join(" ")}</span>
      </div>
@@ -156,7 +189,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
        <h2 style={{ fontSize: 18, fontWeight: 700, color: "white", marginBottom: 12 }}>Key takeaways</h2>
        {blog.content.key_takeaways ? (
         <ul style={{ color: "rgba(255,255,255,0.7)", fontSize: 14, lineHeight: 1.7, margin: 0, paddingLeft: 18, listStyle: "disc" }}>
-         {blog.content.key_takeaways.map((point: any, i: number) => (
+         {blog.content.key_takeaways.map((point: string, i: number) => (
           <li key={i} style={{ marginBottom: 8 }}>{point}</li>
          ))}
         </ul>
@@ -186,7 +219,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
       <p>{blog.content.quick_answer_box}</p>
      </div>
 
-     {blog.content.sections.map((section: any, i: number) => {
+     {blog.content.sections.map((section: BlogSection, i: number) => {
       const isFaq = section.heading.startsWith("H2: FAQs");
       const headingText = section.heading.replace("H2: ", "");
       const sectionId = `sec-${i}`;
@@ -197,7 +230,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
          <h2 id={sectionId}>{headingText}</h2>
          {section.key_points && (
           <div style={{ display: "flex", flexDirection: "column", gap: 12, margin: "20px 0" }}>
-           {section.key_points.map((point: any, j: number) => (
+           {section.key_points.map((point: string, j: number) => (
             <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
              <div style={{
               minWidth: 24, height: 24, borderRadius: "50%",
@@ -245,7 +278,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
 
         {isFaq && section.faqs && (
          <div style={{ display: "flex", flexDirection: "column", gap: 16, margin: "20px 0" }}>
-          {section.faqs.map((faq: any, fi: number) => (
+          {section.faqs.map((faq: BlogFaq, fi: number) => (
            <div key={fi} style={{
             background: "var(--bg)",
             borderRadius: 12, padding: "20px 24px",
@@ -275,7 +308,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
       <div className="article-tags-row">
        <span className="article-tags-label">Tags</span>
        {[catInfo.label, ...blog.meta.secondary_keywords.slice(0, 3)].map((tag) => (
-        <Link key={tag} href="/blog" className="article-tag-chip">{tag}</Link>
+        <Link key={tag} href="/blog/" className="article-tag-chip">{tag}</Link>
        ))}
       </div>
       <div className="share-row">
@@ -331,12 +364,12 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
 
      <div className="sidebar-card">
       <div className="sidebar-card-title">Related posts</div>
-      {otherPosts.slice(0, 3).map((other: any) => {
+      {otherPosts.slice(0, 3).map((other: BlogPost) => {
        const otherCat = getCategoryForBlog(other);
        const otherCatInfo = tagMap[otherCat] || tagMap.operations;
        const catIcon = categoryIcons[otherCatInfo.label] || categoryIcons["Operations"];
        return (
-        <Link key={other.id} href={other.meta.slug} className="related-post">
+        <Link key={other.id} href={`${other.meta.slug}/`} className="related-post">
          <div className="rp-img" style={{ background: catIcon.bg }}>{catIcon.icon}</div>
          <div className="rp-body">
           <h4>{other.meta.title.length > 45 ? other.meta.title.slice(0, 45) + "..." : other.meta.title}</h4>
@@ -353,11 +386,11 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: any; otherP
    <div className="more-posts-section">
     <h2>More from the blog</h2>
     <div className="more-grid">
-     {otherPosts.slice(0, 3).map((other: any) => {
+     {otherPosts.slice(0, 3).map((other: BlogPost) => {
       const otherCat = getCategoryForBlog(other);
       const otherCatInfo = tagMap[otherCat] || tagMap.operations;
       return (
-       <Link key={other.id} href={other.meta.slug} className="more-card">
+       <Link key={other.id} href={`${other.meta.slug}/`} className="more-card">
         <div className="more-tag" style={{ color: otherCatInfo.color }}>{otherCatInfo.label}</div>
         <h3>{other.meta.title}</h3>
         <p>{other.content.quick_answer_box.slice(0, 100)}...</p>

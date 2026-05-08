@@ -1291,12 +1291,12 @@ function Blog() {
        and operations
       </h2>
      </div>
-     <a href="/blog" className="btn-outline" style={{ flexShrink: 0 }}>
+     <Link href="/blog/" className="btn-outline" style={{ flexShrink: 0 }}>
       View all posts <ArrowRight size={16} />
-     </a>
+     </Link>
     </div>
 
-    <a href={featuredBlog.meta.slug} className="blog-featured">
+    <a href={`${featuredBlog.meta.slug}/`} className="blog-featured">
      <div className="blog-featured-content">
       <div>
        <div className="blog-featured-tag">
@@ -1439,7 +1439,7 @@ function Blog() {
       const blog = blogData.find((b) => b.id === card.blogId);
       if (!blog) return null;
       return (
-       <a key={blog.id} href={blog.meta.slug} className="blog-card">
+       <a key={blog.id} href={`${blog.meta.slug}/`} className="blog-card">
         <div
          className="blog-card-stripe"
          style={{ background: card.stripe }}
@@ -1525,7 +1525,7 @@ const softwareAppJsonLd = {
  },
  description:
   "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
- url: "https://feedsolve.com",
+ url: "https://feedsolve.com/",
  image: "https://feedsolve.com/feedsolve.webp",
 };
 
@@ -1533,12 +1533,12 @@ const websiteJsonLd = {
  "@context": "https://schema.org",
  "@type": "WebSite",
  name: "FeedSolve",
- url: "https://feedsolve.com",
+ url: "https://feedsolve.com/",
  potentialAction: {
   "@type": "SearchAction",
   target: {
    "@type": "EntryPoint",
-   urlTemplate: "https://feedsolve.com/blog?q={search_term_string}",
+   urlTemplate: "https://feedsolve.com/blog/?q={search_term_string}",
   },
   "query-input": "required name=search_term_string",
  },

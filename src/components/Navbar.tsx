@@ -65,7 +65,7 @@ export default function Navbar({ variant = "home", logoSrc }: NavbarProps) {
               <LinkComponent {...linkProps(demoHref)}>Demo</LinkComponent>
             </li>
             <li>
-              <Link href="/blog" style={blogLinkStyle}>
+              <Link href="/blog/" style={blogLinkStyle}>
                 Blog
               </Link>
             </li>
@@ -99,7 +99,7 @@ export default function Navbar({ variant = "home", logoSrc }: NavbarProps) {
         <LinkComponent {...linkProps(demoHref)} onClick={closeMobileMenu}>
           Demo
         </LinkComponent>
-        <Link href="/blog" onClick={closeMobileMenu}>
+        <Link href="/blog/" onClick={closeMobileMenu}>
           Blog
         </Link>
         <a href="https://app.feedsolve.com/login" onClick={closeMobileMenu} target="_blank" rel="noopener noreferrer">
