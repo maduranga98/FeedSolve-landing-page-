@@ -242,6 +242,7 @@ export default function VerticalPage(props: VerticalProps) {
       <section style={{ background: "var(--teal)", padding: "40px 32px" }}>
         <div className="container">
           <div
+            className="vertical-stats"
             style={{
               display: "grid",
               gridTemplateColumns: `repeat(${stats.length}, 1fr)`,
@@ -349,6 +350,7 @@ export default function VerticalPage(props: VerticalProps) {
             From submission to resolution - automatically
           </h2>
           <div
+            className="vertical-how-it-works"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 28px 1fr 28px 1fr 28px 1fr",
@@ -475,6 +477,7 @@ export default function VerticalPage(props: VerticalProps) {
             {featuresHeading}
           </h2>
           <div
+            className="vertical-features"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
@@ -650,6 +653,7 @@ export default function VerticalPage(props: VerticalProps) {
             Everything included out of the box
           </h2>
           <div
+            className="vertical-checklist"
             style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}
           >
             {[
