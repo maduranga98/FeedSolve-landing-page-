@@ -12,7 +12,7 @@ import VerticalPage from "@/components/VerticalPage";
 export const metadata: Metadata = {
   title: "Supplier Feedback Tool for Manufacturers - Track Every Quality Issue",
   description:
-    "Replace WhatsApp supplier complaints with a structured QR feedback board. Track defects, assign to quality teams, and resolve every issue with a documented audit trail.",
+    "Replace WhatsApp supplier complaints, shop floor complaint logs, and production line feedback with a structured QR feedback board and documented audit trail.",
   openGraph: {
     title: "Supplier Feedback Tool for Manufacturers | FeedSolve",
     description:
@@ -66,8 +66,8 @@ export default function ManufacturingSupplierFeedback() {
         badge="Manufacturing · Supplier feedback"
         breadcrumbLabel="Supplier Feedback for Manufacturers"
         h1="Stop Managing Supplier Complaints Over WhatsApp"
-        subheading="Give every supplier a QR code to report defects, delivery issues, and quality concerns - with a full resolution workflow and audit trail built in."
-        quickAnswer="FeedSolve is a supplier feedback and complaint resolution platform built for manufacturing SMBs. Suppliers scan a QR code on a delivery note, submit a quality issue without logging in, and receive a tracking code. Your quality team manages every complaint through a Kanban dashboard - assign, resolve, document, and reply - with resolution rate visible at all times."
+        subheading="Give every supplier and shop floor team a QR code to report defects, delivery issues, quality concerns, and production line feedback - with a full resolution workflow and audit trail built in."
+        quickAnswer="FeedSolve is a supplier feedback and complaint resolution platform built for manufacturing SMBs. Suppliers scan a QR code on a delivery note, while operators can submit a shop floor complaint or production line feedback from a shared QR code without logging in. Each submitter receives a tracking code. Your quality team manages every complaint through a Kanban dashboard - assign, resolve, document, and reply - with resolution rate visible at all times."
         stats={[
           { value: "2 min", label: "Setup time for your first supplier board" },
           {
@@ -82,13 +82,13 @@ export default function ManufacturingSupplierFeedback() {
         ]}
         problemHeading="Why supplier complaints disappear in most manufacturing businesses"
         problemPoints={[
-          "Suppliers report defects via WhatsApp - messages get buried and nobody owns the follow-up",
+          "Suppliers report defects and operators raise shop floor complaint notes via WhatsApp - messages get buried and nobody owns the follow-up",
           "No audit trail means the same quality issue recurs because root causes are never documented",
           "Suppliers stop reporting after experiencing zero follow-up - you lose the early warning system",
           "When an audit asks for complaint records, you have nothing to show except a WhatsApp history",
-          "Quality managers spend hours chasing threads instead of resolving the actual defect",
+          "Quality managers spend hours chasing threads instead of resolving the actual defect or recurring production line feedback",
         ]}
-        collectLabel="Print the QR code on delivery notes or post it at the goods-receiving bay. Suppliers scan and submit defects, delays, or quality issues in under 60 seconds."
+        collectLabel="Print the QR code on delivery notes, post it at the goods-receiving bay, or place it on the shop floor. Suppliers and operators scan and submit defects, delays, shop floor complaint reports, or production line feedback in under 60 seconds."
         trackLabel="Each supplier complaint gets a unique #FSV-XXXX tracking code. Suppliers check resolution status without calling anyone."
         assignLabel="Route to the quality officer, set priority (High / Medium / Low), and add internal CAPA notes. One owner. One deadline."
         resolveLabel="Log the root cause, send a public reply to the supplier, and mark resolved. Resolution rate updates automatically on your dashboard."
@@ -102,7 +102,7 @@ export default function ManufacturingSupplierFeedback() {
           {
             icon: <Factory size={24} />,
             title: "Manufacturing-Specific Categories",
-            body: "Pre-set categories: Delivery Delay, Defective Material, Quantity Mismatch, Packaging Issue, Documentation Error, Safety Concern. Fully customisable.",
+            body: "Pre-set categories: Delivery Delay, Defective Material, Quantity Mismatch, Packaging Issue, Documentation Error, Safety Concern, Shop Floor Complaint, and Production Line Feedback. Fully customisable.",
           },
           {
             icon: <ShieldCheck size={24} />,

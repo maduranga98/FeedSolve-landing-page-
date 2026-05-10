@@ -102,8 +102,8 @@ function Hero() {
       Stop losing complaints. Start closing them.
      </p>
      <p className="hero-sub">
-      Collect feedback from customers, suppliers, and partners. Track
-      every issue to resolution with a simple link and QR code. Used by operations teams across the UK, US, Australia, and beyond.
+      Collect feedback from customers, suppliers, and partners with a QR code feedback board. Track
+      every issue from complaint-to-resolution with a simple link, a resolution rate dashboard, and a public track your complaint page. Used by operations teams across the UK, US, Australia, and beyond.
      </p>
      <div className="hero-ctas">
       <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
@@ -114,10 +114,10 @@ function Hero() {
       </a>
      </div>
      <p style={{ fontSize: "0.875rem", color: "#6B7B8D", maxWidth: "42rem", textAlign: "center", marginTop: "1rem", lineHeight: 1.625 }}>
-      FeedSolve is feedback management and complaint resolution software for small and mid-sized businesses. Share a branded QR code or link - anyone submits feedback without logging in - and your team resolves every issue through a structured workflow. Available in multiple languages. Every submitter gets a tracking code.
+      FeedSolve is feedback management and complaint resolution software for small and mid-sized businesses. Share a branded QR code or link - anyone submits feedback with no login and no sign-up - and your team resolves every issue through an issue resolution board. Available in multiple languages. Every submitter gets a tracking code.
      </p>
      <div className="hero-trust">
-      <ShieldCheck size={14} /> No credit card required · Setup in under 2
+      <ShieldCheck size={14} /> No credit card required · No sign-up for submitters · Setup in under 2
       minutes
      </div>
     </div>
@@ -139,7 +139,7 @@ function Hero() {
         <span></span>
        </div>
        <span className="board-topbar-title">
-        Customer Feedback Board
+        Issue Resolution Board
        </span>
       </div>
       <div className="board-body">
@@ -538,13 +538,13 @@ function Solution() {
      <Settings2 size={13} /> The solution
     </div>
     <h2>
-     A complete feedback loop.
+     Complaint resolution workflow
      <br />
-     No gaps.
+     from intake to close.
     </h2>
     <p className="sol-sub">
      From the moment someone submits a complaint to the moment it is
-     resolved, FeedSolve handles every step automatically.
+     resolved, FeedSolve handles every complaint-to-resolution step automatically.
     </p>
     <div className="sol-flow">
      <div className="sol-step">
@@ -639,7 +639,7 @@ function Solution() {
       </div>
       <div>
        <div className="sol-proof-n">Zero</div>
-       <div className="sol-proof-l">Friction for submitters - no login, no app, no account</div>
+       <div className="sol-proof-l">Friction for submitters - no login, no sign-up, no app, no account</div>
       </div>
      </div>
      <div className="sol-proof-item">
@@ -807,7 +807,7 @@ function UseCases() {
       </div>
       <h3>Manufacturing</h3>
       <p>
-       Track supplier quality issues, defects, and production problems in
+       Track supplier quality issues, shop floor complaint trends, and production line feedback in
        one place. Full audit trail included.
       </p>
       <Link href="/manufacturing/supplier-feedback">
@@ -833,7 +833,7 @@ function UseCases() {
       </div>
       <h3>Logistics</h3>
       <p>
-       Manage delivery complaints, delays, and driver issues with full
+       Manage warehouse feedback, delivery complaints, 3PL feedback platform workflows, and driver issues with full
        visibility across every route.
       </p>
       <Link href="/logistics/delivery-feedback">
@@ -846,11 +846,23 @@ function UseCases() {
       </div>
       <h3>Real Estate</h3>
       <p>
-       Handle tenant maintenance requests and track resolution progress.
+       Run a tenant feedback portal for maintenance requests and an HOA complaint form for community issues.
        No more lost work orders.
       </p>
       <Link href="/real-estate/tenant-feedback">
        See how tenant tracking works →
+      </Link>
+     </div>
+     <div className="uc-card">
+      <div className="uc-icon">
+       <ClipboardList size={24} />
+      </div>
+      <h3>Healthcare Clinics</h3>
+      <p>
+       Place a clinic feedback QR in reception and capture waiting-room feedback before small issues become public reviews.
+      </p>
+      <Link href="/features/branded-qr-codes">
+       See clinic feedback QR setup →
       </Link>
      </div>
      <div className="uc-card">
