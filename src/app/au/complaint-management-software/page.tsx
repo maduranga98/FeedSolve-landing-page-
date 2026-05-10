@@ -13,10 +13,8 @@ import {
   Lock,
   ShieldCheck,
   ChevronRight,
-  ChevronDown,
-  HelpCircle,
 } from "lucide-react";
-import { useState } from "react";
+import AUComplaintFAQ from "@/components/AUComplaintFAQ";
 
 export const metadata: Metadata = {
   title:
@@ -135,8 +133,6 @@ const comparisonRows = [
 ];
 
 export default function AUComplaintManagementPage() {
-  const [openFaq, setOpenFaq] = useState<number>(0);
-
   return (
     <>
       <script
@@ -465,25 +461,25 @@ export default function AUComplaintManagementPage() {
               {
                 sector: "Australian Restaurants & Cafes",
                 body: "QR codes on tables give Australian diners a direct feedback channel — before they post to Google or TripAdvisor. Your floor team resolves the issue during service. Resolution rate tracks operational performance.",
-                link: "/au/restaurants/qr-feedback/",
+                link: "/restaurants/qr-feedback/",
                 linkText: "Restaurant feedback Australia →",
               },
               {
                 sector: "Australian Manufacturing",
                 body: "Give suppliers a QR code on delivery dockets to report quality issues. Every defect is tracked with a unique code, assigned to your quality team, and resolved with a documented CAPA note — audit-ready for AS/NZS ISO 9001.",
-                link: "/au/manufacturing/supplier-feedback/",
+                link: "/manufacturing/supplier-feedback/",
                 linkText: "Supplier feedback AU manufacturing →",
               },
               {
                 sector: "Australian Property Management",
                 body: "Tenants submit maintenance requests via QR code in the lobby or welcome letter. Every request is tracked to resolution — with full documentation for VCAT, QCAT, or NCAT tenancy disputes under Residential Tenancies Acts.",
-                link: "/au/real-estate/tenant-feedback/",
+                link: "/real-estate/tenant-feedback/",
                 linkText: "Tenant feedback AU property →",
               },
               {
                 sector: "Australian Logistics & Transport",
                 body: "Recipients and drivers report delivery issues by scanning a code on the consignment note. Every complaint is tracked, assigned to the right operations team, and resolved with a documented response.",
-                link: "/au/logistics/delivery-feedback/",
+                link: "/logistics/delivery-feedback/",
                 linkText: "Delivery complaint tracking AU →",
               },
               {
@@ -711,52 +707,7 @@ export default function AUComplaintManagementPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section style={{ background: "white", padding: "80px 32px" }}>
-        <div className="container" style={{ maxWidth: 700 }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <div
-              className="section-label"
-              style={{ display: "inline-flex", marginBottom: 16 }}
-            >
-              <HelpCircle size={13} /> Australia-specific questions
-            </div>
-            <h2 style={{ color: "var(--navy)" }}>
-              Complaint management software Australia — FAQ
-            </h2>
-          </div>
-          <div className="faq-wrap">
-            {faqs.map((faq, i) => (
-              <div
-                key={i}
-                className={`faq-item${i === openFaq ? " open" : ""}`}
-              >
-                <div
-                  className="faq-q"
-                  onClick={() => setOpenFaq(i === openFaq ? -1 : i)}
-                  role="button"
-                  tabIndex={0}
-                  aria-expanded={i === openFaq}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setOpenFaq(i === openFaq ? -1 : i);
-                    }
-                  }}
-                >
-                  {faq.q}
-                  <div className="faq-arrow">
-                    <ChevronDown size={13} />
-                  </div>
-                </div>
-                <div className="faq-a">
-                  <div className="faq-a-inner">{faq.a}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AUComplaintFAQ />
 
       {/* CTA */}
       <section
@@ -850,17 +801,17 @@ export default function AUComplaintManagementPage() {
           >
             {[
               {
-                href: "/au/manufacturing/supplier-feedback/",
+                href: "/manufacturing/supplier-feedback/",
                 label: "AU Manufacturing",
                 sub: "Supplier quality complaints",
               },
               {
-                href: "/au/restaurants/qr-feedback/",
+                href: "/restaurants/qr-feedback/",
                 label: "AU Restaurants & Cafes",
                 sub: "Table-side QR feedback",
               },
               {
-                href: "/au/real-estate/tenant-feedback/",
+                href: "/real-estate/tenant-feedback/",
                 label: "AU Property Management",
                 sub: "Tenant maintenance",
               },
