@@ -13,10 +13,8 @@ import {
   Lock,
   ShieldCheck,
   ChevronRight,
-  ChevronDown,
-  HelpCircle,
 } from "lucide-react";
-import { useState } from "react";
+import AUComplaintFAQ from "@/components/AUComplaintFAQ";
 
 export const metadata: Metadata = {
   title:
@@ -135,8 +133,6 @@ const comparisonRows = [
 ];
 
 export default function AUComplaintManagementPage() {
-  const [openFaq, setOpenFaq] = useState<number>(0);
-
   return (
     <>
       <script
@@ -711,52 +707,7 @@ export default function AUComplaintManagementPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section style={{ background: "white", padding: "80px 32px" }}>
-        <div className="container" style={{ maxWidth: 700 }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <div
-              className="section-label"
-              style={{ display: "inline-flex", marginBottom: 16 }}
-            >
-              <HelpCircle size={13} /> Australia-specific questions
-            </div>
-            <h2 style={{ color: "var(--navy)" }}>
-              Complaint management software Australia — FAQ
-            </h2>
-          </div>
-          <div className="faq-wrap">
-            {faqs.map((faq, i) => (
-              <div
-                key={i}
-                className={`faq-item${i === openFaq ? " open" : ""}`}
-              >
-                <div
-                  className="faq-q"
-                  onClick={() => setOpenFaq(i === openFaq ? -1 : i)}
-                  role="button"
-                  tabIndex={0}
-                  aria-expanded={i === openFaq}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setOpenFaq(i === openFaq ? -1 : i);
-                    }
-                  }}
-                >
-                  {faq.q}
-                  <div className="faq-arrow">
-                    <ChevronDown size={13} />
-                  </div>
-                </div>
-                <div className="faq-a">
-                  <div className="faq-a-inner">{faq.a}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AUComplaintFAQ />
 
       {/* CTA */}
       <section
