@@ -10,14 +10,13 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
-  title:
-    "Tenant Feedback System for Property Managers - Track Every Maintenance Request",
+  title: "Tenant Feedback Portal & HOA Complaint Form - Track Every Request",
   description:
-    "Give tenants a QR code to submit maintenance requests and complaints without calling or emailing. Track every issue to resolution with a full audit trail.",
+    "Give tenants and HOA residents a QR code to submit maintenance requests, community complaints, and shared-area issues without calling or emailing.",
   openGraph: {
-    title: "Tenant Feedback System for Property Managers | FeedSolve",
+    title: "Tenant Feedback Portal & HOA Complaint Form | FeedSolve",
     description:
-      "QR-based tenant maintenance requests and complaint tracking for property managers. Zero login, tracking codes, audit trail.",
+      "QR-based tenant feedback portal and HOA complaint form for property managers. Zero login, tracking codes, audit trail.",
     url: "https://feedsolve.com/real-estate/tenant-feedback/",
     type: "website",
   },
@@ -29,9 +28,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Tenant Feedback System for Property Managers",
+  name: "Tenant Feedback Portal and HOA Complaint Form",
   description:
-    "FeedSolve tenant maintenance request and complaint tracking for property managers and real estate landlords.",
+    "FeedSolve tenant feedback portal, maintenance request, and HOA complaint form tracking for property managers and real estate landlords.",
   url: "https://feedsolve.com/real-estate/tenant-feedback/",
   mainEntity: {
     "@type": "FAQPage",
@@ -65,14 +64,14 @@ export default function RealEstateTenantFeedback() {
       />
       <VerticalPage
         badge="Real Estate & Property · Tenant feedback"
-        breadcrumbLabel="Tenant Feedback for Property Managers"
-        h1="Never Lose a Maintenance Request Again"
-        subheading="Give tenants a QR code in the lobby or welcome pack to submit requests without calling. Track every issue to resolution with a documented audit trail."
-        quickAnswer="FeedSolve is a tenant maintenance request and complaint tracking system for property managers. Tenants scan a QR code in the lobby or click a link in their welcome letter - no login required. Requests route to the property manager, who assigns to the right contractor, tracks resolution, and sends a confirmation reply. Tenants see their issue resolved via their tracking code. No phone tag. No lost work orders. Full audit trail."
+        breadcrumbLabel="Tenant Feedback Portal"
+        h1="Tenant Feedback Portal and HOA Complaint Form"
+        subheading="Give tenants a QR code in the lobby or welcome pack to submit requests without calling. HOAs can share the same flow as an HOA complaint form for community issues. Track every issue to resolution with a documented audit trail."
+        quickAnswer="FeedSolve is a tenant feedback portal and maintenance request tracking system for property managers, landlords, and HOA boards. Tenants scan a QR code in the lobby or click a link in their welcome letter - no login required. Residents can also use an HOA complaint form for noise, parking, landscaping, or shared-area concerns. Requests route to the property manager, who assigns to the right contractor, tracks resolution, and sends a confirmation reply. Tenants see their issue resolved via their tracking code. No phone tag. No lost work orders. Full audit trail."
         stats={[
           {
             value: "2 min",
-            label: "Setup time for your first tenant feedback board",
+            label: "Setup time for your first tenant feedback portal",
           },
           {
             value: "Zero",
@@ -90,27 +89,27 @@ export default function RealEstateTenantFeedback() {
         ]}
         problemHeading="Why maintenance requests disappear in property management"
         problemPoints={[
-          "Tenants submit requests by calling or WhatsApp messaging - no record, no assignment, no resolution tracking",
+          "Tenants submit requests by calling or WhatsApp messaging instead of a tenant feedback portal - no record, no assignment, no resolution tracking",
           "When tenants call twice about the same issue, it's because they saw no evidence the first request was received",
           "High-value tenants leave not because of the maintenance issue but because of the non-response",
           "No audit trail means maintenance disputes become 'he said, she said' with no documentation",
-          "Property managers spend hours chasing contractors rather than tracking whether issues are resolved",
+          "Property managers and HOA boards spend hours chasing contractors rather than tracking whether issues are resolved",
         ]}
-        collectLabel="QR code in the lobby, on the welcome letter, or as a link in the tenancy agreement. Tenants submit maintenance requests from any phone - no app, no account, no password."
+        collectLabel="QR code in the lobby, on the welcome letter, in an HOA newsletter, or as a link in the tenancy agreement. Tenants and residents submit through a tenant feedback portal or HOA complaint form from any phone - no app, no account, no password."
         trackLabel="Each request gets a #FSV-XXXX tracking code. Tenants check progress without calling - knowing their request is in the system builds trust and reduces inbound calls."
         assignLabel="Route to the maintenance coordinator or contractor with a target resolution timeframe. Priority flagging for urgent requests - water leaks, electrical faults, security issues."
         resolveLabel="Log contractor actions, send tenant confirmation, and close the issue. Resolution rate by property gives you a weekly view of maintenance performance."
-        featuresHeading="Built for property managers and real estate landlords"
+        featuresHeading="Built for tenant feedback portals and HOA complaint forms"
         features={[
           {
             icon: <Building2 size={24} />,
             title: "Lobby and Welcome Pack QR Codes",
-            body: "Place QR codes in lobby notice boards, welcome letters, and tenancy agreements. Tenants submit from day one without needing a separate portal login.",
+            body: "Place QR codes in lobby notice boards, welcome letters, tenancy agreements, and HOA noticeboards. Tenants and residents submit from day one without needing a separate portal login.",
           },
           {
             icon: <Wrench size={24} />,
             title: "Property-Specific Categories",
-            body: "Plumbing, Electrical, Pest Control, Noise Complaint, Security, Parking, Cleaning, Lift / Common Areas. Customisable per building or property type.",
+            body: "Plumbing, Electrical, Pest Control, Noise Complaint, Security, Parking, Cleaning, HOA Complaint Form, Lift / Common Areas. Customisable per building or property type.",
           },
           {
             icon: <Hash size={24} />,
@@ -177,8 +176,8 @@ export default function RealEstateTenantFeedback() {
             a: "No. Tenants access the feedback form by scanning a QR code in the lobby or clicking a link in their welcome pack. No app download, no login, no password required. After submitting, they receive a unique tracking code to check the status of their request from any browser at any time.",
           },
           {
-            q: "Can I run separate boards for different buildings or properties?",
-            a: "Yes. Each building or property can have its own feedback board with a unique QR code and category set. All submissions from all boards appear in a single dashboard, filterable by board, status, priority, or date.",
+            q: "Can I run separate boards for different buildings, properties, or HOA communities?",
+            a: "Yes. Each building, property, or HOA community can have its own tenant feedback portal or HOA complaint form with a unique QR code and category set. All submissions from all boards appear in a single dashboard, filterable by board, status, priority, or date.",
           },
           {
             q: "Does FeedSolve provide an audit trail for maintenance disputes or legal purposes?",
@@ -193,8 +192,8 @@ export default function RealEstateTenantFeedback() {
             a: "AppFolio and Buildium are full property management suites covering lease management, rent collection, and accounting. Maintenance request handling is a sub-feature. FeedSolve is purpose-built for complaint resolution - zero-friction submission for tenants, Kanban workflow for property managers, full audit trail. It sets up in under 2 minutes versus days of onboarding for a full PMS.",
           },
         ]}
-        ctaHeading="Every maintenance request tracked. Every tenant heard."
-        ctaSub="Set up your first tenant feedback board in 2 minutes. Free to start."
+        ctaHeading="Every maintenance request tracked. Every tenant and HOA resident heard."
+        ctaSub="Set up your first tenant feedback portal or HOA complaint form in 2 minutes. Free to start."
         relatedLinks={[
           {
             href: "/manufacturing/supplier-feedback/",

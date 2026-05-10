@@ -12,11 +12,11 @@ import VerticalPage from "@/components/VerticalPage";
 export const metadata: Metadata = {
   title: "Delivery Complaint Tracking for Logistics - Manage Every Route Issue",
   description:
-    "Drivers, distributors, and recipients report delivery issues via QR code with no login. Your ops team tracks every complaint to resolution with full visibility across routes.",
+    "Warehouse feedback, driver feedback app workflows, and 3PL feedback platform intake via QR code with no login. Track every complaint to resolution across routes.",
   openGraph: {
     title: "Delivery Complaint Tracking for Logistics | FeedSolve",
     description:
-      "QR-based delivery feedback for logistics and distribution companies. Zero login, tracking codes, route-level resolution visibility.",
+      "QR-based warehouse feedback, driver feedback app workflows, and 3PL feedback platform intake with tracking codes and route-level resolution visibility.",
     url: "https://feedsolve.com/logistics/delivery-feedback/",
     type: "website",
   },
@@ -58,8 +58,8 @@ export default function LogisticsDeliveryFeedback() {
         badge="Logistics & Distribution · Delivery feedback"
         breadcrumbLabel="Delivery Complaint Tracking"
         h1="Track Every Delivery Complaint Across Every Route"
-        subheading="Drivers, distributors, and recipients report issues via QR code - no login required. Your ops team sees every complaint in a Kanban dashboard and resolves it with a documented trail."
-        quickAnswer="FeedSolve gives logistics and distribution companies a structured channel for delivery complaints, route issues, and driver reports. Drivers scan a QR code in the cab to submit an issue. Recipients scan a code on the delivery slip to report damage or delays. Your operations team manages everything from a single dashboard - assigning, tracking, and resolving every complaint with full visibility and a resolution rate metric."
+        subheading="Drivers, warehouse teams, 3PL partners, distributors, and recipients report issues via QR code - no login required. Your ops team sees every complaint in a Kanban dashboard and resolves it with a documented trail."
+        quickAnswer="FeedSolve gives logistics and distribution companies a structured channel for warehouse feedback, delivery complaints, route issues, and driver reports. Use it as a lightweight driver feedback app or 3PL feedback platform: drivers scan a QR code in the cab, warehouse teams scan at loading bays, and recipients scan a code on the delivery slip to report damage or delays. Your operations team manages everything from a single dashboard - assigning, tracking, and resolving every complaint with full visibility and a resolution rate metric."
         stats={[
           {
             value: "2 min",
@@ -81,17 +81,17 @@ export default function LogisticsDeliveryFeedback() {
         ]}
         problemHeading="Why delivery complaints get lost in logistics operations"
         problemPoints={[
-          "Drivers report issues by calling dispatch - no record, no assignment, no resolution tracking",
+          "Drivers report issues by calling dispatch instead of a driver feedback app - no record, no assignment, no resolution tracking",
           "Recipients email or WhatsApp complaints that disappear into unmonitored inboxes",
           "Recurring route issues are invisible because complaints aren't categorised or tracked over time",
-          "Distributors absorb retailer complaints before escalating - headquarters finds out months too late",
+          "3PL partners and distributors absorb retailer complaints before escalating - headquarters finds out months too late",
           "No audit trail means disputed deliveries become 'he said, she said' without documentation",
         ]}
         collectLabel="QR codes in vehicle cabs, on delivery manifests, or in distributor welcome packs. Drivers and recipients scan and submit issues without leaving the cab or calling dispatch."
         trackLabel="Each complaint gets a #FSV-XXXX tracking code. Drivers and recipients can verify their issue is logged - no follow-up call to dispatch required."
         assignLabel="Routes to the route manager, account manager, or operations supervisor based on issue category and route. Priority flagging for time-sensitive delivery failures."
         resolveLabel="Log root cause, send resolution reply, mark closed. Resolution rate by route and board identifies which channels generate the most friction."
-        featuresHeading="Built for logistics and distribution operations"
+        featuresHeading="Built for warehouse feedback, 3PL, and distribution operations"
         features={[
           {
             icon: <Truck size={24} />,
@@ -185,7 +185,7 @@ export default function LogisticsDeliveryFeedback() {
           },
         ]}
         ctaHeading="Full visibility across every route and every complaint."
-        ctaSub="Set up your first delivery feedback board in under 2 minutes. Free to start."
+        ctaSub="Set up your first warehouse feedback, driver feedback app, or 3PL feedback platform board in under 2 minutes. Free to start."
         relatedLinks={[
           {
             href: "/manufacturing/supplier-feedback/",
