@@ -10,7 +10,7 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
-  title: "Supplier Feedback Tool for Manufacturers — Track Every Quality Issue",
+  title: "Supplier Feedback Tool for Manufacturers - Track Every Quality Issue",
   description:
     "Replace WhatsApp supplier complaints with a structured QR feedback board. Track defects, assign to quality teams, and resolve every issue with a documented audit trail.",
   openGraph: {
@@ -40,7 +40,7 @@ const jsonLd = {
         name: "Do my suppliers need to create an account to submit feedback?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Suppliers submit via a shared link or QR code on your delivery notes — no login, no account, no app. They receive a unique #FSV-XXXX tracking code and can check resolution progress at any time.",
+          text: "No. Suppliers submit via a shared link or QR code on your delivery notes - no login, no account, no app. They receive a unique #FSV-XXXX tracking code and can check resolution progress at any time.",
         },
       },
       {
@@ -48,7 +48,7 @@ const jsonLd = {
         name: "Can I keep internal CAPA notes private from suppliers?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Internal notes — root cause findings, CAPA actions, assignee comments — are visible only to your team. Suppliers see only the public reply you choose to send.",
+          text: "Yes. Internal notes - root cause findings, CAPA actions, assignee comments - are visible only to your team. Suppliers see only the public reply you choose to send.",
         },
       },
     ],
@@ -66,13 +66,13 @@ export default function ManufacturingSupplierFeedback() {
         badge="Manufacturing · Supplier feedback"
         breadcrumbLabel="Supplier Feedback for Manufacturers"
         h1="Stop Managing Supplier Complaints Over WhatsApp"
-        subheading="Give every supplier a QR code to report defects, delivery issues, and quality concerns — with a full resolution workflow and audit trail built in."
-        quickAnswer="FeedSolve is a supplier feedback and complaint resolution platform built for manufacturing SMBs. Suppliers scan a QR code on a delivery note, submit a quality issue without logging in, and receive a tracking code. Your quality team manages every complaint through a Kanban dashboard — assign, resolve, document, and reply — with resolution rate visible at all times."
+        subheading="Give every supplier a QR code to report defects, delivery issues, and quality concerns - with a full resolution workflow and audit trail built in."
+        quickAnswer="FeedSolve is a supplier feedback and complaint resolution platform built for manufacturing SMBs. Suppliers scan a QR code on a delivery note, submit a quality issue without logging in, and receive a tracking code. Your quality team manages every complaint through a Kanban dashboard - assign, resolve, document, and reply - with resolution rate visible at all times."
         stats={[
           { value: "2 min", label: "Setup time for your first supplier board" },
           {
             value: "Zero",
-            label: "Friction — suppliers submit with no login or account",
+            label: "Friction - suppliers submit with no login or account",
           },
           { value: "100%", label: "Of complaints tracked with a unique code" },
           {
@@ -82,9 +82,9 @@ export default function ManufacturingSupplierFeedback() {
         ]}
         problemHeading="Why supplier complaints disappear in most manufacturing businesses"
         problemPoints={[
-          "Suppliers report defects via WhatsApp — messages get buried and nobody owns the follow-up",
+          "Suppliers report defects via WhatsApp - messages get buried and nobody owns the follow-up",
           "No audit trail means the same quality issue recurs because root causes are never documented",
-          "Suppliers stop reporting after experiencing zero follow-up — you lose the early warning system",
+          "Suppliers stop reporting after experiencing zero follow-up - you lose the early warning system",
           "When an audit asks for complaint records, you have nothing to show except a WhatsApp history",
           "Quality managers spend hours chasing threads instead of resolving the actual defect",
         ]}
@@ -97,7 +97,7 @@ export default function ManufacturingSupplierFeedback() {
           {
             icon: <QrCode size={24} />,
             title: "QR Code on Delivery Notes",
-            body: "Print a branded QR code on every delivery note or supplier briefing sheet. Suppliers scan at goods-in — no portal, no login, no email chain.",
+            body: "Print a branded QR code on every delivery note or supplier briefing sheet. Suppliers scan at goods-in - no portal, no login, no email chain.",
           },
           {
             icon: <Factory size={24} />,
@@ -107,12 +107,12 @@ export default function ManufacturingSupplierFeedback() {
           {
             icon: <ShieldCheck size={24} />,
             title: "Audit Trail for ISO Compliance",
-            body: "Every submission timestamped with full history — assignee, status changes, CAPA notes, resolution. Exportable for ISO 9001 and IATF 16949 audits.",
+            body: "Every submission timestamped with full history - assignee, status changes, CAPA notes, resolution. Exportable for ISO 9001 and IATF 16949 audits.",
           },
           {
             icon: <ClipboardList size={24} />,
             title: "Internal CAPA Notes",
-            body: "Add root cause analysis, corrective actions, and contractor notes that are only visible to your quality team — never exposed to the supplier.",
+            body: "Add root cause analysis, corrective actions, and contractor notes that are only visible to your quality team - never exposed to the supplier.",
           },
           {
             icon: <Hash size={24} />,
@@ -122,15 +122,15 @@ export default function ManufacturingSupplierFeedback() {
           {
             icon: <Globe size={24} />,
             title: "Multi-Language Submission Forms",
-            body: "Critical for manufacturers with international suppliers. Submission forms available in multiple languages — request yours and we'll add it.",
+            body: "Critical for manufacturers with international suppliers. Submission forms available in multiple languages - request yours and we'll add it.",
           },
         ]}
-        exampleHeading="A supplier reports a batch defect — here's what happens"
+        exampleHeading="A supplier reports a batch defect - here's what happens"
         exampleScenario={[
           {
             step: "Supplier scans QR on delivery note",
             detail:
-              "Reports: 'Batch B-221 — visible surface defects on 30% of units.' Submits in 45 seconds. No account needed.",
+              "Reports: 'Batch B-221 - visible surface defects on 30% of units.' Submits in 45 seconds. No account needed.",
           },
           {
             step: "Tracking code #FSV-1089 generated",
@@ -145,7 +145,7 @@ export default function ManufacturingSupplierFeedback() {
           {
             step: "Status changes to In Progress",
             detail:
-              "Supplier checks their tracking code at end of day — sees 'In Progress — assigned to Quality Officer.' No follow-up call needed.",
+              "Supplier checks their tracking code at end of day - sees 'In Progress - assigned to Quality Officer.' No follow-up call needed.",
           },
           {
             step: "Root cause documented internally",
@@ -153,7 +153,7 @@ export default function ManufacturingSupplierFeedback() {
               "Sarah logs CAPA: 'Supplier switched adhesive batch. Requiring re-inspection of all B-series until resolved.' Internal only.",
           },
           {
-            step: "Issue resolved — public reply sent",
+            step: "Issue resolved - public reply sent",
             detail:
               "'Defective batch quarantined. Replacement dispatched. CAPA raised with your production team. Thank you for flagging this.'",
           },
@@ -166,15 +166,15 @@ export default function ManufacturingSupplierFeedback() {
         faqs={[
           {
             q: "Do my suppliers need to create an account to submit feedback?",
-            a: "No. Suppliers submit via a shared link or QR code on your delivery notes — no login, no account, no app installation required. They receive a unique #FSV-XXXX tracking code on submission and can check resolution progress at any time from any browser.",
+            a: "No. Suppliers submit via a shared link or QR code on your delivery notes - no login, no account, no app installation required. They receive a unique #FSV-XXXX tracking code on submission and can check resolution progress at any time from any browser.",
           },
           {
             q: "Can I keep CAPA notes and internal actions private from suppliers?",
-            a: "Yes. Internal notes — root cause findings, corrective actions, assignee comments, contractor details — are visible only to your team dashboard. Suppliers see only the public reply you deliberately send them.",
+            a: "Yes. Internal notes - root cause findings, corrective actions, assignee comments, contractor details - are visible only to your team dashboard. Suppliers see only the public reply you deliberately send them.",
           },
           {
             q: "Is this different from a Quality Management System (QMS)?",
-            a: "Yes. Enterprise QMS tools (AssurX, TrackWise) are built for regulated industries with complex compliance infrastructure. FeedSolve is built for manufacturing SMBs that need structured complaint intake, Kanban resolution, and a resolution rate metric — in under 2 minutes, without an implementation consultant.",
+            a: "Yes. Enterprise QMS tools (AssurX, TrackWise) are built for regulated industries with complex compliance infrastructure. FeedSolve is built for manufacturing SMBs that need structured complaint intake, Kanban resolution, and a resolution rate metric - in under 2 minutes, without an implementation consultant.",
           },
           {
             q: "Can I run separate boards for different supplier types?",
@@ -182,7 +182,7 @@ export default function ManufacturingSupplierFeedback() {
           },
           {
             q: "Does FeedSolve provide an audit trail for ISO certification purposes?",
-            a: "Every submission is timestamped and stored with its complete history — status changes, internal notes, assignee, and public replies. This is exportable as a CSV for ISO 9001, IATF 16949, and customer audit requirements.",
+            a: "Every submission is timestamped and stored with its complete history - status changes, internal notes, assignee, and public replies. This is exportable as a CSV for ISO 9001, IATF 16949, and customer audit requirements.",
           },
         ]}
         ctaHeading="Your first supplier board is 2 minutes away."

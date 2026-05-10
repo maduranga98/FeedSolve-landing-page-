@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "FeedSolve vs Zonka Feedback: Resolution Rate vs Survey Scores",
   description:
-    "Zonka measures satisfaction scores. FeedSolve measures resolution rate — did you actually fix it? Compare features, pricing, and use cases for SMB complaint management.",
+    "Zonka measures satisfaction scores. FeedSolve measures resolution rate - did you actually fix it? Compare features, pricing, and use cases for SMB complaint management.",
   openGraph: {
     title: "FeedSolve vs Zonka Feedback: Resolution Rate vs Survey Scores",
     description:
@@ -143,11 +143,11 @@ const comparisonRows = [
 const faqs = [
   {
     q: "What is the core difference between FeedSolve and Zonka Feedback?",
-    a: "Zonka Feedback is a survey platform — it measures how customers feel using NPS, CSAT, and CES scores. FeedSolve is a complaint resolution platform — it measures what your team did using resolution rate. Zonka asks 'how satisfied are you?' FeedSolve asks 'was your complaint resolved?' and then ensures the answer is yes.",
+    a: "Zonka Feedback is a survey platform - it measures how customers feel using NPS, CSAT, and CES scores. FeedSolve is a complaint resolution platform - it measures what your team did using resolution rate. Zonka asks 'how satisfied are you?' FeedSolve asks 'was your complaint resolved?' and then ensures the answer is yes.",
   },
   {
     q: "Does Zonka Feedback have a resolution workflow?",
-    a: "Zonka has some ticketing-like features in its Enterprise tier — basic assignment and internal notes. However, its core product is survey collection and analytics, not resolution management. There is no Kanban-style status workflow, no unique tracking code for submitters to check progress, and no resolution rate metric visible on the primary dashboard.",
+    a: "Zonka has some ticketing-like features in its Enterprise tier - basic assignment and internal notes. However, its core product is survey collection and analytics, not resolution management. There is no Kanban-style status workflow, no unique tracking code for submitters to check progress, and no resolution rate metric visible on the primary dashboard.",
   },
   {
     q: "Is FeedSolve cheaper than Zonka Feedback?",
@@ -155,11 +155,11 @@ const faqs = [
   },
   {
     q: "Can I use both FeedSolve and Zonka for different purposes?",
-    a: "Yes. Zonka is well-suited for periodic NPS measurement and satisfaction benchmarking across your customer base. FeedSolve is purpose-built for ongoing operational complaint management — complaints from customers, suppliers, distributors, and staff that must be assigned, tracked, and resolved. Many SMBs run Zonka for quarterly satisfaction surveys and FeedSolve for daily complaint resolution.",
+    a: "Yes. Zonka is well-suited for periodic NPS measurement and satisfaction benchmarking across your customer base. FeedSolve is purpose-built for ongoing operational complaint management - complaints from customers, suppliers, distributors, and staff that must be assigned, tracked, and resolved. Many SMBs run Zonka for quarterly satisfaction surveys and FeedSolve for daily complaint resolution.",
   },
   {
     q: "Which is better for supplier feedback management?",
-    a: "FeedSolve is specifically built for this use case. Suppliers scan a QR code on a delivery note, submit a complaint, and receive a tracking code. Your quality team manages it through a Kanban board and sends a documented resolution response. Zonka is not designed for external supplier feedback management — its survey model assumes a customer satisfaction context, not an operational complaint context.",
+    a: "FeedSolve is specifically built for this use case. Suppliers scan a QR code on a delivery note, submit a complaint, and receive a tracking code. Your quality team manages it through a Kanban board and sends a documented resolution response. Zonka is not designed for external supplier feedback management - its survey model assumes a customer satisfaction context, not an operational complaint context.",
   },
 ];
 
@@ -270,7 +270,7 @@ export default function VsZonka() {
             }}
           >
             Zonka measures satisfaction scores. FeedSolve measures resolution
-            rate — did you actually fix it? Built for SMBs who need to close
+            rate - did you actually fix it? Built for SMBs who need to close
             issues, not just measure them.
           </p>
 
@@ -309,7 +309,7 @@ export default function VsZonka() {
               advanced survey analytics and CRM integrations.{" "}
               <strong style={{ color: "white" }}>Choose FeedSolve</strong> if
               your goal is resolving complaints from customers, suppliers, and
-              staff with full tracking, assignment, and documented resolution —
+              staff with full tracking, assignment, and documented resolution -
               at a fraction of the price.
             </p>
           </div>
@@ -544,7 +544,7 @@ export default function VsZonka() {
                   "No submitter tracking codes",
                   "No Kanban resolution workflow",
                   "No resolution rate metric",
-                  "No free plan — from $49/mo",
+                  "No free plan - from $49/mo",
                 ].map((f) => (
                   <div
                     key={f}
@@ -636,7 +636,7 @@ export default function VsZonka() {
                   "Branded QR with logo (Growth+)",
                   "Multi-language forms",
                   "Employee problem reporting",
-                  "Free to start — from $19/mo",
+                  "Free to start - from $19/mo",
                 ].map((f) => (
                   <div
                     key={f}
@@ -870,7 +870,7 @@ export default function VsZonka() {
             >
               <HelpCircle size={13} /> Common questions
             </div>
-            <h2 style={{ color: "var(--navy)" }}>FeedSolve vs Zonka — FAQ</h2>
+            <h2 style={{ color: "var(--navy)" }}>FeedSolve vs Zonka - FAQ</h2>
           </div>
           <div className="faq-wrap">
             {faqs.map((faq, i) => (

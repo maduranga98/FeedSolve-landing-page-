@@ -10,7 +10,7 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
-  title: "Delivery Complaint Tracking for Logistics — Manage Every Route Issue",
+  title: "Delivery Complaint Tracking for Logistics - Manage Every Route Issue",
   description:
     "Drivers, distributors, and recipients report delivery issues via QR code with no login. Your ops team tracks every complaint to resolution with full visibility across routes.",
   openGraph: {
@@ -58,8 +58,8 @@ export default function LogisticsDeliveryFeedback() {
         badge="Logistics & Distribution · Delivery feedback"
         breadcrumbLabel="Delivery Complaint Tracking"
         h1="Track Every Delivery Complaint Across Every Route"
-        subheading="Drivers, distributors, and recipients report issues via QR code — no login required. Your ops team sees every complaint in a Kanban dashboard and resolves it with a documented trail."
-        quickAnswer="FeedSolve gives logistics and distribution companies a structured channel for delivery complaints, route issues, and driver reports. Drivers scan a QR code in the cab to submit an issue. Recipients scan a code on the delivery slip to report damage or delays. Your operations team manages everything from a single dashboard — assigning, tracking, and resolving every complaint with full visibility and a resolution rate metric."
+        subheading="Drivers, distributors, and recipients report issues via QR code - no login required. Your ops team sees every complaint in a Kanban dashboard and resolves it with a documented trail."
+        quickAnswer="FeedSolve gives logistics and distribution companies a structured channel for delivery complaints, route issues, and driver reports. Drivers scan a QR code in the cab to submit an issue. Recipients scan a code on the delivery slip to report damage or delays. Your operations team manages everything from a single dashboard - assigning, tracking, and resolving every complaint with full visibility and a resolution rate metric."
         stats={[
           {
             value: "2 min",
@@ -68,7 +68,7 @@ export default function LogisticsDeliveryFeedback() {
           {
             value: "Zero",
             label:
-              "Friction — no app, no login required for drivers or recipients",
+              "Friction - no app, no login required for drivers or recipients",
           },
           {
             value: "100%",
@@ -81,14 +81,14 @@ export default function LogisticsDeliveryFeedback() {
         ]}
         problemHeading="Why delivery complaints get lost in logistics operations"
         problemPoints={[
-          "Drivers report issues by calling dispatch — no record, no assignment, no resolution tracking",
+          "Drivers report issues by calling dispatch - no record, no assignment, no resolution tracking",
           "Recipients email or WhatsApp complaints that disappear into unmonitored inboxes",
           "Recurring route issues are invisible because complaints aren't categorised or tracked over time",
-          "Distributors absorb retailer complaints before escalating — headquarters finds out months too late",
+          "Distributors absorb retailer complaints before escalating - headquarters finds out months too late",
           "No audit trail means disputed deliveries become 'he said, she said' without documentation",
         ]}
         collectLabel="QR codes in vehicle cabs, on delivery manifests, or in distributor welcome packs. Drivers and recipients scan and submit issues without leaving the cab or calling dispatch."
-        trackLabel="Each complaint gets a #FSV-XXXX tracking code. Drivers and recipients can verify their issue is logged — no follow-up call to dispatch required."
+        trackLabel="Each complaint gets a #FSV-XXXX tracking code. Drivers and recipients can verify their issue is logged - no follow-up call to dispatch required."
         assignLabel="Routes to the route manager, account manager, or operations supervisor based on issue category and route. Priority flagging for time-sensitive delivery failures."
         resolveLabel="Log root cause, send resolution reply, mark closed. Resolution rate by route and board identifies which channels generate the most friction."
         featuresHeading="Built for logistics and distribution operations"
@@ -111,12 +111,12 @@ export default function LogisticsDeliveryFeedback() {
           {
             icon: <Hash size={24} />,
             title: "Tracking Codes for Recipients",
-            body: "Recipients receive a #FSV-XXXX code at submission. They check resolution status without calling your customer service line — reducing inbound call volume.",
+            body: "Recipients receive a #FSV-XXXX code at submission. They check resolution status without calling your customer service line - reducing inbound call volume.",
           },
           {
             icon: <Globe size={24} />,
             title: "Multi-Language for International Routes",
-            body: "Submission forms available in multiple languages — critical for logistics operators across South Asia, the Middle East, and East Africa with multilingual drivers and recipients.",
+            body: "Submission forms available in multiple languages - critical for logistics operators across South Asia, the Middle East, and East Africa with multilingual drivers and recipients.",
           },
           {
             icon: <ShieldCheck size={24} />,
@@ -124,12 +124,12 @@ export default function LogisticsDeliveryFeedback() {
             body: "Every submission timestamped with full resolution history. Exportable documentation for disputed deliveries, insurance claims, and SLA performance reviews.",
           },
         ]}
-        exampleHeading="A distributor reports a damaged delivery — here's what happens"
+        exampleHeading="A distributor reports a damaged delivery - here's what happens"
         exampleScenario={[
           {
             step: "Distributor scans QR on delivery manifest",
             detail:
-              "Reports: '12 of 48 units damaged — packaging failure on pallet 3.' Submits from their phone in under a minute.",
+              "Reports: '12 of 48 units damaged - packaging failure on pallet 3.' Submits from their phone in under a minute.",
           },
           {
             step: "Tracking code #FSV-3301 generated",
@@ -144,22 +144,22 @@ export default function LogisticsDeliveryFeedback() {
           {
             step: "Supervisor investigates route and packing",
             detail:
-              "Checks pallet records, identifies packaging failure at loading bay. Internal note: 'Pallet 3 QC failure — loading team retraining required.'",
+              "Checks pallet records, identifies packaging failure at loading bay. Internal note: 'Pallet 3 QC failure - loading team retraining required.'",
           },
           {
             step: "Status visible to distributor",
             detail:
-              "Distributor checks their tracking code — sees 'In Progress — assigned to logistics supervisor.' No phone call needed.",
+              "Distributor checks their tracking code - sees 'In Progress - assigned to logistics supervisor.' No phone call needed.",
           },
           {
             step: "Resolution confirmed and documented",
             detail:
-              "'Replacement for 12 damaged units dispatched today. Root cause identified — packaging process updated. Claim reference: REF-4421.'",
+              "'Replacement for 12 damaged units dispatched today. Root cause identified - packaging process updated. Claim reference: REF-4421.'",
           },
           {
             step: "Resolution rate dashboard updated",
             detail:
-              "Account manager sees route-level resolution rate. Identifies that 3 complaints this month are from the same loading bay — systemic fix triggered.",
+              "Account manager sees route-level resolution rate. Identifies that 3 complaints this month are from the same loading bay - systemic fix triggered.",
           },
         ]}
         faqs={[
@@ -173,11 +173,11 @@ export default function LogisticsDeliveryFeedback() {
           },
           {
             q: "Does FeedSolve provide documentation for disputed delivery claims?",
-            a: "Every submission is timestamped and stored with its full resolution history — status changes, internal notes, assignee, and public replies. This is exportable as a CSV for disputed delivery claims, insurance documentation, and SLA performance reviews.",
+            a: "Every submission is timestamped and stored with its full resolution history - status changes, internal notes, assignee, and public replies. This is exportable as a CSV for disputed delivery claims, insurance documentation, and SLA performance reviews.",
           },
           {
             q: "How is this different from just asking recipients to email complaints?",
-            a: "Email complaints arrive in an unstructured inbox with no assignment, no tracking code, no status updates, and no resolution rate metric. FeedSolve structures every complaint from the moment of submission and provides both parties — the recipient and your operations team — with a formal, auditable record of resolution.",
+            a: "Email complaints arrive in an unstructured inbox with no assignment, no tracking code, no status updates, and no resolution rate metric. FeedSolve structures every complaint from the moment of submission and provides both parties - the recipient and your operations team - with a formal, auditable record of resolution.",
           },
           {
             q: "Can distributors submit feedback anonymously?",

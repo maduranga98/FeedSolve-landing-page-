@@ -1212,7 +1212,7 @@ const faqs = [
  },
  {
   q: "Can submitters use the feedback form in their own language?",
-  a: "Yes. FeedSolve supports multi-language submission forms so your customers, suppliers, and partners can submit feedback in their preferred language. Request any language and we'll add it — critical for businesses operating across South Asia, the Middle East, or East Africa.",
+  a: "Yes. FeedSolve supports multi-language submission forms so your customers, suppliers, and partners can submit feedback in their preferred language. Request any language and we'll add it - critical for businesses operating across South Asia, the Middle East, or East Africa.",
  },
 ];
 

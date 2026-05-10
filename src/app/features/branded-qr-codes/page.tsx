@@ -21,7 +21,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Which plans include branded QR codes?",
-    a: "Branded QR codes — including logo embedding and colour customisation — are available on the Growth ($49/month) and Pro ($79/month) plans. The Free and Starter plans generate standard QR codes without logo or colour customisation.",
+    a: "Branded QR codes - including logo embedding and colour customisation - are available on the Growth ($49/month) and Pro ($79/month) plans. The Free and Starter plans generate standard QR codes without logo or colour customisation.",
   },
   {
     q: "Can I use my own colours and not just a logo?",
@@ -177,7 +177,7 @@ export default function BrandedQrCodes() {
             }}
           >
             Add your company logo and brand colours to every FeedSolve QR code.
-            Print on table tents, delivery notes, walls, and receipts — looks
+            Print on table tents, delivery notes, walls, and receipts - looks
             professional, scans perfectly.
           </p>
           <div
@@ -261,7 +261,7 @@ export default function BrandedQrCodes() {
               {
                 icon: <QrCode size={24} />,
                 title: "Brand Colour Matching",
-                body: "Set the QR code foreground colour to match your exact brand hex values. Background colour customisation also supported — match your style guide precisely.",
+                body: "Set the QR code foreground colour to match your exact brand hex values. Background colour customisation also supported - match your style guide precisely.",
               },
               {
                 icon: <Check size={24} />,
@@ -492,7 +492,7 @@ export default function BrandedQrCodes() {
                           <span
                             style={{ color: "var(--text-light)", fontSize: 18 }}
                           >
-                            —
+                            -
                           </span>
                         )}
                       </td>
