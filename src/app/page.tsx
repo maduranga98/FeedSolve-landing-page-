@@ -861,7 +861,7 @@ function UseCases() {
        Print them on receipts, delivery notes, table tents, or walls.
        Your feedback board looks like yours - not a generic form.
       </p>
-      <Link href="#feature-teaser">
+      <Link href="/features/branded-qr-codes">
        Learn about QR code customization →
       </Link>
      </div>
