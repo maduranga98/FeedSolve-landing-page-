@@ -11,7 +11,7 @@ import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
   title:
-    "Tenant Feedback System for Property Managers — Track Every Maintenance Request",
+    "Tenant Feedback System for Property Managers - Track Every Maintenance Request",
   description:
     "Give tenants a QR code to submit maintenance requests and complaints without calling or emailing. Track every issue to resolution with a full audit trail.",
   openGraph: {
@@ -41,7 +41,7 @@ const jsonLd = {
         name: "Do tenants need to download an app or create an account?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Tenants submit via a QR code in the lobby or a link in their welcome pack — no app, no account, no password. They receive a tracking code and can check resolution status on any browser.",
+          text: "No. Tenants submit via a QR code in the lobby or a link in their welcome pack - no app, no account, no password. They receive a tracking code and can check resolution status on any browser.",
         },
       },
       {
@@ -49,7 +49,7 @@ const jsonLd = {
         name: "Does FeedSolve provide an audit trail for maintenance disputes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Every submission is timestamped with its full resolution history — status changes, internal notes, assignee, and public replies. This provides a verifiable record for tenant disputes and property inspections.",
+          text: "Yes. Every submission is timestamped with its full resolution history - status changes, internal notes, assignee, and public replies. This provides a verifiable record for tenant disputes and property inspections.",
         },
       },
     ],
@@ -68,7 +68,7 @@ export default function RealEstateTenantFeedback() {
         breadcrumbLabel="Tenant Feedback for Property Managers"
         h1="Never Lose a Maintenance Request Again"
         subheading="Give tenants a QR code in the lobby or welcome pack to submit requests without calling. Track every issue to resolution with a documented audit trail."
-        quickAnswer="FeedSolve is a tenant maintenance request and complaint tracking system for property managers. Tenants scan a QR code in the lobby or click a link in their welcome letter — no login required. Requests route to the property manager, who assigns to the right contractor, tracks resolution, and sends a confirmation reply. Tenants see their issue resolved via their tracking code. No phone tag. No lost work orders. Full audit trail."
+        quickAnswer="FeedSolve is a tenant maintenance request and complaint tracking system for property managers. Tenants scan a QR code in the lobby or click a link in their welcome letter - no login required. Requests route to the property manager, who assigns to the right contractor, tracks resolution, and sends a confirmation reply. Tenants see their issue resolved via their tracking code. No phone tag. No lost work orders. Full audit trail."
         stats={[
           {
             value: "2 min",
@@ -76,7 +76,7 @@ export default function RealEstateTenantFeedback() {
           },
           {
             value: "Zero",
-            label: "Phone calls needed — tenants track status via code",
+            label: "Phone calls needed - tenants track status via code",
           },
           {
             value: "100%",
@@ -90,15 +90,15 @@ export default function RealEstateTenantFeedback() {
         ]}
         problemHeading="Why maintenance requests disappear in property management"
         problemPoints={[
-          "Tenants submit requests by calling or WhatsApp messaging — no record, no assignment, no resolution tracking",
+          "Tenants submit requests by calling or WhatsApp messaging - no record, no assignment, no resolution tracking",
           "When tenants call twice about the same issue, it's because they saw no evidence the first request was received",
           "High-value tenants leave not because of the maintenance issue but because of the non-response",
           "No audit trail means maintenance disputes become 'he said, she said' with no documentation",
           "Property managers spend hours chasing contractors rather than tracking whether issues are resolved",
         ]}
-        collectLabel="QR code in the lobby, on the welcome letter, or as a link in the tenancy agreement. Tenants submit maintenance requests from any phone — no app, no account, no password."
-        trackLabel="Each request gets a #FSV-XXXX tracking code. Tenants check progress without calling — knowing their request is in the system builds trust and reduces inbound calls."
-        assignLabel="Route to the maintenance coordinator or contractor with a target resolution timeframe. Priority flagging for urgent requests — water leaks, electrical faults, security issues."
+        collectLabel="QR code in the lobby, on the welcome letter, or as a link in the tenancy agreement. Tenants submit maintenance requests from any phone - no app, no account, no password."
+        trackLabel="Each request gets a #FSV-XXXX tracking code. Tenants check progress without calling - knowing their request is in the system builds trust and reduces inbound calls."
+        assignLabel="Route to the maintenance coordinator or contractor with a target resolution timeframe. Priority flagging for urgent requests - water leaks, electrical faults, security issues."
         resolveLabel="Log contractor actions, send tenant confirmation, and close the issue. Resolution rate by property gives you a weekly view of maintenance performance."
         featuresHeading="Built for property managers and real estate landlords"
         features={[
@@ -115,7 +115,7 @@ export default function RealEstateTenantFeedback() {
           {
             icon: <Hash size={24} />,
             title: "Tenant Tracking Codes",
-            body: "Tenants receive a #FSV-XXXX code on submission. They check progress at any time without calling reception — dramatically reducing inbound enquiry volume.",
+            body: "Tenants receive a #FSV-XXXX code on submission. They check progress at any time without calling reception - dramatically reducing inbound enquiry volume.",
           },
           {
             icon: <ClipboardList size={24} />,
@@ -125,20 +125,20 @@ export default function RealEstateTenantFeedback() {
           {
             icon: <ShieldCheck size={24} />,
             title: "Audit Trail for Disputes",
-            body: "Every request is timestamped with full history — assignee, status changes, contractor notes, and tenant reply. Exportable for tenant disputes and property inspections.",
+            body: "Every request is timestamped with full history - assignee, status changes, contractor notes, and tenant reply. Exportable for tenant disputes and property inspections.",
           },
           {
             icon: <Globe size={24} />,
             title: "Multi-Language for Diverse Tenants",
-            body: "Submission forms available in multiple languages — critical for properties in multilingual communities across South Asia, the Middle East, and East Africa.",
+            body: "Submission forms available in multiple languages - critical for properties in multilingual communities across South Asia, the Middle East, and East Africa.",
           },
         ]}
-        exampleHeading="A tenant reports a water leak — here's what happens"
+        exampleHeading="A tenant reports a water leak - here's what happens"
         exampleScenario={[
           {
             step: "Tenant in Unit 14B scans lobby QR code",
             detail:
-              "Submits: 'Water leak under kitchen sink — dripping since yesterday morning.' Category: Plumbing. Submits in 45 seconds.",
+              "Submits: 'Water leak under kitchen sink - dripping since yesterday morning.' Category: Plumbing. Submits in 45 seconds.",
           },
           {
             step: "Tracking code #FSV-7734 generated",
@@ -153,7 +153,7 @@ export default function RealEstateTenantFeedback() {
           {
             step: "Status visible to tenant",
             detail:
-              "Tenant checks tracking code next morning — sees 'In Progress — assigned to maintenance team.' Knows it hasn't been forgotten.",
+              "Tenant checks tracking code next morning - sees 'In Progress - assigned to maintenance team.' Knows it hasn't been forgotten.",
           },
           {
             step: "Contractor attends and fixes the issue",
@@ -182,7 +182,7 @@ export default function RealEstateTenantFeedback() {
           },
           {
             q: "Does FeedSolve provide an audit trail for maintenance disputes or legal purposes?",
-            a: "Yes. Every submission is timestamped and stored with its full resolution history — status changes, internal notes, assignee, contractor updates, and public replies. This provides a verifiable, exportable record for tenant disputes, deposit deductions, and property inspection records.",
+            a: "Yes. Every submission is timestamped and stored with its full resolution history - status changes, internal notes, assignee, contractor updates, and public replies. This provides a verifiable, exportable record for tenant disputes, deposit deductions, and property inspection records.",
           },
           {
             q: "Can tenants submit maintenance requests anonymously?",
@@ -190,7 +190,7 @@ export default function RealEstateTenantFeedback() {
           },
           {
             q: "How does this compare to a property management platform like AppFolio or Buildium?",
-            a: "AppFolio and Buildium are full property management suites covering lease management, rent collection, and accounting. Maintenance request handling is a sub-feature. FeedSolve is purpose-built for complaint resolution — zero-friction submission for tenants, Kanban workflow for property managers, full audit trail. It sets up in under 2 minutes versus days of onboarding for a full PMS.",
+            a: "AppFolio and Buildium are full property management suites covering lease management, rent collection, and accounting. Maintenance request handling is a sub-feature. FeedSolve is purpose-built for complaint resolution - zero-friction submission for tenants, Kanban workflow for property managers, full audit trail. It sets up in under 2 minutes versus days of onboarding for a full PMS.",
           },
         ]}
         ctaHeading="Every maintenance request tracked. Every tenant heard."

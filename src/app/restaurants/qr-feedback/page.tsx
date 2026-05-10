@@ -11,7 +11,7 @@ import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
   title:
-    "QR Code Feedback for Restaurants — Catch Complaints Before Google Reviews",
+    "QR Code Feedback for Restaurants - Catch Complaints Before Google Reviews",
   description:
     "Place a branded QR code on every table. Guests report issues in 30 seconds, your team resolves them instantly, and the loop closes before anyone posts a review.",
   openGraph: {
@@ -39,7 +39,7 @@ const jsonLd = {
         name: "Should I put the QR code on every table?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — table placement drives the highest scan rate because it's proximate to the experience. You can also place codes at the counter, on receipts, or at the entrance for takeaway feedback.",
+          text: "Yes - table placement drives the highest scan rate because it's proximate to the experience. You can also place codes at the counter, on receipts, or at the entrance for takeaway feedback.",
         },
       },
       {
@@ -47,7 +47,7 @@ const jsonLd = {
         name: "Can a guest track whether their complaint was resolved?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Every guest receives a unique tracking code on submission. They visit the public tracking page at any time to see the current status and any reply from your team — no account needed.",
+          text: "Yes. Every guest receives a unique tracking code on submission. They visit the public tracking page at any time to see the current status and any reply from your team - no account needed.",
         },
       },
     ],
@@ -66,7 +66,7 @@ export default function RestaurantsQrFeedback() {
         breadcrumbLabel="QR Feedback for Restaurants"
         h1="Catch Guest Complaints Before They Hit Google"
         subheading="A branded QR code on every table gives guests a private outlet to report issues in 30 seconds. Your team resolves them before anyone writes a review."
-        quickAnswer="FeedSolve places a QR code on your tables, counters, or receipts. Guests scan, describe their issue, and receive a tracking code — no login, no app, no friction. Your floor manager sees it instantly in a Kanban dashboard, assigns it to the right person, and sends a reply. The guest sees 'Resolved' on their tracking page. The review never gets written."
+        quickAnswer="FeedSolve places a QR code on your tables, counters, or receipts. Guests scan, describe their issue, and receive a tracking code - no login, no app, no friction. Your floor manager sees it instantly in a Kanban dashboard, assigns it to the right person, and sends a reply. The guest sees 'Resolved' on their tracking page. The review never gets written."
         stats={[
           {
             value: "30 sec",
@@ -74,7 +74,7 @@ export default function RestaurantsQrFeedback() {
           },
           {
             value: "Zero",
-            label: "Friction — no app, no login, no account required",
+            label: "Friction - no app, no login, no account required",
           },
           {
             value: "3×",
@@ -87,15 +87,15 @@ export default function RestaurantsQrFeedback() {
         ]}
         problemHeading="Why guest complaints keep becoming public reviews"
         problemPoints={[
-          "Guests who experience a problem rarely raise it with a server — the social barrier is too high",
+          "Guests who experience a problem rarely raise it with a server - the social barrier is too high",
           "Verbal complaints to staff get forgotten by shift end with no record or follow-up",
           "A dissatisfied guest who leaves silently writes the Google review at home that evening",
           "No structured feedback channel means managers never know about recurring kitchen or service issues",
-          "Paper comment cards end up unread in a drawer — no tracking, no assignment, no resolution",
+          "Paper comment cards end up unread in a drawer - no tracking, no assignment, no resolution",
         ]}
-        collectLabel="Laminated QR cards on every table, at the counter, or on receipts. Guests scan and describe their issue in under 30 seconds — no login, no app, no social awkwardness of flagging a server."
+        collectLabel="Laminated QR cards on every table, at the counter, or on receipts. Guests scan and describe their issue in under 30 seconds - no login, no app, no social awkwardness of flagging a server."
         trackLabel="Each submission gets a unique #FSV-XXXX tracking code. Guests check whether their complaint was acted on without calling the restaurant."
-        assignLabel="Routes to the floor manager or kitchen supervisor based on category. Manager sees it during service and acts immediately — before the guest leaves."
+        assignLabel="Routes to the floor manager or kitchen supervisor based on category. Manager sees it during service and acts immediately - before the guest leaves."
         resolveLabel="Reply to the guest, update status to Resolved. Guest sees it on their tracking page. Resolution rate feeds your weekly ops report."
         featuresHeading="Built for restaurants, hotels, and F&B chains"
         features={[
@@ -112,12 +112,12 @@ export default function RestaurantsQrFeedback() {
           {
             icon: <MessageSquare size={24} />,
             title: "Instant Manager Notification",
-            body: "New submissions trigger an email to the manager on duty. Issues are visible in the Kanban dashboard during service — not at the end-of-week review.",
+            body: "New submissions trigger an email to the manager on duty. Issues are visible in the Kanban dashboard during service - not at the end-of-week review.",
           },
           {
             icon: <Hash size={24} />,
             title: "Guest Tracking Codes",
-            body: "Guests receive a tracking code at submission. If they follow up, they use the code — not a phone call. Builds trust without adding staff workload.",
+            body: "Guests receive a tracking code at submission. If they follow up, they use the code - not a phone call. Builds trust without adding staff workload.",
           },
           {
             icon: <Globe size={24} />,
@@ -130,7 +130,7 @@ export default function RestaurantsQrFeedback() {
             body: "Add your restaurant or hotel logo and brand colours to the QR code. Looks professional on table cards and fits your existing collateral. Available on Growth and Pro plans.",
           },
         ]}
-        exampleHeading="A diner reports a cold dish — here's what happens"
+        exampleHeading="A diner reports a cold dish - here's what happens"
         exampleScenario={[
           {
             step: "Guest scans the QR card on Table 12",
@@ -155,7 +155,7 @@ export default function RestaurantsQrFeedback() {
           {
             step: "Internal note added",
             detail:
-              "Manager logs: 'Fish holding temperature issue on Friday peak — retrained team on 75°C serving check.' Internal only.",
+              "Manager logs: 'Fish holding temperature issue on Friday peak - retrained team on 75°C serving check.' Internal only.",
           },
           {
             step: "Public reply sent to guest",
@@ -171,11 +171,11 @@ export default function RestaurantsQrFeedback() {
         faqs={[
           {
             q: "Should I put the QR code on every table?",
-            a: "Yes — table placement during the dining experience drives the highest scan rates because the feedback impulse is strongest at the point of the experience. You can also place codes at the counter or on receipts for takeaway feedback. Multi-location chains can run separate boards per location with unique QR codes.",
+            a: "Yes - table placement during the dining experience drives the highest scan rates because the feedback impulse is strongest at the point of the experience. You can also place codes at the counter or on receipts for takeaway feedback. Multi-location chains can run separate boards per location with unique QR codes.",
           },
           {
             q: "Can a guest track whether their complaint was resolved?",
-            a: "Yes. Every guest receives a unique tracking code (e.g., #FSV-2204) on submission. They visit the public tracking page at any time to see the current status and any reply from your team — no account or login required.",
+            a: "Yes. Every guest receives a unique tracking code (e.g., #FSV-2204) on submission. They visit the public tracking page at any time to see the current status and any reply from your team - no account or login required.",
           },
           {
             q: "What if a guest submits abusive or irrelevant content?",
@@ -183,7 +183,7 @@ export default function RestaurantsQrFeedback() {
           },
           {
             q: "Can I run different feedback boards for dine-in, takeaway, and events?",
-            a: "Yes. Create a separate board for each channel — each with its own QR code, category options, and team routing. All submissions appear in a single dashboard filtered by board, status, or date.",
+            a: "Yes. Create a separate board for each channel - each with its own QR code, category options, and team routing. All submissions appear in a single dashboard filtered by board, status, or date.",
           },
           {
             q: "How does this help prevent negative Google reviews?",

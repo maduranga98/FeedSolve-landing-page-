@@ -346,7 +346,7 @@ export default function VerticalPage(props: VerticalProps) {
             How it works
           </div>
           <h2 style={{ color: "white", marginBottom: 48 }}>
-            From submission to resolution — automatically
+            From submission to resolution - automatically
           </h2>
           <div
             style={{
@@ -655,7 +655,7 @@ export default function VerticalPage(props: VerticalProps) {
             {[
               "Zero-login submission for stakeholders",
               "Unique #FSV-XXXX tracking code per issue",
-              "Kanban board — Received to Resolved",
+              "Kanban board - Received to Resolved",
               "Team assignment with priority levels",
               "Internal notes hidden from submitters",
               "Public reply visible on tracking page",
@@ -664,7 +664,7 @@ export default function VerticalPage(props: VerticalProps) {
               "Branded QR codes with your logo",
               "Email notifications on new submissions",
               "Anonymous mode per board",
-              "Free to start — no credit card",
+              "Free to start - no credit card",
             ].map((item, i) => (
               <div
                 key={i}

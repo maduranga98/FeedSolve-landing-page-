@@ -144,7 +144,7 @@ const comparisonRows = [
 const faqs = [
   {
     q: "What is the main difference between FeedSolve and Typeform?",
-    a: "Typeform is a form and survey builder optimised for beautiful, high-completion data collection. FeedSolve is a complaint resolution platform — the form is just the intake channel. After submission, FeedSolve adds team assignment, status tracking, tracking codes for submitters, and a resolution rate dashboard. Typeform ends at the Submit button. FeedSolve starts there.",
+    a: "Typeform is a form and survey builder optimised for beautiful, high-completion data collection. FeedSolve is a complaint resolution platform - the form is just the intake channel. After submission, FeedSolve adds team assignment, status tracking, tracking codes for submitters, and a resolution rate dashboard. Typeform ends at the Submit button. FeedSolve starts there.",
   },
   {
     q: "Can Typeform do what FeedSolve does if I build the workflow manually?",
@@ -156,11 +156,11 @@ const faqs = [
   },
   {
     q: "Can I use both FeedSolve and Typeform for different purposes?",
-    a: "Yes, and many teams do. Typeform is well-suited for periodic satisfaction surveys, lead generation forms, and branded questionnaires. FeedSolve is purpose-built for ongoing operational complaint management — customers, suppliers, and distributors submitting issues that must be assigned, tracked, and resolved. They are complementary, not mutually exclusive.",
+    a: "Yes, and many teams do. Typeform is well-suited for periodic satisfaction surveys, lead generation forms, and branded questionnaires. FeedSolve is purpose-built for ongoing operational complaint management - customers, suppliers, and distributors submitting issues that must be assigned, tracked, and resolved. They are complementary, not mutually exclusive.",
   },
   {
     q: "Does FeedSolve have multi-language forms like Typeform?",
-    a: "Yes. FeedSolve supports multi-language submission forms — critical for businesses operating across South Asia, the Middle East, and East Africa. Submitters see the form in their preferred language. Request a language and it will be added. All submissions arrive in one unified dashboard for the management team regardless of submission language.",
+    a: "Yes. FeedSolve supports multi-language submission forms - critical for businesses operating across South Asia, the Middle East, and East Africa. Submitters see the form in their preferred language. Request a language and it will be added. All submissions arrive in one unified dashboard for the management team regardless of submission language.",
   },
 ];
 
@@ -515,7 +515,7 @@ export default function VsTypeform() {
               >
                 A complaint resolution platform built around QR-code intake,
                 zero-login submission, Kanban workflow, tracking codes, and
-                resolution rate — for physical-world SMBs.
+                resolution rate - for physical-world SMBs.
               </p>
               <div
                 style={{ display: "flex", flexDirection: "column", gap: 10 }}
@@ -767,7 +767,7 @@ export default function VsTypeform() {
               marginTop: 20,
             }}
           >
-            Both tools coexist naturally — Typeform for periodic satisfaction
+            Both tools coexist naturally - Typeform for periodic satisfaction
             surveys, FeedSolve for ongoing operational complaint resolution.
           </p>
         </div>
@@ -784,7 +784,7 @@ export default function VsTypeform() {
               <HelpCircle size={13} /> Common questions
             </div>
             <h2 style={{ color: "var(--navy)" }}>
-              FeedSolve vs Typeform — FAQ
+              FeedSolve vs Typeform - FAQ
             </h2>
           </div>
           <div className="faq-wrap">

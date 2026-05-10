@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     q: "Is FeedSolve free like Google Forms?",
-    a: "FeedSolve has a free plan that includes 2 feedback boards and unlimited submissions. Paid plans start at $19/month with flat board-based pricing — no per-seat fees. Google Forms is free with Google Workspace but has no resolution workflow at any price.",
+    a: "FeedSolve has a free plan that includes 2 feedback boards and unlimited submissions. Paid plans start at $19/month with flat board-based pricing - no per-seat fees. Google Forms is free with Google Workspace but has no resolution workflow at any price.",
   },
   {
     q: "Can I import my existing Google Forms responses into FeedSolve?",
@@ -149,10 +149,10 @@ const faqs = [
   },
   {
     q: "Do my submitters need to do anything differently if I switch from Google Forms?",
-    a: "No. From the submitter's perspective, both tools present a simple web form on their phone. The difference is entirely on your side — FeedSolve adds assignment, tracking codes, status updates, and a resolution rate dashboard that Google Forms does not provide.",
+    a: "No. From the submitter's perspective, both tools present a simple web form on their phone. The difference is entirely on your side - FeedSolve adds assignment, tracking codes, status updates, and a resolution rate dashboard that Google Forms does not provide.",
   },
   {
-    q: "Which is better for supplier feedback — Google Forms or FeedSolve?",
+    q: "Which is better for supplier feedback - Google Forms or FeedSolve?",
     a: "FeedSolve is built for this use case. Suppliers scan a QR code on a delivery note, submit a quality complaint, and receive a tracking code to follow progress. Your quality team sees it in a Kanban dashboard, assigns it to the right person, and resolves it with a documented response. Google Forms produces a spreadsheet row with no workflow, no tracking, and no resolution confirmation.",
   },
 ];
@@ -304,8 +304,8 @@ export default function VsGoogleForms() {
               you need a free survey tool for internal data collection or
               one-off registrations.{" "}
               <strong style={{ color: "white" }}>Choose FeedSolve</strong> if
-              you need external stakeholders — customers, suppliers,
-              distributors — to submit complaints that your team then assigns,
+              you need external stakeholders - customers, suppliers,
+              distributors - to submit complaints that your team then assigns,
               tracks, and resolves with full accountability.
             </p>
           </div>
@@ -508,7 +508,7 @@ export default function VsGoogleForms() {
                 }}
               >
                 A feedback management platform that adds a full resolution
-                workflow after collection — tracking codes, team assignment,
+                workflow after collection - tracking codes, team assignment,
                 Kanban board, public replies, and resolution rate metric.
               </p>
               <div
@@ -555,7 +555,7 @@ export default function VsGoogleForms() {
                 }}
               >
                 <strong style={{ color: "white" }}>Best for:</strong> External
-                stakeholder complaints — customers, suppliers, distributors,
+                stakeholder complaints - customers, suppliers, distributors,
                 tenants
               </div>
             </div>
@@ -813,7 +813,7 @@ export default function VsGoogleForms() {
                 "No one is assigned ownership",
                 "Supplier follows up by WhatsApp 3 days later",
                 "Team searches the spreadsheet to find the row",
-                "Issue resolved informally — no record",
+                "Issue resolved informally - no record",
                 "Supplier never learns it was fixed",
               ].map((step, i) => (
                 <div
@@ -877,14 +877,14 @@ export default function VsGoogleForms() {
                 <Check size={14} /> Via FeedSolve
               </div>
               {[
-                "Supplier scans QR on delivery note — submits defect report",
+                "Supplier scans QR on delivery note - submits defect report",
                 "Receives tracking code #FSV-1089 on thank-you screen",
                 "Quality manager gets email notification instantly",
                 "Assigned to quality officer, priority set to High",
-                "Status changes to In Progress — visible to supplier",
+                "Status changes to In Progress - visible to supplier",
                 "CAPA documented in internal notes",
-                "Issue resolved — public reply sent to supplier",
-                "Supplier checks tracking code: 'Resolved — replacement dispatched'",
+                "Issue resolved - public reply sent to supplier",
+                "Supplier checks tracking code: 'Resolved - replacement dispatched'",
               ].map((step, i) => (
                 <div
                   key={i}
@@ -936,7 +936,7 @@ export default function VsGoogleForms() {
               <HelpCircle size={13} /> Common questions
             </div>
             <h2 style={{ color: "var(--navy)" }}>
-              FeedSolve vs Google Forms — FAQ
+              FeedSolve vs Google Forms - FAQ
             </h2>
           </div>
           <div className="faq-wrap">
