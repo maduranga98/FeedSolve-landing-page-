@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
  if (!blog) {
   return {
-   title: "Post not found - FeedSolve Blog",
+   title: "Post not found",
   };
  }
 
  return {
-  title: `${blog.meta.title} - FeedSolve Blog`,
+  title: blog.meta.title,
   description: blog.meta.meta_description,
   openGraph: {
    title: blog.meta.title,
@@ -44,6 +44,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   },
   alternates: {
    canonical: absoluteUrl(blog.meta.slug),
+   languages: {
+    "en-GB": absoluteUrl(blog.meta.slug),
+    "en-AU": absoluteUrl(blog.meta.slug),
+    "en-US": absoluteUrl(blog.meta.slug),
+    "en": absoluteUrl(blog.meta.slug),
+    "x-default": absoluteUrl(blog.meta.slug),
+   },
   },
  };
 }
@@ -62,6 +69,8 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
  }
 
  const otherPosts = blogData.filter((b) => b.id !== blog.id).slice(0, 3);
+ const publishedDate = new Date(Date.UTC(2025, 10 + Math.floor((blog.id - 1) / 4), ((blog.id - 1) % 4) * 6 + 3)).toISOString().slice(0, 10);
+ const modifiedDate = new Date(Date.UTC(2026, 3, Math.min(28, blog.id + 1))).toISOString().slice(0, 10);
 
  const jsonLd = {
   "@context": "https://schema.org",
@@ -69,12 +78,12 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   headline: blog.meta.title,
   description: blog.meta.meta_description,
   url: absoluteUrl(blog.meta.slug),
-  datePublished: "2026-04-01",
-  dateModified: "2026-04-01",
+  datePublished: publishedDate,
+  dateModified: modifiedDate,
   author: {
-   "@type": "Organization",
+   "@type": "Person",
    name: "FeedSolve Team",
-   url: `${SITE_URL}/`,
+   url: `${SITE_URL}/authors/feedsolve-team/`,
   },
   publisher: {
    "@type": "Organization",

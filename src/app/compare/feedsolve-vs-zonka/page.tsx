@@ -26,6 +26,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://feedsolve.com/compare/feedsolve-vs-zonka/",
+    languages: {
+      "en-GB": "https://feedsolve.com/compare/feedsolve-vs-zonka/",
+      "en-AU": "https://feedsolve.com/compare/feedsolve-vs-zonka/",
+      "en-US": "https://feedsolve.com/compare/feedsolve-vs-zonka/",
+      en: "https://feedsolve.com/compare/feedsolve-vs-zonka/",
+      "x-default": "https://feedsolve.com/compare/feedsolve-vs-zonka/",
+    },
   },
 };
 

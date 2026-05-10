@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://feedsolve.com/compare/",
+    languages: {
+      "en-GB": "https://feedsolve.com/compare/",
+      "en-AU": "https://feedsolve.com/compare/",
+      "en-US": "https://feedsolve.com/compare/",
+      en: "https://feedsolve.com/compare/",
+      "x-default": "https://feedsolve.com/compare/",
+    },
   },
 };
 

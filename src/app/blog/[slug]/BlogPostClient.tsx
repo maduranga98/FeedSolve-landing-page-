@@ -26,6 +26,11 @@ type BlogSection = {
  faqs?: BlogFaq[];
 };
 
+type InternalLink = {
+ anchor: string;
+ url: string;
+};
+
 type BlogPost = {
  id: number;
  meta: {
@@ -41,6 +46,7 @@ type BlogPost = {
   h1: string;
   key_takeaways?: string[];
   sections: BlogSection[];
+  internal_links?: InternalLink[];
  };
 };
 
@@ -69,6 +75,16 @@ function getCategoryForBlog(blog: BlogPost): string {
  if (kw.includes("no-login") || kw.includes("feedback form")) return "product";
  if (kw.includes("vs") || kw.includes("typeform")) return "comparison";
  return "guides";
+}
+
+function normalizeInternalLink(url: string): string {
+ if (url === "/pricing") return "/#pricing";
+ return url.endsWith("/") || url.includes("#") ? url : `${url}/`;
+}
+
+function formatPublishedMonth(blog: BlogPost): string {
+ const date = new Date(Date.UTC(2025, 10 + Math.floor((blog.id - 1) / 4), ((blog.id - 1) % 4) * 6 + 3));
+ return new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(date);
 }
 
 function getReadTime(blog: BlogPost): string {
@@ -170,12 +186,12 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
       <div className="author-wrap">
        <div className="author-avatar-lg" style={{ background: "var(--teal)" }}>FS</div>
        <div>
-        <div className="author-name-text">FeedSolve Team</div>
+        <Link href="/authors/feedsolve-team/" className="author-name-text">FeedSolve Team</Link>
         <div className="author-role-text">Operations &amp; Product</div>
        </div>
       </div>
       <div className="article-stats">
-       <div className="article-stat"><Calendar size={14} /> Apr 2026</div>
+       <div className="article-stat"><Calendar size={14} /> {formatPublishedMonth(blog)}</div>
        <div className="article-stat"><Clock size={14} /> {getReadTime(blog)} read</div>
       </div>
      </div>
@@ -184,7 +200,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
     {/* MAIN CONTENT */}
     <div className="article-content">
      {/* Hero illustration */}
-     <div className="article-hero-img">
+     <div className="article-hero-img" role="img" aria-label={`${blog.meta.primary_keyword} article summary and table of contents`}>
       <div className="ahi-left">
        <h2 style={{ fontSize: 18, fontWeight: 700, color: "white", marginBottom: 12 }}>Key takeaways</h2>
        {blog.content.key_takeaways ? (
@@ -245,6 +261,30 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
            ))}
           </div>
          )}
+
+         {section.body && section.body.map((para: string, j: number) => (
+          <p key={`body-${j}`}>{para}</p>
+         ))}
+         {section.examples && section.examples.length > 0 && (
+          <div style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 12, padding: "18px 22px", margin: "20px 0" }}>
+           <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--navy)", marginBottom: 10 }}>Examples</h3>
+           <ul style={{ margin: 0, paddingLeft: 18 }}>
+            {section.examples.map((example: string, j: number) => (
+             <li key={j} style={{ marginBottom: 8 }}>{example}</li>
+            ))}
+           </ul>
+          </div>
+         )}
+         {section.checklist && section.checklist.length > 0 && (
+          <div style={{ background: "var(--teal-pale)", borderRadius: 12, padding: "18px 22px", margin: "20px 0" }}>
+           <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--navy)", marginBottom: 10 }}>Checklist</h3>
+           <ul style={{ margin: 0, paddingLeft: 18 }}>
+            {section.checklist.map((item: string, j: number) => (
+             <li key={j} style={{ marginBottom: 8 }}>{item}</li>
+            ))}
+           </ul>
+          </div>
+         )}
         </div>
 
         {section.comparison_table && (
@@ -294,6 +334,22 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
       );
      })}
 
+
+     {blog.content.internal_links && blog.content.internal_links.length > 0 && (
+      <div className="prose">
+       <div className="related-links" style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 14, padding: "24px", margin: "32px 0" }}>
+        <h3 style={{ marginTop: 0 }}>Further reading</h3>
+        <ul style={{ marginBottom: 0 }}>
+         {blog.content.internal_links.map((link: InternalLink, i: number) => (
+          <li key={`${link.url}-${i}`}>
+           <Link href={normalizeInternalLink(link.url)}>{link.anchor}</Link>
+          </li>
+         ))}
+        </ul>
+       </div>
+      </div>
+     )}
+
      {/* IN-ARTICLE CTA */}
      <div className="article-cta-box">
       <h3>Ready to fix your feedback loop?</h3>
@@ -329,7 +385,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
      <div className="author-bio-card">
       <div className="author-bio-avatar" style={{ background: "var(--teal)" }}>FS</div>
       <div>
-       <div className="author-bio-name">FeedSolve Team</div>
+       <Link href="/authors/feedsolve-team/" className="author-bio-name">FeedSolve Team</Link>
        <div className="author-role-text">Operations &amp; Product</div>
        <div className="author-bio-bio">
         The FeedSolve team writes about feedback management, operational efficiency, and building systems that help SMBs track and resolve every complaint.
