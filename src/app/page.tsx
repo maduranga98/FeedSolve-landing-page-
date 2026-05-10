@@ -808,7 +808,7 @@ function UseCases() {
        Track supplier quality issues, defects, and production problems in
        one place. Full audit trail included.
       </p>
-      <Link href="#solution">
+      <Link href="/for/manufacturing">
        See how supplier feedback works →
       </Link>
      </div>
@@ -821,7 +821,7 @@ function UseCases() {
        Collect table feedback with QR codes and respond to customers
        quickly. Turn complaints into loyalty.
       </p>
-      <Link href="#solution">
+      <Link href="/for/restaurants-hotels">
        See how table QR feedback works →
       </Link>
      </div>
@@ -834,7 +834,7 @@ function UseCases() {
        Manage delivery complaints, delays, and driver issues with full
        visibility across every route.
       </p>
-      <Link href="#solution">
+      <Link href="/for/logistics">
        See how delivery tracking works →
       </Link>
      </div>
@@ -847,7 +847,7 @@ function UseCases() {
        Handle tenant maintenance requests and track resolution progress.
        No more lost work orders.
       </p>
-      <Link href="#solution">
+      <Link href="/for/real-estate">
        See how tenant tracking works →
       </Link>
      </div>
@@ -1096,7 +1096,7 @@ function Comparison() {
        Assign issues to your team, track every complaint with a unique code,
        and customize your QR code with your brand.
       </p>
-      <Link href="#diff">
+      <Link href="/compare/feedsolve-vs-google-forms">
        See full comparison →
       </Link>
      </div>
@@ -1107,18 +1107,18 @@ function Comparison() {
        Every submitter gets a tracking code. Your team gets a Kanban board.
        Multi-language forms included - no extra setup.
       </p>
-      <Link href="#diff">
+      <Link href="/compare/feedsolve-vs-typeform">
        See full comparison →
       </Link>
      </div>
      <div className="comp-card">
       <h3>FeedSolve vs Zonka Feedback</h3>
       <p>
-       Zonka measures satisfaction scores. FeedSolve measures Resolution Rate - 
+       Zonka measures satisfaction scores. FeedSolve measures Resolution Rate -
        did you actually fix it? Built for SMBs, not enterprise survey teams.
        Branded QR codes. Free to start.
       </p>
-      <Link href="#diff">
+      <Link href="/compare/feedsolve-vs-zonka-feedback">
        See full comparison →
       </Link>
      </div>
@@ -1205,6 +1205,14 @@ const faqs = [
  {
   q: "Can I upgrade later?",
   a: "Yes. Start on the free plan and upgrade anytime as your usage grows. No data lost, no migrations, no downtime.",
+ },
+ {
+  q: "Can I add my company logo and brand colors to the QR code?",
+  a: "Yes. FeedSolve lets you customize your QR codes with your company logo, brand colors, and style. Branded QR codes are available on Growth and Pro plans and help your feedback boards look like a natural part of your business.",
+ },
+ {
+  q: "Can submitters use the feedback form in their own language?",
+  a: "Yes. FeedSolve supports multi-language submission forms so your customers, suppliers, and partners can submit feedback in their preferred language. Request any language and we'll add it — critical for businesses operating across South Asia, the Middle East, or East Africa.",
  },
 ];
 
@@ -1512,36 +1520,11 @@ const faqJsonLd = {
  })),
 };
 
-const softwareAppJsonLd = {
- "@context": "https://schema.org",
- "@type": "SoftwareApplication",
- name: "FeedSolve",
- applicationCategory: "BusinessApplication",
- operatingSystem: "Any",
- offers: {
-  "@type": "Offer",
-  price: "0",
-  priceCurrency: "USD",
- },
- description:
-  "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
- url: "https://feedsolve.com/",
- image: "https://feedsolve.com/feedsolve.webp",
-};
-
 const websiteJsonLd = {
  "@context": "https://schema.org",
  "@type": "WebSite",
  name: "FeedSolve",
  url: "https://feedsolve.com/",
- potentialAction: {
-  "@type": "SearchAction",
-  target: {
-   "@type": "EntryPoint",
-   urlTemplate: "https://feedsolve.com/blog/?q={search_term_string}",
-  },
-  "query-input": "required name=search_term_string",
- },
 };
 
 export default function Home() {
@@ -1568,10 +1551,6 @@ export default function Home() {
    <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-   />
-   <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
    />
    <script
     type="application/ld+json"

@@ -1,7 +1,7 @@
 {
   "name": "FeedSolve",
   "short_name": "FeedSolve",
-  "description": "Collect feedback from customers, suppliers, and partners. Track every issue to resolution with a simple link and QR code.",
+  "description": "Feedback management and complaint resolution software for SMBs. Branded QR codes, multi-language forms, zero-friction submission.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F8F7F4",
