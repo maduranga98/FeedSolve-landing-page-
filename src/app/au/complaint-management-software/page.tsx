@@ -461,25 +461,25 @@ export default function AUComplaintManagementPage() {
               {
                 sector: "Australian Restaurants & Cafes",
                 body: "QR codes on tables give Australian diners a direct feedback channel — before they post to Google or TripAdvisor. Your floor team resolves the issue during service. Resolution rate tracks operational performance.",
-                link: "/au/restaurants/qr-feedback/",
+                link: "/restaurants/qr-feedback/",
                 linkText: "Restaurant feedback Australia →",
               },
               {
                 sector: "Australian Manufacturing",
                 body: "Give suppliers a QR code on delivery dockets to report quality issues. Every defect is tracked with a unique code, assigned to your quality team, and resolved with a documented CAPA note — audit-ready for AS/NZS ISO 9001.",
-                link: "/au/manufacturing/supplier-feedback/",
+                link: "/manufacturing/supplier-feedback/",
                 linkText: "Supplier feedback AU manufacturing →",
               },
               {
                 sector: "Australian Property Management",
                 body: "Tenants submit maintenance requests via QR code in the lobby or welcome letter. Every request is tracked to resolution — with full documentation for VCAT, QCAT, or NCAT tenancy disputes under Residential Tenancies Acts.",
-                link: "/au/real-estate/tenant-feedback/",
+                link: "/real-estate/tenant-feedback/",
                 linkText: "Tenant feedback AU property →",
               },
               {
                 sector: "Australian Logistics & Transport",
                 body: "Recipients and drivers report delivery issues by scanning a code on the consignment note. Every complaint is tracked, assigned to the right operations team, and resolved with a documented response.",
-                link: "/au/logistics/delivery-feedback/",
+                link: "/logistics/delivery-feedback/",
                 linkText: "Delivery complaint tracking AU →",
               },
               {
@@ -801,17 +801,17 @@ export default function AUComplaintManagementPage() {
           >
             {[
               {
-                href: "/au/manufacturing/supplier-feedback/",
+                href: "/manufacturing/supplier-feedback/",
                 label: "AU Manufacturing",
                 sub: "Supplier quality complaints",
               },
               {
-                href: "/au/restaurants/qr-feedback/",
+                href: "/restaurants/qr-feedback/",
                 label: "AU Restaurants & Cafes",
                 sub: "Table-side QR feedback",
               },
               {
-                href: "/au/real-estate/tenant-feedback/",
+                href: "/real-estate/tenant-feedback/",
                 label: "AU Property Management",
                 sub: "Tenant maintenance",
               },

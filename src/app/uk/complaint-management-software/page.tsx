@@ -641,25 +641,25 @@ export default function UKComplaintManagementPage() {
               {
                 sector: "UK Restaurants & Pubs",
                 body: "Place a branded QR code on every table. UK diners submit complaints about food, service, or cleanliness before leaving — giving your team a chance to resolve the issue before a TripAdvisor or Google review is posted.",
-                link: "/uk/restaurants/qr-feedback/",
+                link: "/restaurants/qr-feedback/",
                 linkText: "Restaurant feedback for UK F&B →",
               },
               {
                 sector: "UK Manufacturing & Engineering",
                 body: "Replace WhatsApp supplier complaint threads with a structured QR board. Every supplier defect report gets a tracking code, a CAPA note, and a documented resolution — fully audit-ready for ISO 9001 and IATF 16949.",
-                link: "/uk/manufacturing/supplier-feedback/",
+                link: "/manufacturing/supplier-feedback/",
                 linkText: "Supplier feedback for UK manufacturers →",
               },
               {
                 sector: "UK Property Management",
                 body: "Give tenants a QR code in the lobby or welcome pack. Maintenance requests and complaints are tracked to resolution — with a full audit trail for tenancy dispute resolution under the Housing Act.",
-                link: "/uk/real-estate/tenant-feedback/",
+                link: "/real-estate/tenant-feedback/",
                 linkText: "Tenant feedback for UK landlords →",
               },
               {
                 sector: "UK Logistics & Couriers",
                 body: "Drivers and recipients report delivery issues by scanning a QR code on the consignment note. Every complaint is assigned, tracked, and resolved — with documentation for UK Road Haulage Association (RHA) compliance.",
-                link: "/uk/logistics/delivery-feedback/",
+                link: "/logistics/delivery-feedback/",
                 linkText: "Delivery feedback for UK logistics →",
               },
               {
@@ -1217,22 +1217,22 @@ export default function UKComplaintManagementPage() {
           >
             {[
               {
-                href: "/uk/manufacturing/supplier-feedback/",
+                href: "/manufacturing/supplier-feedback/",
                 label: "UK Manufacturing",
                 sub: "Supplier quality complaints",
               },
               {
-                href: "/uk/restaurants/qr-feedback/",
+                href: "/restaurants/qr-feedback/",
                 label: "UK Restaurants & Pubs",
                 sub: "Table-side QR feedback",
               },
               {
-                href: "/uk/real-estate/tenant-feedback/",
+                href: "/real-estate/tenant-feedback/",
                 label: "UK Property Management",
                 sub: "Tenant maintenance requests",
               },
               {
-                href: "/uk/logistics/delivery-feedback/",
+                href: "/logistics/delivery-feedback/",
                 label: "UK Logistics",
                 sub: "Delivery complaint tracking",
               },
