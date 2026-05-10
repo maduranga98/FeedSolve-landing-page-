@@ -1016,64 +1016,73 @@ function BeforeAfter() {
 const pricingPlans = [
  {
   tier: "Free",
+  subtitle: "Trial",
   price: "$0",
-  period: "7-day trial",
+  period: "7 days, full access",
   popular: false,
   features: [
-   "2 Feedback Boards",
-   "Unlimited Submissions",
-   "1 Team Member",
-   "Basic Analytics",
+   "2 feedback boards, 1 team member",
+   "QR codes & shareable links",
+   "Anonymous submissions",
+   "Multi-language forms",
+   "Tracking codes for submitters",
   ],
   cta: "Try Now",
   ctaClass: "pc-free-btn",
  },
  {
   tier: "Starter",
+  subtitle: "Core workflow",
   price: "$19",
-  period: "Billed monthly",
+  period: "/month",
   popular: false,
   features: [
-   "3 Feedback Boards",
-   "1,500 Submissions / month",
-   "3 Team Members",
-   "Email Notifications",
-   "Basic Analytics",
+   "3 boards · 1,500 submissions/month · 3 team members",
+   "Status tracking & assignment",
+   "Public replies to submitters",
+   "Internal notes & comments",
+   "Email notifications",
+   "File attachments",
+   "3 reply templates",
+   "Basic analytics dashboard",
   ],
   cta: "Try Now",
   ctaClass: "btn-primary",
  },
  {
   tier: "Growth",
+  subtitle: "Automation & branding",
   price: "$49",
-  period: "Billed monthly",
+  period: "/month",
   popular: true,
   features: [
-   "10 Feedback Boards",
-   "5,000 Submissions / month",
-   "10 Team Members",
-   "Custom Branding",
-   "Public Replies to Submitters",
-   "Email Notifications",
-   "Full Analytics",
+   "10 boards · 5,000 submissions/month · 10 team members",
+   "Everything in Starter, plus:",
+   "Custom branding (logo & colors)",
+   "Location-based QR codes",
+   "Recurring cycle resets",
+   "Escalation rules",
+   "Advanced analytics & CSV export",
+   "Advanced filtering & bulk actions",
+   "10 reply & board templates",
+   "Public resolution feed",
   ],
   cta: "Try Now",
   ctaClass: "btn-primary teal",
  },
  {
-  tier: "Pro",
+  tier: "Business",
+  subtitle: "Enterprise controls",
   price: "$79",
-  period: "Billed monthly",
+  period: "/month",
   popular: false,
   features: [
-   "20 Feedback Boards",
-   "15,000 Submissions / month",
-   "Unlimited Team Members",
-   "Custom Branding",
-   "Public Replies to Submitters",
-   "Email Notifications",
-   "Advanced Analytics",
-   "API Access",
+   "20 boards · 15,000 submissions/month · Unlimited team members",
+   "Everything in Growth, plus:",
+   "Custom roles & permissions",
+   "Audit logs",
+   "Unlimited templates",
+   "Priority support",
   ],
   cta: "Try Now",
   ctaClass: "btn-primary",
@@ -1147,14 +1156,19 @@ function Pricing() {
        key={plan.tier}
        className={`pc${plan.popular ? " popular" : ""}`}
       >
-       {plan.popular && <div className="pop-badge">Most Popular</div>}
-       <div className="pc-tier">{plan.tier}</div>
+       {plan.popular && <div className="pop-badge">⭐ Recommended</div>}
+       <div style={{ marginBottom: 8 }}>
+        <div className="pc-tier">{plan.tier}</div>
+        <div style={{ fontSize: 12, fontWeight: 600, color: "var(--teal)", letterSpacing: "0.05em", marginTop: 4 }}>
+         {plan.subtitle}
+        </div>
+       </div>
        <div className="pc-price">
         {plan.price !== "$0" && <sup>$</sup>}
         {plan.price.replace("$", "")}
-        <span> / mo</span>
+        {plan.period === "/month" && <span>/mo</span>}
        </div>
-       <div className="pc-period">{plan.period}</div>
+       {plan.period !== "/month" && <div className="pc-period">{plan.period}</div>}
        <div className="pc-div"></div>
        <div className="pc-feats">
         {plan.features.map((f) => (
