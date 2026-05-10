@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
- title: "FeedSolve Blog - Insights on feedback and operations",
+ title: "Blog — Insights on Feedback & Operations",
  description:
   "Practical guides, case studies, and ideas for teams who take customer feedback seriously.",
  openGraph: {
-  title: "FeedSolve Blog - Insights on feedback and operations",
+  title: "Blog — Insights on Feedback & Operations",
   description:
    "Practical guides, case studies, and ideas for teams who take customer feedback seriously.",
  },
  alternates: {
   canonical: "https://feedsolve.com/blog/",
+  languages: {
+   "en-GB": "https://feedsolve.com/blog/",
+   "en-AU": "https://feedsolve.com/blog/",
+   "en-US": "https://feedsolve.com/blog/",
+   "en": "https://feedsolve.com/blog/",
+   "x-default": "https://feedsolve.com/blog/",
+  },
  },
 };
 

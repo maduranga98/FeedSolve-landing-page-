@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://feedsolve.com/compare/feedsolve-vs-typeform/",
+    languages: {
+      "en-GB": "https://feedsolve.com/compare/feedsolve-vs-typeform/",
+      "en-AU": "https://feedsolve.com/compare/feedsolve-vs-typeform/",
+      "en-US": "https://feedsolve.com/compare/feedsolve-vs-typeform/",
+      en: "https://feedsolve.com/compare/feedsolve-vs-typeform/",
+      "x-default": "https://feedsolve.com/compare/feedsolve-vs-typeform/",
+    },
   },
 };
 

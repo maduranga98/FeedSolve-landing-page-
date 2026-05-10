@@ -7,7 +7,6 @@ import {
   X,
   ArrowRight,
   ChevronRight,
-  ShieldCheck,
   Lock,
   HelpCircle,
   ChevronDown,
@@ -26,6 +25,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
+    languages: {
+      "en-GB": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
+      "en-AU": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
+      "en-US": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
+      en: "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
+      "x-default": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
+    },
   },
 };
 
@@ -300,7 +306,7 @@ export default function VsGoogleForms() {
                 margin: 0,
               }}
             >
-              <strong style={{ color: "white" }}>Choose Google Forms</strong> if
+              When comparing FeedSolve vs Google Forms for complaint tracking, <strong style={{ color: "white" }}>choose Google Forms</strong> if
               you need a free survey tool for internal data collection or
               one-off registrations.{" "}
               <strong style={{ color: "white" }}>Choose FeedSolve</strong> if

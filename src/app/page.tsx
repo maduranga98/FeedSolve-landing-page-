@@ -96,14 +96,14 @@ function Hero() {
       <span className="pulse-dot"></span> Live tracking for every issue
      </div>
      <h1 className="hero-title">
-      Feedback Management Software That Closes Every Issue
+      Feedback Management &amp; Complaint Tracking Software for Small Business
      </h1>
      <p style={{ fontSize: "1.25rem", fontWeight: 500, color: "#444441", marginTop: "0.5rem" }}>
       Stop losing complaints. Start closing them.
      </p>
      <p className="hero-sub">
       Collect feedback from customers, suppliers, and partners. Track
-      every issue to resolution with a simple link and QR code.
+      every issue to resolution with a simple link and QR code. Used by operations teams across the UK, US, Australia, and beyond.
      </p>
      <div className="hero-ctas">
       <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
@@ -131,7 +131,7 @@ function Hero() {
        <div className="notif-sub">#FSV-1089 · 2 min ago</div>
       </div>
      </div>
-     <div className="hero-board">
+     <div className="hero-board" role="img" aria-label="FeedSolve complaint tracking dashboard showing 48 total issues, 41 resolved issues, and 7 open issues">
       <div className="board-topbar">
        <div className="board-dots">
         <span></span>
@@ -189,6 +189,8 @@ function Hero() {
       <div className="float-qr-title">Share &amp; collect</div>
       <svg
        className="qr-svg"
+       role="img"
+       aria-label="FeedSolve QR code for zero-login feedback submission"
        viewBox="0 0 80 80"
        fill="none"
        xmlns="http://www.w3.org/2000/svg"
@@ -884,8 +886,11 @@ function Diff() {
        What Makes FeedSolve Different from Google Forms or Typeform?
       </h2>
       <p>
-       Google Forms and Typeform help you collect feedback.{" "}
+       <Link href="/compare/feedsolve-vs-google-forms/">Google Forms</Link> and <Link href="/compare/feedsolve-vs-typeform/">Typeform</Link> help you collect feedback.{" "}
        <strong>FeedSolve makes sure it gets resolved.</strong>
+      </p>
+      <p>
+       FeedSolve also supports GDPR-aware intake patterns for UK and EU teams: anonymous submission mode, optional contact fields, and a structured audit trail help businesses collect complaint data with less unnecessary personal information.
       </p>
       <div className="diff-list">
        <div className="di">

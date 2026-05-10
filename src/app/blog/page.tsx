@@ -469,7 +469,7 @@ export default function BlogPage() {
     <div className="posts-grid">
      {visiblePosts.map((post, i) => (
       <Link key={i} href={post.href} className="post-card">
-       <div className="post-card-img" style={{ background: post.imgBg }}>
+       <div className="post-card-img" style={{ background: post.imgBg }} role="img" aria-label={`${post.tagLabel} article illustration`}>
         {post.img}
        </div>
        <div className="post-card-body">
