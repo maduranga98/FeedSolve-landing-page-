@@ -13,9 +13,6 @@ export const metadata: Metadata = {
   index: false,
   follow: true,
  },
- alternates: {
-  canonical: "https://feedsolve.com/blog/blog-post/",
- },
 };
 
 export default function BlogPostLayout({
