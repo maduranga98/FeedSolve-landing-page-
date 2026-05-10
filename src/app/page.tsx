@@ -861,7 +861,7 @@ function UseCases() {
       <p>
        Place a clinic feedback QR in reception and capture waiting-room feedback before small issues become public reviews.
       </p>
-      <Link href="/features/branded-qr-codes">
+      <Link href="/blog/healthcare-patient-feedback-system">
        See clinic feedback QR setup →
       </Link>
      </div>
