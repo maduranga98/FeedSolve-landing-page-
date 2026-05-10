@@ -17,19 +17,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const staticPages = [
+    { path: "/", priority: 1, frequency: "weekly" as const },
+    { path: "/blog", priority: 0.8, frequency: "weekly" as const },
+    { path: "/features/branded-qr-codes", priority: 0.7, frequency: "monthly" as const },
+    { path: "/logistics/delivery-feedback", priority: 0.7, frequency: "monthly" as const },
+    { path: "/manufacturing/supplier-feedback", priority: 0.7, frequency: "monthly" as const },
+    { path: "/real-estate/tenant-feedback", priority: 0.7, frequency: "monthly" as const },
+    { path: "/restaurants/qr-feedback", priority: 0.7, frequency: "monthly" as const },
+    { path: "/compare/feedsolve-vs-google-forms", priority: 0.6, frequency: "monthly" as const },
+    { path: "/compare/feedsolve-vs-typeform", priority: 0.6, frequency: "monthly" as const },
+    { path: "/compare/feedsolve-vs-zonka", priority: 0.6, frequency: "monthly" as const },
+  ];
+
   return [
-    {
-      url: absoluteUrl("/"),
+    ...staticPages.map((page) => ({
+      url: absoluteUrl(page.path),
       lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: absoluteUrl("/blog"),
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
+      changeFrequency: page.frequency,
+      priority: page.priority,
+    })),
     ...blogPosts,
   ];
 }
