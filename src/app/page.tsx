@@ -808,7 +808,7 @@ function UseCases() {
        Track supplier quality issues, defects, and production problems in
        one place. Full audit trail included.
       </p>
-      <Link href="/for/manufacturing">
+      <Link href="/manufacturing/supplier-feedback">
        See how supplier feedback works →
       </Link>
      </div>
@@ -821,7 +821,7 @@ function UseCases() {
        Collect table feedback with QR codes and respond to customers
        quickly. Turn complaints into loyalty.
       </p>
-      <Link href="/for/restaurants-hotels">
+      <Link href="/restaurants/qr-feedback">
        See how table QR feedback works →
       </Link>
      </div>
@@ -834,7 +834,7 @@ function UseCases() {
        Manage delivery complaints, delays, and driver issues with full
        visibility across every route.
       </p>
-      <Link href="/for/logistics">
+      <Link href="/logistics/delivery-feedback">
        See how delivery tracking works →
       </Link>
      </div>
@@ -847,7 +847,7 @@ function UseCases() {
        Handle tenant maintenance requests and track resolution progress.
        No more lost work orders.
       </p>
-      <Link href="/for/real-estate">
+      <Link href="/real-estate/tenant-feedback">
        See how tenant tracking works →
       </Link>
      </div>
@@ -1118,7 +1118,7 @@ function Comparison() {
        did you actually fix it? Built for SMBs, not enterprise survey teams.
        Branded QR codes. Free to start.
       </p>
-      <Link href="/compare/feedsolve-vs-zonka-feedback">
+      <Link href="/compare/feedsolve-vs-zonka">
        See full comparison →
       </Link>
      </div>
