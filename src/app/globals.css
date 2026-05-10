@@ -215,6 +215,9 @@ h3 { font-size: 20px; font-weight: 700; }
 /* USE CASES */
 #usecases { background: var(--bg); }
 .uc-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 48px; }
+@media (max-width: 960px) {
+ .uc-grid { grid-template-columns: 1fr; }
+}
 .uc-card { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 32px; transition: transform var(--t), box-shadow var(--t), border-color var(--t); }
 .uc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--teal); }
 .uc-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--teal-pale); color: var(--teal); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
