@@ -32,12 +32,14 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
             href="https://saasbrowser.com/en/saas/1458861/voxwel"
             target="_blank"
             rel="noopener"
+            aria-label="VoxWel on SaaS Browser"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element -- SaaS Browser provides this badge as an external SVG snippet. */}
-            <img
+            <Image
               src="https://static-files.saasbrowser.com/saas-browser-badge-15.svg"
               alt="VoxWel - SaaS discovery platform"
-              width="200"
+              width={200}
+              height={54}
+              unoptimized
             />
           </a>
           <div className="footer-links">
