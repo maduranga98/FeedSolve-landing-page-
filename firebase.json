@@ -56,6 +56,18 @@
         ]
       }
     ],
-    "cleanUrls": true
+    "cleanUrls": true,
+    "redirects": [
+      {
+        "source": "/blog/blog-post",
+        "destination": "/blog/",
+        "type": 301
+      },
+      {
+        "source": "/blog/blog-post/",
+        "destination": "/blog/",
+        "type": 301
+      }
+    ]
   }
 }
