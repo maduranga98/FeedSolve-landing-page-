@@ -338,10 +338,6 @@ footer { background: var(--navy-deep); padding: 48px 32px; }
 .footer-logo { display: flex; align-items: center; gap: 10px; }
 .footer-logo img { height: 28px; filter: brightness(10); }
 .footer-logo-text { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--white); }
-.footer-trust-and-links { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: flex-end; }
-.footer-trust-badge { display: inline-flex; align-items: center; line-height: 0; opacity: 0.88; transition: opacity var(--t), transform var(--t); }
-.footer-trust-badge:hover { opacity: 1; transform: translateY(-1px); }
-.footer-trust-badge img { display: block; width: 200px; max-width: 100%; height: auto; }
 .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
 .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 14px; transition: color var(--t); }
 .footer-links a:hover { color: var(--white); }
@@ -693,7 +689,6 @@ footer { background: var(--navy-deep); padding: 48px 32px; }
  .hero-ctas .btn-primary, .hero-ctas .btn-outline { width: 100%; justify-content: center; }
  .diff-cols { grid-template-columns: 1fr; gap: 24px; }
  .footer-inner { flex-direction: column; align-items: flex-start; }
- .footer-trust-and-links { align-items: flex-start; justify-content: flex-start; flex-direction: column; gap: 20px; }
  .footer-links { gap: 16px; flex-direction: column; }
  .cta-btns { flex-direction: column; }
  .cta-btns .btn-primary { width: 100%; justify-content: center; }
