@@ -810,7 +810,7 @@ function UseCases() {
        Track supplier quality issues, shop floor complaint trends, and production line feedback in
        one place. Full audit trail included.
       </p>
-      <Link href="/manufacturing/supplier-feedback">
+      <Link href="/manufacturing/supplier-feedback/">
        See how supplier feedback works →
       </Link>
      </div>
@@ -823,7 +823,7 @@ function UseCases() {
        Collect table feedback with QR codes and respond to customers
        quickly. Turn complaints into loyalty.
       </p>
-      <Link href="/restaurants/qr-feedback">
+      <Link href="/restaurants/qr-feedback/">
        See how table QR feedback works →
       </Link>
      </div>
@@ -836,7 +836,7 @@ function UseCases() {
        Manage warehouse feedback, delivery complaints, 3PL feedback platform workflows, and driver issues with full
        visibility across every route.
       </p>
-      <Link href="/logistics/delivery-feedback">
+      <Link href="/logistics/delivery-feedback/">
        See how delivery tracking works →
       </Link>
      </div>
@@ -849,7 +849,7 @@ function UseCases() {
        Run a tenant feedback portal for maintenance requests and an HOA complaint form for community issues.
        No more lost work orders.
       </p>
-      <Link href="/real-estate/tenant-feedback">
+      <Link href="/real-estate/tenant-feedback/">
        See how tenant tracking works →
       </Link>
      </div>
@@ -861,7 +861,7 @@ function UseCases() {
       <p>
        Place a clinic feedback QR in reception and capture waiting-room feedback before small issues become public reviews.
       </p>
-      <Link href="/blog/healthcare-patient-feedback-system">
+      <Link href="/blog/healthcare-patient-feedback-system/">
        See clinic feedback QR setup →
       </Link>
      </div>
@@ -875,7 +875,7 @@ function UseCases() {
        Print them on receipts, delivery notes, table tents, or walls.
        Your feedback board looks like yours - not a generic form.
       </p>
-      <Link href="/features/branded-qr-codes">
+      <Link href="/features/branded-qr-codes/">
        Learn about QR code customization →
       </Link>
      </div>
@@ -1122,7 +1122,7 @@ function Comparison() {
        Assign issues to your team, track every complaint with a unique code,
        and customize your QR code with your brand.
       </p>
-      <Link href="/compare/feedsolve-vs-google-forms">
+      <Link href="/compare/feedsolve-vs-google-forms/">
        See full comparison →
       </Link>
      </div>
@@ -1133,7 +1133,7 @@ function Comparison() {
        Every submitter gets a tracking code. Your team gets a Kanban board.
        Multi-language forms included - no extra setup.
       </p>
-      <Link href="/compare/feedsolve-vs-typeform">
+      <Link href="/compare/feedsolve-vs-typeform/">
        See full comparison →
       </Link>
      </div>
@@ -1144,7 +1144,7 @@ function Comparison() {
        did you actually fix it? Built for SMBs, not enterprise survey teams.
        Branded QR codes. Free to start.
       </p>
-      <Link href="/compare/feedsolve-vs-zonka">
+      <Link href="/compare/feedsolve-vs-zonka/">
        See full comparison →
       </Link>
      </div>
