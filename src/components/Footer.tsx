@@ -33,13 +33,16 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           <a href="mailto:hello@feedsolve.com">Contact</a>
           <a href="/privacy/">Privacy Policy</a>
           <a href="/terms/">Terms</a>
+          <a href="https://www.linkedin.com/company/feedsolve/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
         </div>
       </div>
       <div className="footer-copy">
         © 2026 FeedSolve. All rights reserved. &nbsp;·&nbsp; A product of{" "}
-        <strong style={{ color: "rgba(255,255,255,0.45)", fontWeight: 600 }}>
+        <a className="footer-company-link" href="https://www.lumoraventures.com/" target="_blank" rel="noopener noreferrer">
           Lumora Ventures Pvt. Ltd.
-        </strong>
+        </a>
       </div>
     </footer>
   );
