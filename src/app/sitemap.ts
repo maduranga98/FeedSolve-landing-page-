@@ -30,6 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { path: "/", priority: 1, frequency: "weekly" as const },
     { path: "/blog", priority: 0.8, frequency: "weekly" as const },
+    { path: "/privacy", priority: 0.4, frequency: "yearly" as const },
+    { path: "/terms", priority: 0.4, frequency: "yearly" as const },
     { path: "/authors/feedsolve-team", priority: 0.5, frequency: "monthly" as const },
     { path: "/uk/complaint-management-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/au/complaint-management-software", priority: 0.8, frequency: "monthly" as const },
