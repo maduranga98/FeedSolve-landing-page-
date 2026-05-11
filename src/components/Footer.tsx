@@ -26,16 +26,31 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           <Image src={resolvedLogo} alt="FeedSolve" width={28} height={28} />
           <span className="footer-logo-text">FeedSolve</span>
         </div>
-        <div className="footer-links">
-          <LinkComponent {...linkProps(productHref)}>Product</LinkComponent>
-          <LinkComponent {...linkProps(pricingHref)}>Pricing</LinkComponent>
-          {variant === "blog" && <Link href="/blog/">Blog</Link>}
-          <a href="mailto:hello@feedsolve.com">Contact</a>
-          <a href="/privacy/">Privacy Policy</a>
-          <a href="/terms/">Terms</a>
-          <a href="https://www.linkedin.com/company/feedsolve/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
+        <div className="footer-trust-and-links">
+          <a
+            className="footer-trust-badge"
+            href="https://saasbrowser.com/en/saas/1458861/voxwel"
+            target="_blank"
+            rel="noopener"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element -- SaaS Browser provides this badge as an external SVG snippet. */}
+            <img
+              src="https://static-files.saasbrowser.com/saas-browser-badge-15.svg"
+              alt="VoxWel - SaaS discovery platform"
+              width="200"
+            />
           </a>
+          <div className="footer-links">
+            <LinkComponent {...linkProps(productHref)}>Product</LinkComponent>
+            <LinkComponent {...linkProps(pricingHref)}>Pricing</LinkComponent>
+            {variant === "blog" && <Link href="/blog/">Blog</Link>}
+            <a href="mailto:hello@feedsolve.com">Contact</a>
+            <a href="/privacy/">Privacy Policy</a>
+            <a href="/terms/">Terms</a>
+            <a href="https://www.linkedin.com/company/feedsolve/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
       <div className="footer-copy">
