@@ -9,15 +9,9 @@ export const metadata: Metadata = {
   description:
    "Practical guides, case studies, and ideas for teams who take customer feedback seriously.",
  },
- alternates: {
-  canonical: "https://feedsolve.com/blog/",
-  languages: {
-   "en-GB": "https://feedsolve.com/blog/",
-   "en-AU": "https://feedsolve.com/blog/",
-   "en-US": "https://feedsolve.com/blog/",
-   "en": "https://feedsolve.com/blog/",
-   "x-default": "https://feedsolve.com/blog/",
-  },
+ robots: {
+  index: true,
+  follow: true,
  },
 };
 
