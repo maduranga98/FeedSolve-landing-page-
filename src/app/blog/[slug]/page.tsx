@@ -32,11 +32,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
    siteName: "FeedSolve",
    locale: "en_US",
    type: "article",
+   images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
    card: "summary_large_image",
    title: blog.meta.title,
    description: blog.meta.meta_description,
+   images: [`${SITE_URL}/og-image.png`],
   },
   robots: {
    index: true,
