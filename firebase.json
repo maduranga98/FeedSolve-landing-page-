@@ -56,7 +56,6 @@
         ]
       }
     ],
-    "cleanUrls": true,
     "redirects": [
       {
         "source": "/blog/blog-post",
@@ -66,16 +65,6 @@
       {
         "source": "/blog/blog-post/",
         "destination": "/blog/",
-        "type": 301
-      },
-      {
-        "source": "/blog/qr-code-feedback-system",
-        "destination": "/blog/qr-code-feedback-system/",
-        "type": 301
-      },
-      {
-        "source": "/blog/digital-suggestion-box-small-business",
-        "destination": "/blog/digital-suggestion-box-small-business/",
         "type": 301
       }
     ]

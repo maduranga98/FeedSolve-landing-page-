@@ -90,16 +90,42 @@ const softwareApplicationJsonLd = {
  "@context": "https://schema.org",
  "@type": "SoftwareApplication",
  name: "FeedSolve",
+ alternateName: "FeedSolve Feedback & Complaint Management",
  applicationCategory: "BusinessApplication",
+ applicationSubCategory: "CustomerFeedbackSoftware",
  operatingSystem: "Web",
  description:
   "FeedSolve is feedback management and complaint resolution software for SMBs. Collect feedback via branded QR codes or shareable links - no login needed for submitters. Assign issues to your team, resolve every submission, and let submitters track progress with a unique tracking code. Supports multi-language submission forms.",
  url: "https://feedsolve.com/",
+ image: "https://feedsolve.com/feedsolve.webp",
+ screenshot: "https://feedsolve.com/feedsolve.webp",
+ inLanguage: ["en", "en-GB", "en-AU", "en-US"],
+ keywords:
+  "feedback management software, complaint management software, QR code feedback, supplier feedback, tenant feedback, GDPR feedback management, customer complaint tracking, SMB feedback platform",
+ featureList: [
+  "Branded QR code feedback collection",
+  "No-login submission for customers and suppliers",
+  "Unique tracking code for every submission",
+  "Kanban-style complaint resolution workflow",
+  "Multi-language submission forms",
+  "Team assignment and resolution audit trail",
+  "GDPR-aware data handling for EU teams",
+ ],
+ audience: {
+  "@type": "BusinessAudience",
+  audienceType:
+   "Small and mid-sized businesses in restaurants, manufacturing, logistics, real estate, and retail",
+ },
+ provider: {
+  "@type": "Organization",
+  name: "FeedSolve",
+  url: "https://feedsolve.com/",
+ },
  offers: [
-  { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-  { "@type": "Offer", name: "Starter", price: "19", priceCurrency: "USD", billingPeriod: "P1M" },
-  { "@type": "Offer", name: "Growth", price: "49", priceCurrency: "USD", billingPeriod: "P1M" },
-  { "@type": "Offer", name: "Pro", price: "79", priceCurrency: "USD", billingPeriod: "P1M" },
+  { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
+  { "@type": "Offer", name: "Starter", price: "19", priceCurrency: "USD", billingPeriod: "P1M", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
+  { "@type": "Offer", name: "Growth", price: "49", priceCurrency: "USD", billingPeriod: "P1M", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
+  { "@type": "Offer", name: "Pro", price: "79", priceCurrency: "USD", billingPeriod: "P1M", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
  ],
 };
 
