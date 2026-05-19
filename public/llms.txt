@@ -1,0 +1,61 @@
+# FeedSolve
+
+> FeedSolve is feedback management and complaint tracking software for small and mid-sized businesses (SMBs). Teams collect feedback from customers and suppliers via branded QR codes or shareable links - no login required for submitters - then assign, track, and resolve every submission. Submitters track progress with a unique tracking code. Multi-language submission forms are supported out of the box.
+
+## What FeedSolve does
+
+- **Branded QR code collection**: Generate QR codes for tables, products, deliveries, properties, or supplier portals. Submitters scan and submit without creating an account.
+- **Complaint and feedback tracking**: A 5-stage Kanban-style workflow (Received → Triaged → In Progress → Resolved → Closed) with full assignment and audit history.
+- **Tracking codes for submitters**: Every submission generates a unique code so the customer or supplier can check status without an account.
+- **Multi-language forms**: Submission forms render in the submitter's language; staff work in their own language.
+- **Team assignment and SLAs**: Route issues by category, owner, or location. Resolution metrics surface bottlenecks.
+- **Free to start**: No credit card required for the free tier.
+
+## Who it's for
+
+- Restaurants and hospitality (guest feedback, complaint resolution before public reviews)
+- Manufacturing (supplier and distributor feedback)
+- Logistics and delivery (driver, recipient, and route feedback)
+- Real estate and property management (tenant maintenance requests)
+- Retail and SMBs replacing WhatsApp threads or spreadsheets
+
+## Pricing
+
+- Free: $0
+- Starter: $19 / month
+- Growth: $49 / month
+- Pro: $79 / month
+
+All paid tiers are monthly; no annual lock-in is required.
+
+## Key pages
+
+- [Homepage](https://feedsolve.com/): product overview, pricing, FAQ
+- [Features](https://feedsolve.com/features/): full feature breakdown
+- [Restaurants — QR feedback](https://feedsolve.com/restaurants/qr-feedback/)
+- [Manufacturing — supplier feedback](https://feedsolve.com/manufacturing/supplier-feedback/)
+- [Logistics — delivery feedback](https://feedsolve.com/logistics/delivery-feedback/)
+- [Real estate — tenant feedback](https://feedsolve.com/real-estate/tenant-feedback/)
+- [UK — complaint management software](https://feedsolve.com/uk/complaint-management-software/)
+- [AU — complaint management software](https://feedsolve.com/au/complaint-management-software/)
+- [EU — GDPR feedback management](https://feedsolve.com/eu/gdpr-feedback-management/)
+- [US](https://feedsolve.com/us/)
+- [Compare FeedSolve](https://feedsolve.com/compare/)
+- [Blog](https://feedsolve.com/blog/)
+- [Privacy](https://feedsolve.com/privacy/)
+- [Terms](https://feedsolve.com/terms/)
+
+## Common questions
+
+**Do submitters need to create an account?** No. Submitters scan a QR code or open a link, fill the form, and receive a tracking code. Only your team needs accounts.
+
+**Is FeedSolve GDPR-ready?** Yes. The EU offering is built around GDPR data handling, including data residency considerations and submitter rights.
+
+**What languages are supported?** Submission forms support multiple languages so the submitter can use their own language while staff respond in theirs.
+
+**Is there a free tier?** Yes, a free tier with no credit card required.
+
+## Contact
+
+- Email: hello@feedsolve.com
+- Website: https://feedsolve.com/
