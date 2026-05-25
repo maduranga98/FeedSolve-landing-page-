@@ -38,6 +38,28 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           </a>
         </div>
       </div>
+      <div className="footer-badges">
+        <a
+          href="https://saasbrowser.com/en/saas/1518652/feedsolve"
+          target="_blank"
+          rel="noopener"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://static-files.saasbrowser.com/saas-browser-badge-16.svg"
+            alt="FeedSolve - SaaS search engine"
+            width={200}
+            height={54}
+          />
+        </a>
+      </div>
+      <div className="footer-built-by">
+        Built by the team at{" "}
+        <a className="footer-company-link" href="https://www.lumoraventures.com/" target="_blank" rel="noopener noreferrer">
+          Lumora Ventures
+        </a>{" "}
+        — software builders with hands-on experience in SMB operations across South Asia and the UK.
+      </div>
       <div className="footer-copy">
         © 2026 FeedSolve. All rights reserved. &nbsp;·&nbsp; A product of{" "}
         <a className="footer-company-link" href="https://www.lumoraventures.com/" target="_blank" rel="noopener noreferrer">
