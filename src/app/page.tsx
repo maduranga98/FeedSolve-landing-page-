@@ -103,7 +103,10 @@ function Hero() {
      </p>
      <p className="hero-sub">
       Collect feedback from customers, suppliers, and partners with a QR code feedback board. Track
-      every issue from complaint-to-resolution with a simple link, a resolution rate dashboard, and a public track your complaint page. Used by operations teams across the UK, US, Australia, and beyond.
+      every issue from complaint-to-resolution with a simple link, a resolution rate dashboard, and a public track your complaint page. Used by operations teams across the{" "}
+      <Link href="/uk/complaint-management-software/">UK</Link>,{" "}
+      <Link href="/us/complaint-management-software/">US</Link>,{" "}
+      <Link href="/au/complaint-management-software/">Australia</Link>, and beyond.
      </p>
      <div className="hero-ctas">
       <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
@@ -1123,7 +1126,7 @@ function Comparison() {
        and customize your QR code with your brand.
       </p>
       <Link href="/compare/feedsolve-vs-google-forms/">
-       See full comparison →
+       FeedSolve vs Google Forms: full comparison →
       </Link>
      </div>
      <div className="comp-card">
@@ -1134,7 +1137,7 @@ function Comparison() {
        Multi-language forms included - no extra setup.
       </p>
       <Link href="/compare/feedsolve-vs-typeform/">
-       See full comparison →
+       Why SMBs choose FeedSolve over Typeform →
       </Link>
      </div>
      <div className="comp-card">
@@ -1145,7 +1148,7 @@ function Comparison() {
        Branded QR codes. Free to start.
       </p>
       <Link href="/compare/feedsolve-vs-zonka/">
-       See full comparison →
+       FeedSolve vs Zonka Feedback: full comparison →
       </Link>
      </div>
     </div>

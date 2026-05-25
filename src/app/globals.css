@@ -341,6 +341,10 @@ footer { background: var(--navy-deep); padding: 48px 32px; }
 .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
 .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 14px; transition: color var(--t); }
 .footer-links a:hover { color: var(--white); }
+.footer-badges { max-width: 1200px; margin: 0 auto 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer-badges img { display: block; opacity: 0.85; transition: opacity var(--t); }
+.footer-badges a:hover img { opacity: 1; }
+.footer-built-by { max-width: 1200px; margin: 0 auto 14px; font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.4); }
 .footer-copy { max-width: 1200px; margin: 0 auto; font-size: 13px; color: rgba(255,255,255,0.25); }
 .footer-company-link { color: rgba(255,255,255,0.45); font-weight: 600; text-decoration: none; transition: color var(--t); }
 .footer-company-link:hover { color: var(--white); }

@@ -30,7 +30,7 @@ const SITE_URL = "https://feedsolve.com";
 export const metadata: Metadata = {
  metadataBase: new URL(SITE_URL),
  title: {
-  default: "FeedSolve - Feedback Management & Complaint Tracking Software for SMBs",
+  default: "Complaint Tracking & Feedback Software for SMBs | FeedSolve",
   template: "%s | FeedSolve",
  },
  description:
