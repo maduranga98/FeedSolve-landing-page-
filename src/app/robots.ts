@@ -35,7 +35,7 @@ const AI_CRAWLERS = [
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: ["/blog/blog-post/"] },
+      { userAgent: "*", allow: "/" },
       ...AI_CRAWLERS.map((ua) => ({ userAgent: ua, allow: "/" })),
     ],
     sitemap: "https://feedsolve.com/sitemap.xml",

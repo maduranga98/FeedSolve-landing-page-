@@ -99,11 +99,11 @@
         },
         {
           "anchor": "QR feedback board for manufacturers",
-          "url": "/blog/qr-feedback-board-manufacturing"
+          "url": "/blog/qr-code-feedback-board"
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "Do not use 'close the feedback loop' as a headline .  it is over-used by Canny, Medallia, and SurveyMonkey. FeedSolve's angle is operational accountability, not customer sentiment. Tone should be direct and practical .  imagine a factory operations manager reading this on a phone between shifts.",
@@ -216,11 +216,11 @@
         },
         {
           "anchor": "QR feedback for restaurants",
-          "url": "/blog/qr-feedback-restaurants"
+          "url": "/blog/restaurant-feedback-qr-code"
         },
         {
           "anchor": "create your first feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "Avoid the phrase 'digital transformation' .  it reads as enterprise fluff to an SMB operations manager. Keep tone practical. Include a short visual description of what the QR code + form + tracking page flow looks like even if no actual image is placed .  describe it so the reader can picture it.",
@@ -339,7 +339,7 @@
         },
         {
           "anchor": "start your free board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This is a buying-intent post .  don't be shy about naming FeedSolve as the solution from H2 onwards. Reference the competitor comparison table to show why lightweight tools are better than QMS or help desks for this use case. Avoid 'digital transformation' and 'enterprise-grade.' Use concrete numbers (employee count, price point, setup time) to ground the SMB framing.",
@@ -458,7 +458,7 @@
         },
         {
           "anchor": "FeedSolve for restaurants",
-          "url": "/solutions/restaurants"
+          "url": "/restaurants/qr-feedback"
         }
       ],
       "writer_notes": "Lead with the emotional angle .  a complaint that gets resolved is an opportunity, not a crisis. The Google Review angle is strong click-bait for this audience. Do not position this as a replacement for Google Reviews .  frame it as a first-pass filter that gives the restaurant a chance to respond. Include a vivid example scenario (table 12, 8:45 PM) to make the workflow tangible.",
@@ -573,11 +573,11 @@
         },
         {
           "anchor": "how tracking codes work",
-          "url": "/features/tracking"
+          "url": "/blog/track-every-issue"
         },
         {
           "anchor": "free plan for small businesses",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "The physical suggestion box metaphor is your strongest hook .  lean into it hard in the intro. This is a TOFU post so the CTA should be soft: 'try a free board' rather than 'buy now.' Avoid enterprise language entirely. Use 'your team,' 'your business,' 'your customers' .  not 'stakeholders' or 'end-users.'",
@@ -699,7 +699,7 @@
         },
         {
           "anchor": "create a free property feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "Use concrete scenario writing .  the 'Unit 14B, #FSV-7734' example makes the workflow tangible. This post has high buying intent so the CTA should appear at least twice .  once mid-article and once at the close. Keep the competitor comparison fair and factual .  don't bash AppFolio; position FeedSolve as purpose-built for complaint resolution specifically.",
@@ -812,11 +812,11 @@
         },
         {
           "anchor": "how tracking codes work",
-          "url": "/features/tracking"
+          "url": "/blog/track-every-issue"
         },
         {
           "anchor": "FeedSolve free plan",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is an educational, empathy-led post .  the reader is frustrated with low response rates and looking for validation that login requirements are the problem. Use strong before/after framing. The courier/parcel tracking analogy is your strongest trust-builder for the no-login mechanics .  lean on it.",
@@ -940,7 +940,7 @@
         },
         {
           "anchor": "FeedSolve dashboard overview",
-          "url": "/features/dashboard"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the most process-heavy post in the set .  it should read like a practical operations guide, not a marketing piece. Use numbered lists liberally. The five-stage Kanban model should be described clearly enough that a reader could implement it in a spreadsheet if they wanted to .  then the CTA shows them FeedSolve does it automatically. Avoid 'enterprise' framing entirely.",
@@ -1130,7 +1130,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "Keep tone fair and factual .  this is a comparison page, not a hit piece. Acknowledge Typeform's genuine strengths (conversational forms, conditional logic, NPS templates). The comparison table is the anchor of this post .  make sure it renders cleanly. End with the 'Both if' use case recommendation to avoid appearing one-sided, which increases trust.",
@@ -1248,7 +1248,7 @@
         },
         {
           "anchor": "start a free distributor feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the most commercially specific post in the set .  target language is 'FMCG,' 'logistics,' '3PL,' 'channel partner.' Avoid using 'end user' or 'consumer' when you mean 'distributor' .  the B2B channel framing is the whole point. The resolution rate as a trust-building metric for distributor relationships is a strong and underused angle .  expand on it in the measurement section.",
@@ -1382,7 +1382,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is FeedSolve's category ownership post for 'close the feedback loop' .  a term used by Canny, Medallia, and SurveyMonkey but never tied to operational resolution. FeedSolve's angle is the 4-stage operational workflow, not customer sentiment. Tone should be authoritative and process-driven. Include the 95%/5% stat prominently .  it is the strongest hook in the competitive analysis.",
@@ -1519,7 +1519,7 @@
         },
         {
           "anchor": "create your first feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This is FeedSolve's flagship QR code post .  it must own the 'QR code feedback system' keyword against all competitors. Avoid 'digital transformation' language; keep tone practical. The 2-minute setup claim must be substantiated with the actual step-by-step. Include the Southeast Asia/Middle East QR familiarity stat if sourced.",
@@ -1656,7 +1656,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is a direct comparison page .  keep tone fair and factual. Acknowledge Zendesk's genuine strengths for enterprise use cases, then position FeedSolve as the purpose-built alternative for SMBs that need resolution, not tickets. The 'under 2 minutes' claim and flat pricing are the strongest differentiators.",
@@ -1791,7 +1791,7 @@
         },
         {
           "anchor": "FeedSolve dashboard",
-          "url": "/features/dashboard"
+          "url": "/"
         }
       ],
       "writer_notes": "This post owns the 'track every issue' keyword cluster .  it must feel authoritative and absolute. The three-layer architecture (intake, routing, audit) is the core framework. Substantiate the 100% claim with the failsafe mechanics. Tone should be reassuring to operations managers who have been burned by lost complaints before.",
@@ -1914,7 +1914,7 @@
         },
         {
           "anchor": "start a free partner feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This post targets the 'partner complaint tracking' and 'channel partner feedback' keywords .  low search volume but high B2B deal value. Use concrete scenario writing (Unit 14B, #FSV-7734 style examples adapted for B2B). The resolution rate as a trust-building metric for partner relationships is a strong and underused angle. Avoid 'end user' or 'consumer' language .  the B2B channel framing is the whole point.",
@@ -2038,7 +2038,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the homepage primary keyword post - it must rank for 'customer feedback management small business.' Lead with the 4-component framework prominently. The vertical examples section is critical for topical authority. Avoid enterprise language entirely. CTA should appear at least twice - once after the component framework and once at the close.",
@@ -2212,7 +2212,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is a high-commercial-intent post. The comparison table is the anchor - make it clean and factual. Acknowledge Google Forms and Typeform honestly (they do have zero-login submission) but show exactly where they fail (no resolution workflow, no tracking codes). End with a strong CTA: 'See FeedSolve's pricing - free to start, no per-seat fees.'",
@@ -2358,7 +2358,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the dual-positioning post - the most strategically important in the new set. It must clearly establish FeedSolve as both an external customer feedback tool AND an internal employee problem reporting tool. Lead with the emotional insight ('your employees have problems too') before explaining the mechanic. The 'one dashboard, two audiences' message is the commercial hook. Include at least 5 vertical examples. The FAQ answering 'Will my manager see who submitted?' is the trust-critical question - answer it directly and honestly.",
@@ -2479,7 +2479,7 @@
         },
         {
           "anchor": "FeedSolve free plan",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is a deeper companion post to Blog 7 (no-login-feedback-form) - it targets a slightly different keyword variant and focuses more on the UX psychology and conversion rate angle. Lean into the courier/parcel tracking analogy as the trust-builder. The passive touchpoint angle (QR codes on physical surfaces) ties it back to FeedSolve's physical-world positioning. Keep tone empathetic - the reader is frustrated by low response rates and wants validation before they change tools.",
@@ -2602,7 +2602,7 @@
         },
         {
           "anchor": "FeedSolve free plan",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the highest-traffic BOFU post in the new set. The 'Google Forms collects, then what?' hook is strong - use it as the section title and the conversational thread throughout. The side-by-side supplier scenario is the most important section - make it vivid and specific. Keep the Google Forms comparison fair (acknowledge it is genuinely good for surveys and registrations) to build trust. End with a direct CTA: 'Try FeedSolve free - no credit card, setup in under 2 minutes.'",
@@ -2738,7 +2738,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the healthcare vertical post. Keep language accessible - the reader is a clinic owner or practice manager, not a healthcare IT professional. Emphasise the privacy-friendly design (optional contact fields, anonymous mode, no clinical data stored) early and clearly. The three-board setup (patient, supplier, staff) is the commercial hook - it shows FeedSolve as a complete operational feedback platform for clinics, not just a patient complaints form. Include the multi-language point prominently since South Asia and Middle East are primary target geographies for FeedSolve."
@@ -2855,7 +2855,7 @@
         },
         {
           "anchor": "start capturing complaints before they go public",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the highest-volume keyword in this cluster — 'how to reduce negative online reviews' gets searched by thousands of business owners every month. The emotional hook (your reviews are costing you customers) is strong. Lead with the interception angle — not just how to respond to reviews you already have, but how to prevent the ones that haven't been posted yet. The service recovery paradox should be named and explained. Do not use the phrase 'online reputation management' — it signals enterprise/agency content. Keep it operational and concrete.",
@@ -2981,7 +2981,7 @@
         },
         {
           "anchor": "create a free guest feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the hospitality vertical post. Use concrete in-room scenarios throughout. The 'complaint submitted at 11 PM, resolved by 7 AM' timeline is the most compelling operational story in hospitality — feature it prominently. The TripAdvisor and Booking.com references are important for this audience — they live and die by review scores. Do not use 'guest experience' as a section header — it reads as corporate hospitality-speak. Keep the tone direct and operations-focused.",
@@ -3180,7 +3180,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "Follow the same tone as the Typeform comparison post — fair, factual, and acknowledging of SurveyMonkey's genuine strengths. SurveyMonkey's weaknesses for complaint management are structural, not incidental — the platform was built for research, not resolution. The comparison table is the anchor. The 'Both if' recommendation builds trust and avoids appearing one-sided. Avoid the phrase 'industry-leading' when referencing SurveyMonkey.",
@@ -3374,7 +3374,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This comparison targets the Freshdesk alternative keyword. Keep tone fair — Freshdesk is genuinely strong for its intended use case (email-based support). The core argument is not that Freshdesk is bad but that it was designed for a different use case. The submitter model difference (email required vs zero-login QR) is the clearest differentiator — anchor the post here. Include the comparison table as the central asset.",
@@ -3498,7 +3498,7 @@
         },
         {
           "anchor": "create a free retail feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the retail vertical post. The mislabelled garment scenario connecting a customer complaint to a supplier quality issue is strong — it shows the value of both boards in one narrative. Avoid 'omnichannel' — retail operations managers recognise it as buzzword language. Use concrete scenarios with specific complaint categories. The multi-location resolution rate comparison is the strongest commercial angle for chain store operators.",
@@ -3632,7 +3632,7 @@
         },
         {
           "anchor": "FeedSolve free plan",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the highest search-volume informational post in the set — 'how to respond to customer complaints' gets substantial monthly search volume globally. The tone should be practical and instructional, not theoretical. Real operational managers reading this want a process they can implement on Monday morning. Avoid customer experience jargon entirely. The four-step framework (Acknowledge, Investigate, Resolve, Confirm) is the article's spine — each step gets its own section. The false resolution problem (marking something resolved when the customer does not agree) is an underexplored angle worth developing.",
@@ -3756,7 +3756,7 @@
         },
         {
           "anchor": "FeedSolve pricing",
-          "url": "/pricing"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the dedicated anonymous employee feedback post. The sanitisation log scenario is highly specific and uncomfortable — keep it. Real operational managers have experienced or are experiencing exactly this kind of silent compliance failure. The key differentiation from the employee problem reporting tool post (Blog 18) is that this post is entirely focused on the anonymity mechanism — the psychology of why anonymity matters and what genuine technical anonymity requires. Do not use the phrase 'psychological safety' as a section header — it reads as HR consulting language. Use it in the body but not as a heading.",
@@ -3879,7 +3879,7 @@
         },
         {
           "anchor": "start a free project feedback board",
-          "url": "/signup"
+          "url": "/"
         }
       ],
       "writer_notes": "This is the construction vertical post — an untapped audience for FeedSolve with strong commercial intent. The retention dispute and defect liability period angles are the strongest commercial hooks — every contractor has experienced a retention dispute caused by inadequate defect documentation. Use the £87,000 retention example with concrete numbers. The DLP section is the most differentiated angle in this vertical — no competitor targets it specifically. Avoid 'construction management software' framing — the reader is not looking for a full project management platform, just structured defect tracking.",
