@@ -31,7 +31,7 @@ export default function Navbar({ variant = "home", logoSrc }: NavbarProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const resolvedLogo = logoSrc ?? (variant === "blog" ? "/feedsolve.webp" : "/logo.webp");
+  const resolvedLogo = logoSrc ?? "/logo.webp";
   const navClass = variant === "home" ? (scrolled ? "scrolled" : "") : "scrolled";
 
   const productHref = variant === "blog" ? "/#solution" : "#solution";

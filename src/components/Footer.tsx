@@ -9,8 +9,7 @@ interface FooterProps {
 }
 
 export default function Footer({ variant = "home", logoSrc }: FooterProps) {
-  const resolvedLogo =
-    logoSrc ?? (variant === "blog" ? "/feedsolve.webp" : "/logo.webp");
+  const resolvedLogo = logoSrc ?? "/logo.webp";
 
   const productHref = variant === "blog" ? "/#solution" : "#solution";
   const pricingHref = variant === "blog" ? "/#pricing" : "#pricing";
