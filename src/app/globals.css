@@ -78,6 +78,8 @@ h3 { font-size: 20px; font-weight: 700; }
 .hero-title { color: var(--navy); margin-bottom: 24px; }
 .hero-title .accent { color: var(--teal); position: relative; }
 .hero-sub { font-size: 19px; color: var(--text-mid); line-height: 1.65; margin-bottom: 36px; max-width: 460px; }
+.hero-sub a { color: var(--teal); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(58,143,165,0.35); transition: border-color 0.15s, color 0.15s; }
+.hero-sub a:hover { color: var(--navy); border-bottom-color: var(--navy); }
 .hero-ctas { display: flex; gap: 14px; align-items: center; margin-bottom: 24px; flex-wrap: wrap; }
 .hero-ctas .btn-primary { font-size: 16px; padding: 14px 28px; }
 .hero-ctas .btn-outline { font-size: 16px; padding: 13px 24px; }

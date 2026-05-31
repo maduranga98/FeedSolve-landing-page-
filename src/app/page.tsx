@@ -102,15 +102,14 @@ function Hero() {
       Stop losing complaints. Start closing them.
      </p>
      <p className="hero-sub">
-      Collect feedback from customers, suppliers, and partners with a QR code feedback board. Track
-      every issue from complaint-to-resolution with a simple link, a resolution rate dashboard, and a public track your complaint page. It works as{" "}
+      Collect feedback with a QR code, then assign, track, and resolve every issue from one dashboard. It works as{" "}
       <Link href="/complaint-management-software/">complaint management software</Link>{" "}
       and a{" "}
       <Link href="/digital-suggestion-box-software/">digital suggestion box</Link>{" "}
-      in one, used by operations teams across the{" "}
+      in one - used by teams in the{" "}
       <Link href="/uk/complaint-management-software/">UK</Link>,{" "}
-      <Link href="/us/complaint-management-software/">US</Link>,{" "}
-      <Link href="/au/complaint-management-software/">Australia</Link>, and beyond.
+      <Link href="/us/complaint-management-software/">US</Link>, and{" "}
+      <Link href="/au/complaint-management-software/">Australia</Link>.
      </p>
      <div className="hero-ctas">
       <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
@@ -120,8 +119,8 @@ function Hero() {
        See How It Works <Play size={16} />
       </a>
      </div>
-     <p style={{ fontSize: "0.875rem", color: "#6B7B8D", maxWidth: "42rem", textAlign: "center", marginTop: "1rem", lineHeight: 1.625 }}>
-      FeedSolve is feedback management and complaint resolution software for small and mid-sized businesses. Share a branded QR code or link - anyone submits feedback with no login and no sign-up - and your team resolves every issue through an issue resolution board. Available in multiple languages. Every submitter gets a tracking code.
+     <p style={{ fontSize: "0.875rem", color: "#6B7B8D", maxWidth: "42rem", marginTop: "1rem", lineHeight: 1.625 }}>
+      Feedback management and complaint resolution software for SMBs - no login, multi-language, with a tracking code for every submitter.
      </p>
      <div className="hero-trust">
       <ShieldCheck size={14} /> No credit card required · No sign-up for submitters · Setup in under 2
