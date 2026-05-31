@@ -104,6 +104,10 @@
     {
      "anchor": "FeedSolve pricing",
      "url": "/"
+    },
+    {
+     "anchor": "complaint management software",
+     "url": "/complaint-management-software"
     }
    ],
    "writer_notes": "Do not use 'close the feedback loop' as a headline .  it is over-used by Canny, Medallia, and SurveyMonkey. FeedSolve's angle is operational accountability, not customer sentiment. Tone should be direct and practical .  imagine a factory operations manager reading this on a phone between shifts.",
@@ -945,6 +949,10 @@
     {
      "anchor": "FeedSolve dashboard overview",
      "url": "/"
+    },
+    {
+     "anchor": "complaint management software",
+     "url": "/complaint-management-software"
     }
    ],
    "writer_notes": "This is the most process-heavy post in the set .  it should read like a practical operations guide, not a marketing piece. Use numbered lists liberally. The five-stage Kanban model should be described clearly enough that a reader could implement it in a spreadsheet if they wanted to .  then the CTA shows them FeedSolve does it automatically. Avoid 'enterprise' framing entirely.",
@@ -1661,6 +1669,10 @@
     {
      "anchor": "FeedSolve pricing",
      "url": "/"
+    },
+    {
+     "anchor": "complaint management software",
+     "url": "/complaint-management-software"
     }
    ],
    "writer_notes": "This is a direct comparison page .  keep tone fair and factual. Acknowledge Zendesk's genuine strengths for enterprise use cases, then position FeedSolve as the purpose-built alternative for SMBs that need resolution, not tickets. The 'under 2 minutes' claim and flat pricing are the strongest differentiators.",
@@ -1796,6 +1808,10 @@
     {
      "anchor": "FeedSolve dashboard",
      "url": "/"
+    },
+    {
+     "anchor": "complaint management software",
+     "url": "/complaint-management-software"
     }
    ],
    "writer_notes": "This post owns the 'track every issue' keyword cluster .  it must feel authoritative and absolute. The three-layer architecture (intake, routing, audit) is the core framework. Substantiate the 100% claim with the failsafe mechanics. Tone should be reassuring to operations managers who have been burned by lost complaints before.",
@@ -2217,6 +2233,10 @@
     {
      "anchor": "FeedSolve pricing",
      "url": "/"
+    },
+    {
+     "anchor": "complaint management software",
+     "url": "/complaint-management-software"
     }
    ],
    "writer_notes": "This is a high-commercial-intent post. The comparison table is the anchor - make it clean and factual. Acknowledge Google Forms and Typeform honestly (they do have zero-login submission) but show exactly where they fail (no resolution workflow, no tracking codes). End with a strong CTA: 'See FeedSolve's pricing - free to start, no per-seat fees.'",
@@ -2607,6 +2627,10 @@
     {
      "anchor": "FeedSolve free plan",
      "url": "/"
+    },
+    {
+     "anchor": "complaint management software",
+     "url": "/complaint-management-software"
     }
    ],
    "writer_notes": "This is the highest-traffic BOFU post in the new set. The 'Google Forms collects, then what?' hook is strong - use it as the section title and the conversational thread throughout. The side-by-side supplier scenario is the most important section - make it vivid and specific. Keep the Google Forms comparison fair (acknowledge it is genuinely good for surveys and registrations) to build trust. End with a direct CTA: 'Try FeedSolve free - no credit card, setup in under 2 minutes.'",
