@@ -39,6 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/eu/gdpr-feedback-management", priority: 0.8, frequency: "monthly" as const },
     { path: "/features/branded-qr-codes", priority: 0.7, frequency: "monthly" as const },
     { path: "/complaint-management-software", priority: 0.9, frequency: "weekly" as const },
+    { path: "/customer-complaint-software", priority: 0.8, frequency: "monthly" as const },
+    { path: "/customer-feedback-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/digital-suggestion-box-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/logistics/delivery-feedback", priority: 0.7, frequency: "monthly" as const },
     { path: "/manufacturing/supplier-feedback", priority: 0.7, frequency: "monthly" as const },

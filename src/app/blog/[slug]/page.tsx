@@ -70,7 +70,15 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   );
  }
 
- const otherPosts = blogData.filter((b) => b.id !== blog.id).slice(0, 3);
+ // Spread internal link equity: pick the 3 posts with the next ids
+ // (wrapping around) instead of always the first 3. This gives every
+ // post inbound links from its neighbours rather than concentrating
+ // all "related" links on ids 1-3.
+ const ordered = [...blogData].sort((a, b) => a.id - b.id);
+ const currentIndex = ordered.findIndex((b) => b.id === blog.id);
+ const otherPosts = [1, 2, 3].map(
+  (offset) => ordered[(currentIndex + offset) % ordered.length]
+ );
  const publishedDate = new Date(Date.UTC(2025, 10 + Math.floor((blog.id - 1) / 4), ((blog.id - 1) % 4) * 6 + 3)).toISOString().slice(0, 10);
  const modifiedDate = new Date(Date.UTC(2026, 3, Math.min(28, blog.id + 1))).toISOString().slice(0, 10);
 

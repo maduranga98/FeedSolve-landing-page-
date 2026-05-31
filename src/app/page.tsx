@@ -102,7 +102,11 @@ function Hero() {
       Stop losing complaints. Start closing them.
      </p>
      <p className="hero-sub">
-      Collect feedback from customers, suppliers, and partners with a QR code feedback board. Track
+      FeedSolve is{" "}
+      <Link href="/complaint-management-software/">complaint management software</Link>{" "}
+      and a{" "}
+      <Link href="/digital-suggestion-box-software/">digital suggestion box</Link>{" "}
+      in one. Collect feedback from customers, suppliers, and partners with a QR code feedback board. Track
       every issue from complaint-to-resolution with a simple link, a resolution rate dashboard, and a public track your complaint page. Used by operations teams across the{" "}
       <Link href="/uk/complaint-management-software/">UK</Link>,{" "}
       <Link href="/us/complaint-management-software/">US</Link>,{" "}
