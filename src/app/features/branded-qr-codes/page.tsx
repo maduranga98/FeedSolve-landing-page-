@@ -4,9 +4,9 @@ import BrandedQRCodesClient from "./BrandedQRCodesClient";
 const SITE_URL = "https://feedsolve.com";
 
 export const metadata: Metadata = {
-  title: "Branded QR Codes — Custom Logo & Colour QR Feedback Codes",
+  title: "Branded QR Codes for Feedback: Add Your Logo & Colours",
   description:
-    "Add your logo and brand colours to your FeedSolve feedback QR codes. Available on Growth and Pro plans. Print-ready, scannable on all devices, no app needed.",
+    "Put your logo and brand colours on feedback QR codes customers actually trust and scan. Print-ready, works on every device, no app needed. Free to start.",
   openGraph: {
     title: "Branded QR Codes | FeedSolve",
     description:
