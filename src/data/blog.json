@@ -3904,78 +3904,77 @@
   "id": 30,
   "meta": {
    "title": "Suggestion Box Software: 7 Features That Separate a Real Tool From a Form",
-   "quick_answer_box": null,
-   "title_tag": "Suggestion Box Software: 7 Features to Look For",
    "meta_description": "Choosing suggestion box software? Here are the 7 features that turn collected ideas into resolved action - no-login submission, anonymity, tracking, and more.",
    "slug": "/blog/suggestion-box-software-features",
-   "keywords": [
-    "suggestion box software",
+   "primary_keyword": "suggestion box software",
+   "secondary_keywords": [
     "online suggestion box software",
     "digital suggestion box",
-    "employee suggestion box software"
+    "employee suggestion box software",
+    "anonymous suggestion box"
    ],
-   "target_audience": "SMB owners, HR leads, and operations managers",
-   "search_intent": "commercial",
+   "target_audience": "SMB owners, HR leads, and operations managers evaluating tools to collect and act on suggestions",
+   "search_intent": "Commercial - the reader is comparing options and wants to know what good suggestion box software actually does",
    "funnel_stage": "MOFU",
-   "content_type": "guide"
+   "content_type": "Guide",
+   "target_word_count": "1,400-1,700 words"
   },
   "content": {
    "quick_answer_box": "Good suggestion box software does more than collect ideas - it closes the loop. Look for no-login submission, anonymous options, a unique tracking code per submission, assignment and workflow, multi-language forms, QR-code distribution, and resolution analytics. A spreadsheet-backed form has none of these.",
    "h1": "Suggestion Box Software: 7 Features That Separate a Real Tool From a Form",
+   "key_takeaways": [
+    "The feature that matters most is what happens after someone submits, not the form itself",
+    "No-login, anonymous submission drives the volume and honesty of suggestions",
+    "A unique tracking code lets anonymous submitters follow progress without an account",
+    "Assignment plus a resolution workflow turns collection into accountable action",
+    "Resolution rate is the real health metric of any suggestion programme"
+   ],
    "sections": [
     {
-     "heading": "Why most suggestion boxes fail",
-     "level": "h2",
-     "body": "The physical box on the wall fails because nobody empties it and nobody hears back. The digital version - usually a Google Form - fails for the same reason: responses pile up in a spreadsheet and nothing happens next. People stop contributing the moment they realise their suggestion went into a void.\n\nReal suggestion box software fixes the part that matters: what happens after someone hits submit. Here are the seven features that decide whether your suggestion box becomes a source of improvement or another dead inbox."
+     "heading": "H2: Why most suggestion boxes fail",
+     "body": [
+      "The physical box on the wall fails because nobody empties it and nobody hears back. The digital version - usually a Google Form - fails for the same reason: responses pile up in a spreadsheet and nothing happens next. People stop contributing the moment they realise their suggestion went into a void.",
+      "Real suggestion box software fixes the part that matters: what happens after someone hits submit. Here are the seven features that decide whether your suggestion box becomes a source of improvement or another dead inbox."
+     ]
     },
     {
-     "heading": "1. No-login submission",
-     "level": "h2",
-     "body": "If people have to create an account to leave a suggestion, most of them won't. The single biggest driver of submission volume is removing friction. Look for forms that let anyone submit by scanning a QR code or opening a link - no sign-up, no app, no password."
+     "heading": "H2: The 7 features that actually matter",
+     "key_points": [
+      "No-login submission: if people have to create an account, most won't. Removing friction is the single biggest driver of submission volume.",
+      "Anonymous submissions: honest feedback depends on psychological safety - staff won't flag real issues if their name is attached.",
+      "A unique tracking code per submission: lets an anonymous submitter check progress later and keeps one thread per issue.",
+      "Assignment and a resolution workflow: assign each suggestion to an owner and move it through stages so nothing stalls.",
+      "Multi-language forms: let people write in their own language while you manage everything in yours.",
+      "QR-code and link distribution: branded QR codes for physical spaces plus links for email and chat.",
+      "Resolution analytics: track how many suggestions you receive, how many get resolved, and how long it takes."
+     ],
+     "body": [
+      "Notice that only one of these seven features is about collecting input. The other six are about acting on it. That balance is exactly what separates suggestion box software from a form builder - and it's why teams that switch see suggestions turn into visible change instead of a silent backlog."
+     ]
     },
     {
-     "heading": "2. Anonymous submissions",
-     "level": "h2",
-     "body": "Honest feedback depends on psychological safety. Staff won't flag a safety issue or a bad process if their name is attached. The best tools let people submit anonymously while still issuing a tracking code, so the conversation can continue without exposing the person."
+     "heading": "H2: How to evaluate a tool in 10 minutes",
+     "body": [
+      "Run a quick test before you commit. Can you create a board and generate a QR code without a sales call? Can someone submit without signing up? Does that submission produce a tracking code? Can you assign it, change its status, and reply? Can you see a resolution rate somewhere? If the answer to any of these is no, you have a form, not a suggestion management tool.",
+      "FeedSolve is free to start and covers all seven features, so you can run that test in one sitting and start collecting the same day."
+     ]
     },
     {
-     "heading": "3. A unique tracking code per submission",
-     "level": "h2",
-     "body": "Anonymity usually kills follow-up - but it doesn't have to. A unique tracking code lets an anonymous submitter check progress later, and lets you keep one thread per issue instead of losing it in a spreadsheet row."
-    },
-    {
-     "heading": "4. Assignment and a resolution workflow",
-     "level": "h2",
-     "body": "Collection without action is theatre. You need to assign each suggestion to an owner and move it through stages - new, in progress, resolved - so nothing stalls. A Kanban-style board makes accountability visible at a glance."
-    },
-    {
-     "heading": "5. Multi-language forms",
-     "level": "h2",
-     "body": "If your team or customers speak more than one language, a single-language form silences part of your audience. Multi-language submission forms let people write in their own language while you manage everything in yours."
-    },
-    {
-     "heading": "6. QR-code and link distribution",
-     "level": "h2",
-     "body": "The easier it is to reach the box, the more you collect. Branded QR codes for break rooms, counters, and notice boards - plus shareable links for email and chat - meet people where they already are."
-    },
-    {
-     "heading": "7. Resolution analytics",
-     "level": "h2",
-     "body": "You can't improve what you don't measure. Look for a tool that shows how many suggestions you receive, how many get resolved, and how long resolution takes. That resolution rate is the real health metric of any suggestion programme."
-    }
-   ],
-   "faqs": [
-    {
-     "q": "What is the best free suggestion box software?",
-     "a": "FeedSolve is free to start with no credit card required - you can create a board, generate a QR code, and collect suggestions in minutes. Unlike a free Google Form, it also lets you assign, track, and resolve each submission."
-    },
-    {
-     "q": "Can suggestion box software be anonymous?",
-     "a": "Yes. The best tools allow no-login, anonymous submission while still issuing a unique tracking code so the submitter can follow progress without revealing their identity."
-    },
-    {
-     "q": "Is a Google Form enough for a suggestion box?",
-     "a": "A Google Form collects responses but does nothing afterward. If you want suggestions to turn into resolved action - with assignment, workflow, and follow-up - dedicated suggestion box software is the better fit."
+     "heading": "H2: FAQs",
+     "faqs": [
+      {
+       "question": "What is the best free suggestion box software?",
+       "answer": "FeedSolve is free to start with no credit card required - you can create a board, generate a QR code, and collect suggestions in minutes. Unlike a free Google Form, it also lets you assign, track, and resolve each submission."
+      },
+      {
+       "question": "Can suggestion box software be anonymous?",
+       "answer": "Yes. The best tools allow no-login, anonymous submission while still issuing a unique tracking code so the submitter can follow progress without revealing their identity."
+      },
+      {
+       "question": "Is a Google Form enough for a suggestion box?",
+       "answer": "A Google Form collects responses but does nothing afterward. If you want suggestions to turn into resolved action - with assignment, workflow, and follow-up - dedicated suggestion box software is the better fit."
+      }
+     ]
     }
    ],
    "internal_links": [
@@ -3998,68 +3997,73 @@
   "id": 31,
   "meta": {
    "title": "How to Set Up an Online Suggestion Box in 10 Minutes",
-   "quick_answer_box": null,
-   "title_tag": "How to Set Up an Online Suggestion Box (10-Minute Guide)",
    "meta_description": "Set up an online suggestion box in 10 minutes: create a board, generate a QR code, share the link, and start resolving suggestions. Works for virtual and electronic suggestion boxes.",
    "slug": "/blog/online-suggestion-box-setup",
-   "keywords": [
-    "online suggestion box",
+   "primary_keyword": "online suggestion box",
+   "secondary_keywords": [
     "virtual suggestion box",
     "electronic suggestion box",
-    "how to set up a suggestion box"
+    "how to set up a suggestion box",
+    "digital suggestion box"
    ],
-   "target_audience": "SMB owners, office managers, and team leads",
-   "search_intent": "informational",
+   "target_audience": "SMB owners, office managers, and team leads who want to start collecting suggestions quickly",
+   "search_intent": "Informational - the reader wants a simple, practical how-to to stand up an online suggestion box",
    "funnel_stage": "TOFU",
-   "content_type": "how-to"
+   "content_type": "How-to",
+   "target_word_count": "1,200-1,500 words"
   },
   "content": {
    "quick_answer_box": "To set up an online suggestion box: (1) create a suggestion board, (2) turn on anonymous, no-login submission, (3) generate a branded QR code and link, (4) place the QR code where people are and share the link, and (5) review and resolve submissions from your dashboard. With FeedSolve this takes about 10 minutes and is free to start.",
    "h1": "How to Set Up an Online Suggestion Box in 10 Minutes",
+   "key_takeaways": [
+    "An online suggestion box should make submitting effortless and losing a suggestion impossible",
+    "Anonymous, no-login submission is what keeps the box busy",
+    "A QR code covers physical spaces; a link covers email, chat, and intranet",
+    "Closing the loop - even a short note - is what keeps people contributing"
+   ],
    "sections": [
     {
-     "heading": "What an online suggestion box needs to do",
-     "level": "h2",
-     "body": "An online suggestion box - sometimes called a virtual or electronic suggestion box - should make it effortless to submit an idea and impossible for that idea to disappear. That means no-login submission, an anonymous option, and a way to actually act on what comes in.\n\nHere is the fastest way to stand one up."
+     "heading": "H2: What an online suggestion box needs to do",
+     "body": [
+      "An online suggestion box - sometimes called a virtual or electronic suggestion box - should make it effortless to submit an idea and impossible for that idea to disappear. That means no-login submission, an anonymous option, and a way to actually act on what comes in.",
+      "Here is the fastest way to stand one up."
+     ]
     },
     {
-     "heading": "Step 1: Create a suggestion board",
-     "level": "h2",
-     "body": "Start a free account and create a board for suggestions. If you want one for staff and one for customers, create two - each gets its own form and QR code so submissions stay organised."
+     "heading": "H2: The 5-step setup",
+     "key_points": [
+      "Create a suggestion board: start a free account and make a board for suggestions. Make two if you want separate staff and customer boxes.",
+      "Turn on anonymous, no-login submission: friction-free, anonymous submission is the difference between a busy box and an empty one.",
+      "Generate a QR code and link: a branded QR code for physical spaces and a shareable link for email, chat, and your intranet.",
+      "Put it where people are: print the QR code for the break room, reception, or counter, and post the link in your team channel.",
+      "Review and resolve: assign each suggestion to an owner and move it through to resolved."
+     ],
+     "body": [
+      "Each step takes a minute or two. The whole thing is realistically a 10-minute job, and none of it requires a developer or a sales call."
+     ]
     },
     {
-     "heading": "Step 2: Turn on anonymous, no-login submission",
-     "level": "h2",
-     "body": "Make sure people can submit without creating an account. Anonymous, friction-free submission is the difference between a busy suggestion box and an empty one. Each submission still gets a tracking code so progress can be followed."
+     "heading": "H2: Keep it working after launch",
+     "body": [
+      "The fastest way to kill a suggestion box is silence. Build a simple habit: check the dashboard on a set day each week, resolve what you can, and post a short public reply on each one. When submitters see that their input leads to action - even a quick acknowledgement - they keep contributing, and your resolution rate becomes a number you can be proud of."
+     ]
     },
     {
-     "heading": "Step 3: Generate a QR code and link",
-     "level": "h2",
-     "body": "Generate a branded QR code and a shareable link for your board. The QR code is for physical spaces; the link is for email, chat, and your intranet."
-    },
-    {
-     "heading": "Step 4: Put it where people are",
-     "level": "h2",
-     "body": "Print the QR code for the break room, reception, or counter, and post the link in your team channel. The closer the box is to the moment someone has a thought, the more you collect."
-    },
-    {
-     "heading": "Step 5: Review and resolve",
-     "level": "h2",
-     "body": "Check your dashboard, assign each suggestion to an owner, and move it through to resolved. Closing the loop - even with a short note - is what keeps people contributing."
-    }
-   ],
-   "faqs": [
-    {
-     "q": "How long does it take to set up an online suggestion box?",
-     "a": "About 10 minutes with FeedSolve: create a board, enable anonymous submission, generate a QR code and link, and you're collecting. It's free to start with no credit card."
-    },
-    {
-     "q": "What's the difference between an online, virtual, and electronic suggestion box?",
-     "a": "They're the same idea under different names - a digital replacement for the physical box that lets people submit suggestions through a form, QR code, or link instead of paper."
-    },
-    {
-     "q": "Can an online suggestion box be anonymous?",
-     "a": "Yes. With no-login submission, people can submit anonymously while still receiving a tracking code to follow progress."
+     "heading": "H2: FAQs",
+     "faqs": [
+      {
+       "question": "How long does it take to set up an online suggestion box?",
+       "answer": "About 10 minutes with FeedSolve: create a board, enable anonymous submission, generate a QR code and link, and you're collecting. It's free to start with no credit card."
+      },
+      {
+       "question": "What's the difference between an online, virtual, and electronic suggestion box?",
+       "answer": "They're the same idea under different names - a digital replacement for the physical box that lets people submit suggestions through a form, QR code, or link instead of paper."
+      },
+      {
+       "question": "Can an online suggestion box be anonymous?",
+       "answer": "Yes. With no-login submission, people can submit anonymously while still receiving a tracking code to follow progress."
+      }
+     ]
     }
    ],
    "internal_links": [
