@@ -1251,6 +1251,18 @@ const faqs = [
   q: "Can submitters use the feedback form in their own language?",
   a: "Yes. FeedSolve supports multi-language submission forms so your customers, suppliers, and partners can submit feedback in their preferred language. Request any language and we'll add it - critical for businesses operating across South Asia, the Middle East, or East Africa.",
  },
+ {
+  q: "Can FeedSolve work as a digital suggestion box?",
+  a: "Yes. FeedSolve doubles as an online suggestion box. Share a QR code or link and customers, employees, or visitors can drop suggestions anonymously - no login and no paper box. Unlike a virtual or electronic suggestion box, every suggestion gets a tracking code so you can follow up and close the loop.",
+ },
+ {
+  q: "Is FeedSolve a complaint management system?",
+  a: "Yes. FeedSolve is a complaints management system that captures, assigns, tracks, and resolves every complaint from one dashboard. Each submission gets a unique #FSV code, an owner, and a status - giving you a full audit trail from intake to resolution.",
+ },
+ {
+  q: "Can I use FeedSolve for supplier fault and quality tracking?",
+  a: "Yes. Manufacturing and logistics teams use FeedSolve for supplier fault tracking and quality issues. Suppliers report faults via a QR code or link, each issue is routed to an owner with a deadline, and you keep a complete record of how every defect was resolved.",
+ },
 ];
 
 function FAQ() {
