@@ -102,7 +102,8 @@ function Hero() {
       Stop losing complaints. Start closing them.
      </p>
      <p className="hero-sub">
-      Collect feedback with a QR code, then assign, track, and resolve every issue from one dashboard. It works as{" "}
+      Collect feedback with a{" "}
+      <Link href="/qr-code-feedback/">QR code</Link>, then assign, track, and resolve every issue from one dashboard. It works as{" "}
       <Link href="/complaint-management-software/">complaint management software</Link>{" "}
       and a{" "}
       <Link href="/digital-suggestion-box-software/">digital suggestion box</Link>{" "}
