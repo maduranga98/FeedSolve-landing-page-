@@ -10,9 +10,18 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
-  title: "Supplier Feedback Tool for Manufacturers - Track Every Quality Issue",
+  title: "Supplier Fault Tracking & Feedback Tool for Manufacturers",
   description:
-    "Replace WhatsApp supplier complaints, shop floor complaint logs, and production line feedback with a structured QR feedback board and documented audit trail.",
+    "Supplier fault tracking software for manufacturers. Replace WhatsApp supplier complaints and shop floor logs with a QR feedback board, tracking codes, and a documented audit trail.",
+  keywords: [
+    "supplier fault tracking",
+    "supplier feedback tool",
+    "supplier complaint management",
+    "supplier quality tracking",
+    "supplier defect tracking",
+    "vendor feedback software",
+    "manufacturing complaint management",
+  ],
   openGraph: {
     title: "Supplier Feedback Tool for Manufacturers | FeedSolve",
     description:
@@ -35,6 +44,14 @@ const jsonLd = {
   mainEntity: {
     "@type": "FAQPage",
     mainEntity: [
+      {
+        "@type": "Question",
+        name: "How does supplier fault tracking work in FeedSolve?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Suppliers or operators scan a QR code on a delivery note or at the goods-in bay and report a fault. Each fault gets a unique #FSV-XXXX tracking code and lands on your quality team's Kanban board to be assigned, prioritised, root-caused, and resolved - giving you a complete, exportable record of every supplier fault from report to resolution.",
+        },
+      },
       {
         "@type": "Question",
         name: "Do my suppliers need to create an account to submit feedback?",
@@ -164,6 +181,10 @@ export default function ManufacturingSupplierFeedback() {
           },
         ]}
         faqs={[
+          {
+            q: "How does supplier fault tracking work in FeedSolve?",
+            a: "Supplier fault tracking in FeedSolve starts when a supplier or operator scans a QR code on a delivery note or at the goods-in bay and reports a fault - a defect, delay, or quantity mismatch. Each fault gets a unique #FSV-XXXX tracking code and lands on your quality team's Kanban board, where it is assigned an owner, a priority, and a deadline. You log the root cause and corrective action, send a public reply, and mark it resolved - giving you a complete, exportable record of every supplier fault from report to resolution.",
+          },
           {
             q: "Do my suppliers need to create an account to submit feedback?",
             a: "No. Suppliers submit via a shared link or QR code on your delivery notes - no login, no account, no app installation required. They receive a unique #FSV-XXXX tracking code on submission and can check resolution progress at any time from any browser.",

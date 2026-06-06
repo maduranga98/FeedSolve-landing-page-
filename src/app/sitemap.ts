@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/compare/feedsolve-vs-google-forms", priority: 0.6, frequency: "monthly" as const },
     { path: "/compare/feedsolve-vs-typeform", priority: 0.6, frequency: "monthly" as const },
     { path: "/compare/feedsolve-vs-zonka", priority: 0.6, frequency: "monthly" as const },
+    { path: "/compare/feedsolve-vs-jotform", priority: 0.6, frequency: "monthly" as const },
   ];
 
   return [

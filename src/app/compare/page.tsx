@@ -48,6 +48,12 @@ const comparisons = [
     sub: "For teams that care whether every complaint was actually fixed.",
     bestFor: "Resolution rate, flat pricing, and simple setup",
   },
+  {
+    href: "/compare/feedsolve-vs-jotform/",
+    label: "FeedSolve vs JotForm",
+    sub: "For teams whose QR forms collect feedback but never resolve it.",
+    bestFor: "QR code feedback, tracking codes, and resolution workflows",
+  },
 ];
 
 const breadcrumbJsonLd = {
