@@ -32,6 +32,8 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           <Link href="/customer-complaint-software/">Customer Complaints</Link>
           <Link href="/customer-feedback-software/">Feedback Software</Link>
           <Link href="/digital-suggestion-box-software/">Suggestion Box</Link>
+          <Link href="/qr-code-feedback/">QR Code Feedback</Link>
+          <Link href="/feedback-tracking-code/">Tracking Codes</Link>
           <Link href="/compare/">Compare</Link>
           {variant === "blog" && <Link href="/blog/">Blog</Link>}
           <a href="mailto:hello@feedsolve.com">Contact</a>

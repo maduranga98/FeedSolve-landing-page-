@@ -30,11 +30,11 @@ const SITE_URL = "https://feedsolve.com";
 export const metadata: Metadata = {
  metadataBase: new URL(SITE_URL),
  title: {
-  default: "Complaint Tracking & Feedback Software for SMBs | FeedSolve",
+  default: "Complaint Management & Digital Suggestion Box Software | FeedSolve",
   template: "%s | FeedSolve",
  },
  description:
-  "Collect feedback from customers and suppliers via branded QR codes. Assign, track, and resolve complaints - in any language. Free to start, no credit card.",
+  "FeedSolve is complaint management and digital suggestion box software for SMBs. Collect feedback via QR code, then assign, track, and resolve every complaint in one dashboard - in any language. Free to start, no credit card.",
  openGraph: {
   title: "FeedSolve - Feedback Management & Complaint Tracking Software for SMBs",
   description:

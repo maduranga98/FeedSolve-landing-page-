@@ -42,6 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/customer-complaint-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/customer-feedback-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/digital-suggestion-box-software", priority: 0.8, frequency: "monthly" as const },
+    { path: "/qr-code-feedback", priority: 0.8, frequency: "monthly" as const },
+    { path: "/feedback-tracking-code", priority: 0.8, frequency: "monthly" as const },
     { path: "/logistics/delivery-feedback", priority: 0.7, frequency: "monthly" as const },
     { path: "/manufacturing/supplier-feedback", priority: 0.7, frequency: "monthly" as const },
     { path: "/real-estate/tenant-feedback", priority: 0.7, frequency: "monthly" as const },
@@ -50,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/compare/feedsolve-vs-google-forms", priority: 0.6, frequency: "monthly" as const },
     { path: "/compare/feedsolve-vs-typeform", priority: 0.6, frequency: "monthly" as const },
     { path: "/compare/feedsolve-vs-zonka", priority: 0.6, frequency: "monthly" as const },
+    { path: "/compare/feedsolve-vs-jotform", priority: 0.6, frequency: "monthly" as const },
   ];
 
   return [

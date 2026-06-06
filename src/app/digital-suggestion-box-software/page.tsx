@@ -14,8 +14,11 @@ export const metadata: Metadata = {
     "online suggestion box",
     "virtual suggestion box",
     "electronic suggestion box",
+    "website suggestion box",
     "anonymous suggestion box",
     "employee suggestion box",
+    "suggestion box app",
+    "free suggestion box online",
   ],
   alternates: { canonical: URL },
   openGraph: {
@@ -47,6 +50,14 @@ const faqs = [
   {
     q: "Can I use it as an employee suggestion box and a customer suggestion box?",
     a: "Yes. Create separate boards for staff and customers, each with its own branded QR code or link. Multi-language forms mean everyone can submit in their own language while you manage in yours.",
+  },
+  {
+    q: "Can I add a suggestion box to my website?",
+    a: "Yes. Every board comes with a shareable link, so you can add a website suggestion box by linking a button or menu item straight to your FeedSolve form. Visitors submit without leaving to a third-party login, and you collect and resolve everything from one dashboard.",
+  },
+  {
+    q: "Is there a suggestion box app for phones?",
+    a: "Submitters never need an app - they scan a QR code or open a link in any phone browser. On your side, FeedSolve works as a web-based suggestion box app you can manage from desktop or mobile, so you can triage and resolve suggestions wherever you are.",
   },
 ];
 
@@ -173,9 +184,9 @@ export default function DigitalSuggestionBoxSoftware() {
             sub: "Employee suggestion box tips",
           },
           {
-            href: "/blog/qr-code-feedback-system/",
-            label: "QR setup guide",
-            sub: "QR code feedback system",
+            href: "/qr-code-feedback/",
+            label: "QR code feedback",
+            sub: "Scan, submit, resolve",
           },
           {
             href: "/compare/feedsolve-vs-google-forms/",
