@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NewsletterForm from "@/components/NewsletterForm";
 import {
  ArrowRight, BookOpen, Star, Search, ChevronLeft, ChevronRight,
  MessageCircle, ArrowDown, XCircle,
@@ -289,6 +290,9 @@ const defaultVisual = {
  readTime: "4 min",
 };
 
+const formatDate = (iso: string) =>
+ new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${iso}T00:00:00Z`));
+
 const posts = blogData.map((blog) => {
  const v = postVisuals[blog.id] ?? defaultVisual;
  return {
@@ -302,7 +306,7 @@ const posts = blogData.map((blog) => {
   title: blog.meta.title,
   excerpt: excerpts[blog.id] ?? blog.meta.meta_description,
   author: v.author,
-  date: v.date,
+  date: formatDate(blog.meta.date_published),
   readTime: v.readTime,
   href: `${blog.meta.slug}/`,
  };
@@ -407,7 +411,7 @@ export default function BlogPage() {
         <div className="listing-author-avatar" style={{ background: "var(--teal)" }}>FS</div>
         <div className="listing-post-meta-text">
          <div className="meta-name">FeedSolve Team</div>
-         <div className="meta-date">Apr 25, 2026 · 5 min read</div>
+         <div className="meta-date">{formatDate(blogData[0].meta.date_published)} · 5 min read</div>
         </div>
        </div>
        <Link href={`${blogData[0].meta.slug}/`} className="btn-primary teal">
@@ -532,20 +536,7 @@ export default function BlogPage() {
       </p>
      </div>
      <div>
-      <form className="newsletter-form" onSubmit={(e) => e.preventDefault()} aria-label="Newsletter subscription">
-       <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-       <input
-        id="newsletter-email"
-        type="email"
-        name="email"
-        placeholder="you@company.com"
-        autoComplete="email"
-        required
-        aria-required="true"
-       />
-       <button type="submit">Subscribe</button>
-      </form>
-      <div className="newsletter-note">Join 1,200+ operators. Unsubscribe anytime.</div>
+      <NewsletterForm />
      </div>
     </div>
    </div>

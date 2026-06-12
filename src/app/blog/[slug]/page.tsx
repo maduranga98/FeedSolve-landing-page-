@@ -79,8 +79,8 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
  const otherPosts = [1, 2, 3].map(
   (offset) => ordered[(currentIndex + offset) % ordered.length]
  );
- const publishedDate = new Date(Date.UTC(2025, 10 + Math.floor((blog.id - 1) / 4), ((blog.id - 1) % 4) * 6 + 3)).toISOString().slice(0, 10);
- const modifiedDate = new Date(Date.UTC(2026, 3, Math.min(28, blog.id + 1))).toISOString().slice(0, 10);
+ const publishedDate = blog.meta.date_published;
+ const modifiedDate = blog.meta.date_modified;
 
  const jsonLd = {
   "@context": "https://schema.org",

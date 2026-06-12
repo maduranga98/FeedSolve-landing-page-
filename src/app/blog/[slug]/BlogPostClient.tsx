@@ -40,6 +40,8 @@ type BlogPost = {
   secondary_keywords: string[];
   meta_description: string;
   target_word_count: string;
+  date_published: string;
+  date_modified: string;
  };
  content: {
   quick_answer_box: string;
@@ -82,9 +84,9 @@ function normalizeInternalLink(url: string): string {
  return url.endsWith("/") || url.includes("#") ? url : `${url}/`;
 }
 
-function formatPublishedMonth(blog: BlogPost): string {
- const date = new Date(Date.UTC(2025, 10 + Math.floor((blog.id - 1) / 4), ((blog.id - 1) % 4) * 6 + 3));
- return new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(date);
+function formatPublishedDate(blog: BlogPost): string {
+ const date = new Date(`${blog.meta.date_published}T00:00:00Z`);
+ return new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
 }
 
 function getReadTime(blog: BlogPost): string {
@@ -191,7 +193,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
        </div>
       </div>
       <div className="article-stats">
-       <div className="article-stat"><Calendar size={14} /> {formatPublishedMonth(blog)}</div>
+       <div className="article-stat"><Calendar size={14} /> {formatPublishedDate(blog)}</div>
        <div className="article-stat"><Clock size={14} /> {getReadTime(blog)} read</div>
       </div>
      </div>
