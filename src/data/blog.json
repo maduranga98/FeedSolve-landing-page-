@@ -16,7 +16,9 @@
    "search_intent": "Informational .  the reader has heard the term or suspects they have a resolution problem; they want to understand what the metric is and why it matters before buying any tool",
    "funnel_stage": "TOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,800–2,200 words"
+   "target_word_count": "1,800–2,200 words",
+   "date_published": "2025-11-03",
+   "date_modified": "2025-11-03"
   },
   "content": {
    "quick_answer_box": "Feedback resolution rate is the percentage of submitted feedback or complaints that a company fully resolves within a defined period. It is calculated as (Resolved Submissions ÷ Total Submissions) × 100. A healthy resolution rate for SMBs is generally considered to be above 80%, and tracking it is the clearest way to measure whether a feedback program is delivering real operational value .  not just collecting data.",
@@ -145,7 +147,9 @@
    "search_intent": "Informational / Commercial .  reader knows QR codes and wants to understand how they apply to feedback collection specifically; they are evaluating options before committing to a tool",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,600–2,000 words"
+   "target_word_count": "1,600–2,000 words",
+   "date_published": "2025-11-09",
+   "date_modified": "2025-11-09"
   },
   "content": {
    "quick_answer_box": "A QR code feedback board is a dedicated web page that people can reach by scanning a QR code, where they can submit feedback, complaints, or ideas without creating an account. The company team then manages submissions through an internal dashboard. This approach removes all friction from the submission process, making it ideal for physical locations like factory floors, restaurant tables, delivery vehicles, or reception desks.",
@@ -266,7 +270,9 @@
    "search_intent": "Commercial .  reader is actively searching for a tool; they know the problem and want to compare options",
    "funnel_stage": "MOFU",
    "content_type": "Cluster / Landing Page",
-   "target_word_count": "1,400–1,800 words"
+   "target_word_count": "1,400–1,800 words",
+   "date_published": "2025-11-15",
+   "date_modified": "2025-11-15"
   },
   "content": {
    "quick_answer_box": "A supplier feedback tool for manufacturers is a platform that lets suppliers, distributors, and internal quality teams submit complaints, defect reports, and improvement ideas through a structured channel .  instead of informal WhatsApp messages or email threads. The best tools for SMB manufacturers combine a shareable submission link or QR code with a Kanban-style resolution workflow, so every complaint is assigned, tracked, and closed with a verifiable resolution rate.",
@@ -389,7 +395,9 @@
    "search_intent": "Commercial .  reader is familiar with QR codes in F&B (menus, payments) and is looking for a specific feedback use case",
    "funnel_stage": "MOFU",
    "content_type": "Cluster / Landing Page",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2025-11-21",
+   "date_modified": "2025-11-21"
   },
   "content": {
    "quick_answer_box": "A restaurant feedback QR code is a scannable code placed at a table, counter, or entrance that links directly to a feedback submission form .  no app or account required. Guests scan, type their complaint or suggestion in seconds, and receive a tracking code. The restaurant team receives the submission instantly and can resolve the issue, reply to the guest, and track resolution rate across all tables and locations.",
@@ -512,7 +520,9 @@
    "search_intent": "Informational .  reader is nostalgic about the concept and searching for a lightweight digital equivalent; high intent because the physical-world reference means they already know what they want",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,500–1,900 words"
+   "target_word_count": "1,500–1,900 words",
+   "date_published": "2025-12-03",
+   "date_modified": "2025-12-03"
   },
   "content": {
    "quick_answer_box": "A digital suggestion box is an online tool that replaces the physical suggestion box with a shareable link or QR code, allowing customers, suppliers, or staff to submit feedback anonymously without creating an account. Unlike paper suggestion boxes, a digital version includes a resolution workflow, tracking codes so submitters can see progress, and analytics like resolution rate .  turning passive collection into accountable action.",
@@ -639,7 +649,9 @@
    "search_intent": "Commercial .  high buying intent; the search term is task-specific and the reader wants a solution, not a definition",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Cluster / Landing Page",
-   "target_word_count": "1,300–1,600 words"
+   "target_word_count": "1,300–1,600 words",
+   "date_published": "2025-12-09",
+   "date_modified": "2025-12-09"
   },
   "content": {
    "quick_answer_box": "A tenant complaint portal is a digital platform where residents can submit maintenance requests, noise complaints, and building issues through a shared link or QR code .  without needing to call, email, or use a property management app. Property managers access a Kanban-style dashboard to assign, prioritize, and resolve submissions, while tenants track their request status using a unique tracking code.",
@@ -765,7 +777,9 @@
    "search_intent": "Informational .  reader is diagnosing a low-response problem and looking for a design principle or solution",
    "funnel_stage": "TOFU",
    "content_type": "Cluster",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2025-12-15",
+   "date_modified": "2025-12-15"
   },
   "content": {
    "quick_answer_box": "A no-login feedback form is a submission form that any person can access and fill in via a public link or QR code .  without creating an account, verifying an email, or downloading an app. Research consistently shows that requiring registration before submission reduces response rates by 40–70%. For external stakeholders like customers, suppliers, and distributors, zero-friction submission is the only realistic collection method.",
@@ -882,7 +896,9 @@
    "search_intent": "Informational / Commercial .  reader wants a framework first; software discovery happens naturally once the workflow is understood",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,700–2,100 words"
+   "target_word_count": "1,700–2,100 words",
+   "date_published": "2025-12-21",
+   "date_modified": "2025-12-21"
   },
   "content": {
    "quick_answer_box": "A complaint resolution workflow is a defined series of stages that a submitted complaint passes through .  from intake to resolution .  with ownership, accountability, and communication at each step. The most effective model for SMBs is a 5-stage Kanban: Received → In Review → In Progress → Resolved → Closed. Each stage has a responsible team member and a clear action, and the submitter can track progress at any time using a unique tracking code.",
@@ -1010,7 +1026,9 @@
    "search_intent": "Commercial .  direct comparison page; reader is in evaluation mode",
    "funnel_stage": "BOFU",
    "content_type": "Comparison",
-   "target_word_count": "1,100–1,400 words"
+   "target_word_count": "1,100–1,400 words",
+   "date_published": "2026-01-03",
+   "date_modified": "2026-01-03"
   },
   "content": {
    "quick_answer_box": "Typeform is a form and survey builder optimized for beautiful, high-completion data collection. FeedSolve is a feedback resolution platform built around QR-code intake, zero-login submission, a Kanban resolution workflow, and a resolution-rate metric. If your goal is to collect responses and analyze data, Typeform is a strong choice. If your goal is to collect operational complaints from external stakeholders and ensure every one is assigned, tracked, and resolved, FeedSolve is the purpose-built alternative.",
@@ -1204,7 +1222,9 @@
    "search_intent": "Commercial .  very specific, high-intent search; reader is actively looking for a tool to manage distributor or channel-partner complaints",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Cluster / Landing Page",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2026-01-09",
+   "date_modified": "2026-01-09"
   },
   "content": {
    "quick_answer_box": "A distributor feedback tool is a platform that gives distributors, retailers, and channel partners a structured, zero-friction way to submit complaints, delivery issues, and product concerns .  instead of using WhatsApp or email. The best tools for FMCG and logistics SMBs include a shareable link or QR code for submission, a Kanban-style resolution workflow for the internal team, and a tracking code so distributors can verify their issues are being addressed.",
@@ -1326,7 +1346,9 @@
    "search_intent": "Informational .  reader understands feedback collection but wants to master the resolution phase that competitors ignore",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,800–2,200 words"
+   "target_word_count": "1,800–2,200 words",
+   "date_published": "2026-01-15",
+   "date_modified": "2026-01-15"
   },
   "content": {
    "quick_answer_box": "Closing the feedback loop is a four-stage operational workflow: (1) Capture .  receive feedback through any channel, (2) Triage .  categorize and assign to the right owner, (3) Resolve .  act, communicate status, and document the fix, and (4) Confirm .  verify satisfaction and prevent recurrence. Most tools stop at stage one. FeedSolve operates across all four, achieving 95%+ resolution rates vs. the industry baseline of ~40%.",
@@ -1465,7 +1487,9 @@
    "search_intent": "Informational / Commercial .  reader knows QR codes and wants to understand how they apply to feedback collection specifically; they are evaluating options before committing to a tool",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,600–2,000 words"
+   "target_word_count": "1,600–2,000 words",
+   "date_published": "2026-01-21",
+   "date_modified": "2026-01-21"
   },
   "content": {
    "quick_answer_box": "A QR code feedback system generates scannable codes that link directly to a feedback form. When someone scans the code with their phone camera, they land on a mobile-optimized form .  pre-filled with context like table number, delivery ID, or product batch. The submitter receives a unique tracking code and can monitor resolution progress without any account. This approach removes all friction from the submission process, making it ideal for physical locations like factory floors, restaurant tables, delivery vehicles, or reception desks.",
@@ -1606,7 +1630,9 @@
    "search_intent": "Commercial Investigation .  reader is actively comparing Zendesk to simpler alternatives",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Comparison",
-   "target_word_count": "1,300–1,600 words"
+   "target_word_count": "1,300–1,600 words",
+   "date_published": "2026-02-03",
+   "date_modified": "2026-02-03"
   },
   "content": {
    "quick_answer_box": "Zendesk is powerful but complex .  multi-tiered routing, custom triggers, and implementation timelines that stretch across quarters. For teams that need to track complaints and close feedback loops without a certification course, the overhead hurts more than it helps. FeedSolve is a simple Zendesk alternative that offers 2-minute setup, flat team pricing, and a resolution-first workflow built for SMBs .  not enterprise IT departments.",
@@ -1751,7 +1777,9 @@
    "search_intent": "Informational / Commercial .  reader has a specific pain point (lost complaints) and wants a solution framework",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,500–1,900 words"
+   "target_word_count": "1,500–1,900 words",
+   "date_published": "2026-02-09",
+   "date_modified": "2026-02-09"
   },
   "content": {
    "quick_answer_box": "Tracking every issue requires three layers of protection: (1) Universal intake .  consolidate all channels (QR, web, email, API) into one queue so nothing arrives in a black hole, (2) Failsafe routing .  auto-assignment with escalation if items sit unassigned, and (3) Immutable audit trail .  every submission is timestamped and stored with full history. FeedSolve's architecture achieves 100% issue tracking with zero loss through these three layers, plus real-time resolution rate visibility.",
@@ -1894,7 +1922,9 @@
    "search_intent": "Commercial .  high buying intent; reader is actively searching for a tool to manage partner or channel complaints",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Cluster / Landing Page",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2026-02-15",
+   "date_modified": "2026-02-15"
   },
   "content": {
    "quick_answer_box": "Partner complaint tracking is a structured system that gives channel partners, distributors, and alliance members a zero-friction way to submit complaints and concerns .  instead of using email or WhatsApp. The best B2B complaint trackers include a shareable link or QR code for submission, a Kanban-style resolution workflow for the internal team, and a tracking code so partners can verify their issues are being addressed. This is especially critical for FMCG, logistics, and manufacturing companies where channel blind spots can destroy relationships before headquarters ever hears about them.",
@@ -2016,7 +2046,9 @@
    "search_intent": "Informational / Commercial - reader wants a complete framework for managing feedback; tool discovery happens naturally once the framework is understood",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "2,000–2,400 words"
+   "target_word_count": "2,000–2,400 words",
+   "date_published": "2026-02-21",
+   "date_modified": "2026-02-21"
   },
   "content": {
    "quick_answer_box": "Customer feedback management for small business is the process of collecting, routing, resolving, and communicating back on every piece of feedback a business receives. It requires four components working together: a zero-friction collection channel, a structured assignment workflow, a resolution tracking system, and a way to communicate the outcome back to the customer. Most SMBs have the first component. Almost none have all four.",
@@ -2144,7 +2176,9 @@
    "search_intent": "Commercial Investigation - reader is in active buying mode, comparing options across price and feature dimensions",
    "funnel_stage": "BOFU",
    "content_type": "Buyer's Guide / Comparison",
-   "target_word_count": "1,700–2,100 words"
+   "target_word_count": "1,700–2,100 words",
+   "date_published": "2026-03-03",
+   "date_modified": "2026-03-03"
   },
   "content": {
    "quick_answer_box": "Complaint management software for small business should include: zero-friction public submission (no login required), team assignment and status tracking, a unique tracking code per complaint, a resolution rate dashboard, and pricing that doesn't scale per seat. Enterprise platforms like Salesforce Service Cloud and ServiceNow are built for IT departments, not operations teams. SMBs need a tool that works in under 2 minutes and costs less than a monthly phone bill.",
@@ -2327,7 +2361,9 @@
    "search_intent": "Informational / Commercial - reader is looking for a tool that handles both external feedback and internal staff reporting without buying two separate systems",
    "funnel_stage": "MOFU",
    "content_type": "Dual-positioning Pillar",
-   "target_word_count": "1,900–2,300 words"
+   "target_word_count": "1,900–2,300 words",
+   "date_published": "2026-03-09",
+   "date_modified": "2026-03-09"
   },
   "content": {
    "quick_answer_box": "An employee problem reporting tool is a structured channel that lets staff submit workplace issues, safety concerns, operational problems, and suggestions - without going to a manager face-to-face. The best tools combine anonymous submission, unique tracking codes, and a Kanban resolution workflow so employees can see their report is being handled without exposing their identity. FeedSolve works as both an external customer feedback platform and an internal employee problem reporting system - on the same infrastructure, with separate boards for each audience.",
@@ -2472,7 +2508,9 @@
    "search_intent": "Informational - reader is diagnosing a low-response problem and wants validation plus a solution",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Cluster / SEO pillar",
-   "target_word_count": "1,500–1,900 words"
+   "target_word_count": "1,500–1,900 words",
+   "date_published": "2026-03-15",
+   "date_modified": "2026-03-15"
   },
   "content": {
    "quick_answer_box": "A feedback form without registration is a submission form that any person can access via a public link or QR code without creating an account, verifying an email, or downloading an app. Research consistently shows that requiring registration before submission reduces response rates by 40–70%. For external stakeholders - customers, suppliers, distributors - zero-registration forms are the only realistic collection method. The alternative is not 'less data' - it is silence.",
@@ -2597,7 +2635,9 @@
    "search_intent": "Commercial - high buying intent; reader has already tried Google Forms and found it insufficient; they want a direct comparison and a clear next step",
    "funnel_stage": "BOFU",
    "content_type": "Comparison / Landing Page",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2026-03-21",
+   "date_modified": "2026-03-21"
   },
   "content": {
    "quick_answer_box": "Google Forms is a free and accessible collection tool. What it doesn't do: assign submissions to team members, generate tracking codes for submitters, display a resolution rate, or send status updates. A Google Forms alternative with complaint tracking adds a resolution workflow to the submission process - so every complaint has an owner, a status, and a confirmed resolution. For SMBs managing external stakeholder complaints, the difference is between a spreadsheet and an accountable system.",
@@ -2728,7 +2768,9 @@
    "search_intent": "Commercial - reader is actively searching for a clinic-specific solution; they know they have a feedback problem but are concerned about complexity and privacy requirements",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Vertical Landing Page",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2026-04-03",
+   "date_modified": "2026-04-03"
   },
   "content": {
    "quick_answer_box": "A patient feedback system for clinics is a structured platform that allows patients to submit complaints, suggestions, and concerns via a QR code or shared link - without creating an account. The clinic team manages submissions through a Kanban-style dashboard, assigns issues to the right staff member, and communicates resolution back to the patient. For independent clinics and small healthcare practices, the best systems require minimal setup, keep patient contact information optional, and provide a resolution rate metric so clinic managers can track operational performance over time.",
@@ -2865,7 +2907,9 @@
    "search_intent": "Informational — reader is reacting to a negative review problem and searching for prevention strategy; they are motivated and close to evaluating tools",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,800–2,200 words"
+   "target_word_count": "1,800–2,200 words",
+   "date_published": "2026-04-09",
+   "date_modified": "2026-04-09"
   },
   "content": {
    "quick_answer_box": "The most effective way to reduce negative online reviews is to give unhappy customers a private, frictionless channel to complain directly — before they open Google or TripAdvisor. When a complaint is submitted privately and resolved quickly, the customer gets closure without going public. Businesses that implement a structured internal feedback board with QR codes at every customer touchpoint intercept 60–80% of complaints that would otherwise become public reviews.",
@@ -2993,7 +3037,9 @@
    "search_intent": "Commercial — reader operates a property and is actively looking for a system to capture and resolve in-stay guest issues before they escalate to review platforms",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Vertical Landing Page",
-   "target_word_count": "1,500–1,900 words"
+   "target_word_count": "1,500–1,900 words",
+   "date_published": "2026-04-15",
+   "date_modified": "2026-04-15"
   },
   "content": {
    "quick_answer_box": "A hotel guest feedback system is a platform that gives guests a frictionless way to submit complaints and requests during their stay — via a QR code in the room or at reception — without calling the front desk or waiting for check-out. The hotel team receives submissions instantly on a Kanban dashboard, assigns them to housekeeping, maintenance, or F&B, and resolves them before the guest leaves. This captures complaints that would otherwise appear on TripAdvisor or Booking.com after checkout.",
@@ -3123,7 +3169,9 @@
    "search_intent": "Commercial — direct comparison page; reader is in evaluation mode and wants to know whether SurveyMonkey handles operational complaint resolution",
    "funnel_stage": "BOFU",
    "content_type": "Comparison",
-   "target_word_count": "1,100–1,400 words"
+   "target_word_count": "1,100–1,400 words",
+   "date_published": "2026-04-21",
+   "date_modified": "2026-04-21"
   },
   "content": {
    "quick_answer_box": "SurveyMonkey is a market research and survey platform built for collecting and analysing aggregated response data. FeedSolve is a feedback resolution platform built around QR-code intake, zero-login submission, Kanban workflow, and resolution rate metrics. If your goal is to run customer satisfaction surveys and analyse trends, SurveyMonkey is a strong choice. If your goal is to capture operational complaints from customers, suppliers, or distributors and ensure every complaint is assigned, tracked, and resolved with the submitter receiving confirmation, FeedSolve is the purpose-built alternative.",
@@ -3326,7 +3374,9 @@
    "search_intent": "Commercial — direct comparison page; reader is in evaluation mode",
    "funnel_stage": "BOFU",
    "content_type": "Comparison",
-   "target_word_count": "1,100–1,400 words"
+   "target_word_count": "1,100–1,400 words",
+   "date_published": "2026-05-03",
+   "date_modified": "2026-05-03"
   },
   "content": {
    "quick_answer_box": "Freshdesk is a help desk platform built for internal customer service agents managing support tickets via email and phone. It requires submitters to have an email address and creates a support ticket model designed for registered customers. FeedSolve is a feedback resolution platform built for external stakeholders — customers, suppliers, distributors — who have no account in your system. They submit via a public QR code or link, receive a tracking code, and can check resolution status without any login. For SMBs managing operational complaints from external parties, FeedSolve is purpose-built in a way Freshdesk is not.",
@@ -3520,7 +3570,9 @@
    "search_intent": "Commercial — reader operates retail stores and is actively looking for a system to replace verbal complaints and paper suggestion boxes with a structured digital workflow",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Vertical Landing Page",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2026-05-09",
+   "date_modified": "2026-05-09"
   },
   "content": {
    "quick_answer_box": "A retail customer feedback system is a platform that lets shoppers submit complaints, suggestions, and quality issues via a QR code at the checkout counter, dressing room, or store entrance — without creating an account. The store team receives submissions on a Kanban dashboard, assigns them to floor supervisors or category managers, and resolves them with a documented outcome. This captures complaints that would otherwise become Google Reviews or remain invisible, and gives store managers a resolution rate metric to track operational performance.",
@@ -3648,7 +3700,9 @@
    "search_intent": "Informational — very high search volume; reader has a complaint they need to respond to right now, or wants to build a formal complaint handling process for their team",
    "funnel_stage": "TOFU",
    "content_type": "Pillar",
-   "target_word_count": "2,000–2,400 words"
+   "target_word_count": "2,000–2,400 words",
+   "date_published": "2026-05-15",
+   "date_modified": "2026-05-15"
   },
   "content": {
    "quick_answer_box": "Responding to a customer complaint effectively requires four steps: (1) Acknowledge — confirm receipt quickly and let the customer know their complaint is logged, (2) Investigate — assign the complaint to the right team member and document findings internally, (3) Resolve — fix the issue and communicate the specific action taken in plain language, (4) Confirm — ask whether the customer is satisfied and close the loop formally. Most SMBs handle step one informally but skip steps two, three, and four entirely. A complaint that is acknowledged but never resolved is worse than no response at all.",
@@ -3786,7 +3840,9 @@
    "search_intent": "Informational / Commercial — reader has a silent workforce problem and is looking for both the framework and the tool to solve it",
    "funnel_stage": "TOFU / MOFU",
    "content_type": "Pillar",
-   "target_word_count": "1,800–2,200 words"
+   "target_word_count": "1,800–2,200 words",
+   "date_published": "2026-05-21",
+   "date_modified": "2026-05-21"
   },
   "content": {
    "quick_answer_box": "Anonymous employee feedback is a structured, confidential channel that allows staff to submit workplace concerns, safety hazards, HR issues, and suggestions without being identified. The most effective systems combine a zero-login submission form (QR code in the break room or production floor) with genuine anonymity (no account, no IP logging), a unique tracking code so staff can verify their concern was acted on, and a Kanban resolution workflow so management can assign and close every submission. Without anonymity, psychological safety disappears and staff stop reporting.",
@@ -3918,7 +3974,9 @@
    "search_intent": "Commercial — reader is a contractor dealing with a specific complaint management problem on active projects; high intent to find a structured solution",
    "funnel_stage": "MOFU / BOFU",
    "content_type": "Vertical Landing Page",
-   "target_word_count": "1,400–1,700 words"
+   "target_word_count": "1,400–1,700 words",
+   "date_published": "2026-06-03",
+   "date_modified": "2026-06-03"
   },
   "content": {
    "quick_answer_box": "A construction client feedback system is a platform that gives project clients, site supervisors, and subcontractors a structured channel to submit snag lists, defect reports, safety observations, and complaints — via a QR code on site or a shared link. The main contractor manages submissions through a Kanban dashboard, assigns them to the relevant subcontractor or site supervisor, tracks resolution time, and closes each item with a documented outcome. For contractors managing active projects, this creates the audit trail that protects against disputes, delays, and retention withholds.",
@@ -4041,7 +4099,9 @@
    "search_intent": "Commercial - the reader is comparing options and wants to know what good suggestion box software actually does",
    "funnel_stage": "MOFU",
    "content_type": "Guide",
-   "target_word_count": "1,400-1,700 words"
+   "target_word_count": "1,400-1,700 words",
+   "date_published": "2026-06-09",
+   "date_modified": "2026-06-09"
   },
   "content": {
    "quick_answer_box": "Good suggestion box software does more than collect ideas - it closes the loop. Look for no-login submission, anonymous options, a unique tracking code per submission, assignment and workflow, multi-language forms, QR-code distribution, and resolution analytics. A spreadsheet-backed form has none of these.",
@@ -4134,7 +4194,9 @@
    "search_intent": "Informational - the reader wants a simple, practical how-to to stand up an online suggestion box",
    "funnel_stage": "TOFU",
    "content_type": "How-to",
-   "target_word_count": "1,200-1,500 words"
+   "target_word_count": "1,200-1,500 words",
+   "date_published": "2026-06-10",
+   "date_modified": "2026-06-10"
   },
   "content": {
    "quick_answer_box": "To set up an online suggestion box: (1) create a suggestion board, (2) turn on anonymous, no-login submission, (3) generate a branded QR code and link, (4) place the QR code where people are and share the link, and (5) review and resolve submissions from your dashboard. With FeedSolve this takes about 10 minutes and is free to start.",

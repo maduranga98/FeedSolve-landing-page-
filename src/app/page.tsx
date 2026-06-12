@@ -1,8 +1,9 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HeroStats from "@/components/home/HeroStats";
+import DemoSection from "@/components/home/DemoSection";
+import FAQAccordion from "@/components/home/FAQAccordion";
+import { homeFaqs } from "@/data/homeFaqs";
 import {
  ArrowRight,
  Play,
@@ -29,9 +30,6 @@ import {
  Check,
  TrendingUp,
  Smile,
- PlayCircle,
- Search,
- MousePointerClick,
  Target,
  Factory,
  Utensils,
@@ -57,35 +55,11 @@ import {
  Users,
  BarChart2,
  X,
- ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
 import blogData from "@/data/blog.json";
 
-function useCounter(target: number, duration = 1200) {
- const [value, setValue] = useState(0);
- const started = useRef(false);
- useEffect(() => {
-  if (started.current) return;
-  started.current = true;
-  const start = performance.now();
-  const update = (now: number) => {
-   const progress = Math.min((now - start) / duration, 1);
-   const eased = 1 - Math.pow(1 - progress, 3);
-   setValue(Math.round(eased * target));
-   if (progress < 1) requestAnimationFrame(update);
-  };
-  const timer = setTimeout(() => requestAnimationFrame(update), 600);
-  return () => clearTimeout(timer);
- }, [target, duration]);
- return value;
-}
-
 function Hero() {
- const total = useCounter(48, 1000);
- const resolved = useCounter(41, 1100);
- const open = useCounter(7, 900);
-
  return (
   <section id="hero">
    <div className="hero-grid-bg"></div>
@@ -150,24 +124,7 @@ function Hero() {
        </span>
       </div>
       <div className="board-body">
-       <div className="board-stats">
-        <div className="bstat">
-         <div className="bstat-n">{total}</div>
-         <div className="bstat-l">Total Issues</div>
-        </div>
-        <div className="bstat">
-         <div className="bstat-n" style={{ color: "var(--teal)" }}>
-          {resolved}
-         </div>
-         <div className="bstat-l">Resolved</div>
-        </div>
-        <div className="bstat">
-         <div className="bstat-n" style={{ color: "#E65100" }}>
-          {open}
-         </div>
-         <div className="bstat-l">Open</div>
-        </div>
-       </div>
+       <HeroStats />
        <div className="board-issues">
         <div className="bi">
          <span className="bi-code">FSV-1089</span>
@@ -673,128 +630,6 @@ function Solution() {
  );
 }
 
-function Demo() {
- const [trackerVisible, setTrackerVisible] = useState(false);
-
- return (
-  <section id="demo">
-   <div className="demo-inner">
-    <div className="section-label demo-label">
-     <PlayCircle size={13} /> Live demo
-    </div>
-    <h2>See how it works in seconds</h2>
-    <p className="demo-sub">
-     Track a real example and see how updates look from the
-     submitter&apos;s side.
-    </p>
-    <div
-     style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: 10,
-     }}
-    >
-     <span
-      style={{
-       fontSize: 12,
-       fontWeight: 600,
-       letterSpacing: "0.09em",
-       textTransform: "uppercase",
-       color: "rgba(255,255,255,0.4)",
-      }}
-     >
-      Click below to try it live
-     </span>
-     <button
-      className={`btn-primary teal demo-pulse${trackerVisible ? " active" : ""}`}
-      style={{ fontSize: 16, padding: "14px 28px", margin: "0 auto" }}
-      onClick={() => setTrackerVisible(!trackerVisible)}
-     >
-      <Search size={16} /> Track Demo Issue #FSV-1024
-     </button>
-     <span
-      style={{
-       fontSize: 13,
-       color: "rgba(255,255,255,0.35)",
-       display: "flex",
-       alignItems: "center",
-       gap: 5,
-      }}
-     >
-      <MousePointerClick size={13} /> Interactive - see the full
-      resolution timeline
-     </span>
-    </div>
-    <div className={`demo-tracker${trackerVisible ? " visible" : ""}`}>
-     <div className="dt-top">
-      <div className="dt-label">Issue Tracker</div>
-      <div className="dt-code">#FSV-1024 Damaged product in shipment</div>
-     </div>
-     <div className="demo-timeline">
-      <div className="de">
-       <div className="de-line">
-        <div className="de-dot done"></div>
-        <div className="de-conn"></div>
-       </div>
-       <div className="de-body">
-        <div className="de-time">Apr 18, 2026 · 09:14</div>
-        <div className="de-title">Issue submitted</div>
-        <div className="de-detail">
-         Submitted via QR code at warehouse gate
-        </div>
-       </div>
-      </div>
-      <div className="de">
-       <div className="de-line">
-        <div className="de-dot done"></div>
-        <div className="de-conn"></div>
-       </div>
-       <div className="de-body">
-        <div className="de-time">Apr 18, 2026 · 10:32</div>
-        <div className="de-title">Assigned to Quality Team</div>
-        <div className="de-detail">
-         Owner: Sarah K. · Priority: High
-        </div>
-       </div>
-      </div>
-      <div className="de">
-       <div className="de-line">
-        <div className="de-dot done"></div>
-        <div className="de-conn"></div>
-       </div>
-       <div className="de-body">
-        <div className="de-time">Apr 19, 2026 · 14:05</div>
-        <div className="de-title">Update posted</div>
-        <div className="de-detail">
-         &quot;Replacement shipment dispatched. ETA 2 days.&quot;
-        </div>
-       </div>
-      </div>
-      <div className="de">
-       <div className="de-line">
-        <div className="de-dot active"></div>
-       </div>
-       <div className="de-body">
-        <div className="de-time">Apr 21, 2026 · 11:00</div>
-        <div
-         className="de-title"
-         style={{ color: "var(--teal-light)", fontWeight: 700 }}
-        >
-         Issue resolved
-        </div>
-        <div className="de-detail">
-         &quot;Replacement received and confirmed by customer.&quot;
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
- );
-}
-
 function UseCases() {
  return (
   <section id="usecases">
@@ -1223,52 +1058,7 @@ function Pricing() {
  );
 }
 
-const faqs = [
- {
-  q: "Do submitters need an account?",
-  a: "No. Anyone can submit feedback without logging in. You share a link or QR code, they fill in the form - that's it. Zero friction for your customers.",
- },
- {
-  q: "Can feedback be anonymous?",
-  a: "Yes. You can enable anonymous submissions per board. Submitters still get a unique tracking code even when submitting anonymously.",
- },
- {
-  q: "How long does setup take?",
-  a: "Less than 2 minutes. Create an account, name your board, and share the link. No configuration required to get started collecting and tracking.",
- },
- {
-  q: "Do I need a demo or sales call?",
-  a: 'No. Just click "Try Now" and start immediately. We believe great software should sell itself - no gatekeeping, no onboarding calls required.',
- },
- {
-  q: "Can I upgrade later?",
-  a: "Yes. Start on the free plan and upgrade anytime as your usage grows. No data lost, no migrations, no downtime.",
- },
- {
-  q: "Can I add my company logo and brand colors to the QR code?",
-  a: "Yes. FeedSolve lets you customize your QR codes with your company logo, brand colors, and style. Branded QR codes are available on Growth and Pro plans and help your feedback boards look like a natural part of your business.",
- },
- {
-  q: "Can submitters use the feedback form in their own language?",
-  a: "Yes. FeedSolve supports multi-language submission forms so your customers, suppliers, and partners can submit feedback in their preferred language. Request any language and we'll add it - critical for businesses operating across South Asia, the Middle East, or East Africa.",
- },
- {
-  q: "Can FeedSolve work as a digital suggestion box?",
-  a: "Yes. FeedSolve doubles as an online suggestion box. Share a QR code or link and customers, employees, or visitors can drop suggestions anonymously - no login and no paper box. Unlike a virtual or electronic suggestion box, every suggestion gets a tracking code so you can follow up and close the loop.",
- },
- {
-  q: "Is FeedSolve a complaint management system?",
-  a: "Yes. FeedSolve is a complaints management system that captures, assigns, tracks, and resolves every complaint from one dashboard. Each submission gets a unique #FSV code, an owner, and a status - giving you a full audit trail from intake to resolution.",
- },
- {
-  q: "Can I use FeedSolve for supplier fault and quality tracking?",
-  a: "Yes. Manufacturing and logistics teams use FeedSolve for supplier fault tracking and quality issues. Suppliers report faults via a QR code or link, each issue is routed to an owner with a deadline, and you keep a complete record of how every defect was resolved.",
- },
-];
-
 function FAQ() {
- const [openIdx, setOpenIdx] = useState(0);
-
  return (
   <section id="faq">
    <div className="container">
@@ -1279,33 +1069,7 @@ function FAQ() {
      <HelpCircle size={13} /> FAQ
     </div>
     <h2 style={{ textAlign: "center" }}>Common questions</h2>
-    <div className="faq-wrap">
-     {faqs.map((faq, i) => (
-      <div key={i} className={`faq-item${i === openIdx ? " open" : ""}`}>
-       <div
-        className="faq-q"
-        onClick={() => setOpenIdx(i === openIdx ? -1 : i)}
-        role="button"
-        aria-expanded={i === openIdx}
-        tabIndex={0}
-        onKeyDown={(e) => {
-         if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setOpenIdx(i === openIdx ? -1 : i);
-         }
-        }}
-       >
-        {faq.q}
-        <div className="faq-arrow">
-         <ChevronDown size={13} />
-        </div>
-       </div>
-       <div className="faq-a">
-        <div className="faq-a-inner">{faq.a}</div>
-       </div>
-      </div>
-     ))}
-    </div>
+    <FAQAccordion />
    </div>
   </section>
  );
@@ -1375,7 +1139,7 @@ function Blog() {
         <div>
          <div className="blog-author-name">FeedSolve Team</div>
          <div className="blog-author-meta">
-          Apr 25, 2026 · 5 min read
+          {new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${featuredBlog.meta.date_published}T00:00:00Z`))} · 5 min read
          </div>
         </div>
        </div>
@@ -1560,7 +1324,7 @@ function FinalCTA() {
 const faqJsonLd = {
  "@context": "https://schema.org",
  "@type": "FAQPage",
- mainEntity: faqs.map((faq) => ({
+ mainEntity: homeFaqs.map((faq) => ({
   "@type": "Question",
   name: faq.q,
   acceptedAnswer: {
@@ -1587,7 +1351,7 @@ export default function Home() {
     <FeatureTeaser />
     <Problem />
     <Solution />
-    <Demo />
+    <DemoSection />
     <UseCases />
     <Diff />
     <BeforeAfter />
