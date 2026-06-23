@@ -15,11 +15,14 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_CONTACT_FUNCTION_URL!,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", company: "", message: "" });
