@@ -37,6 +37,7 @@ export default function Navbar({ variant = "home", logoSrc }: NavbarProps) {
   const productHref = variant === "blog" ? "/#solution" : "#solution";
   const pricingHref = variant === "blog" ? "/#pricing" : "#pricing";
   const demoHref = variant === "blog" ? "/#demo" : "#demo";
+  const contactHref = variant === "blog" ? "/#contact" : "#contact";
   const heroHref = variant === "blog" ? "/" : "#hero";
 
   const LinkComponent = variant === "blog" ? Link : "a";
@@ -63,6 +64,9 @@ export default function Navbar({ variant = "home", logoSrc }: NavbarProps) {
             </li>
             <li>
               <LinkComponent {...linkProps(demoHref)}>Demo</LinkComponent>
+            </li>
+            <li>
+              <LinkComponent {...linkProps(contactHref)}>Contact</LinkComponent>
             </li>
             <li>
               <Link href="/blog/" style={blogLinkStyle}>
@@ -98,6 +102,9 @@ export default function Navbar({ variant = "home", logoSrc }: NavbarProps) {
         </LinkComponent>
         <LinkComponent {...linkProps(demoHref)} onClick={closeMobileMenu}>
           Demo
+        </LinkComponent>
+        <LinkComponent {...linkProps(contactHref)} onClick={closeMobileMenu}>
+          Contact
         </LinkComponent>
         <Link href="/blog/" onClick={closeMobileMenu}>
           Blog
