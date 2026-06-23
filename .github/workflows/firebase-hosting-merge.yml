@@ -22,7 +22,7 @@ jobs:
           NEXT_PUBLIC_CONTACT_FUNCTION_URL: ${{ secrets.CONTACT_FUNCTION_URL }}
 
       - name: Deploy functions
-        run: npx firebase-tools deploy --only functions --project feedsolve-e9483
+        run: npx firebase-tools deploy --only functions:sendContactEmail --project feedsolve-e9483
         env:
           GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FEEDSOLVE_E9483 }}
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
