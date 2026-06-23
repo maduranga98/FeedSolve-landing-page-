@@ -11,11 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm run build
+
+      - name: Install and build functions
+        run: npm ci && npm run build
+        working-directory: functions
+
+      - name: Install and build site
+        run: npm ci && npm run build
         env:
-          NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
-          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
-          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          NEXT_PUBLIC_CONTACT_FUNCTION_URL: ${{ secrets.CONTACT_FUNCTION_URL }}
+
+      - name: Deploy functions
+        run: npx firebase-tools deploy --only functions --project feedsolve-e9483
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FEEDSOLVE_E9483 }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

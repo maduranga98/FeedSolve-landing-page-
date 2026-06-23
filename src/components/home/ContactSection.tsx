@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Mail, Phone, MapPin, Globe, Send, CheckCircle } from "lucide-react";
 
 export default function ContactSection() {
@@ -16,19 +15,20 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus("sending");
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_CONTACT_FUNCTION_URL!,
         {
-          from_name: form.name,
-          from_email: form.email,
-          company: form.company || "N/A",
-          message: form.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
       );
-      setStatus("success");
-      setForm({ name: "", email: "", company: "", message: "" });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", company: "", message: "" });
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
