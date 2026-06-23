@@ -1,12 +1,15 @@
 import { onRequest } from "firebase-functions/v2/https";
-import { defineString } from "firebase-functions/params";
+import { defineSecret } from "firebase-functions/params";
 import * as nodemailer from "nodemailer";
 
-const smtpUser = defineString("SMTP_USER");
-const smtpPass = defineString("SMTP_PASS");
+const smtpUser = defineSecret("SMTP_USER");
+const smtpPass = defineSecret("SMTP_PASS");
 
 export const sendContactEmail = onRequest(
-  { cors: ["https://feedsolve.com", "https://feedsolve-e9483.web.app"] },
+  {
+    cors: ["https://feedsolve.com", "https://www.feedsolve.com", "https://feedsolve-e9483.web.app"],
+    secrets: [smtpUser, smtpPass],
+  },
   async (req, res) => {
     if (req.method !== "POST") {
       res.status(405).send("Method Not Allowed");
