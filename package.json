@@ -10,6 +10,7 @@
     "deploy": "next build && firebase deploy"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/nodemailer": "^8.0.1",
     "lucide-react": "^1.11.0",
     "next": "16.2.4",
