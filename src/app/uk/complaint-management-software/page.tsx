@@ -22,7 +22,7 @@ import UKComplaintFAQ from "@/components/UKComplaintFAQ";
 import { landingBreadcrumb } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Complaint Management Software for UK Small Business | FeedSolve",
+  title: "Complaint Management Software for UK Small Business",
   description:
     "Track and resolve every customer complaint with FeedSolve — the complaint management software built for UK SMBs. No login needed for submitters. Free to start.",
   openGraph: {
