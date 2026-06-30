@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/authors/feedsolve-team", priority: 0.5, frequency: "monthly" as const },
     { path: "/uk/complaint-management-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/au/complaint-management-software", priority: 0.8, frequency: "monthly" as const },
+    { path: "/au/customer-feedback-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/us/complaint-management-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/eu/gdpr-feedback-management", priority: 0.8, frequency: "monthly" as const },
     { path: "/features/branded-qr-codes", priority: 0.7, frequency: "monthly" as const },

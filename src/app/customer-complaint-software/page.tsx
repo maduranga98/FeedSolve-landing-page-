@@ -83,6 +83,7 @@ export default function CustomerComplaintSoftware() {
       <VerticalPage
         badge="Customer Complaint Software"
         breadcrumbLabel="Customer Complaint Software"
+        breadcrumbUrl={URL}
         h1="Customer Complaint Software That Protects Your Reputation"
         subheading="Capture customer complaints before they become public reviews - then assign, track, and resolve every one from a single dashboard."
         quickAnswer="FeedSolve is customer complaint software for small and mid-sized businesses. Customers submit a complaint by scanning a QR code or opening a link - no login, no app, in any language. Each complaint gets a unique tracking code, then your team assigns it, works it through a Kanban workflow, and resolves it with a public reply. A live resolution rate shows whether your process works. Catching complaints privately and closing the loop is the most reliable way to reduce negative reviews. Free to start, no credit card."

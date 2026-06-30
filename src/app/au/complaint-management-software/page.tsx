@@ -15,10 +15,11 @@ import {
   ChevronRight,
 } from "lucide-react";
 import AUComplaintFAQ from "@/components/AUComplaintFAQ";
+import { landingBreadcrumb } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
-    "Complaint Management Software for Australian Small Business | FeedSolve",
+    "Complaint Management Software for Australian Small Business",
   description:
     "FeedSolve is complaint management software built for Australian SMBs. QR intake, zero-login submission, Kanban resolution workflow, and audit trail aligned with Australian Consumer Law. Free to start.",
   openGraph: {
@@ -138,6 +139,17 @@ export default function AUComplaintManagementPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            landingBreadcrumb(
+              "Australia Complaint Management Software",
+              "https://feedsolve.com/au/complaint-management-software/"
+            )
+          ),
+        }}
       />
       <Navbar variant="blog" />
 
@@ -800,6 +812,11 @@ export default function AUComplaintManagementPage() {
             }}
           >
             {[
+              {
+                href: "/au/customer-feedback-software/",
+                label: "AU Customer Feedback",
+                sub: "Customer feedback platform",
+              },
               {
                 href: "/manufacturing/supplier-feedback/",
                 label: "AU Manufacturing",

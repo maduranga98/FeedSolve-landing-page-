@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { landingBreadcrumb } from "@/lib/seo";
 import {
   ArrowRight,
   ChevronRight,
@@ -67,6 +68,9 @@ export interface VerticalProps {
 
   // Breadcrumb label
   breadcrumbLabel: string;
+
+  // Canonical absolute URL of the page (used for BreadcrumbList structured data)
+  breadcrumbUrl: string;
 }
 
 export default function VerticalPage(props: VerticalProps) {
@@ -91,12 +95,19 @@ export default function VerticalPage(props: VerticalProps) {
     ctaSub,
     relatedLinks,
     breadcrumbLabel,
+    breadcrumbUrl,
   } = props;
 
   const [openFaq, setOpenFaq] = useState<number>(0);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(landingBreadcrumb(breadcrumbLabel, breadcrumbUrl)),
+        }}
+      />
       <Navbar variant="blog" />
 
       {/* ── HERO ─────────────────────────────────────────── */}

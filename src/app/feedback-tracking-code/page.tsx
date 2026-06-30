@@ -81,6 +81,7 @@ export default function FeedbackTrackingCode() {
       <VerticalPage
         badge="Feedback Tracking Codes"
         breadcrumbLabel="Feedback Tracking Code"
+        breadcrumbUrl={URL}
         h1="A Tracking Code for Every Complaint - No Login Needed"
         subheading="Give customers a complaint tracking number the moment they submit. They follow it to resolution like a parcel; you keep every issue accountable on one board."
         quickAnswer="FeedSolve issues a unique feedback tracking code - #FSV-XXXX - for every submission, automatically. The submitter keeps the code and checks status anytime with no account and no login, just like tracking a parcel. Behind the scenes your team assigns, tracks, and resolves each issue on a Kanban board, then posts a public reply the submitter sees on their tracking page. It works for customers, suppliers, tenants, and anonymous submitters alike. Free to start, no credit card."
