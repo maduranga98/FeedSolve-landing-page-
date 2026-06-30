@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowRight, CheckCircle2, ShieldCheck, QrCode, ClipboardList } from "lucide-react";
+import { landingBreadcrumb } from "@/lib/seo";
 
 type MarketLandingPageProps = {
   eyebrow: string;
@@ -13,6 +14,8 @@ type MarketLandingPageProps = {
   competitorBody: string;
   price: string;
   industries: string[];
+  breadcrumbLabel: string;
+  breadcrumbUrl: string;
 };
 
 export default function MarketLandingPage({
@@ -25,9 +28,17 @@ export default function MarketLandingPage({
   competitorBody,
   price,
   industries,
+  breadcrumbLabel,
+  breadcrumbUrl,
 }: MarketLandingPageProps) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(landingBreadcrumb(breadcrumbLabel, breadcrumbUrl)),
+        }}
+      />
       <Navbar variant="blog" />
       <main>
         <section style={{ background: "var(--navy)", padding: "92px 32px 68px" }}>

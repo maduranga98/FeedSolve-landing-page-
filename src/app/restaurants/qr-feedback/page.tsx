@@ -64,6 +64,7 @@ export default function RestaurantsQrFeedback() {
       <VerticalPage
         badge="Restaurants & Hotels · QR feedback"
         breadcrumbLabel="QR Feedback for Restaurants"
+        breadcrumbUrl="https://feedsolve.com/restaurants/qr-feedback/"
         h1="Catch Guest Complaints Before They Hit Google"
         subheading="A branded QR code on every table gives guests a private outlet to report issues in 30 seconds. Your team resolves them before anyone writes a review."
         quickAnswer="FeedSolve places a QR code on your tables, counters, or receipts. Guests scan, describe their issue, and receive a tracking code - no login, no app, no friction. Your floor manager sees it instantly in a Kanban dashboard, assigns it to the right person, and sends a reply. The guest sees 'Resolved' on their tracking page. The review never gets written."

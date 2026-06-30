@@ -88,6 +88,7 @@ export default function ComplaintManagementSoftware() {
       <VerticalPage
         badge="Complaint Management Software"
         breadcrumbLabel="Complaint Management Software"
+        breadcrumbUrl={URL}
         h1="Complaint Management Software That Actually Closes the Loop"
         subheading="Collect, assign, track, and resolve every complaint from one dashboard - without the cost or complexity of enterprise help desks."
         quickAnswer="FeedSolve is complaint management software for small and mid-sized businesses. Customers, suppliers, and staff submit complaints by scanning a QR code or opening a link - no login, no app, in any language. Each complaint gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it with a full audit trail. A live resolution rate shows whether your process is actually working. Free to start, no credit card."

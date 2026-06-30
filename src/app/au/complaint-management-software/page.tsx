@@ -15,6 +15,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import AUComplaintFAQ from "@/components/AUComplaintFAQ";
+import { landingBreadcrumb } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -138,6 +139,17 @@ export default function AUComplaintManagementPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            landingBreadcrumb(
+              "Australia Complaint Management Software",
+              "https://feedsolve.com/au/complaint-management-software/"
+            )
+          ),
+        }}
       />
       <Navbar variant="blog" />
 

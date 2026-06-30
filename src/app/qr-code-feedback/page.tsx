@@ -81,6 +81,7 @@ export default function QrCodeFeedback() {
       <VerticalPage
         badge="QR Code Feedback"
         breadcrumbLabel="QR Code Feedback System"
+        breadcrumbUrl={URL}
         h1="QR Code Feedback - Scan, Submit, Resolve"
         subheading="Turn any surface into a feedback channel. Customers scan a QR code, submit in seconds with no app or login, and you resolve every issue from one dashboard."
         quickAnswer="FeedSolve is a QR code feedback system that collects and resolves feedback in one place. Print a branded QR code on a receipt, table tent, delivery note, or wall - anyone scans it with their phone camera and submits a comment or complaint in any language, with no app and no login. Every submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board. Free to start, no credit card."

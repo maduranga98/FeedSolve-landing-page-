@@ -1339,7 +1339,16 @@ const websiteJsonLd = {
  "@context": "https://schema.org",
  "@type": "WebSite",
  name: "FeedSolve",
+ alternateName: "FeedSolve Feedback & Complaint Management",
  url: "https://feedsolve.com/",
+ inLanguage: "en",
+ description:
+  "Complaint management and digital suggestion box software for SMBs. Collect feedback via QR code, then assign, track, and resolve every complaint in one dashboard.",
+ publisher: {
+  "@type": "Organization",
+  name: "FeedSolve",
+  url: "https://feedsolve.com/",
+ },
 };
 
 export default function Home() {

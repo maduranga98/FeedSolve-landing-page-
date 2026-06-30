@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import blogData from "@/data/blog.json";
 import BlogPostClient from "./BlogPostClient";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 const SITE_URL = "https://feedsolve.com";
 const withTrailingSlash = (path: string) => (path === "/" ? path : `${path.replace(/\/$/, "")}/`);
@@ -82,12 +83,19 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
  const publishedDate = blog.meta.date_published;
  const modifiedDate = blog.meta.date_modified;
 
+ const keywords = [blog.meta.primary_keyword, ...(blog.meta.secondary_keywords ?? [])]
+  .filter(Boolean)
+  .join(", ");
+
  const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline: blog.meta.title,
   description: blog.meta.meta_description,
   url: absoluteUrl(blog.meta.slug),
+  image: [`${SITE_URL}/og-image.png`],
+  inLanguage: "en",
+  keywords,
   datePublished: publishedDate,
   dateModified: modifiedDate,
   author: {
@@ -110,11 +118,21 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   },
  };
 
+ const breadcrumb = breadcrumbJsonLd([
+  { name: "Home", url: `${SITE_URL}/` },
+  { name: "Blog", url: `${SITE_URL}/blog/` },
+  { name: blog.meta.title, url: absoluteUrl(blog.meta.slug) },
+ ]);
+
  return (
   <>
    <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+   />
+   <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
    />
    <BlogPostClient blog={blog} otherPosts={otherPosts} />
   </>

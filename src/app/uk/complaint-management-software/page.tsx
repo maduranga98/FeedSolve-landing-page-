@@ -19,6 +19,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import UKComplaintFAQ from "@/components/UKComplaintFAQ";
+import { landingBreadcrumb } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Complaint Management Software for UK Small Business | FeedSolve",
@@ -163,6 +164,17 @@ export default function UKComplaintManagementPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            landingBreadcrumb(
+              "UK Complaint Management Software",
+              "https://feedsolve.com/uk/complaint-management-software/"
+            )
+          ),
+        }}
       />
       <Navbar variant="blog" />
 

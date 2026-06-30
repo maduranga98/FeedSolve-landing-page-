@@ -21,6 +21,8 @@ export default function USComplaintManagementPage() {
       competitorBody="Google Forms and Typeform collect submissions; FeedSolve adds the workflow after submit. Teams can assign issues, add internal notes, update statuses, and let submitters follow progress without creating an account."
       price="$19/month on the Starter plan"
       industries={["Restaurants", "Manufacturing", "Retail", "Logistics"]}
+      breadcrumbLabel="US Complaint Management Software"
+      breadcrumbUrl={url}
     />
   );
 }

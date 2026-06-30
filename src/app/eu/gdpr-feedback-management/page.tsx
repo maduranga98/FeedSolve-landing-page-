@@ -3,6 +3,9 @@
 
 import type { Metadata } from "next";
 import GDPRPageClient from "./GDPRPageClient";
+import { landingBreadcrumb } from "@/lib/seo";
+
+const URL = "https://feedsolve.com/eu/gdpr-feedback-management/";
 
 export const metadata: Metadata = {
   title: "GDPR-Compliant Feedback Management Software | FeedSolve",
@@ -25,6 +28,32 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "GDPR-Compliant Feedback Management Software",
+  description:
+    "FeedSolve is feedback management and complaint tracking software designed with GDPR data minimisation principles - anonymous mode, optional contact fields, and a secure audit trail.",
+  url: URL,
+  inLanguage: "en",
+};
+
 export default function EUGDPRFeedbackPage() {
-  return <GDPRPageClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            landingBreadcrumb("GDPR Feedback Management", URL)
+          ),
+        }}
+      />
+      <GDPRPageClient />
+    </>
+  );
 }

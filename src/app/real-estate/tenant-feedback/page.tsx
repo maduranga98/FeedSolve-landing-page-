@@ -65,6 +65,7 @@ export default function RealEstateTenantFeedback() {
       <VerticalPage
         badge="Real Estate & Property · Tenant feedback"
         breadcrumbLabel="Tenant Feedback Portal"
+        breadcrumbUrl="https://feedsolve.com/real-estate/tenant-feedback/"
         h1="Tenant Feedback Portal and HOA Complaint Form"
         subheading="Give tenants a QR code in the lobby or welcome pack to submit requests without calling. HOAs can share the same flow as an HOA complaint form for community issues. Track every issue to resolution with a documented audit trail."
         quickAnswer="FeedSolve is a tenant feedback portal and maintenance request tracking system for property managers, landlords, and HOA boards. Tenants scan a QR code in the lobby or click a link in their welcome letter - no login required. Residents can also use an HOA complaint form for noise, parking, landscaping, or shared-area concerns. Requests route to the property manager, who assigns to the right contractor, tracks resolution, and sends a confirmation reply. Tenants see their issue resolved via their tracking code. No phone tag. No lost work orders. Full audit trail."

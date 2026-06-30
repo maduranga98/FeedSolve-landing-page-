@@ -82,6 +82,7 @@ export default function ManufacturingSupplierFeedback() {
       <VerticalPage
         badge="Manufacturing · Supplier feedback"
         breadcrumbLabel="Supplier Feedback for Manufacturers"
+        breadcrumbUrl="https://feedsolve.com/manufacturing/supplier-feedback/"
         h1="Stop Managing Supplier Complaints Over WhatsApp"
         subheading="Give every supplier and shop floor team a QR code to report defects, delivery issues, quality concerns, and production line feedback - with a full resolution workflow and audit trail built in."
         quickAnswer="FeedSolve is a supplier feedback and complaint resolution platform built for manufacturing SMBs. Suppliers scan a QR code on a delivery note, while operators can submit a shop floor complaint or production line feedback from a shared QR code without logging in. Each submitter receives a tracking code. Your quality team manages every complaint through a Kanban dashboard - assign, resolve, document, and reply - with resolution rate visible at all times."

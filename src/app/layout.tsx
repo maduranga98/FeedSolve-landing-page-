@@ -135,12 +135,14 @@ const organizationJsonLd = {
  name: "FeedSolve",
  url: "https://feedsolve.com/",
  logo: "https://feedsolve.com/logo.webp",
+ description:
+  "FeedSolve is complaint management and digital suggestion box software for SMBs - collect feedback via branded QR codes, then assign, track, and resolve every complaint in one dashboard.",
  contactPoint: {
   "@type": "ContactPoint",
   email: "hello@feedsolve.com",
   contactType: "customer support",
  },
- sameAs: [],
+ sameAs: ["https://www.linkedin.com/company/feedsolve/"],
 };
 
 export default function RootLayout({

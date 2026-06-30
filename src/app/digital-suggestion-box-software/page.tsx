@@ -88,6 +88,7 @@ export default function DigitalSuggestionBoxSoftware() {
       <VerticalPage
         badge="Digital Suggestion Box"
         breadcrumbLabel="Digital Suggestion Box Software"
+        breadcrumbUrl={URL}
         h1="Digital Suggestion Box Software That Closes the Loop"
         subheading="Replace the dusty box on the wall - and the Google Form that goes nowhere - with an online suggestion box that turns ideas and complaints into resolved actions."
         quickAnswer="FeedSolve is a digital suggestion box for teams and customers. People submit anonymously via a QR code or link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board with a full audit trail. From an anonymous employee suggestion box on the shop floor to a virtual suggestion box for remote teams, one tool covers it - free to start."

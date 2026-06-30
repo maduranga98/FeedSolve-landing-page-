@@ -57,6 +57,7 @@ export default function LogisticsDeliveryFeedback() {
       <VerticalPage
         badge="Logistics & Distribution · Delivery feedback"
         breadcrumbLabel="Delivery Complaint Tracking"
+        breadcrumbUrl="https://feedsolve.com/logistics/delivery-feedback/"
         h1="Track Every Delivery Complaint Across Every Route"
         subheading="Drivers, warehouse teams, 3PL partners, distributors, and recipients report issues via QR code - no login required. Your ops team sees every complaint in a Kanban dashboard and resolves it with a documented trail."
         quickAnswer="FeedSolve gives logistics and distribution companies a structured channel for warehouse feedback, delivery complaints, route issues, and driver reports. Use it as a lightweight driver feedback app or 3PL feedback platform: drivers scan a QR code in the cab, warehouse teams scan at loading bays, and recipients scan a code on the delivery slip to report damage or delays. Your operations team manages everything from a single dashboard - assigning, tracking, and resolving every complaint with full visibility and a resolution rate metric."
