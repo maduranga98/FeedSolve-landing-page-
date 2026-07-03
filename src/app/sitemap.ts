@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import blogData from "@/data/blog.json";
+import { alternatives } from "@/data/alternatives";
 
 export const dynamic = "force-static";
 
@@ -54,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/compare/feedsolve-vs-typeform", priority: 0.6, frequency: "monthly" as const },
     { path: "/compare/feedsolve-vs-zonka", priority: 0.6, frequency: "monthly" as const },
     { path: "/compare/feedsolve-vs-jotform", priority: 0.6, frequency: "monthly" as const },
+    { path: "/alternatives", priority: 0.7, frequency: "monthly" as const },
+    ...alternatives.map((alt) => ({
+      path: `/alternatives/${alt.slug}`,
+      priority: 0.6,
+      frequency: "monthly" as const,
+    })),
   ];
 
   return [
