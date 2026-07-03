@@ -41,6 +41,7 @@ All paid tiers are monthly; no annual lock-in is required.
 - [EU — GDPR feedback management](https://feedsolve.com/eu/gdpr-feedback-management/)
 - [US](https://feedsolve.com/us/)
 - [Compare FeedSolve](https://feedsolve.com/compare/)
+- [Alternatives hub](https://feedsolve.com/alternatives/): guides to FeedSolve as an alternative to Medallia, Qualtrics, Zonka, Typeform, Canny, Zendesk, Uniqode, Trustpilot, and more
 - [Blog](https://feedsolve.com/blog/)
 - [Privacy](https://feedsolve.com/privacy/)
 - [Terms](https://feedsolve.com/terms/)

@@ -113,6 +113,15 @@ export default function ComparePage() {
                 </Link>
               ))}
             </div>
+            <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: 16, padding: "24px 28px", marginTop: 28 }}>
+              <p style={{ color: "var(--text-mid)", fontSize: 15, lineHeight: 1.7, margin: 0 }}>
+                Switching away from a specific tool? Browse our{" "}
+                <Link href="/alternatives/" style={{ color: "var(--teal)", fontWeight: 700 }}>
+                  alternatives guides
+                </Link>{" "}
+                covering Medallia, Qualtrics, Zendesk, Canny, SurveyMonkey, and more.
+              </p>
+            </div>
           </div>
         </section>
       </main>
