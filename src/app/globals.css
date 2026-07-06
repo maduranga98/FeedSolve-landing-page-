@@ -260,7 +260,11 @@ h3 { font-size: 20px; font-weight: 700; }
 
 /* PRICING */
 #pricing { background: var(--bg); }
-.pricing-sub { font-size: 18px; color: var(--text-mid); margin-top: 12px; margin-bottom: 52px; }
+.pricing-sub { font-size: 18px; color: var(--text-mid); margin-top: 12px; margin-bottom: 28px; }
+.pricing-toggle { display: inline-flex; align-items: center; gap: 4px; padding: 5px; background: var(--bg-warm); border: 1.5px solid var(--border); border-radius: 100px; margin-bottom: 48px; }
+.pt-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px; border: none; background: transparent; border-radius: 100px; font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--text-mid); cursor: pointer; transition: background var(--t), color var(--t), box-shadow var(--t); }
+.pt-btn.active { background: var(--white); color: var(--navy); box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.1)); }
+.pt-save { font-size: 11px; font-weight: 800; letter-spacing: 0.03em; color: var(--teal); background: rgba(58,143,165,0.12); padding: 2px 8px; border-radius: 100px; }
 .pricing-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; align-items: start; margin-bottom: 16px; }
 .pc { background: var(--white); border-radius: var(--radius-lg); border: 1.5px solid var(--border); padding: 26px; position: relative; transition: transform var(--t), box-shadow var(--t); }
 .pc:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
