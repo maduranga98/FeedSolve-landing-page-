@@ -31,6 +31,11 @@ const excerpts: Record<number, string> = {
  8: "A 5-stage Kanban model that moves complaints from received to resolved with full accountability.",
  9: "One is a survey builder, the other is a feedback resolution platform. See which fits your use case.",
  10: "Close channel blind spots with structured distributor feedback - tracking codes and resolution workflow built in.",
+ 32: "Give diners a private table QR channel to report problems during service - and fix them before they become Google reviews.",
+ 33: "Give every branch its own feedback board and HQ one dashboard - and spot the weak location in days, not quarters.",
+ 34: "Franchisees run their own boards, the franchisor sees resolution rates across every unit - brand protection without micromanagement.",
+ 35: "Scripts by complaint type, a recovery sequence for the floor team, and a logging habit that fixes root causes.",
+ 36: "The paper comment card died with the pen. Here's the QR version - three fields, a tracking code, and a closed loop.",
 };
 
 const postVisuals: Record<number, {
@@ -268,6 +273,122 @@ const postVisuals: Record<number, {
   author: "FeedSolve Team",
   date: "Mar 25, 2026",
   readTime: "4 min",
+ },
+ 32: {
+  cat: "qr",
+  imgBg: "linear-gradient(135deg,#FFF8E1 0%,#FFE0B2 100%)",
+  img: (
+   <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+    <rect x="14" y="40" width="52" height="8" rx="4" fill="white" opacity="0.9" />
+    <rect x="24" y="48" width="4" height="16" rx="2" fill="#E65100" opacity="0.5" />
+    <rect x="52" y="48" width="4" height="16" rx="2" fill="#E65100" opacity="0.5" />
+    <rect x="30" y="20" width="20" height="20" rx="3" fill="#1E3557" opacity="0.8" />
+    <rect x="34" y="24" width="12" height="12" rx="2" fill="white" />
+    <rect x="37" y="27" width="6" height="6" rx="1" fill="#E65100" opacity="0.8" />
+   </svg>
+  ),
+  tagLabel: "QR Codes",
+  tagStyle: { background: "#FFF8E1", color: "#E65100" },
+  avatarBg: "#E65100",
+  avatarInitials: "FS",
+  author: "FeedSolve Team",
+  date: "Jun 17, 2026",
+  readTime: "5 min",
+ },
+ 33: {
+  cat: "operations",
+  imgBg: "linear-gradient(135deg,#E8F4F8 0%,#C8E6C9 100%)",
+  img: (
+   <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+    <rect x="30" y="12" width="20" height="16" rx="3" fill="#3A8FA5" opacity="0.9" />
+    <rect x="34" y="17" width="12" height="3" rx="1.5" fill="white" />
+    <rect x="10" y="46" width="16" height="14" rx="3" fill="white" opacity="0.9" />
+    <rect x="32" y="46" width="16" height="14" rx="3" fill="white" opacity="0.9" />
+    <rect x="54" y="46" width="16" height="14" rx="3" fill="white" opacity="0.9" />
+    <path d="M40 28v8M18 46v-6h44v6" stroke="#1E3557" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+    <rect x="14" y="51" width="8" height="3" rx="1.5" fill="#3A8FA5" opacity="0.6" />
+    <rect x="36" y="51" width="8" height="3" rx="1.5" fill="#3A8FA5" opacity="0.6" />
+    <rect x="58" y="51" width="8" height="3" rx="1.5" fill="#3A8FA5" opacity="0.6" />
+   </svg>
+  ),
+  tagLabel: "Operations",
+  tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
+  avatarBg: "var(--navy)",
+  avatarInitials: "FS",
+  author: "FeedSolve Team",
+  date: "Jun 22, 2026",
+  readTime: "6 min",
+ },
+ 34: {
+  cat: "operations",
+  imgBg: "linear-gradient(135deg,#E8EAF6 0%,#E8F4F8 100%)",
+  img: (
+   <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+    <circle cx="40" cy="26" r="10" fill="white" opacity="0.9" />
+    <path d="M36 26l3 3 5-5" stroke="#3A8FA5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="12" y="48" width="14" height="16" rx="3" fill="white" opacity="0.9" />
+    <rect x="33" y="48" width="14" height="16" rx="3" fill="white" opacity="0.9" />
+    <rect x="54" y="48" width="14" height="16" rx="3" fill="white" opacity="0.9" />
+    <path d="M40 36v6M19 48v-4h42v4" stroke="#1E3557" strokeWidth="2" strokeLinecap="round" opacity="0.45" />
+    <rect x="16" y="53" width="6" height="3" rx="1.5" fill="#1E3557" opacity="0.5" />
+    <rect x="37" y="53" width="6" height="3" rx="1.5" fill="#1E3557" opacity="0.5" />
+    <rect x="58" y="53" width="6" height="3" rx="1.5" fill="#1E3557" opacity="0.5" />
+   </svg>
+  ),
+  tagLabel: "Operations",
+  tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
+  avatarBg: "var(--navy)",
+  avatarInitials: "FS",
+  author: "FeedSolve Team",
+  date: "Jun 26, 2026",
+  readTime: "5 min",
+ },
+ 35: {
+  cat: "guides",
+  imgBg: "linear-gradient(135deg,#FFF8E1 0%,#FFECB3 100%)",
+  img: (
+   <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+    <rect x="18" y="14" width="44" height="52" rx="5" fill="white" opacity="0.9" />
+    <rect x="26" y="24" width="28" height="3" rx="1.5" fill="#E65100" opacity="0.6" />
+    <circle cx="29" cy="36" r="3" fill="#F57F17" opacity="0.5" />
+    <rect x="36" y="34" width="18" height="3" rx="1.5" fill="#7A94AD" />
+    <circle cx="29" cy="46" r="3" fill="#F57F17" opacity="0.5" />
+    <rect x="36" y="44" width="14" height="3" rx="1.5" fill="#7A94AD" />
+    <circle cx="29" cy="56" r="3" fill="#F57F17" opacity="0.5" />
+    <rect x="36" y="54" width="16" height="3" rx="1.5" fill="#7A94AD" />
+   </svg>
+  ),
+  tagLabel: "Guides",
+  tagStyle: { background: "#FFF8E1", color: "#E65100" },
+  avatarBg: "#E65100",
+  avatarInitials: "FS",
+  author: "FeedSolve Team",
+  date: "Jul 1, 2026",
+  readTime: "6 min",
+ },
+ 36: {
+  cat: "guides",
+  imgBg: "linear-gradient(135deg,#E8F4F8 0%,#E0F7FA 100%)",
+  img: (
+   <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+    <rect x="14" y="22" width="30" height="40" rx="4" fill="white" opacity="0.9" />
+    <rect x="19" y="28" width="20" height="3" rx="1.5" fill="#7A94AD" />
+    <rect x="19" y="35" width="14" height="3" rx="1.5" fill="#7A94AD" />
+    <path d="M22 48l14 8M22 56l14-8" stroke="#FF6B6B" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
+    <rect x="46" y="26" width="22" height="22" rx="3" fill="#1E3557" opacity="0.8" />
+    <rect x="50" y="30" width="14" height="14" rx="2" fill="white" />
+    <rect x="53" y="33" width="8" height="8" rx="1" fill="#3A8FA5" />
+    <circle cx="57" cy="58" r="7" fill="#3A8FA5" opacity="0.85" />
+    <path d="M54 58l2 2 4-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+   </svg>
+  ),
+  tagLabel: "Guides",
+  tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" },
+  avatarBg: "var(--navy)",
+  avatarInitials: "FS",
+  author: "FeedSolve Team",
+  date: "Jul 6, 2026",
+  readTime: "5 min",
  },
 };
 
