@@ -1200,7 +1200,7 @@ const websiteJsonLd = {
  "@context": "https://schema.org",
  "@type": "WebSite",
  name: "FeedSolve",
- alternateName: "FeedSolve Feedback & Complaint Management",
+ alternateName: ["Feed Solve", "FeedSolve Feedback & Complaint Management"],
  url: "https://feedsolve.com/",
  inLanguage: "en",
  description:
