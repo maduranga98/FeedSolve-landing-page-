@@ -67,7 +67,7 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
         — software builders with hands-on experience in SMB operations across South Asia and the UK.
       </div>
       <div className="footer-copy">
-        © 2026 FeedSolve. All rights reserved. &nbsp;·&nbsp; A product of{" "}
+        © 2026 FeedSolve (also searched as &ldquo;Feed Solve&rdquo;). All rights reserved. &nbsp;·&nbsp; A product of{" "}
         <a className="footer-company-link" href="https://www.lumoraventures.com/" target="_blank" rel="noopener noreferrer">
           Lumora Ventures Pvt. Ltd.
         </a>

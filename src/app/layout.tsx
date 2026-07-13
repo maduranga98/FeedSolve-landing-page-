@@ -35,6 +35,16 @@ export const metadata: Metadata = {
  },
  description:
   "FeedSolve is complaint management and digital suggestion box software for SMBs. Collect feedback via QR code, then assign, track, and resolve every complaint in one dashboard - in any language. Free to start, no credit card.",
+ applicationName: "FeedSolve",
+ keywords: [
+  "FeedSolve",
+  "Feed Solve",
+  "feed solve app",
+  "feedsolve.com",
+  "complaint management software",
+  "digital suggestion box software",
+  "QR code feedback",
+ ],
  openGraph: {
   title: "FeedSolve - Feedback Management & Complaint Tracking Software for SMBs",
   description:
@@ -90,7 +100,7 @@ const softwareApplicationJsonLd = {
  "@context": "https://schema.org",
  "@type": "SoftwareApplication",
  name: "FeedSolve",
- alternateName: "FeedSolve Feedback & Complaint Management",
+ alternateName: ["Feed Solve", "FeedSolve Feedback & Complaint Management"],
  applicationCategory: "BusinessApplication",
  applicationSubCategory: "CustomerFeedbackSoftware",
  operatingSystem: "Web",
@@ -101,7 +111,7 @@ const softwareApplicationJsonLd = {
  screenshot: "https://feedsolve.com/feedsolve.webp",
  inLanguage: ["en", "en-GB", "en-AU", "en-US"],
  keywords:
-  "feedback management software, complaint management software, QR code feedback, supplier feedback, tenant feedback, GDPR feedback management, customer complaint tracking, SMB feedback platform",
+  "feedsolve, feed solve, feedback management software, complaint management software, QR code feedback, supplier feedback, tenant feedback, GDPR feedback management, customer complaint tracking, SMB feedback platform",
  featureList: [
   "Branded QR code feedback collection",
   "No-login submission for customers and suppliers",
@@ -133,6 +143,7 @@ const organizationJsonLd = {
  "@context": "https://schema.org",
  "@type": "Organization",
  name: "FeedSolve",
+ alternateName: ["Feed Solve"],
  url: "https://feedsolve.com/",
  logo: "https://feedsolve.com/logo.webp",
  description:
