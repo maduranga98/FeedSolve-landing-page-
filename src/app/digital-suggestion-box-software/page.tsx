@@ -5,9 +5,9 @@ import VerticalPage from "@/components/VerticalPage";
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
 export const metadata: Metadata = {
-  title: "Digital Suggestion Box Software | Online Suggestion Box",
+  title: "Suggestion Box Software: Anonymous Digital Suggestion Box (Free)",
   description:
-    "A digital suggestion box that closes the loop. Collect anonymous suggestions via a QR code or link - no login, any language - then assign, track, and resolve every one. Free to start.",
+    "Suggestion box software that closes the loop. Collect anonymous suggestions online via a QR code or link - no login, any language - then assign, track, and resolve every one. Free to start.",
   keywords: [
     "digital suggestion box",
     "suggestion box software",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: URL },
   openGraph: {
-    title: "Digital Suggestion Box Software | Online Suggestion Box | FeedSolve",
+    title: "Suggestion Box Software: Anonymous Digital Suggestion Box | FeedSolve",
     description:
-      "Collect anonymous suggestions via a QR code or link - no login, any language - then assign, track, and resolve every one. Free to start.",
+      "Collect anonymous suggestions online via a QR code or link - no login, any language - then assign, track, and resolve every one. Free to start.",
     url: URL,
     type: "website",
   },
@@ -174,6 +174,11 @@ export default function DigitalSuggestionBoxSoftware() {
         ctaHeading="Launch your digital suggestion box today"
         ctaSub="Create a board, generate a QR code, and start collecting suggestions in minutes. Free to start, no credit card."
         relatedLinks={[
+          {
+            href: "/blog/anonymous-suggestion-box/",
+            label: "Anonymous suggestion box",
+            sub: "Set one up free in 10 minutes",
+          },
           {
             href: "/blog/digital-suggestion-box-small-business/",
             label: "Small business guide",
