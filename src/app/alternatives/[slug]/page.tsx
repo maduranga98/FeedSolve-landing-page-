@@ -648,6 +648,25 @@ export default async function AlternativePage({
               )
             )}
           </div>
+          {alt.roundupHref && (
+            <div style={{ textAlign: "center", marginTop: 22 }}>
+              <Link
+                href={alt.roundupHref}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontSize: 15,
+                  fontWeight: 700,
+                  color: "var(--teal)",
+                  textDecoration: "none",
+                }}
+              >
+                {alt.roundupLabel ?? `See all ${alt.name} alternatives compared`}
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 

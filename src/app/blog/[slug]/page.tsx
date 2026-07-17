@@ -118,6 +118,24 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   },
  };
 
+ // FAQPage structured data for posts that end with an FAQ section, so
+ // Google can show FAQ rich results and match question-form queries.
+ type FaqEntry = { question: string; answer: string };
+ const faqSection = (
+  blog.content.sections as { heading: string; faqs?: FaqEntry[] }[]
+ ).find((s) => s.heading.startsWith("H2: FAQ") && Array.isArray(s.faqs));
+ const faqJsonLd = faqSection?.faqs
+  ? {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     mainEntity: faqSection.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+     })),
+    }
+  : null;
+
  const breadcrumb = breadcrumbJsonLd([
   { name: "Home", url: `${SITE_URL}/` },
   { name: "Blog", url: `${SITE_URL}/blog/` },
@@ -134,6 +152,12 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
     type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
    />
+   {faqJsonLd && (
+    <script
+     type="application/ld+json"
+     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+    />
+   )}
    <BlogPostClient blog={blog} otherPosts={otherPosts} />
   </>
  );

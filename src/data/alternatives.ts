@@ -31,6 +31,9 @@ export type Alternative = {
   faqs: AltFaq[];
   /** Link to an existing /compare/ page when one exists */
   compareHref?: string;
+  /** Link to a blog roundup of alternatives to this competitor, when one exists */
+  roundupHref?: string;
+  roundupLabel?: string;
 };
 
 export const FEEDSOLVE_HIGHLIGHTS = [
@@ -51,6 +54,8 @@ export const alternatives: Alternative[] = [
     name: "Medallia",
     category: "enterprise-cx",
     categoryLabel: "Enterprise CX platform",
+    roundupHref: "/blog/best-medallia-alternatives/",
+    roundupLabel: "See all 6 Medallia alternatives compared",
     metaTitle: "Best Medallia Alternative for Small Business (2026)",
     metaDescription:
       "Looking for a Medallia alternative without quote-only pricing and multi-month rollouts? FeedSolve gives SMBs a QR-first complaint resolution loop from $19/month, self-serve.",
@@ -132,6 +137,8 @@ export const alternatives: Alternative[] = [
     slug: "qualtrics",
     name: "Qualtrics",
     category: "enterprise-cx",
+    roundupHref: "/blog/best-qualtrics-alternatives/",
+    roundupLabel: "See all 7 Qualtrics alternatives compared",
     categoryLabel: "Enterprise CX platform",
     metaTitle: "Best Qualtrics Alternative for Small Business (2026)",
     metaDescription:
@@ -1122,6 +1129,8 @@ export const alternatives: Alternative[] = [
     name: "Freshdesk",
     category: "ticketing",
     categoryLabel: "Helpdesk / ticketing",
+    roundupHref: "/blog/best-freshdesk-alternatives/",
+    roundupLabel: "See all 6 Freshdesk alternatives compared",
     metaTitle: "Best Freshdesk Alternative for Feedback Management (2026)",
     metaDescription:
       "Freshdesk is a helpdesk for support queues, priced per agent. FeedSolve is a QR-first, zero-login feedback resolution platform with flat pricing - built for external stakeholders.",
