@@ -100,7 +100,7 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   dateModified: modifiedDate,
   author: {
    "@type": "Person",
-   name: "FeedSolve Team",
+   name: blog.meta.author_name ?? "FeedSolve Team",
    url: `${SITE_URL}/authors/feedsolve-team/`,
   },
   publisher: {

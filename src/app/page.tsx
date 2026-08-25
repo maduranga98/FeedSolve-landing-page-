@@ -997,9 +997,9 @@ function Blog() {
       </div>
       <div className="blog-featured-footer">
        <div className="blog-author">
-        <div className="blog-author-avatar">FS</div>
+        <div className="blog-author-avatar">M</div>
         <div>
-         <div className="blog-author-name">FeedSolve Team</div>
+         <div className="blog-author-name">{featuredBlog.meta.author_name ?? "FeedSolve Team"}</div>
          <div className="blog-author-meta">
           {new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(`${featuredBlog.meta.date_published}T00:00:00Z`))} · 5 min read
          </div>
@@ -1142,9 +1142,9 @@ function Blog() {
            className="blog-card-avatar"
            style={{ background: card.stripe }}
           >
-           FS
+           M
           </div>
-          <div className="blog-card-author">FeedSolve Team · 5 min</div>
+          <div className="blog-card-author">Madu, founder of FeedSolve · 5 min</div>
           <span className="blog-card-read">
            Read <ArrowRight size={13} />
           </span>
