@@ -5,7 +5,7 @@ import VerticalPage from "@/components/VerticalPage";
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
 export const metadata: Metadata = {
-  title: "Suggestion Box Software: Anonymous Digital Suggestion Box (Free)",
+  title: "Digital Suggestion Box Software",
   description:
     "Suggestion box software that closes the loop. Collect anonymous suggestions via a QR code or link - no login, any language. Free to start.",
   keywords: [
