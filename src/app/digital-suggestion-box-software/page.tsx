@@ -5,9 +5,9 @@ import VerticalPage from "@/components/VerticalPage";
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
 export const metadata: Metadata = {
-  title: "Suggestion Box Software: Anonymous Digital Suggestion Box (Free)",
+  title: "Digital Suggestion Box Software",
   description:
-    "Suggestion box software that closes the loop. Collect anonymous suggestions online via a QR code or link - no login, any language - then assign, track, and resolve every one. Free to start.",
+    "Suggestion box software that closes the loop. Collect anonymous suggestions via a QR code or link - no login, any language. Free to start.",
   keywords: [
     "digital suggestion box",
     "suggestion box software",
@@ -68,14 +68,16 @@ const jsonLd = {
   description:
     "FeedSolve is digital suggestion box software for collecting and resolving anonymous suggestions via QR code or link.",
   url: URL,
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function DigitalSuggestionBoxSoftware() {
@@ -85,11 +87,16 @@ export default function DigitalSuggestionBoxSoftware() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <VerticalPage
         badge="Digital Suggestion Box"
         breadcrumbLabel="Digital Suggestion Box Software"
         breadcrumbUrl={URL}
         h1="Digital Suggestion Box Software That Closes the Loop"
+        quickSummary="FeedSolve is a digital suggestion box that lets employees and customers submit suggestions anonymously via QR code or link with no login, then tracks every one to resolution."
         subheading="Replace the dusty box on the wall - and the Google Form that goes nowhere - with an online suggestion box that turns ideas and complaints into resolved actions."
         quickAnswer="FeedSolve is a digital suggestion box for teams and customers. People submit anonymously via a QR code or link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board with a full audit trail. From an anonymous employee suggestion box on the shop floor to a virtual suggestion box for remote teams, one tool covers it - free to start."
         stats={[

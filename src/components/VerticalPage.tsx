@@ -33,6 +33,7 @@ export interface VerticalProps {
   badge: string;
   h1: string;
   subheading: string;
+  quickSummary?: string;
   quickAnswer: string;
 
   // Hero visual stats
@@ -78,6 +79,7 @@ export default function VerticalPage(props: VerticalProps) {
     badge,
     h1,
     subheading,
+    quickSummary,
     quickAnswer,
     stats,
     problemHeading,
@@ -182,6 +184,20 @@ export default function VerticalPage(props: VerticalProps) {
           >
             {h1}
           </h1>
+          {quickSummary && (
+            <p
+              style={{
+                color: "rgba(255,255,255,0.85)",
+                fontSize: 16,
+                fontWeight: 500,
+                lineHeight: 1.6,
+                maxWidth: 640,
+                marginBottom: 16,
+              }}
+            >
+              {quickSummary}
+            </p>
+          )}
           <p
             style={{
               color: "rgba(255,255,255,0.6)",

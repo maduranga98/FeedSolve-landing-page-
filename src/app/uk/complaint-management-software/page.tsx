@@ -20,11 +20,12 @@ import {
 } from "lucide-react";
 import UKComplaintFAQ from "@/components/UKComplaintFAQ";
 import { landingBreadcrumb } from "@/lib/seo";
+import { ukComplaintFaqs } from "@/data/ukComplaintFaqs";
 
 export const metadata: Metadata = {
   title: "Complaint Management Software for UK Small Business",
   description:
-    "Track and resolve every customer complaint with FeedSolve — the complaint management software built for UK SMBs. No login needed for submitters. Free to start.",
+    "FeedSolve is complaint management software for UK small businesses. Track every customer complaint with no login needed. Free to start.",
   openGraph: {
     title: "Complaint Management Software for UK Small Business | FeedSolve",
     description:
@@ -35,8 +36,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://feedsolve.com/uk/complaint-management-software/",
     languages: {
+      "en": "https://feedsolve.com/complaint-management-software/",
       "en-GB": "https://feedsolve.com/uk/complaint-management-software/",
-      "x-default": "https://feedsolve.com/",
+      "en-US": "https://feedsolve.com/us/complaint-management-software/",
+      "en-AU": "https://feedsolve.com/au/complaint-management-software/",
+      "x-default": "https://feedsolve.com/complaint-management-software/",
     },
   },
   robots: { index: true, follow: true },
@@ -49,43 +53,16 @@ const jsonLd = {
   description:
     "FeedSolve complaint management software for UK SMBs — QR intake, Kanban workflow, tracking codes, and resolution rate dashboard.",
   url: "https://feedsolve.com/uk/complaint-management-software/",
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Is FeedSolve complaint management software UK GDPR compliant?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. FeedSolve is designed with UK GDPR data minimisation principles in mind. Contact fields are optional — submitters can remain anonymous. No special categories of personal data are collected. Data is stored securely and configurable retention settings are available on Growth and Pro plans. FeedSolve does not sell or share submitter data with third parties.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does FeedSolve replace a dedicated UK complaint management system?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "For UK SMBs needing structured complaint intake, Kanban resolution, tracking codes, and resolution rate metrics, FeedSolve replaces informal WhatsApp and email complaint processes. It is not a regulated complaints management system for FCA-authorised firms, which require specific regulatory reporting. For general SMB complaint management — hospitality, manufacturing, logistics, retail, and property — FeedSolve covers every requirement.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How does FeedSolve pricing compare to Freshdesk or Zoho Desk for UK businesses?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "FeedSolve charges per feedback board, not per agent. The Starter plan is $19/month (approx. £15/month) for 3 boards with unlimited team members on that board. Freshdesk charges £12–£49 per agent per month, meaning a 5-person team costs £60–£245/month. For most UK SMBs, FeedSolve is significantly more cost-effective.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can UK customers submit complaints without creating an account?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. FeedSolve's zero-login submission model means any UK customer, supplier, or partner can submit a complaint via a QR code or web link without registering. They receive a unique tracking code and can check resolution progress on any browser — aligned with ICO guidance that complaint channels should be accessible and not create unnecessary barriers.",
-        },
-      },
-    ],
-  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: ukComplaintFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 const comparisonRows = [
@@ -164,6 +141,10 @@ export default function UKComplaintManagementPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -251,6 +232,20 @@ export default function UKComplaintManagementPage() {
           >
             Complaint Management Software for UK Small Business
           </h1>
+          <p
+            style={{
+              color: "rgba(255,255,255,0.85)",
+              fontSize: 16,
+              fontWeight: 500,
+              lineHeight: 1.6,
+              maxWidth: 640,
+              marginBottom: 16,
+            }}
+          >
+            FeedSolve is complaint management software that lets UK
+            customers, suppliers, and tenants submit complaints via QR code
+            or link with no login, then tracks every one to resolution.
+          </p>
           <p
             style={{
               color: "rgba(255,255,255,0.6)",
@@ -673,12 +668,6 @@ export default function UKComplaintManagementPage() {
                 body: "Drivers and recipients report delivery issues by scanning a QR code on the consignment note. Every complaint is assigned, tracked, and resolved — with documentation for UK Road Haulage Association (RHA) compliance.",
                 link: "/logistics/delivery-feedback/",
                 linkText: "Delivery feedback for UK logistics →",
-              },
-              {
-                sector: "UK Retail & E-commerce",
-                body: "Collect in-store and post-purchase complaints via QR codes at point of sale. Track every issue to resolution with a documented response — meeting the Consumer Rights Act 2015 expectation of accessible complaint handling.",
-                link: "/",
-                linkText: "Retail complaint tracking →",
               },
               {
                 sector: "UK Private Clinics & Healthcare",

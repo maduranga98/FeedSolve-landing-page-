@@ -14,7 +14,7 @@ const URL = "https://feedsolve.com/complaint-management-software/";
 export const metadata: Metadata = {
   title: "Complaint Management Software for Small Business",
   description:
-    "Complaint management software that collects, assigns, tracks, and resolves every complaint. QR or link intake, no login to submit, tracking codes, and a resolution dashboard. Free to start.",
+    "Complaint management software that collects, assigns, tracks, and resolves every complaint. QR or link intake, no login, tracking codes. Free to start.",
   keywords: [
     "complaint management software",
     "complaint management system",
@@ -24,7 +24,16 @@ export const metadata: Metadata = {
     "online complaint management system",
     "complaints management software",
   ],
-  alternates: { canonical: URL },
+  alternates: {
+    canonical: URL,
+    languages: {
+      "en": URL,
+      "en-GB": "https://feedsolve.com/uk/complaint-management-software/",
+      "en-US": "https://feedsolve.com/us/complaint-management-software/",
+      "en-AU": "https://feedsolve.com/au/complaint-management-software/",
+      "x-default": URL,
+    },
+  },
   openGraph: {
     title: "Complaint Management Software for Small Business | FeedSolve",
     description:
@@ -68,14 +77,16 @@ const jsonLd = {
   description:
     "FeedSolve is complaint management software for SMBs: QR or link intake, no-login submission, tracking codes, assignment, resolution workflow, and a resolution rate dashboard.",
   url: URL,
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function ComplaintManagementSoftware() {
@@ -85,11 +96,16 @@ export default function ComplaintManagementSoftware() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <VerticalPage
         badge="Complaint Management Software"
         breadcrumbLabel="Complaint Management Software"
         breadcrumbUrl={URL}
         h1="Complaint Management Software That Actually Closes the Loop"
+        quickSummary="FeedSolve is complaint management software that lets customers and suppliers submit complaints via QR code or link with no login, then tracks every one to resolution."
         subheading="Collect, assign, track, and resolve every complaint from one dashboard - without the cost or complexity of enterprise help desks."
         quickAnswer="FeedSolve is complaint management software for small and mid-sized businesses. Customers, suppliers, and staff submit complaints by scanning a QR code or opening a link - no login, no app, in any language. Each complaint gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it with a full audit trail. A live resolution rate shows whether your process is actually working. Free to start, no credit card."
         stats={[
