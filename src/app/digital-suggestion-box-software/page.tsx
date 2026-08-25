@@ -7,7 +7,7 @@ const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 export const metadata: Metadata = {
   title: "Suggestion Box Software: Anonymous Digital Suggestion Box (Free)",
   description:
-    "Suggestion box software that closes the loop. Collect anonymous suggestions online via a QR code or link - no login, any language - then assign, track, and resolve every one. Free to start.",
+    "Suggestion box software that closes the loop. Collect anonymous suggestions via a QR code or link - no login, any language. Free to start.",
   keywords: [
     "digital suggestion box",
     "suggestion box software",

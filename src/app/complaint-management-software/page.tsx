@@ -14,7 +14,7 @@ const URL = "https://feedsolve.com/complaint-management-software/";
 export const metadata: Metadata = {
   title: "Complaint Management Software for Small Business",
   description:
-    "Complaint management software that collects, assigns, tracks, and resolves every complaint. QR or link intake, no login to submit, tracking codes, and a resolution dashboard. Free to start.",
+    "Complaint management software that collects, assigns, tracks, and resolves every complaint. QR or link intake, no login, tracking codes. Free to start.",
   keywords: [
     "complaint management software",
     "complaint management system",

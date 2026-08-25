@@ -24,7 +24,7 @@ import { landingBreadcrumb } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Complaint Management Software for UK Small Business",
   description:
-    "Track and resolve every customer complaint with FeedSolve — the complaint management software built for UK SMBs. No login needed for submitters. Free to start.",
+    "FeedSolve is complaint management software for UK small businesses. Track every customer complaint with no login needed. Free to start.",
   openGraph: {
     title: "Complaint Management Software for UK Small Business | FeedSolve",
     description:
