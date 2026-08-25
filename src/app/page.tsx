@@ -1146,7 +1146,7 @@ function Blog() {
           >
            M
           </div>
-          <div className="blog-card-author">Madu, founder of FeedSolve · 5 min</div>
+          <div className="blog-card-author">Maduranga, founder of FeedSolve · 5 min</div>
           <span className="blog-card-read">
            Read <ArrowRight size={13} />
           </span>
