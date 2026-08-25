@@ -18,8 +18,9 @@ import {
   UserCheck,
   CheckCircle2,
 } from "lucide-react";
-import UKComplaintFAQ, { ukComplaintFaqs } from "@/components/UKComplaintFAQ";
+import UKComplaintFAQ from "@/components/UKComplaintFAQ";
 import { landingBreadcrumb } from "@/lib/seo";
+import { ukComplaintFaqs } from "@/data/ukComplaintFaqs";
 
 export const metadata: Metadata = {
   title: "Complaint Management Software for UK Small Business",
