@@ -233,6 +233,20 @@ export default function UKComplaintManagementPage() {
           </h1>
           <p
             style={{
+              color: "rgba(255,255,255,0.85)",
+              fontSize: 16,
+              fontWeight: 500,
+              lineHeight: 1.6,
+              maxWidth: 640,
+              marginBottom: 16,
+            }}
+          >
+            FeedSolve is complaint management software that lets UK
+            customers, suppliers, and tenants submit complaints via QR code
+            or link with no login, then tracks every one to resolution.
+          </p>
+          <p
+            style={{
               color: "rgba(255,255,255,0.6)",
               fontSize: 19,
               lineHeight: 1.65,
