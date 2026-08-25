@@ -62,9 +62,9 @@ const DEFAULT_AUTHOR = {
 };
 
 const AUTHOR_PROFILES: Record<string, Omit<typeof DEFAULT_AUTHOR, "name">> = {
- "Madu, founder of FeedSolve": {
+ "Maduranga, founder of FeedSolve": {
   role: "Founder, FeedSolve",
-  bio: "Madu builds FeedSolve and writes about SMB feedback and complaint resolution.",
+  bio: "Maduranga builds FeedSolve and writes about SMB feedback and complaint resolution.",
   initials: "M",
   href: "/authors/feedsolve-team/",
  },
