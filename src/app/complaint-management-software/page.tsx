@@ -77,14 +77,16 @@ const jsonLd = {
   description:
     "FeedSolve is complaint management software for SMBs: QR or link intake, no-login submission, tracking codes, assignment, resolution workflow, and a resolution rate dashboard.",
   url: URL,
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function ComplaintManagementSoftware() {
@@ -93,6 +95,10 @@ export default function ComplaintManagementSoftware() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <VerticalPage
         badge="Complaint Management Software"

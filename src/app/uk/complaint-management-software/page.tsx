@@ -18,7 +18,7 @@ import {
   UserCheck,
   CheckCircle2,
 } from "lucide-react";
-import UKComplaintFAQ from "@/components/UKComplaintFAQ";
+import UKComplaintFAQ, { ukComplaintFaqs } from "@/components/UKComplaintFAQ";
 import { landingBreadcrumb } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -52,43 +52,16 @@ const jsonLd = {
   description:
     "FeedSolve complaint management software for UK SMBs — QR intake, Kanban workflow, tracking codes, and resolution rate dashboard.",
   url: "https://feedsolve.com/uk/complaint-management-software/",
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Is FeedSolve complaint management software UK GDPR compliant?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. FeedSolve is designed with UK GDPR data minimisation principles in mind. Contact fields are optional — submitters can remain anonymous. No special categories of personal data are collected. Data is stored securely and configurable retention settings are available on Growth and Pro plans. FeedSolve does not sell or share submitter data with third parties.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does FeedSolve replace a dedicated UK complaint management system?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "For UK SMBs needing structured complaint intake, Kanban resolution, tracking codes, and resolution rate metrics, FeedSolve replaces informal WhatsApp and email complaint processes. It is not a regulated complaints management system for FCA-authorised firms, which require specific regulatory reporting. For general SMB complaint management — hospitality, manufacturing, logistics, retail, and property — FeedSolve covers every requirement.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How does FeedSolve pricing compare to Freshdesk or Zoho Desk for UK businesses?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "FeedSolve charges per feedback board, not per agent. The Starter plan is $19/month (approx. £15/month) for 3 boards with unlimited team members on that board. Freshdesk charges £12–£49 per agent per month, meaning a 5-person team costs £60–£245/month. For most UK SMBs, FeedSolve is significantly more cost-effective.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can UK customers submit complaints without creating an account?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. FeedSolve's zero-login submission model means any UK customer, supplier, or partner can submit a complaint via a QR code or web link without registering. They receive a unique tracking code and can check resolution progress on any browser — aligned with ICO guidance that complaint channels should be accessible and not create unnecessary barriers.",
-        },
-      },
-    ],
-  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: ukComplaintFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 const comparisonRows = [
@@ -167,6 +140,10 @@ export default function UKComplaintManagementPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
         type="application/ld+json"

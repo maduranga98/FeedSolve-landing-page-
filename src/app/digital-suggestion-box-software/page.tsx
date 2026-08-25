@@ -68,14 +68,16 @@ const jsonLd = {
   description:
     "FeedSolve is digital suggestion box software for collecting and resolving anonymous suggestions via QR code or link.",
   url: URL,
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function DigitalSuggestionBoxSoftware() {
@@ -84,6 +86,10 @@ export default function DigitalSuggestionBoxSoftware() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <VerticalPage
         badge="Digital Suggestion Box"

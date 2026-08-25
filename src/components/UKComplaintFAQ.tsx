@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
-const faqs = [
+export const ukComplaintFaqs = [
   {
     q: "Is FeedSolve complaint management software UK GDPR compliant?",
     a: "Yes. FeedSolve is designed with UK GDPR data minimisation principles in mind. Contact fields are optional — submitters can remain anonymous. No special categories of personal data are collected. Data is stored securely and configurable retention settings are available on Growth and Pro plans. FeedSolve does not sell or share submitter data with third parties.",
@@ -28,6 +28,7 @@ const faqs = [
 
 export default function UKComplaintFAQ() {
   const [openFaq, setOpenFaq] = useState<number>(0);
+  const faqs = ukComplaintFaqs;
 
   return (
     <section style={{ background: "var(--bg-warm)", padding: "80px 32px" }}>
