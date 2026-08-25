@@ -95,7 +95,7 @@ export default function ManufacturingSupplierFeedback() {
           { value: "100%", label: "Of complaints tracked with a unique code" },
           {
             value: "80%+",
-            label: "Target resolution rate for healthy supplier ops",
+            label: "Resolution rate we recommend for healthy supplier ops",
           },
         ]}
         problemHeading="Why supplier complaints disappear in most manufacturing businesses"

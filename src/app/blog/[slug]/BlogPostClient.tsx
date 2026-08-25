@@ -42,6 +42,7 @@ type BlogPost = {
   target_word_count: string;
   date_published: string;
   date_modified: string;
+  author_name?: string;
  };
  content: {
   quick_answer_box: string;
@@ -51,6 +52,29 @@ type BlogPost = {
   internal_links?: InternalLink[];
  };
 };
+
+const DEFAULT_AUTHOR = {
+ name: "FeedSolve Team",
+ role: "Operations & Product",
+ bio: "The FeedSolve team writes about feedback management, operational efficiency, and building systems that help SMBs track and resolve every complaint.",
+ initials: "FS",
+ href: "/authors/feedsolve-team/",
+};
+
+const AUTHOR_PROFILES: Record<string, Omit<typeof DEFAULT_AUTHOR, "name">> = {
+ "Madu, founder of FeedSolve": {
+  role: "Founder, FeedSolve",
+  bio: "Madu builds FeedSolve and writes about SMB feedback and complaint resolution.",
+  initials: "M",
+  href: "/authors/feedsolve-team/",
+ },
+};
+
+function getAuthor(authorName?: string) {
+ if (!authorName) return DEFAULT_AUTHOR;
+ const profile = AUTHOR_PROFILES[authorName];
+ return profile ? { name: authorName, ...profile } : DEFAULT_AUTHOR;
+}
 
 const categoryIcons: Record<string, { icon: React.ReactNode; bg: string }> = {
  "Operations": { icon: <ClipboardList size={22} style={{ color: "var(--teal)" }} />, bg: "var(--teal-pale)" },
@@ -100,6 +124,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
 
  const cat = blog ? getCategoryForBlog(blog) : "operations";
  const catInfo = tagMap[cat] || tagMap.operations;
+ const author = getAuthor(blog?.meta.author_name);
 
  const tocSections = useMemo(() => {
   if (!blog) return [];
@@ -186,10 +211,11 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
      <p className="article-subtitle">{blog.meta.meta_description}</p>
      <div className="article-meta">
       <div className="author-wrap">
-       <div className="author-avatar-lg" style={{ background: "var(--teal)" }}>FS</div>
+       <div className="author-avatar-lg" style={{ background: "var(--teal)" }}>{author.initials}</div>
        <div>
-        <Link href="/authors/feedsolve-team/" className="author-name-text">FeedSolve Team</Link>
-        <div className="author-role-text">Operations &amp; Product</div>
+        <div className="author-written-by">Written by</div>
+        <Link href={author.href} className="author-name-text">{author.name}</Link>
+        <div className="author-role-text">{author.role}</div>
        </div>
       </div>
       <div className="article-stats">
@@ -385,12 +411,12 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
 
      {/* AUTHOR BIO */}
      <div className="author-bio-card">
-      <div className="author-bio-avatar" style={{ background: "var(--teal)" }}>FS</div>
+      <div className="author-bio-avatar" style={{ background: "var(--teal)" }}>{author.initials}</div>
       <div>
-       <Link href="/authors/feedsolve-team/" className="author-bio-name">FeedSolve Team</Link>
-       <div className="author-role-text">Operations &amp; Product</div>
+       <Link href={author.href} className="author-bio-name">{author.name}</Link>
+       <div className="author-role-text">{author.role}</div>
        <div className="author-bio-bio">
-        The FeedSolve team writes about feedback management, operational efficiency, and building systems that help SMBs track and resolve every complaint.
+        {author.bio}
        </div>
       </div>
      </div>
@@ -452,7 +478,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
         <div className="more-tag" style={{ color: otherCatInfo.color }}>{otherCatInfo.label}</div>
         <h3>{other.meta.title}</h3>
         <p>{other.content.quick_answer_box.slice(0, 100)}...</p>
-        <div className="more-card-meta">FeedSolve Team · {getReadTime(other)} read</div>
+        <div className="more-card-meta">{getAuthor(other.meta.author_name).name} · {getReadTime(other)} read</div>
        </Link>
       );
      })}

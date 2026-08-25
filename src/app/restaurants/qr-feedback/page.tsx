@@ -83,7 +83,7 @@ export default function RestaurantsQrFeedback() {
           },
           {
             value: "80%+",
-            label: "Target resolution rate for professional F&B operations",
+            label: "Resolution rate we recommend for professional F&B operations",
           },
         ]}
         problemHeading="Why guest complaints keep becoming public reviews"

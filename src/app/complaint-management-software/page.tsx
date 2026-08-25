@@ -112,7 +112,7 @@ export default function ComplaintManagementSoftware() {
           { value: "0", label: "Logins needed to submit a complaint" },
           { value: "100%", label: "Of complaints tracked to resolution" },
           { value: "2 min", label: "To set up your first complaint board" },
-          { value: "80%+", label: "Target resolution rate for healthy teams" },
+          { value: "80%+", label: "Resolution rate we recommend teams aim for" },
         ]}
         problemHeading="Why complaints slip through the cracks in most SMBs"
         problemPoints={[

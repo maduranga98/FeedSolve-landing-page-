@@ -85,7 +85,7 @@ export default function RealEstateTenantFeedback() {
           {
             value: "80%+",
             label:
-              "Target resolution rate for professional property management",
+              "Resolution rate we recommend for professional property management",
           },
         ]}
         problemHeading="Why maintenance requests disappear in property management"

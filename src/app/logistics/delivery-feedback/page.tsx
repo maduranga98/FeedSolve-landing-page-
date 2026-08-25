@@ -77,7 +77,7 @@ export default function LogisticsDeliveryFeedback() {
           },
           {
             value: "80%+",
-            label: "Target resolution rate for high-performing logistics ops",
+            label: "Resolution rate we recommend for high-performing logistics ops",
           },
         ]}
         problemHeading="Why delivery complaints get lost in logistics operations"
