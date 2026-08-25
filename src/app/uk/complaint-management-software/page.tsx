@@ -655,12 +655,6 @@ export default function UKComplaintManagementPage() {
                 linkText: "Delivery feedback for UK logistics →",
               },
               {
-                sector: "UK Retail & E-commerce",
-                body: "Collect in-store and post-purchase complaints via QR codes at point of sale. Track every issue to resolution with a documented response — meeting the Consumer Rights Act 2015 expectation of accessible complaint handling.",
-                link: "/",
-                linkText: "Retail complaint tracking →",
-              },
-              {
                 sector: "UK Private Clinics & Healthcare",
                 body: "Provide patients with a zero-login complaint channel in your waiting room. Every submission is anonymous-capable, tracked, and resolved with a full history — aligned with CQC complaints handling requirements for independent healthcare providers.",
                 link: "/blog/healthcare-patient-feedback-system/",
