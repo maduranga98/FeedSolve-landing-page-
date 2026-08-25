@@ -6,7 +6,16 @@ const url = "https://feedsolve.com/us/complaint-management-software/";
 export const metadata: Metadata = {
   title: "Complaint Management Software for Small Business US",
   description: "FeedSolve is complaint tracking software for US small businesses: QR intake, tracking codes, assignment, resolution workflows, and flat pricing.",
-  alternates: { canonical: url, languages: { "en-US": url, "x-default": url } },
+  alternates: {
+    canonical: url,
+    languages: {
+      "en": "https://feedsolve.com/complaint-management-software/",
+      "en-GB": "https://feedsolve.com/uk/complaint-management-software/",
+      "en-US": url,
+      "en-AU": "https://feedsolve.com/au/complaint-management-software/",
+      "x-default": "https://feedsolve.com/complaint-management-software/",
+    },
+  },
 };
 
 export default function USComplaintManagementPage() {

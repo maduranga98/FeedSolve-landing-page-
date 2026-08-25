@@ -24,7 +24,16 @@ export const metadata: Metadata = {
     "online complaint management system",
     "complaints management software",
   ],
-  alternates: { canonical: URL },
+  alternates: {
+    canonical: URL,
+    languages: {
+      "en": URL,
+      "en-GB": "https://feedsolve.com/uk/complaint-management-software/",
+      "en-US": "https://feedsolve.com/us/complaint-management-software/",
+      "en-AU": "https://feedsolve.com/au/complaint-management-software/",
+      "x-default": URL,
+    },
+  },
   openGraph: {
     title: "Complaint Management Software for Small Business | FeedSolve",
     description:

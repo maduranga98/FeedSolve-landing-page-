@@ -35,8 +35,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://feedsolve.com/uk/complaint-management-software/",
     languages: {
+      "en": "https://feedsolve.com/complaint-management-software/",
       "en-GB": "https://feedsolve.com/uk/complaint-management-software/",
-      "x-default": "https://feedsolve.com/",
+      "en-US": "https://feedsolve.com/us/complaint-management-software/",
+      "en-AU": "https://feedsolve.com/au/complaint-management-software/",
+      "x-default": "https://feedsolve.com/complaint-management-software/",
     },
   },
   robots: { index: true, follow: true },
