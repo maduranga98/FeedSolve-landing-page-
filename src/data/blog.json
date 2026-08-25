@@ -60,7 +60,7 @@
       "Show why resolution rate should be visible on a dashboard at all times, not in a monthly report."
      ],
      "body": [
-      "The calculation is simple, but the execution reveals gaps. If your manufacturing facility received 120 supplier quality complaints in a month and formally closed 80 of them (the rest are still 'in progress'), your resolution rate is 66.7%. That's below the healthy benchmark of 80%+. Across industries   F&B, logistics, real estate, healthcare   SMBs consistently discover resolution rates between 30–60% when they start measuring. The first insight is usually disheartening.",
+      "The calculation is simple, but the execution reveals gaps. If your manufacturing facility received 120 supplier quality complaints in a month and formally closed 80 of them (the rest are still 'in progress'), your resolution rate is 66.7%. That's below the 80%+ resolution rate we recommend teams aim for. Across industries   F&B, logistics, real estate, healthcare   SMBs consistently discover resolution rates between 30–60% when they start measuring. The first insight is usually disheartening.",
       "Beyond the primary metric, track average resolution time (days from submission to fully resolved), submission volume by category (to identify recurring root causes), and unresolved backlog age (to catch complaints that have been sitting untouched for weeks). These secondary metrics tell a story: if your resolution rate is 70% but your average time is 45 days, your team is resolving complaints, but slowly. If submission volume spikes in a single category month-to-month, you have a systemic problem worth investigating. The dashboard should display these metrics always-on, not buried in a monthly report that nobody reads."
      ]
     },
@@ -4836,7 +4836,7 @@
     "Run one sequence for every voiced complaint: listen fully, thank them, fix the physical problem, add a proportionate gesture, check back — and the first person who hears it owns it to resolution",
     "Match scripts to complaint type: agree-and-refire for food, specific times for waits, fix-first-explain-never for billing, and take staff complaints away from the table",
     "Most guests never voice complaints at all — a table QR code with 'we'll fix it before you leave' wording converts silent complaints into live saves your team initiates",
-    "Log every complaint with category, shift, and resolution, review patterns weekly, and track resolution rate (80%+ is healthy) — so recurring problems get one root-cause fix instead of weekly apologies"
+    "Log every complaint with category, shift, and resolution, review patterns weekly, and track resolution rate (we recommend 80%+ as a healthy target) — so recurring problems get one root-cause fix instead of weekly apologies"
    ]
   }
  },
