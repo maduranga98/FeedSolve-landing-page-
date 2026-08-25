@@ -30,11 +30,11 @@ const SITE_URL = "https://feedsolve.com";
 export const metadata: Metadata = {
  metadataBase: new URL(SITE_URL),
  title: {
-  default: "Complaint Management & Digital Suggestion Box Software | FeedSolve",
+  default: "FeedSolve: Feedback & Complaint Resolution Software",
   template: "%s | FeedSolve",
  },
  description:
-  "FeedSolve is complaint management and digital suggestion box software for SMBs. Collect feedback via QR code, then assign, track, and resolve every complaint in one dashboard - in any language. Free to start, no credit card.",
+  "FeedSolve helps SMBs collect customer feedback via QR code, then assign, track, and resolve every complaint from one dashboard. Free to start.",
  applicationName: "FeedSolve",
  keywords: [
   "FeedSolve",
