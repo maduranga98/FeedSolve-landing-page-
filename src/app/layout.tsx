@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, DM_Sans, Lora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -163,9 +164,12 @@ export default function RootLayout({
 }>) {
  return (
   <html lang="en" data-scroll-behavior="smooth" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable}`}>
-   <head>
+   <head />
+   <body suppressHydrationWarning>
     {/* Google Tag Manager */}
-    <script
+    <Script
+     id="gtm-script"
+     strategy="afterInteractive"
      dangerouslySetInnerHTML={{
       __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -175,8 +179,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      }}
     />
     {/* End Google Tag Manager */}
-   </head>
-   <body suppressHydrationWarning>
     {/* Google Tag Manager (noscript) */}
     <noscript>
      <iframe

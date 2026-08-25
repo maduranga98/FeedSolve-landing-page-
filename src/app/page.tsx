@@ -1,11 +1,13 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroStats from "@/components/home/HeroStats";
 import DemoSection from "@/components/home/DemoSection";
-import FAQAccordion from "@/components/home/FAQAccordion";
-import ContactSection from "@/components/home/ContactSection";
-import PricingSection from "@/components/home/PricingSection";
 import { homeFaqs } from "@/data/homeFaqs";
+
+const FAQAccordion = dynamic(() => import("@/components/home/FAQAccordion"));
+const ContactSection = dynamic(() => import("@/components/home/ContactSection"));
+const PricingSection = dynamic(() => import("@/components/home/PricingSection"));
 import {
  ArrowRight,
  Play,
