@@ -72,7 +72,7 @@ You are responsible for:
 | Free Trial | $0 | N/A | 7-day trial, 1 board, 50 submissions, 1 team member |
 | Starter | $19 | $190 (save 2 mo) | 3 boards, 500/mo submissions, 3 team members |
 | Growth | $49 | $490 (save 2 mo) | 10 boards, 5,000/mo submissions, 10 team members, custom branding, replies |
-| Business | $129 | $1,290 (save 2 mo) | Unlimited boards, submissions, team members, API, removed badge |
+| Business | $79 | $758 (save 2 mo) | Unlimited boards, submissions, team members, API, removed badge |
 
 **Pricing subject to change with 30 days' notice to existing customers.**
 

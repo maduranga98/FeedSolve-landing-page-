@@ -176,8 +176,8 @@ export default function CustomerComplaintSoftware() {
             sub: "The full platform overview",
           },
           {
-            href: "/blog/how-to-reduce-negative-online-reviews/",
-            label: "Reduce negative reviews",
+            href: "/blog/stop-bad-restaurant-reviews-before-posted/",
+            label: "Stop bad reviews before they post",
             sub: "Capture complaints first",
           },
           {

@@ -78,6 +78,16 @@
         "source": "/blog/blog-post/",
         "destination": "/blog/",
         "type": 301
+      },
+      {
+        "source": "/blog/how-to-reduce-negative-online-reviews",
+        "destination": "/blog/stop-bad-restaurant-reviews-before-posted/",
+        "type": 301
+      },
+      {
+        "source": "/blog/how-to-reduce-negative-online-reviews/",
+        "destination": "/blog/stop-bad-restaurant-reviews-before-posted/",
+        "type": 301
       }
     ]
   }

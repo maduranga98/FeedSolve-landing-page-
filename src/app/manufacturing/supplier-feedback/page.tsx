@@ -230,6 +230,11 @@ export default function ManufacturingSupplierFeedback() {
             label: "Read the guide",
             sub: "Supplier feedback for manufacturers",
           },
+          {
+            href: "/blog/delivery-complaint-tracking-software/",
+            label: "Delivery complaint tracking",
+            sub: "Capture failed deliveries from recipients",
+          },
         ]}
       />
     </>
