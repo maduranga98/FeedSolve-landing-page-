@@ -211,6 +211,11 @@ export default function ComplaintManagementSoftware() {
             label: "UK & regulated teams",
             sub: "Complaint handling in the UK",
           },
+          {
+            href: "/blog/ecommerce-buyer-complaint-tracking/",
+            label: "Online stores & marketplaces",
+            sub: "Buyer complaint tracking for ecommerce",
+          },
         ]}
       />
     </>
