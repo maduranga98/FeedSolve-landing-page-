@@ -382,9 +382,9 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
      <div className="article-cta-box">
       <h3>Ready to fix your feedback loop?</h3>
       <p>Set up your first complaint board in under 2 minutes. No credit card required.</p>
-      <Link href="/" className="btn-primary teal">
+      <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
        Try FeedSolve Free <ArrowRight size={15} />
-      </Link>
+      </a>
      </div>
 
      {/* ARTICLE FOOTER */}
@@ -441,9 +441,15 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
      <div className="sidebar-cta-card">
       <h4>Start tracking complaints today</h4>
       <p>Setup takes under 2 minutes. Free plan available.</p>
-      <Link href="/" className="btn-primary teal">
+      <p className="sidebar-cta-subtext">
+       Already have an account?{" "}
+       <a href="https://app.feedsolve.com/login" target="_blank" rel="noopener noreferrer">
+        Log in
+       </a>
+      </p>
+      <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
        Try FeedSolve <ArrowRight size={14} />
-      </Link>
+      </a>
      </div>
 
      <div className="sidebar-card">
