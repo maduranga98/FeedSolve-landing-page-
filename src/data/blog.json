@@ -2,8 +2,8 @@
  {
   "id": 1,
   "meta": {
-   "title": "What Is Feedback Resolution Rate? The SMB Metric You're Missing",
-   "meta_description": "Feedback resolution rate shows how many complaints you actually resolve, not just collect. See the formula, a healthy SMB benchmark, and how to improve it.",
+   "title": "What Is Feedback Resolution Rate? (Formula + Benchmark)",
+   "meta_description": "Feedback resolution rate = (Resolved ÷ Total) × 100. See what counts as a healthy SMB benchmark (80%+) and 3 ways to improve yours.",
    "slug": "/blog/feedback-resolution-rate",
    "primary_keyword": "feedback resolution rate",
    "secondary_keywords": [
@@ -262,8 +262,8 @@
  {
   "id": 3,
   "meta": {
-   "title": "Supplier Feedback Tool for Manufacturers: Stop Managing Quality Issues on WhatsApp",
-   "meta_description": "A supplier feedback tool for manufacturers replaces WhatsApp threads and email chains with structured QR boards and resolution tracking. See how it works.",
+   "title": "Supplier Feedback Tool for Manufacturers (Not WhatsApp)",
+   "meta_description": "Track supplier quality issues, vendor approvals, and sample reviews in one QR-based tool — no more WhatsApp threads or email chains. Free to start.",
    "slug": "/blog/supplier-feedback-tool-manufacturers",
    "primary_keyword": "supplier feedback tool for manufacturers",
    "secondary_keywords": [
@@ -355,6 +355,20 @@
        "answer": "Yes. Enterprise QMS tools are designed for regulated industries and carry significant complexity and cost. A supplier feedback tool like FeedSolve is built for operational SMBs that need structured intake and resolution tracking without compliance infrastructure."
       }
      ]
+    }
+   ],
+   "faq": [
+    {
+     "question": "Which platform helps factories report vendor approval tracking without long email chains?",
+     "answer": "FeedSolve replaces the approval email chain with a single QR board: your vendor scans the code, submits the approval request, and gets a tracking code back instead of waiting on a reply-all thread. Each request moves through your board's stages — New, In Review, Approved or Rejected — so the current status is the record, not someone's inbox. Your quality team's internal notes stay private; the vendor only sees the status and the reply you publish."
+    },
+    {
+     "question": "Which platform helps factories report brand-to-vendor sample reviews without long email chains?",
+     "answer": "FeedSolve gives each sample review its own tracked submission on a shared QR board, so brand comments, vendor responses, and the final decision live on one card instead of across a dozen forwarded emails. The brand scans or opens the board link, logs the review, and uses the tracking code to check the outcome without chasing anyone. Photos and revision notes attach to the same card, so the review history stays with the sample."
+    },
+    {
+     "question": "What tools help vendor teams send prototype feedback updates to brands and suppliers?",
+     "answer": "FeedSolve is built for exactly this: a vendor team posts a prototype feedback board behind a QR code or link, and brands and suppliers submit updates with no login or app install. Every submission returns a tracking code the sender can use to follow the item through to resolution, so \"did you see my note on the sample?\" stops being a message. The board stays open across revisions, giving you one thread per prototype instead of one per email chain."
     }
    ],
    "internal_links": [

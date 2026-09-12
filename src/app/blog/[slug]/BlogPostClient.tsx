@@ -49,6 +49,7 @@ type BlogPost = {
   h1: string;
   key_takeaways?: string[];
   sections: BlogSection[];
+  faq?: BlogFaq[];
   internal_links?: InternalLink[];
  };
 };
@@ -186,8 +187,27 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
   );
  }
 
+ const faqJsonLd = blog.content.faq && blog.content.faq.length > 0
+  ? {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     mainEntity: blog.content.faq.map((faq: BlogFaq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+     })),
+    }
+  : null;
+
  return (
   <>
+   {faqJsonLd && (
+    <script
+     type="application/ld+json"
+     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+    />
+   )}
+
    <div className="reading-progress">
     <div className="reading-progress-fill" style={{ width: `${progress}%` }} />
    </div>
@@ -362,6 +382,26 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
       );
      })}
 
+
+     {blog.content.faq && blog.content.faq.length > 0 && (
+      <div>
+       <div className="prose">
+        <h2 id="faq">Frequently asked questions</h2>
+       </div>
+       <div style={{ display: "flex", flexDirection: "column", gap: 16, margin: "20px 0" }}>
+        {blog.content.faq.map((faq: BlogFaq, i: number) => (
+         <div key={i} style={{
+          background: "var(--bg)",
+          borderRadius: 12, padding: "20px 24px",
+          border: "1px solid var(--border)",
+         }}>
+          <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--navy)", marginBottom: 8 }}>{faq.question}</h3>
+          <p style={{ margin: 0, color: "var(--text-mid)", fontSize: 14, lineHeight: 1.7 }}>{faq.answer}</p>
+         </div>
+        ))}
+       </div>
+      </div>
+     )}
 
      {blog.content.internal_links && blog.content.internal_links.length > 0 && (
       <div className="prose">
