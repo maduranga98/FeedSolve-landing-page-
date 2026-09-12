@@ -49,6 +49,7 @@ type BlogPost = {
   h1: string;
   key_takeaways?: string[];
   sections: BlogSection[];
+  faq?: BlogFaq[];
   internal_links?: InternalLink[];
  };
 };
@@ -101,6 +102,37 @@ function getCategoryForBlog(blog: BlogPost): string {
  if (kw.includes("no-login") || kw.includes("feedback form")) return "product";
  if (kw.includes("vs") || kw.includes("typeform")) return "comparison";
  return "guides";
+}
+
+// Body paragraphs are plain strings, but some of them carry inline
+// [anchor](/url) links for internal linking. Split those out into real
+// anchors; a paragraph with no link returns a single text chunk, so
+// posts without inline links render exactly as before.
+const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+function renderBody(text: string): React.ReactNode {
+ INLINE_LINK.lastIndex = 0;
+ if (!INLINE_LINK.test(text)) return text;
+
+ INLINE_LINK.lastIndex = 0;
+ const nodes: React.ReactNode[] = [];
+ let cursor = 0;
+ let match: RegExpExecArray | null;
+
+ while ((match = INLINE_LINK.exec(text)) !== null) {
+  const [full, label, href] = match;
+  if (match.index > cursor) nodes.push(text.slice(cursor, match.index));
+  nodes.push(
+   href.startsWith("/") ? (
+    <Link key={`${href}-${match.index}`} href={href}>{label}</Link>
+   ) : (
+    <a key={`${href}-${match.index}`} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+   )
+  );
+  cursor = match.index + full.length;
+ }
+ if (cursor < text.length) nodes.push(text.slice(cursor));
+ return nodes;
 }
 
 function normalizeInternalLink(url: string): string {
@@ -186,8 +218,27 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
   );
  }
 
+ const faqJsonLd = blog.content.faq && blog.content.faq.length > 0
+  ? {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     mainEntity: blog.content.faq.map((faq: BlogFaq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+     })),
+    }
+  : null;
+
  return (
   <>
+   {faqJsonLd && (
+    <script
+     type="application/ld+json"
+     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+    />
+   )}
+
    <div className="reading-progress">
     <div className="reading-progress-fill" style={{ width: `${progress}%` }} />
    </div>
@@ -291,7 +342,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
          )}
 
          {section.body && section.body.map((para: string, j: number) => (
-          <p key={`body-${j}`}>{para}</p>
+          <p key={`body-${j}`}>{renderBody(para)}</p>
          ))}
          {section.examples && section.examples.length > 0 && (
           <div style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 12, padding: "18px 22px", margin: "20px 0" }}>
@@ -362,6 +413,26 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
       );
      })}
 
+
+     {blog.content.faq && blog.content.faq.length > 0 && (
+      <div>
+       <div className="prose">
+        <h2 id="faq">Frequently asked questions</h2>
+       </div>
+       <div style={{ display: "flex", flexDirection: "column", gap: 16, margin: "20px 0" }}>
+        {blog.content.faq.map((faq: BlogFaq, i: number) => (
+         <div key={i} style={{
+          background: "var(--bg)",
+          borderRadius: 12, padding: "20px 24px",
+          border: "1px solid var(--border)",
+         }}>
+          <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--navy)", marginBottom: 8 }}>{faq.question}</h3>
+          <p style={{ margin: 0, color: "var(--text-mid)", fontSize: 14, lineHeight: 1.7 }}>{faq.answer}</p>
+         </div>
+        ))}
+       </div>
+      </div>
+     )}
 
      {blog.content.internal_links && blog.content.internal_links.length > 0 && (
       <div className="prose">

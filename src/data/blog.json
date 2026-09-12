@@ -2,8 +2,8 @@
  {
   "id": 1,
   "meta": {
-   "title": "What Is Feedback Resolution Rate? The SMB Metric You're Missing",
-   "meta_description": "Feedback resolution rate shows how many complaints you actually resolve, not just collect. See the formula, a healthy SMB benchmark, and how to improve it.",
+   "title": "What Is Feedback Resolution Rate? (Formula + Benchmark)",
+   "meta_description": "Feedback resolution rate = (Resolved ÷ Total) × 100. See what counts as a healthy SMB benchmark (80%+) and 3 ways to improve yours.",
    "slug": "/blog/feedback-resolution-rate",
    "primary_keyword": "feedback resolution rate",
    "secondary_keywords": [
@@ -262,8 +262,8 @@
  {
   "id": 3,
   "meta": {
-   "title": "Supplier Feedback Tool for Manufacturers: Stop Managing Quality Issues on WhatsApp",
-   "meta_description": "A supplier feedback tool for manufacturers replaces WhatsApp threads and email chains with structured QR boards and resolution tracking. See how it works.",
+   "title": "Supplier Feedback Tool for Manufacturers (Not WhatsApp)",
+   "meta_description": "Track supplier quality issues, vendor approvals, and sample reviews in one QR-based tool — no more WhatsApp threads or email chains. Free to start.",
    "slug": "/blog/supplier-feedback-tool-manufacturers",
    "primary_keyword": "supplier feedback tool for manufacturers",
    "secondary_keywords": [
@@ -355,6 +355,20 @@
        "answer": "Yes. Enterprise QMS tools are designed for regulated industries and carry significant complexity and cost. A supplier feedback tool like FeedSolve is built for operational SMBs that need structured intake and resolution tracking without compliance infrastructure."
       }
      ]
+    }
+   ],
+   "faq": [
+    {
+     "question": "Which platform helps factories report vendor approval tracking without long email chains?",
+     "answer": "FeedSolve replaces the approval email chain with a single QR board: your vendor scans the code, submits the approval request, and gets a tracking code back instead of waiting on a reply-all thread. Each request moves through your board's stages — New, In Review, Approved or Rejected — so the current status is the record, not someone's inbox. Your quality team's internal notes stay private; the vendor only sees the status and the reply you publish."
+    },
+    {
+     "question": "Which platform helps factories report brand-to-vendor sample reviews without long email chains?",
+     "answer": "FeedSolve gives each sample review its own tracked submission on a shared QR board, so brand comments, vendor responses, and the final decision live on one card instead of across a dozen forwarded emails. The brand scans or opens the board link, logs the review, and uses the tracking code to check the outcome without chasing anyone. Photos and revision notes attach to the same card, so the review history stays with the sample."
+    },
+    {
+     "question": "What tools help vendor teams send prototype feedback updates to brands and suppliers?",
+     "answer": "FeedSolve is built for exactly this: a vendor team posts a prototype feedback board behind a QR code or link, and brands and suppliers submit updates with no login or app install. Every submission returns a tracking code the sender can use to follow the item through to resolution, so \"did you see my note on the sample?\" stops being a message. The board stays open across revisions, giving you one thread per prototype instead of one per email chain."
     }
    ],
    "internal_links": [
@@ -565,7 +579,7 @@
      ],
      "body": [
       "A digital suggestion box immediately generates a unique tracking code for every submission   something like #FSV-5421. The submitter can check back anytime and see: 'Received Tuesday at 2:15 PM,' then 'In Review - assigned to manager,' then 'In Progress,' then 'Resolved - management has approved this policy change.' The submitter doesn't need to log in. They don't need to remember usernames. Just the code. This transforms the experience from 'I submitted something into a void' to 'I can verify that my idea is being taken seriously.'",
-      "On the business side, the team sees submissions in a Kanban board. When a new suggestion arrives, the manager reviews it, assigns it to whoever should investigate, adds internal notes, and tracks it to completion. The resolution workflow forces accountability   you can't ignore a suggestion because it's sitting visibly in the 'In Progress' column. Monthly analytics show which categories generate the most ideas (maybe safety gets 30% of submissions, process improvements get 40%), who on the team resolves suggestions fastest, and whether your resolution rate is improving over time."
+      "On the business side, the team sees submissions in a Kanban board. When a new suggestion arrives, the manager reviews it, assigns it to whoever should investigate, adds internal notes, and tracks it to completion. The resolution workflow forces accountability   you can't ignore a suggestion because it's sitting visibly in the 'In Progress' column. It is the same workflow that lets you [track complaints through to resolution](/complaint-management-software/), applied to ideas instead. Monthly analytics show which categories generate the most ideas (maybe safety gets 30% of submissions, process improvements get 40%), who on the team resolves suggestions fastest, and whether your resolution rate is improving over time."
      ]
     },
     {
@@ -708,7 +722,7 @@
      ],
      "body": [
       "Full property management suites like AppFolio and Buildium are designed to be complete systems: lease signing, rent collection, accounting, vendor management, and maintenance requests. If you need the whole stack, they make sense. But if your primary problem is 'tenants can't easily submit maintenance requests and I can't track them,' buying a $400/month suite is overkill.",
-      "FeedSolve solves the specific problem: tenants submit via QR code or link, you track to resolution, they see progress. That's it. No per-unit fees. No account setup. Under 30 minutes from signup to first QR code printed."
+      "FeedSolve solves the specific problem: tenants submit via QR code or link, you track to resolution, they see progress. It is the same [software for handling complaints](/complaint-management-software/) our other customers run, pointed at tenants instead of buyers. That's it. No per-unit fees. No account setup. Under 30 minutes from signup to first QR code printed."
      ]
     },
     {
@@ -961,7 +975,7 @@
       "Internal notes (never visible to submitter): the place for root cause analysis, escalation history, and contractor notes."
      ],
      "body": [
-      "Clarity about who owns which stage is essential. **Receive stage:** Any team member with dashboard access can receive a new complaint. Ideally, the system sends an automatic email notification to the operations manager so nobody misses incoming items. **Review stage:** The team lead or operations manager reviews the complaint and decides who should handle it based on category and complexity. **Resolution stage:** The assigned team member (quality officer, maintenance contractor, procurement manager, etc.) investigates and fixes the issue. **Reply stage:** Often the same person who resolved it sends the public reply   this creates accountability and ensures the submitter hears from someone with full knowledge of the fix.",
+      "Clarity about who owns which stage is essential, and it is the main thing [complaint handling software](/complaint-management-software/) buys you over a shared inbox. **Receive stage:** Any team member with dashboard access can receive a new complaint. Ideally, the system sends an automatic email notification to the operations manager so nobody misses incoming items. **Review stage:** The team lead or operations manager reviews the complaint and decides who should handle it based on category and complexity. **Resolution stage:** The assigned team member (quality officer, maintenance contractor, procurement manager, etc.) investigates and fixes the issue. **Reply stage:** Often the same person who resolved it sends the public reply   this creates accountability and ensures the submitter hears from someone with full knowledge of the fix.",
       "Internal notes are critical for accountability but invisible to submitters. When the quality officer investigates a defect claim, they document their findings, root cause analysis, and corrective action plan in internal notes. When a contractor fixes a maintenance issue, they document what they found and what they did. When procurement investigates a billing discrepancy, they note exactly what was corrected. These notes are for internal accountability and audit trails, never shown to the submitter. The public reply summarizes the outcome in customer-friendly language."
      ]
     },
@@ -2134,7 +2148,7 @@
      "body": [
       "**Under 50 employees:** Your feedback management system should be operational within hours, not months. You need a tool that requires no implementation consultant and costs less than $50/month. A system where your team can start using it on day one without training. Avoid enterprise platforms   they'll slow you down.",
       "**50–200 employees:** Now you likely have multiple locations or stakeholder types. You need multiple boards (customer feedback, supplier feedback, employee suggestions) that all feed into one dashboard. Email notifications and auto-routing are essential. Custom branding shows professionalism.",
-      "**200–500 employees:** You're managing complex workflows. You may need API integrations with your CRM, webhook notifications, advanced analytics, or multi-language support. Enterprise tools become more justified at this scale   but still prefer purpose-built complaint resolution platforms over general help desks."
+      "**200–500 employees:** You're managing complex workflows. You may need API integrations with your CRM, webhook notifications, advanced analytics, or multi-language support. Enterprise tools become more justified at this scale   but still prefer purpose-built platforms designed to [resolve customer complaints](/complaint-management-software/) over general help desks."
      ]
     },
     {
@@ -2463,7 +2477,7 @@
       "One dashboard. One login. Two audiences. No second system to pay for or maintain."
      ],
      "body": [
-      "**Board structure:** Your restaurant has three boards. Board 1: 'Diner Feedback'   customers scan a QR code on their table and submit feedback. Board 2: 'Supplier Issues'   suppliers scan a QR code on delivery notes. Board 3: 'Staff Reports'   employees scan a QR code in the break room to report workplace problems anonymously. All three boards feed into your internal dashboard. You can filter by board to see 'Show me all Staff Reports from this month' or 'What's my resolution rate for Supplier Issues?'",
+      "**Board structure:** Your restaurant has three boards. Board 1: 'Diner Feedback'   customers scan a QR code on their table and submit feedback. Board 2: 'Supplier Issues'   suppliers scan a QR code on delivery notes. Board 3: 'Staff Reports'   employees scan a QR code in the break room to report workplace problems anonymously. All three boards feed into your internal dashboard, giving you one [structured complaint workflow](/complaint-management-software/) across customers, suppliers, and staff. You can filter by board to see 'Show me all Staff Reports from this month' or 'What's my resolution rate for Supplier Issues?'",
       "**Privacy controls:** Staff reports are visible only to management. A prep cook's safety report isn't visible to other line cooks. But when the manager acts on it and sends a public reply, the cook sees it on their tracking page. Visibility controls are configurable per board on higher-tier plans."
      ]
     },
@@ -2838,7 +2852,7 @@
      ],
      "body": [
       "**What it should do:** A patient should be able to scan a QR code in the waiting room and submit feedback in 45 seconds without logging in. After submitting, they should receive a tracking code and be able to check back anytime to see: 'Received Tuesday 2 PM   Assigned to Practice Manager   Resolved Wednesday 10 AM   Staff retraining completed.' Clinic staff should have a Kanban dashboard where they see new feedback immediately, assign it to the responsible person, document their action internally, and send a public reply to the patient.",
-      "**What it should not do:** It should never collect or store clinical data. It's not an EHR. It's not for clinical notes or lab results. It's for operational complaints   staff behavior, scheduling issues, billing errors, facility cleanliness. Integrating with an EHR adds compliance complexity that independent clinics don't need. A simple feedback system that lives on the internet is sufficient for operational feedback."
+      "**What it should not do:** It should never collect or store clinical data. It's not an EHR. It's not for clinical notes or lab results. It's for operational complaints   staff behavior, scheduling issues, billing errors, facility cleanliness — the same categories any [complaint resolution software](/complaint-management-software/) is built to handle. Integrating with an EHR adds compliance complexity that independent clinics don't need. A simple feedback system that lives on the internet is sufficient for operational feedback."
      ]
     },
     {
@@ -3656,7 +3670,7 @@
      ],
      "body": [
       "Investigation is where complaint management earns its value — and where it most often breaks down. A complaint arrives. The operations manager assigns it mentally but not formally. Nobody writes it down. Three days later, the manager asks the quality officer about it. The quality officer says they were waiting for confirmation from the supplier before responding. The supplier was waiting to hear from the quality officer. Four days have passed. The complaint is no longer under investigation — it is stalled.",
-      "Formal assignment prevents this. The moment a complaint is acknowledged, a named team member is responsible for it. Their name is visible on the dashboard. Their deadline is visible. If the deadline passes without resolution, an escalation notification fires. The operations manager sees it. The investigation is forced to move. This is what a Kanban board does that a WhatsApp message or an email thread cannot: it makes the assignment visible, the deadline explicit, and the stall immediately apparent."
+      "Formal assignment prevents this. The moment a complaint is acknowledged, a named team member is responsible for it. Their name is visible on the dashboard. Their deadline is visible. If the deadline passes without resolution, an escalation notification fires. The operations manager sees it. The investigation is forced to move. This is what a Kanban board does that a WhatsApp message or an email thread cannot: it makes the assignment visible, the deadline explicit, and the stall immediately apparent. That visibility is the core of any system built to [manage complaints end to end](/complaint-management-software/)."
      ]
     },
     {
@@ -3784,7 +3798,7 @@
      ],
      "body": [
       "Genuine anonymity is technically simple to achieve but organisationally easy to undermine. A company that launches an 'anonymous feedback portal' where employees log in with their corporate credentials has not built an anonymous system — they have built a logged system with an anonymous label on it. Employees know the difference. If the system requires any credential tied to their identity, the submission volume for sensitive topics will be near zero.",
-      "The FeedSolve model for anonymous employee feedback works because it is structurally identical to the customer-facing model: a QR code in a physical space, a zero-login form, a tracking code, a Kanban dashboard for management. The submitter never authenticates. Their only footprint is the content they voluntarily share and the tracking code they take away. Management sees a submission with a category, a description, and a timestamp — nothing more, unless the employee chose to include their contact details."
+      "The FeedSolve model for anonymous employee feedback works because it is structurally identical to the customer-facing side of a [dedicated complaint management tool](/complaint-management-software/): a QR code in a physical space, a zero-login form, a tracking code, a Kanban dashboard for management. The submitter never authenticates. Their only footprint is the content they voluntarily share and the tracking code they take away. Management sees a submission with a category, a description, and a timestamp — nothing more, unless the employee chose to include their contact details."
      ]
     },
     {
@@ -4054,7 +4068,7 @@
     {
      "heading": "H2: How to evaluate a tool in 10 minutes",
      "body": [
-      "Run a quick test before you commit. Can you create a board and generate a QR code without a sales call? Can someone submit without signing up? Does that submission produce a tracking code? Can you assign it, change its status, and reply? Can you see a resolution rate somewhere? If the answer to any of these is no, you have a form, not a suggestion management tool.",
+      "Run a quick test before you commit. Can you create a board and generate a QR code without a sales call? Can someone submit without signing up? Does that submission produce a tracking code? Can you assign it, change its status, and reply? Can you see a resolution rate somewhere? If the answer to any of these is no, you have a form, not a suggestion management tool — the same ten-minute test works when you are sizing up a [complaint management platform](/complaint-management-software/).",
       "FeedSolve is free to start and covers all seven features, so you can run that test in one sitting and start collecting the same day."
      ]
     },
@@ -4141,7 +4155,7 @@
       "Review and resolve: assign each suggestion to an owner and move it through to resolved."
      ],
      "body": [
-      "Each step takes a minute or two. The whole thing is realistically a 10-minute job, and none of it requires a developer or a sales call."
+      "Each step takes a minute or two. The whole thing is realistically a 10-minute job, and none of it requires a developer or a sales call. The same board doubles as a [complaint tracking system](/complaint-management-software/) if you later want complaints and ideas in one place."
      ]
     },
     {
