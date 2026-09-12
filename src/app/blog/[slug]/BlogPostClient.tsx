@@ -104,6 +104,37 @@ function getCategoryForBlog(blog: BlogPost): string {
  return "guides";
 }
 
+// Body paragraphs are plain strings, but some of them carry inline
+// [anchor](/url) links for internal linking. Split those out into real
+// anchors; a paragraph with no link returns a single text chunk, so
+// posts without inline links render exactly as before.
+const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+function renderBody(text: string): React.ReactNode {
+ INLINE_LINK.lastIndex = 0;
+ if (!INLINE_LINK.test(text)) return text;
+
+ INLINE_LINK.lastIndex = 0;
+ const nodes: React.ReactNode[] = [];
+ let cursor = 0;
+ let match: RegExpExecArray | null;
+
+ while ((match = INLINE_LINK.exec(text)) !== null) {
+  const [full, label, href] = match;
+  if (match.index > cursor) nodes.push(text.slice(cursor, match.index));
+  nodes.push(
+   href.startsWith("/") ? (
+    <Link key={`${href}-${match.index}`} href={href}>{label}</Link>
+   ) : (
+    <a key={`${href}-${match.index}`} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+   )
+  );
+  cursor = match.index + full.length;
+ }
+ if (cursor < text.length) nodes.push(text.slice(cursor));
+ return nodes;
+}
+
 function normalizeInternalLink(url: string): string {
  if (url === "/pricing") return "/#pricing";
  return url.endsWith("/") || url.includes("#") ? url : `${url}/`;
@@ -311,7 +342,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
          )}
 
          {section.body && section.body.map((para: string, j: number) => (
-          <p key={`body-${j}`}>{para}</p>
+          <p key={`body-${j}`}>{renderBody(para)}</p>
          ))}
          {section.examples && section.examples.length > 0 && (
           <div style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 12, padding: "18px 22px", margin: "20px 0" }}>
