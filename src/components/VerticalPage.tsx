@@ -57,6 +57,11 @@ export interface VerticalProps {
   exampleHeading: string;
   exampleScenario: { step: string; detail: string }[];
 
+  // Optional custom sections rendered between the worked example and the
+  // "everything included" checklist. Used by pages that need a comparison or
+  // positioning block without forking the template.
+  extraSections?: React.ReactNode;
+
   // FAQ
   faqs: VerticalFaq[];
 
@@ -72,6 +77,14 @@ export interface VerticalProps {
 
   // Canonical absolute URL of the page (used for BreadcrumbList structured data)
   breadcrumbUrl: string;
+
+  /**
+   * Optional deeper breadcrumb trail (e.g. Home > Logistics > 3PL Feedback
+   * Platform). When supplied the visible trail mirrors it and this component
+   * emits no BreadcrumbList JSON-LD - the page owns that schema so the page
+   * never ships two conflicting BreadcrumbList blocks.
+   */
+  breadcrumbTrail?: { name: string; url: string }[];
 }
 
 export default function VerticalPage(props: VerticalProps) {
@@ -92,24 +105,30 @@ export default function VerticalPage(props: VerticalProps) {
     features,
     exampleHeading,
     exampleScenario,
+    extraSections,
     faqs,
     ctaHeading,
     ctaSub,
     relatedLinks,
     breadcrumbLabel,
     breadcrumbUrl,
+    breadcrumbTrail,
   } = props;
 
   const [openFaq, setOpenFaq] = useState<number>(0);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(landingBreadcrumb(breadcrumbLabel, breadcrumbUrl)),
-        }}
-      />
+      {!breadcrumbTrail && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              landingBreadcrumb(breadcrumbLabel, breadcrumbUrl)
+            ),
+          }}
+        />
+      )}
       <Navbar variant="blog" />
 
       {/* ── HERO ─────────────────────────────────────────── */}
@@ -146,18 +165,44 @@ export default function VerticalPage(props: VerticalProps) {
               marginBottom: 32,
             }}
           >
-            <Link
-              href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
-            >
-              Home
-            </Link>
-            <ChevronRight size={13} />
-            <span style={{ color: "rgba(255,255,255,0.4)" }}>Solutions</span>
-            <ChevronRight size={13} />
-            <span style={{ color: "rgba(255,255,255,0.65)" }}>
-              {breadcrumbLabel}
-            </span>
+            {(
+              breadcrumbTrail ?? [
+                { name: "Home", url: "/" },
+                { name: "Solutions", url: "" },
+                { name: breadcrumbLabel, url: breadcrumbUrl },
+              ]
+            ).map((crumb, i, all) => {
+              const isLast = i === all.length - 1;
+              return (
+                <span
+                  key={`${crumb.name}-${i}`}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8 }}
+                >
+                  {i > 0 && <ChevronRight size={13} />}
+                  {isLast || !crumb.url ? (
+                    <span
+                      style={{
+                        color: isLast
+                          ? "rgba(255,255,255,0.65)"
+                          : "rgba(255,255,255,0.4)",
+                      }}
+                    >
+                      {crumb.name}
+                    </span>
+                  ) : (
+                    <Link
+                      href={crumb.url.replace("https://feedsolve.com", "") || "/"}
+                      style={{
+                        color: "var(--teal-light)",
+                        textDecoration: "none",
+                      }}
+                    >
+                      {crumb.name}
+                    </Link>
+                  )}
+                </span>
+              );
+            })}
           </div>
 
           <div
@@ -666,6 +711,8 @@ export default function VerticalPage(props: VerticalProps) {
           </div>
         </div>
       </section>
+
+      {extraSections}
 
       {/* ── CHECKLIST ────────────────────────────────────── */}
       <section style={{ background: "white", padding: "64px 32px" }}>

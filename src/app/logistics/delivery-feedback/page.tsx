@@ -189,6 +189,11 @@ export default function LogisticsDeliveryFeedback() {
         ctaSub="Set up your first warehouse feedback, driver feedback app, or 3PL feedback platform board in under 2 minutes. Free to start."
         relatedLinks={[
           {
+            href: "/logistics/3pl-feedback-platform/",
+            label: "3PL Feedback Platform",
+            sub: "Shipper & consignee complaints",
+          },
+          {
             href: "/manufacturing/supplier-feedback/",
             label: "Manufacturing",
             sub: "Supplier quality complaints",

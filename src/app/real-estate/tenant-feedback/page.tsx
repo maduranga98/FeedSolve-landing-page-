@@ -8,6 +8,9 @@ import {
   Globe,
 } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
+import VerticalProseSection from "@/components/VerticalProseSection";
+import { JsonLdScript } from "@/components/JsonLd";
+import { type FAQItem, generateFAQSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Tenant Feedback Portal & HOA Complaint Form - Track Every Request",
@@ -25,43 +28,57 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const faqs: FAQItem[] = [
+  {
+    question:
+      "Do tenants need to download an app or create an account to submit a request?",
+    answer:
+      "No. Tenants access the feedback form by scanning a QR code in the lobby or clicking a link in their welcome pack. No app download, no login, no password required. After submitting, they receive a unique tracking code to check the status of their request from any browser at any time.",
+  },
+  {
+    question:
+      "Can I run separate boards for different buildings, properties, or HOA communities?",
+    answer:
+      "Yes. Each building, property, or HOA community can have its own tenant feedback portal or HOA complaint form with a unique QR code and category set. All submissions from all boards appear in a single dashboard, filterable by board, status, priority, or date.",
+  },
+  {
+    question:
+      "Does FeedSolve provide an audit trail for maintenance disputes or legal purposes?",
+    answer:
+      "Yes. Every submission is timestamped and stored with its full resolution history - status changes, internal notes, assignee, contractor updates, and public replies. This provides a verifiable, exportable record for tenant disputes, deposit deductions, and property inspection records.",
+  },
+  {
+    question: "Can tenants submit maintenance requests anonymously?",
+    answer:
+      "Yes if you enable anonymous mode on the board. Tenants who prefer privacy can submit without providing contact information. They still receive a tracking code to check resolution progress. This is useful for noise complaints or concerns about shared facilities where tenants may not want to be identified.",
+  },
+  {
+    question:
+      "How is a tenant feedback portal different from a maintenance request form?",
+    answer:
+      "A maintenance request form ends at collection - it captures the request and drops it into an inbox with no owner, no status, and no way for the tenant to check progress. A tenant feedback portal carries the request through its whole life: it routes to the property manager or contractor responsible, moves through Received, In Progress, and Resolved, keeps contractor notes separate from the tenant-facing reply, and exposes a status the tenant can check with a #FSV tracking code.",
+  },
+  {
+    question:
+      "How does this compare to a property management platform like AppFolio or Buildium?",
+    answer:
+      "AppFolio and Buildium are full property management suites covering lease management, rent collection, and accounting. Maintenance request handling is a sub-feature. FeedSolve is purpose-built for complaint resolution - zero-friction submission for tenants, Kanban workflow for property managers, full audit trail. It sets up in under 2 minutes versus days of onboarding for a full PMS.",
+  },
+];
+
+const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Tenant Feedback Portal and HOA Complaint Form",
   description:
     "FeedSolve tenant feedback portal, maintenance request, and HOA complaint form tracking for property managers and real estate landlords.",
   url: "https://feedsolve.com/real-estate/tenant-feedback/",
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Do tenants need to download an app or create an account?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No. Tenants submit via a QR code in the lobby or a link in their welcome pack - no app, no account, no password. They receive a tracking code and can check resolution status on any browser.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does FeedSolve provide an audit trail for maintenance disputes?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Every submission is timestamped with its full resolution history - status changes, internal notes, assignee, and public replies. This provides a verifiable record for tenant disputes and property inspections.",
-        },
-      },
-    ],
-  },
 };
 
 export default function RealEstateTenantFeedback() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLdScript data={[webPageJsonLd, generateFAQSchema(faqs)]} />
       <VerticalPage
         badge="Real Estate & Property · Tenant feedback"
         breadcrumbLabel="Tenant Feedback Portal"
@@ -151,9 +168,9 @@ export default function RealEstateTenantFeedback() {
               "Sees request in dashboard. Assigns to plumber contractor. Priority: High. Target: 24 hours.",
           },
           {
-            step: "Status visible to tenant",
+            step: "Status visible to tenant via #FSV-7734",
             detail:
-              "Tenant checks tracking code next morning - sees 'In Progress - assigned to maintenance team.' Knows it hasn't been forgotten.",
+              "Tenant opens the public tracking page next morning - no app, no account, no login - and sees 'In Progress - assigned to maintenance team.' Knows it hasn't been forgotten.",
           },
           {
             step: "Contractor attends and fixes the issue",
@@ -171,31 +188,52 @@ export default function RealEstateTenantFeedback() {
               "Sees 'Resolved' with full timeline and the contractor's reply. No phone call. No dispute. Full documented record.",
           },
         ]}
-        faqs={[
-          {
-            q: "Do tenants need to download an app or create an account to submit a request?",
-            a: "No. Tenants access the feedback form by scanning a QR code in the lobby or clicking a link in their welcome pack. No app download, no login, no password required. After submitting, they receive a unique tracking code to check the status of their request from any browser at any time.",
-          },
-          {
-            q: "Can I run separate boards for different buildings, properties, or HOA communities?",
-            a: "Yes. Each building, property, or HOA community can have its own tenant feedback portal or HOA complaint form with a unique QR code and category set. All submissions from all boards appear in a single dashboard, filterable by board, status, priority, or date.",
-          },
-          {
-            q: "Does FeedSolve provide an audit trail for maintenance disputes or legal purposes?",
-            a: "Yes. Every submission is timestamped and stored with its full resolution history - status changes, internal notes, assignee, contractor updates, and public replies. This provides a verifiable, exportable record for tenant disputes, deposit deductions, and property inspection records.",
-          },
-          {
-            q: "Can tenants submit maintenance requests anonymously?",
-            a: "Yes if you enable anonymous mode on the board. Tenants who prefer privacy can submit without providing contact information. They still receive a tracking code to check resolution progress. This is useful for noise complaints or concerns about shared facilities where tenants may not want to be identified.",
-          },
-          {
-            q: "How does this compare to a property management platform like AppFolio or Buildium?",
-            a: "AppFolio and Buildium are full property management suites covering lease management, rent collection, and accounting. Maintenance request handling is a sub-feature. FeedSolve is purpose-built for complaint resolution - zero-friction submission for tenants, Kanban workflow for property managers, full audit trail. It sets up in under 2 minutes versus days of onboarding for a full PMS.",
-          },
-        ]}
+        extraSections={
+          <>
+            <VerticalProseSection
+              label="Comparison"
+              heading="Tenant Feedback Portal vs. a Maintenance Request Form"
+              paragraphs={[
+                "A maintenance request form does one job: it gets the problem out of the tenant's head and into writing. What happens next is manual. The submission lands in a shared inbox or a ticketing queue, someone has to notice it, someone has to decide which contractor owns it, and the tenant who reported it has no way of finding out whether any of that happened. So they call - which is the inbound volume the form was supposed to remove in the first place.",
+                "A tenant feedback portal carries the request through its whole life instead of stopping at collection. Every request has an owner, a priority, and a target date. It moves across a Kanban board from Received to In Progress to Resolved, so a property manager can see at a glance which units are waiting and which contractor is late. Contractor notes and internal discussion stay separate from the reply the tenant reads, and every change is timestamped - which is what turns a disputed repair into a documented one.",
+                "The part tenants notice is the tracking code. A ticketing inbox can only tell someone what happened if a person writes back; a portal exposes the status itself. The tenant who reported a leak on Tuesday checks #FSV-7734 on Wednesday morning, sees that a plumber is assigned, and does not call reception. Multiply that across a building and the portal pays for itself in avoided phone calls before you count the audit trail, the resolution rate, or the weekly view of maintenance performance per property.",
+              ]}
+              contrast={[
+                {
+                  title: "A maintenance request form or ticketing inbox",
+                  tone: "plain",
+                  points: [
+                    "Requests sit in a shared inbox with no owner and no target date",
+                    "Tenants call reception because there is no status they can see",
+                    "Contractor notes and tenant-facing replies share one email thread",
+                    "No resolution rate or time-to-resolve per building",
+                    "Disputes come down to recollection rather than a timestamped record",
+                  ],
+                },
+                {
+                  title: "FeedSolve tenant feedback portal",
+                  tone: "feedsolve",
+                  points: [
+                    "Routes to the property manager or contractor with a priority and deadline",
+                    "Public #FSV tracking code - status visible with no app or account",
+                    "Internal contractor notes stay private; the public reply is separate",
+                    "Resolution rate and time-to-resolve per property, per week",
+                    "Exportable, timestamped history for deposit and repair disputes",
+                  ],
+                },
+              ]}
+            />
+          </>
+        }
+        faqs={faqs.map((faq) => ({ q: faq.question, a: faq.answer }))}
         ctaHeading="Every maintenance request tracked. Every tenant and HOA resident heard."
         ctaSub="Set up your first tenant feedback portal or HOA complaint form in 2 minutes. Free to start."
         relatedLinks={[
+          {
+            href: "/real-estate/hoa-complaint-form/",
+            label: "HOA Complaint Form",
+            sub: "Resident complaints, routed and resolved",
+          },
           {
             href: "/manufacturing/supplier-feedback/",
             label: "Manufacturing",

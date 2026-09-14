@@ -1,6 +1,7 @@
 // Shared SEO helpers for structured data (JSON-LD).
 
-export const SITE_URL = "https://feedsolve.com";
+export { SITE_URL } from "./site";
+import { SITE_URL } from "./site";
 
 export interface Crumb {
   name: string;
@@ -32,3 +33,11 @@ export function landingBreadcrumb(label: string, url: string) {
     { name: label, url },
   ]);
 }
+
+export {
+  type FAQItem,
+  generateFAQSchema,
+  generateSoftwareAppSchema,
+  generateBreadcrumbSchema,
+} from "./schema";
+export { generatePageMetadata } from "./metadata";
