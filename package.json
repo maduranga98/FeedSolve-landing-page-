@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/check-seo.mjs",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "next build && firebase deploy"
+    "deploy": "next build && firebase deploy",
+    "seo:check": "node scripts/check-seo.mjs"
   },
   "dependencies": {
     "@types/nodemailer": "^8.0.1",
