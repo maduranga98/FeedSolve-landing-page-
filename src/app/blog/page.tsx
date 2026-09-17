@@ -648,6 +648,33 @@ export default function BlogPage() {
      </div>
     )}
 
+    {/* FULL ARCHIVE - always rendered, never gated on component state.
+        The grid above is client-paginated at 6 posts, so without this only
+        the first page ships in the static HTML and the remaining posts have
+        no link from the hub at all. That crawl depth is why most posts sat
+        in "Crawled - currently not indexed". */}
+    <nav className="archive" aria-label="All blog posts">
+     <h2 className="archive-title">All posts</h2>
+     {categories
+      .filter((c) => c.id !== "all")
+      .map((c) => {
+       const inCat = posts.filter((p) => p.cat === c.id);
+       if (inCat.length === 0) return null;
+       return (
+        <div key={c.id} className="archive-group">
+         <h3 className="archive-group-title">{c.label}</h3>
+         <ul className="archive-list">
+          {inCat.map((post) => (
+           <li key={post.href}>
+            <Link href={post.href}>{post.title}</Link>
+           </li>
+          ))}
+         </ul>
+        </div>
+       );
+      })}
+    </nav>
+
     {/* NEWSLETTER */}
     <div className="newsletter-bar">
      <div>

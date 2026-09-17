@@ -494,6 +494,20 @@ footer { background: var(--navy-deep); padding: 48px 32px; }
 .page-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
 .page-btn svg { width: 14px; height: 14px; }
 
+/* BLOG ARCHIVE - full crawlable post index on the hub page */
+.archive { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--border); }
+.archive-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin: 0 0 28px; }
+.archive-group { margin-bottom: 28px; }
+.archive-group-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-mid); margin: 0 0 12px; }
+.archive-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px 32px; }
+.archive-list li { line-height: 1.5; }
+.archive-list a { font-size: 14px; color: var(--text); text-decoration: none; transition: color var(--t); }
+.archive-list a:hover { color: var(--teal); text-decoration: underline; }
+@media (max-width: 640px) {
+  .archive { margin-top: 48px; }
+  .archive-list { grid-template-columns: 1fr; }
+}
+
 /* ===== BLOG POST PAGE ===== */
 .reading-progress { position: fixed; top: 64px; left: 0; right: 0; height: 3px; background: var(--border); z-index: 99; }
 .reading-progress-fill { height: 100%; background: linear-gradient(to right, var(--teal), var(--navy)); transition: width 0.1s linear; }

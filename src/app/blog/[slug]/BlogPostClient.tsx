@@ -124,7 +124,7 @@ function renderBody(text: string): React.ReactNode {
   if (match.index > cursor) nodes.push(text.slice(cursor, match.index));
   nodes.push(
    href.startsWith("/") ? (
-    <Link key={`${href}-${match.index}`} href={href}>{label}</Link>
+    <Link key={`${href}-${match.index}`} href={normalizeInternalLink(href)}>{label}</Link>
    ) : (
     <a key={`${href}-${match.index}`} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
    )

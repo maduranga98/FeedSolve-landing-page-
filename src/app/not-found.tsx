@@ -1,4 +1,15 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+// The static export writes real, 200-served files for /404/ and /_not-found/.
+// Without this they inherit the root layout's canonical (the homepage) and its
+// "index, follow" robots directive, which makes Googlebot read them as soft-404
+// duplicates of "/". Override both.
+export const metadata: Metadata = {
+  title: { absolute: "Page not found | FeedSolve" },
+  robots: { index: false, follow: false },
+  alternates: { canonical: undefined },
+};
 
 export default function NotFound() {
   return (
