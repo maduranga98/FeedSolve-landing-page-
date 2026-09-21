@@ -1,6 +1,6 @@
 // Structured-data (JSON-LD) generators shared across landing and vertical pages.
 
-import { SITE_URL } from "./site";
+import { ORGANIZATION_SAME_AS, SITE_URL } from "./site";
 
 export type FAQItem = { question: string; answer: string };
 
@@ -58,7 +58,27 @@ export function generateSoftwareAppSchema() {
         billingIncrement: "Monthly",
       },
     ],
+    provider: generateOrganizationSchema({ standalone: false }),
     // Add aggregateRating once real G2/Capterra reviews exist - never fabricate one.
+  };
+}
+
+/**
+ * The FeedSolve Organization node, including the `sameAs` entity links.
+ *
+ * `standalone: false` drops `@context` so the object can be nested inside
+ * another schema (as `provider`, `publisher`, `worksFor`, ...) without emitting
+ * a second context in the middle of a graph.
+ */
+export function generateOrganizationSchema({ standalone = true } = {}) {
+  return {
+    ...(standalone ? { "@context": "https://schema.org" } : {}),
+    "@type": "Organization",
+    name: "FeedSolve",
+    alternateName: ["Feed Solve"],
+    url: `${SITE_URL}/`,
+    logo: `${SITE_URL}/logo.webp`,
+    sameAs: [...ORGANIZATION_SAME_AS],
   };
 }
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { G2_PROFILE_URL, LINKEDIN_URL } from "@/lib/seo";
 
 interface FooterProps {
   variant?: "home" | "blog";
@@ -39,8 +40,12 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           <a href="mailto:hello@feedsolve.com">Contact</a>
           <a href="/privacy/">Privacy Policy</a>
           <a href="/terms/">Terms</a>
-          <a href="https://www.linkedin.com/company/feedsolve/" target="_blank" rel="noopener noreferrer">
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
             LinkedIn
+          </a>
+          {/* Two-way reference for the G2 entry in the Organization sameAs. */}
+          <a href={G2_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+            G2 Reviews
           </a>
         </div>
       </div>

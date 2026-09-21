@@ -1,6 +1,12 @@
 // Shared SEO helpers for structured data (JSON-LD).
 
-export { SITE_URL } from "./site";
+export {
+  SITE_URL,
+  G2_PROFILE_URL,
+  LINKEDIN_URL,
+  SAASBROWSER_URL,
+  ORGANIZATION_SAME_AS,
+} from "./site";
 import { SITE_URL } from "./site";
 
 export interface Crumb {
@@ -38,6 +44,7 @@ export {
   type FAQItem,
   generateFAQSchema,
   generateSoftwareAppSchema,
+  generateOrganizationSchema,
   generateBreadcrumbSchema,
 } from "./schema";
 export { generatePageMetadata } from "./metadata";
