@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Lightbulb, EyeOff, QrCode, ListChecks, Languages, ShieldCheck } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
+import VerticalProseSection from "@/components/VerticalProseSection";
 
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
@@ -177,6 +179,55 @@ export default function DigitalSuggestionBoxSoftware() {
               "'Light replaced and a monthly check added. Thanks for flagging this.' Resolution rate updates automatically.",
           },
         ]}
+        extraSections={
+          <VerticalProseSection
+            label="Choosing a tool"
+            heading="How to choose suggestion box software (and what to read next)"
+            background="var(--bg)"
+            paragraphs={[
+              <>
+                Almost every tool in this category solves intake. The question
+                worth asking is what happens after someone hits submit, and the
+                answer separates a form from a system. Our guide to{" "}
+                <Link href="/blog/suggestion-box-software-features/">
+                  suggestion box software
+                </Link>{" "}
+                walks through the seven features that decide which one you
+                bought, and there is a ten-minute test in it you can run on any
+                shortlist before you commit.
+              </>,
+              <>
+                If anonymity is the sticking point - and for an employee
+                programme it usually is - start with the practical guide to
+                running an{" "}
+                <Link href="/blog/anonymous-suggestion-box/">
+                  anonymous suggestion box
+                </Link>
+                , which covers what actually makes a channel feel safe to a
+                sceptical employee. When you are ready to launch, the{" "}
+                <Link href="/blog/online-suggestion-box-setup/">
+                  online suggestion box
+                </Link>{" "}
+                setup guide gets you from nothing to a live QR code in about ten
+                minutes, and the{" "}
+                <Link href="/blog/digital-suggestion-box-small-business/">
+                  small business walkthrough
+                </Link>{" "}
+                covers where to put the code once you have one.
+              </>,
+              <>
+                Comparing FeedSolve against a single-purpose anonymous
+                suggestion box? The{" "}
+                <Link href="/alternatives/suggestion-ox/">
+                  Suggestion Ox alternative
+                </Link>{" "}
+                guide is an honest side-by-side: where a focused suggestion tool
+                is the simpler choice, and where collecting without resolving
+                stops being enough.
+              </>,
+            ]}
+          />
+        }
         faqs={faqs}
         ctaHeading="Launch your digital suggestion box today"
         ctaSub="Create a board, generate a QR code, and start collecting suggestions in minutes. Free to start, no credit card."

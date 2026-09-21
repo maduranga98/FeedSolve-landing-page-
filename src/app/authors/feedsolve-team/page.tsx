@@ -12,13 +12,6 @@ export const metadata: Metadata = {
     "Meet the FeedSolve Team, writing practical guides on feedback management, complaint tracking, QR feedback, and operational resolution workflows for SMBs.",
   alternates: {
     canonical: `${SITE_URL}/authors/feedsolve-team/`,
-    languages: {
-      "en-GB": `${SITE_URL}/authors/feedsolve-team/`,
-      "en-AU": `${SITE_URL}/authors/feedsolve-team/`,
-      "en-US": `${SITE_URL}/authors/feedsolve-team/`,
-      en: `${SITE_URL}/authors/feedsolve-team/`,
-      "x-default": `${SITE_URL}/authors/feedsolve-team/`,
-    },
   },
 };
 

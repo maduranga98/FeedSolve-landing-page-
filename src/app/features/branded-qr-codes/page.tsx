@@ -26,13 +26,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: {
     canonical: `${SITE_URL}/features/branded-qr-codes/`,
-    languages: {
-      "en-GB": `${SITE_URL}/features/branded-qr-codes/`,
-      "en-AU": `${SITE_URL}/features/branded-qr-codes/`,
-      "en-US": `${SITE_URL}/features/branded-qr-codes/`,
-      en: `${SITE_URL}/features/branded-qr-codes/`,
-      "x-default": `${SITE_URL}/features/branded-qr-codes/`,
-    },
   },
 };
 

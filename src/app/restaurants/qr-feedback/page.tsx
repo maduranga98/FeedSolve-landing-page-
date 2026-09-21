@@ -10,10 +10,9 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
-  title:
-    "QR Code Feedback for Restaurants - Catch Complaints Before Google Reviews",
+  title: "QR Code Feedback for Restaurants in 30 Seconds",
   description:
-    "Place a branded QR code on every table. Guests report issues in 30 seconds, your team resolves them instantly, and the loop closes before anyone posts a review.",
+    "Put a branded QR code on every table. Guests report an issue in 30 seconds and your team resolves it before anyone posts a review. Free to start.",
   openGraph: {
     title: "QR Code Feedback for Restaurants | FeedSolve",
     description:

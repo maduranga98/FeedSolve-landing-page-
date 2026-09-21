@@ -10,7 +10,11 @@ export interface VerticalProseSectionProps {
   /** Small uppercase eyebrow above the heading. */
   label: string;
   heading: string;
-  paragraphs: string[];
+  /**
+   * Plain strings for normal copy; a fragment when a paragraph carries inline
+   * links. Strings are valid ReactNode, so existing callers are unaffected.
+   */
+  paragraphs: React.ReactNode[];
   /** Optional two-column "them vs. us" comparison rendered under the copy. */
   contrast?: ContrastColumn[];
   background?: string;

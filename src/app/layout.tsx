@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, DM_Sans, Lora } from "next/font/google";
 import Script from "next/script";
+import { ORGANIZATION_SAME_AS } from "@/lib/seo";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -77,13 +78,6 @@ export const metadata: Metadata = {
  },
  alternates: {
   canonical: `${SITE_URL}/`,
-  languages: {
-   "en-GB": `${SITE_URL}/`,
-   "en-AU": `${SITE_URL}/`,
-   "en-US": `${SITE_URL}/`,
-   "en": `${SITE_URL}/`,
-   "x-default": `${SITE_URL}/`,
-  },
  },
  icons: {
   icon: "/favicon.ico",
@@ -131,6 +125,9 @@ const softwareApplicationJsonLd = {
   "@type": "Organization",
   name: "FeedSolve",
   url: "https://feedsolve.com/",
+  // Same entity links as the standalone Organization node below - both are
+  // fed from ORGANIZATION_SAME_AS so they cannot drift apart.
+  sameAs: [...ORGANIZATION_SAME_AS],
  },
  offers: [
   { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
@@ -154,7 +151,7 @@ const organizationJsonLd = {
   email: "hello@feedsolve.com",
   contactType: "customer support",
  },
- sameAs: ["https://www.linkedin.com/company/feedsolve/"],
+ sameAs: [...ORGANIZATION_SAME_AS],
 };
 
 export default function RootLayout({

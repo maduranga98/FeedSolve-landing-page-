@@ -1290,7 +1290,97 @@ export const alternatives: Alternative[] = [
     ],
   },
 
-  // ── 6. QR-specific feedback tools ─────────────────────────────────────────
+  // ── 6. Suggestion box tools ───────────────────────────────────────────────
+  {
+    slug: "suggestion-ox",
+    name: "Suggestion Ox",
+    category: "suggestion-box",
+    categoryLabel: "Anonymous suggestion box",
+    metaTitle: "Best Suggestion Ox Alternative for SMBs (2026)",
+    metaDescription:
+      "Suggestion Ox collects anonymous suggestions well. FeedSolve collects and resolves them - assignment, Kanban workflow, a tracking code per submission, and a resolution rate you can report.",
+    heroSubtitle:
+      "Suggestion Ox is a focused anonymous suggestion box: people submit without identifying themselves, and you can follow up without unmasking them. FeedSolve covers that same intake and adds the part that decides whether a suggestion programme survives - who owns each item, what status it is in, and what percentage actually got resolved.",
+    quickAnswer: {
+      chooseCompetitor:
+        "if you want a single-purpose anonymous suggestion box for employees and collecting the feedback is the whole job.",
+      chooseFeedsolve:
+        "if suggestions and complaints have to be assigned, worked through a Kanban board, and closed out with a tracking code the submitter can check - with a resolution rate to report at the end of the quarter.",
+    },
+    whySwitch: [
+      {
+        title: "Collection is solved; resolution is not",
+        body: "An anonymous suggestion box gets honest input in the door. What it does not give you is an owner per item, a status that moves, or a number at the end of the quarter that says how much of it got fixed. That gap is where most suggestion programmes quietly die - not at intake.",
+      },
+      {
+        title: "No board to work the queue on",
+        body: "Suggestions arriving as a list is fine at ten a month and unmanageable at a hundred. FeedSolve puts every submission on a Kanban board with an assignee, a priority, and internal notes the submitter never sees, so the queue is worked rather than read.",
+      },
+      {
+        title: "Suggestions and complaints end up in separate tools",
+        body: "Most SMBs need an employee suggestion box and a customer complaint channel. Running a single-purpose suggestion tool alongside a separate complaint process means two systems, two reporting habits, and no combined resolution number. FeedSolve runs both as boards in one place.",
+      },
+    ],
+    competitorStrengths: [
+      "Purpose-built anonymous employee suggestion box",
+      "Anonymous two-way follow-up without unmasking the submitter",
+      "Simple to launch - no workflow design needed",
+      "Narrow scope keeps the tool easy to explain to staff",
+    ],
+    competitorGaps: [
+      "No Kanban resolution workflow or assignment",
+      "No resolution rate reporting",
+      "Employee-suggestion focus rather than customer complaints",
+      "No QR-first intake for physical locations",
+    ],
+    // TODO(verify): confirm Suggestion Ox's current published plans and prices at
+    // suggestionox.com before replacing this neutral line with any figure.
+    competitorPricing:
+      "Published on the vendor's pricing page; verify current plans directly before comparing.",
+    whereCompetitorWins:
+      "Teams whose only requirement is an anonymous employee suggestion box, run by one person, where honest input is the deliverable and no formal resolution workflow is wanted. A single-purpose tool is easier to launch and easier to explain than a platform.",
+    otherAlternatives: [
+      {
+        name: "Google Forms",
+        slug: "google-forms",
+        blurb: "Free anonymous intake into a spreadsheet, with nothing after submission.",
+      },
+      {
+        name: "Jotform",
+        slug: "jotform",
+        blurb: "Form builder with QR sharing if you mainly need flexible form fields.",
+      },
+      {
+        name: "Canny",
+        slug: "canny",
+        blurb: "Public idea voting boards, if suggestions should be visible and upvoted rather than private.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the best Suggestion Ox alternative?",
+        a: "FeedSolve, if you want the suggestions you collect to be resolved rather than just read. It matches the anonymous, no-login submission that makes a suggestion box work, then adds assignment, a Kanban status workflow, a #FSV-XXXX tracking code the anonymous submitter can check, and a resolution rate across the whole programme. It is free to start and $19-79/month flat after that.",
+      },
+      {
+        q: "Does FeedSolve support anonymous suggestions like Suggestion Ox?",
+        a: "Yes. Submission needs no account and no app - people scan a QR code or open a link, type, and send. Each submission still gets a unique tracking code, so an anonymous submitter can follow the status and read your public reply without ever identifying themselves.",
+      },
+      {
+        q: "How is FeedSolve different from Suggestion Ox?",
+        a: "Suggestion Ox is a focused anonymous suggestion box: its job ends when the suggestion is collected. FeedSolve treats submission as the start of the work - every item gets an owner, a priority, and a status on a Kanban board, and the programme is measured by resolution rate rather than submission count. FeedSolve also runs customer and supplier boards alongside the employee one.",
+      },
+      {
+        q: "Can I use FeedSolve as an employee suggestion box and a customer complaint channel?",
+        a: "Yes, and that is the usual setup. Create one board per stakeholder type - staff, customers, suppliers - each with its own QR code or link, so a break-room suggestion and a customer complaint never land in the same queue while both roll up into one resolution rate.",
+      },
+      {
+        q: "Is there a free plan?",
+        a: "Yes. FeedSolve is free to start with no credit card, which is enough to create your first suggestion board, print a QR code, and collect anonymous submissions. Paid tiers run $19 to $79 per month flat for the whole team.",
+      },
+    ],
+  },
+
+  // ── 7. QR-specific feedback tools ─────────────────────────────────────────
   {
     slug: "uniqode",
     name: "Uniqode",
@@ -1374,7 +1464,7 @@ export const alternatives: Alternative[] = [
     ],
   },
 
-  // ── 7. Review / reputation management ─────────────────────────────────────
+  // ── 8. Review / reputation management ─────────────────────────────────────
   {
     slug: "trustpilot",
     name: "Trustpilot",
@@ -1463,6 +1553,7 @@ export const categoryLabels: Record<string, string> = {
   "form-builder": "Form & survey builders",
   "feature-boards": "Feature request boards",
   ticketing: "Helpdesk & ticketing",
+  "suggestion-box": "Suggestion box tools",
   "qr-feedback": "QR feedback tools",
   reviews: "Review & reputation platforms",
 };

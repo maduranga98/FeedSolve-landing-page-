@@ -26,13 +26,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-    languages: {
-      "en-GB": "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-      "en-AU": "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-      "en-US": "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-      en: "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-      "x-default": "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-    },
   },
 };
 

@@ -31,9 +31,23 @@ nav.scrolled { background: rgba(248,247,244,0.98); border-bottom-color: var(--bo
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
 .nav-logo img { height: 34px; width: 34px; object-fit: contain; }
 .nav-logo-text { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--navy); letter-spacing: -0.3px; white-space: nowrap; }
-.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links { display: flex; align-items: center; gap: 22px; list-style: none; }
 .nav-links a { font-size: 15px; font-weight: 500; color: var(--text-mid); text-decoration: none; transition: color var(--t); white-space: nowrap; }
 .nav-links a:hover { color: var(--navy); }
+/* Header dropdowns (Solutions / Compare). The panel stays in the DOM and is
+   hidden with visibility, so its links ship in the static HTML. */
+.nav-dropdown { position: relative; display: flex; align-items: center; }
+.nav-dropdown-trigger { font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--text-mid); background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; transition: color var(--t); }
+.nav-dropdown-trigger:hover, .nav-dropdown:hover .nav-dropdown-trigger { color: var(--navy); }
+.nav-dropdown-trigger svg { transition: transform 0.2s ease; }
+.nav-dropdown-trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
+.nav-dropdown-panel { position: absolute; top: calc(100% + 14px); left: 50%; transform: translate(-50%, -6px); min-width: 420px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; background: var(--white); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 16px 40px rgba(30,53,87,0.14); padding: 18px 20px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; }
+.nav-dropdown-panel[data-open="true"] { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); }
+.nav-dropdown-group { display: flex; flex-direction: column; gap: 2px; }
+.nav-dropdown-title { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-light); padding: 4px 8px 6px; }
+.nav-dropdown-panel a { font-size: 14px; font-weight: 500; color: var(--text); padding: 7px 8px; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: background var(--t), color var(--t); }
+.nav-dropdown-panel a:hover { background: var(--teal-pale); color: var(--navy); }
+.nav-dropdown-trigger:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
 .nav-actions { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
 .btn-ghost { font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--navy); background: transparent; border: none; cursor: pointer; padding: 8px 14px; border-radius: 8px; transition: background var(--t); text-decoration: none; white-space: nowrap; }
 .btn-ghost:hover { background: var(--teal-pale); }
@@ -53,9 +67,12 @@ nav.scrolled { background: rgba(248,247,244,0.98); border-bottom-color: var(--bo
 .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); box-shadow: 0 8px 32px rgba(30,53,87,0.1); z-index: 99; padding: 20px 24px; flex-direction: column; gap: 4px; }
 .mobile-menu.open { display: flex; }
 .mobile-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; padding: 12px 8px; border-bottom: 1px solid var(--border); transition: color var(--t); }
-.mobile-menu a:last-child { border-bottom: none; margin-top: 8px; }
+.mobile-menu > a:last-child { border-bottom: none; margin-top: 8px; }
 .mobile-menu a:hover { color: var(--teal); }
 .mobile-menu .mobile-cta { background: var(--teal); color: white; text-align: center; border-radius: 8px; padding: 14px; font-weight: 600; border-bottom: none; }
+.mobile-menu-group { display: flex; flex-direction: column; }
+.mobile-menu-title { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-light); padding: 16px 8px 6px; }
+.mobile-menu-group a { font-size: 15px; }
 
 /* SECTION SHARED */
 section { padding: 96px 32px; }
@@ -696,6 +713,10 @@ footer { background: var(--navy-deep); padding: 48px 32px; }
 .uc-card a:hover { color: #1E3A5F; text-decoration: underline; }
 
 /* RESPONSIVE */
+@media (min-width: 961px) and (max-width: 1080px) {
+ .nav-links { gap: 16px; }
+ .nav-links a, .nav-dropdown-trigger { font-size: 14px; }
+}
 @media (max-width: 960px) {
  .hero-inner, .problem-grid, .diff-grid { grid-template-columns: 1fr; }
  .contact-inner { grid-template-columns: 1fr; border-radius: var(--radius); }
@@ -705,6 +726,7 @@ footer { background: var(--navy-deep); padding: 48px 32px; }
  .comp-grid { grid-template-columns: 1fr 1fr; }
  .pricing-grid { grid-template-columns: 1fr 1fr; }
  .nav-links, .nav-actions .btn-ghost { display: none; }
+ .nav-dropdown-panel { display: none; }
  .nav-hamburger { display: flex; }
  .hero-sub { max-width: 100%; }
  .sol-flow { grid-template-columns: 1fr; }

@@ -47,13 +47,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   },
   alternates: {
    canonical: absoluteUrl(blog.meta.slug),
-   languages: {
-    "en-GB": absoluteUrl(blog.meta.slug),
-    "en-AU": absoluteUrl(blog.meta.slug),
-    "en-US": absoluteUrl(blog.meta.slug),
-    "en": absoluteUrl(blog.meta.slug),
-    "x-default": absoluteUrl(blog.meta.slug),
-   },
   },
  };
 }

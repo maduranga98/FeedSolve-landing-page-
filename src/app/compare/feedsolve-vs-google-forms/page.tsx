@@ -25,13 +25,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-    languages: {
-      "en-GB": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-      "en-AU": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-      "en-US": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-      en: "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-      "x-default": "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-    },
   },
 };
 
