@@ -8,6 +8,8 @@ import {
   getAlternative,
   FEEDSOLVE_HIGHLIGHTS,
 } from "@/data/alternatives";
+import JsonLdScript from "@/components/JsonLd";
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo";
 import {
   Check,
   X,
@@ -46,13 +48,6 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: url,
-      languages: {
-        "en-GB": url,
-        "en-AU": url,
-        "en-US": url,
-        en: url,
-        "x-default": url,
-      },
     },
   };
 }
@@ -68,39 +63,24 @@ export default async function AlternativePage({
 
   const url = `${SITE_URL}/alternatives/${alt.slug}/`;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: alt.metaTitle,
-    description: alt.metaDescription,
-    url,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Alternatives",
-          item: `${SITE_URL}/alternatives/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: `${alt.name} Alternative`,
-          item: url,
-        },
-      ],
+  // Three separate top-level entities rather than one WebPage with a nested
+  // FAQPage: Google reads FAQ and breadcrumb markup most reliably when each is
+  // its own node, and JsonLdScript isolates them into their own <script> tags.
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: alt.metaTitle,
+      description: alt.metaDescription,
+      url,
     },
-    mainEntity: {
-      "@type": "FAQPage",
-      mainEntity: alt.faqs.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    },
-  };
+    generateBreadcrumbSchema([
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: "Alternatives", url: `${SITE_URL}/alternatives/` },
+      { name: `${alt.name} Alternative`, url },
+    ]),
+    generateFAQSchema(alt.faqs.map((f) => ({ question: f.q, answer: f.a }))),
+  ];
 
   const related = alternatives
     .filter((a) => a.slug !== alt.slug)
@@ -110,10 +90,7 @@ export default async function AlternativePage({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLdScript data={jsonLd} />
       <Navbar variant="blog" />
 
       {/* HERO */}

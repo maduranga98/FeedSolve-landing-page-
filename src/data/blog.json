@@ -2,8 +2,8 @@
  {
   "id": 1,
   "meta": {
-   "title": "What Is Feedback Resolution Rate? (Formula + Benchmark)",
-   "meta_description": "Feedback resolution rate = (Resolved ÷ Total) × 100. See what counts as a healthy SMB benchmark (80%+) and 3 ways to improve yours.",
+   "title": "Feedback Resolution Rate Formula + 80% Benchmark",
+   "meta_description": "Feedback resolution rate = (Resolved ÷ Total) × 100. See the 80% benchmark healthy SMBs hit, why NPS misses it, and 3 fixes that raise yours this quarter.",
    "slug": "/blog/feedback-resolution-rate",
    "primary_keyword": "feedback resolution rate",
    "secondary_keywords": [
@@ -18,7 +18,7 @@
    "content_type": "Pillar",
    "target_word_count": "1,800–2,200 words",
    "date_published": "2025-11-03",
-   "date_modified": "2026-09-12",
+   "date_modified": "2026-09-21",
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
@@ -138,8 +138,8 @@
  {
   "id": 2,
   "meta": {
-   "title": "QR Code Feedback Board: Collect Complaints Without a Form",
-   "meta_description": "A QR code feedback board lets customers, suppliers, and staff submit complaints by scanning - no login needed. Set one up in minutes, free.",
+   "title": "QR Code Feedback Board: Free 10-Minute Setup",
+   "meta_description": "A QR code feedback board lets anyone report an issue by scanning - no login. Set one up free in 10 minutes and track every submission through to resolution.",
    "slug": "/blog/qr-code-feedback-board",
    "primary_keyword": "QR code feedback board",
    "secondary_keywords": [
@@ -154,7 +154,7 @@
    "content_type": "Pillar",
    "target_word_count": "1,600–2,000 words",
    "date_published": "2025-11-09",
-   "date_modified": "2025-11-09",
+   "date_modified": "2026-09-21",
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
@@ -262,8 +262,8 @@
  {
   "id": 3,
   "meta": {
-   "title": "Supplier Feedback Tool for Manufacturers (Not WhatsApp)",
-   "meta_description": "Track supplier quality issues, vendor approvals, and sample reviews in one QR-based tool — no more WhatsApp threads or email chains. Free to start.",
+   "title": "Supplier Feedback Tool for Manufacturers (Free)",
+   "meta_description": "Track supplier defects, vendor approvals, and sample reviews on one QR-based board instead of WhatsApp threads. Free plan, and suppliers submit with no login.",
    "slug": "/blog/supplier-feedback-tool-manufacturers",
    "primary_keyword": "supplier feedback tool for manufacturers",
    "secondary_keywords": [
@@ -278,7 +278,7 @@
    "content_type": "Cluster / Landing Page",
    "target_word_count": "1,400–1,800 words",
    "date_published": "2025-11-15",
-   "date_modified": "2026-09-12",
+   "date_modified": "2026-09-21",
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
@@ -565,7 +565,7 @@
      ],
      "body": [
       "The physical suggestion box on the employee lounge wall was a good idea in 1987. Employees could anonymously submit ideas without confronting their manager. The problem: nobody checked the box. When someone did, the suggestions went into a stack on the manager's desk and were never seen again. After the first 10 employees realized nothing changed, the submission rate dropped to zero. The box sat empty for months. It became furniture.",
-      "The failure wasn't the collection mechanism   anonymity was valuable. The failure was zero accountability. A suggestion that goes nowhere is worse than no suggestion process at all, because it signals that management doesn't care. A digital suggestion box modernizes this by adding the missing piece: a workflow that closes the loop. Submission → Investigation → Response → Confirmation. The submitter always knows whether their idea was considered, even if it wasn't implemented."
+      "The failure wasn't the collection mechanism   anonymity was valuable. The failure was zero accountability. A suggestion that goes nowhere is worse than no suggestion process at all, because it signals that management doesn't care. A digital suggestion box modernizes this by adding the missing piece: a workflow that closes the loop. Submission → Investigation → Response → Confirmation. The submitter always knows whether their idea was considered, even if it wasn't implemented. That closed loop is the whole argument for a [digital suggestion box](/digital-suggestion-box-software/) over a paper one."
      ]
     },
     {
@@ -592,7 +592,7 @@
      ],
      "body": [
       "Google Forms is free and mobile-friendly. A suggestion gets submitted, a row is added to a spreadsheet. Then what? Nobody is automatically notified. Nobody is assigned. The data sits in column A waiting for someone to read it. That person may not check the sheet for weeks. When they do, the suggestions are old news. A Typeform submission is prettier but faces the same problem   it's a form, not a workflow. No resolution. No tracking.",
-      "FeedSolve is purpose-built for suggestion management at the SMB scale. The form is simple (mobile-optimized, less than 60 seconds to submit). The submitter gets a tracking code immediately. The team sees submissions in a Kanban board and can assign, investigate, and close them. Every stage is transparent. This is what a modern suggestion box should be."
+      "FeedSolve is purpose-built for suggestion management at the SMB scale. The form is simple (mobile-optimized, less than 60 seconds to submit). The submitter gets a tracking code immediately. The team sees submissions in a Kanban board and can assign, investigate, and close them. Every stage is transparent. This is what a modern suggestion box should be. The [suggestion box software](/digital-suggestion-box-software/) overview covers the same setup end to end, from printing the first QR code to reporting a resolution rate."
      ]
     },
     {
@@ -944,7 +944,7 @@
      ],
      "body": [
       "A 50-person manufacturing facility receives 80 supplier complaints per month. 15 arrive via WhatsApp to the operations manager's personal phone. 30 come as email to the factory@gmail.com address, which three people monitor sporadically. 20 are phone calls to whoever answers. 15 are written notes left at the goods-receiving bay. Each channel is checked on a different schedule. Nobody owns the end-to-end process. A complaint about defective materials sits in the WhatsApp thread for three days. An invoice discrepancy email gets a 'Thanks for flagging' reply but no actual investigation. A phone complaint is promised a callback that never comes.",
-      "The problem isn't that complaints are arriving   it's that arrival doesn't trigger a defined workflow. Without structure, complaints are acknowledged informally and disappear. The submitter never knows if anyone is actually investigating. The business never knows if the issue is resolved. The pattern repeats until trust erodes and the supplier switches vendors."
+      "The problem isn't that complaints are arriving   it's that arrival doesn't trigger a defined workflow. Without structure, complaints are acknowledged informally and disappear. The submitter never knows if anyone is actually investigating. The business never knows if the issue is resolved. The pattern repeats until trust erodes and the supplier switches vendors. Choosing what to put in place of that gap is a separate question, and it is worth being clear which of the three [complaint management solutions](/blog/complaint-management-solutions/) - software, an outsourced service, or an adapted general tool - you are actually buying."
      ]
     },
     {
@@ -2237,7 +2237,7 @@
       "Feature 5 - Flat or board-based pricing: per-seat pricing punishes team growth. Look for tools that price on usage (submissions, boards) rather than headcount."
      ],
      "body": [
-      "**Feature 1 - Zero-Login Submission:** A supplier delivers materials and scans a QR code to report a defect. They don't need to log in. They don't need to create an account. They fill in the form and submit. This is non-negotiable for SMBs managing external stakeholder feedback. If your complaint management software requires login, you'll see a 40–70% drop in submission volume.",
+      "**Feature 1 - Zero-Login Submission:** A supplier delivers materials and scans a QR code to report a defect. They don't need to log in. They don't need to create an account. They fill in the form and submit. This is non-negotiable for SMBs managing external stakeholder feedback. If your complaint management software requires login, you'll see a 40–70% drop in submission volume. Zero-login intake is the first thing to check on any [complaint management software](/complaint-management-software/) shortlist, because no later feature can recover the complaints you never received.",
       "**Feature 2 - Team Assignment:** When a complaint arrives, it must immediately have an owner and a deadline. 'In Progress   assigned to Quality Officer, due Friday' is visible on the dashboard. If a complaint sits unassigned for 48 hours, escalation rules notify the supervisor. This forces accountability.",
       "**Feature 3 - Tracking Code:** After submitting, the customer gets a unique code: #FSV-4821. They can check it anytime without logging in and see current status and any replies. This simple mechanism is worth more than sophisticated analytics because it directly builds trust.",
       "**Feature 4 - Resolution Rate Dashboard:** This single metric   (Resolved + Closed) ÷ Total × 100   tells you whether your complaint system is working. It should be visible on login, updated in real-time, and trended monthly. If your dashboard doesn't prominently display this number, the tool isn't built for accountability.",
@@ -2329,7 +2329,7 @@
      ],
      "body": [
       "**Over-buying example:** A logistics company with 30 people pays $99/month per agent for Zendesk. At 3 agents, that's $297/month. At higher tiers ($200/month), it's $600+/month. Plus implementation costs. Plus training time. They end up with an overly complex system that takes 3 months to deploy. When it finally launches, the team finds it faster to text complaints on WhatsApp than log them in Zendesk. The investment fails because the complexity was never needed.",
-      "**Under-buying example:** A restaurant uses Google Forms to collect guest feedback. Responses go to a spreadsheet. Nobody is assigned. Nobody updates status. The guest never knows if their complaint was read. The business gets data (100 responses, 40% negative) but not accountability (0% resolution rate). They feel like they're doing feedback management because they're collecting data, but they're not actually managing anything."
+      "**Under-buying example:** A restaurant uses Google Forms to collect guest feedback. Responses go to a spreadsheet. Nobody is assigned. Nobody updates status. The guest never knows if their complaint was read. The business gets data (100 responses, 40% negative) but not accountability (0% resolution rate). They feel like they're doing feedback management because they're collecting data, but they're not actually managing anything. Both failure modes come from buying on feature count rather than on the loop itself - see how a [complaint tracking system](/complaint-management-software/) is meant to fit an SMB before you compare tiers, and read our breakdown of the three types of [complaint management solutions](/blog/complaint-management-solutions/) if you are still deciding between software, a service, and a general tool."
      ]
     },
     {
@@ -3644,7 +3644,7 @@
      ],
      "body": [
       "A supplier calls your operations manager to report a short shipment. The manager says 'Thanks for letting us know, I'll look into it' and hangs up. Two days pass. The supplier hears nothing. They call again. The manager cannot remember the details of the first call. They investigate again, find the issue, confirm the short shipment, and apologise. Total time from complaint to resolution: four days. Time the supplier spent in uncertainty: four days. Number of formal records of this interaction: zero. When the same supplier reports a short shipment three months later, the process starts from scratch.",
-      "Good complaint response is not difficult — it is simply defined and documented. Acknowledge with specificity. Investigate with a named owner. Resolve with a documented fix. Confirm with the submitter. These four steps, executed consistently, transform complaint management from an informal scramble into a repeatable operational process. The difference between businesses that retain suppliers, customers, and distributors and those that quietly lose them is usually not the quality of their product — it is the quality of their complaint response."
+      "Good complaint response is not difficult — it is simply defined and documented. Acknowledge with specificity. Investigate with a named owner. Resolve with a documented fix. Confirm with the submitter. These four steps, executed consistently, transform complaint management from an informal scramble into a repeatable operational process. The difference between businesses that retain suppliers, customers, and distributors and those that quietly lose them is usually not the quality of their product — it is the quality of their complaint response. Executing those four steps consistently is easier with something underneath them, which is where the different types of [complaint management solutions](/blog/complaint-management-solutions/) start to matter."
      ]
     },
     {
@@ -4047,7 +4047,7 @@
      "heading": "H2: Why most suggestion boxes fail",
      "body": [
       "The physical box on the wall fails because nobody empties it and nobody hears back. The digital version - usually a Google Form - fails for the same reason: responses pile up in a spreadsheet and nothing happens next. People stop contributing the moment they realise their suggestion went into a void.",
-      "Real suggestion box software fixes the part that matters: what happens after someone hits submit. Here are the seven features that decide whether your suggestion box becomes a source of improvement or another dead inbox."
+      "Real suggestion box software fixes the part that matters: what happens after someone hits submit. Here are the seven features that decide whether your suggestion box becomes a source of improvement or another dead inbox. FeedSolve's [suggestion box software](/digital-suggestion-box-software/) is built around exactly that list, so it is a useful reference point while you read."
      ]
     },
     {
@@ -4062,14 +4062,14 @@
       "Resolution analytics: track how many suggestions you receive, how many get resolved, and how long it takes."
      ],
      "body": [
-      "Notice that only one of these seven features is about collecting input. The other six are about acting on it. That balance is exactly what separates suggestion box software from a form builder - and it's why teams that switch see suggestions turn into visible change instead of a silent backlog."
+      "Notice that only one of these seven features is about collecting input. The other six are about acting on it. That balance is exactly what separates suggestion box software from a form builder - and it's why teams that switch see suggestions turn into visible change instead of a silent backlog. The same six-versus-one split is how the [digital suggestion box software](/digital-suggestion-box-software/) page is laid out: one section on collecting, the rest on what happens next."
      ]
     },
     {
      "heading": "H2: How to evaluate a tool in 10 minutes",
      "body": [
       "Run a quick test before you commit. Can you create a board and generate a QR code without a sales call? Can someone submit without signing up? Does that submission produce a tracking code? Can you assign it, change its status, and reply? Can you see a resolution rate somewhere? If the answer to any of these is no, you have a form, not a suggestion management tool — the same ten-minute test works when you are sizing up a [complaint management platform](/complaint-management-software/).",
-      "FeedSolve is free to start and covers all seven features, so you can run that test in one sitting and start collecting the same day."
+      "FeedSolve is free to start and covers all seven features, so you can run that test in one sitting and start collecting the same day. If you want to see the whole loop before you test anything, the [online suggestion box](/digital-suggestion-box-software/) overview walks through QR intake, assignment, tracking code, and resolution rate in order."
      ]
     },
     {
@@ -4141,7 +4141,7 @@
     {
      "heading": "H2: What an online suggestion box needs to do",
      "body": [
-      "An online suggestion box - sometimes called a virtual or electronic suggestion box - should make it effortless to submit an idea and impossible for that idea to disappear. That means no-login submission, an anonymous option, and a way to actually act on what comes in.",
+      "An online suggestion box - sometimes called a virtual or electronic suggestion box - should make it effortless to submit an idea and impossible for that idea to disappear. That means no-login submission, an anonymous option, and a way to actually act on what comes in. Those three requirements are what [online suggestion box](/digital-suggestion-box-software/) software exists for; a form builder only covers the first.",
       "Here is the fastest way to stand one up."
      ]
     },
@@ -4161,7 +4161,7 @@
     {
      "heading": "H2: Keep it working after launch",
      "body": [
-      "The fastest way to kill a suggestion box is silence. Build a simple habit: check the dashboard on a set day each week, resolve what you can, and post a short public reply on each one. When submitters see that their input leads to action - even a quick acknowledgement - they keep contributing, and your resolution rate becomes a number you can be proud of."
+      "The fastest way to kill a suggestion box is silence. Build a simple habit: check the dashboard on a set day each week, resolve what you can, and post a short public reply on each one. When submitters see that their input leads to action - even a quick acknowledgement - they keep contributing, and your resolution rate becomes a number you can be proud of. If you would rather not assemble that habit by hand, it is the part [suggestion box software](/digital-suggestion-box-software/) handles for you - statuses, public replies, and the resolution rate all come out of the same board."
      ]
     },
     {
@@ -5488,7 +5488,7 @@
      ],
      "body": [
       "Ask a room of employees for feedback and you get polite improvements: better coffee, more parking. The information that actually protects a business — the safety step everyone skips under time pressure, the supervisor people transfer to avoid, the process failure being papered over — stays unsaid, because saying it with your name attached feels like filing a complaint against colleagues or bosses you will see tomorrow. The calculation is rational: upside uncertain, downside personal. Anonymity flips it. When nothing ties the words to the person, the true problem list surfaces, and managers are routinely startled by the gap between what they knew and what the box knows.",
-      "Anonymity does carry a built-in cost: you can't ask the submitter a follow-up question, and they can't hear your answer — which is how anonymous channels historically decayed into write-only venting. Modern tooling fixes this with a neat mechanism: each anonymous submission gets a random tracking code the submitter keeps. They can check status and read your public reply through the code, and you can post questions to the submission thread, all without anyone learning who they are. That single feature converts anonymity from a trade-off into a straight win, and it should be near the top of your checklist when choosing software."
+      "Anonymity does carry a built-in cost: you can't ask the submitter a follow-up question, and they can't hear your answer — which is how anonymous channels historically decayed into write-only venting. Modern tooling fixes this with a neat mechanism: each anonymous submission gets a random tracking code the submitter keeps. They can check status and read your public reply through the code, and you can post questions to the submission thread, all without anyone learning who they are. That single feature converts anonymity from a trade-off into a straight win, and it should be near the top of your checklist when choosing software. Tools built around that mechanism - an [anonymous suggestion box](/digital-suggestion-box-software/) that issues a tracking code with every submission - are the ones worth shortlisting."
      ]
     },
     {
@@ -5515,7 +5515,7 @@
      ],
      "body": [
       "The mechanics take ten minutes. Create a free board, switch on anonymous submission (no login, no required contact), and set up a handful of categories that mirror how you would actually route issues — Safety, Process, Equipment, People, Ideas, Other covers most workplaces. Generate the branded QR code and print it at every location where someone can scan unobserved: the break room noticeboard, inside the back office, on the staff toilet door. Placement is an anonymity feature — nobody scans the code mounted next to the manager's desk. For remote or multi-site teams, pin the link in the chat tool and the intranet; a virtual suggestion box needs a virtual noticeboard.",
-      "The launch message matters more than the poster. Keep it to three sentences: it's anonymous and requires no login; every submission gets reviewed; every submission gets a tracking code where we'll post what happened. Then make week one count — pick a quick, visible fix from the early submissions (the broken microwave, the confusing rota format), resolve it, and post the resolution publicly with a thank-you to the anonymous submitter. Nothing you write in the announcement will persuade sceptics as effectively as one demonstrated fix. That first closed loop is the actual launch; everything before it is setup."
+      "The launch message matters more than the poster. Keep it to three sentences: it's anonymous and requires no login; every submission gets reviewed; every submission gets a tracking code where we'll post what happened. Then make week one count — pick a quick, visible fix from the early submissions (the broken microwave, the confusing rota format), resolve it, and post the resolution publicly with a thank-you to the anonymous submitter. Nothing you write in the announcement will persuade sceptics as effectively as one demonstrated fix. That first closed loop is the actual launch; everything before it is setup. The [online suggestion box](/digital-suggestion-box-software/) setup is deliberately short for this reason: the sooner you are collecting, the sooner you can demonstrate that first fix."
      ]
     },
     {
@@ -5528,7 +5528,7 @@
      ],
      "body": [
       "Three free routes, honestly compared. The paper box costs nothing and everyone understands it — but handwriting identifies, dropping a note in view of colleagues identifies, and once submitted, a note's fate is silence, which is why the box on the wall is a punchline. Google Forms upgrades legibility and collection but inherits two problems: staff can't verify the anonymity of a form living on the company's own Google account, and responses land in a spreadsheet with no owner, no status, and no way to answer an anonymous submitter — write-only with better fonts.",
-      "FeedSolve's free plan was effectively designed for this exact use case: submission via QR or link with no login and no account anywhere in the flow, a random tracking code issued to each submitter so the loop can close without identity, and a Kanban board so submissions become assigned work instead of sheet rows. The test that separates the options isn't features — it's whether a sceptical employee believes the channel is safe, and whether a submission from Monday visibly changes something by Friday. Paper fails both; Forms fails the second and wobbles on the first; a purpose-built free tool passes both, which is the whole argument."
+      "FeedSolve's free plan was effectively designed for this exact use case: submission via QR or link with no login and no account anywhere in the flow, a random tracking code issued to each submitter so the loop can close without identity, and a Kanban board so submissions become assigned work instead of sheet rows. The test that separates the options isn't features — it's whether a sceptical employee believes the channel is safe, and whether a submission from Monday visibly changes something by Friday. Paper fails both; Forms fails the second and wobbles on the first; a purpose-built free tool passes both, which is the whole argument. FeedSolve's [suggestion box software](/digital-suggestion-box-software/) page sets out exactly what the free plan covers, so you can check both tests against it before committing."
      ]
     },
     {
@@ -5637,7 +5637,7 @@
       "The gap shows up as symptoms: issues surfacing as bad reviews, 'I told someone about this weeks ago', no idea how many complaints last month."
      ],
      "body": [
-      "Every business already handles complaints somehow — an inbox, a phone line, a manager who hears things. What makes something a solution rather than a channel is four structural guarantees: every complaint is captured (including from people who won't email), every complaint has one owner, every complaint reaches a resolution, and the complainant learns what happened. Miss any one and you have the familiar failure symptoms: problems that surface for the first time as public reviews, customers repeating themselves to a second employee, and no one able to say how many complaints arrived last month, because nothing counts them.",
+      "Every business already handles complaints somehow — an inbox, a phone line, a manager who hears things. What makes something a solution rather than a channel is four structural guarantees: every complaint is captured (including from people who won't email), every complaint has one owner, every complaint reaches a resolution, and the complainant learns what happened. Miss any one and you have the familiar failure symptoms: problems that surface for the first time as public reviews, customers repeating themselves to a second employee, and no one able to say how many complaints arrived last month, because nothing counts them. Those four guarantees are the working definition of [complaint management software](/complaint-management-software/), and they are the bar every option below is measured against.",
       "The buying confusion around 'complaint management solutions' comes from the phrase covering three different purchases. You can buy software that gives your own team the structure. You can buy a service, where an outside firm answers and handles complaints for you. Or you can adapt something general — a helpdesk, a form, a spreadsheet — into a complaint process. These differ enormously in cost, control, and fit, and most comparison content quietly assumes one type. The next three sections take them in turn."
      ]
     },
@@ -5651,7 +5651,7 @@
      ],
      "body": [
       "Dedicated software is the middle path and the usual right answer: your people keep handling complaints — with their context, authority, and relationships — while the tool supplies what humans forget: intake that can't be bypassed, automatic ownership, statuses that age visibly, and a count at the end of the month. At SMB scale this is inexpensive. FeedSolve, for instance, runs from a free plan to $79/month flat: complaints arrive by QR code or link with no login (capturing the counter customer and the anonymous employee, not just emailers), every submission gets a public #FSV-XXXX tracking code the complainant can check, and the team works a Kanban board with resolution rate as the headline metric. Enterprise case-management platforms extend this with compliance workflows and integrations at quote-only prices — justified in regulated industries, overkill elsewhere.",
-      "When you shortlist software, three capabilities separate solutions from re-skinned inboxes. First, intake friction: every login wall or required field costs you the complaints you most need to hear. Second, complainant-visible status: a tracking code or status page eliminates the 'any update?' calls and proves the process works. Third, resolution metrics: if the tool can't tell you what percentage of complaints were resolved and how fast, it manages activity, not outcomes. Price varies less than these three do."
+      "When you shortlist software, three capabilities separate solutions from re-skinned inboxes. First, intake friction: every login wall or required field costs you the complaints you most need to hear. Second, complainant-visible status: a tracking code or status page eliminates the 'any update?' calls and proves the process works. Third, resolution metrics: if the tool can't tell you what percentage of complaints were resolved and how fast, it manages activity, not outcomes. Price varies less than these three do. FeedSolve's [complaint management software](/complaint-management-software/) page shows how those three capabilities look in practice: QR or link intake with no login, a #FSV-XXXX tracking code per complaint, and resolution rate as the headline metric."
      ]
     },
     {
@@ -8256,8 +8256,8 @@
  {
   "id": 58,
   "meta": {
-   "title": "What Should Happen After You Resolve a Complaint? A 4-Step Checklist",
-   "meta_description": "Marking a complaint 'resolved' isn't the finish line. Here's the 4-step checklist SMBs use to confirm, close, and learn from every resolved complaint.",
+   "title": "After You Resolve a Complaint: 4-Step Checklist",
+   "meta_description": "Marking a complaint resolved is not the finish line. Use this 4-step checklist to confirm the fix, close the loop with the complainant, and stop the repeat.",
    "slug": "/blog/next-step-after-resolving-complaint",
    "primary_keyword": "what to do after resolving a complaint",
    "secondary_keywords": [
@@ -8272,7 +8272,7 @@
    "content_type": "Supporting",
    "target_word_count": "1,500-1,800 words",
    "date_published": "2026-09-10",
-   "date_modified": "2026-09-10",
+   "date_modified": "2026-09-21",
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {

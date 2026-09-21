@@ -20,13 +20,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${SITE_URL}/alternatives/`,
-    languages: {
-      "en-GB": `${SITE_URL}/alternatives/`,
-      "en-AU": `${SITE_URL}/alternatives/`,
-      "en-US": `${SITE_URL}/alternatives/`,
-      en: `${SITE_URL}/alternatives/`,
-      "x-default": `${SITE_URL}/alternatives/`,
-    },
   },
 };
 
@@ -95,7 +88,15 @@ export default function AlternativesHub() {
               Honest, category-by-category guides for teams outgrowing - or
               priced out of - their current feedback tool. Where FeedSolve wins
               for SMB complaint resolution, where each tool still fits, and
-              what to check before you switch.
+              what to check before you switch. If you are weighing a
+              single-purpose anonymous suggestion box, start with the{" "}
+              <Link
+                href="/alternatives/suggestion-ox/"
+                style={{ color: "var(--teal-light)", fontWeight: 600 }}
+              >
+                Suggestion Ox alternative
+              </Link>{" "}
+              guide.
             </p>
           </div>
         </section>

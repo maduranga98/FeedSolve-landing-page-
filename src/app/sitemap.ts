@@ -7,15 +7,41 @@ export const dynamic = "force-static";
 const baseUrl = "https://feedsolve.com";
 const withTrailingSlash = (path: string) => (path === "/" ? path : `${path.replace(/\/$/, "")}/`);
 const absoluteUrl = (path: string) => `${baseUrl}${withTrailingSlash(path)}`;
-const languageAlternates = (path: string) => ({
-  languages: {
-    "en-GB": absoluteUrl(path),
-    "en-AU": absoluteUrl(path),
-    "en-US": absoluteUrl(path),
-    en: absoluteUrl(path),
-    "x-default": absoluteUrl(path),
-  },
-});
+
+/**
+ * The only real hreflang cluster on the site: one global complaint-management
+ * page plus three market variants. These values must stay byte-identical to the
+ * `alternates.languages` blocks rendered by the four pages themselves - a
+ * sitemap that disagrees with the HTML gets the whole annotation dropped.
+ *
+ * Every other URL is a single-locale page and therefore carries NO `alternates`
+ * key at all. Emitting one that points every region at the same URL (what this
+ * file used to do) is a self-referential annotation Google ignores at best and
+ * treats as a conflicting signal at worst.
+ */
+const MARKET_CLUSTER_LANGUAGES: Record<string, string> = {
+  en: absoluteUrl("/complaint-management-software"),
+  "en-GB": absoluteUrl("/uk/complaint-management-software"),
+  "en-US": absoluteUrl("/us/complaint-management-software"),
+  "en-AU": absoluteUrl("/au/complaint-management-software"),
+  "x-default": absoluteUrl("/complaint-management-software"),
+};
+
+const MARKET_CLUSTER_PATHS = new Set([
+  "/complaint-management-software",
+  "/uk/complaint-management-software",
+  "/us/complaint-management-software",
+  "/au/complaint-management-software",
+]);
+
+/**
+ * `/au/customer-feedback-software/` declares only `en-AU` -> itself and
+ * `x-default` -> the homepage; `/customer-feedback-software/` declares no
+ * language alternates at all. The two pages are not a reciprocal pair in the
+ * HTML, so they are treated as ordinary single-locale entries here.
+ */
+const languageAlternates = (path: string) =>
+  MARKET_CLUSTER_PATHS.has(path) ? { alternates: { languages: MARKET_CLUSTER_LANGUAGES } } : {};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -25,7 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(blog.meta.date_modified),
     changeFrequency: "monthly" as const,
     priority: 0.6,
-    alternates: languageAlternates(blog.meta.slug),
   }));
 
   const staticPages = [
@@ -71,7 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: page.frequency,
       priority: page.priority,
-      alternates: languageAlternates(page.path),
+      ...languageAlternates(page.path),
     })),
     ...blogPosts,
   ];

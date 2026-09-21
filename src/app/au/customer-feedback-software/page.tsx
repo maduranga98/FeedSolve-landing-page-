@@ -28,13 +28,11 @@ export const metadata: Metadata = {
     "feedback management software australia",
     "customer feedback app australia",
   ],
-  alternates: {
-    canonical: URL,
-    languages: {
-      "en-AU": URL,
-      "x-default": "https://feedsolve.com/",
-    },
-  },
+  // No `languages` block: /customer-feedback-software/ declares no reciprocal
+  // hreflang back to this page, so a one-sided annotation here (en-AU -> self,
+  // x-default -> the homepage) is a contradiction Google drops. Treated as a
+  // single-locale page in the sitemap for the same reason.
+  alternates: { canonical: URL },
   openGraph: {
     title: "Customer Feedback Software Australia | FeedSolve",
     description:

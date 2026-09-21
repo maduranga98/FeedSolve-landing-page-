@@ -20,10 +20,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://feedsolve.com/eu/gdpr-feedback-management/",
-    languages: {
-      "en-GB": "https://feedsolve.com/eu/gdpr-feedback-management/",
-      "x-default": "https://feedsolve.com/eu/gdpr-feedback-management/",
-    },
   },
   robots: { index: true, follow: true },
 };

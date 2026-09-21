@@ -19,13 +19,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${SITE_URL}/compare/`,
-    languages: {
-      "en-GB": `${SITE_URL}/compare/`,
-      "en-AU": `${SITE_URL}/compare/`,
-      "en-US": `${SITE_URL}/compare/`,
-      en: `${SITE_URL}/compare/`,
-      "x-default": `${SITE_URL}/compare/`,
-    },
   },
 };
 
