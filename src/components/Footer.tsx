@@ -4,6 +4,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { G2_PROFILE_URL, LINKEDIN_URL } from "@/lib/seo";
 
+type FooterLink = { href: string; label: string; lang?: string };
+
+const FOOTER_DIRECTORY: { title: string; links: FooterLink[] }[] = [
+  {
+    title: "Industries",
+    links: [
+      { href: "/restaurants/qr-feedback/", label: "Restaurants" },
+      { href: "/manufacturing/supplier-feedback/", label: "Manufacturing" },
+      { href: "/logistics/delivery-feedback/", label: "Delivery & logistics" },
+      { href: "/logistics/3pl-feedback-platform/", label: "3PL" },
+      { href: "/real-estate/tenant-feedback/", label: "Property management" },
+      { href: "/real-estate/hoa-complaint-form/", label: "HOA" },
+    ],
+  },
+  {
+    title: "Markets",
+    links: [
+      { href: "/us/complaint-management-software/", label: "United States" },
+      { href: "/uk/complaint-management-software/", label: "United Kingdom" },
+      { href: "/au/complaint-management-software/", label: "Australia" },
+      { href: "/au/customer-feedback-software/", label: "Australia: feedback software" },
+      { href: "/eu/gdpr-feedback-management/", label: "EU (GDPR)" },
+      { href: "/br/", label: "Brasil (Português)", lang: "pt-BR" },
+    ],
+  },
+];
+
 interface FooterProps {
   variant?: "home" | "blog";
   logoSrc?: string;
@@ -36,7 +63,6 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           <Link href="/qr-code-feedback/">QR Code Feedback</Link>
           <Link href="/feedback-tracking-code/">Tracking Codes</Link>
           <Link href="/compare/">Compare</Link>
-          <Link href="/br/" hrefLang="pt-BR" lang="pt-BR">Português (Brasil)</Link>
           {variant === "blog" && <Link href="/blog/">Blog</Link>}
           <a href="mailto:hello@feedsolve.com">Contact</a>
           <a href="/privacy/">Privacy Policy</a>
@@ -50,6 +76,23 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           </a>
         </div>
       </div>
+      {/*
+        Directory row: industry and market pages were reachable from only one
+        or two in-body links each. A sitewide footer entry gives every one of
+        them a crawl path from every page.
+      */}
+      <nav className="footer-directory" aria-label="Industries and markets">
+        {FOOTER_DIRECTORY.map((group) => (
+          <div key={group.title} className="footer-directory-group">
+            <span className="footer-directory-title">{group.title}</span>
+            {group.links.map((link) => (
+              <Link key={link.href} href={link.href} hrefLang={link.lang} lang={link.lang}>
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        ))}
+      </nav>
       <div className="footer-badges">
         <a
           href="https://saasbrowser.com/en/saas/1518652/feedsolve"

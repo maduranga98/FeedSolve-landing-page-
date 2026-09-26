@@ -14,12 +14,12 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "FeedSolve vs Typeform: Survey Builder vs Complaint Resolution Platform",
+    "FeedSolve vs Typeform: Surveys vs Resolution",
   description:
-    "Typeform builds beautiful surveys. FeedSolve resolves complaints. Compare tracking codes, Kanban workflows, multi-language forms, and pricing for SMB feedback management.",
+    "Typeform builds beautiful surveys; FeedSolve resolves complaints. Compare tracking codes, Kanban workflows, multi-language forms and pricing for SMBs.",
   openGraph: {
     title:
-      "FeedSolve vs Typeform: Survey Builder vs Complaint Resolution Platform",
+      "FeedSolve vs Typeform: Surveys vs Resolution",
     description:
       "Typeform builds beautiful surveys. FeedSolve resolves complaints. See the full comparison for SMB feedback management.",
     url: "https://feedsolve.com/compare/feedsolve-vs-typeform/",

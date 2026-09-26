@@ -399,6 +399,11 @@ footer { background: var(--navy-deep); padding: 48px 32px; }
 .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
 .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 14px; transition: color var(--t); }
 .footer-links a:hover { color: var(--white); }
+.footer-directory { position: static; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; border: 0; z-index: auto; max-width: 1200px; margin: 0 auto 24px; display: flex; gap: 48px; flex-wrap: wrap; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.footer-directory-group { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 20px; }
+.footer-directory-title { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.footer-directory a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 13px; transition: color var(--t); }
+.footer-directory a:hover { color: var(--white); }
 .footer-badges { max-width: 1200px; margin: 0 auto 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .footer-badges img { display: block; opacity: 0.85; transition: opacity var(--t); }
 .footer-badges a:hover img { opacity: 1; }
@@ -964,7 +969,7 @@ textarea:focus-visible {
 .br-faq details[open] summary svg { transform: rotate(180deg); }
 .br-faq details p { padding: 0 22px 20px; color: var(--text-mid); line-height: 1.7; }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
  .br-nav { display: none; }
 }
 @media (max-width: 960px) {
@@ -977,4 +982,20 @@ textarea:focus-visible {
  .br-section { padding: 56px 16px; }
  .br-steps { grid-template-columns: 1fr; }
  .br-lead { font-size: 17px; }
+}
+
+/* /br/ articles */
+.br-article-hero { padding: 64px 32px 56px; }
+.br-article-h1 { font-size: clamp(32px, 4vw, 48px); }
+.br-article h2 { color: var(--navy); font-size: clamp(24px, 2.6vw, 32px); margin: 48px 0 16px; }
+.br-article p, .br-article li { color: var(--text); font-size: 17px; line-height: 1.8; }
+.br-article > section > p + p { margin-top: 16px; }
+.br-article ul { margin: 16px 0 0 22px; display: flex; flex-direction: column; gap: 8px; }
+.br-article a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+.br-article .btn-primary { color: var(--white); text-decoration: none; margin-top: 16px; }
+.br-article .br-faq p { font-size: 16px; }
+.br-article-cta { margin-top: 48px; }
+.br-card-title { color: var(--navy); margin-bottom: 8px; font-size: 20px; }
+@media (max-width: 600px) {
+ .br-article-hero { padding: 48px 16px 40px; }
 }

@@ -4,7 +4,7 @@ import { privacyPolicyMarkdown } from "@/data/legal";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How FeedSolve collects, uses, discloses, and protects personal information.",
+  description: "How FeedSolve collects, uses, shares and protects personal information for company users, feedback submitters and website visitors, and your privacy rights.",
   alternates: { canonical: "https://feedsolve.com/privacy/" },
 };
 

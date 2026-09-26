@@ -10,7 +10,7 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
-  title: "Delivery Complaint Tracking for Logistics - Manage Every Route Issue",
+  title: "Delivery Complaint Tracking for Logistics",
   description:
     "Warehouse feedback, driver feedback app workflows, and 3PL feedback platform intake via QR code with no login. Track every complaint to resolution across routes.",
   openGraph: {

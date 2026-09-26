@@ -5,9 +5,9 @@ import VerticalPage from "@/components/VerticalPage";
 const URL = "https://feedsolve.com/feedback-tracking-code/";
 
 export const metadata: Metadata = {
-  title: "Feedback Tracking Code | Complaint Tracking Number for Customers",
+  title: "Complaint Tracking Number for Customers",
   description:
-    "Give every submitter a unique complaint tracking number. They follow progress with no login; you assign, track, and resolve on a Kanban board. Free to start, no credit card.",
+    "Give every submitter a unique complaint tracking number. They follow progress with no login while you assign, track and resolve on a Kanban board.",
   keywords: [
     "feedback tracking code",
     "complaint tracking number",

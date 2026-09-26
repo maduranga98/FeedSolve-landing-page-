@@ -12,7 +12,7 @@ import VerticalPage from "@/components/VerticalPage";
 const URL = "https://feedsolve.com/customer-feedback-software/";
 
 export const metadata: Metadata = {
-  title: "Customer Feedback Software That Resolves, Not Just Collects",
+  title: "Customer Feedback Software That Resolves",
   description:
     "Customer feedback software that goes beyond surveys: collect feedback via QR or link with no login, then assign, track, and resolve every submission. Free to start.",
   keywords: [
@@ -84,7 +84,7 @@ export default function CustomerFeedbackSoftware() {
         badge="Customer Feedback Software"
         breadcrumbLabel="Customer Feedback Software"
         breadcrumbUrl={URL}
-        h1="Customer Feedback Software That Resolves, Not Just Collects"
+        h1="Customer Feedback Software That Resolves"
         subheading="Most feedback tools stop at collecting responses. FeedSolve helps you assign, track, and resolve every piece of feedback - so it turns into action."
         quickAnswer="FeedSolve is a customer feedback platform built around what happens after submit. Customers give feedback by scanning a QR code or opening a link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it. A live resolution rate shows how much feedback you actually act on. It's a feedback management system, not just a survey tool. Free to start, no credit card."
         stats={[

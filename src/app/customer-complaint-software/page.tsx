@@ -12,9 +12,9 @@ import VerticalPage from "@/components/VerticalPage";
 const URL = "https://feedsolve.com/customer-complaint-software/";
 
 export const metadata: Metadata = {
-  title: "Customer Complaint Software: Track & Resolve Every Complaint",
+  title: "Customer Complaint Software: Track & Resolve",
   description:
-    "Customer complaint software that turns scattered complaints into resolved issues. No-login QR or link intake, tracking codes, assignment, and a resolution dashboard. Free to start.",
+    "Customer complaint software that turns scattered complaints into resolved issues: no-login QR or link intake, tracking codes, assignment and a dashboard.",
   keywords: [
     "customer complaint software",
     "customer complaints software",

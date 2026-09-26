@@ -66,6 +66,41 @@ Each page has:
 - The English footer links to `/br/` on every page. `llms.txt` lists the
   Brazil pages, and two dead links in it (`/features/`, `/us/`) are fixed.
 
+## Round 2 (same day): restaurants, on-page audit, internal links
+
+### Restaurant content
+- `/br/restaurantes/`, a pt-BR restaurant landing page, hreflang-paired with `/restaurants/qr-feedback/`.
+- A `/br/blog/` hub plus 3 Portuguese restaurant posts:
+  `como-lidar-com-reclamacoes-em-restaurante` (paired with
+  `/blog/how-to-handle-restaurant-complaints/`),
+  `pesquisa-de-satisfacao-restaurante-modelo` (paired with the new English post
+  below) and `avaliacao-negativa-restaurante-google-ifood` (Brazil-only).
+- New English post `/blog/restaurant-customer-satisfaction-survey-questions/`
+  (template intent that no existing restaurant post covered).
+- `/restaurants/qr-feedback/` previously linked to 1 of the 8 restaurant posts.
+  It now links to all of them (plus the new one) in contextual prose.
+
+### On-page audit (built HTML, 118 pages)
+- **H1:** every page has exactly one. `/privacy/` and `/terms/` had two (the
+  markdown `# Title` duplicated the page header), and that is now fixed.
+- **Meta description:** none were missing, but ~50 were over 165 characters
+  (truncated in results) and `/blog/`, `/privacy/` and `/terms/` were too
+  short. All are now 110–160.
+- **Titles:** ~50 were over 60 characters rendered. All are now ≤60, with the
+  primary keyword first. The 5 pages in the 2026-09-21 title test were left alone.
+- `scripts/check-seo.mjs` now **fails the build** on a missing/duplicate H1
+  or a missing description/title, and warns on length.
+
+### Internal links (inbound)
+| Before | After |
+|---|---|
+| `/us/`, `/eu/`, `/au/customer-feedback-software/`, `/logistics/3pl-…`, `/real-estate/hoa-…`: **1** inbound link each | Linked from every page (footer "Industries" and "Markets" row) |
+| Blog "related posts" = next 3 ids, and the sidebar repeated the same 3 | Sidebar = 3 **topically** related posts; "More from the blog" = 3 different id neighbours; plus a link to the matching product page |
+| Alternatives pages always linked the first 4 entries; `trustpilot` had 1 inbound | Rotated per page; the minimum is now 3 |
+
+External backlinks can't be measured from the repo (and Semrush isn't in the
+current plan). Check GSC → Links → "Top linking sites" for that.
+
 ## Next steps (not code, and they matter more than the code)
 
 ### This week, in Search Console

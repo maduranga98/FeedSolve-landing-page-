@@ -4,11 +4,11 @@
 // scripts/set-html-lang.mjs after the static export.
 
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ChevronDown, Hash, Inbox, QrCode, UserCheck, XCircle } from "lucide-react";
 import { JsonLdScript } from "@/components/JsonLd";
 import { BR_PAGES, BR_SIGNUP_URL } from "@/data/brPages";
+import { BrFooter, BrHeader } from "@/components/br/BrChrome";
 import { SITE_URL, breadcrumbJsonLd, generateOrganizationSchema } from "@/lib/seo";
 
 export type BrFaq = { q: string; a: string };
@@ -265,66 +265,5 @@ export default function BrLandingPage(props: BrLandingPageProps) {
 
       <BrFooter englishHref={englishHref} />
     </>
-  );
-}
-
-function BrHeader({ path, englishHref }: { path: string; englishHref?: string }) {
-  return (
-    <header className="br-header">
-      <div className="br-header-inner">
-        <Link href="/br/" className="nav-logo" aria-label="FeedSolve Brasil - início">
-          <Image src="/logo.webp" alt="" width={28} height={28} priority />
-          <span className="nav-logo-text">FeedSolve</span>
-          <span className="br-flag">Brasil</span>
-        </Link>
-        <nav aria-label="Soluções" className="br-nav">
-          {BR_PAGES.slice(1).map((p) => (
-            <Link key={p.path} href={p.path} aria-current={p.path === path ? "page" : undefined}>
-              {p.nav}
-            </Link>
-          ))}
-        </nav>
-        <div className="br-header-actions">
-          <Link href={englishHref ?? "/"} hrefLang="en" lang="en" className="br-lang">
-            English
-          </Link>
-          <a href={BR_SIGNUP_URL} className="btn-primary br-header-cta" target="_blank" rel="noopener noreferrer">
-            Testar grátis
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-function BrFooter({ englishHref }: { englishHref?: string }) {
-  return (
-    <footer>
-      <div className="footer-inner">
-        <div className="footer-logo">
-          <Image src="/logo.webp" alt="FeedSolve" width={28} height={28} />
-          <span className="footer-logo-text">FeedSolve</span>
-        </div>
-        <div className="footer-links">
-          {BR_PAGES.map((p) => (
-            <Link key={p.path} href={p.path}>
-              {p.nav}
-            </Link>
-          ))}
-          <Link href={englishHref ?? "/"} hrefLang="en" lang="en">
-            English
-          </Link>
-          <a href="mailto:hello@feedsolve.com">Contato</a>
-          <Link href="/privacy/">Privacidade</Link>
-          <Link href="/terms/">Termos</Link>
-        </div>
-      </div>
-      <div className="footer-copy">
-        © 2026 FeedSolve. Todos os direitos reservados. · Um produto da{" "}
-        <a className="footer-company-link" href="https://www.lumoraventures.com/" target="_blank" rel="noopener noreferrer">
-          Lumora Ventures Pvt. Ltd.
-        </a>
-      </div>
-    </footer>
   );
 }

@@ -13,7 +13,7 @@ import { JsonLdScript } from "@/components/JsonLd";
 import { type FAQItem, generateFAQSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
-  title: "Tenant Feedback Portal & HOA Complaint Form - Track Every Request",
+  title: "Tenant Feedback Portal for Property Managers",
   description:
     "Give tenants and HOA residents a QR code to submit maintenance requests, community complaints, and shared-area issues without calling or emailing.",
   openGraph: {

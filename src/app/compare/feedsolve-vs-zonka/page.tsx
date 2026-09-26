@@ -14,11 +14,11 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FeedSolve vs Zonka Feedback: Resolution Rate vs Survey Scores",
+  title: "FeedSolve vs Zonka Feedback: Which Fits SMBs?",
   description:
-    "Zonka measures satisfaction scores. FeedSolve measures resolution rate - did you actually fix it? Compare features, pricing, and use cases for SMB complaint management.",
+    "Zonka measures satisfaction scores; FeedSolve measures whether you fixed the problem. Compare features, pricing and use cases for SMB complaint management.",
   openGraph: {
-    title: "FeedSolve vs Zonka Feedback: Resolution Rate vs Survey Scores",
+    title: "FeedSolve vs Zonka Feedback: Which Fits SMBs?",
     description:
       "Zonka measures satisfaction scores. FeedSolve measures resolution rate. See which is right for SMB complaint and feedback management.",
     url: "https://feedsolve.com/compare/feedsolve-vs-zonka/",

@@ -49,6 +49,8 @@ Paid tiers bill monthly or annually (annual saves about 20%); no annual lock-in 
 - [Caixa de sugestões online e anônima](https://feedsolve.com/br/caixa-de-sugestoes-online/)
 - [Pesquisa de satisfação por QR Code](https://feedsolve.com/br/pesquisa-de-satisfacao-qr-code/)
 - [Canal de denúncias anônimo](https://feedsolve.com/br/canal-de-denuncias/)
+- [Restaurantes: avaliação por QR Code na mesa](https://feedsolve.com/br/restaurantes/)
+- [Blog em português](https://feedsolve.com/br/blog/): gestão de reclamações e avaliações de restaurante
 
 - [Alternatives hub](https://feedsolve.com/alternatives/): guides to FeedSolve as an alternative to Medallia, Qualtrics, Zonka, Typeform, Canny, Zendesk, Uniqode, Trustpilot, and more
 - [Blog](https://feedsolve.com/blog/)

@@ -3,6 +3,7 @@ import blogData from "@/data/blog.json";
 import { alternatives } from "@/data/alternatives";
 import { hreflangForPath } from "@/lib/seo/hreflang";
 import { BR_PAGES } from "@/data/brPages";
+import { BR_POSTS, brPostPath } from "@/data/brBlog";
 
 export const dynamic = "force-static";
 
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(blog.meta.date_modified),
     changeFrequency: "monthly" as const,
     priority: 0.6,
+    ...languageAlternates(blog.meta.slug),
   }));
 
   const staticPages = [
@@ -70,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: page.path === "/br/" ? 0.9 : 0.8,
       frequency: "monthly" as const,
     })),
+    { path: "/br/blog", priority: 0.7, frequency: "weekly" as const },
   ];
 
   return [
@@ -81,5 +84,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...languageAlternates(page.path),
     })),
     ...blogPosts,
+    ...BR_POSTS.map((post) => ({
+      url: absoluteUrl(brPostPath(post)),
+      lastModified: new Date(post.dateModified),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+      ...languageAlternates(brPostPath(post)),
+    })),
   ];
 }

@@ -32,10 +32,21 @@ export const BR_PAGES: BrPage[] = [
     summary: "Pesquisa de satisfação e avaliação de atendimento por QR Code, sem login.",
   },
   {
+    path: "/br/restaurantes/",
+    nav: "Restaurantes",
+    summary: "Avaliação por QR Code na mesa para resolver reclamações antes da conta.",
+  },
+  {
     path: "/br/canal-de-denuncias/",
     nav: "Canal de denúncias",
     summary: "Canal de denúncias anônimo com acompanhamento por código de protocolo.",
   },
+];
+
+/** Header navigation: every solution page plus the blog hub. */
+export const BR_NAV: Pick<BrPage, "path" | "nav">[] = [
+  ...BR_PAGES.slice(1),
+  { path: "/br/blog/", nav: "Blog" },
 ];
 
 export const BR_SIGNUP_URL = "https://app.feedsolve.com/signup";

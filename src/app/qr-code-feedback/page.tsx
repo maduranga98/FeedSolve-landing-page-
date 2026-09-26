@@ -8,7 +8,7 @@ const URL = "https://feedsolve.com/qr-code-feedback/";
 export const metadata: Metadata = {
   title: "QR Code Feedback System | No-Login QR Feedback",
   description:
-    "Collect feedback with a QR code - no app, no login. Customers scan, submit in any language, and get a tracking code, while you assign, track, and resolve every issue. Free to start.",
+    "Collect feedback with a QR code, no app or login. Customers scan, submit in any language and get a tracking code while you assign and resolve every issue.",
   keywords: [
     "qr code feedback",
     "qr code feedback system",

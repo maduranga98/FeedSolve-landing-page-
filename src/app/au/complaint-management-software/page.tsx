@@ -20,9 +20,9 @@ import { landingBreadcrumb } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
-    "Complaint Management Software for Australian Small Business",
+    "Complaint Management Software Australia",
   description:
-    "FeedSolve is complaint management software built for Australian SMBs. QR intake, zero-login submission, Kanban resolution workflow, and audit trail aligned with Australian Consumer Law. Free to start.",
+    "Complaint management software for Australian SMBs: zero-login QR intake, a Kanban resolution workflow and an audit trail aligned with Australian Consumer Law.",
   openGraph: {
     title: "Complaint Management Software Australia | FeedSolve",
     description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Complaint Management Software for Australian Small Business",
+  name: "Complaint Management Software Australia",
   description:
     "FeedSolve complaint management software for Australian SMBs — QR intake, Kanban workflow, tracking codes, and ACL-aligned audit trail.",
   url: "https://feedsolve.com/au/complaint-management-software/",
@@ -217,7 +217,7 @@ export default function AUComplaintManagementPage() {
               maxWidth: 780,
             }}
           >
-            Complaint Management Software for Australian Small Business
+            Complaint Management Software Australia
           </h1>
           <p
             style={{

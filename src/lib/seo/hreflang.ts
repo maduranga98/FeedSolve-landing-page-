@@ -33,6 +33,22 @@ export const HREFLANG_CLUSTERS = {
     "pt-BR": "/br/pesquisa-de-satisfacao-qr-code/",
     "x-default": "/qr-code-feedback/",
   },
+  restaurants: {
+    en: "/restaurants/qr-feedback/",
+    "pt-BR": "/br/restaurantes/",
+    "x-default": "/restaurants/qr-feedback/",
+  },
+  // Blog posts written natively in both languages for the same intent.
+  restaurantComplaints: {
+    en: "/blog/how-to-handle-restaurant-complaints/",
+    "pt-BR": "/br/blog/como-lidar-com-reclamacoes-em-restaurante/",
+    "x-default": "/blog/how-to-handle-restaurant-complaints/",
+  },
+  restaurantSurvey: {
+    en: "/blog/restaurant-customer-satisfaction-survey-questions/",
+    "pt-BR": "/br/blog/pesquisa-de-satisfacao-restaurante-modelo/",
+    "x-default": "/blog/restaurant-customer-satisfaction-survey-questions/",
+  },
 } as const satisfies Record<string, Record<string, string>>;
 
 export type HreflangCluster = keyof typeof HREFLANG_CLUSTERS;

@@ -20,7 +20,7 @@ const PAGE_PATH = "/real-estate/hoa-complaint-form/";
 const PAGE_URL = `https://feedsolve.com${PAGE_PATH}`;
 
 export const metadata = generatePageMetadata({
-  title: "HOA Complaint Form — Collect, Route & Resolve Resident Complaints",
+  title: "HOA Complaint Form: Route & Resolve Issues",
   description:
     "An HOA complaint form that routes each submission to the board member on duty, tracks it to resolution, and gives residents a code to check status without calling.",
   path: PAGE_PATH,
