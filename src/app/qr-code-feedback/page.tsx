@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clusterAlternates } from "@/lib/seo/hreflang";
 import { QrCode, ScanLine, EyeOff, Hash, Languages, Palette } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
 
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     "scan to give feedback",
     "qr code complaint form",
   ],
-  alternates: { canonical: URL },
+  alternates: clusterAlternates("qrFeedback", "/qr-code-feedback/"),
   openGraph: {
     title: "QR Code Feedback System | No-Login QR Feedback | FeedSolve",
     description:

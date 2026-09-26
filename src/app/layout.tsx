@@ -104,7 +104,7 @@ const softwareApplicationJsonLd = {
  url: "https://feedsolve.com/",
  image: "https://feedsolve.com/feedsolve.webp",
  screenshot: "https://feedsolve.com/feedsolve.webp",
- inLanguage: ["en", "en-GB", "en-AU", "en-US"],
+ inLanguage: ["en", "en-GB", "en-AU", "en-US", "pt-BR"],
  keywords:
   "feedsolve, feed solve, feedback management software, complaint management software, QR code feedback, supplier feedback, tenant feedback, GDPR feedback management, customer complaint tracking, SMB feedback platform",
  featureList: [
@@ -160,7 +160,8 @@ export default function RootLayout({
  children: React.ReactNode;
 }>) {
  return (
-  <html lang="en" data-scroll-behavior="smooth" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable}`}>
+  // lang is rewritten to pt-BR for /br/ by scripts/set-html-lang.mjs after export.
+  <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable}`}>
    <head />
    <body suppressHydrationWarning>
     {/* Google Tag Manager */}

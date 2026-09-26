@@ -21,17 +21,17 @@
 
 ## Pricing
 
-- Free: $0
+- Free trial: $0 for 7 days, full access
 - Starter: $19 / month
 - Growth: $49 / month
 - Pro: $79 / month
 
-All paid tiers are monthly; no annual lock-in is required.
+Paid tiers bill monthly or annually (annual saves about 20%); no annual lock-in is required.
 
 ## Key pages
 
 - [Homepage](https://feedsolve.com/): product overview, pricing, FAQ
-- [Features](https://feedsolve.com/features/): full feature breakdown
+- [Branded QR codes](https://feedsolve.com/features/branded-qr-codes/): QR code feature breakdown
 - [Restaurants — QR feedback](https://feedsolve.com/restaurants/qr-feedback/)
 - [Manufacturing — supplier feedback](https://feedsolve.com/manufacturing/supplier-feedback/)
 - [Logistics — delivery feedback](https://feedsolve.com/logistics/delivery-feedback/)
@@ -39,8 +39,17 @@ All paid tiers are monthly; no annual lock-in is required.
 - [UK — complaint management software](https://feedsolve.com/uk/complaint-management-software/)
 - [AU — complaint management software](https://feedsolve.com/au/complaint-management-software/)
 - [EU — GDPR feedback management](https://feedsolve.com/eu/gdpr-feedback-management/)
-- [US](https://feedsolve.com/us/)
+- [US — complaint management software](https://feedsolve.com/us/complaint-management-software/)
 - [Compare FeedSolve](https://feedsolve.com/compare/)
+
+## Português (Brasil)
+
+- [FeedSolve Brasil](https://feedsolve.com/br/): plataforma de feedback e gestão de reclamações
+- [Software de gestão de reclamações](https://feedsolve.com/br/software-de-gestao-de-reclamacoes/)
+- [Caixa de sugestões online e anônima](https://feedsolve.com/br/caixa-de-sugestoes-online/)
+- [Pesquisa de satisfação por QR Code](https://feedsolve.com/br/pesquisa-de-satisfacao-qr-code/)
+- [Canal de denúncias anônimo](https://feedsolve.com/br/canal-de-denuncias/)
+
 - [Alternatives hub](https://feedsolve.com/alternatives/): guides to FeedSolve as an alternative to Medallia, Qualtrics, Zonka, Typeform, Canny, Zendesk, Uniqode, Trustpilot, and more
 - [Blog](https://feedsolve.com/blog/)
 - [Privacy](https://feedsolve.com/privacy/)

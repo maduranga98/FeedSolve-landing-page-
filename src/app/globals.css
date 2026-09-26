@@ -893,3 +893,88 @@ textarea:focus-visible {
  .legal-document { padding: 24px 20px; }
  .legal-content table { min-width: 560px; }
 }
+
+/* ── Portuguese (Brazil) pages: /br/ ─────────────────────────── */
+/* The global `nav {}` rule fixes every <nav> to the top; reset it for /br/ navs. */
+.br-nav, .br-crumbs { position: static; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; border: 0; z-index: auto; }
+.br-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.br-header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 32px; height: 64px; }
+.br-flag { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); background: var(--teal-pale); padding: 3px 8px; border-radius: 100px; }
+.br-nav { display: flex; gap: 20px; }
+.br-nav a { font-size: 14px; font-weight: 500; color: var(--text-mid); text-decoration: none; white-space: nowrap; transition: color var(--t); }
+.br-nav a:hover, .br-nav a[aria-current="page"] { color: var(--navy); }
+.br-header-actions { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.br-lang { font-size: 14px; color: var(--text-light); text-decoration: none; }
+.br-lang:hover { color: var(--navy); }
+.br-header-cta { padding: 8px 16px; font-size: 14px; }
+
+.br-hero { background: var(--navy); padding: 80px 32px 72px; }
+.br-crumbs { display: flex; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 24px; }
+.br-crumbs a { color: var(--teal-light); text-decoration: none; }
+.br-badge { background: rgba(255,255,255,0.08); color: var(--teal-light); }
+.br-h1 { color: var(--white); max-width: 880px; font-size: clamp(36px, 5vw, 60px); }
+.br-lead { color: rgba(255,255,255,0.72); font-size: 19px; line-height: 1.65; max-width: 720px; margin-top: 20px; }
+.br-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+.br-btn-light { color: var(--white); border-color: rgba(255,255,255,0.3); }
+.br-trust { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.45); }
+
+.br-section { padding: 72px 32px; background: var(--white); }
+.br-bg { background: var(--bg); }
+.br-navy { background: var(--navy); }
+.br-center { text-align: center; }
+.br-narrow { max-width: 760px; }
+.br-h2 { color: var(--navy); font-size: clamp(28px, 3.4vw, 42px); margin-bottom: 28px; }
+.br-sub { color: var(--text-mid); font-size: 17px; line-height: 1.7; max-width: 720px; margin: -12px 0 28px; }
+.br-center .br-sub { margin: -12px auto 28px; }
+.br-on-dark { color: var(--white); }
+.br-on-dark-mid { color: rgba(255,255,255,0.65); }
+
+.br-answer { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--teal); border-radius: var(--radius); padding: 24px 28px; }
+.br-answer p { color: var(--text); font-size: 17px; line-height: 1.75; }
+.br-answer .br-answer-label { font-size: 12px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+
+.br-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.br-list li { display: flex; gap: 14px; align-items: flex-start; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; color: var(--text); line-height: 1.55; }
+.br-icon-bad { color: #C0392B; flex-shrink: 0; margin-top: 2px; }
+
+.br-steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.br-step { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 26px 22px; color: var(--teal-light); }
+.br-step h3 { color: var(--white); margin: 14px 0 8px; }
+.br-step p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.6; }
+.br-step-num { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+
+.br-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.br-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px; }
+.br-bg .br-card { background: var(--white); }
+.br-card h3 { color: var(--navy); margin-bottom: 8px; font-size: 18px; }
+.br-card p { color: var(--text-mid); line-height: 1.65; font-size: 15px; }
+.br-card-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--teal-pale); color: var(--teal); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.br-card-link { text-decoration: none; transition: border-color var(--t), transform var(--t); }
+.br-card-link:hover { border-color: var(--teal); transform: translateY(-2px); }
+
+.br-chips { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.br-chips li { display: flex; gap: 10px; align-items: center; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; color: var(--text-mid); font-weight: 600; }
+.br-chips svg { color: var(--teal); flex-shrink: 0; }
+
+.br-faq { display: flex; flex-direction: column; gap: 10px; }
+.br-faq details { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+.br-faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 22px; font-weight: 600; color: var(--navy); }
+.br-faq summary::-webkit-details-marker { display: none; }
+.br-faq summary svg { flex-shrink: 0; color: var(--teal); transition: transform var(--t); }
+.br-faq details[open] summary svg { transform: rotate(180deg); }
+.br-faq details p { padding: 0 22px 20px; color: var(--text-mid); line-height: 1.7; }
+
+@media (max-width: 1080px) {
+ .br-nav { display: none; }
+}
+@media (max-width: 960px) {
+ .br-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+ .br-header-inner { padding: 0 16px; }
+ .br-lang { display: none; }
+ .br-hero { padding: 56px 16px 52px; }
+ .br-section { padding: 56px 16px; }
+ .br-steps { grid-template-columns: 1fr; }
+ .br-lead { font-size: 17px; }
+}

@@ -118,6 +118,35 @@ if (existsSync(hubFile)) {
   console.log(`[seo] ${built.length} blog posts, ${built.length - orphans.length} linked from the hub`);
 }
 
+// 5. Localized sections must ship the right <html lang>, and every hreflang
+//    annotation must be reciprocal: if A lists B, B must list A with the same
+//    map, or Google ignores the whole cluster.
+const LOCALIZED = { "/br/": "pt-BR" };
+const hreflangByUrl = new Map();
+for (const file of pages) {
+  const url = urlForFile(file);
+  const html = readFileSync(file, "utf8");
+  const lang = html.match(/<html lang="([^"]+)"/)?.[1];
+  const expected = Object.entries(LOCALIZED).find(([prefix]) => url.startsWith(prefix))?.[1] ?? "en";
+  if (!NOT_A_PAGE.test(url) && lang !== expected) {
+    errors.push(`${url} has <html lang="${lang}">, expected "${expected}"`);
+  }
+  const alts = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/g)];
+  if (alts.length) hreflangByUrl.set(`${ORIGIN}${url}`, new Map(alts.map((m) => [m[1], m[2]])));
+}
+for (const [url, map] of hreflangByUrl) {
+  if (![...map.values()].includes(url)) errors.push(`${url} hreflang map does not include itself`);
+  for (const [lang, target] of map) {
+    const back = hreflangByUrl.get(target);
+    if (!back) {
+      errors.push(`${url} hreflang ${lang} -> ${target}, which has no hreflang annotations`);
+    } else if ([...map].some(([l, t]) => back.get(l) !== t) || back.size !== map.size) {
+      errors.push(`${url} and ${target} declare different hreflang maps`);
+    }
+  }
+}
+console.log(`[seo] ${hreflangByUrl.size} pages with hreflang checked for reciprocity`);
+
 console.log(`[seo] ${pages.length} pages checked`);
 
 if (errors.length) {
