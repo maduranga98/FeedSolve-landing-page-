@@ -82,11 +82,15 @@ export default async function AlternativePage({
     generateFAQSchema(alt.faqs.map((f) => ({ question: f.q, answer: f.a }))),
   ];
 
-  const related = alternatives
-    .filter((a) => a.slug !== alt.slug)
-    .filter((a) => a.category === alt.category)
-    .concat(alternatives.filter((a) => a.slug !== alt.slug && a.category !== alt.category))
-    .slice(0, 4);
+  // Rotate from this page's own position so each page links to the entries
+  // after it (wrapping). Taking the first four in array order meant entries
+  // late in the list were never linked from any sibling page.
+  const index = alternatives.findIndex((a) => a.slug === alt.slug);
+  const rotated = [...alternatives.slice(index + 1), ...alternatives.slice(0, index)];
+  const related = [
+    ...rotated.filter((a) => a.category === alt.category),
+    ...rotated.filter((a) => a.category !== alt.category),
+  ].slice(0, 4);
 
   return (
     <>

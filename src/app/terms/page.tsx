@@ -4,7 +4,7 @@ import { termsOfServiceMarkdown } from "@/data/legal";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "FeedSolve Terms of Service for company users, team members, and feedback submitters.",
+  description: "FeedSolve Terms of Service: the rules for company users, team members and feedback submitters, including subscriptions, billing and acceptable use.",
   alternates: { canonical: "https://feedsolve.com/terms/" },
 };
 

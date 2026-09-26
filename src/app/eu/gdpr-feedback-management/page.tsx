@@ -10,7 +10,7 @@ const URL = "https://feedsolve.com/eu/gdpr-feedback-management/";
 export const metadata: Metadata = {
   title: "GDPR-Compliant Feedback Management Software",
   description:
-    "FeedSolve is feedback management and complaint tracking software designed with GDPR data minimisation principles. Anonymous mode, optional contact fields, and secure audit trail. Free to start.",
+    "Feedback management and complaint tracking built around GDPR data minimisation: anonymous mode, optional contact fields and a secure audit trail.",
   openGraph: {
     title: "GDPR-Compliant Feedback Management Software | FeedSolve",
     description:

@@ -19,7 +19,7 @@ const URL = "https://feedsolve.com/au/customer-feedback-software/";
 export const metadata: Metadata = {
   title: "Customer Feedback Software Australia",
   description:
-    "Customer feedback software for Australian businesses. Collect feedback via QR code or link - no login, any language - then assign, track, and resolve every submission. Free to start, priced in AUD.",
+    "Customer feedback software for Australian businesses. Collect feedback by QR code or link with no login, then assign, track and resolve every submission.",
   keywords: [
     "customer feedback software australia",
     "customer feedback platform australia",

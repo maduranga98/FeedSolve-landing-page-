@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import { clusterAlternates } from "@/lib/seo/hreflang";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroStats from "@/components/home/HeroStats";
 import DemoSection from "@/components/home/DemoSection";
 import { homeFaqs } from "@/data/homeFaqs";
+
+// Title, description and social cards come from the root layout; only the
+// hreflang pair with the Portuguese (Brazil) homepage is added here.
+export const metadata: Metadata = {
+ alternates: clusterAlternates("home", "/"),
+};
 
 const FAQAccordion = dynamic(() => import("@/components/home/FAQAccordion"));
 const ContactSection = dynamic(() => import("@/components/home/ContactSection"));

@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
  title: "Blog — Insights on Feedback & Operations",
  description:
-  "Practical guides, case studies, and ideas for teams who take customer feedback seriously.",
+  "Practical guides on complaint management, customer feedback, QR code surveys and suggestion boxes for small businesses, restaurants and operations teams.",
  openGraph: {
   title: "Blog — Insights on Feedback & Operations",
   description:
-   "Practical guides, case studies, and ideas for teams who take customer feedback seriously.",
+   "Practical guides on complaint management, customer feedback, QR code surveys and suggestion boxes for small businesses, restaurants and operations teams.",
  },
  robots: {
   index: true,

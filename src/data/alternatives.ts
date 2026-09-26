@@ -58,7 +58,7 @@ export const alternatives: Alternative[] = [
     roundupLabel: "See all 6 Medallia alternatives compared",
     metaTitle: "Best Medallia Alternative for Small Business (2026)",
     metaDescription:
-      "Looking for a Medallia alternative without quote-only pricing and multi-month rollouts? FeedSolve gives SMBs a QR-first complaint resolution loop from $19/month, self-serve.",
+      "A Medallia alternative without quote-only pricing or multi-month rollouts. FeedSolve gives SMBs QR-first complaint resolution from $19/month, self-serve.",
     heroSubtitle:
       "Medallia is built for enterprises with dedicated CX teams and six-figure budgets. FeedSolve gives small and mid-size businesses the part that actually matters day to day - a working feedback resolution loop - for $19–79/month with no sales call.",
     quickAnswer: {
@@ -142,7 +142,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Enterprise CX platform",
     metaTitle: "Best Qualtrics Alternative for Small Business (2026)",
     metaDescription:
-      "Qualtrics is demo-gated, quote-priced, and built for enterprise research teams. FeedSolve is the self-serve alternative for SMB complaint resolution - QR intake to resolved, from $19/month.",
+      "Qualtrics is demo-gated and quote-priced. FeedSolve is the self-serve Qualtrics alternative for SMB complaint resolution: QR intake to resolved, from $19/month.",
     heroSubtitle:
       "Qualtrics XM is an enterprise experience-management suite: powerful, quote-priced, and demo-gated. FeedSolve is what an SMB actually needs from it - collect feedback without logins, assign it, resolve it, prove it - available self-serve today.",
     quickAnswer: {
@@ -224,7 +224,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Enterprise CX platform",
     metaTitle: "Best InMoment Alternative for Small Business (2026)",
     metaDescription:
-      "InMoment targets enterprise CX programs with quote-only pricing. FeedSolve is the SMB alternative: QR-first feedback intake with a real resolution workflow, from $19/month self-serve.",
+      "An InMoment alternative for SMBs: QR-first feedback intake with a real resolution workflow, self-serve from $19/month. No quote-only enterprise contract.",
     heroSubtitle:
       "InMoment sells integrated CX intelligence to enterprises - unified signals, AI analytics, managed programs. FeedSolve skips the intelligence layer SMBs don't have staff for and delivers the resolution loop they actually need, self-serve, today.",
     quickAnswer: {
@@ -308,7 +308,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Omnichannel feedback platform",
     metaTitle: "Best Zonka Feedback Alternative for SMBs (2026)",
     metaDescription:
-      "Zonka measures NPS and CSAT scores; its case IDs stay internal. FeedSolve gives every submitter a public tracking code and drives complaints to resolution - from $19/month vs Zonka's $49.",
+      "Zonka measures NPS and CSAT. FeedSolve gives every submitter a tracking code and drives complaints to resolution, from $19/month versus Zonka's $49.",
     heroSubtitle:
       "Zonka Feedback is the closest omnichannel tool to FeedSolve - it even has case management. But Zonka's case IDs are internal-only. FeedSolve gives the submitter a public tracking code to check status themselves, and makes resolution rate the headline metric.",
     quickAnswer: {
@@ -388,9 +388,9 @@ export const alternatives: Alternative[] = [
     name: "SurveyMonkey",
     category: "omnichannel-survey",
     categoryLabel: "Survey platform",
-    metaTitle: "Best SurveyMonkey Alternative for Complaint Management (2026)",
+    metaTitle: "SurveyMonkey Alternative for Complaint Management",
     metaDescription:
-      "SurveyMonkey collects responses; nobody owns what happens next. FeedSolve turns feedback into assigned, tracked, resolved work - QR-first, zero-login, from $19/month.",
+      "SurveyMonkey collects responses; nobody owns what happens next. FeedSolve turns feedback into assigned, tracked, resolved work. QR-first, from $19/month.",
     heroSubtitle:
       "SurveyMonkey is excellent at asking questions. But when the answer is a complaint, someone has to own it, fix it, and tell the customer. FeedSolve replaces the survey-plus-spreadsheet routine with a resolution workflow and a tracking code for every submitter.",
     quickAnswer: {
@@ -472,7 +472,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Omnichannel survey platform",
     metaTitle: "Best SurveySparrow Alternative for SMBs (2026)",
     metaDescription:
-      "SurveySparrow does conversational surveys and NPS scores. FeedSolve does resolution: QR intake, assignment, tracking codes, and a closed loop - flat pricing from $19/month.",
+      "SurveySparrow runs surveys and NPS. FeedSolve resolves what they surface: QR intake, assignment, tracking codes and a closed loop. Flat pricing from $19/month.",
     heroSubtitle:
       "SurveySparrow makes surveys feel like conversations and measures how people feel. FeedSolve is built for what happens after someone tells you something is wrong: ownership, status, resolution, and a tracking code the submitter can check.",
     quickAnswer: {
@@ -554,7 +554,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Survey & feedback platform",
     metaTitle: "Best Alchemer Alternative for Small Business (2026)",
     metaDescription:
-      "Alchemer is a powerful survey platform priced per user for research teams. FeedSolve is the SMB alternative for closing the loop on complaints - QR-first, flat-priced, self-serve.",
+      "Alchemer is a survey platform priced per user. FeedSolve is the SMB Alchemer alternative for closing the loop on complaints: QR-first, flat-priced, self-serve.",
     heroSubtitle:
       "Alchemer (formerly SurveyGizmo) offers deep survey logic and workflow for research-heavy teams, priced per user. FeedSolve skips survey sophistication and delivers the thing SMBs are usually missing: a resolution loop with submitter-visible tracking.",
     quickAnswer: {
@@ -636,9 +636,9 @@ export const alternatives: Alternative[] = [
     name: "Typeform",
     category: "form-builder",
     categoryLabel: "Form builder",
-    metaTitle: "Best Typeform Alternative for Feedback Resolution (2026)",
+    metaTitle: "Typeform Alternative for Feedback Resolution",
     metaDescription:
-      "Typeform stops where the real work starts: a response lands, then it's spreadsheets and manual follow-up. FeedSolve adds ownership, status, and submitter tracking - from $19/month.",
+      "Typeform stops when a response lands. This Typeform alternative adds an owner, a status and a tracking code for every submitter, from $19/month.",
     heroSubtitle:
       "Typeform makes beautiful forms. But a beautiful complaint form still dumps responses into a list nobody owns. FeedSolve replaces the form-plus-spreadsheet-plus-follow-up stack with one system: intake, assignment, status, and a tracking code for the submitter.",
     quickAnswer: {
@@ -719,7 +719,7 @@ export const alternatives: Alternative[] = [
     name: "Google Forms",
     category: "form-builder",
     categoryLabel: "Form builder",
-    metaTitle: "Best Google Forms Alternative for Complaints & Feedback (2026)",
+    metaTitle: "Google Forms Alternative for Complaint Tracking",
     metaDescription:
       "Google Forms plus a spreadsheet is where complaints go to be forgotten. FeedSolve adds assignment, status, tracking codes, and resolution rate - free to start.",
     heroSubtitle:
@@ -801,9 +801,9 @@ export const alternatives: Alternative[] = [
     name: "Jotform",
     category: "form-builder",
     categoryLabel: "Form builder",
-    metaTitle: "Best Jotform Alternative for Feedback & Complaints (2026)",
+    metaTitle: "Jotform Alternative for Feedback & Complaints",
     metaDescription:
-      "Jotform nails QR and link sharing but has zero resolution concept. FeedSolve pairs QR-first intake with assignment, status, and submitter tracking codes - from $19/month.",
+      "Jotform shares forms by QR code but stops at submission. FeedSolve adds assignment, status and tracking codes for submitters, from $19/month.",
     heroSubtitle:
       "Jotform is the closest form builder to FeedSolve on intake mechanics - QR codes, link sharing, no respondent login. But after submission, Jotform is done and your spreadsheet-and-email routine begins. FeedSolve is built for everything after submission.",
     quickAnswer: {
@@ -886,9 +886,9 @@ export const alternatives: Alternative[] = [
     name: "Canny",
     category: "feature-boards",
     categoryLabel: "Feature request board",
-    metaTitle: "Best Canny Alternative Without Per-User Pricing (2026)",
+    metaTitle: "Canny Alternative Without Per-User Pricing",
     metaDescription:
-      "Canny requires user accounts and charges per tracked user. FeedSolve is zero-login, flat-priced, and built for all external stakeholders - not just logged-in product users.",
+      "Canny needs user accounts and charges per tracked user. FeedSolve is a zero-login, flat-priced Canny alternative for customers, suppliers and staff.",
     heroSubtitle:
       "Canny is a voting board for your product's logged-in users, priced per tracked user - so cost scales against engagement. FeedSolve is the opposite design: zero-login submission from any stakeholder, flat pricing regardless of how many people submit.",
     quickAnswer: {
@@ -968,7 +968,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Feature request board",
     metaTitle: "Best Upvoty Alternative for External Feedback (2026)",
     metaDescription:
-      "Upvoty is a voting board for logged-in product users. FeedSolve handles feedback from everyone else - zero-login QR intake with a real resolution workflow, flat pricing.",
+      "Upvoty is a voting board for logged-in users. FeedSolve handles feedback from everyone else: zero-login QR intake, a real resolution workflow and flat pricing.",
     heroSubtitle:
       "Upvoty is an affordable feature-voting board for SaaS user bases. But if your feedback comes from customers at tables, suppliers at loading docks, or staff on the floor, voting boards are the wrong shape. FeedSolve is built for those relationships.",
     quickAnswer: {
@@ -1047,9 +1047,9 @@ export const alternatives: Alternative[] = [
     name: "Zendesk",
     category: "ticketing",
     categoryLabel: "Helpdesk / ticketing",
-    metaTitle: "Best Zendesk Alternative for Complaint Management (2026)",
+    metaTitle: "Zendesk Alternative for Complaint Management",
     metaDescription:
-      "Zendesk is a helpdesk stretched to fit feedback: portal-gated intake, per-agent pricing. FeedSolve is QR-first and zero-login, purpose-built for external stakeholder complaints.",
+      "A Zendesk alternative for complaints: no portal login, no per-agent pricing. FeedSolve is QR-first and zero-login, built for customer and supplier complaints.",
     heroSubtitle:
       "Zendesk is strong at resolution - for tickets that arrive through support channels, worked by agents in seats you pay for. FeedSolve is purpose-built to be the front door: QR and link intake with no login, feeding a resolution board without per-agent pricing.",
     quickAnswer: {
@@ -1131,9 +1131,9 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Helpdesk / ticketing",
     roundupHref: "/blog/best-freshdesk-alternatives/",
     roundupLabel: "See all 6 Freshdesk alternatives compared",
-    metaTitle: "Best Freshdesk Alternative for Feedback Management (2026)",
+    metaTitle: "Freshdesk Alternative for Feedback Management",
     metaDescription:
-      "Freshdesk is a helpdesk for support queues, priced per agent. FeedSolve is a QR-first, zero-login feedback resolution platform with flat pricing - built for external stakeholders.",
+      "Freshdesk is a helpdesk priced per agent. FeedSolve is a QR-first, zero-login Freshdesk alternative for customer and supplier feedback, at a flat price.",
     heroSubtitle:
       "Freshdesk handles support tickets well and starts cheap. But it still assumes complaints arrive through support channels and agents work them in paid seats. FeedSolve is the front door for feedback that starts in the physical world - QR, zero-login, flat-priced.",
     quickAnswer: {
@@ -1215,7 +1215,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Helpdesk / ticketing",
     metaTitle: "Best HappyFox Alternative for SMB Complaints (2026)",
     metaDescription:
-      "HappyFox is agent-based ticketing with seat minimums. FeedSolve is zero-login, QR-first complaint resolution with flat pricing from $19/month - no agent seats, no portal gate.",
+      "HappyFox is agent-based ticketing with seat minimums. FeedSolve is zero-login, QR-first complaint resolution from $19/month: no agent seats, no portal login.",
     heroSubtitle:
       "HappyFox brings solid ticketing process - at per-agent prices with minimum seat counts. FeedSolve delivers the resolution loop without the helpdesk baggage: QR and link intake anyone can use, boards per stakeholder type, and flat pricing.",
     quickAnswer: {
@@ -1298,7 +1298,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Anonymous suggestion box",
     metaTitle: "Best Suggestion Ox Alternative for SMBs (2026)",
     metaDescription:
-      "Suggestion Ox collects anonymous suggestions well. FeedSolve collects and resolves them - assignment, Kanban workflow, a tracking code per submission, and a resolution rate you can report.",
+      "Suggestion Ox collects anonymous suggestions. FeedSolve collects and resolves them, with assignment, a Kanban workflow, tracking codes and a resolution rate.",
     heroSubtitle:
       "Suggestion Ox is a focused anonymous suggestion box: people submit without identifying themselves, and you can follow up without unmasking them. FeedSolve covers that same intake and adds the part that decides whether a suggestion programme survives - who owns each item, what status it is in, and what percentage actually got resolved.",
     quickAnswer: {
@@ -1388,7 +1388,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "QR feedback tool",
     metaTitle: "Best Uniqode Alternative for QR Feedback (2026)",
     metaDescription:
-      "Uniqode nails QR intake but stops at submission - no resolution loop. FeedSolve matches QR-first collection and adds assignment, status, and submitter tracking codes.",
+      "Uniqode handles QR intake but stops at submission. FeedSolve matches QR-first collection and adds assignment, status and tracking codes for every submitter.",
     heroSubtitle:
       "Uniqode (formerly Beaconstac) is the QR specialist: personalized codes, per-location analytics, multi-language forms. But it is still a survey tool - feedback goes in, nothing comes out. FeedSolve matches the QR-first intake and adds the entire resolution layer.",
     quickAnswer: {
@@ -1470,9 +1470,9 @@ export const alternatives: Alternative[] = [
     name: "Trustpilot",
     category: "reviews",
     categoryLabel: "Review platform",
-    metaTitle: "Best Trustpilot Alternative for Private Feedback (2026)",
+    metaTitle: "Trustpilot Alternative for Private Feedback",
     metaDescription:
-      "Trustpilot broadcasts reviews publicly; complaints become marketing damage. FeedSolve resolves issues privately with tracking codes - fix problems before they become 1-star reviews.",
+      "Trustpilot makes complaints public. FeedSolve resolves them privately with tracking codes, so you fix problems before they become 1-star reviews.",
     heroSubtitle:
       "Trustpilot is outward-facing: collect and display public reviews for social proof. FeedSolve is inward-facing: resolve a specific person's complaint, privately, with visible progress. Different jobs - and confusing them means complaints become public 1-star marketing.",
     quickAnswer: {

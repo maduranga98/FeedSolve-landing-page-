@@ -151,7 +151,19 @@ function getReadTime(blog: BlogPost): string {
  return `${Math.max(3, Math.round(avg / 300))} min`;
 }
 
-export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; otherPosts: BlogPost[] }) {
+type SolutionLink = { href: string; label: string };
+
+export default function BlogPostClient({
+ blog,
+ relatedPosts,
+ morePosts,
+ solution,
+}: {
+ blog: BlogPost;
+ relatedPosts: BlogPost[];
+ morePosts: BlogPost[];
+ solution: SolutionLink;
+}) {
  const [progress, setProgress] = useState(0);
 
  const cat = blog ? getCategoryForBlog(blog) : "operations";
@@ -456,6 +468,9 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
       <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
        Try FeedSolve Free <ArrowRight size={15} />
       </a>
+      <p style={{ marginTop: 14, marginBottom: 0, fontSize: 14 }}>
+       See how it works: <Link href={solution.href}>{solution.label}</Link>
+      </p>
      </div>
 
      {/* ARTICLE FOOTER */}
@@ -525,7 +540,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
 
      <div className="sidebar-card">
       <div className="sidebar-card-title">Related posts</div>
-      {otherPosts.slice(0, 3).map((other: BlogPost) => {
+      {relatedPosts.map((other: BlogPost) => {
        const otherCat = getCategoryForBlog(other);
        const otherCatInfo = tagMap[otherCat] || tagMap.operations;
        const catIcon = categoryIcons[otherCatInfo.label] || categoryIcons["Operations"];
@@ -547,7 +562,7 @@ export default function BlogPostClient({ blog, otherPosts }: { blog: BlogPost; o
    <div className="more-posts-section">
     <h2>More from the blog</h2>
     <div className="more-grid">
-     {otherPosts.slice(0, 3).map((other: BlogPost) => {
+     {morePosts.map((other: BlogPost) => {
       const otherCat = getCategoryForBlog(other);
       const otherCatInfo = tagMap[otherCat] || tagMap.operations;
       return (

@@ -10,9 +10,9 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata: Metadata = {
-  title: "Supplier Fault Tracking & Feedback Tool for Manufacturers",
+  title: "Supplier Fault Tracking for Manufacturers",
   description:
-    "Supplier fault tracking software for manufacturers. Replace WhatsApp supplier complaints and shop floor logs with a QR feedback board, tracking codes, and a documented audit trail.",
+    "Supplier fault tracking software for manufacturers. Replace WhatsApp complaints and shop-floor logs with a QR feedback board, tracking codes and an audit trail.",
   keywords: [
     "supplier fault tracking",
     "supplier feedback tool",

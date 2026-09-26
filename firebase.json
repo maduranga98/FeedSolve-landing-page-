@@ -111,6 +111,15 @@
         ]
       },
       {
+        "source": "/br{,/**}",
+        "headers": [
+          {
+            "key": "Content-Language",
+            "value": "pt-BR"
+          }
+        ]
+      },
+      {
         "source": "**",
         "headers": [
           {

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import blogData from "@/data/blog.json";
 import BlogPostClient from "./BlogPostClient";
 import { breadcrumbJsonLd } from "@/lib/seo";
+import { hreflangForPath } from "@/lib/seo/hreflang";
+import { getNeighbourPosts, getRelatedPosts, getSolutionPage } from "@/lib/blog/related";
 
 const SITE_URL = "https://feedsolve.com";
 const withTrailingSlash = (path: string) => (path === "/" ? path : `${path.replace(/\/$/, "")}/`);
@@ -47,6 +49,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   },
   alternates: {
    canonical: absoluteUrl(blog.meta.slug),
+   // Only posts with a Portuguese equivalent carry hreflang.
+   languages: hreflangForPath(withTrailingSlash(blog.meta.slug)),
   },
  };
 }
@@ -64,15 +68,12 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
   );
  }
 
- // Spread internal link equity: pick the 3 posts with the next ids
- // (wrapping around) instead of always the first 3. This gives every
- // post inbound links from its neighbours rather than concentrating
- // all "related" links on ids 1-3.
- const ordered = [...blogData].sort((a, b) => a.id - b.id);
- const currentIndex = ordered.findIndex((b) => b.id === blog.id);
- const otherPosts = [1, 2, 3].map(
-  (offset) => ordered[(currentIndex + offset) % ordered.length]
- );
+ // Two link sets per post: topical neighbours (keeps each cluster linked to
+ // itself) plus id neighbours (guarantees every post some inbound links).
+ // See src/lib/blog/related.ts.
+ const relatedPosts = getRelatedPosts(blog, blogData);
+ const morePosts = getNeighbourPosts(blog, blogData, relatedPosts);
+ const solution = getSolutionPage(blog);
  const publishedDate = blog.meta.date_published;
  const modifiedDate = blog.meta.date_modified;
 
@@ -151,7 +152,7 @@ export default async function BlogSlugPage({ params }: { params: Promise<{ slug:
      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
     />
    )}
-   <BlogPostClient blog={blog} otherPosts={otherPosts} />
+   <BlogPostClient blog={blog} relatedPosts={relatedPosts} morePosts={morePosts} solution={solution} />
   </>
  );
 }

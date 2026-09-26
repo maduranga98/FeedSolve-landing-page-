@@ -118,7 +118,9 @@ export default function MarkdownRenderer({ markdown }: { markdown: string }) {
           const id = block.text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
           const content = parseInline(block.text);
 
-          if (block.level === 1) return <h1 key={index} id={id}>{content}</h1>;
+          // The page header already renders the one <h1>; a "# Title" line in the
+          // markdown would make a second, so level 1 is demoted to <h2>.
+          if (block.level === 1) return <h2 key={index} id={id}>{content}</h2>;
           if (block.level === 2) return <h2 key={index} id={id}>{content}</h2>;
           if (block.level === 3) return <h3 key={index} id={id}>{content}</h3>;
           return <h4 key={index} id={id}>{content}</h4>;

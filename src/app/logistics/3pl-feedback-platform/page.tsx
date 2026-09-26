@@ -20,7 +20,7 @@ const PAGE_PATH = "/logistics/3pl-feedback-platform/";
 const PAGE_URL = `https://feedsolve.com${PAGE_PATH}`;
 
 export const metadata = generatePageMetadata({
-  title: "3PL Feedback Platform — Track & Resolve Shipper and Consignee Complaints",
+  title: "3PL Feedback Platform for Shipper Complaints",
   description:
     "A 3PL feedback platform for shipper and consignee complaints: QR intake with no login, routing to the right site lead, and a public tracking code on every issue.",
   path: PAGE_PATH,

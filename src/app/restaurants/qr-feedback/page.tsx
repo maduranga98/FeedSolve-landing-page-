@@ -7,7 +7,10 @@ import {
   Globe,
   Palette,
 } from "lucide-react";
+import Link from "next/link";
 import VerticalPage from "@/components/VerticalPage";
+import VerticalProseSection from "@/components/VerticalProseSection";
+import { clusterAlternates } from "@/lib/seo/hreflang";
 
 export const metadata: Metadata = {
   title: "QR Code Feedback for Restaurants in 30 Seconds",
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://feedsolve.com/restaurants/qr-feedback/",
     type: "website",
   },
-  alternates: { canonical: "https://feedsolve.com/restaurants/qr-feedback/" },
+  alternates: clusterAlternates("restaurants", "/restaurants/qr-feedback/"),
 };
 
 const jsonLd = {
@@ -190,6 +193,49 @@ export default function RestaurantsQrFeedback() {
             a: "When a guest has a private, structured channel to submit a complaint and receives a documented response, they feel heard without going public. Research consistently shows that customers whose complaints are resolved stay more loyal than those who never complained. The QR feedback board is the first step in that recovery process.",
           },
         ]}
+        extraSections={
+          <VerticalProseSection
+            label="Restaurant guides"
+            heading="Running restaurant feedback well: the guides"
+            background="var(--bg)"
+            paragraphs={[
+              <>
+                Start with the service-night playbook on{" "}
+                <Link href="/blog/how-to-handle-restaurant-complaints/">how to handle restaurant complaints</Link>
+                : what to say at the table, who owns the fix, and how to log it so the same problem does
+                not come back next week. Then decide what to ask. Our list of{" "}
+                <Link href="/blog/restaurant-customer-satisfaction-survey-questions/">
+                  restaurant customer satisfaction survey questions
+                </Link>{" "}
+                keeps a table-side form short enough that guests finish it.
+              </>,
+              <>
+                For the setup itself, the{" "}
+                <Link href="/blog/restaurant-feedback-qr-code/">restaurant feedback QR code</Link> guide covers
+                placement and wording, and{" "}
+                <Link href="/blog/digital-comment-card-restaurants/">digital comment cards</Link> explains
+                what replaced the card under the receipt. If your aim is protecting your rating, read{" "}
+                <Link href="/blog/stop-bad-restaurant-reviews-before-posted/">
+                  how to stop bad reviews before they are posted
+                </Link>
+                .
+              </>,
+              <>
+                Your size changes the setup. An owner-operator should read the{" "}
+                <Link href="/blog/small-restaurant-feedback-system/">small restaurant feedback system</Link>{" "}
+                guide; multi-site groups need{" "}
+                <Link href="/blog/restaurant-chain-feedback-management/">restaurant chain feedback management</Link>
+                , and franchisors the{" "}
+                <Link href="/blog/franchise-restaurant-feedback-system/">franchise restaurant feedback system</Link>{" "}
+                guide. Running a restaurant in Brazil? Read the{" "}
+                <Link href="/br/restaurantes/" hrefLang="pt-BR" lang="pt-BR">
+                  versão em português
+                </Link>
+                .
+              </>,
+            ]}
+          />
+        }
         ctaHeading="Turn table complaints into returning customers."
         ctaSub="Your first feedback board takes 2 minutes to set up. Free to start."
         relatedLinks={[

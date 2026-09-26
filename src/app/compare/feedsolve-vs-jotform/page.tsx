@@ -14,11 +14,11 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FeedSolve vs JotForm: QR Feedback That Resolves, Not Just Collects",
+  title: "FeedSolve vs JotForm: QR Feedback Compared",
   description:
     "JotForm builds the form. FeedSolve resolves the feedback. Compare QR code feedback, submitter tracking codes, resolution workflow, and pricing for SMBs.",
   openGraph: {
-    title: "FeedSolve vs JotForm: QR Feedback That Resolves, Not Just Collects",
+    title: "FeedSolve vs JotForm: QR Feedback Compared",
     description:
       "JotForm builds the form. FeedSolve resolves the feedback. See which is right for QR code feedback and complaint resolution.",
     url: "https://feedsolve.com/compare/feedsolve-vs-jotform/",

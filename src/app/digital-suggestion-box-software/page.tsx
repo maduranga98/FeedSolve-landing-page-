@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clusterAlternates } from "@/lib/seo/hreflang";
 import Link from "next/link";
 import { Lightbulb, EyeOff, QrCode, ListChecks, Languages, ShieldCheck } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     "suggestion box app",
     "free suggestion box online",
   ],
-  alternates: { canonical: URL },
+  alternates: clusterAlternates("suggestionBox", "/digital-suggestion-box-software/"),
   openGraph: {
     title: "Suggestion Box Software: Anonymous Digital Suggestion Box | FeedSolve",
     description:

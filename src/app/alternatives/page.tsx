@@ -8,11 +8,11 @@ import { ArrowRight, ChevronRight, Search } from "lucide-react";
 const SITE_URL = "https://feedsolve.com";
 
 export const metadata: Metadata = {
-  title: "Alternatives Hub — FeedSolve vs Feedback & Complaint Tools",
+  title: "Feedback Software Alternatives Compared",
   description:
-    "Looking for an alternative to Medallia, Qualtrics, Zonka, Typeform, Canny, Zendesk, or other feedback tools? Honest guides on where FeedSolve wins - and where each tool still fits.",
+    "Alternatives to Medallia, Qualtrics, Zonka, Typeform, Zendesk and more: honest guides on where FeedSolve wins and where each tool still fits.",
   openGraph: {
-    title: "Alternatives Hub — FeedSolve vs Feedback & Complaint Tools",
+    title: "Feedback Software Alternatives Compared",
     description:
       "Honest alternative guides for enterprise CX suites, survey platforms, form builders, feature boards, helpdesks, QR tools, and review platforms.",
     url: `${SITE_URL}/alternatives/`,
