@@ -2,7 +2,7 @@
 // Target keyword: "complaint management software UK"
 // Market: United Kingdom
 
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -23,20 +23,13 @@ import UKComplaintFAQ from "@/components/UKComplaintFAQ";
 import { landingBreadcrumb } from "@/lib/seo";
 import { ukComplaintFaqs } from "@/data/ukComplaintFaqs";
 
-export const metadata: Metadata = {
-  title: "Complaint Management Software for UK Small Business",
+export const metadata = generatePageMetadata({
+  title: "Complaint Management Software for UK SMBs",
   description:
-    "FeedSolve is complaint management software for UK small businesses. Track every customer complaint with no login needed. Free to start.",
-  openGraph: {
-    title: "Complaint Management Software for UK Small Business | FeedSolve",
-    description:
-      "QR-code complaint intake, Kanban resolution workflow, tracking codes, and resolution rate dashboard. Built for UK SMBs. Free plan available.",
-    url: "https://feedsolve.com/uk/complaint-management-software/",
-    type: "website",
-  },
+    "FeedSolve is complaint management software for UK small businesses. Track every customer complaint with no login needed. Free 7-day trial.",
+  path: "/uk/complaint-management-software/",
   alternates: clusterAlternates("complaintManagement", "/uk/complaint-management-software/"),
-  robots: { index: true, follow: true },
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -119,7 +112,7 @@ const comparisonRows = [
     note: "Freshdesk requires configuration",
   },
   {
-    feature: "Free plan available",
+    feature: "Free trial or free plan",
     feedsolve: true,
     freshdesk: true,
     note: "Freshdesk free: 10 agents, limited features",
@@ -181,13 +174,13 @@ export default function UKComplaintManagementPage() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
@@ -268,7 +261,7 @@ export default function UKComplaintManagementPage() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -290,7 +283,7 @@ export default function UKComplaintManagementPage() {
               required. Your team manages every complaint through a Kanban
               dashboard, assigns to the right person, and resolves with a
               documented audit trail. Every submitter gets a tracking code. You
-              get a resolution rate metric. Pricing starts free, with paid plans
+              get a resolution rate metric. Pricing starts with a free 7-day trial, with paid plans
               from approximately £15/month — no per-agent fees.
             </p>
           </div>
@@ -316,7 +309,7 @@ export default function UKComplaintManagementPage() {
       </section>
 
       {/* STATS BAR */}
-      <section style={{ background: "var(--teal)", padding: "36px 32px" }}>
+      <section style={{ background: "var(--teal-btn)", padding: "36px 32px" }}>
         <div className="container">
           <div
             style={{
@@ -358,7 +351,7 @@ export default function UKComplaintManagementPage() {
                 <div
                   style={{
                     fontSize: 12,
-                    color: "rgba(255,255,255,0.7)",
+                    color: "white",
                     marginTop: 6,
                     lineHeight: 1.4,
                   }}
@@ -416,7 +409,7 @@ export default function UKComplaintManagementPage() {
               },
               {
                 title: "Retention Controls",
-                body: "Growth and Pro plans include configurable data retention settings — allowing your team to define how long submission data is stored, in line with your UK GDPR retention policy.",
+                body: "Growth and Business plans include configurable data retention settings — allowing your team to define how long submission data is stored, in line with your UK GDPR retention policy.",
               },
               {
                 title: "ICO-Aligned Access",
@@ -446,7 +439,7 @@ export default function UKComplaintManagementPage() {
                 >
                   <Check
                     size={16}
-                    style={{ color: "var(--teal)", flexShrink: 0 }}
+                    style={{ color: "var(--teal-text)", flexShrink: 0 }}
                   />
                   <h3 style={{ fontSize: 16, color: "var(--navy)", margin: 0 }}>
                     {f.title}
@@ -567,7 +560,7 @@ export default function UKComplaintManagementPage() {
                       alignItems: "center",
                       justifyContent: "center",
                       marginBottom: 18,
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                     }}
                   >
                     {step.icon}
@@ -576,7 +569,7 @@ export default function UKComplaintManagementPage() {
                     style={{
                       fontSize: 11,
                       fontWeight: 800,
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       marginBottom: 10,
@@ -591,7 +584,7 @@ export default function UKComplaintManagementPage() {
                   </h3>
                   <p
                     style={{
-                      color: "rgba(255,255,255,0.55)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 14,
                       lineHeight: 1.65,
                       margin: 0,
@@ -700,7 +693,7 @@ export default function UKComplaintManagementPage() {
                   href={u.link}
                   style={{
                     fontSize: 14,
-                    color: "var(--teal)",
+                    color: "var(--teal-text)",
                     fontWeight: 600,
                     textDecoration: "none",
                   }}
@@ -748,7 +741,7 @@ export default function UKComplaintManagementPage() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -763,7 +756,7 @@ export default function UKComplaintManagementPage() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -777,7 +770,7 @@ export default function UKComplaintManagementPage() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -812,7 +805,7 @@ export default function UKComplaintManagementPage() {
                         <div
                           style={{
                             fontSize: 11,
-                            color: "var(--text-light)",
+                            color: "var(--slate-text)",
                             marginTop: 3,
                           }}
                         >
@@ -827,7 +820,7 @@ export default function UKComplaintManagementPage() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -856,7 +849,7 @@ export default function UKComplaintManagementPage() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -887,7 +880,7 @@ export default function UKComplaintManagementPage() {
             style={{
               textAlign: "center",
               fontSize: 13,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               marginTop: 20,
             }}
           >
@@ -999,7 +992,7 @@ export default function UKComplaintManagementPage() {
                       top: -12,
                       left: "50%",
                       transform: "translateX(-50%)",
-                      background: "var(--teal)",
+                      background: "var(--teal-btn)",
                       color: "white",
                       fontSize: 10,
                       fontWeight: 800,
@@ -1016,8 +1009,8 @@ export default function UKComplaintManagementPage() {
                     fontSize: 12,
                     fontWeight: 700,
                     color: plan.popular
-                      ? "rgba(255,255,255,0.5)"
-                      : "var(--text-light)",
+                      ? "var(--muted-on-navy)"
+                      : "var(--slate-text)",
                     textTransform: "uppercase",
                     letterSpacing: "0.08em",
                     marginBottom: 8,
@@ -1041,8 +1034,8 @@ export default function UKComplaintManagementPage() {
                   style={{
                     fontSize: 12,
                     color: plan.popular
-                      ? "rgba(255,255,255,0.45)"
-                      : "var(--text-light)",
+                      ? "var(--muted-on-navy)"
+                      : "var(--slate-text)",
                     marginBottom: 20,
                     marginTop: 4,
                   }}
@@ -1104,7 +1097,7 @@ export default function UKComplaintManagementPage() {
             style={{
               textAlign: "center",
               fontSize: 12,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               marginTop: 16,
             }}
           >
@@ -1173,7 +1166,7 @@ export default function UKComplaintManagementPage() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -1193,7 +1186,7 @@ export default function UKComplaintManagementPage() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -1257,7 +1250,7 @@ export default function UKComplaintManagementPage() {
                 >
                   {r.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {r.sub}
                 </div>
               </Link>

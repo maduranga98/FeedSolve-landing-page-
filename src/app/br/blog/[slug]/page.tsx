@@ -18,13 +18,15 @@ const findPost = async (params: Promise<{ slug: string }>) => {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const post = await findPost(params);
   if (!post) return {};
-  const meta = brMetadata({
+  return brMetadata({
     title: post.title,
     description: post.description,
     path: brPostPath(post),
     cluster: post.cluster,
+    type: "article",
+    publishedTime: post.datePublished,
+    modifiedTime: post.dateModified,
   });
-  return { ...meta, openGraph: { ...meta.openGraph, type: "article" } };
 }
 
 export default async function BrBlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

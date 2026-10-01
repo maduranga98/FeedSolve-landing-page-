@@ -43,7 +43,7 @@ export const FEEDSOLVE_HIGHLIGHTS = [
   "Kanban resolution workflow with assignment",
   "Boards per stakeholder type (customers, suppliers, staff)",
   "Resolution rate as the primary metric",
-  "Flat pricing: free plan, then $19–79/month",
+  "Flat pricing: 7-day free trial, then $19–79/month",
   "Self-serve setup in minutes, no sales call",
 ];
 
@@ -56,7 +56,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Enterprise CX platform",
     roundupHref: "/blog/best-medallia-alternatives/",
     roundupLabel: "See all 6 Medallia alternatives compared",
-    metaTitle: "Best Medallia Alternative for Small Business (2026)",
+    metaTitle: "Best Medallia Alternative for SMBs (2026)",
     metaDescription:
       "A Medallia alternative without quote-only pricing or multi-month rollouts. FeedSolve gives SMBs QR-first complaint resolution from $19/month, self-serve.",
     heroSubtitle:
@@ -117,11 +117,11 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best Medallia alternative for small businesses?",
-        a: "FeedSolve is purpose-built for the SMB segment Medallia does not serve. It replaces the part of Medallia most small businesses actually need - collecting feedback and resolving it - with QR-based zero-login submission, a Kanban resolution workflow, and a public tracking code for every submitter, from $19/month with a free plan.",
+        a: "FeedSolve is purpose-built for the SMB segment Medallia does not serve. It replaces the part of Medallia most small businesses actually need - collecting feedback and resolving it - with QR-based zero-login submission, a Kanban resolution workflow, and a public tracking code for every submitter, from $19/month with a 7-day free trial.",
       },
       {
         q: "How much does Medallia cost compared to FeedSolve?",
-        a: "Medallia does not publish pricing; contracts are typically negotiated annually and commonly run into five or six figures for enterprise deployments. FeedSolve publishes flat pricing: a free plan, then $19 to $79 per month depending on tier, with no per-response scaling and no sales call required.",
+        a: "Medallia does not publish pricing; contracts are typically negotiated annually and commonly run into five or six figures for enterprise deployments. FeedSolve publishes flat pricing: a 7-day free trial, then $19 to $79 per month depending on tier, with no per-response scaling and no sales call required.",
       },
       {
         q: "Does FeedSolve have the same analytics as Medallia?",
@@ -140,7 +140,7 @@ export const alternatives: Alternative[] = [
     roundupHref: "/blog/best-qualtrics-alternatives/",
     roundupLabel: "See all 7 Qualtrics alternatives compared",
     categoryLabel: "Enterprise CX platform",
-    metaTitle: "Best Qualtrics Alternative for Small Business (2026)",
+    metaTitle: "Best Qualtrics Alternative for SMBs (2026)",
     metaDescription:
       "Qualtrics is demo-gated and quote-priced. FeedSolve is the self-serve Qualtrics alternative for SMB complaint resolution: QR intake to resolved, from $19/month.",
     heroSubtitle:
@@ -205,7 +205,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "Is FeedSolve cheaper than Qualtrics?",
-        a: "Dramatically. Qualtrics is quote-priced with enterprise contracts. FeedSolve has a free plan and paid tiers between $19 and $79 per month, flat, regardless of how many people submit feedback.",
+        a: "Dramatically. Qualtrics is quote-priced with enterprise contracts. FeedSolve has a 7-day free trial and paid tiers between $19 and $79 per month, flat, regardless of how many people submit feedback.",
       },
       {
         q: "Does FeedSolve do NPS surveys like Qualtrics?",
@@ -222,7 +222,7 @@ export const alternatives: Alternative[] = [
     name: "InMoment",
     category: "enterprise-cx",
     categoryLabel: "Enterprise CX platform",
-    metaTitle: "Best InMoment Alternative for Small Business (2026)",
+    metaTitle: "Best InMoment Alternative for SMBs (2026)",
     metaDescription:
       "An InMoment alternative for SMBs: QR-first feedback intake with a real resolution workflow, self-serve from $19/month. No quote-only enterprise contract.",
     heroSubtitle:
@@ -244,7 +244,7 @@ export const alternatives: Alternative[] = [
       },
       {
         title: "Costs scale beyond SMB reality",
-        body: "Enterprise CX contracts are sized against enterprise ROI. FeedSolve is priced against SMB reality: free to start, $19–79/month flat, regardless of submission volume.",
+        body: "Enterprise CX contracts are sized against enterprise ROI. FeedSolve is priced against SMB reality: a 7-day free trial, then $19–79/month flat, regardless of submission volume.",
       },
     ],
     competitorStrengths: [
@@ -295,7 +295,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "What does FeedSolve cost?",
-        a: "There is a free plan to start, and paid tiers run from $19 to $79 per month, flat, based on features rather than response volume. No sales call, no annual lock-in required.",
+        a: "There is a 7-day free trial to start, and paid tiers run from $19 to $79 per month, flat, based on features rather than response volume. No sales call, no annual lock-in required.",
       },
     ],
   },
@@ -328,7 +328,7 @@ export const alternatives: Alternative[] = [
       },
       {
         title: "$49/month entry with response-based scaling",
-        body: "Zonka starts at $49/month and scales with response volume. FeedSolve has a free plan and starts at $19/month flat - more feedback does not mean a bigger bill.",
+        body: "Zonka starts at $49/month and scales with response volume. FeedSolve has a 7-day free trial and starts at $19/month flat - more feedback does not mean a bigger bill.",
       },
     ],
     competitorStrengths: [
@@ -366,7 +366,7 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best Zonka Feedback alternative?",
-        a: "For SMB complaint resolution, FeedSolve. It matches Zonka's zero-login QR intake and adds what Zonka lacks: a public tracking code per submission, a Kanban resolution workflow as the core product rather than an enterprise add-on, and resolution rate as the primary dashboard metric - from $19/month with a free plan.",
+        a: "For SMB complaint resolution, FeedSolve. It matches Zonka's zero-login QR intake and adds what Zonka lacks: a public tracking code per submission, a Kanban resolution workflow as the core product rather than an enterprise add-on, and resolution rate as the primary dashboard metric - from $19/month with a 7-day free trial.",
       },
       {
         q: "Doesn't Zonka already have case management?",
@@ -374,7 +374,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "Is FeedSolve cheaper than Zonka Feedback?",
-        a: "Yes. Zonka starts at $49/month with response-based scaling. FeedSolve has a free plan and flat tiers from $19 to $79 per month regardless of submission volume.",
+        a: "Yes. Zonka starts at $49/month with response-based scaling. FeedSolve has a 7-day free trial and flat tiers from $19 to $79 per month regardless of submission volume.",
       },
       {
         q: "When is Zonka the better choice?",
@@ -388,7 +388,7 @@ export const alternatives: Alternative[] = [
     name: "SurveyMonkey",
     category: "omnichannel-survey",
     categoryLabel: "Survey platform",
-    metaTitle: "SurveyMonkey Alternative for Complaint Management",
+    metaTitle: "SurveyMonkey Alternative for Complaints",
     metaDescription:
       "SurveyMonkey collects responses; nobody owns what happens next. FeedSolve turns feedback into assigned, tracked, resolved work. QR-first, from $19/month.",
     heroSubtitle:
@@ -461,7 +461,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "How does FeedSolve pricing compare to SurveyMonkey?",
-        a: "FeedSolve has a free plan and flat tiers from $19 to $79 per month, with no per-user seats or response limits. SurveyMonkey's useful tiers start around $39/month per user with response caps on lower plans.",
+        a: "FeedSolve has a 7-day free trial and flat tiers from $19 to $79 per month, with no per-user seats or response limits. SurveyMonkey's useful tiers start around $39/month per user with response caps on lower plans.",
       },
     ],
   },
@@ -492,7 +492,7 @@ export const alternatives: Alternative[] = [
       },
       {
         title: "Feature-gated tiers add up",
-        body: "SurveySparrow's headline entry price looks low, but case-management-like features and higher response volumes push you up tiers quickly. FeedSolve's resolution workflow is the core product on every plan, including free.",
+        body: "SurveySparrow's headline entry price looks low, but case-management-like features and higher response volumes push you up tiers quickly. FeedSolve's resolution workflow is the core product on every plan, including during the free trial.",
       },
     ],
     competitorStrengths: [
@@ -531,7 +531,7 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best SurveySparrow alternative for complaint handling?",
-        a: "FeedSolve, because complaint handling is its entire product rather than a feature. Zero-login QR and link intake, boards per stakeholder type, Kanban assignment and status, public tracking codes, and resolution rate as the headline metric - from $19/month with a free plan.",
+        a: "FeedSolve, because complaint handling is its entire product rather than a feature. Zero-login QR and link intake, boards per stakeholder type, Kanban assignment and status, public tracking codes, and resolution rate as the headline metric - from $19/month with a 7-day free trial.",
       },
       {
         q: "Does SurveySparrow have case management?",
@@ -543,7 +543,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "How is FeedSolve priced?",
-        a: "Free plan to start, then flat tiers from $19 to $79 per month based on features. Pricing does not scale with responses or seats, so heavy feedback months cost the same as quiet ones.",
+        a: "A 7-day free trial to start, then flat tiers from $19 to $79 per month based on features. Pricing does not scale with responses or seats, so heavy feedback months cost the same as quiet ones.",
       },
     ],
   },
@@ -552,7 +552,7 @@ export const alternatives: Alternative[] = [
     name: "Alchemer",
     category: "omnichannel-survey",
     categoryLabel: "Survey & feedback platform",
-    metaTitle: "Best Alchemer Alternative for Small Business (2026)",
+    metaTitle: "Best Alchemer Alternative for SMBs (2026)",
     metaDescription:
       "Alchemer is a survey platform priced per user. FeedSolve is the SMB Alchemer alternative for closing the loop on complaints: QR-first, flat-priced, self-serve.",
     heroSubtitle:
@@ -617,7 +617,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "Is FeedSolve cheaper than Alchemer?",
-        a: "For teams, substantially. Alchemer runs roughly $55 per user per month billed annually. FeedSolve is flat per plan - free to start, $19 to $79 per month for the whole team - with no per-seat charges.",
+        a: "For teams, substantially. Alchemer runs roughly $55 per user per month billed annually. FeedSolve is flat per plan - a 7-day free trial, then $19 to $79 per month for the whole team - with no per-seat charges.",
       },
       {
         q: "Can FeedSolve replace Alchemer surveys?",
@@ -625,7 +625,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "How quickly can I get started with FeedSolve?",
-        a: "Minutes. Sign up free, create a board for each stakeholder type, and share the link or print the QR code. Submissions arrive with tracking codes and flow into the Kanban workflow immediately.",
+        a: "Minutes. Start the free trial, create a board for each stakeholder type, and share the link or print the QR code. Submissions arrive with tracking codes and flow into the Kanban workflow immediately.",
       },
     ],
   },
@@ -701,7 +701,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "Is FeedSolve cheaper than Typeform?",
-        a: "Usually. Typeform starts around $25/month with tight response caps that force upgrades as volume grows. FeedSolve has a free plan and flat tiers from $19 to $79 per month with no response counting.",
+        a: "Usually. Typeform starts around $25/month with tight response caps that force upgrades as volume grows. FeedSolve has a 7-day free trial and flat tiers from $19 to $79 per month with no response counting.",
       },
       {
         q: "Can I keep Typeform for lead-gen and use FeedSolve for feedback?",
@@ -721,7 +721,7 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Form builder",
     metaTitle: "Google Forms Alternative for Complaint Tracking",
     metaDescription:
-      "Google Forms plus a spreadsheet is where complaints go to be forgotten. FeedSolve adds assignment, status, tracking codes, and resolution rate - free to start.",
+      "Google Forms plus a spreadsheet is where complaints get forgotten. FeedSolve adds assignment, status, tracking codes and resolution rate. Free 7-day trial.",
     heroSubtitle:
       "Google Forms is free and instant - and it ends in a spreadsheet. Rows don't have owners, statuses, or a way to tell the customer what happened. FeedSolve keeps the zero-cost, zero-friction start and adds the entire resolution loop.",
     quickAnswer: {
@@ -779,7 +779,7 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best Google Forms alternative for complaint management?",
-        a: "FeedSolve - and it is free to start, so the usual reason for choosing Google Forms doesn't apply. You get zero-login QR/link intake like a form, plus what Forms can never do: assignment, Kanban status, public tracking codes, and a resolution rate metric.",
+        a: "FeedSolve - and you can try it free for 7 days, so the usual reason for choosing Google Forms doesn't apply. You get zero-login QR/link intake like a form, plus what Forms can never do: assignment, Kanban status, public tracking codes, and a resolution rate metric.",
       },
       {
         q: "Can Google Forms track complaint status?",
@@ -787,7 +787,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "Is FeedSolve free like Google Forms?",
-        a: "FeedSolve has a genuinely usable free plan for getting started. Paid tiers ($19–79/month flat) add capacity and features like branded QR codes and public replies. For a working resolution loop, the free plan already beats a form-plus-spreadsheet setup.",
+        a: "FeedSolve has a free 7-day trial with full access for getting started. Paid tiers ($19–79/month flat) add capacity and features like branded QR codes and public replies. For a working resolution loop, the trial already shows how much a resolution loop beats a form-plus-spreadsheet setup.",
       },
       {
         q: "How hard is it to switch from Google Forms to FeedSolve?",
@@ -862,7 +862,7 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best Jotform alternative for complaint handling?",
-        a: "FeedSolve. It matches Jotform's QR-first, zero-login intake and adds the resolution layer Jotform lacks entirely: per-item assignment, Kanban status, public tracking codes, and resolution rate reporting - from $19/month with a free plan.",
+        a: "FeedSolve. It matches Jotform's QR-first, zero-login intake and adds the resolution layer Jotform lacks entirely: per-item assignment, Kanban status, public tracking codes, and resolution rate reporting - from $19/month with a 7-day free trial.",
       },
       {
         q: "Doesn't Jotform have workflows?",
@@ -874,7 +874,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "How does FeedSolve pricing compare to Jotform?",
-        a: "Jotform's free tier is limited and paid plans (~$34+/month) cap forms and submissions. FeedSolve is flat: free plan, then $19 to $79 per month with no submission counting.",
+        a: "Jotform's free tier is limited and paid plans (~$34+/month) cap forms and submissions. FeedSolve is flat: a 7-day free trial, then $19 to $79 per month with no submission counting.",
       },
     ],
     compareHref: "/compare/feedsolve-vs-jotform/",
@@ -966,7 +966,7 @@ export const alternatives: Alternative[] = [
     name: "Upvoty",
     category: "feature-boards",
     categoryLabel: "Feature request board",
-    metaTitle: "Best Upvoty Alternative for External Feedback (2026)",
+    metaTitle: "Best Upvoty Alternative for Feedback (2026)",
     metaDescription:
       "Upvoty is a voting board for logged-in users. FeedSolve handles feedback from everyone else: zero-login QR intake, a real resolution workflow and flat pricing.",
     heroSubtitle:
@@ -1024,7 +1024,7 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best Upvoty alternative for complaint management?",
-        a: "FeedSolve - because complaints are not feature requests. FeedSolve gives every submission zero-login intake, a tracking code, an owner, and a Kanban status, with resolution rate as the metric that matters. From $19/month flat, with a free plan.",
+        a: "FeedSolve - because complaints are not feature requests. FeedSolve gives every submission zero-login intake, a tracking code, an owner, and a Kanban status, with resolution rate as the metric that matters. From $19/month flat, with a 7-day free trial.",
       },
       {
         q: "Can Upvoty collect feedback from people without accounts?",
@@ -1036,7 +1036,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "What does FeedSolve cost compared to Upvoty?",
-        a: "Both start affordable, but the models differ: Upvoty scales with tracked users, while FeedSolve's tiers ($19–79/month, free plan available) are flat regardless of submitter volume.",
+        a: "Both start affordable, but the models differ: Upvoty scales with tracked users, while FeedSolve's tiers ($19–79/month, 7-day free trial) are flat regardless of submitter volume.",
       },
     ],
   },
@@ -1195,8 +1195,8 @@ export const alternatives: Alternative[] = [
         a: "FeedSolve, when complaints originate outside support channels. It captures feedback at the point of experience via QR or link with no login, assigns each item on a Kanban board, and gives submitters a public tracking code - flat-priced from $19/month instead of per agent.",
       },
       {
-        q: "Freshdesk has a free plan - why pay for FeedSolve?",
-        a: "FeedSolve also has a free plan. The difference is fit: Freshdesk free gives you an email ticket queue; FeedSolve free gives you QR-first zero-login intake with tracking codes and a resolution board. Choose by where your feedback actually comes from.",
+        q: "Freshdesk has a free plan - why try FeedSolve?",
+        a: "FeedSolve has a free 7-day trial. The difference is fit: Freshdesk free gives you an email ticket queue; the FeedSolve trial gives you QR-first zero-login intake with tracking codes and a resolution board. Choose by where your feedback actually comes from.",
       },
       {
         q: "Can I use Freshdesk and FeedSolve together?",
@@ -1204,7 +1204,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "Does FeedSolve charge per agent like Freshdesk?",
-        a: "No. FeedSolve plans are flat ($19–79/month, free plan available) - your whole team can triage, own, and resolve submissions without per-seat charges.",
+        a: "No. FeedSolve plans are flat ($19–79/month, 7-day free trial) - your whole team can triage, own, and resolve submissions without per-seat charges.",
       },
     ],
   },
@@ -1213,7 +1213,7 @@ export const alternatives: Alternative[] = [
     name: "HappyFox",
     category: "ticketing",
     categoryLabel: "Helpdesk / ticketing",
-    metaTitle: "Best HappyFox Alternative for SMB Complaints (2026)",
+    metaTitle: "Best HappyFox Alternative for SMBs (2026)",
     metaDescription:
       "HappyFox is agent-based ticketing with seat minimums. FeedSolve is zero-login, QR-first complaint resolution from $19/month: no agent seats, no portal login.",
     heroSubtitle:
@@ -1273,7 +1273,7 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best HappyFox alternative for small businesses?",
-        a: "FeedSolve, if the job is external feedback and complaints rather than internal support tickets. It removes both HappyFox frictions at once: intake is zero-login via QR or link, and pricing is flat ($19–79/month with a free plan) instead of per-agent with minimums.",
+        a: "FeedSolve, if the job is external feedback and complaints rather than internal support tickets. It removes both HappyFox frictions at once: intake is zero-login via QR or link, and pricing is flat ($19–79/month with a 7-day free trial) instead of per-agent with minimums.",
       },
       {
         q: "How is FeedSolve different from a helpdesk like HappyFox?",
@@ -1285,7 +1285,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "What does FeedSolve cost?",
-        a: "Free plan to start; paid tiers from $19 to $79 per month, flat for the whole team. No agent seats, no minimums.",
+        a: "A 7-day free trial to start; paid tiers from $19 to $79 per month, flat for the whole team. No agent seats, no minimums.",
       },
     ],
   },
@@ -1359,7 +1359,7 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best Suggestion Ox alternative?",
-        a: "FeedSolve, if you want the suggestions you collect to be resolved rather than just read. It matches the anonymous, no-login submission that makes a suggestion box work, then adds assignment, a Kanban status workflow, a #FSV-XXXX tracking code the anonymous submitter can check, and a resolution rate across the whole programme. It is free to start and $19-79/month flat after that.",
+        a: "FeedSolve, if you want the suggestions you collect to be resolved rather than just read. It matches the anonymous, no-login submission that makes a suggestion box work, then adds assignment, a Kanban status workflow, a #FSV-XXXX tracking code the anonymous submitter can check, and a resolution rate across the whole programme. It starts with a 7-day free trial and is $19-79/month flat after that.",
       },
       {
         q: "Does FeedSolve support anonymous suggestions like Suggestion Ox?",
@@ -1374,8 +1374,8 @@ export const alternatives: Alternative[] = [
         a: "Yes, and that is the usual setup. Create one board per stakeholder type - staff, customers, suppliers - each with its own QR code or link, so a break-room suggestion and a customer complaint never land in the same queue while both roll up into one resolution rate.",
       },
       {
-        q: "Is there a free plan?",
-        a: "Yes. FeedSolve is free to start with no credit card, which is enough to create your first suggestion board, print a QR code, and collect anonymous submissions. Paid tiers run $19 to $79 per month flat for the whole team.",
+        q: "Is there a free trial?",
+        a: "Yes. FeedSolve has a free 7-day trial with full access, which is enough to create your first suggestion board, print a QR code, and collect anonymous submissions. Paid tiers run $19 to $79 per month flat for the whole team.",
       },
     ],
   },
@@ -1447,11 +1447,11 @@ export const alternatives: Alternative[] = [
     faqs: [
       {
         q: "What is the best Uniqode alternative for QR feedback collection?",
-        a: "FeedSolve, if you want the QR code to lead somewhere. It matches the zero-login QR intake (including branded QR codes with your logo on Growth and Pro plans) and adds what Uniqode lacks entirely: assignment, Kanban resolution workflow, public tracking codes, and resolution rate reporting.",
+        a: "FeedSolve, if you want the QR code to lead somewhere. It matches the zero-login QR intake (including branded QR codes with your logo on Growth and Business plans) and adds what Uniqode lacks entirely: assignment, Kanban resolution workflow, public tracking codes, and resolution rate reporting.",
       },
       {
         q: "Does FeedSolve support branded QR codes like Uniqode?",
-        a: "Yes - FeedSolve generates QR codes per board, with logo-branded QR codes available on Growth and Pro plans. Each stakeholder board gets its own code, so supplier feedback and customer feedback stay separated at intake.",
+        a: "Yes - FeedSolve generates QR codes per board, with logo-branded QR codes available on Growth and Business plans. Each stakeholder board gets its own code, so supplier feedback and customer feedback stay separated at intake.",
       },
       {
         q: "When is Uniqode the better choice?",
@@ -1541,7 +1541,7 @@ export const alternatives: Alternative[] = [
       },
       {
         q: "What does FeedSolve cost compared to Trustpilot?",
-        a: "Trustpilot's paid tiers typically start around $250/month. FeedSolve runs $19–79/month flat with a free plan - a fraction of the cost, for a different and complementary job.",
+        a: "Trustpilot's paid tiers typically start around $250/month. FeedSolve runs $19–79/month flat with a 7-day free trial - a fraction of the cost, for a different and complementary job.",
       },
     ],
   },

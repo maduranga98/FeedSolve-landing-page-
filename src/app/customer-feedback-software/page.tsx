@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import {
   MessageSquare,
   QrCode,
@@ -11,27 +11,12 @@ import VerticalPage from "@/components/VerticalPage";
 
 const URL = "https://feedsolve.com/customer-feedback-software/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Customer Feedback Software That Resolves",
   description:
-    "Customer feedback software that goes beyond surveys: collect feedback via QR or link with no login, then assign, track, and resolve every submission. Free to start.",
-  keywords: [
-    "customer feedback software",
-    "feedback management system",
-    "customer feedback platform",
-    "feedback management software",
-    "customer feedback system",
-    "feedback solutions",
-  ],
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Customer Feedback Software | FeedSolve",
-    description:
-      "Collect feedback via QR or link with no login, then assign, track, and resolve every submission from one dashboard. Free to start.",
-    url: URL,
-    type: "website",
-  },
-};
+    "Customer feedback software that goes beyond surveys: collect via QR or link with no login, then assign, track and resolve every submission. Free 7-day trial.",
+  path: "/customer-feedback-software/",
+});
 
 const faqs = [
   {
@@ -44,7 +29,7 @@ const faqs = [
   },
   {
     q: "Is there free customer feedback software?",
-    a: "Yes. FeedSolve is free to start with no credit card required. Create a feedback board, generate a QR code or link, and start collecting and resolving feedback in minutes.",
+    a: "Yes. FeedSolve offers a free 7-day trial with full access. Create a feedback board, generate a QR code or link, and start collecting and resolving feedback in minutes.",
   },
   {
     q: "Do customers need an account to leave feedback?",
@@ -86,7 +71,7 @@ export default function CustomerFeedbackSoftware() {
         breadcrumbUrl={URL}
         h1="Customer Feedback Software That Resolves"
         subheading="Most feedback tools stop at collecting responses. FeedSolve helps you assign, track, and resolve every piece of feedback - so it turns into action."
-        quickAnswer="FeedSolve is a customer feedback platform built around what happens after submit. Customers give feedback by scanning a QR code or opening a link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it. A live resolution rate shows how much feedback you actually act on. It's a feedback management system, not just a survey tool. Free to start, no credit card."
+        quickAnswer="FeedSolve is a customer feedback platform built around what happens after submit. Customers give feedback by scanning a QR code or opening a link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it. A live resolution rate shows how much feedback you actually act on. It's a feedback management system, not just a survey tool. Free 7-day trial."
         stats={[
           { value: "0", label: "Logins needed to give feedback" },
           { value: "100%", label: "Of feedback tracked to resolution" },
@@ -168,7 +153,7 @@ export default function CustomerFeedbackSoftware() {
         ]}
         faqs={faqs}
         ctaHeading="Make customer feedback actually count"
-        ctaSub="Create a feedback board, generate a QR code, and start resolving in minutes. Free to start, no credit card."
+        ctaSub="Create a feedback board, generate a QR code, and start resolving in minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/complaint-management-software/",

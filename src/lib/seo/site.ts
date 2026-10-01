@@ -1,6 +1,20 @@
 /** Canonical origin for every absolute URL emitted in metadata and JSON-LD. */
 export const SITE_URL = "https://feedsolve.com";
 
+/**
+ * The one social-share image for every page (Open Graph + Twitter card).
+ * 1200x630, checked at build time by scripts/check-seo.mjs.
+ */
+export const OG_IMAGE_URL = `${SITE_URL}/og-image.png`;
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
+
+/**
+ * Organization logo for JSON-LD. Google requires at least 112x112 px; the
+ * 512x512 PNG satisfies that (the small nav logo does not, so never use it here).
+ */
+export const LOGO_URL = `${SITE_URL}/android-chrome-512x512.png`;
+
 /** G2 product profile. Also linked from the footer so the reference is two-way. */
 export const G2_PROFILE_URL = "https://www.g2.com/products/feedsolve/reviews";
 

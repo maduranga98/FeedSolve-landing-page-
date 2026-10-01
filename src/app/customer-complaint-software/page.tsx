@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import {
   MessageSquareWarning,
   QrCode,
@@ -11,27 +11,12 @@ import VerticalPage from "@/components/VerticalPage";
 
 const URL = "https://feedsolve.com/customer-complaint-software/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Customer Complaint Software: Track & Resolve",
   description:
     "Customer complaint software that turns scattered complaints into resolved issues: no-login QR or link intake, tracking codes, assignment and a dashboard.",
-  keywords: [
-    "customer complaint software",
-    "customer complaints software",
-    "customer complaint management software",
-    "customer complaints tracking system",
-    "complaint tracking software",
-    "guest complaints software",
-  ],
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Customer Complaint Software | FeedSolve",
-    description:
-      "Collect, assign, track, and resolve every customer complaint from one dashboard. No login to submit, tracking codes, resolution rate. Free to start.",
-    url: URL,
-    type: "website",
-  },
-};
+  path: "/customer-complaint-software/",
+});
 
 const faqs = [
   {
@@ -44,7 +29,7 @@ const faqs = [
   },
   {
     q: "Is there free customer complaint software?",
-    a: "Yes. FeedSolve is free to start with no credit card required. You can create a complaint board, generate a QR code or link, and begin collecting and resolving customer complaints in minutes.",
+    a: "Yes. FeedSolve offers a free 7-day trial with full access. You can create a complaint board, generate a QR code or link, and begin collecting and resolving customer complaints in minutes.",
   },
   {
     q: "Do customers need an account to complain?",
@@ -86,7 +71,7 @@ export default function CustomerComplaintSoftware() {
         breadcrumbUrl={URL}
         h1="Customer Complaint Software That Protects Your Reputation"
         subheading="Capture customer complaints before they become public reviews - then assign, track, and resolve every one from a single dashboard."
-        quickAnswer="FeedSolve is customer complaint software for small and mid-sized businesses. Customers submit a complaint by scanning a QR code or opening a link - no login, no app, in any language. Each complaint gets a unique tracking code, then your team assigns it, works it through a Kanban workflow, and resolves it with a public reply. A live resolution rate shows whether your process works. Catching complaints privately and closing the loop is the most reliable way to reduce negative reviews. Free to start, no credit card."
+        quickAnswer="FeedSolve is customer complaint software for small and mid-sized businesses. Customers submit a complaint by scanning a QR code or opening a link - no login, no app, in any language. Each complaint gets a unique tracking code, then your team assigns it, works it through a Kanban workflow, and resolves it with a public reply. A live resolution rate shows whether your process works. Catching complaints privately and closing the loop is the most reliable way to reduce negative reviews. Free 7-day trial."
         stats={[
           { value: "0", label: "Logins needed for a customer to complain" },
           { value: "100%", label: "Of complaints tracked to resolution" },
@@ -168,7 +153,7 @@ export default function CustomerComplaintSoftware() {
         ]}
         faqs={faqs}
         ctaHeading="Turn customer complaints into loyal customers"
-        ctaSub="Create a complaint board, generate a QR code, and start resolving in minutes. Free to start, no credit card."
+        ctaSub="Create a complaint board, generate a QR code, and start resolving in minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/complaint-management-software/",

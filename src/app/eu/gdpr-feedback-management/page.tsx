@@ -1,28 +1,18 @@
 // Target keyword: "GDPR compliant feedback management software"
 // Market: EU + UK
 
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import GDPRPageClient from "./GDPRPageClient";
 import { landingBreadcrumb } from "@/lib/seo";
 
 const URL = "https://feedsolve.com/eu/gdpr-feedback-management/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "GDPR-Compliant Feedback Management Software",
   description:
     "Feedback management and complaint tracking built around GDPR data minimisation: anonymous mode, optional contact fields and a secure audit trail.",
-  openGraph: {
-    title: "GDPR-Compliant Feedback Management Software | FeedSolve",
-    description:
-      "Collect and resolve customer complaints in a GDPR-aligned way. Zero-login QR submission, anonymous mode, and configurable data retention. Free plan available.",
-    url: "https://feedsolve.com/eu/gdpr-feedback-management/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/eu/gdpr-feedback-management/",
-  },
-  robots: { index: true, follow: true },
-};
+  path: "/eu/gdpr-feedback-management/",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

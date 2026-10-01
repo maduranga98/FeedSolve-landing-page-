@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+import { JsonLdScript as BreadcrumbScript } from "@/components/JsonLd";
+import { breadcrumbJsonLd as breadcrumbLd } from "@/lib/seo";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,21 +14,12 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "FeedSolve vs Google Forms: What Happens After Someone Submits?",
+export const metadata = generatePageMetadata({
+  title: "FeedSolve vs Google Forms: After Someone Submits",
   description:
     "Google Forms collects responses. FeedSolve resolves them. Compare tracking codes, Kanban workflows, resolution rate, and pricing for SMB complaint management.",
-  openGraph: {
-    title: "FeedSolve vs Google Forms: What Happens After Someone Submits?",
-    description:
-      "Google Forms collects responses. FeedSolve resolves them. See the full comparison for SMB complaint and feedback management.",
-    url: "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/compare/feedsolve-vs-google-forms/",
-  },
-};
+  path: "/compare/feedsolve-vs-google-forms/",
+});
 
 const comparisonRows = [
   {
@@ -75,7 +68,7 @@ const comparisonRows = [
     feature: "Public reply to submitter",
     feedsolve: true,
     competitor: false,
-    note: "Growth & Pro plans",
+    note: "Growth & Business plans",
   },
   {
     feature: "Resolution rate dashboard",
@@ -105,7 +98,7 @@ const comparisonRows = [
     feature: "Branded QR codes with logo",
     feedsolve: true,
     competitor: false,
-    note: "Growth & Pro plans",
+    note: "Growth & Business plans",
   },
   {
     feature: "Email notifications on new submission",
@@ -120,7 +113,7 @@ const comparisonRows = [
     note: "",
   },
   {
-    feature: "Free plan available",
+    feature: "Free trial or free plan",
     feedsolve: true,
     competitor: true,
     note: "",
@@ -140,7 +133,7 @@ const faqs = [
   },
   {
     q: "Is FeedSolve free like Google Forms?",
-    a: "FeedSolve has a free plan that includes 2 feedback boards and unlimited submissions. Paid plans start at $19/month with flat board-based pricing - no per-seat fees. Google Forms is free with Google Workspace but has no resolution workflow at any price.",
+    a: "FeedSolve has a free 7-day trial with full access, including 2 feedback boards. Paid plans start at $19/month with flat board-based pricing - no per-seat fees. Google Forms is free with Google Workspace but has no resolution workflow at any price.",
   },
   {
     q: "Can I import my existing Google Forms responses into FeedSolve?",
@@ -176,6 +169,7 @@ const jsonLd = {
 export default function VsGoogleForms() {
   return (
     <>
+      <BreadcrumbScript data={breadcrumbLd([{ name: "Home", url: "https://feedsolve.com/" }, { name: "Compare", url: "https://feedsolve.com/compare/" }, { name: "FeedSolve vs Google Forms", url: "https://feedsolve.com/compare/feedsolve-vs-google-forms/" }])} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -212,18 +206,18 @@ export default function VsGoogleForms() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
             <ChevronRight size={13} />
-            <span style={{ color: "rgba(255,255,255,0.45)" }}>Compare</span>
+            <span style={{ color: "var(--muted-on-navy)" }}>Compare</span>
             <ChevronRight size={13} />
             <span style={{ color: "rgba(255,255,255,0.65)" }}>
               FeedSolve vs Google Forms
@@ -283,7 +277,7 @@ export default function VsGoogleForms() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -354,7 +348,7 @@ export default function VsGoogleForms() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--slate-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -406,7 +400,7 @@ export default function VsGoogleForms() {
                   >
                     <Check
                       size={14}
-                      style={{ color: "#16A34A", flexShrink: 0 }}
+                      style={{ color: "var(--green-text)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -424,7 +418,7 @@ export default function VsGoogleForms() {
                       gap: 10,
                       alignItems: "center",
                       fontSize: 14,
-                      color: "var(--text-light)",
+                      color: "var(--slate-text)",
                     }}
                   >
                     <X size={14} style={{ color: "#DC2626", flexShrink: 0 }} />{" "}
@@ -463,7 +457,7 @@ export default function VsGoogleForms() {
                   position: "absolute",
                   top: -12,
                   left: 28,
-                  background: "var(--teal)",
+                  background: "var(--teal-btn)",
                   color: "white",
                   fontSize: 10,
                   fontWeight: 800,
@@ -479,7 +473,7 @@ export default function VsGoogleForms() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.4)",
+                  color: "var(--muted-on-navy)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -536,7 +530,7 @@ export default function VsGoogleForms() {
                   >
                     <Check
                       size={14}
-                      style={{ color: "var(--teal-light)", flexShrink: 0 }}
+                      style={{ color: "var(--teal-on-navy)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -589,7 +583,7 @@ export default function VsGoogleForms() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -604,7 +598,7 @@ export default function VsGoogleForms() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -619,7 +613,7 @@ export default function VsGoogleForms() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -655,7 +649,7 @@ export default function VsGoogleForms() {
                         <div
                           style={{
                             fontSize: 11,
-                            color: "var(--text-light)",
+                            color: "var(--slate-text)",
                             marginTop: 3,
                           }}
                         >
@@ -670,7 +664,7 @@ export default function VsGoogleForms() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -706,7 +700,7 @@ export default function VsGoogleForms() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -717,7 +711,7 @@ export default function VsGoogleForms() {
                         <span
                           style={{
                             fontSize: 12,
-                            color: "#E65100",
+                            color: "#b93c00",
                             fontWeight: 600,
                           }}
                         >
@@ -830,7 +824,7 @@ export default function VsGoogleForms() {
                       height: 22,
                       borderRadius: "50%",
                       background: "#FECACA",
-                      color: "#DC2626",
+                      color: "#991b1b",
                       fontSize: 11,
                       fontWeight: 700,
                       display: "flex",
@@ -864,7 +858,7 @@ export default function VsGoogleForms() {
                 style={{
                   fontSize: 12,
                   fontWeight: 800,
-                  color: "#16A34A",
+                  color: "var(--green-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.07em",
                   marginBottom: 20,
@@ -900,7 +894,7 @@ export default function VsGoogleForms() {
                       height: 22,
                       borderRadius: "50%",
                       background: "#BBF7D0",
-                      color: "#16A34A",
+                      color: "var(--green-text)",
                       fontSize: 11,
                       fontWeight: 700,
                       display: "flex",
@@ -970,7 +964,7 @@ export default function VsGoogleForms() {
                       alignItems: "center",
                       justifyContent: "center",
                       flexShrink: 0,
-                      color: "var(--teal)",
+                      color: "var(--teal-text)",
                     }}
                   >
                     <ChevronDown size={13} />
@@ -1012,7 +1006,7 @@ export default function VsGoogleForms() {
               marginBottom: 36,
             }}
           >
-            Set up your first feedback board in under 2 minutes. Free to start.
+            Set up your first feedback board in under 2 minutes. Free 7-day trial.
           </p>
           <div
             style={{
@@ -1048,7 +1042,7 @@ export default function VsGoogleForms() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -1067,7 +1061,7 @@ export default function VsGoogleForms() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -1117,7 +1111,7 @@ export default function VsGoogleForms() {
                 >
                   {c.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {c.sub}
                 </div>
               </Link>

@@ -1,101 +1,38 @@
-"use client";
+// Server component: the whole article renders to static HTML and is not
+// duplicated in the client payload. Only the scroll-driven bits (progress bar,
+// active table-of-contents item, copy-link button) are client components.
 
-import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getAuthor } from "@/lib/blog/authors";
+import type { BlogFaq, BlogSection, PublicPost } from "@/lib/blog/public";
+import { CopyLinkButton, ReadingProgress, TocList } from "./BlogPostInteractive";
 import {
  ArrowRight, ChevronRight, Calendar, Clock,
  Check, X, Link as LinkIcon, Share2, ExternalLink,
  QrCode, Hash, TrendingUp, ClipboardList,
 } from "lucide-react";
 
-type BlogFaq = {
- question: string;
- answer: string;
-};
-
-type BlogSection = {
- heading: string;
- key_points?: string[];
- body?: string[];
- examples?: string[];
- checklist?: string[];
- table?: { headers: string[]; rows: string[][] };
- comparison_table?: { columns: string[]; rows: string[][] };
- faqs?: BlogFaq[];
-};
-
-type InternalLink = {
- anchor: string;
- url: string;
-};
-
-type BlogPost = {
- id: number;
- meta: {
-  title: string;
-  slug: string;
-  primary_keyword: string;
-  secondary_keywords: string[];
-  meta_description: string;
-  target_word_count: string;
-  date_published: string;
-  date_modified: string;
-  author_name?: string;
- };
- content: {
-  quick_answer_box: string;
-  h1: string;
-  key_takeaways?: string[];
-  sections: BlogSection[];
-  faq?: BlogFaq[];
-  internal_links?: InternalLink[];
- };
-};
-
-const DEFAULT_AUTHOR = {
- name: "FeedSolve Team",
- role: "Operations & Product",
- bio: "The FeedSolve team writes about feedback management, operational efficiency, and building systems that help SMBs track and resolve every complaint.",
- initials: "FS",
- href: "/authors/feedsolve-team/",
-};
-
-const AUTHOR_PROFILES: Record<string, Omit<typeof DEFAULT_AUTHOR, "name">> = {
- "Maduranga, founder of FeedSolve": {
-  role: "Founder, FeedSolve",
-  bio: "Maduranga builds FeedSolve and writes about SMB feedback and complaint resolution.",
-  initials: "M",
-  href: "/authors/feedsolve-team/",
- },
-};
-
-function getAuthor(authorName?: string) {
- if (!authorName) return DEFAULT_AUTHOR;
- const profile = AUTHOR_PROFILES[authorName];
- return profile ? { name: authorName, ...profile } : DEFAULT_AUTHOR;
-}
-
 const categoryIcons: Record<string, { icon: React.ReactNode; bg: string }> = {
- "Operations": { icon: <ClipboardList size={22} style={{ color: "var(--teal)" }} />, bg: "var(--teal-pale)" },
+ "Operations": { icon: <ClipboardList size={22} style={{ color: "var(--teal-text)" }} />, bg: "var(--teal-pale)" },
  "QR Codes": { icon: <QrCode size={22} style={{ color: "#3730A3" }} />, bg: "#EEF2FF" },
- "Guides": { icon: <Hash size={22} style={{ color: "#E65100" }} />, bg: "#FFF8E1" },
+ "Guides": { icon: <Hash size={22} style={{ color: "#b93c00" }} />, bg: "#FFF8E1" },
  "Product": { icon: <TrendingUp size={22} style={{ color: "#7B1FA2" }} />, bg: "#F3E5F5" },
  "Comparison": { icon: <Check size={22} style={{ color: "#7B1FA2" }} />, bg: "#F3E5F5" },
  "Case Study": { icon: <TrendingUp size={22} style={{ color: "#2E7D32" }} />, bg: "#E8F5E9" },
 };
 
 const tagMap: Record<string, { label: string; color: string }> = {
- operations: { label: "Operations", color: "var(--teal)" },
+ operations: { label: "Operations", color: "var(--teal-text)" },
  qr: { label: "QR Codes", color: "#3730A3" },
- guides: { label: "Guides", color: "#E65100" },
+ guides: { label: "Guides", color: "#b93c00" },
  product: { label: "Product", color: "#7B1FA2" },
  comparison: { label: "Comparison", color: "#7B1FA2" },
  casestudy: { label: "Case Study", color: "#2E7D32" },
 };
 
-function getCategoryForBlog(blog: BlogPost): string {
+function getCategoryForBlog(blog: PublicPost): string {
  const kw = blog.meta.primary_keyword.toLowerCase();
  if (kw.includes("qr") || kw.includes("restaurant")) return "qr";
  if (kw.includes("workflow") || kw.includes("resolution rate") || kw.includes("supplier") || kw.includes("tenant") || kw.includes("distributor") || kw.includes("suggestion")) return "operations";
@@ -140,120 +77,38 @@ function normalizeInternalLink(url: string): string {
  return url.endsWith("/") || url.includes("#") ? url : `${url}/`;
 }
 
-function formatPublishedDate(blog: BlogPost): string {
+function formatPublishedDate(blog: PublicPost): string {
  const date = new Date(`${blog.meta.date_published}T00:00:00Z`);
  return new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
 }
 
-function getReadTime(blog: BlogPost): string {
- const wc = blog.meta.target_word_count;
- const avg = parseInt(wc.replace(/[^0-9]/g, "").slice(0, 4));
- return `${Math.max(3, Math.round(avg / 300))} min`;
-}
-
 type SolutionLink = { href: string; label: string };
 
-export default function BlogPostClient({
+export default function BlogPostView({
  blog,
  relatedPosts,
  morePosts,
  solution,
 }: {
- blog: BlogPost;
- relatedPosts: BlogPost[];
- morePosts: BlogPost[];
+ blog: PublicPost;
+ relatedPosts: PublicPost[];
+ morePosts: PublicPost[];
  solution: SolutionLink;
 }) {
- const [progress, setProgress] = useState(0);
-
- const cat = blog ? getCategoryForBlog(blog) : "operations";
+ const cat = getCategoryForBlog(blog);
  const catInfo = tagMap[cat] || tagMap.operations;
- const author = getAuthor(blog?.meta.author_name);
+ const author = getAuthor(blog.meta.author_name);
 
- const tocSections = useMemo(() => {
-  if (!blog) return [];
-  return blog.content.sections
-   .filter((s: BlogSection) => !s.heading.startsWith("H2: FAQs"))
-   .map((s: BlogSection, i: number) => ({
-    id: `sec-${i}`,
-    label: s.heading.replace("H2: ", ""),
-   }));
- }, [blog]);
-
- const [activeToc, setActiveToc] = useState(tocSections[0]?.id || "");
-
- useEffect(() => {
-  let ticking = false;
-  const onScroll = () => {
-   if (!ticking) {
-    requestAnimationFrame(() => {
-     const body = document.body;
-     const html = document.documentElement;
-     const scrollTop = window.scrollY;
-     const docHeight = Math.max(body.scrollHeight, html.scrollHeight) - window.innerHeight;
-     setProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
-
-     let active = tocSections[0]?.id || "";
-     tocSections.forEach(({ id }: { id: string }) => {
-      const el = document.getElementById(id);
-      if (el && el.getBoundingClientRect().top < 120) active = id;
-     });
-     setActiveToc(active);
-     ticking = false;
-    });
-    ticking = true;
-   }
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  return () => window.removeEventListener("scroll", onScroll);
- }, [tocSections]);
-
- const copyLink = () => {
-  if (typeof window !== "undefined") {
-   navigator.clipboard.writeText(window.location.href).catch(() => {});
-  }
- };
-
- if (!blog) {
-  return (
-   <>
-    <Navbar variant="blog" />
-    <div style={{ maxWidth: 700, margin: "120px auto", textAlign: "center", padding: 40 }}>
-     <h1>Post not found</h1>
-     <p>The blog post you&apos;re looking for doesn&apos;t exist.</p>
-     <Link href="/blog/" className="btn-primary teal" style={{ display: "inline-flex", marginTop: 20 }}>
-      Back to Blog <ArrowRight size={15} />
-     </Link>
-    </div>
-    <Footer variant="blog" />
-   </>
-  );
- }
-
- const faqJsonLd = blog.content.faq && blog.content.faq.length > 0
-  ? {
-     "@context": "https://schema.org",
-     "@type": "FAQPage",
-     mainEntity: blog.content.faq.map((faq: BlogFaq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-     })),
-    }
-  : null;
+ const tocSections = blog.content.sections
+  .filter((s: BlogSection) => !s.heading.startsWith("H2: FAQs"))
+  .map((s: BlogSection, i: number) => ({
+   id: `sec-${i}`,
+   label: s.heading.replace("H2: ", ""),
+  }));
 
  return (
   <>
-   {faqJsonLd && (
-    <script
-     type="application/ld+json"
-     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-    />
-   )}
-
-   <div className="reading-progress">
-    <div className="reading-progress-fill" style={{ width: `${progress}%` }} />
-   </div>
+   <ReadingProgress />
 
    <Navbar variant="blog" />
 
@@ -274,7 +129,7 @@ export default function BlogPostClient({
      <p className="article-subtitle">{blog.meta.meta_description}</p>
      <div className="article-meta">
       <div className="author-wrap">
-       <div className="author-avatar-lg" style={{ background: "var(--teal)" }}>{author.initials}</div>
+       <div className="author-avatar-lg" style={{ background: "var(--teal-btn)" }}>{author.initials}</div>
        <div>
         <div className="author-written-by">Written by</div>
         <Link href={author.href} className="author-name-text">{author.name}</Link>
@@ -283,7 +138,7 @@ export default function BlogPostClient({
       </div>
       <div className="article-stats">
        <div className="article-stat"><Calendar size={14} /> {formatPublishedDate(blog)}</div>
-       <div className="article-stat"><Clock size={14} /> {getReadTime(blog)} read</div>
+       <div className="article-stat"><Clock size={14} /> {blog.readTime} read</div>
       </div>
      </div>
     </div>
@@ -310,7 +165,7 @@ export default function BlogPostClient({
        <div className="ahi-right-label">In this article</div>
        {tocSections.slice(0, 4).map(({ label }: { label: string }, i: number) => (
         <div key={i} className="ahi-channel" style={{ background: "rgba(58,143,165,0.1)" }}>
-         <div className="ahi-channel-icon" style={{ background: "var(--teal)", fontSize: 12, fontWeight: 700, width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center" }}>
+         <div className="ahi-channel-icon" style={{ background: "var(--teal-btn)", fontSize: 12, fontWeight: 700, width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center" }}>
           {i + 1}
          </div>
          <div className="ahi-channel-text">
@@ -341,7 +196,7 @@ export default function BlogPostClient({
             <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
              <div style={{
               minWidth: 24, height: 24, borderRadius: "50%",
-              background: "var(--teal-pale)", color: "var(--teal)",
+              background: "var(--teal-pale)", color: "var(--teal-text)",
               display: "flex", alignItems: "center", justifyContent: "center",
               fontSize: 12, fontWeight: 700, flexShrink: 0,
              }}>
@@ -451,7 +306,7 @@ export default function BlogPostClient({
        <div className="related-links" style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 14, padding: "24px", margin: "32px 0" }}>
         <h3 style={{ marginTop: 0 }}>Further reading</h3>
         <ul style={{ marginBottom: 0 }}>
-         {blog.content.internal_links.map((link: InternalLink, i: number) => (
+         {blog.content.internal_links.map((link: { anchor: string; url: string }, i: number) => (
           <li key={`${link.url}-${i}`}>
            <Link href={normalizeInternalLink(link.url)}>{link.anchor}</Link>
           </li>
@@ -464,7 +319,7 @@ export default function BlogPostClient({
      {/* IN-ARTICLE CTA */}
      <div className="article-cta-box">
       <h3>Ready to fix your feedback loop?</h3>
-      <p>Set up your first complaint board in under 2 minutes. No credit card required.</p>
+      <p>Set up your first complaint board in under 2 minutes. Free 7-day trial.</p>
       <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
        Try FeedSolve Free <ArrowRight size={15} />
       </a>
@@ -483,9 +338,9 @@ export default function BlogPostClient({
       </div>
       <div className="share-row">
        <span className="share-label">Share</span>
-       <button className="share-btn" title="Copy link" onClick={copyLink}>
+       <CopyLinkButton>
         <LinkIcon size={15} />
-       </button>
+       </CopyLinkButton>
        <button className="share-btn" title="Share on LinkedIn">
         <ExternalLink size={15} />
        </button>
@@ -497,7 +352,7 @@ export default function BlogPostClient({
 
      {/* AUTHOR BIO */}
      <div className="author-bio-card">
-      <div className="author-bio-avatar" style={{ background: "var(--teal)" }}>{author.initials}</div>
+      <div className="author-bio-avatar" style={{ background: "var(--teal-btn)" }}>{author.initials}</div>
       <div>
        <Link href={author.href} className="author-bio-name">{author.name}</Link>
        <div className="author-role-text">{author.role}</div>
@@ -512,21 +367,12 @@ export default function BlogPostClient({
     <aside className="article-sidebar">
      <div className="sidebar-card">
       <div className="sidebar-card-title">In this article</div>
-      {tocSections.map(({ id, label }: { id: string; label: string }, i: number) => (
-       <a
-        key={id}
-        href={`#${id}`}
-        className={`toc-item${activeToc === id ? " active" : ""}`}
-       >
-        <span className="toc-num">0{i + 1}</span>
-        <span className="toc-text">{label}</span>
-       </a>
-      ))}
+      <TocList items={tocSections} />
      </div>
 
      <div className="sidebar-cta-card">
       <h4>Start tracking complaints today</h4>
-      <p>Setup takes under 2 minutes. Free plan available.</p>
+      <p>Setup takes under 2 minutes. Free 7-day trial.</p>
       <p className="sidebar-cta-subtext">
        Already have an account?{" "}
        <a href="https://app.feedsolve.com/login" target="_blank" rel="noopener noreferrer">
@@ -540,7 +386,7 @@ export default function BlogPostClient({
 
      <div className="sidebar-card">
       <div className="sidebar-card-title">Related posts</div>
-      {relatedPosts.map((other: BlogPost) => {
+      {relatedPosts.map((other: PublicPost) => {
        const otherCat = getCategoryForBlog(other);
        const otherCatInfo = tagMap[otherCat] || tagMap.operations;
        const catIcon = categoryIcons[otherCatInfo.label] || categoryIcons["Operations"];
@@ -549,7 +395,7 @@ export default function BlogPostClient({
          <div className="rp-img" style={{ background: catIcon.bg }}>{catIcon.icon}</div>
          <div className="rp-body">
           <h4>{other.meta.title.length > 45 ? other.meta.title.slice(0, 45) + "..." : other.meta.title}</h4>
-          <span>{getReadTime(other)} read</span>
+          <span>{other.readTime} read</span>
          </div>
         </Link>
        );
@@ -562,7 +408,7 @@ export default function BlogPostClient({
    <div className="more-posts-section">
     <h2>More from the blog</h2>
     <div className="more-grid">
-     {morePosts.map((other: BlogPost) => {
+     {morePosts.map((other: PublicPost) => {
       const otherCat = getCategoryForBlog(other);
       const otherCatInfo = tagMap[otherCat] || tagMap.operations;
       return (
@@ -570,7 +416,7 @@ export default function BlogPostClient({
         <div className="more-tag" style={{ color: otherCatInfo.color }}>{otherCatInfo.label}</div>
         <h3>{other.meta.title}</h3>
         <p>{other.content.quick_answer_box.slice(0, 100)}...</p>
-        <div className="more-card-meta">{getAuthor(other.meta.author_name).name} · {getReadTime(other)} read</div>
+        <div className="more-card-meta">{getAuthor(other.meta.author_name).name} · {other.readTime} read</div>
        </Link>
       );
      })}

@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+import { JsonLdScript as BreadcrumbScript } from "@/components/JsonLd";
+import { breadcrumbJsonLd as breadcrumbLd } from "@/lib/seo";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,21 +15,12 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "FeedSolve vs Zonka Feedback: Which Fits SMBs?",
   description:
     "Zonka measures satisfaction scores; FeedSolve measures whether you fixed the problem. Compare features, pricing and use cases for SMB complaint management.",
-  openGraph: {
-    title: "FeedSolve vs Zonka Feedback: Which Fits SMBs?",
-    description:
-      "Zonka measures satisfaction scores. FeedSolve measures resolution rate. See which is right for SMB complaint and feedback management.",
-    url: "https://feedsolve.com/compare/feedsolve-vs-zonka/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/compare/feedsolve-vs-zonka/",
-  },
-};
+  path: "/compare/feedsolve-vs-zonka/",
+});
 
 const comparisonRows = [
   {
@@ -76,7 +69,7 @@ const comparisonRows = [
     feature: "Public reply to submitter",
     feedsolve: true,
     competitor: false,
-    note: "FeedSolve Growth & Pro plans",
+    note: "FeedSolve Growth & Business plans",
   },
   {
     feature: "Resolution rate as primary dashboard metric",
@@ -106,7 +99,7 @@ const comparisonRows = [
     feature: "Branded QR codes with logo",
     feedsolve: true,
     competitor: false,
-    note: "FeedSolve Growth & Pro plans",
+    note: "FeedSolve Growth & Business plans",
   },
   {
     feature: "NPS / CSAT / CES survey templates",
@@ -127,7 +120,7 @@ const comparisonRows = [
     note: "Zonka integrates with Salesforce, HubSpot, Zendesk",
   },
   {
-    feature: "Free plan available",
+    feature: "Free trial or free plan",
     feedsolve: true,
     competitor: false,
     note: "Zonka starts at $49/month",
@@ -151,7 +144,7 @@ const faqs = [
   },
   {
     q: "Is FeedSolve cheaper than Zonka Feedback?",
-    a: "Significantly cheaper for most SMBs. FeedSolve has a free plan and a Starter plan at $19/month with flat board-based pricing. Zonka Feedback starts at $49/month and scales by response volume. For a small manufacturer or restaurant chain, FeedSolve delivers complaint resolution capability at less than half the price of Zonka's entry tier.",
+    a: "Significantly cheaper for most SMBs. FeedSolve has a free 7-day trial and a Starter plan at $19/month with flat board-based pricing. Zonka Feedback starts at $49/month and scales by response volume. For a small manufacturer or restaurant chain, FeedSolve delivers complaint resolution capability at less than half the price of Zonka's entry tier.",
   },
   {
     q: "Can I use both FeedSolve and Zonka for different purposes?",
@@ -183,6 +176,7 @@ const jsonLd = {
 export default function VsZonka() {
   return (
     <>
+      <BreadcrumbScript data={breadcrumbLd([{ name: "Home", url: "https://feedsolve.com/" }, { name: "Compare", url: "https://feedsolve.com/compare/" }, { name: "FeedSolve vs Zonka Feedback", url: "https://feedsolve.com/compare/feedsolve-vs-zonka/" }])} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -218,13 +212,13 @@ export default function VsZonka() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
@@ -288,7 +282,7 @@ export default function VsZonka() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -378,7 +372,7 @@ export default function VsZonka() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--slate-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -431,13 +425,13 @@ export default function VsZonka() {
                   margin: "0 auto 20px",
                 }}
               >
-                <Check size={24} style={{ color: "var(--teal-light)" }} />
+                <Check size={24} style={{ color: "var(--teal-on-navy)" }} />
               </div>
               <div
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.4)",
+                  color: "var(--muted-on-navy)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -497,7 +491,7 @@ export default function VsZonka() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--slate-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -535,7 +529,7 @@ export default function VsZonka() {
                   >
                     <Check
                       size={13}
-                      style={{ color: "#16A34A", flexShrink: 0 }}
+                      style={{ color: "var(--green-text)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -553,7 +547,7 @@ export default function VsZonka() {
                       gap: 10,
                       alignItems: "center",
                       fontSize: 13,
-                      color: "var(--text-light)",
+                      color: "var(--slate-text)",
                     }}
                   >
                     <X size={13} style={{ color: "#DC2626", flexShrink: 0 }} />{" "}
@@ -592,7 +586,7 @@ export default function VsZonka() {
                   position: "absolute",
                   top: -12,
                   left: 24,
-                  background: "var(--teal)",
+                  background: "var(--teal-btn)",
                   color: "white",
                   fontSize: 10,
                   fontWeight: 800,
@@ -608,7 +602,7 @@ export default function VsZonka() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.4)",
+                  color: "var(--muted-on-navy)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -636,7 +630,7 @@ export default function VsZonka() {
                   "Branded QR with logo (Growth+)",
                   "Multi-language forms",
                   "Employee problem reporting",
-                  "Free to start - from $19/mo",
+                  "Free 7-day trial - from $19/mo",
                 ].map((f) => (
                   <div
                     key={f}
@@ -650,7 +644,7 @@ export default function VsZonka() {
                   >
                     <Check
                       size={13}
-                      style={{ color: "var(--teal-light)", flexShrink: 0 }}
+                      style={{ color: "var(--teal-on-navy)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -663,11 +657,11 @@ export default function VsZonka() {
                   background: "rgba(255,255,255,0.07)",
                   borderRadius: 10,
                   fontSize: 12,
-                  color: "rgba(255,255,255,0.55)",
+                  color: "var(--muted-on-navy)",
                   lineHeight: 1.6,
                 }}
               >
-                <strong style={{ color: "white" }}>Pricing:</strong> Free plan ·
+                <strong style={{ color: "white" }}>Pricing:</strong> 7-day free trial ·
                 Starter $19/mo · Board-based flat pricing
               </div>
             </div>
@@ -696,7 +690,7 @@ export default function VsZonka() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -711,7 +705,7 @@ export default function VsZonka() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -725,7 +719,7 @@ export default function VsZonka() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -760,7 +754,7 @@ export default function VsZonka() {
                         <div
                           style={{
                             fontSize: 11,
-                            color: "var(--text-light)",
+                            color: "var(--slate-text)",
                             marginTop: 3,
                           }}
                         >
@@ -775,7 +769,7 @@ export default function VsZonka() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -814,7 +808,7 @@ export default function VsZonka() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -825,7 +819,7 @@ export default function VsZonka() {
                         <span
                           style={{
                             fontSize: 12,
-                            color: "#E65100",
+                            color: "#b93c00",
                             fontWeight: 600,
                           }}
                         >
@@ -904,7 +898,7 @@ export default function VsZonka() {
                       alignItems: "center",
                       justifyContent: "center",
                       flexShrink: 0,
-                      color: "var(--teal)",
+                      color: "var(--teal-text)",
                     }}
                   >
                     <ChevronDown size={13} />
@@ -946,7 +940,7 @@ export default function VsZonka() {
               marginBottom: 36,
             }}
           >
-            Resolution rate. Not just satisfaction scores. Free to start.
+            Resolution rate. Not just satisfaction scores. Free 7-day trial.
           </p>
           <div
             style={{
@@ -982,7 +976,7 @@ export default function VsZonka() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -1000,7 +994,7 @@ export default function VsZonka() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -1049,7 +1043,7 @@ export default function VsZonka() {
                 >
                   {c.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {c.sub}
                 </div>
               </Link>

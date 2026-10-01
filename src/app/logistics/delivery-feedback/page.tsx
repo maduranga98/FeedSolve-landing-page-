@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import {
   Truck,
   Hash,
@@ -9,21 +9,12 @@ import {
 } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Delivery Complaint Tracking for Logistics",
   description:
-    "Warehouse feedback, driver feedback app workflows, and 3PL feedback platform intake via QR code with no login. Track every complaint to resolution across routes.",
-  openGraph: {
-    title: "Delivery Complaint Tracking for Logistics | FeedSolve",
-    description:
-      "QR-based warehouse feedback, driver feedback app workflows, and 3PL feedback platform intake with tracking codes and route-level resolution visibility.",
-    url: "https://feedsolve.com/logistics/delivery-feedback/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/logistics/delivery-feedback/",
-  },
-};
+    "Warehouse feedback, driver feedback app workflows and 3PL feedback platform intake via no-login QR code. Track every complaint to resolution across routes.",
+  path: "/logistics/delivery-feedback/",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -186,7 +177,7 @@ export default function LogisticsDeliveryFeedback() {
           },
         ]}
         ctaHeading="Full visibility across every route and every complaint."
-        ctaSub="Set up your first warehouse feedback, driver feedback app, or 3PL feedback platform board in under 2 minutes. Free to start."
+        ctaSub="Set up your first warehouse feedback, driver feedback app, or 3PL feedback platform board in under 2 minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/logistics/3pl-feedback-platform/",

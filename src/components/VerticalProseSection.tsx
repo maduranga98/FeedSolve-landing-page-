@@ -33,7 +33,7 @@ export default function VerticalProseSection({
   background = "white",
 }: VerticalProseSectionProps) {
   return (
-    <section style={{ background, padding: "80px 32px" }}>
+    <section className="cv-auto" style={{ background, padding: "80px 32px" }}>
       <div className="container" style={{ maxWidth: 820 }}>
         <div className="section-label" style={{ marginBottom: 20 }}>
           {label}

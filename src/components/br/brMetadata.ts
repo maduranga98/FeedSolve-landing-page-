@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/seo/site";
 import { clusterAlternates, type HreflangCluster } from "@/lib/seo/hreflang";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 
 type BrSeoInput = {
   /** Without the " | FeedSolve" suffix - appended here. Keep the rendered title under 60 chars. */
@@ -10,29 +10,17 @@ type BrSeoInput = {
   path: string;
   /** hreflang cluster shared with the English equivalent, if one exists. */
   cluster?: HreflangCluster;
+  type?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
 };
 
 /** Metadata for /br/ pages: pt_BR social cards and reciprocal hreflang with the English page. */
-export function brMetadata({ title, description, path, cluster }: BrSeoInput): Metadata {
-  const fullTitle = `${title} | FeedSolve`;
-  const url = `${SITE_URL}${path}`;
-  const image = `${SITE_URL}/feedsolve.webp`;
-
-  return {
-    title: { absolute: fullTitle },
-    description,
-    alternates: cluster ? clusterAlternates(cluster, path) : { canonical: url },
-    openGraph: {
-      title: fullTitle,
-      description,
-      url,
-      siteName: "FeedSolve",
-      locale: "pt_BR",
-      alternateLocale: ["en_US"],
-      type: "website",
-      images: [{ url: image, width: 1200, height: 630, alt: fullTitle }],
-    },
-    twitter: { card: "summary_large_image", title: fullTitle, description, images: [image] },
-    robots: { index: true, follow: true },
-  };
+export function brMetadata({ cluster, ...page }: BrSeoInput): Metadata {
+  const meta = generatePageMetadata({
+    ...page,
+    locale: "pt_BR",
+    alternates: cluster ? clusterAlternates(cluster, page.path) : undefined,
+  });
+  return { ...meta, openGraph: { ...meta.openGraph, alternateLocale: ["en_US"] } };
 }

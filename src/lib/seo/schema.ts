@@ -1,6 +1,7 @@
 // Structured-data (JSON-LD) generators shared across landing and vertical pages.
 
-import { ORGANIZATION_SAME_AS, SITE_URL } from "./site";
+import { pricingOffers } from "./pricing";
+import { LOGO_URL, OG_IMAGE_URL, ORGANIZATION_SAME_AS, SITE_URL } from "./site";
 
 export type FAQItem = { question: string; answer: string };
 
@@ -21,43 +22,41 @@ export function generateFAQSchema(faqs: FAQItem[]) {
 }
 
 /**
- * SoftwareApplication + Offer schema. Belongs on every money page, not just the
- * homepage - each vertical page is an independent entry point from search.
+ * SoftwareApplication + Offer schema. Emitted on the homepage only: the
+ * product is one entity, and repeating it on every page ships competing
+ * copies of it.
  */
 export function generateSoftwareAppSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "FeedSolve",
+    alternateName: ["Feed Solve", "FeedSolve Feedback & Complaint Management"],
     applicationCategory: "BusinessApplication",
+    applicationSubCategory: "CustomerFeedbackSoftware",
     operatingSystem: "Web",
-    url: `${SITE_URL}/`,
     description:
-      "FeedSolve helps SMBs collect customer feedback via QR code, then assign, track, and resolve every complaint from one dashboard.",
-    offers: [
-      { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-      {
-        "@type": "Offer",
-        name: "Starter",
-        price: "19",
-        priceCurrency: "USD",
-        billingIncrement: "Monthly",
-      },
-      {
-        "@type": "Offer",
-        name: "Growth",
-        price: "49",
-        priceCurrency: "USD",
-        billingIncrement: "Monthly",
-      },
-      {
-        "@type": "Offer",
-        name: "Business",
-        price: "79",
-        priceCurrency: "USD",
-        billingIncrement: "Monthly",
-      },
+      "FeedSolve is feedback management and complaint resolution software for SMBs. Collect feedback via branded QR codes or shareable links - no login needed for submitters. Assign issues to your team, resolve every submission, and let submitters track progress with a unique tracking code. Supports multi-language submission forms.",
+    url: `${SITE_URL}/`,
+    image: OG_IMAGE_URL,
+    inLanguage: ["en", "en-GB", "en-AU", "en-US", "pt-BR"],
+    keywords:
+      "feedsolve, feed solve, feedback management software, complaint management software, QR code feedback, supplier feedback, tenant feedback, GDPR feedback management, customer complaint tracking, SMB feedback platform",
+    featureList: [
+      "Branded QR code feedback collection",
+      "No-login submission for customers and suppliers",
+      "Unique tracking code for every submission",
+      "Kanban-style complaint resolution workflow",
+      "Multi-language submission forms",
+      "Team assignment and resolution audit trail",
+      "GDPR-aware data handling for EU teams",
     ],
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType:
+        "Small and mid-sized businesses in restaurants, manufacturing, logistics, real estate, and retail",
+    },
+    offers: pricingOffers(),
     provider: generateOrganizationSchema({ standalone: false }),
     // Add aggregateRating once real G2/Capterra reviews exist - never fabricate one.
   };
@@ -77,7 +76,7 @@ export function generateOrganizationSchema({ standalone = true } = {}) {
     name: "FeedSolve",
     alternateName: ["Feed Solve"],
     url: `${SITE_URL}/`,
-    logo: `${SITE_URL}/logo.webp`,
+    logo: { "@type": "ImageObject", url: LOGO_URL, width: 512, height: 512 },
     sameAs: [...ORGANIZATION_SAME_AS],
   };
 }

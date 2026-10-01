@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+import { JsonLdScript as BreadcrumbScript } from "@/components/JsonLd";
+import { breadcrumbJsonLd as breadcrumbLd } from "@/lib/seo";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,21 +15,12 @@ import {
   FileText,
 } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "FeedSolve vs JotForm: QR Feedback Compared",
   description:
     "JotForm builds the form. FeedSolve resolves the feedback. Compare QR code feedback, submitter tracking codes, resolution workflow, and pricing for SMBs.",
-  openGraph: {
-    title: "FeedSolve vs JotForm: QR Feedback Compared",
-    description:
-      "JotForm builds the form. FeedSolve resolves the feedback. See which is right for QR code feedback and complaint resolution.",
-    url: "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/compare/feedsolve-vs-jotform/",
-  },
-};
+  path: "/compare/feedsolve-vs-jotform/",
+});
 
 const comparisonRows = [
   {
@@ -82,7 +75,7 @@ const comparisonRows = [
     feature: "Public reply to submitter",
     feedsolve: true,
     competitor: false,
-    note: "FeedSolve Growth & Pro plans",
+    note: "FeedSolve Growth & Business plans",
   },
   {
     feature: "Resolution rate as primary metric",
@@ -115,7 +108,7 @@ const comparisonRows = [
     note: "JotForm integrates broadly across SaaS tools",
   },
   {
-    feature: "Free plan available",
+    feature: "Free trial or free plan",
     feedsolve: true,
     competitor: true,
     note: "",
@@ -147,7 +140,7 @@ const faqs = [
   },
   {
     q: "Is FeedSolve cheaper than JotForm?",
-    a: "For complaint resolution, yes. Both have a free plan. FeedSolve's paid plans start at $19/month with flat, board-based pricing. JotForm's paid plans start around $34/month and scale by monthly submission limits. If your goal is resolving feedback rather than collecting high volumes of form data, FeedSolve delivers the resolution workflow at a lower entry price.",
+    a: "For complaint resolution, yes. JotForm has a free plan and FeedSolve has a free 7-day trial. FeedSolve's paid plans start at $19/month with flat, board-based pricing. JotForm's paid plans start around $34/month and scale by monthly submission limits. If your goal is resolving feedback rather than collecting high volumes of form data, FeedSolve delivers the resolution workflow at a lower entry price.",
   },
 ];
 
@@ -171,6 +164,7 @@ const jsonLd = {
 export default function VsJotForm() {
   return (
     <>
+      <BreadcrumbScript data={breadcrumbLd([{ name: "Home", url: "https://feedsolve.com/" }, { name: "Compare", url: "https://feedsolve.com/compare/" }, { name: "FeedSolve vs JotForm", url: "https://feedsolve.com/compare/feedsolve-vs-jotform/" }])} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -206,13 +200,13 @@ export default function VsJotForm() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
@@ -276,7 +270,7 @@ export default function VsJotForm() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -360,13 +354,13 @@ export default function VsJotForm() {
                   margin: "0 auto 20px",
                 }}
               >
-                <FileText size={24} style={{ color: "#E65100" }} />
+                <FileText size={24} style={{ color: "#b93c00" }} />
               </div>
               <div
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--slate-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -419,13 +413,13 @@ export default function VsJotForm() {
                   margin: "0 auto 20px",
                 }}
               >
-                <Check size={24} style={{ color: "var(--teal-light)" }} />
+                <Check size={24} style={{ color: "var(--teal-on-navy)" }} />
               </div>
               <div
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.4)",
+                  color: "var(--muted-on-navy)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -484,7 +478,7 @@ export default function VsJotForm() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--slate-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -522,7 +516,7 @@ export default function VsJotForm() {
                   >
                     <Check
                       size={13}
-                      style={{ color: "#16A34A", flexShrink: 0 }}
+                      style={{ color: "var(--green-text)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -540,7 +534,7 @@ export default function VsJotForm() {
                       gap: 10,
                       alignItems: "center",
                       fontSize: 13,
-                      color: "var(--text-light)",
+                      color: "var(--slate-text)",
                     }}
                   >
                     <X size={13} style={{ color: "#DC2626", flexShrink: 0 }} />{" "}
@@ -579,7 +573,7 @@ export default function VsJotForm() {
                   position: "absolute",
                   top: -12,
                   left: 24,
-                  background: "var(--teal)",
+                  background: "var(--teal-btn)",
                   color: "white",
                   fontSize: 10,
                   fontWeight: 800,
@@ -595,7 +589,7 @@ export default function VsJotForm() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.4)",
+                  color: "var(--muted-on-navy)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -623,7 +617,7 @@ export default function VsJotForm() {
                   "Resolution rate as primary metric",
                   "Branded QR with logo (Growth+)",
                   "Multi-language forms",
-                  "Free to start - from $19/mo",
+                  "Free 7-day trial - from $19/mo",
                 ].map((f) => (
                   <div
                     key={f}
@@ -637,7 +631,7 @@ export default function VsJotForm() {
                   >
                     <Check
                       size={13}
-                      style={{ color: "var(--teal-light)", flexShrink: 0 }}
+                      style={{ color: "var(--teal-on-navy)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -650,11 +644,11 @@ export default function VsJotForm() {
                   background: "rgba(255,255,255,0.07)",
                   borderRadius: 10,
                   fontSize: 12,
-                  color: "rgba(255,255,255,0.55)",
+                  color: "var(--muted-on-navy)",
                   lineHeight: 1.6,
                 }}
               >
-                <strong style={{ color: "white" }}>Pricing:</strong> Free plan ·
+                <strong style={{ color: "white" }}>Pricing:</strong> 7-day free trial ·
                 Starter $19/mo · Board-based flat pricing
               </div>
             </div>
@@ -683,7 +677,7 @@ export default function VsJotForm() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -698,7 +692,7 @@ export default function VsJotForm() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -712,7 +706,7 @@ export default function VsJotForm() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -747,7 +741,7 @@ export default function VsJotForm() {
                         <div
                           style={{
                             fontSize: 11,
-                            color: "var(--text-light)",
+                            color: "var(--slate-text)",
                             marginTop: 3,
                           }}
                         >
@@ -762,7 +756,7 @@ export default function VsJotForm() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -773,7 +767,7 @@ export default function VsJotForm() {
                         <span
                           style={{
                             fontSize: 12,
-                            color: "#E65100",
+                            color: "#b93c00",
                             fontWeight: 600,
                           }}
                         >
@@ -801,7 +795,7 @@ export default function VsJotForm() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -812,7 +806,7 @@ export default function VsJotForm() {
                         <span
                           style={{
                             fontSize: 12,
-                            color: "#E65100",
+                            color: "#b93c00",
                             fontWeight: 600,
                           }}
                         >
@@ -891,7 +885,7 @@ export default function VsJotForm() {
                       alignItems: "center",
                       justifyContent: "center",
                       flexShrink: 0,
-                      color: "var(--teal)",
+                      color: "var(--teal-text)",
                     }}
                   >
                     <ChevronDown size={13} />
@@ -933,7 +927,7 @@ export default function VsJotForm() {
               marginBottom: 36,
             }}
           >
-            Tracking codes and a resolution board, not just a form. Free to start.
+            Tracking codes and a resolution board, not just a form. Free 7-day trial.
           </p>
           <div
             style={{
@@ -969,7 +963,7 @@ export default function VsJotForm() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -987,7 +981,7 @@ export default function VsJotForm() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -1036,7 +1030,7 @@ export default function VsJotForm() {
                 >
                   {c.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {c.sub}
                 </div>
               </Link>

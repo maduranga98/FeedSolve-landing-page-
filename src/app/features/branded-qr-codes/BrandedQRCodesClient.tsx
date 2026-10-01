@@ -21,7 +21,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Which plans include branded QR codes?",
-    a: "Branded QR codes - including logo embedding and colour customisation - are available on the Growth ($49/month) and Pro ($79/month) plans. The Free and Starter plans generate standard QR codes without logo or colour customisation.",
+    a: "Branded QR codes - including logo embedding and colour customisation - are available on the Growth ($49/month) and Business ($79/month) plans. The free trial and the Starter plan generate standard QR codes without logo or colour customisation.",
   },
   {
     q: "Can I use my own colours and not just a logo?",
@@ -127,13 +127,13 @@ export default function BrandedQRCodesClient() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.4)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
@@ -152,7 +152,7 @@ export default function BrandedQRCodesClient() {
               marginBottom: 24,
             }}
           >
-            <Palette size={13} /> Feature · Growth &amp; Pro plans
+            <Palette size={13} /> Feature · Growth &amp; Business plans
           </div>
           <h1
             style={{
@@ -194,7 +194,7 @@ export default function BrandedQRCodesClient() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -288,7 +288,7 @@ export default function BrandedQRCodesClient() {
                     alignItems: "center",
                     justifyContent: "center",
                     marginBottom: 16,
-                    color: "var(--teal)",
+                    color: "var(--teal-text)",
                   }}
                 >
                   {f.icon}
@@ -362,7 +362,7 @@ export default function BrandedQRCodesClient() {
                       alignItems: "center",
                       justifyContent: "center",
                       flexShrink: 0,
-                      color: "var(--teal)",
+                      color: "var(--teal-text)",
                     }}
                   >
                     {item.icon}
@@ -391,7 +391,7 @@ export default function BrandedQRCodesClient() {
                   >
                     <Check
                       size={13}
-                      style={{ color: "var(--teal)", flexShrink: 0 }}
+                      style={{ color: "var(--teal-text)", flexShrink: 0 }}
                     />{" "}
                     {p}
                   </div>
@@ -412,7 +412,7 @@ export default function BrandedQRCodesClient() {
               textAlign: "center",
             }}
           >
-            Branded QR Codes are on Growth and Pro
+            Branded QR Codes are on Growth and Business
           </h2>
           <div
             style={{
@@ -427,7 +427,7 @@ export default function BrandedQRCodesClient() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -438,16 +438,16 @@ export default function BrandedQRCodesClient() {
                   >
                     Feature
                   </th>
-                  {["Free", "Starter $19", "Growth $49", "Pro $79"].map(
+                  {["Free", "Starter $19", "Growth $49", "Business $79"].map(
                     (plan) => (
                       <th
                         key={plan}
                         style={{
                           background: "var(--navy)",
                           color:
-                            plan.includes("Growth") || plan.includes("Pro")
-                              ? "var(--teal-light)"
-                              : "rgba(255,255,255,0.45)",
+                            plan.includes("Growth") || plan.includes("Business")
+                              ? "var(--teal-on-navy)"
+                              : "var(--muted-on-navy)",
                           fontSize: 12,
                           fontWeight: 700,
                           letterSpacing: "0.07em",
@@ -487,10 +487,10 @@ export default function BrandedQRCodesClient() {
                         style={{ padding: "13px 16px", textAlign: "center" }}
                       >
                         {v ? (
-                          <Check size={15} style={{ color: "#16A34A" }} />
+                          <Check size={15} style={{ color: "var(--green-text)" }} />
                         ) : (
                           <span
-                            style={{ color: "var(--text-light)", fontSize: 18 }}
+                            style={{ color: "var(--slate-text)", fontSize: 18 }}
                           >
                             -
                           </span>
@@ -506,7 +506,7 @@ export default function BrandedQRCodesClient() {
             <Link
               href="/#pricing"
               style={{
-                color: "var(--teal)",
+                color: "var(--teal-text)",
                 fontSize: 15,
                 fontWeight: 600,
                 textDecoration: "none",
@@ -624,7 +624,7 @@ export default function BrandedQRCodesClient() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -643,7 +643,7 @@ export default function BrandedQRCodesClient() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -702,7 +702,7 @@ export default function BrandedQRCodesClient() {
                 >
                   {r.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {r.sub}
                 </div>
               </Link>

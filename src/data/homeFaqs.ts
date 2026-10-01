@@ -17,11 +17,11 @@ export const homeFaqs = [
  },
  {
   q: "Can I upgrade later?",
-  a: "Yes. Start on the free plan and upgrade anytime as your usage grows. No data lost, no migrations, no downtime.",
+  a: "Yes. Start with the free 7-day trial and upgrade anytime as your usage grows. No data lost, no migrations, no downtime.",
  },
  {
   q: "Can I add my company logo and brand colors to the QR code?",
-  a: "Yes. FeedSolve lets you customize your QR codes with your company logo, brand colors, and style. Branded QR codes are available on Growth and Pro plans and help your feedback boards look like a natural part of your business.",
+  a: "Yes. FeedSolve lets you customize your QR codes with your company logo, brand colors, and style. Branded QR codes are available on Growth and Business plans and help your feedback boards look like a natural part of your business.",
  },
  {
   q: "Can submitters use the feedback form in their own language?",

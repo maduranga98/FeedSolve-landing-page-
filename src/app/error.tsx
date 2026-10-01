@@ -49,7 +49,7 @@ export default function Error({
           alignItems: "center",
           gap: 8,
           padding: "12px 24px",
-          background: "var(--teal)",
+          background: "var(--teal-btn)",
           color: "white",
           border: "none",
           borderRadius: "var(--radius)",

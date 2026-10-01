@@ -161,7 +161,7 @@ export default function VerticalPage(props: VerticalProps) {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.4)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
@@ -184,7 +184,7 @@ export default function VerticalPage(props: VerticalProps) {
                       style={{
                         color: isLast
                           ? "rgba(255,255,255,0.65)"
-                          : "rgba(255,255,255,0.4)",
+                          : "var(--muted-on-navy)",
                       }}
                     >
                       {crumb.name}
@@ -193,7 +193,7 @@ export default function VerticalPage(props: VerticalProps) {
                     <Link
                       href={crumb.url.replace("https://feedsolve.com", "") || "/"}
                       style={{
-                        color: "var(--teal-light)",
+                        color: "var(--teal-on-navy)",
                         textDecoration: "none",
                       }}
                     >
@@ -270,7 +270,7 @@ export default function VerticalPage(props: VerticalProps) {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -311,7 +311,7 @@ export default function VerticalPage(props: VerticalProps) {
       </section>
 
       {/* ── STATS ────────────────────────────────────────── */}
-      <section style={{ background: "var(--teal)", padding: "40px 32px" }}>
+      <section style={{ background: "var(--teal-btn)", padding: "40px 32px" }}>
         <div className="container">
           <div
             className="vertical-stats"
@@ -338,7 +338,7 @@ export default function VerticalPage(props: VerticalProps) {
                 <div
                   style={{
                     fontSize: 13,
-                    color: "rgba(255,255,255,0.7)",
+                    color: "white",
                     marginTop: 6,
                     lineHeight: 1.4,
                   }}
@@ -352,7 +352,7 @@ export default function VerticalPage(props: VerticalProps) {
       </section>
 
       {/* ── PROBLEM ──────────────────────────────────────── */}
-      <section style={{ background: "var(--bg-warm)", padding: "80px 32px" }}>
+      <section className="cv-auto" style={{ background: "var(--bg-warm)", padding: "80px 32px" }}>
         <div className="container" style={{ maxWidth: 820 }}>
           <div className="section-label" style={{ marginBottom: 20 }}>
             The problem
@@ -406,7 +406,7 @@ export default function VerticalPage(props: VerticalProps) {
       </section>
 
       {/* ── HOW IT WORKS ─────────────────────────────────── */}
-      <section style={{ background: "var(--navy)", padding: "80px 32px" }}>
+      <section className="cv-auto" style={{ background: "var(--navy)", padding: "80px 32px" }}>
         <div className="container">
           <div
             className="section-label"
@@ -486,7 +486,7 @@ export default function VerticalPage(props: VerticalProps) {
                       alignItems: "center",
                       justifyContent: "center",
                       marginBottom: 18,
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                     }}
                   >
                     {step.icon}
@@ -495,7 +495,7 @@ export default function VerticalPage(props: VerticalProps) {
                     style={{
                       fontSize: 11,
                       fontWeight: 800,
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       marginBottom: 10,
@@ -510,7 +510,7 @@ export default function VerticalPage(props: VerticalProps) {
                   </h3>
                   <p
                     style={{
-                      color: "rgba(255,255,255,0.55)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 14,
                       lineHeight: 1.65,
                       margin: 0,
@@ -540,7 +540,7 @@ export default function VerticalPage(props: VerticalProps) {
       </section>
 
       {/* ── FEATURES ─────────────────────────────────────── */}
-      <section style={{ background: "white", padding: "80px 32px" }}>
+      <section className="cv-auto" style={{ background: "white", padding: "80px 32px" }}>
         <div className="container">
           <div className="section-label" style={{ marginBottom: 20 }}>
             Key features
@@ -576,7 +576,7 @@ export default function VerticalPage(props: VerticalProps) {
                     alignItems: "center",
                     justifyContent: "center",
                     marginBottom: 16,
-                    color: "var(--teal)",
+                    color: "var(--teal-text)",
                   }}
                 >
                   {f.icon}
@@ -607,7 +607,7 @@ export default function VerticalPage(props: VerticalProps) {
       </section>
 
       {/* ── REAL EXAMPLE ─────────────────────────────────── */}
-      <section style={{ background: "var(--bg-warm)", padding: "80px 32px" }}>
+      <section className="cv-auto" style={{ background: "var(--bg-warm)", padding: "80px 32px" }}>
         <div className="container" style={{ maxWidth: 820 }}>
           <div className="section-label" style={{ marginBottom: 20 }}>
             Real example
@@ -626,7 +626,7 @@ export default function VerticalPage(props: VerticalProps) {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 20,
@@ -689,7 +689,7 @@ export default function VerticalPage(props: VerticalProps) {
                       fontWeight: 600,
                       color:
                         i === exampleScenario.length - 1
-                          ? "var(--teal-light)"
+                          ? "var(--teal-on-navy)"
                           : "white",
                       marginBottom: 4,
                     }}
@@ -699,7 +699,7 @@ export default function VerticalPage(props: VerticalProps) {
                   <div
                     style={{
                       fontSize: 13,
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       lineHeight: 1.55,
                     }}
                   >
@@ -715,7 +715,7 @@ export default function VerticalPage(props: VerticalProps) {
       {extraSections}
 
       {/* ── CHECKLIST ────────────────────────────────────── */}
-      <section style={{ background: "white", padding: "64px 32px" }}>
+      <section className="cv-auto" style={{ background: "white", padding: "64px 32px" }}>
         <div className="container" style={{ maxWidth: 680 }}>
           <h2
             style={{
@@ -742,7 +742,7 @@ export default function VerticalPage(props: VerticalProps) {
               "Branded QR codes with your logo",
               "Email notifications on new submissions",
               "Anonymous mode per board",
-              "Free to start - no credit card",
+              "Free 7-day trial with full access",
             ].map((item, i) => (
               <div
                 key={i}
@@ -760,7 +760,7 @@ export default function VerticalPage(props: VerticalProps) {
                     width: 24,
                     height: 24,
                     borderRadius: "50%",
-                    background: "var(--teal)",
+                    background: "var(--teal-btn)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -777,7 +777,7 @@ export default function VerticalPage(props: VerticalProps) {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────── */}
-      <section style={{ background: "var(--bg-warm)", padding: "80px 32px" }}>
+      <section className="cv-auto" style={{ background: "var(--bg-warm)", padding: "80px 32px" }}>
         <div className="container" style={{ maxWidth: 700 }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div
@@ -822,7 +822,7 @@ export default function VerticalPage(props: VerticalProps) {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section
+      <section className="cv-auto"
         style={{
           background:
             "linear-gradient(140deg, var(--navy-deep) 0%, var(--navy) 55%, #1a4a6b 100%)",
@@ -875,7 +875,7 @@ export default function VerticalPage(props: VerticalProps) {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -890,13 +890,13 @@ export default function VerticalPage(props: VerticalProps) {
 
       {/* ── RELATED ──────────────────────────────────────── */}
       {relatedLinks.length > 0 && (
-        <section style={{ background: "var(--bg)", padding: "48px 32px" }}>
+        <section className="cv-auto" style={{ background: "var(--bg)", padding: "48px 32px" }}>
           <div className="container" style={{ maxWidth: 820 }}>
             <p
               style={{
                 fontSize: 13,
                 fontWeight: 700,
-                color: "var(--text-light)",
+                color: "var(--slate-text)",
                 textTransform: "uppercase",
                 letterSpacing: "0.08em",
                 marginBottom: 20,
@@ -934,7 +934,7 @@ export default function VerticalPage(props: VerticalProps) {
                   >
                     {r.label}
                   </div>
-                  <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                  <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                     {r.sub}
                   </div>
                 </Link>

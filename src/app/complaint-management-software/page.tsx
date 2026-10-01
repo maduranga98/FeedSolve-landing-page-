@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 import {
   Inbox,
@@ -12,28 +12,13 @@ import VerticalPage from "@/components/VerticalPage";
 
 const URL = "https://feedsolve.com/complaint-management-software/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Complaint Management Software for Small Business",
   description:
-    "Complaint management software that collects, assigns, tracks, and resolves every complaint. QR or link intake, no login, tracking codes. Free to start.",
-  keywords: [
-    "complaint management software",
-    "complaint management system",
-    "customer complaint software",
-    "complaint tracking software",
-    "complaint handling software",
-    "online complaint management system",
-    "complaints management software",
-  ],
+    "Complaint management software that collects, assigns, tracks, and resolves every complaint. QR or link intake, no login, tracking codes. Free 7-day trial.",
+  path: "/complaint-management-software/",
   alternates: clusterAlternates("complaintManagement", "/complaint-management-software/"),
-  openGraph: {
-    title: "Complaint Management Software for Small Business | FeedSolve",
-    description:
-      "Collect, assign, track, and resolve every complaint from one dashboard. QR or link intake, no login to submit, tracking codes. Free to start.",
-    url: URL,
-    type: "website",
-  },
-};
+});
 
 const faqs = [
   {
@@ -42,11 +27,11 @@ const faqs = [
   },
   {
     q: "What is the best complaint management software for a small business?",
-    a: "The best complaint management software for an SMB is one you can set up in minutes without a consultant - with no-login intake, assignment and workflow, a tracking code per complaint, and a visible resolution rate. FeedSolve is free to start and built specifically for small and mid-sized teams rather than enterprises.",
+    a: "The best complaint management software for an SMB is one you can set up in minutes without a consultant - with no-login intake, assignment and workflow, a tracking code per complaint, and a visible resolution rate. FeedSolve starts with a free 7-day trial and is built specifically for small and mid-sized teams rather than enterprises.",
   },
   {
     q: "Is there free complaint management software?",
-    a: "Yes. FeedSolve is free to start with no credit card required. You can create a complaint board, generate a QR code or link, and begin collecting and resolving complaints in minutes, then upgrade only when you need more.",
+    a: "Yes. FeedSolve offers a free 7-day trial with full access. You can create a complaint board, generate a QR code or link, and begin collecting and resolving complaints in minutes, then upgrade only when you need more.",
   },
   {
     q: "How is complaint management software different from a help desk like Zendesk?",
@@ -99,7 +84,7 @@ export default function ComplaintManagementSoftware() {
         h1="Complaint Management Software That Actually Closes the Loop"
         quickSummary="FeedSolve is complaint management software that lets customers and suppliers submit complaints via QR code or link with no login, then tracks every one to resolution."
         subheading="Collect, assign, track, and resolve every complaint from one dashboard - without the cost or complexity of enterprise help desks."
-        quickAnswer="FeedSolve is complaint management software for small and mid-sized businesses. Customers, suppliers, and staff submit complaints by scanning a QR code or opening a link - no login, no app, in any language. Each complaint gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it with a full audit trail. A live resolution rate shows whether your process is actually working. Free to start, no credit card."
+        quickAnswer="FeedSolve is complaint management software for small and mid-sized businesses. Customers, suppliers, and staff submit complaints by scanning a QR code or opening a link - no login, no app, in any language. Each complaint gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it with a full audit trail. A live resolution rate shows whether your process is actually working. Free 7-day trial."
         stats={[
           { value: "0", label: "Logins needed to submit a complaint" },
           { value: "100%", label: "Of complaints tracked to resolution" },
@@ -181,7 +166,7 @@ export default function ComplaintManagementSoftware() {
         ]}
         faqs={faqs}
         ctaHeading="Start managing complaints the right way today"
-        ctaSub="Create a complaint board, generate a QR code, and start resolving in minutes. Free to start, no credit card."
+        ctaSub="Create a complaint board, generate a QR code, and start resolving in minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/blog/complaint-management-software-smb/",

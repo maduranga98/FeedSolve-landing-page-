@@ -1,11 +1,7 @@
-"use client";
-
-import { useState } from "react";
-import { PlayCircle, Search, MousePointerClick } from "lucide-react";
+import { PlayCircle } from "lucide-react";
+import DemoTracker from "./DemoTracker";
 
 export default function DemoSection() {
- const [trackerVisible, setTrackerVisible] = useState(false);
-
  return (
   <section id="demo">
    <div className="demo-inner">
@@ -17,48 +13,7 @@ export default function DemoSection() {
      Track a real example and see how updates look from the
      submitter&apos;s side.
     </p>
-    <div
-     style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: 10,
-     }}
-    >
-     <span
-      style={{
-       fontSize: 12,
-       fontWeight: 600,
-       letterSpacing: "0.09em",
-       textTransform: "uppercase",
-       color: "rgba(255,255,255,0.4)",
-      }}
-     >
-      Click below to try it live
-     </span>
-     <button
-      className={`btn-primary teal demo-pulse${trackerVisible ? " active" : ""}`}
-      style={{ fontSize: 16, padding: "14px 28px", margin: "0 auto" }}
-      onClick={() => setTrackerVisible(!trackerVisible)}
-      aria-expanded={trackerVisible}
-      aria-controls="demo-tracker-panel"
-     >
-      <Search size={16} /> Track Demo Issue #FSV-1024
-     </button>
-     <span
-      style={{
-       fontSize: 13,
-       color: "rgba(255,255,255,0.35)",
-       display: "flex",
-       alignItems: "center",
-       gap: 5,
-      }}
-     >
-      <MousePointerClick size={13} /> Interactive - see the full
-      resolution timeline
-     </span>
-    </div>
-    <div id="demo-tracker-panel" aria-live="polite" className={`demo-tracker${trackerVisible ? " visible" : ""}`}>
+    <DemoTracker>
      <div className="dt-top">
       <div className="dt-label">Issue Tracker</div>
       <div className="dt-code">#FSV-1024 Damaged product in shipment</div>
@@ -111,7 +66,7 @@ export default function DemoSection() {
         <div className="de-time">Apr 21, 2026 · 11:00</div>
         <div
          className="de-title"
-         style={{ color: "var(--teal-light)", fontWeight: 700 }}
+         style={{ color: "var(--teal-on-navy)", fontWeight: 700 }}
         >
          Issue resolved
         </div>
@@ -121,7 +76,7 @@ export default function DemoSection() {
        </div>
       </div>
      </div>
-    </div>
+    </DemoTracker>
    </div>
   </section>
  );

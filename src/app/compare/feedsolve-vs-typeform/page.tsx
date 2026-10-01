@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+import { JsonLdScript as BreadcrumbScript } from "@/components/JsonLd";
+import { breadcrumbJsonLd as breadcrumbLd } from "@/lib/seo";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,23 +14,12 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title:
-    "FeedSolve vs Typeform: Surveys vs Resolution",
+export const metadata = generatePageMetadata({
+  title: "FeedSolve vs Typeform: Surveys vs Resolution",
   description:
     "Typeform builds beautiful surveys; FeedSolve resolves complaints. Compare tracking codes, Kanban workflows, multi-language forms and pricing for SMBs.",
-  openGraph: {
-    title:
-      "FeedSolve vs Typeform: Surveys vs Resolution",
-    description:
-      "Typeform builds beautiful surveys. FeedSolve resolves complaints. See the full comparison for SMB feedback management.",
-    url: "https://feedsolve.com/compare/feedsolve-vs-typeform/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/compare/feedsolve-vs-typeform/",
-  },
-};
+  path: "/compare/feedsolve-vs-typeform/",
+});
 
 const comparisonRows = [
   {
@@ -77,7 +68,7 @@ const comparisonRows = [
     feature: "Public reply to submitter",
     feedsolve: true,
     competitor: false,
-    note: "FeedSolve Growth & Pro plans",
+    note: "FeedSolve Growth & Business plans",
   },
   {
     feature: "Resolution rate dashboard",
@@ -107,7 +98,7 @@ const comparisonRows = [
     feature: "Branded QR codes with logo",
     feedsolve: true,
     competitor: false,
-    note: "FeedSolve Growth & Pro plans",
+    note: "FeedSolve Growth & Business plans",
   },
   {
     feature: "Conversational one-question form",
@@ -128,7 +119,7 @@ const comparisonRows = [
     note: "",
   },
   {
-    feature: "Free plan available",
+    feature: "Free trial or free plan",
     feedsolve: true,
     competitor: true,
     note: "Typeform free: 10 responses/month",
@@ -184,6 +175,7 @@ const jsonLd = {
 export default function VsTypeform() {
   return (
     <>
+      <BreadcrumbScript data={breadcrumbLd([{ name: "Home", url: "https://feedsolve.com/" }, { name: "Compare", url: "https://feedsolve.com/compare/" }, { name: "FeedSolve vs Typeform", url: "https://feedsolve.com/compare/feedsolve-vs-typeform/" }])} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -219,13 +211,13 @@ export default function VsTypeform() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
@@ -289,7 +281,7 @@ export default function VsTypeform() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -360,7 +352,7 @@ export default function VsTypeform() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--slate-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -413,7 +405,7 @@ export default function VsTypeform() {
                   >
                     <Check
                       size={14}
-                      style={{ color: "#16A34A", flexShrink: 0 }}
+                      style={{ color: "var(--green-text)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -431,7 +423,7 @@ export default function VsTypeform() {
                       gap: 10,
                       alignItems: "center",
                       fontSize: 14,
-                      color: "var(--text-light)",
+                      color: "var(--slate-text)",
                     }}
                   >
                     <X size={14} style={{ color: "#DC2626", flexShrink: 0 }} />{" "}
@@ -470,7 +462,7 @@ export default function VsTypeform() {
                   position: "absolute",
                   top: -12,
                   left: 28,
-                  background: "var(--teal)",
+                  background: "var(--teal-btn)",
                   color: "white",
                   fontSize: 10,
                   fontWeight: 800,
@@ -486,7 +478,7 @@ export default function VsTypeform() {
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.4)",
+                  color: "var(--muted-on-navy)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -543,7 +535,7 @@ export default function VsTypeform() {
                   >
                     <Check
                       size={14}
-                      style={{ color: "var(--teal-light)", flexShrink: 0 }}
+                      style={{ color: "var(--teal-on-navy)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -596,7 +588,7 @@ export default function VsTypeform() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -611,7 +603,7 @@ export default function VsTypeform() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -626,7 +618,7 @@ export default function VsTypeform() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -662,7 +654,7 @@ export default function VsTypeform() {
                         <div
                           style={{
                             fontSize: 11,
-                            color: "var(--text-light)",
+                            color: "var(--slate-text)",
                             marginTop: 3,
                           }}
                         >
@@ -677,7 +669,7 @@ export default function VsTypeform() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -716,7 +708,7 @@ export default function VsTypeform() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -727,7 +719,7 @@ export default function VsTypeform() {
                         <span
                           style={{
                             fontSize: 12,
-                            color: "#E65100",
+                            color: "#b93c00",
                             fontWeight: 600,
                           }}
                         >
@@ -763,7 +755,7 @@ export default function VsTypeform() {
             style={{
               textAlign: "center",
               fontSize: 13,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               marginTop: 20,
             }}
           >
@@ -819,7 +811,7 @@ export default function VsTypeform() {
                       alignItems: "center",
                       justifyContent: "center",
                       flexShrink: 0,
-                      color: "var(--teal)",
+                      color: "var(--teal-text)",
                     }}
                   >
                     <ChevronDown size={13} />
@@ -861,8 +853,7 @@ export default function VsTypeform() {
               marginBottom: 36,
             }}
           >
-            Set up your first complaint board in under 2 minutes. Free to start,
-            no credit card.
+            Set up your first complaint board in under 2 minutes. Free 7-day trial.
           </p>
           <div
             style={{
@@ -898,7 +889,7 @@ export default function VsTypeform() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -916,7 +907,7 @@ export default function VsTypeform() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -965,7 +956,7 @@ export default function VsTypeform() {
                 >
                   {c.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {c.sub}
                 </div>
               </Link>

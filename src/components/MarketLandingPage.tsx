@@ -43,7 +43,7 @@ export default function MarketLandingPage({
       <main>
         <section style={{ background: "var(--navy)", padding: "92px 32px 68px" }}>
           <div className="container">
-            <div className="section-label" style={{ color: "var(--teal)", borderColor: "rgba(255,255,255,0.14)" }}>
+            <div className="section-label" style={{ color: "var(--teal-text)", borderColor: "rgba(255,255,255,0.14)" }}>
               <ShieldCheck size={13} /> {eyebrow}
             </div>
             <h1 style={{ color: "white", marginTop: 16, maxWidth: 820 }}>{h1}</h1>
@@ -64,20 +64,20 @@ export default function MarketLandingPage({
         <section style={{ padding: "70px 32px", background: "var(--bg)" }}>
           <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
             <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: 18, padding: 28 }}>
-              <ShieldCheck size={28} style={{ color: "var(--teal)", marginBottom: 16 }} />
+              <ShieldCheck size={28} style={{ color: "var(--teal-text)", marginBottom: 16 }} />
               <h2 style={{ fontSize: 24, color: "var(--navy)", marginBottom: 12 }}>{regulationTitle}</h2>
               <p style={{ color: "var(--text-mid)", lineHeight: 1.7 }}>{regulationBody}</p>
             </div>
             <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: 18, padding: 28 }}>
-              <ClipboardList size={28} style={{ color: "var(--teal)", marginBottom: 16 }} />
+              <ClipboardList size={28} style={{ color: "var(--teal-text)", marginBottom: 16 }} />
               <h2 style={{ fontSize: 24, color: "var(--navy)", marginBottom: 12 }}>{competitorTitle}</h2>
               <p style={{ color: "var(--text-mid)", lineHeight: 1.7 }}>{competitorBody}</p>
             </div>
             <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: 18, padding: 28 }}>
-              <QrCode size={28} style={{ color: "var(--teal)", marginBottom: 16 }} />
+              <QrCode size={28} style={{ color: "var(--teal-text)", marginBottom: 16 }} />
               <h2 style={{ fontSize: 24, color: "var(--navy)", marginBottom: 12 }}>Local SMB pricing</h2>
               <p style={{ color: "var(--text-mid)", lineHeight: 1.7 }}>
-                Start free, then upgrade from {price}. FeedSolve is priced by feedback boards instead of per-agent seats, so operations teams can invite the people needed to resolve issues without a per-user penalty.
+                Start with a free 7-day trial, then upgrade from {price}. FeedSolve is priced by feedback boards instead of per-agent seats, so operations teams can invite the people needed to resolve issues without a per-user penalty.
               </p>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function MarketLandingPage({
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14, marginTop: 28 }}>
               {industries.map((industry) => (
                 <div key={industry} style={{ display: "flex", gap: 10, alignItems: "center", background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 12, padding: "14px 16px" }}>
-                  <CheckCircle2 size={16} style={{ color: "var(--teal)" }} />
+                  <CheckCircle2 size={16} style={{ color: "var(--teal-text)" }} />
                   <span style={{ color: "var(--text-mid)", fontWeight: 600 }}>{industry}</span>
                 </div>
               ))}

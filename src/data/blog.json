@@ -263,7 +263,7 @@
   "id": 3,
   "meta": {
    "title": "Supplier Feedback Tool for Manufacturers (Free)",
-   "meta_description": "Track supplier defects, vendor approvals, and sample reviews on one QR-based board instead of WhatsApp threads. Free plan, and suppliers submit with no login.",
+   "meta_description": "Track supplier defects, vendor approvals and sample reviews on one QR-based board instead of WhatsApp threads. Free 7-day trial; suppliers need no login.",
    "slug": "/blog/supplier-feedback-tool-manufacturers",
    "primary_keyword": "supplier feedback tool for manufacturers",
    "secondary_keywords": [
@@ -403,7 +403,7 @@
   "id": 4,
   "meta": {
    "title": "Restaurant Feedback QR Code: Fix Complaints Fast",
-   "meta_description": "Put a QR code on every table so guests report issues instantly - and your team resolves them before they become a 1-star Google review. Free to start.",
+   "meta_description": "Put a QR code on every table so guests report issues instantly - and your team resolves them before they become a 1-star Google review. Free 7-day trial.",
    "slug": "/blog/restaurant-feedback-qr-code",
    "primary_keyword": "restaurant feedback QR code",
    "secondary_keywords": [
@@ -637,7 +637,7 @@
      "url": "/blog/track-every-issue"
     },
     {
-     "anchor": "free plan for small businesses",
+     "anchor": "free trial for small businesses",
      "url": "/"
     },
     {
@@ -791,7 +791,7 @@
  {
   "id": 7,
   "meta": {
-   "title": "No-Login Feedback Form: Stop Losing Responses to Sign-Up Walls",
+   "title": "No-Login Feedback Form: Skip the Sign-Up Wall",
    "meta_description": "Sign-up walls are the #1 reason people abandon feedback forms. See how no-login submission lifts response rates - and how to set one up free.",
    "slug": "/blog/no-login-feedback-form",
    "primary_keyword": "no-login feedback form",
@@ -894,7 +894,7 @@
      "url": "/blog/track-every-issue"
     },
     {
-     "anchor": "FeedSolve free plan",
+     "anchor": "FeedSolve free trial",
      "url": "/"
     }
    ],
@@ -912,7 +912,7 @@
   "id": 8,
   "meta": {
    "title": "Complaint Resolution Workflow: A 5-Stage Kanban",
-   "meta_description": "Move complaints from received to resolved with full accountability. Get the proven 5-stage Kanban workflow SMBs use to close every issue. Free to start.",
+   "meta_description": "Move complaints from received to resolved with full accountability. Get the proven 5-stage Kanban workflow SMBs use to close every issue. Free 7-day trial.",
    "slug": "/blog/complaint-resolution-workflow-smb",
    "primary_keyword": "complaint resolution workflow",
    "secondary_keywords": [
@@ -1042,8 +1042,8 @@
  {
   "id": 9,
   "meta": {
-   "title": "FeedSolve vs Typeform: Survey Builder or Feedback Resolution?",
-   "meta_description": "FeedSolve vs Typeform compared: one builds surveys, the other resolves complaints. See which fits your SMB - and which is free to start. Full breakdown.",
+   "title": "FeedSolve vs Typeform: Which Fits Your SMB?",
+   "meta_description": "FeedSolve vs Typeform compared: one builds surveys, the other resolves complaints. See which fits your SMB, and which offers a free 7-day trial.",
    "slug": "/blog/feedsolve-vs-typeform",
    "primary_keyword": "FeedSolve vs Typeform",
    "secondary_keywords": [
@@ -1199,7 +1199,7 @@
       },
       {
        "question": "Is FeedSolve cheaper than Typeform?",
-       "answer": "FeedSolve has a free plan and a Starter plan at $19/month. Typeform's equivalent paid tier starts at $29/month. For SMBs collecting operational complaints rather than research surveys, FeedSolve's pricing is purpose-aligned — you are paying for resolution workflow, not for conditional logic or response analytics."
+       "answer": "FeedSolve has a free 7-day trial and a Starter plan at $19/month. Typeform's equivalent paid tier starts at $29/month. For SMBs collecting operational complaints rather than research surveys, FeedSolve's pricing is purpose-aligned — you are paying for resolution workflow, not for conditional logic or response analytics."
       },
       {
        "question": "Does FeedSolve have beautiful forms like Typeform?",
@@ -1509,7 +1509,7 @@
  {
   "id": 12,
   "meta": {
-   "title": "QR Code Feedback System: Complete Setup Guide (Under 2 Minutes)",
+   "title": "QR Code Feedback System: Setup Guide",
    "meta_description": "Set up a QR code feedback system in under 2 minutes - no login, instant setup, automatic issue routing for restaurants, clinics, and manufacturers. Free.",
    "slug": "/blog/qr-code-feedback-system",
    "primary_keyword": "QR code feedback system",
@@ -1653,8 +1653,8 @@
  {
   "id": 13,
   "meta": {
-   "title": "Simple Zendesk Alternative: Complaint Tracking Without the Bloat",
-   "meta_description": "Want a simple Zendesk alternative? FeedSolve gives you 2-minute setup, flat pricing, and complaint tracking with no certification course. Free to start.",
+   "title": "Simple Zendesk Alternative for Complaints",
+   "meta_description": "Want a simple Zendesk alternative? FeedSolve gives you 2-minute setup, flat pricing, and complaint tracking with no certification course. Free 7-day trial.",
    "slug": "/blog/simple-zendesk-alternative",
    "primary_keyword": "simple Zendesk alternative",
    "secondary_keywords": [
@@ -1749,7 +1749,7 @@
      "faqs": [
       {
        "question": "Is FeedSolve really cheaper than Zendesk?",
-       "answer": "FeedSolve offers a free plan and paid plans starting at $19/month with flat team pricing — no per-seat penalties. Zendesk's paid tiers start at $19/agent/month and scale to $99/agent/month for full features. For a 5-person team, that's $95-$495/month with Zendesk vs. flat pricing with FeedSolve."
+       "answer": "FeedSolve offers a free 7-day trial and paid plans starting at $19/month with flat team pricing — no per-seat penalties. Zendesk's paid tiers start at $19/agent/month and scale to $99/agent/month for full features. For a 5-person team, that's $95-$495/month with Zendesk vs. flat pricing with FeedSolve."
       },
       {
        "question": "Can I import my Zendesk tickets into FeedSolve?",
@@ -1801,8 +1801,8 @@
  {
   "id": 14,
   "meta": {
-   "title": "Track Every Issue: How SMBs Hit 100% Feedback Accountability",
-   "meta_description": "Stop losing complaints in WhatsApp and email. Track every issue from submission to resolution with zero loss and a live resolution rate. Free to start.",
+   "title": "Track Every Issue: 100% Feedback Accountability",
+   "meta_description": "Stop losing complaints in WhatsApp and email. Track every issue from submission to resolution with zero loss and a live resolution rate. Free 7-day trial.",
    "slug": "/blog/track-every-issue",
    "primary_keyword": "track every issue",
    "secondary_keywords": [
@@ -1947,7 +1947,7 @@
  {
   "id": 15,
   "meta": {
-   "title": "Partner Complaint Tracking: Stop Losing B2B Issues in Email",
+   "title": "Partner Complaint Tracking for B2B Teams",
    "meta_description": "B2B partner and distributor complaints vanish in email threads. See how structured tracking with QR codes and a resolution workflow fixes it. Free.",
    "slug": "/blog/partner-complaint-tracking",
    "primary_keyword": "partner complaint tracking",
@@ -2140,7 +2140,7 @@
     {
      "heading": "H2: How to Choose the Right Feedback Management Software for Your Business Size",
      "key_points": [
-      "For businesses under 50 employees: you need fast setup, flat pricing, and a tool your team will actually use on day one. Enterprise platforms with implementation timelines and per-seat billing are not appropriate. Look for: QR code generation, no-login submission, Kanban board, resolution rate dashboard, and free plan to start.",
+      "For businesses under 50 employees: you need fast setup, flat pricing, and a tool your team will actually use on day one. Enterprise platforms with implementation timelines and per-seat billing are not appropriate. Look for: QR code generation, no-login submission, Kanban board, resolution rate dashboard, and a free 7-day trial to start.",
       "For businesses 50–200 employees: multi-board support becomes critical as you have multiple locations or stakeholder types. Email notifications and team assignment are essential. Custom branding on submission forms keeps the experience professional.",
       "For businesses 200–500 employees: API access, advanced analytics, and webhook integrations become relevant. Multi-language forms matter if you operate across regions.",
       "Tool pitfalls to avoid: survey tools (Typeform, SurveyMonkey) that stop at the submission screen; help desks (Zendesk, Freshdesk) that require submitters to create accounts; Google Forms that produce spreadsheets with no resolution workflow."
@@ -2204,7 +2204,7 @@
  {
   "id": 17,
   "meta": {
-   "title": "Complaint Management Software for SMBs: A Practical Buyer's Guide",
+   "title": "Complaint Management Software: SMB Buyer's Guide",
    "meta_description": "Which complaint management software is right for your SMB? See the features that matter, the enterprise bloat to skip, and how to start free.",
    "slug": "/blog/complaint-management-software-smb",
    "primary_keyword": "complaint management software for small business",
@@ -2390,7 +2390,7 @@
   "id": 18,
   "meta": {
    "title": "Employee Problem Reporting Tool for SMB Teams",
-   "meta_description": "One platform for staff problem reports and customer complaints - anonymous submission, tracking codes, and no login required. Free to start.",
+   "meta_description": "One platform for staff problem reports and customer complaints - anonymous submission, tracking codes, and no login required. Free 7-day trial.",
    "slug": "/blog/employee-problem-reporting-tool",
    "primary_keyword": "employee problem reporting tool",
    "secondary_keywords": [
@@ -2538,7 +2538,7 @@
  {
   "id": 19,
   "meta": {
-   "title": "Feedback Form Without Registration: Get 40-70% More Responses",
+   "title": "Feedback Form Without Registration: More Replies",
    "meta_description": "Requiring sign-up kills 40-70% of feedback. See why no-registration forms win - and how to collect complaints with zero friction. Free to try.",
    "slug": "/blog/feedback-form-without-registration",
    "primary_keyword": "feedback form without registration",
@@ -2645,7 +2645,7 @@
      "url": "/blog/employee-problem-reporting-tool"
     },
     {
-     "anchor": "FeedSolve free plan",
+     "anchor": "FeedSolve free trial",
      "url": "/"
     },
     {
@@ -2744,7 +2744,7 @@
      "faqs": [
       {
        "question": "Is FeedSolve free like Google Forms?",
-       "answer": "FeedSolve has a free plan that includes 2 feedback boards and unlimited submissions - so the starting cost is comparable. The paid plans start at $19/month, which adds more boards, team members, and features like email notifications and analytics. Google Forms is free with no usage limits, but also has no resolution workflow, no tracking codes, and no resolution rate dashboard."
+       "answer": "FeedSolve has a free 7-day trial with full access, including 2 feedback boards - so the starting cost is comparable. The paid plans start at $19/month, which adds more boards, team members, and features like email notifications and analytics. Google Forms is free with no usage limits, but also has no resolution workflow, no tracking codes, and no resolution rate dashboard."
       },
       {
        "question": "Can I import my existing Google Forms responses into FeedSolve?",
@@ -2775,7 +2775,7 @@
      "url": "/blog/feedback-resolution-rate"
     },
     {
-     "anchor": "FeedSolve free plan",
+     "anchor": "FeedSolve free trial",
      "url": "/"
     },
     {
@@ -2944,7 +2944,7 @@
  {
   "id": 23,
   "meta": {
-   "title": "Hotel Guest Feedback System: Fix It Before Check-Out",
+   "title": "Hotel Guest Feedback System: Fix Issues Early",
    "meta_description": "A hotel guest feedback system captures in-stay complaints via QR code — no app needed. Resolve issues in real time and protect your TripAdvisor rating.",
    "slug": "/blog/hotel-guest-feedback-system",
    "primary_keyword": "hotel guest feedback system",
@@ -3239,7 +3239,7 @@
       },
       {
        "question": "Is FeedSolve cheaper than SurveyMonkey?",
-       "answer": "FeedSolve's free plan and Starter plan at $19/month compare favourably to SurveyMonkey's paid tiers, which start at $25/month for basic features. SurveyMonkey's advanced analytics and integration tiers are significantly higher. For SMBs focused on complaint resolution rather than research analytics, FeedSolve's pricing is purpose-aligned."
+       "answer": "FeedSolve's free 7-day trial and Starter plan at $19/month compare favourably to SurveyMonkey's paid tiers, which start at $25/month for basic features. SurveyMonkey's advanced analytics and integration tiers are significantly higher. For SMBs focused on complaint resolution rather than research analytics, FeedSolve's pricing is purpose-aligned."
       },
       {
        "question": "Does FeedSolve have the survey design features SurveyMonkey offers?",
@@ -3440,7 +3440,7 @@
       },
       {
        "question": "Is FeedSolve cheaper than Freshdesk?",
-       "answer": "FeedSolve offers a free plan and a Starter plan at $19/month with flat team pricing. Freshdesk's paid plans start at $15/agent/month, making a 5-agent team $75/month minimum. Freshdesk's more feature-rich tiers range from $49 to $99/agent/month. For SMBs that need complaint resolution rather than multi-channel support infrastructure, FeedSolve is significantly more economical."
+       "answer": "FeedSolve offers a free 7-day trial and a Starter plan at $19/month with flat team pricing. Freshdesk's paid plans start at $15/agent/month, making a 5-agent team $75/month minimum. Freshdesk's more feature-rich tiers range from $49 to $99/agent/month. For SMBs that need complaint resolution rather than multi-channel support infrastructure, FeedSolve is significantly more economical."
       },
       {
        "question": "Does FeedSolve have the email management features Freshdesk offers?",
@@ -3611,7 +3611,7 @@
  {
   "id": 27,
   "meta": {
-   "title": "How to Respond to Customer Complaints: A Playbook",
+   "title": "How to Respond to Customer Complaints: Playbook",
    "meta_description": "How you respond to a customer complaint determines whether they stay or leave. This playbook walks through every stage — from first response to resolution.",
    "slug": "/blog/how-to-respond-to-customer-complaints",
    "primary_keyword": "how to respond to customer complaints",
@@ -3731,7 +3731,7 @@
      "url": "/blog/close-the-feedback-loop"
     },
     {
-     "anchor": "FeedSolve free plan",
+     "anchor": "FeedSolve free trial",
      "url": "/"
     },
     {
@@ -3752,7 +3752,7 @@
  {
   "id": 28,
   "meta": {
-   "title": "Anonymous Employee Feedback Tool: Why Safety Matters",
+   "title": "Anonymous Employee Feedback Tool: Why It Works",
    "meta_description": "Anonymous employee feedback tools capture what management channels miss — safety hazards, HR concerns, and process problems staff won't raise face-to-face.",
    "slug": "/blog/anonymous-employee-feedback-tool",
    "primary_keyword": "anonymous employee feedback",
@@ -3887,7 +3887,7 @@
  {
   "id": 29,
   "meta": {
-   "title": "Construction Client Feedback System for Contractors",
+   "title": "Construction Client Feedback System",
    "meta_description": "Construction client complaints get lost in email chains. FeedSolve gives contractors QR-based intake, Kanban tracking, and a full resolution trail per project.",
    "slug": "/blog/construction-client-feedback-system",
    "primary_keyword": "construction client feedback system",
@@ -4069,7 +4069,7 @@
      "heading": "H2: How to evaluate a tool in 10 minutes",
      "body": [
       "Run a quick test before you commit. Can you create a board and generate a QR code without a sales call? Can someone submit without signing up? Does that submission produce a tracking code? Can you assign it, change its status, and reply? Can you see a resolution rate somewhere? If the answer to any of these is no, you have a form, not a suggestion management tool — the same ten-minute test works when you are sizing up a [complaint management platform](/complaint-management-software/).",
-      "FeedSolve is free to start and covers all seven features, so you can run that test in one sitting and start collecting the same day. If you want to see the whole loop before you test anything, the [online suggestion box](/digital-suggestion-box-software/) overview walks through QR intake, assignment, tracking code, and resolution rate in order."
+      "FeedSolve has a free 7-day trial that covers all seven features, so you can run that test in one sitting and start collecting the same day. If you want to see the whole loop before you test anything, the [online suggestion box](/digital-suggestion-box-software/) overview walks through QR intake, assignment, tracking code, and resolution rate in order."
      ]
     },
     {
@@ -4077,7 +4077,7 @@
      "faqs": [
       {
        "question": "What is the best free suggestion box software?",
-       "answer": "FeedSolve is free to start with no credit card required - you can create a board, generate a QR code, and collect suggestions in minutes. Unlike a free Google Form, it also lets you assign, track, and resolve each submission."
+       "answer": "FeedSolve has a free 7-day trial with full access - you can create a board, generate a QR code, and collect suggestions in minutes. Unlike a free Google Form, it also lets you assign, track, and resolve each submission."
       },
       {
        "question": "Can suggestion box software be anonymous?",
@@ -4109,7 +4109,7 @@
  {
   "id": 31,
   "meta": {
-   "title": "How to Set Up an Online Suggestion Box in 10 Minutes",
+   "title": "Set Up an Online Suggestion Box in 10 Minutes",
    "meta_description": "How to set up an online suggestion box in 10 minutes: pick a tool, create the form, share the QR code and keep people submitting after launch.",
    "slug": "/blog/online-suggestion-box-setup",
    "primary_keyword": "online suggestion box",
@@ -4129,7 +4129,7 @@
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
-   "quick_answer_box": "To set up an online suggestion box: (1) create a suggestion board, (2) turn on anonymous, no-login submission, (3) generate a branded QR code and link, (4) place the QR code where people are and share the link, and (5) review and resolve submissions from your dashboard. With FeedSolve this takes about 10 minutes and is free to start.",
+   "quick_answer_box": "To set up an online suggestion box: (1) create a suggestion board, (2) turn on anonymous, no-login submission, (3) generate a branded QR code and link, (4) place the QR code where people are and share the link, and (5) review and resolve submissions from your dashboard. With FeedSolve this takes about 10 minutes and has a free 7-day trial.",
    "h1": "How to Set Up an Online Suggestion Box in 10 Minutes",
    "key_takeaways": [
     "An online suggestion box should make submitting effortless and losing a suggestion impossible",
@@ -4148,7 +4148,7 @@
     {
      "heading": "H2: The 5-step setup",
      "key_points": [
-      "Create a suggestion board: start a free account and make a board for suggestions. Make two if you want separate staff and customer boxes.",
+      "Create a suggestion board: start a free trial and make a board for suggestions. Make two if you want separate staff and customer boxes.",
       "Turn on anonymous, no-login submission: friction-free, anonymous submission is the difference between a busy box and an empty one.",
       "Generate a QR code and link: a branded QR code for physical spaces and a shareable link for email, chat, and your intranet.",
       "Put it where people are: print the QR code for the break room, reception, or counter, and post the link in your team channel.",
@@ -4169,7 +4169,7 @@
      "faqs": [
       {
        "question": "How long does it take to set up an online suggestion box?",
-       "answer": "About 10 minutes with FeedSolve: create a board, enable anonymous submission, generate a QR code and link, and you're collecting. It's free to start with no credit card."
+       "answer": "About 10 minutes with FeedSolve: create a board, enable anonymous submission, generate a QR code and link, and you're collecting. There is a free 7-day trial with full access."
       },
       {
        "question": "What's the difference between an online, virtual, and electronic suggestion box?",
@@ -4201,7 +4201,7 @@
  {
   "id": 32,
   "meta": {
-   "title": "Small Restaurant Feedback System: Catch a Bad Night",
+   "title": "Small Restaurant Feedback System",
    "meta_description": "A small restaurant feedback system you can run in minutes a day: table QR codes, instant alerts and a simple log so problems stop repeating.",
    "slug": "/blog/small-restaurant-feedback-system",
    "primary_keyword": "small restaurant feedback system",
@@ -4272,7 +4272,7 @@
       "A complaint resolved during the visit is the single strongest driver of a return visit — recovery done well beats a merely fine experience.",
       "Complaint categories become a free operations report: if 'Wait Time' spikes every Friday, that is a rota problem, not bad luck.",
       "Resolved diners are the right people to ask for a public review — after the fix, not before.",
-      "Total cost for a small restaurant: printing a few table tents. The board itself is free to start."
+      "Total cost for a small restaurant: printing a few table tents. The board itself is covered by the free 7-day trial."
      ],
      "body": [
       "The first effect owners notice is that the feedback starts arriving at all. Issues you never heard about — the toilets at 9 PM, the draft from the side door, the server who pushes specials too hard — show up within weeks, because for the first time reporting them costs the diner nothing socially. Some of these become live saves; a portion of complaints that would have been review-platform posts are now private cards on your board. Every one of those is a rating point protected, and for a restaurant living at 4.3 stars the difference is bookings.",
@@ -4336,7 +4336,7 @@
  {
   "id": 33,
   "meta": {
-   "title": "Restaurant Chain Feedback Management: One Dashboard",
+   "title": "Restaurant Chain Feedback Management",
    "meta_description": "Restaurant chain feedback management: one QR code per location, local owners for every complaint and one dashboard to compare every site.",
    "slug": "/blog/restaurant-chain-feedback-management",
    "primary_keyword": "restaurant chain feedback management",
@@ -4471,7 +4471,7 @@
  {
   "id": 34,
   "meta": {
-   "title": "Franchise Restaurant Feedback System for Every Site",
+   "title": "Franchise Restaurant Feedback System",
    "meta_description": "A franchise restaurant feedback system that protects the brand across sites you do not run: one QR standard, local owners and a group-wide view.",
    "slug": "/blog/franchise-restaurant-feedback-system",
    "primary_keyword": "franchise restaurant feedback system",
@@ -4606,7 +4606,7 @@
  {
   "id": 35,
   "meta": {
-   "title": "How to Handle Restaurant Complaints: Scripts + Playbook",
+   "title": "How to Handle Restaurant Complaints: Scripts",
    "meta_description": "How to handle restaurant complaints: what to say at the table, scripts for food, waits and billing, and how to log issues so they stop repeating.",
    "slug": "/blog/how-to-handle-restaurant-complaints",
    "primary_keyword": "how to handle restaurant complaints",
@@ -4743,7 +4743,7 @@
   "id": 36,
   "meta": {
    "title": "Digital Comment Cards for Restaurants",
-   "meta_description": "A digital comment card is a QR code diners scan to leave feedback in under a minute — no pen, no box, no login. What it is, what to ask, and how to close the loop.",
+   "meta_description": "A digital comment card is a QR code diners scan to leave feedback in under a minute, with no pen, box or login. What to ask and how to close the loop.",
    "slug": "/blog/digital-comment-card-restaurants",
    "primary_keyword": "digital comment card for restaurants",
    "secondary_keywords": [
@@ -4877,7 +4877,7 @@
  {
   "id": 37,
   "meta": {
-   "title": "7 Best Qualtrics Alternatives for Small Business (2026)",
+   "title": "7 Best Qualtrics Alternatives for SMBs (2026)",
    "meta_description": "The best Qualtrics alternatives for small and mid-sized teams, compared on price, setup effort and what happens after feedback comes in.",
    "slug": "/blog/best-qualtrics-alternatives",
    "primary_keyword": "Qualtrics alternatives",
@@ -4919,11 +4919,11 @@
       "Built for the operational half of CX that survey suites skip: intake, assignment, tracking, resolution.",
       "Zero-login submission via QR code or link, in any language — customers and staff submit in seconds.",
       "Every submission gets a public #FSV-XXXX tracking code; a Kanban workflow drives it to resolved.",
-      "Flat, published pricing: free plan, then $19–79/month. Self-serve setup in minutes."
+      "Flat, published pricing: 7-day free trial, then $19–79/month. Self-serve setup in minutes."
      ],
      "body": [
       "If the reason you looked at Qualtrics was customer complaints, staff suggestions, or supplier issues — feedback that requires action, not analysis — FeedSolve replaces the part of the suite you would actually use. People submit through a QR code or link with no account and no app, each submission receives a unique tracking code the submitter can check later, and your team works the queue on a Kanban board with owners, priorities, and a full audit trail. The headline metric is resolution rate: not how people feel, but whether you fixed what they told you.",
-      "The contrast with Qualtrics is deliberate. There is no text-analytics engine and no journey mapping — and no six-month rollout or five-figure invoice either. Pricing is published (free to start, then $19–79/month flat), setup is self-serve, and the first QR code can be on a counter the same afternoon. For SMBs, that trade is usually the right one: the bottleneck is rarely analysis; it is closing the loop."
+      "The contrast with Qualtrics is deliberate. There is no text-analytics engine and no journey mapping — and no six-month rollout or five-figure invoice either. Pricing is published (7-day free trial, then $19–79/month flat), setup is self-serve, and the first QR code can be on a counter the same afternoon. For SMBs, that trade is usually the right one: the bottleneck is rarely analysis; it is closing the loop."
      ]
     },
     {
@@ -5023,7 +5023,7 @@
      "faqs": [
       {
        "question": "What is the best free Qualtrics alternative?",
-       "answer": "Google Forms is the best fully free option for basic surveys and intake. If your feedback involves complaints or suggestions that need follow-up, FeedSolve's free plan is the better fit — it adds QR-code collection, anonymous submission, and a resolution workflow with tracking codes at no cost, with paid plans from $19/month."
+       "answer": "Google Forms is the best fully free option for basic surveys and intake. If your feedback involves complaints or suggestions that need follow-up, FeedSolve's free 7-day trial is the better fit — it adds QR-code collection, anonymous submission, and a resolution workflow with tracking codes at no cost, with paid plans from $19/month."
       },
       {
        "question": "How much does Qualtrics cost for a small business?",
@@ -5039,7 +5039,7 @@
       },
       {
        "question": "Can FeedSolve replace Qualtrics?",
-       "answer": "For enterprise research programmes, no — FeedSolve does not do journey mapping, panels, or statistical analysis. For what most SMBs actually wanted from Qualtrics — collecting customer and staff feedback and demonstrably resolving it — yes, and it is live the same day on a free plan rather than after a sales cycle."
+       "answer": "For enterprise research programmes, no — FeedSolve does not do journey mapping, panels, or statistical analysis. For what most SMBs actually wanted from Qualtrics — collecting customer and staff feedback and demonstrably resolving it — yes, and it is live the same day on a free trial rather than after a sales cycle."
       }
      ]
     }
@@ -5069,7 +5069,7 @@
    "key_takeaways": [
     "Qualtrics is quote-only, demo-gated, and built for staffed research teams — the procurement process alone rules it out for most SMBs",
     "Split the decision by job: survey tools (SurveyMonkey, SurveySparrow, Alchemer) measure sentiment; resolution tools (FeedSolve, partially Zonka) fix individual issues",
-    "FeedSolve is the strongest choice when feedback means complaints and suggestions that need owners, statuses, and a submitter-visible tracking code — free plan, then $19–79/month",
+    "FeedSolve is the strongest choice when feedback means complaints and suggestions that need owners, statuses, and a submitter-visible tracking code — 7-day free trial, then $19–79/month",
     "Medallia is not an escape from Qualtrics' pricing model; it is the same enterprise category with the same buying experience",
     "Google Forms is a fine free start, but a spreadsheet has no owners or statuses — upgrade to a resolution layer once stakes or volume grow"
    ],
@@ -5079,7 +5079,7 @@
  {
   "id": 38,
   "meta": {
-   "title": "6 Best Freshdesk Alternatives for Small Teams (Free & Paid, 2026)",
+   "title": "6 Best Freshdesk Alternatives for Small Teams",
    "meta_description": "Six Freshdesk alternatives for small teams, free and paid, compared on pricing, setup time and whether they actually close the loop on complaints.",
    "slug": "/blog/best-freshdesk-alternatives",
    "primary_keyword": "Freshdesk alternatives",
@@ -5099,7 +5099,7 @@
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
-   "quick_answer_box": "The best Freshdesk alternative for a small team depends on whether you need a ticketing helpdesk or a feedback-and-complaint loop. For complaint and feedback management without per-agent fees, FeedSolve is the strongest pick — free to start, flat $19–79/month after, no logins for submitters. For classic email ticketing, Zoho Desk (free up to 3 agents) and Spiceworks (fully free) cover the budget end, while HappyFox and Zendesk serve teams that want more workflow at higher per-agent prices.",
+   "quick_answer_box": "The best Freshdesk alternative for a small team depends on whether you need a ticketing helpdesk or a feedback-and-complaint loop. For complaint and feedback management without per-agent fees, FeedSolve is the strongest pick — 7-day free trial, flat $19–79/month after, no logins for submitters. For classic email ticketing, Zoho Desk (free up to 3 agents) and Spiceworks (fully free) cover the budget end, while HappyFox and Zendesk serve teams that want more workflow at higher per-agent prices.",
    "h1": "6 Best Freshdesk Alternatives for Small Teams (Free & Paid, 2026)",
    "sections": [
     {
@@ -5118,14 +5118,14 @@
     {
      "heading": "H2: 1. FeedSolve — Best for Complaints & Feedback Without Per-Agent Fees",
      "key_points": [
-      "Flat pricing: free plan, then $19–79/month total — not per agent. The whole team can work the queue.",
+      "Flat pricing: 7-day free trial, then $19–79/month total — not per agent. The whole team can work the queue.",
       "Zero-login intake via QR code or link, in any language; submitters can stay anonymous.",
       "Every submission gets a public #FSV-XXXX tracking code — submitters check status themselves, cutting 'any update?' load.",
       "Kanban resolution workflow with assignment, priorities, and resolution-rate analytics."
      ],
      "body": [
       "FeedSolve replaces Freshdesk for the businesses that were never really shopping for a helpdesk — they were shopping for a way to stop losing complaints and feedback. Intake is a QR code or link: no account, no app, no email required, so the counter customer and the anonymous employee are captured as reliably as the person who would have emailed. Each submission gets a tracking code the submitter can check publicly, which does the job an auto-reply and a portal login do in Freshdesk, with none of the friction.",
-      "The pricing model is the sharpest contrast. FeedSolve charges a flat monthly rate (free plan, then $19–79/month) regardless of how many team members triage, so the per-agent maths that makes Freshdesk expensive for small teams simply doesn't apply. What you give up is deep helpdesk machinery — SLA policies, canned-response libraries, omnichannel inboxes. If you run a high-volume email support desk, that machinery matters and a true helpdesk is the right buy. If you run a restaurant, clinic, factory, or property portfolio, it almost certainly is not."
+      "The pricing model is the sharpest contrast. FeedSolve charges a flat monthly rate (7-day free trial, then $19–79/month) regardless of how many team members triage, so the per-agent maths that makes Freshdesk expensive for small teams simply doesn't apply. What you give up is deep helpdesk machinery — SLA policies, canned-response libraries, omnichannel inboxes. If you run a high-volume email support desk, that machinery matters and a true helpdesk is the right buy. If you run a restaurant, clinic, factory, or property portfolio, it almost certainly is not."
      ]
     },
     {
@@ -5198,7 +5198,7 @@
      "key_points": [
       "Issues arrive by email from customers expecting replies → agent-seat helpdesk: Zoho Desk (budget), HappyFox (process), Zendesk (scale).",
       "Issues arrive from the physical world — counters, break rooms, job sites → QR-first resolution tool: FeedSolve.",
-      "Budget is zero → Spiceworks (internal IT), Google Forms (bridge), or FeedSolve's free plan (feedback loop).",
+      "Budget is zero → Spiceworks (internal IT), Google Forms (bridge), or FeedSolve's free 7-day trial (feedback loop).",
       "Count who touches issues monthly: multiply by any per-agent price before comparing to flat pricing."
      ],
      "body": [
@@ -5211,7 +5211,7 @@
      "faqs": [
       {
        "question": "Is there a completely free Freshdesk alternative?",
-       "answer": "Yes — three realistic options. Spiceworks Cloud Help Desk is fully free ticketing (best for internal IT). Zoho Desk's free plan covers up to 3 agents with basic email ticketing. And FeedSolve's free plan covers QR-based complaint and feedback collection with a resolution workflow. Which one fits depends on whether your issues arrive by email or from the physical world."
+       "answer": "Yes — three realistic options. Spiceworks Cloud Help Desk is fully free ticketing (best for internal IT). Zoho Desk's free plan covers up to 3 agents with basic email ticketing. And FeedSolve's free 7-day trial covers QR-based complaint and feedback collection with a resolution workflow. Which one fits depends on whether your issues arrive by email or from the physical world."
       },
       {
        "question": "What is the main difference between FeedSolve and Freshdesk?",
@@ -5219,7 +5219,7 @@
       },
       {
        "question": "Which Freshdesk competitor is cheapest for a 3-person team?",
-       "answer": "For pure email ticketing, Zoho Desk's free tier covers exactly 3 agents, making it effectively free. Spiceworks is free at any size. For feedback and complaint management, FeedSolve's free plan (then $19/month) beats any per-agent helpdesk price at that team size."
+       "answer": "For pure email ticketing, Zoho Desk's free tier covers exactly 3 agents, making it effectively free. Spiceworks is free at any size. For feedback and complaint management, FeedSolve's free 7-day trial (then $19/month) beats any per-agent helpdesk price at that team size."
       },
       {
        "question": "Should I move from Freshdesk to Zendesk?",
@@ -5256,7 +5256,7 @@
    ],
    "key_takeaways": [
     "Freshdesk's pain for small teams is structural: per-agent seats, feature sprawl, and an email-ticket model that misses issues arising in the physical world",
-    "For genuinely free options: Spiceworks (unlimited free ticketing, IT-flavoured), Zoho Desk (free up to 3 agents), or FeedSolve's free plan (QR-first feedback loop)",
+    "For genuinely free options: Spiceworks (unlimited free ticketing, IT-flavoured), Zoho Desk (free up to 3 agents), or FeedSolve's free 7-day trial (QR-first feedback loop)",
     "FeedSolve is the pick when the real job is complaints and feedback, not email support — flat $19–79/month for the whole team, zero-login intake, public tracking codes",
     "HappyFox and Zendesk are for teams wanting more process and scale than Freshdesk, not less cost — know which direction you're moving",
     "Do the seat maths: count everyone who touches issues monthly and multiply by per-agent prices before comparing against flat-priced tools"
@@ -5287,7 +5287,7 @@
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
-   "quick_answer_box": "Medallia's real competitors split by company size. At enterprise scale, Qualtrics and InMoment compete head-to-head with the same quote-only pricing. For everyone else, the practical Medallia alternatives are self-serve tools: FeedSolve for collecting and resolving feedback and complaints (free plan, then $19–79/month flat), Zonka Feedback for omnichannel surveys with case management (from $49/month), and SurveySparrow or SurveyMonkey for conversational and classic surveys. Choose by the job — resolution versus measurement — not by feature-list length.",
+   "quick_answer_box": "Medallia's real competitors split by company size. At enterprise scale, Qualtrics and InMoment compete head-to-head with the same quote-only pricing. For everyone else, the practical Medallia alternatives are self-serve tools: FeedSolve for collecting and resolving feedback and complaints (7-day free trial, then $19–79/month flat), Zonka Feedback for omnichannel surveys with case management (from $49/month), and SurveySparrow or SurveyMonkey for conversational and classic surveys. Choose by the job — resolution versus measurement — not by feature-list length.",
    "h1": "6 Best Medallia Alternatives & Competitors in 2026 (SMB to Mid-Market)",
    "sections": [
     {
@@ -5309,7 +5309,7 @@
       "Covers the operational core of a CX programme: collect, assign, track, resolve — without the analytics superstructure.",
       "QR-code and link intake with no logins; anonymous submission; any language.",
       "Public #FSV-XXXX tracking code per submission — the closed-loop follow-up Medallia calls 'inner loop', minus the enterprise machinery.",
-      "Published flat pricing: free plan, then $19–79/month. Live the same day, self-serve."
+      "Published flat pricing: 7-day free trial, then $19–79/month. Live the same day, self-serve."
      ],
      "body": [
       "Strip a Medallia deployment down to the part that changes a small business's week and you get the closed loop: a customer or employee reports something, a person owns it, it gets fixed, and the reporter sees that it got fixed. FeedSolve is that loop as a standalone product. Intake happens through QR codes and links with zero logins — counter, break room, job site, invoice footer — every submission gets a public tracking code, and the team drives it to resolution on a Kanban board with an audit trail and a resolution-rate metric on top.",
@@ -5455,7 +5455,7 @@
  {
   "id": 40,
   "meta": {
-   "title": "Anonymous Suggestion Box: How to Set One Up Online (Free, 2026)",
+   "title": "Anonymous Suggestion Box: Set One Up Online",
    "meta_description": "Set up an anonymous suggestion box online for free: what makes it truly anonymous, how to reply without identifying anyone, and how to keep it alive.",
    "slug": "/blog/anonymous-suggestion-box",
    "primary_keyword": "anonymous suggestion box",
@@ -5523,12 +5523,12 @@
      "key_points": [
       "Paper box: familiar but weakly anonymous (handwriting, being seen) and write-only — no follow-up possible.",
       "Google Forms: free and quick, but perceived anonymity is poor on company accounts and responses rot in a sheet.",
-      "FeedSolve free plan: no-login QR submission, real tracking codes, Kanban follow-up — the closed loop, free.",
+      "FeedSolve free trial: no-login QR submission, real tracking codes, Kanban follow-up — the closed loop, free.",
       "Judge any option on two axes: does anyone believe it's anonymous, and does anything visibly happen?"
      ],
      "body": [
       "Three free routes, honestly compared. The paper box costs nothing and everyone understands it — but handwriting identifies, dropping a note in view of colleagues identifies, and once submitted, a note's fate is silence, which is why the box on the wall is a punchline. Google Forms upgrades legibility and collection but inherits two problems: staff can't verify the anonymity of a form living on the company's own Google account, and responses land in a spreadsheet with no owner, no status, and no way to answer an anonymous submitter — write-only with better fonts.",
-      "FeedSolve's free plan was effectively designed for this exact use case: submission via QR or link with no login and no account anywhere in the flow, a random tracking code issued to each submitter so the loop can close without identity, and a Kanban board so submissions become assigned work instead of sheet rows. The test that separates the options isn't features — it's whether a sceptical employee believes the channel is safe, and whether a submission from Monday visibly changes something by Friday. Paper fails both; Forms fails the second and wobbles on the first; a purpose-built free tool passes both, which is the whole argument. FeedSolve's [suggestion box software](/digital-suggestion-box-software/) page sets out exactly what the free plan covers, so you can check both tests against it before committing."
+      "FeedSolve's free 7-day trial was effectively designed for this exact use case: submission via QR or link with no login and no account anywhere in the flow, a random tracking code issued to each submitter so the loop can close without identity, and a Kanban board so submissions become assigned work instead of sheet rows. The test that separates the options isn't features — it's whether a sceptical employee believes the channel is safe, and whether a submission from Monday visibly changes something by Friday. Paper fails both; Forms fails the second and wobbles on the first; a purpose-built free tool passes both, which is the whole argument. FeedSolve's [suggestion box software](/digital-suggestion-box-software/) page sets out exactly what the free trial covers, so you can check both tests against it before committing."
      ]
     },
     {
@@ -5553,7 +5553,7 @@
       },
       {
        "question": "Is there a free anonymous suggestion box online?",
-       "answer": "Yes. FeedSolve's free plan includes anonymous no-login submission via QR code or link, tracking codes for every submission, and a board for following up — no credit card required. Google Forms is also free but is hard for staff to trust on a company account and gives you no way to reply to an anonymous submitter."
+       "answer": "Yes. FeedSolve's free 7-day trial includes anonymous no-login submission via QR code or link, tracking codes for every submission, and a board for following up. Google Forms is also free but is hard for staff to trust on a company account and gives you no way to reply to an anonymous submitter."
       },
       {
        "question": "How can I reply to someone who submitted anonymously?",
@@ -5650,7 +5650,7 @@
       "Keeps judgment and customer relationships in-house — usually the right default for SMBs."
      ],
      "body": [
-      "Dedicated software is the middle path and the usual right answer: your people keep handling complaints — with their context, authority, and relationships — while the tool supplies what humans forget: intake that can't be bypassed, automatic ownership, statuses that age visibly, and a count at the end of the month. At SMB scale this is inexpensive. FeedSolve, for instance, runs from a free plan to $79/month flat: complaints arrive by QR code or link with no login (capturing the counter customer and the anonymous employee, not just emailers), every submission gets a public #FSV-XXXX tracking code the complainant can check, and the team works a Kanban board with resolution rate as the headline metric. Enterprise case-management platforms extend this with compliance workflows and integrations at quote-only prices — justified in regulated industries, overkill elsewhere.",
+      "Dedicated software is the middle path and the usual right answer: your people keep handling complaints — with their context, authority, and relationships — while the tool supplies what humans forget: intake that can't be bypassed, automatic ownership, statuses that age visibly, and a count at the end of the month. At SMB scale this is inexpensive. FeedSolve, for instance, runs from a 7-day free trial to $79/month flat: complaints arrive by QR code or link with no login (capturing the counter customer and the anonymous employee, not just emailers), every submission gets a public #FSV-XXXX tracking code the complainant can check, and the team works a Kanban board with resolution rate as the headline metric. Enterprise case-management platforms extend this with compliance workflows and integrations at quote-only prices — justified in regulated industries, overkill elsewhere.",
       "When you shortlist software, three capabilities separate solutions from re-skinned inboxes. First, intake friction: every login wall or required field costs you the complaints you most need to hear. Second, complainant-visible status: a tracking code or status page eliminates the 'any update?' calls and proves the process works. Third, resolution metrics: if the tool can't tell you what percentage of complaints were resolved and how fast, it manages activity, not outcomes. Price varies less than these three do. FeedSolve's [complaint management software](/complaint-management-software/) page shows how those three capabilities look in practice: QR or link intake with no login, a #FSV-XXXX tracking code per complaint, and resolution rate as the headline metric."
      ]
     },
@@ -5702,7 +5702,7 @@
       },
       {
        "question": "Is there free complaint management software?",
-       "answer": "Yes. FeedSolve's free plan covers the core loop — QR/link intake with no logins, tracking codes for complainants, and a resolution board — with paid plans from $19/month. Free general tools (Google Forms, Spiceworks) can capture complaints but lack complainant follow-up and resolution tracking, which is usually what the search for a 'solution' is really about."
+       "answer": "Yes. FeedSolve's free 7-day trial covers the core loop — QR/link intake with no logins, tracking codes for complainants, and a resolution board — with paid plans from $19/month. Free general tools (Google Forms, Spiceworks) can capture complaints but lack complainant follow-up and resolution tracking, which is usually what the search for a 'solution' is really about."
       },
       {
        "question": "What should a complaint management solution include?",
@@ -5754,7 +5754,7 @@
  {
   "id": 42,
   "meta": {
-   "title": "Delivery Complaint Tracking Software for Courier and Fleet Teams",
+   "title": "Delivery Complaint Tracking Software for Fleets",
    "meta_description": "Delivery complaint tracking software for couriers and logistics teams: capture complaints by QR code, route them to depots and resolve every one.",
    "slug": "/blog/delivery-complaint-tracking-software",
    "primary_keyword": "delivery complaint tracking software",
@@ -5839,7 +5839,7 @@
       "Sequencing matters more than tooling. Teams that start by designing a perfect category taxonomy spend three weeks in meetings and never launch. Teams that start with five categories drawn from last month's actual complaints are collecting real data by Friday and can refine the list later.",
       "Placement drives volume. A code on the delivery note is scanned at the moment of the problem, when the recipient has the damaged item in front of them and the motivation to report it. A link buried in a footer of a monthly newsletter is scanned by nobody. If you deliver to businesses, put the code on the goods-in copy of the paperwork, because the person who signs is rarely the person who discovers the damage.",
       "Give drivers a reason to cooperate. A driver handed a complaint at the door has two options: absorb it and hope, or escalate it and look responsible for it. Pointing at a code is a third option that costs them nothing. Framed that way, adoption is quick.",
-      "Set up your first delivery complaint board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first delivery complaint board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -5873,7 +5873,7 @@
       },
       {
        "question": "What does delivery complaint tracking cost to start?",
-       "answer": "FeedSolve has a Free plan at $0 with QR codes, anonymous submissions and tracking codes, which is enough to run a single depot pilot. Starter is $19 per month, Growth is $49 per month and is the most common choice for multi-depot fleets, and Business is $79 per month."
+       "answer": "FeedSolve has a free 7-day trial at $0 with QR codes, anonymous submissions and tracking codes, which is enough to run a single depot pilot. Starter is $19 per month, Growth is $49 per month and is the most common choice for multi-depot fleets, and Business is $79 per month."
       }
      ]
     }
@@ -5914,8 +5914,8 @@
  {
   "id": 43,
   "meta": {
-   "title": "How to Stop Bad Restaurant Reviews Before They Are Posted",
-   "meta_description": "87% of unhappy diners contact the business before posting publicly. Learn how to catch restaurant complaints at the table and resolve them before they reach Google.",
+   "title": "Stop Bad Restaurant Reviews Before They Post",
+   "meta_description": "87% of unhappy diners contact the business before posting publicly. Learn to catch restaurant complaints at the table and resolve them before Google.",
    "slug": "/blog/stop-bad-restaurant-reviews-before-posted",
    "primary_keyword": "stop bad restaurant reviews before posted",
    "secondary_keywords": [
@@ -5999,7 +5999,7 @@
       "Keep the taxonomy small. Four categories cover the overwhelming majority of restaurant complaints and produce readable weekly totals. Twelve categories produce a spreadsheet nobody reads and a submission form that takes too long to complete during service.",
       "The staff briefing is the step operators skip and the one that determines volume. Servers need to understand that pointing at the code is not an admission of failure or a transfer of blame; it is the fastest way to hand a problem to someone who can solve it. Where servers are told the code is being used to score them, submissions collapse. Where they are told it removes an awkward conversation from their section, they use it.",
       "Closing the loop is what converts the guest. A tracking code means the diner can check the status themselves and read the manager's reply — 'we remade the dish, and we have changed the pass check for Friday service' — without another call or email. Guests who see a written resolution rarely go on to post the review they were composing.",
-      "Set up your first restaurant feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first restaurant feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -6033,7 +6033,7 @@
       },
       {
        "question": "How much does a restaurant feedback board cost?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, which is enough for a single site. Starter is $19 per month, Growth is $49 per month and is the most popular tier for multi-site operators, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, which is enough for a single site. Starter is $19 per month, Growth is $49 per month and is the most popular tier for multi-site operators, and Business is $79 per month."
       }
      ]
     }
@@ -6159,7 +6159,7 @@
       "Tie every submission to a repair order number. This is the single field that makes the system useful rather than decorative, because it lets a manager connect a complaint back to the job, the technician and the parts without a separate investigation. Make it optional rather than mandatory — a customer who cannot find the RO number should still be able to submit.",
       "Route warranty disputes away from the advisor whose conversation is being questioned. This is not a matter of trust; it is that an advisor defending their own account of a conversation cannot also adjudicate it. Sending coverage disagreements straight to the service manager resolves them faster and keeps the advisor relationship intact.",
       "Run the Monday review with advisors in the room rather than as a management report about them. Complaint data used punitively stops arriving: advisors quietly discourage customers from submitting, and volume falls while dissatisfaction does not. Used diagnostically — this dish, this shift, this parts delay — it produces the process fixes that reduce complaints at source.",
-      "Set up your first service complaint board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first service complaint board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -6193,7 +6193,7 @@
       },
       {
        "question": "What does this cost for a single-site service center?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, which covers a single-site pilot. Starter is $19 per month, Growth is $49 per month and is the usual choice for dealer groups needing branding and escalation rules, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, which covers a single-site pilot. Starter is $19 per month, Growth is $49 per month and is the usual choice for dealer groups needing branding and escalation rules, and Business is $79 per month."
       }
      ]
     }
@@ -6234,7 +6234,7 @@
  {
   "id": 45,
   "meta": {
-   "title": "Parent Feedback System for Schools: Report, Resolve and Reply",
+   "title": "Parent Feedback System for Schools",
    "meta_description": "A school parent feedback system that routes concerns to the right staff member and lets parents track progress without chasing by phone.",
    "slug": "/blog/school-parent-feedback-system",
    "primary_keyword": "parent feedback system for schools",
@@ -6319,7 +6319,7 @@
       "Naming owners is the step that determines whether this works. A category routed to 'the office' belongs to nobody. A category routed to a named coordinator with a named backup for absences produces movement, because an item sitting untouched for a week has a person's name against it in the Friday review.",
       "Announce the tracking code explicitly rather than leaving parents to discover it. The behaviour you want is a parent checking status themselves rather than calling the front office, and that only happens if they know the option exists. One slide at a parents' meeting and one message with a screenshot is usually enough.",
       "Review oldest-first, not newest-first. Leadership meetings naturally gravitate to the most recent and most emotive item, which means genuinely stale concerns sit for months while fresh ones get handled within hours. Sorting the board by age reverses that instinct and is the single change that moves resolution rate most.",
-      "Set up your first parent feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first parent feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -6353,7 +6353,7 @@
       },
       {
        "question": "What does a parent feedback system cost for one school?",
-       "answer": "The Free plan is $0 and covers QR codes, anonymous submissions and tracking codes, enough for a single campus to trial. Starter is $19 per month, Growth is $49 per month and suits schools needing branding and escalation rules across departments, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and covers QR codes, anonymous submissions and tracking codes, enough for a single campus to trial. Starter is $19 per month, Growth is $49 per month and suits schools needing branding and escalation rules across departments, and Business is $79 per month."
       }
      ]
     }
@@ -6395,7 +6395,7 @@
   "id": 46,
   "meta": {
    "title": "Buyer Complaint Tracking for Online Stores",
-   "meta_description": "Around one in five online orders comes back. Buyer complaint tracking software gives shoppers a public status they can check, unlike support tickets they cannot see.",
+   "meta_description": "Around one in five online orders comes back. Buyer complaint tracking software gives shoppers a public status to check, unlike hidden support tickets.",
    "slug": "/blog/ecommerce-buyer-complaint-tracking",
    "primary_keyword": "buyer complaint tracking software for online stores",
    "secondary_keywords": [
@@ -6479,7 +6479,7 @@
       "Route by cause, not by seniority. Damaged-in-transit complaints belong with whoever manages carriers and packaging; not-as-described belongs with whoever writes listings and approves photography; refund delays belong with finance. Sending all five categories to a single customer service queue guarantees that every complaint requires an internal forward before anything can happen, which is where most of the elapsed time goes.",
       "The packing slip QR code is the highest-yield placement and the most commonly missed. The buyer discovers the problem while unboxing, with the slip in their other hand. A link in an email sent four days earlier requires them to go and find the email. The difference in submission rate between the two is large.",
       "Publish the acknowledgement target on the form itself. A buyer who is told they will hear within one business day will generally wait one business day. A buyer told nothing will chase within hours, because they have no basis for expecting anything. This single line of copy reduces chase contacts noticeably.",
-      "Set up your first buyer complaint board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first buyer complaint board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -6513,7 +6513,7 @@
       },
       {
        "question": "What does buyer complaint tracking cost?",
-       "answer": "The Free plan is $0 with QR codes, anonymous submissions and tracking codes, which is enough to pilot on one product line. Starter is $19 per month, Growth is $49 per month and is the most popular tier for stores needing branding and escalation rules, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days with QR codes, anonymous submissions and tracking codes, which is enough to pilot on one product line. Starter is $19 per month, Growth is $49 per month and is the most popular tier for stores needing branding and escalation rules, and Business is $79 per month."
       }
      ]
     }
@@ -6554,7 +6554,7 @@
  {
   "id": 47,
   "meta": {
-   "title": "Subscriber Complaint Management Software for Telecom and ISPs",
+   "title": "Subscriber Complaint Management for Telecom",
    "meta_description": "Telecom subscriber complaint software for smaller operators and ISPs: log every complaint, route it to the right team and share a tracking code.",
    "slug": "/blog/telecom-subscriber-complaint-software",
    "primary_keyword": "subscriber complaint management software",
@@ -6639,7 +6639,7 @@
       "Set different acknowledgement targets per category and mean them. A thirty-minute target on outages is achievable because the acknowledgement is a status post, not a fix. A one-day target on billing is realistic because someone genuinely has to read an account. A single blended target across everything is always wrong for at least one category and is usually quietly abandoned.",
       "Put the submission route where a subscriber with no internet can find it. This sounds obvious and is routinely missed: a link that lives only on the web portal is useless to a customer whose connection is down. The bill footer, the printed router card and an SMS keyword are all reachable on mobile data.",
       "Templates matter more than they look. Network engineers write accurate notes that subscribers cannot parse, and a status reading 'OLT port fault, PON re-provisioned' produces another call. A short template that translates the fix into plain language — what was wrong, what was done, when service returned — is a ten-minute exercise that removes a recurring stream of follow-ups.",
-      "Set up your first subscriber complaint board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first subscriber complaint board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -6673,7 +6673,7 @@
       },
       {
        "question": "What does subscriber complaint management cost?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, enough to pilot on one service area. Starter is $19 per month, Growth is $49 per month and is the usual choice for operators needing escalation rules and branding, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, enough to pilot on one service area. Starter is $19 per month, Growth is $49 per month and is the usual choice for operators needing escalation rules and branding, and Business is $79 per month."
       }
      ]
     }
@@ -6714,7 +6714,7 @@
  {
   "id": 48,
   "meta": {
-   "title": "Member Feedback System for Gyms and Fitness Studios",
+   "title": "Member Feedback System for Gyms and Studios",
    "meta_description": "A gym member feedback system that catches equipment, cleanliness and class complaints early, before members cancel or post a review.",
    "slug": "/blog/gym-member-feedback-system",
    "primary_keyword": "member feedback system for gyms",
@@ -6799,7 +6799,7 @@
       "Encode the machine in the sticker. The difference between a member submitting 'treadmill broken' and the system recording 'Treadmill 04, belt slipping, reported 18:42' is the difference between a maintenance ticket someone has to chase and one they can act on. It also builds an asset fault history that is genuinely useful at replacement time.",
       "Set a service standard and publish it. Members submit when they believe something happens; they stop when they suspect it goes nowhere. A line on the sticker reading 'faults acknowledged within 24 hours' is a commitment that the gym then has to keep, which is precisely why it works.",
       "The monthly 'you said, we did' note is the cheapest retention activity in this list. Members who report a problem and then see it listed as fixed learn that reporting works, and members who never reported anything learn that the gym responds. Both groups behave differently as a result. Half a page on the noticeboard, once a month, is the entire cost.",
-      "Set up your first gym feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first gym feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -6833,7 +6833,7 @@
       },
       {
        "question": "What does a member feedback system cost for one gym?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, enough for a single site. Starter is $19 per month, Growth is $49 per month and is the common choice for multi-site operators wanting location-based QR codes, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, enough for a single site. Starter is $19 per month, Growth is $49 per month and is the common choice for multi-site operators wanting location-based QR codes, and Business is $79 per month."
       }
      ]
     }
@@ -6959,7 +6959,7 @@
       "Keep the form to two fields. Salon clients are submitting from a phone, often one-handed, sometimes annoyed. Every additional question loses submissions, and the fields people abandon on are exactly the ones that would have identified the problem. Category plus free text is enough; you can follow up for detail if they left a contact.",
       "Decide the redo policy before you start collecting, not after the first complaint arrives. A manager improvising a response to an unhappy colour client under pressure will either over-concede or get defensive. A written policy — service-result complaints get a redo appointment offered, no argument — makes the reply fast and consistent, which is what the client is actually judging.",
       "Review by stylist and by day, and treat both as pattern-finding rather than performance management. If Saturday generates most of the waiting complaints, the problem is the Saturday booking template, not the team. If one stylist's consultations produce repeated 'not what I asked for' notes, that is a training conversation about consultation technique, not a disciplinary one.",
-      "Set up your first salon feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first salon feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -6993,7 +6993,7 @@
       },
       {
        "question": "What does client feedback tracking cost for a salon?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, enough for a single salon. Starter is $19 per month, Growth is $49 per month and is the usual choice once you need custom branding across several locations, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, enough for a single salon. Starter is $19 per month, Growth is $49 per month and is the usual choice once you need custom branding across several locations, and Business is $79 per month."
       }
      ]
     }
@@ -7034,8 +7034,8 @@
  {
   "id": 50,
   "meta": {
-   "title": "Branch Customer Feedback Software for Banks and Microfinance",
-   "meta_description": "Teller queues, counter service and account admin shape how customers rate a branch. Branch customer feedback software captures each issue and closes it with a reply.",
+   "title": "Branch Customer Feedback Software for Banks",
+   "meta_description": "Teller queues, counter service and account admin shape branch ratings. Branch customer feedback software captures each issue and closes it with a reply.",
    "slug": "/blog/bank-branch-feedback-software",
    "primary_keyword": "branch customer feedback software for banks",
    "secondary_keywords": [
@@ -7119,7 +7119,7 @@
       "Location-specific codes are the foundation. If every branch shares one code, someone has to work out where each complaint came from, and in practice nobody does — the field goes unfilled and the data becomes a single undifferentiated pile. A distinct code per site removes the question entirely and costs nothing to produce.",
       "Placement should follow the complaint. The queue barrier catches waiting issues while the customer is still waiting, which is when they are motivated and specific about the time. The counter catches service issues. The exit door catches everything that only became clear once the customer had left the counter and thought about it, which is a surprisingly large share of account-administration complaints.",
       "Build in escalation rather than relying on goodwill. A branch manager receiving a complaint about their own branch is the right first owner and the wrong sole owner: they are busy, and some complaints are about decisions they made. A rule that anything unresolved after 48 hours becomes visible to the network manager keeps items moving without turning every complaint into an escalation.",
-      "Set up your first branch feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first branch feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -7153,7 +7153,7 @@
       },
       {
        "question": "What does branch feedback software cost?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, enough for a small pilot. Starter is $19 per month, Growth is $49 per month and adds location-based QR codes and escalation rules that branch networks generally need, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, enough for a small pilot. Starter is $19 per month, Growth is $49 per month and adds location-based QR codes and escalation rules that branch networks generally need, and Business is $79 per month."
       }
      ]
     }
@@ -7194,7 +7194,7 @@
  {
   "id": 51,
   "meta": {
-   "title": "Policyholder Complaint Tracking for Insurance Agencies",
+   "title": "Policyholder Complaint Tracking for Insurance",
    "meta_description": "Insurance claim complaint tracking for brokers and agencies: log every complaint, assign an owner and give policyholders a tracking code.",
    "slug": "/blog/insurance-claim-complaint-tracking",
    "primary_keyword": "policyholder complaint tracking for insurance agencies",
@@ -7279,7 +7279,7 @@
       "The weekly update rule is the one that matters most and the one teams resist, because updating a client to say nothing has changed feels like admitting failure. It is the opposite. A client who receives 'no movement from the adjuster this week, we have chased again today' knows the agency is still working. A client who receives nothing concludes their file has been forgotten, and that conclusion is what produces both the chase calls and the complaints about the agency rather than the carrier.",
       "Put the acknowledgement promise on the form itself. Clients calibrate their expectations to whatever they are told; told nothing, they expect an immediate reply and start chasing within hours. One line stating that submissions are acknowledged within one business day noticeably reduces chase contacts, at no cost.",
       "Route escalation on time rather than on severity. Deciding which complaints are serious enough to escalate requires a judgement someone has to make and often does not. A rule that anything untouched after two business days becomes visible to the service manager needs no judgement and catches the items that quietly stall.",
-      "Set up your first policyholder service board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first policyholder service board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -7313,7 +7313,7 @@
       },
       {
        "question": "What does policyholder complaint tracking cost?",
-       "answer": "The Free plan is $0 and includes shareable links, anonymous submissions and tracking codes, enough for a small agency to trial. Starter is $19 per month, Growth is $49 per month and is the usual choice once you need branding and escalation rules, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes shareable links, anonymous submissions and tracking codes, enough for a small agency to trial. Starter is $19 per month, Growth is $49 per month and is the usual choice once you need branding and escalation rules, and Business is $79 per month."
       }
      ]
     }
@@ -7354,8 +7354,8 @@
  {
   "id": 52,
   "meta": {
-   "title": "Member Feedback for Co-Working Spaces: Facilities and Community",
-   "meta_description": "Average member tenure in co-working is 22 months and retention decides profitability. A member feedback system captures the facility friction that ends memberships.",
+   "title": "Member Feedback for Co-Working Spaces",
+   "meta_description": "Average co-working member tenure is 22 months and retention decides profitability. A member feedback system captures the facility friction behind cancellations.",
    "slug": "/blog/coworking-member-feedback",
    "primary_keyword": "member feedback for co-working spaces",
    "secondary_keywords": [
@@ -7439,7 +7439,7 @@
       "Separate connectivity from facilities. In most spaces the wifi is managed by an external IT provider or a landlord, on a different response timescale from a broken chair. Merging them into one category means every connectivity report goes to a facilities lead who has to forward it, adding a day to something members are least patient about.",
       "Publish the acknowledgement standard next to the code, not in the member handbook. Members submit when they expect a response and stop when they do not, and the sign is what sets the expectation. It also creates the internal pressure that makes the standard real, which is the actual reason to write it down.",
       "The fortnightly summary is the piece that rebuilds the reporting habit the Slack channel destroyed. Members who see 'reported and fixed: meeting room 3 HDMI cable, kitchen tap, desk bank C access point replaced' understand that reports produce outcomes. It is also, incidentally, the best possible marketing to the members deciding whether to renew.",
-      "Set up your first co-working feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first co-working feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -7473,7 +7473,7 @@
       },
       {
        "question": "What does a co-working feedback system cost?",
-       "answer": "The Free plan is $0 with QR codes, anonymous submissions and tracking codes, enough for a single site. Starter is $19 per month, Growth is $49 per month and adds the location-based QR codes most spaces want for room-level and desk-level tagging, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days with QR codes, anonymous submissions and tracking codes, enough for a single site. Starter is $19 per month, Growth is $49 per month and adds the location-based QR codes most spaces want for room-level and desk-level tagging, and Business is $79 per month."
       }
      ]
     }
@@ -7514,7 +7514,7 @@
  {
   "id": 53,
   "meta": {
-   "title": "Guest Feedback Tracking for Tour Operators and Travel Agencies",
+   "title": "Guest Feedback Tracking for Tour Operators",
    "meta_description": "Travellers cannot download an app mid-trip on foreign data. Guest feedback tracking captures issues while the tour is running, when they can still be fixed.",
    "slug": "/blog/travel-agency-guest-feedback",
    "primary_keyword": "guest feedback tracking for tour operators",
@@ -7599,7 +7599,7 @@
       "Tag by tour code and day number. This is what turns individual complaints into product intelligence: when three consecutive departures report the same day-four hotel and the same day-six coach transfer, the itinerary has a defect rather than bad luck. Without the tagging, those three reports arrive weeks apart and look unrelated.",
       "The welcome briefing framing determines volume. A guide who says 'please leave feedback at the end' gets nothing. A guide who says 'if anything is wrong with your room or the schedule, scan this and our local team will deal with it today' gets reports on day one. Guides need to understand this helps them — it moves problems off their shoulders to the people who can actually authorise a room change.",
       "Review per departure rather than monthly. Tours run on a cycle, and a defect found after the September departure can be fixed before the October one only if somebody looks in September. A monthly report reviewed in arrears means the same group of travellers experiences the same problem three times before anything changes.",
-      "Set up your first tour feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first tour feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -7633,7 +7633,7 @@
       },
       {
        "question": "What does guest feedback tracking cost for a tour operator?",
-       "answer": "The Free plan is $0 with QR codes, anonymous submissions and tracking codes, enough to trial on one departure series. Starter is $19 per month, Growth is $49 per month and is the usual choice for operators running multiple destinations with escalation rules, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days with QR codes, anonymous submissions and tracking codes, enough to trial on one departure series. Starter is $19 per month, Growth is $49 per month and is the usual choice for operators running multiple destinations with escalation rules, and Business is $79 per month."
       }
      ]
     }
@@ -7674,8 +7674,8 @@
  {
   "id": 54,
   "meta": {
-   "title": "Patient Feedback System for Pharmacies and Diagnostic Clinics",
-   "meta_description": "Prescription waits and counter service shape how patients rate a pharmacy. A patient feedback system captures each service issue and closes it with a written reply.",
+   "title": "Patient Feedback System for Pharmacies",
+   "meta_description": "Prescription waits and counter service shape how patients rate a pharmacy. A patient feedback system captures each issue and closes it with a written reply.",
    "slug": "/blog/pharmacy-patient-feedback",
    "primary_keyword": "patient feedback system for pharmacies",
    "secondary_keywords": [
@@ -7759,7 +7759,7 @@
       "Put the clinical redirect on the form in plain words. One sentence — questions about your medicines should be raised with the pharmacist at the counter — placed above the categories does almost all of the boundary enforcement, and it protects patients from routing something urgent into an operational queue.",
       "Review by hour, not by month. Pharmacy complaints are almost entirely concentrated: a specific weekday, a specific hour, usually the period after local surgeries finish and prescriptions arrive in a block. A monthly total tells a manager they have a waiting problem. An hourly breakdown tells them they have a Thursday five-o'clock problem, which is a staffing rota decision they can make this week.",
       "Watch the collection category most closely, because it is the one that erodes trust fastest. Waiting is understood by patients as a shared condition of a busy pharmacy. A promise that was made and not kept is experienced as being let down personally, and it is also the category with the cheapest fix: a message when something is genuinely ready, rather than a time estimate given optimistically at the counter.",
-      "Set up your first pharmacy feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first pharmacy feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -7793,7 +7793,7 @@
       },
       {
        "question": "What does a patient feedback system cost for a pharmacy?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, enough for one site. Starter is $19 per month, Growth is $49 per month and adds the location-based codes and escalation rules that multi-site chains need, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, enough for one site. Starter is $19 per month, Growth is $49 per month and adds the location-based codes and escalation rules that multi-site chains need, and Business is $79 per month."
       }
      ]
     }
@@ -7834,8 +7834,8 @@
  {
   "id": 55,
   "meta": {
-   "title": "Attendee Feedback Tracking for Event and Conference Organisers",
-   "meta_description": "Post-event surveys return 10-20% and arrive after the event. Attendee feedback tracking routes venue, schedule and catering issues to on-site teams while it matters.",
+   "title": "Attendee Feedback Tracking for Event Organisers",
+   "meta_description": "Post-event surveys return 10-20% and arrive too late. Attendee feedback tracking routes venue, schedule and catering issues to on-site teams while it matters.",
    "slug": "/blog/event-attendee-feedback-system",
    "primary_keyword": "attendee feedback tracking for event organizers",
    "secondary_keywords": [
@@ -7919,7 +7919,7 @@
       "The badge back is the placement that works. Attendees have the badge on them at all times, they look at it constantly, and it survives a three-day event in a way a printed programme does not. Lanyard inserts and door signage add location specificity on top of a channel every attendee is already carrying.",
       "Fifteen minutes is the right acknowledgement target during show hours, and it is achievable because acknowledgement is not resolution. An attendee who reports an overcrowded room and receives a note within a quarter of an hour saying it has been passed to the venue team is satisfied even if the room stays crowded for another thirty minutes. Silence during a live event reads as nobody being there at all.",
       "The end-of-day review is where a multi-day event earns the benefit. Fifteen minutes with the category totals on a screen — twenty-two reports about the second-floor heat, nine about the coffee running out at eleven — produces a short list of overnight changes. Announcing those changes from the stage on day two closes the loop publicly and is one of the cheapest goodwill moves available to an organiser.",
-      "Set up your first event feedback board in under 2 minutes. Free plan available, no credit card required."
+      "Set up your first event feedback board in under 2 minutes. Free 7-day trial."
      ]
     },
     {
@@ -7953,7 +7953,7 @@
       },
       {
        "question": "What does attendee feedback tracking cost for one event?",
-       "answer": "The Free plan is $0 and includes QR codes, anonymous submissions and tracking codes, which is enough for a single-day event. Starter is $19 per month, Growth is $49 per month and adds the location-based codes and escalation rules multi-room events need, and Business is $79 per month."
+       "answer": "The free trial is $0 for 7 days and includes QR codes, anonymous submissions and tracking codes, which is enough for a single-day event. Starter is $19 per month, Growth is $49 per month and adds the location-based codes and escalation rules multi-room events need, and Business is $79 per month."
       }
      ]
     }
@@ -7994,7 +7994,7 @@
  {
   "id": 56,
   "meta": {
-   "title": "Vendor Sample Review Tracking: Stop Approving Samples Over Email",
+   "title": "Vendor Sample Review Tracking Without Email",
    "meta_description": "Track factory sample submissions, approvals, and revision rounds in one shared board instead of scattered email chains and WhatsApp photos. See how it works.",
    "slug": "/blog/vendor-sample-review-tracking",
    "primary_keyword": "vendor sample review tracking",
@@ -8513,7 +8513,7 @@
  {
   "id": 60,
   "meta": {
-   "title": "Restaurant Satisfaction Survey Questions: 18 to Copy",
+   "title": "Restaurant Satisfaction Survey: 18 Questions",
    "meta_description": "18 restaurant customer satisfaction survey questions for food, service, wait time and value, plus how to keep a table QR survey under 60 seconds.",
    "slug": "/blog/restaurant-customer-satisfaction-survey-questions",
    "primary_keyword": "restaurant customer satisfaction survey questions",

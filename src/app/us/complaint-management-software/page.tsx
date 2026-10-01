@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 import MarketLandingPage from "@/components/MarketLandingPage";
 
 const url = "https://feedsolve.com/us/complaint-management-software/";
 
-export const metadata: Metadata = {
-  title: "Complaint Management Software for Small Business US",
-  description: "FeedSolve is complaint tracking software for US small businesses: QR intake, tracking codes, assignment, resolution workflows, and flat pricing.",
+export const metadata = generatePageMetadata({
+  title: "Complaint Management Software for US SMBs",
+  description:
+    "FeedSolve is complaint tracking software for US small businesses: QR intake, tracking codes, assignment, resolution workflows, and flat pricing.",
+  path: "/us/complaint-management-software/",
   alternates: clusterAlternates("complaintManagement", "/us/complaint-management-software/"),
-};
+});
 
 export default function USComplaintManagementPage() {
   return (

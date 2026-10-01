@@ -9,7 +9,7 @@ export function BrHeader({ path, englishHref }: { path: string; englishHref?: st
     <header className="br-header">
       <div className="br-header-inner">
         <Link href="/br/" className="nav-logo" aria-label="FeedSolve Brasil - início">
-          <Image src="/logo.webp" alt="" width={28} height={28} priority />
+          <Image src="/brand-mark.webp" alt="" width={28} height={28} priority />
           <span className="nav-logo-text">FeedSolve</span>
           <span className="br-flag">Brasil</span>
         </Link>
@@ -38,7 +38,7 @@ export function BrFooter({ englishHref }: { englishHref?: string }) {
     <footer>
       <div className="footer-inner">
         <div className="footer-logo">
-          <Image src="/logo.webp" alt="FeedSolve" width={28} height={28} />
+          <Image src="/brand-mark.webp" alt="FeedSolve" width={28} height={28} />
           <span className="footer-logo-text">FeedSolve</span>
         </div>
         <div className="footer-links">

@@ -93,24 +93,6 @@
         ]
       },
       {
-        "source": "**/*.@(ico)",
-        "headers": [
-          {
-            "key": "X-Robots-Tag",
-            "value": "noindex"
-          }
-        ]
-      },
-      {
-        "source": "**/@(favicon|apple-touch-icon|apple-icon|icon|android-chrome)*.png",
-        "headers": [
-          {
-            "key": "X-Robots-Tag",
-            "value": "noindex"
-          }
-        ]
-      },
-      {
         "source": "/br{,/**}",
         "headers": [
           {
@@ -144,7 +126,7 @@
           },
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.firebaseapp.com https://*.run.app; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.firebaseapp.com https://*.run.app https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com; frame-src https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
           }
         ]
       }

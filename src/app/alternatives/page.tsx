@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,21 +7,12 @@ import { ArrowRight, ChevronRight, Search } from "lucide-react";
 
 const SITE_URL = "https://feedsolve.com";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Feedback Software Alternatives Compared",
   description:
     "Alternatives to Medallia, Qualtrics, Zonka, Typeform, Zendesk and more: honest guides on where FeedSolve wins and where each tool still fits.",
-  openGraph: {
-    title: "Feedback Software Alternatives Compared",
-    description:
-      "Honest alternative guides for enterprise CX suites, survey platforms, form builders, feature boards, helpdesks, QR tools, and review platforms.",
-    url: `${SITE_URL}/alternatives/`,
-    type: "website",
-  },
-  alternates: {
-    canonical: `${SITE_URL}/alternatives/`,
-  },
-};
+  path: "/alternatives/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -67,7 +58,7 @@ export default function AlternativesHub() {
             <div
               className="section-label"
               style={{
-                color: "var(--teal)",
+                color: "var(--teal-text)",
                 borderColor: "rgba(255,255,255,0.14)",
               }}
             >
@@ -92,7 +83,7 @@ export default function AlternativesHub() {
               single-purpose anonymous suggestion box, start with the{" "}
               <Link
                 href="/alternatives/suggestion-ox/"
-                style={{ color: "var(--teal-light)", fontWeight: 600 }}
+                style={{ color: "var(--teal-on-navy)", fontWeight: 600 }}
               >
                 Suggestion Ox alternative
               </Link>{" "}
@@ -165,7 +156,7 @@ export default function AlternativesHub() {
                         </p>
                         <span
                           style={{
-                            color: "var(--teal)",
+                            color: "var(--teal-text)",
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 6,
@@ -202,7 +193,7 @@ export default function AlternativesHub() {
                 Prefer head-to-head feature tables? See our{" "}
                 <Link
                   href="/compare/"
-                  style={{ color: "var(--teal)", fontWeight: 700 }}
+                  style={{ color: "var(--teal-text)", fontWeight: 700 }}
                 >
                   detailed comparison pages
                 </Link>{" "}

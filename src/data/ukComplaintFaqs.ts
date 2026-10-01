@@ -1,7 +1,7 @@
 export const ukComplaintFaqs = [
   {
     q: "Is FeedSolve complaint management software UK GDPR compliant?",
-    a: "Yes. FeedSolve is designed with UK GDPR data minimisation principles in mind. Contact fields are optional — submitters can remain anonymous. No special categories of personal data are collected. Data is stored securely and configurable retention settings are available on Growth and Pro plans. FeedSolve does not sell or share submitter data with third parties.",
+    a: "Yes. FeedSolve is designed with UK GDPR data minimisation principles in mind. Contact fields are optional — submitters can remain anonymous. No special categories of personal data are collected. Data is stored securely and configurable retention settings are available on Growth and Business plans. FeedSolve does not sell or share submitter data with third parties.",
   },
   {
     q: "Does FeedSolve replace a dedicated UK complaint management system?",

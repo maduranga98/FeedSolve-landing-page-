@@ -22,7 +22,7 @@ const PAGE_URL = `https://feedsolve.com${PAGE_PATH}`;
 export const metadata = generatePageMetadata({
   title: "3PL Feedback Platform for Shipper Complaints",
   description:
-    "A 3PL feedback platform for shipper and consignee complaints: QR intake with no login, routing to the right site lead, and a public tracking code on every issue.",
+    "A 3PL feedback platform for shipper and consignee complaints: no-login QR intake, routing to the right site lead, and a public tracking code on every issue.",
   path: PAGE_PATH,
 });
 
@@ -53,10 +53,9 @@ export default function LogisticsThreePlFeedbackPlatform() {
   return (
     <>
       {/*
-        SoftwareApplication + Offer schema is already emitted site-wide from
-        src/app/layout.tsx (see generateSoftwareAppSchema in @/lib/seo/schema
-        for the standalone version) - repeating it here would ship two
-        competing entities for the same product on one page.
+        SoftwareApplication + Offer schema lives on the homepage only (see
+        generateSoftwareAppSchema in @/lib/seo/schema) - repeating it here would
+        ship competing entities for the same product.
       */}
       <JsonLdScript
         data={[
@@ -227,7 +226,7 @@ export default function LogisticsThreePlFeedbackPlatform() {
         }
         faqs={faqs.map((faq) => ({ q: faq.question, a: faq.answer }))}
         ctaHeading="Every shipper and consignee complaint tracked to resolution."
-        ctaSub="Set up your first site board in 2 minutes. Free to start, no credit card."
+        ctaSub="Set up your first site board in 2 minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/logistics/delivery-feedback/",

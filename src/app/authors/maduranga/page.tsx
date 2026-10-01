@@ -1,46 +1,31 @@
-import { JsonLdScript as BreadcrumbScript } from "@/components/JsonLd";
-import { breadcrumbJsonLd as breadcrumbLd } from "@/lib/seo";
-import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { JsonLdScript } from "@/components/JsonLd";
+import { founderPersonJsonLd } from "@/lib/blog/authors";
+import { breadcrumbJsonLd, SITE_URL } from "@/lib/seo";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { ArrowRight, ChevronRight, ClipboardList, ShieldCheck } from "lucide-react";
 
-const SITE_URL = "https://feedsolve.com";
-
 export const metadata = generatePageMetadata({
-  title: "FeedSolve Team — Author Profile",
+  title: "Maduranga, Founder of FeedSolve",
   description:
-    "Meet the FeedSolve Team, writing practical guides on feedback management, complaint tracking, QR feedback, and operational resolution workflows for SMBs.",
-  path: "/authors/feedsolve-team/",
+    "Maduranga is the founder of FeedSolve and writes practical guides on feedback management, complaint tracking and QR feedback for SMBs.",
+  path: "/authors/maduranga/",
 });
 
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "FeedSolve Team",
-  url: `${SITE_URL}/authors/feedsolve-team/`,
-  worksFor: {
-    "@type": "Organization",
-    name: "FeedSolve",
-    url: `${SITE_URL}/`,
-  },
-  knowsAbout: [
-    "feedback management software",
-    "complaint tracking",
-    "QR code feedback",
-    "SMB operations",
-    "complaint resolution workflows",
-  ],
-};
-
-export default function FeedSolveTeamAuthorPage() {
+export default function MadurangaAuthorPage() {
   return (
     <>
-      <BreadcrumbScript data={breadcrumbLd([{ name: "Home", url: "https://feedsolve.com/" }, { name: "Blog", url: "https://feedsolve.com/blog/" }, { name: "FeedSolve Team", url: "https://feedsolve.com/authors/feedsolve-team/" }])} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      <JsonLdScript
+        data={[
+          { ...founderPersonJsonLd({ standalone: true }), knowsAbout: ["feedback management software", "complaint tracking", "QR code feedback", "SMB operations"] },
+          breadcrumbJsonLd([
+            { name: "Home", url: `${SITE_URL}/` },
+            { name: "Blog", url: `${SITE_URL}/blog/` },
+            { name: "Maduranga", url: `${SITE_URL}/authors/maduranga/` },
+          ]),
+        ]}
       />
       <Navbar variant="blog" />
       <main>
@@ -51,19 +36,19 @@ export default function FeedSolveTeamAuthorPage() {
               <ChevronRight size={13} />
               <Link href="/blog/" style={{ color: "rgba(255,255,255,0.8)" }}>Blog</Link>
               <ChevronRight size={13} />
-              <span>FeedSolve Team</span>
+              <span>Maduranga</span>
             </div>
             <div style={{ display: "flex", gap: 24, alignItems: "center", flexWrap: "wrap" }}>
               <div style={{ width: 96, height: 96, borderRadius: "50%", background: "var(--teal-btn)", color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32, fontWeight: 800 }}>
-                FS
+                M
               </div>
               <div>
                 <div className="section-label" style={{ color: "var(--teal-text)", borderColor: "rgba(255,255,255,0.14)" }}>
                   <ClipboardList size={13} /> Author profile
                 </div>
-                <h1 style={{ color: "white", marginTop: 14 }}>FeedSolve Team</h1>
+                <h1 style={{ color: "white", marginTop: 14 }}>Maduranga</h1>
                 <p style={{ color: "rgba(255,255,255,0.72)", fontSize: 18, lineHeight: 1.65, maxWidth: 720, marginTop: 12 }}>
-                  Operations and product specialists writing about practical feedback management, complaint resolution, QR feedback collection, and accountability workflows for small and mid-sized businesses.
+                  Founder of FeedSolve. Writes about practical feedback management, complaint resolution and accountability workflows for small and mid-sized businesses.
                 </p>
               </div>
             </div>
@@ -75,7 +60,7 @@ export default function FeedSolveTeamAuthorPage() {
             <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: 18, padding: 32 }}>
               <h2 style={{ color: "var(--navy)", marginBottom: 14 }}>About the author</h2>
               <p style={{ color: "var(--text-mid)", lineHeight: 1.75 }}>
-                The FeedSolve Team turns operational feedback patterns into practical guides for SMB teams. Our articles focus on no-login feedback intake, branded QR code collection, complaint ownership, tracking codes, resolution rate, and the day-to-day workflows teams need to close the loop with customers, tenants, suppliers, and partners.
+                Maduranga builds FeedSolve and writes about SMB feedback and complaint resolution: no-login feedback intake, branded QR code collection, complaint ownership, tracking codes and resolution rate.
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16, marginTop: 26 }}>
                 {[

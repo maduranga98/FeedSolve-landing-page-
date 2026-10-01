@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import {
   Factory,
   QrCode,
@@ -9,30 +9,12 @@ import {
 } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Supplier Fault Tracking for Manufacturers",
   description:
     "Supplier fault tracking software for manufacturers. Replace WhatsApp complaints and shop-floor logs with a QR feedback board, tracking codes and an audit trail.",
-  keywords: [
-    "supplier fault tracking",
-    "supplier feedback tool",
-    "supplier complaint management",
-    "supplier quality tracking",
-    "supplier defect tracking",
-    "vendor feedback software",
-    "manufacturing complaint management",
-  ],
-  openGraph: {
-    title: "Supplier Feedback Tool for Manufacturers | FeedSolve",
-    description:
-      "QR-based supplier complaint tracking for manufacturing SMBs. Zero login, tracking codes, resolution rate dashboard.",
-    url: "https://feedsolve.com/manufacturing/supplier-feedback/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/manufacturing/supplier-feedback/",
-  },
-};
+  path: "/manufacturing/supplier-feedback/",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -208,7 +190,7 @@ export default function ManufacturingSupplierFeedback() {
           },
         ]}
         ctaHeading="Your first supplier board is 2 minutes away."
-        ctaSub="Replace the WhatsApp thread with a structured quality workflow. Free to start."
+        ctaSub="Replace the WhatsApp thread with a structured quality workflow. Free 7-day trial."
         relatedLinks={[
           {
             href: "/restaurants/qr-feedback/",
