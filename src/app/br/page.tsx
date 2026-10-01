@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "Quanto custa o FeedSolve?",
-    a: "Você pode testar grátis por 7 dias, com acesso completo e sem cartão de crédito. Depois, os planos custam US$19 por mês (Starter), US$49 (Growth) ou US$79 (Pro), com cobrança mensal ou anual (a anual sai cerca de 20% mais barata).",
+    a: "Você pode testar grátis por 7 dias, com acesso completo e sem cartão de crédito. Depois, os planos custam US$19 por mês (Starter), US$49 (Growth) ou US$79 (Business), com cobrança mensal ou anual (a anual sai cerca de 20% mais barata).",
   },
   {
     q: "O cliente precisa baixar um aplicativo ou criar conta?",

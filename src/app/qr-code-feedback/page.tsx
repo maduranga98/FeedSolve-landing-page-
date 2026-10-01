@@ -1,32 +1,17 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 import { QrCode, ScanLine, EyeOff, Hash, Languages, Palette } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
 
 const URL = "https://feedsolve.com/qr-code-feedback/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "QR Code Feedback System | No-Login QR Feedback",
   description:
     "Collect feedback with a QR code, no app or login. Customers scan, submit in any language and get a tracking code while you assign and resolve every issue.",
-  keywords: [
-    "qr code feedback",
-    "qr code feedback system",
-    "qr feedback",
-    "no login feedback qr",
-    "feedback qr code",
-    "scan to give feedback",
-    "qr code complaint form",
-  ],
+  path: "/qr-code-feedback/",
   alternates: clusterAlternates("qrFeedback", "/qr-code-feedback/"),
-  openGraph: {
-    title: "QR Code Feedback System | No-Login QR Feedback | FeedSolve",
-    description:
-      "Collect feedback with a QR code - no app, no login. Scan, submit, get a tracking code, then assign, track, and resolve every issue. Free to start.",
-    url: URL,
-    type: "website",
-  },
-};
+});
 
 const faqs = [
   {
@@ -85,7 +70,7 @@ export default function QrCodeFeedback() {
         breadcrumbUrl={URL}
         h1="QR Code Feedback - Scan, Submit, Resolve"
         subheading="Turn any surface into a feedback channel. Customers scan a QR code, submit in seconds with no app or login, and you resolve every issue from one dashboard."
-        quickAnswer="FeedSolve is a QR code feedback system that collects and resolves feedback in one place. Print a branded QR code on a receipt, table tent, delivery note, or wall - anyone scans it with their phone camera and submits a comment or complaint in any language, with no app and no login. Every submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board. Free to start, no credit card."
+        quickAnswer="FeedSolve is a QR code feedback system that collects and resolves feedback in one place. Print a branded QR code on a receipt, table tent, delivery note, or wall - anyone scans it with their phone camera and submits a comment or complaint in any language, with no app and no login. Every submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board. Free 7-day trial."
         stats={[
           { value: "0", label: "Apps or logins needed to scan and submit" },
           { value: "100%", label: "Of scanned submissions tracked to resolution" },
@@ -166,7 +151,7 @@ export default function QrCodeFeedback() {
         ]}
         faqs={faqs}
         ctaHeading="Launch your QR code feedback system today"
-        ctaSub="Generate a branded QR code, print it anywhere, and start collecting and resolving feedback in minutes. Free to start, no credit card."
+        ctaSub="Generate a branded QR code, print it anywhere, and start collecting and resolving feedback in minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/digital-suggestion-box-software/",

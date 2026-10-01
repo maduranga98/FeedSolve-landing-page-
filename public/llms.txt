@@ -9,7 +9,7 @@
 - **Tracking codes for submitters**: Every submission generates a unique code so the customer or supplier can check status without an account.
 - **Multi-language forms**: Submission forms render in the submitter's language; staff work in their own language.
 - **Team assignment and SLAs**: Route issues by category, owner, or location. Resolution metrics surface bottlenecks.
-- **Free to start**: No credit card required for the free tier.
+- **Free 7-day trial**: Full access for 7 days, then choose Starter, Growth or Business.
 
 ## Who it's for
 
@@ -24,7 +24,7 @@
 - Free trial: $0 for 7 days, full access
 - Starter: $19 / month
 - Growth: $49 / month
-- Pro: $79 / month
+- Business: $79 / month
 
 Paid tiers bill monthly or annually (annual saves about 20%); no annual lock-in is required.
 
@@ -65,7 +65,7 @@ Paid tiers bill monthly or annually (annual saves about 20%); no annual lock-in 
 
 **What languages are supported?** Submission forms support multiple languages so the submitter can use their own language while staff respond in theirs.
 
-**Is there a free tier?** Yes, a free tier with no credit card required.
+**Is there a free trial?** Yes, a free 7-day trial with full access. After the trial, plans are Starter ($19/month), Growth ($49/month) and Business ($79/month).
 
 ## Contact
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 import Link from "next/link";
 import { Lightbulb, EyeOff, QrCode, ListChecks, Languages, ShieldCheck } from "lucide-react";
@@ -7,31 +7,13 @@ import VerticalProseSection from "@/components/VerticalProseSection";
 
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Digital Suggestion Box Software",
   description:
-    "Suggestion box software that closes the loop. Collect anonymous suggestions via a QR code or link - no login, any language. Free to start.",
-  keywords: [
-    "digital suggestion box",
-    "suggestion box software",
-    "online suggestion box",
-    "virtual suggestion box",
-    "electronic suggestion box",
-    "website suggestion box",
-    "anonymous suggestion box",
-    "employee suggestion box",
-    "suggestion box app",
-    "free suggestion box online",
-  ],
+    "Suggestion box software that closes the loop. Collect anonymous suggestions via a QR code or link - no login, any language. Free 7-day trial.",
+  path: "/digital-suggestion-box-software/",
   alternates: clusterAlternates("suggestionBox", "/digital-suggestion-box-software/"),
-  openGraph: {
-    title: "Suggestion Box Software: Anonymous Digital Suggestion Box | FeedSolve",
-    description:
-      "Collect anonymous suggestions online via a QR code or link - no login, any language - then assign, track, and resolve every one. Free to start.",
-    url: URL,
-    type: "website",
-  },
-};
+});
 
 const faqs = [
   {
@@ -44,7 +26,7 @@ const faqs = [
   },
   {
     q: "Is there a free suggestion box software option?",
-    a: "Yes. FeedSolve is free to start with no credit card required. You can create your first suggestion board, generate a QR code, and start collecting in minutes.",
+    a: "Yes. FeedSolve offers a free 7-day trial with full access. You can create your first suggestion board, generate a QR code, and start collecting in minutes.",
   },
   {
     q: "How is this different from a Google Form suggestion box?",
@@ -101,7 +83,7 @@ export default function DigitalSuggestionBoxSoftware() {
         h1="Digital Suggestion Box Software That Closes the Loop"
         quickSummary="FeedSolve is a digital suggestion box that lets employees and customers submit suggestions anonymously via QR code or link with no login, then tracks every one to resolution."
         subheading="Replace the dusty box on the wall - and the Google Form that goes nowhere - with an online suggestion box that turns ideas and complaints into resolved actions."
-        quickAnswer="FeedSolve is a digital suggestion box for teams and customers. People submit anonymously via a QR code or link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board with a full audit trail. From an anonymous employee suggestion box on the shop floor to a virtual suggestion box for remote teams, one tool covers it - free to start."
+        quickAnswer="FeedSolve is a digital suggestion box for teams and customers. People submit anonymously via a QR code or link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board with a full audit trail. From an anonymous employee suggestion box on the shop floor to a virtual suggestion box for remote teams, one tool covers it - start with a free 7-day trial."
         stats={[
           { value: "0", label: "Logins needed to submit a suggestion" },
           { value: "100%", label: "Of suggestions tracked to resolution" },
@@ -231,7 +213,7 @@ export default function DigitalSuggestionBoxSoftware() {
         }
         faqs={faqs}
         ctaHeading="Launch your digital suggestion box today"
-        ctaSub="Create a board, generate a QR code, and start collecting suggestions in minutes. Free to start, no credit card."
+        ctaSub="Create a board, generate a QR code, and start collecting suggestions in minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/blog/anonymous-suggestion-box/",

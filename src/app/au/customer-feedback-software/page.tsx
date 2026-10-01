@@ -3,7 +3,7 @@
 // "feedback software australia", "customer feedback software australia"
 // Market: Australia
 
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import {
   MessageSquare,
   QrCode,
@@ -16,32 +16,12 @@ import VerticalPage from "@/components/VerticalPage";
 
 const URL = "https://feedsolve.com/au/customer-feedback-software/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Customer Feedback Software Australia",
   description:
     "Customer feedback software for Australian businesses. Collect feedback by QR code or link with no login, then assign, track and resolve every submission.",
-  keywords: [
-    "customer feedback software australia",
-    "customer feedback platform australia",
-    "feedback software australia",
-    "customer feedback tool australia",
-    "feedback management software australia",
-    "customer feedback app australia",
-  ],
-  // No `languages` block: /customer-feedback-software/ declares no reciprocal
-  // hreflang back to this page, so a one-sided annotation here (en-AU -> self,
-  // x-default -> the homepage) is a contradiction Google drops. Treated as a
-  // single-locale page in the sitemap for the same reason.
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Customer Feedback Software Australia | FeedSolve",
-    description:
-      "A customer feedback platform built for Australian SMBs. No-login QR submission, tracking codes, and a resolution rate dashboard. Free to start.",
-    url: URL,
-    type: "website",
-  },
-  robots: { index: true, follow: true },
-};
+  path: "/au/customer-feedback-software/",
+});
 
 const faqs = [
   {
@@ -50,7 +30,7 @@ const faqs = [
   },
   {
     q: "How much does customer feedback software cost in Australia?",
-    a: "FeedSolve is free to start with no credit card required. Paid plans begin at roughly A$29/month (billed in USD at approximately $19) for the Starter plan, and pricing is based on feedback boards rather than per-agent seats - so you can invite your whole team without a per-user penalty. Most Australian small businesses run comfortably on the Free or Starter plan.",
+    a: "FeedSolve offers a free 7-day trial with full access. Paid plans begin at roughly A$29/month (billed in USD at approximately $19) for the Starter plan, and pricing is based on feedback boards rather than per-agent seats - so you can invite your whole team without a per-user penalty. Most Australian small businesses run comfortably on the Starter plan.",
   },
   {
     q: "How is this different from a survey tool like Typeform or SurveyMonkey?",
@@ -105,10 +85,10 @@ export default function CustomerFeedbackSoftwareAustralia() {
         breadcrumbUrl={URL}
         h1="Customer Feedback Software for Australian Business"
         subheading="Collect customer feedback with a QR code or link - no login, any language - then assign, track, and resolve every piece from one dashboard. Built for Australian SMBs, priced in AUD."
-        quickAnswer="FeedSolve is a customer feedback platform for Australian businesses. Customers in your café, store, clinic, or service van scan a branded QR code or open a link and give feedback in seconds - no account, no app, in any language. Each submission gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it with a public reply. A live resolution rate shows how much feedback you actually act on - and catching issues privately keeps one-star Google reviews from being written. Free to start, with paid plans from about A$29/month and no per-agent fees."
+        quickAnswer="FeedSolve is a customer feedback platform for Australian businesses. Customers in your café, store, clinic, or service van scan a branded QR code or open a link and give feedback in seconds - no account, no app, in any language. Each submission gets a unique tracking code, then your team assigns it, moves it through a Kanban workflow, and resolves it with a public reply. A live resolution rate shows how much feedback you actually act on - and catching issues privately keeps one-star Google reviews from being written. Free 7-day trial, then paid plans from about A$29/month and no per-agent fees."
         stats={[
           { value: "0", label: "Logins needed for customers to give feedback" },
-          { value: "A$0", label: "To start - free plan, no credit card" },
+          { value: "A$0", label: "To start - free 7-day trial" },
           { value: "100%", label: "Of feedback tracked to resolution" },
           { value: "Any", label: "Language your customers prefer" },
         ]}
@@ -187,7 +167,7 @@ export default function CustomerFeedbackSoftwareAustralia() {
         ]}
         faqs={faqs}
         ctaHeading="Start collecting customer feedback across Australia"
-        ctaSub="Create a feedback board, generate a QR code, and start resolving in minutes. Free to start, no credit card - priced in AUD as you grow."
+        ctaSub="Create a feedback board, generate a QR code, and start resolving in minutes. Free 7-day trial, then priced as you grow."
         relatedLinks={[
           {
             href: "/au/complaint-management-software/",

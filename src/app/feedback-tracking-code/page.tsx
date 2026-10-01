@@ -1,31 +1,15 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { Hash, Search, BellRing, EyeOff, ShieldCheck, ListChecks } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
 
 const URL = "https://feedsolve.com/feedback-tracking-code/";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Complaint Tracking Number for Customers",
   description:
     "Give every submitter a unique complaint tracking number. They follow progress with no login while you assign, track and resolve on a Kanban board.",
-  keywords: [
-    "feedback tracking code",
-    "complaint tracking number",
-    "complaint tracking number for customers",
-    "track feedback status",
-    "complaint reference number",
-    "feedback reference number",
-    "issue tracking code",
-  ],
-  alternates: { canonical: URL },
-  openGraph: {
-    title: "Feedback Tracking Code | Complaint Tracking Number | FeedSolve",
-    description:
-      "Give every submitter a unique tracking code so they can follow a complaint to resolution - no login required. Free to start.",
-    url: URL,
-    type: "website",
-  },
-};
+  path: "/feedback-tracking-code/",
+});
 
 const faqs = [
   {
@@ -84,7 +68,7 @@ export default function FeedbackTrackingCode() {
         breadcrumbUrl={URL}
         h1="A Tracking Code for Every Complaint - No Login Needed"
         subheading="Give customers a complaint tracking number the moment they submit. They follow it to resolution like a parcel; you keep every issue accountable on one board."
-        quickAnswer="FeedSolve issues a unique feedback tracking code - #FSV-XXXX - for every submission, automatically. The submitter keeps the code and checks status anytime with no account and no login, just like tracking a parcel. Behind the scenes your team assigns, tracks, and resolves each issue on a Kanban board, then posts a public reply the submitter sees on their tracking page. It works for customers, suppliers, tenants, and anonymous submitters alike. Free to start, no credit card."
+        quickAnswer="FeedSolve issues a unique feedback tracking code - #FSV-XXXX - for every submission, automatically. The submitter keeps the code and checks status anytime with no account and no login, just like tracking a parcel. Behind the scenes your team assigns, tracks, and resolves each issue on a Kanban board, then posts a public reply the submitter sees on their tracking page. It works for customers, suppliers, tenants, and anonymous submitters alike. Free 7-day trial."
         stats={[
           { value: "#FSV", label: "Unique tracking code on every submission" },
           { value: "0", label: "Logins needed for a submitter to check status" },
@@ -165,7 +149,7 @@ export default function FeedbackTrackingCode() {
         ]}
         faqs={faqs}
         ctaHeading="Give every complaint a tracking code today"
-        ctaSub="Start collecting feedback with unique, submitter-facing tracking codes in minutes. Free to start, no credit card."
+        ctaSub="Start collecting feedback with unique, submitter-facing tracking codes in minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/qr-code-feedback/",

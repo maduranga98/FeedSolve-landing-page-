@@ -35,7 +35,7 @@ const jsonLd = {
         name: "Is FeedSolve GDPR compliant feedback management software?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "FeedSolve is designed with GDPR data minimisation principles (Article 5(1)(c)) in mind. Contact fields on submission forms are genuinely optional — not hidden-required. Anonymous mode allows submitters to provide no personal data at all. FeedSolve does not share submission data with advertising networks or third-party data brokers. Data is processed for the legitimate interest of resolving the complaint. Configurable retention settings are available on Growth and Pro plans.",
+          text: "FeedSolve is designed with GDPR data minimisation principles (Article 5(1)(c)) in mind. Contact fields on submission forms are genuinely optional — not hidden-required. Anonymous mode allows submitters to provide no personal data at all. FeedSolve does not share submission data with advertising networks or third-party data brokers. Data is processed for the legitimate interest of resolving the complaint. Configurable retention settings are available on Growth and Business plans.",
         },
       },
       {
@@ -81,7 +81,7 @@ const gdprPrinciples = [
     icon: <ShieldCheck size={22} />,
     gdprRef: "Art. 5(1)(e)",
     title: "Storage Limitation",
-    body: "Growth and Pro plans include configurable data retention settings. Define how long submission data is stored in line with your GDPR retention policy — and delete submissions on request in compliance with Art. 17 right to erasure.",
+    body: "Growth and Business plans include configurable data retention settings. Define how long submission data is stored in line with your GDPR retention policy — and delete submissions on request in compliance with Art. 17 right to erasure.",
   },
   {
     icon: <Lock size={22} />,
@@ -100,7 +100,7 @@ const gdprPrinciples = [
 const faqs = [
   {
     q: "Is FeedSolve GDPR compliant feedback management software?",
-    a: "FeedSolve is designed with GDPR data minimisation principles (Article 5(1)(c)) in mind. Contact fields on submission forms are genuinely optional. Anonymous mode allows submitters to provide no personal data at all. FeedSolve does not share submission data with advertising networks. Configurable retention settings are available on Growth and Pro plans to support your data retention policy.",
+    a: "FeedSolve is designed with GDPR data minimisation principles (Article 5(1)(c)) in mind. Contact fields on submission forms are genuinely optional. Anonymous mode allows submitters to provide no personal data at all. FeedSolve does not share submission data with advertising networks. Configurable retention settings are available on Growth and Business plans to support your data retention policy.",
   },
   {
     q: "What lawful basis does FeedSolve use for processing complaint data under GDPR?",
@@ -112,7 +112,7 @@ const faqs = [
   },
   {
     q: "Can EU customers exercise their right of erasure (Art. 17) on FeedSolve submissions?",
-    a: "Yes. On Growth and Pro plans, submission data can be manually deleted from the dashboard to fulfill Art. 17 erasure requests. If a submitter chooses anonymous mode, their submission contains no personal data, making erasure requests inapplicable. On all plans, FeedSolve does not retain payment card data or special category personal data.",
+    a: "Yes. On Growth and Business plans, submission data can be manually deleted from the dashboard to fulfill Art. 17 erasure requests. If a submitter chooses anonymous mode, their submission contains no personal data, making erasure requests inapplicable. On all plans, FeedSolve does not retain payment card data or special category personal data.",
   },
   {
     q: "Is FeedSolve suitable for German (DSGVO), French (RGPD), or Dutch businesses?",
@@ -160,13 +160,13 @@ export default function EUGDPRFeedbackPage() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
@@ -232,7 +232,7 @@ export default function EUGDPRFeedbackPage() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -322,7 +322,7 @@ export default function EUGDPRFeedbackPage() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: "var(--teal)",
+                      color: "var(--teal-text)",
                       flexShrink: 0,
                     }}
                   >
@@ -333,7 +333,7 @@ export default function EUGDPRFeedbackPage() {
                       style={{
                         fontSize: 11,
                         fontWeight: 700,
-                        color: "var(--teal)",
+                        color: "var(--teal-text)",
                         letterSpacing: "0.07em",
                         textTransform: "uppercase",
                       }}
@@ -529,7 +529,7 @@ export default function EUGDPRFeedbackPage() {
       >
         <div className="container">
           <h2 style={{ color: "white", marginBottom: 16 }}>
-            GDPR-aligned complaint management. Free to start.
+            GDPR-aligned complaint management. Free 7-day trial.
           </h2>
           <p
             style={{
@@ -575,7 +575,7 @@ export default function EUGDPRFeedbackPage() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -595,7 +595,7 @@ export default function EUGDPRFeedbackPage() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -659,7 +659,7 @@ export default function EUGDPRFeedbackPage() {
                 >
                   {r.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {r.sub}
                 </div>
               </Link>

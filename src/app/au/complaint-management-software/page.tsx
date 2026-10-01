@@ -2,7 +2,7 @@
 // Target keyword: "complaint management software Australia"
 // Market: Australia
 
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -18,21 +18,13 @@ import {
 import AUComplaintFAQ from "@/components/AUComplaintFAQ";
 import { landingBreadcrumb } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title:
-    "Complaint Management Software Australia",
+export const metadata = generatePageMetadata({
+  title: "Complaint Management Software Australia",
   description:
     "Complaint management software for Australian SMBs: zero-login QR intake, a Kanban resolution workflow and an audit trail aligned with Australian Consumer Law.",
-  openGraph: {
-    title: "Complaint Management Software Australia | FeedSolve",
-    description:
-      "Track and resolve every customer complaint for your Australian SMB. Zero-login QR submission, tracking codes, resolution rate dashboard. From A$0/month.",
-    url: "https://feedsolve.com/au/complaint-management-software/",
-    type: "website",
-  },
+  path: "/au/complaint-management-software/",
   alternates: clusterAlternates("complaintManagement", "/au/complaint-management-software/"),
-  robots: { index: true, follow: true },
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -125,7 +117,7 @@ const comparisonRows = [
   { feature: "Setup under 2 minutes", feedsolve: true, freshdesk: false },
   { feature: "Kanban resolution workflow", feedsolve: true, freshdesk: true },
   { feature: "Email notifications", feedsolve: true, freshdesk: true },
-  { feature: "Free plan available", feedsolve: true, freshdesk: true },
+  { feature: "Free trial or free plan", feedsolve: true, freshdesk: true },
 ];
 
 export default function AUComplaintManagementPage() {
@@ -177,13 +169,13 @@ export default function AUComplaintManagementPage() {
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
@@ -231,7 +223,7 @@ export default function AUComplaintManagementPage() {
             Australian Consumer Law expects businesses to handle complaints
             accessibly and with documented resolution. FeedSolve gives
             Australian SMBs a zero-login QR complaint intake, Kanban workflow,
-            and full audit trail — from A$0/month, no per-agent fees.
+            and full audit trail — with a free 7-day trial and no per-agent fees.
           </p>
 
           <div
@@ -248,7 +240,7 @@ export default function AUComplaintManagementPage() {
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -270,7 +262,7 @@ export default function AUComplaintManagementPage() {
               required. Your team manages every complaint through a Kanban
               dashboard, assigns to the right person, and resolves with a
               documented audit trail consistent with Australian Consumer Law and
-              Privacy Act 1988 requirements. Pricing starts free, with paid
+              Privacy Act 1988 requirements. Pricing starts with a free 7-day trial, with paid
               plans from approximately A$29/month — no per-seat fees.
             </p>
           </div>
@@ -296,7 +288,7 @@ export default function AUComplaintManagementPage() {
       </section>
 
       {/* STATS BAR */}
-      <section style={{ background: "var(--teal)", padding: "36px 32px" }}>
+      <section style={{ background: "var(--teal-btn)", padding: "36px 32px" }}>
         <div className="container">
           <div
             style={{
@@ -338,7 +330,7 @@ export default function AUComplaintManagementPage() {
                 <div
                   style={{
                     fontSize: 12,
-                    color: "rgba(255,255,255,0.7)",
+                    color: "white",
                     marginTop: 6,
                     lineHeight: 1.4,
                   }}
@@ -426,7 +418,7 @@ export default function AUComplaintManagementPage() {
                 >
                   <Check
                     size={16}
-                    style={{ color: "var(--teal)", flexShrink: 0 }}
+                    style={{ color: "var(--teal-text)", flexShrink: 0 }}
                   />
                   <h3 style={{ fontSize: 16, color: "var(--navy)", margin: 0 }}>
                     {f.title}
@@ -534,7 +526,7 @@ export default function AUComplaintManagementPage() {
                   href={u.link}
                   style={{
                     fontSize: 14,
-                    color: "var(--teal)",
+                    color: "var(--teal-text)",
                     fontWeight: 600,
                     textDecoration: "none",
                   }}
@@ -576,7 +568,7 @@ export default function AUComplaintManagementPage() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -590,7 +582,7 @@ export default function AUComplaintManagementPage() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "var(--teal-light)",
+                      color: "var(--teal-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -604,7 +596,7 @@ export default function AUComplaintManagementPage() {
                   <th
                     style={{
                       background: "var(--navy)",
-                      color: "rgba(255,255,255,0.5)",
+                      color: "var(--muted-on-navy)",
                       fontSize: 12,
                       fontWeight: 700,
                       letterSpacing: "0.07em",
@@ -643,7 +635,7 @@ export default function AUComplaintManagementPage() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -672,7 +664,7 @@ export default function AUComplaintManagementPage() {
                             display: "inline-flex",
                             alignItems: "center",
                             gap: 4,
-                            color: "#16A34A",
+                            color: "var(--green-text)",
                             fontWeight: 600,
                             fontSize: 13,
                           }}
@@ -703,7 +695,7 @@ export default function AUComplaintManagementPage() {
             style={{
               textAlign: "center",
               fontSize: 13,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               marginTop: 20,
             }}
           >
@@ -736,7 +728,7 @@ export default function AUComplaintManagementPage() {
               marginBottom: 36,
             }}
           >
-            Set up in under 2 minutes. Free to start. No credit card required.
+            Set up in under 2 minutes. Free 7-day trial.
           </p>
           <div
             style={{
@@ -772,7 +764,7 @@ export default function AUComplaintManagementPage() {
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -791,7 +783,7 @@ export default function AUComplaintManagementPage() {
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -860,7 +852,7 @@ export default function AUComplaintManagementPage() {
                 >
                   {r.label}
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {r.sub}
                 </div>
               </Link>

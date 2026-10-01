@@ -6,6 +6,10 @@ export {
   LINKEDIN_URL,
   SAASBROWSER_URL,
   ORGANIZATION_SAME_AS,
+  OG_IMAGE_URL,
+  OG_IMAGE_WIDTH,
+  OG_IMAGE_HEIGHT,
+  LOGO_URL,
 } from "./site";
 import { SITE_URL } from "./site";
 

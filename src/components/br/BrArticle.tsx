@@ -9,7 +9,7 @@ import { JsonLdScript } from "@/components/JsonLd";
 import { BrFooter, BrHeader } from "@/components/br/BrChrome";
 import { BR_SIGNUP_URL } from "@/data/brPages";
 import { BR_POSTS, brPostPath, type BrPost } from "@/data/brBlog";
-import { SITE_URL, breadcrumbJsonLd, generateOrganizationSchema } from "@/lib/seo";
+import { OG_IMAGE_URL, SITE_URL, breadcrumbJsonLd, generateOrganizationSchema } from "@/lib/seo";
 
 const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
 
@@ -50,7 +50,7 @@ export default function BrArticle({ post }: { post: BrPost }) {
       keywords: post.keyword,
       datePublished: post.datePublished,
       dateModified: post.dateModified,
-      image: [`${SITE_URL}/og-image.png`],
+      image: [OG_IMAGE_URL],
       author: { "@type": "Organization", name: "Equipe FeedSolve", url: `${SITE_URL}/authors/feedsolve-team/` },
       publisher: generateOrganizationSchema({ standalone: false }),
       mainEntityOfPage: { "@type": "WebPage", "@id": url },

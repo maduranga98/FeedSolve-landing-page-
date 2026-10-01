@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
@@ -36,20 +37,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const alt = getAlternative(slug);
   if (!alt) return {};
-  const url = `${SITE_URL}/alternatives/${alt.slug}/`;
-  return {
+  return generatePageMetadata({
     title: alt.metaTitle,
     description: alt.metaDescription,
-    openGraph: {
-      title: alt.metaTitle,
-      description: alt.metaDescription,
-      url,
-      type: "website",
-    },
-    alternates: {
-      canonical: url,
-    },
-  };
+    path: `/alternatives/${alt.slug}/`,
+  });
 }
 
 export default async function AlternativePage({
@@ -126,21 +118,21 @@ export default async function AlternativePage({
               alignItems: "center",
               gap: 8,
               fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
+              color: "var(--muted-on-navy)",
               marginBottom: 32,
               flexWrap: "wrap",
             }}
           >
             <Link
               href="/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Home
             </Link>
             <ChevronRight size={13} />
             <Link
               href="/alternatives/"
-              style={{ color: "var(--teal-light)", textDecoration: "none" }}
+              style={{ color: "var(--teal-on-navy)", textDecoration: "none" }}
             >
               Alternatives
             </Link>
@@ -200,7 +192,7 @@ export default async function AlternativePage({
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--teal-light)",
+                color: "var(--teal-on-navy)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -279,7 +271,7 @@ export default async function AlternativePage({
                     height: 36,
                     borderRadius: 10,
                     background: "var(--teal-pale)",
-                    color: "var(--teal)",
+                    color: "var(--teal-text)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -353,7 +345,7 @@ export default async function AlternativePage({
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "var(--text-light)",
+                  color: "var(--slate-text)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -385,7 +377,7 @@ export default async function AlternativePage({
                   >
                     <Check
                       size={13}
-                      style={{ color: "#16A34A", flexShrink: 0 }}
+                      style={{ color: "var(--green-text)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -398,7 +390,7 @@ export default async function AlternativePage({
                       gap: 10,
                       alignItems: "center",
                       fontSize: 13,
-                      color: "var(--text-light)",
+                      color: "var(--slate-text)",
                     }}
                   >
                     <X size={13} style={{ color: "#DC2626", flexShrink: 0 }} />{" "}
@@ -436,7 +428,7 @@ export default async function AlternativePage({
                   position: "absolute",
                   top: -12,
                   left: 24,
-                  background: "var(--teal)",
+                  background: "var(--teal-btn)",
                   color: "white",
                   fontSize: 10,
                   fontWeight: 800,
@@ -452,7 +444,7 @@ export default async function AlternativePage({
                 style={{
                   fontSize: 11,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.4)",
+                  color: "var(--muted-on-navy)",
                   textTransform: "uppercase",
                   letterSpacing: "0.09em",
                   marginBottom: 12,
@@ -484,7 +476,7 @@ export default async function AlternativePage({
                   >
                     <Check
                       size={13}
-                      style={{ color: "var(--teal-light)", flexShrink: 0 }}
+                      style={{ color: "var(--teal-on-navy)", flexShrink: 0 }}
                     />{" "}
                     {f}
                   </div>
@@ -497,11 +489,11 @@ export default async function AlternativePage({
                   background: "rgba(255,255,255,0.07)",
                   borderRadius: 10,
                   fontSize: 12,
-                  color: "rgba(255,255,255,0.55)",
+                  color: "var(--muted-on-navy)",
                   lineHeight: 1.6,
                 }}
               >
-                <strong style={{ color: "white" }}>Pricing:</strong> Free plan ·
+                <strong style={{ color: "white" }}>Pricing:</strong> 7-day free trial ·
                 $19–79/month flat · No per-seat or per-response charges
               </div>
             </div>
@@ -522,7 +514,7 @@ export default async function AlternativePage({
               style={{
                 fontSize: 11,
                 fontWeight: 700,
-                color: "var(--text-light)",
+                color: "var(--slate-text)",
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
                 marginBottom: 8,
@@ -593,13 +585,13 @@ export default async function AlternativePage({
                     >
                       {o.name}
                     </div>
-                    <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                    <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                       {o.blurb}
                     </div>
                   </div>
                   <ArrowRight
                     size={16}
-                    style={{ color: "var(--teal)", flexShrink: 0 }}
+                    style={{ color: "var(--teal-text)", flexShrink: 0 }}
                   />
                 </Link>
               ) : (
@@ -622,7 +614,7 @@ export default async function AlternativePage({
                   >
                     {o.name}
                   </div>
-                  <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                  <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                     {o.blurb}
                   </div>
                 </div>
@@ -639,7 +631,7 @@ export default async function AlternativePage({
                   gap: 8,
                   fontSize: 15,
                   fontWeight: 700,
-                  color: "var(--teal)",
+                  color: "var(--teal-text)",
                   textDecoration: "none",
                 }}
               >
@@ -697,7 +689,7 @@ export default async function AlternativePage({
                       alignItems: "center",
                       justifyContent: "center",
                       flexShrink: 0,
-                      color: "var(--teal)",
+                      color: "var(--teal-text)",
                     }}
                   >
                     <ChevronDown size={13} />
@@ -776,7 +768,7 @@ export default async function AlternativePage({
             style={{
               marginTop: 20,
               fontSize: 13,
-              color: "rgba(255,255,255,0.35)",
+              color: "var(--muted-on-navy)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -795,7 +787,7 @@ export default async function AlternativePage({
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--text-light)",
+              color: "var(--slate-text)",
               textTransform: "uppercase",
               letterSpacing: "0.08em",
               marginBottom: 20,
@@ -833,7 +825,7 @@ export default async function AlternativePage({
                 >
                   Best {r.name} Alternative
                 </div>
-                <div style={{ fontSize: 13, color: "var(--text-light)" }}>
+                <div style={{ fontSize: 13, color: "var(--slate-text)" }}>
                   {r.categoryLabel}
                 </div>
               </Link>

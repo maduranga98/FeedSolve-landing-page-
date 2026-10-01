@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,21 +6,12 @@ import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 
 const SITE_URL = "https://feedsolve.com";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "FeedSolve vs Other Tools — Comparison Hub",
   description:
     "Compare FeedSolve with Google Forms, Typeform, Zonka Feedback, and other feedback or complaint management tools for SMBs.",
-  openGraph: {
-    title: "FeedSolve vs Other Tools — Comparison Hub",
-    description:
-      "See how FeedSolve compares with survey tools, form builders, and feedback platforms when your goal is complaint resolution.",
-    url: `${SITE_URL}/compare/`,
-    type: "website",
-  },
-  alternates: {
-    canonical: `${SITE_URL}/compare/`,
-  },
-};
+  path: "/compare/",
+});
 
 const comparisons = [
   {
@@ -74,7 +65,7 @@ export default function ComparePage() {
               <ChevronRight size={13} />
               <span>Compare</span>
             </div>
-            <div className="section-label" style={{ color: "var(--teal)", borderColor: "rgba(255,255,255,0.14)" }}>
+            <div className="section-label" style={{ color: "var(--teal-text)", borderColor: "rgba(255,255,255,0.14)" }}>
               <CheckCircle2 size={13} /> Comparison hub
             </div>
             <h1 style={{ color: "white", maxWidth: 760, marginTop: 16 }}>
@@ -97,10 +88,10 @@ export default function ComparePage() {
                 >
                   <h2 style={{ color: "var(--navy)", fontSize: 24, margin: 0 }}>{comparison.label}</h2>
                   <p style={{ color: "var(--text-mid)", lineHeight: 1.6, margin: 0 }}>{comparison.sub}</p>
-                  <div style={{ color: "var(--text-light)", fontSize: 14, lineHeight: 1.5 }}>
+                  <div style={{ color: "var(--slate-text)", fontSize: 14, lineHeight: 1.5 }}>
                     Best for: {comparison.bestFor}
                   </div>
-                  <span style={{ color: "var(--teal)", display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700 }}>
+                  <span style={{ color: "var(--teal-text)", display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700 }}>
                     Read the comparison <ArrowRight size={15} />
                   </span>
                 </Link>
@@ -109,7 +100,7 @@ export default function ComparePage() {
             <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: 16, padding: "24px 28px", marginTop: 28 }}>
               <p style={{ color: "var(--text-mid)", fontSize: 15, lineHeight: 1.7, margin: 0 }}>
                 Switching away from a specific tool? Browse our{" "}
-                <Link href="/alternatives/" style={{ color: "var(--teal)", fontWeight: 700 }}>
+                <Link href="/alternatives/" style={{ color: "var(--teal-text)", fontWeight: 700 }}>
                   alternatives guides
                 </Link>{" "}
                 covering Medallia, Qualtrics, Zendesk, Canny, SurveyMonkey, and more.

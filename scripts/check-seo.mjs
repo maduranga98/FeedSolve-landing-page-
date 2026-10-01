@@ -16,6 +16,25 @@ const OUT = "out";
 const ORIGIN = "https://feedsolve.com";
 const errors = [];
 
+// Social image: the one shared og-image.png (see src/lib/seo/site.ts).
+const OG_IMAGE_URL = `${ORIGIN}/og-image.png`;
+const TITLE_WARN = 60;
+const TITLE_ERROR = 70;
+const DESC_WARN = 160;
+const DESC_ERROR = 175;
+/** Strings that must never reach the public HTML. */
+const FORBIDDEN = [
+  // Internal editorial data serialized from blog.json.
+  "writer_notes",
+  "target_audience",
+  "search_intent",
+  "funnel_stage",
+  "target_word_count",
+  // Too small for Open Graph (68px) and for Organization logos (Google needs 112px).
+  "feedsolve.webp",
+  "logo.webp",
+];
+
 /** Paths whose files are intentionally not indexable pages. */
 const NOT_A_PAGE = /^\/(404|_not-found)\//;
 /** hrefs that legitimately carry no trailing slash. */
@@ -134,12 +153,93 @@ for (const file of pages) {
   const desc = decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "");
   if (!title) errors.push(`${url} has no <title>`);
   if (!desc) errors.push(`${url} has no meta description`);
-  if (title.length > 65) warnings.push(`${url} title is ${title.length} chars`);
-  if (desc && (desc.length < 110 || desc.length > 165)) warnings.push(`${url} description is ${desc.length} chars`);
+  if (title.length > TITLE_ERROR) errors.push(`${url} title is ${title.length} chars (max ${TITLE_ERROR})`);
+  else if (title.length > TITLE_WARN) warnings.push(`${url} title is ${title.length} chars (target ${TITLE_WARN})`);
+  if (desc.length > DESC_ERROR) errors.push(`${url} description is ${desc.length} chars (max ${DESC_ERROR})`);
+  else if (desc.length > DESC_WARN) warnings.push(`${url} description is ${desc.length} chars (target ${DESC_WARN})`);
+  else if (desc && desc.length < 110) warnings.push(`${url} description is only ${desc.length} chars`);
 }
 if (warnings.length) {
   console.warn(`[seo] ${warnings.length} length warning(s) (not blocking):`);
   for (const w of warnings) console.warn(`  ~ ${w}`);
+}
+
+// 7. Social cards, structured data and forbidden strings, per page.
+const metaTags = (html) =>
+  [...html.matchAll(/<meta\s+([^>]*?)\/?>/g)].map((m) =>
+    Object.fromEntries([...m[1].matchAll(/([a-zA-Z:-]+)="([^"]*)"/g)].map((a) => [a[1], decode(a[2])]))
+  );
+const jsonLdTypes = (html) => {
+  const types = [];
+  const collect = (node) => {
+    if (Array.isArray(node)) return node.forEach(collect);
+    if (!node || typeof node !== "object") return;
+    if (node["@type"]) types.push(...[].concat(node["@type"]));
+    if (node["@graph"]) collect(node["@graph"]);
+  };
+  for (const m of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+    try {
+      collect(JSON.parse(m[1]));
+    } catch {
+      errors.push("a JSON-LD block is not valid JSON");
+    }
+  }
+  return types;
+};
+for (const file of htmlFiles(OUT)) {
+  const url = urlForFile(file);
+  const html = readFileSync(file, "utf8");
+
+  for (const bad of FORBIDDEN) {
+    if (html.includes(bad)) errors.push(`${url} contains "${bad}" in the built HTML`);
+  }
+  if (NOT_A_PAGE.test(url) || /<meta name="robots"[^>]*content="[^"]*noindex/i.test(html)) continue;
+
+  const tags = metaTags(html);
+  const content = (key, value) => tags.find((t) => t[key] === value)?.content;
+  const ogImage = content("property", "og:image");
+  const ogTitle = content("property", "og:title");
+  const twTitle = content("name", "twitter:title");
+  if (ogImage !== OG_IMAGE_URL) errors.push(`${url} og:image is ${ogImage ?? "missing"}, expected ${OG_IMAGE_URL}`);
+  if (!content("name", "twitter:image")) errors.push(`${url} has no twitter:image`);
+  if (!ogTitle) errors.push(`${url} has no og:title`);
+  else if (twTitle !== ogTitle) errors.push(`${url} twitter:title (${twTitle ?? "missing"}) does not match og:title`);
+
+  const types = jsonLdTypes(html);
+  const breadcrumbs = types.filter((t) => t === "BreadcrumbList").length;
+  const faqs = types.filter((t) => t === "FAQPage").length;
+  if (breadcrumbs > 1) errors.push(`${url} has ${breadcrumbs} BreadcrumbList nodes (expected 1)`);
+  if (breadcrumbs === 0 && url !== "/") errors.push(`${url} has no BreadcrumbList`);
+  if (faqs > 1) errors.push(`${url} has ${faqs} FAQPage nodes (expected at most 1)`);
+}
+
+// 8. The shared social image must be 1200x630 and light enough for every scraper.
+const ogPath = join("public", "og-image.png");
+if (!existsSync(ogPath)) {
+  errors.push("public/og-image.png is missing");
+} else {
+  const png = readFileSync(ogPath);
+  const isPng = png.length > 24 && png.readUInt32BE(0) === 0x89504e47;
+  const width = isPng ? png.readUInt32BE(16) : 0;
+  const height = isPng ? png.readUInt32BE(20) : 0;
+  if (width !== 1200 || height !== 630) errors.push(`public/og-image.png is ${width}x${height}, expected 1200x630`);
+  if (png.length > 300 * 1024) errors.push(`public/og-image.png is ${Math.round(png.length / 1024)}KB (max 300KB)`);
+}
+
+// 9. Static pages must not advertise the build timestamp as lastmod: it changes
+//    on every deploy and teaches Google to ignore the field. Posts keep their
+//    real date_modified.
+if (existsSync(sitemapPath)) {
+  const built = statSync(sitemapPath).mtimeMs;
+  const isPost = (loc) => /\/blog\/[^/]+\/$/.test(loc);
+  for (const m of readFileSync(sitemapPath, "utf8").matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+    const loc = m[1].match(/<loc>([^<]+)<\/loc>/)?.[1] ?? "";
+    const lastmod = m[1].match(/<lastmod>([^<]+)<\/lastmod>/)?.[1];
+    if (!lastmod || isPost(loc)) continue;
+    if (Math.abs(built - Date.parse(lastmod)) < 48 * 3600 * 1000) {
+      errors.push(`sitemap entry for a static page uses the build time as lastmod: ${loc} (${lastmod})`);
+    }
+  }
 }
 
 // 5. Localized sections must ship the right <html lang>, and every hreflang

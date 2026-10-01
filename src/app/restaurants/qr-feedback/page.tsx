@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import {
   QrCode,
   Smile,
@@ -12,19 +12,13 @@ import VerticalPage from "@/components/VerticalPage";
 import VerticalProseSection from "@/components/VerticalProseSection";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "QR Code Feedback for Restaurants in 30 Seconds",
   description:
-    "Put a branded QR code on every table. Guests report an issue in 30 seconds and your team resolves it before anyone posts a review. Free to start.",
-  openGraph: {
-    title: "QR Code Feedback for Restaurants | FeedSolve",
-    description:
-      "Table-side QR feedback for restaurants and hotels. Zero login, tracking codes, resolution before the review.",
-    url: "https://feedsolve.com/restaurants/qr-feedback/",
-    type: "website",
-  },
+    "Put a branded QR code on every table. Guests report an issue in 30 seconds and your team resolves it before anyone posts a review. Free 7-day trial.",
+  path: "/restaurants/qr-feedback/",
   alternates: clusterAlternates("restaurants", "/restaurants/qr-feedback/"),
-};
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -130,7 +124,7 @@ export default function RestaurantsQrFeedback() {
           {
             icon: <Palette size={24} />,
             title: "Branded QR Codes",
-            body: "Add your restaurant or hotel logo and brand colours to the QR code. Looks professional on table cards and fits your existing collateral. Available on Growth and Pro plans.",
+            body: "Add your restaurant or hotel logo and brand colours to the QR code. Looks professional on table cards and fits your existing collateral. Available on Growth and Business plans.",
           },
         ]}
         exampleHeading="A diner reports a cold dish - here's what happens"
@@ -237,7 +231,7 @@ export default function RestaurantsQrFeedback() {
           />
         }
         ctaHeading="Turn table complaints into returning customers."
-        ctaSub="Your first feedback board takes 2 minutes to set up. Free to start."
+        ctaSub="Your first feedback board takes 2 minutes to set up. Free 7-day trial."
         relatedLinks={[
           {
             href: "/manufacturing/supplier-feedback/",

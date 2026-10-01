@@ -151,7 +151,7 @@ export default function PricingSection() {
         {plan.popular && <div className="pop-badge">⭐ Recommended</div>}
         <div style={{ marginBottom: 8 }}>
          <div className="pc-tier">{plan.tier}</div>
-         <div style={{ fontSize: 12, fontWeight: 600, color: "var(--teal)", letterSpacing: "0.05em", marginTop: 4 }}>
+         <div style={{ fontSize: 12, fontWeight: 600, color: "var(--teal-text)", letterSpacing: "0.05em", marginTop: 4 }}>
           {plan.subtitle}
          </div>
         </div>

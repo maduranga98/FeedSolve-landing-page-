@@ -22,8 +22,6 @@ const languageAlternates = (path: string) => {
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   const blogPosts = blogData.map((blog) => ({
     url: absoluteUrl(blog.meta.slug),
     lastModified: new Date(blog.meta.date_modified),
@@ -38,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy", priority: 0.4, frequency: "yearly" as const },
     { path: "/terms", priority: 0.4, frequency: "yearly" as const },
     { path: "/authors/feedsolve-team", priority: 0.5, frequency: "monthly" as const },
+    { path: "/authors/maduranga", priority: 0.5, frequency: "monthly" as const },
     { path: "/uk/complaint-management-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/au/complaint-management-software", priority: 0.8, frequency: "monthly" as const },
     { path: "/au/customer-feedback-software", priority: 0.8, frequency: "monthly" as const },
@@ -77,8 +76,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages.map((page) => ({
+      // No lastModified on static pages: the build time is not a real content
+      // date, and Google discounts a lastmod that changes on every deploy.
       url: absoluteUrl(page.path),
-      lastModified,
       changeFrequency: page.frequency,
       priority: page.priority,
       ...languageAlternates(page.path),

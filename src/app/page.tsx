@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { clusterAlternates } from "@/lib/seo/hreflang";
+import { generateOrganizationSchema, generateSoftwareAppSchema } from "@/lib/seo/schema";
+import { JsonLdScript } from "@/components/JsonLd";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FAQAccordion from "@/components/home/FAQAccordion";
 import HeroStats from "@/components/home/HeroStats";
 import DemoSection from "@/components/home/DemoSection";
 import { homeFaqs } from "@/data/homeFaqs";
@@ -13,7 +16,6 @@ export const metadata: Metadata = {
  alternates: clusterAlternates("home", "/"),
 };
 
-const FAQAccordion = dynamic(() => import("@/components/home/FAQAccordion"));
 const ContactSection = dynamic(() => import("@/components/home/ContactSection"));
 const PricingSection = dynamic(() => import("@/components/home/PricingSection"));
 import {
@@ -104,7 +106,7 @@ function Hero() {
        See How It Works <Play size={16} />
       </a>
      </div>
-     <p style={{ fontSize: "0.875rem", color: "#6B7B8D", maxWidth: "42rem", marginTop: "1rem", lineHeight: 1.625 }}>
+     <p style={{ fontSize: "0.875rem", color: "#4f6377", maxWidth: "42rem", marginTop: "1rem", lineHeight: 1.625 }}>
       Feedback management and complaint resolution software for SMBs - no login, multi-language, with a tracking code for every submitter.
      </p>
      <div className="hero-trust">
@@ -393,7 +395,7 @@ function FeatureTeaser() {
        your feedback board looks like it belongs to your business, not a generic tool.
       </p>
       <span className="ft-badge growth">
-       Growth &amp; Pro plans
+       Growth &amp; Business plans
       </span>
      </div>
      <div className="ft-card">
@@ -531,7 +533,7 @@ function Solution() {
        Share a link or QR code. Anyone can submit feedback instantly with
        no login needed.
       </p>
-      <p style={{ fontSize: "0.875rem", color: "#2E86AB", marginTop: "0.5rem" }}>
+      <p style={{ fontSize: "0.875rem", color: "var(--teal-on-navy)", marginTop: "0.5rem" }}>
        <Globe size={14} style={{ display: "inline", verticalAlign: "middle", marginRight: "4px" }} />Submission forms are available in multiple languages. Request your language and we&apos;ll add it.
       </p>
       <div className="sol-step-tag">
@@ -829,7 +831,7 @@ function BeforeAfter() {
    <div className="container">
     <div
      className="section-label"
-     style={{ background: "var(--teal-pale)", color: "var(--teal)" }}
+     style={{ background: "var(--teal-pale)", color: "var(--teal-text)" }}
     >
      <BarChart2 size={13} /> Results
     </div>
@@ -860,19 +862,19 @@ function BeforeAfter() {
        <CheckCircle2 size={15} /> After FeedSolve
       </div>
       <div className="ba-item">
-       <ClipboardList size={16} style={{ color: "#16A34A" }} /> Every
+       <ClipboardList size={16} style={{ color: "var(--green-text)" }} /> Every
        issue tracked in one place
       </div>
       <div className="ba-item">
-       <UserCheck size={16} style={{ color: "#16A34A" }} /> Clear
+       <UserCheck size={16} style={{ color: "var(--green-text)" }} /> Clear
        ownership on every issue
       </div>
       <div className="ba-item">
-       <RefreshCw size={16} style={{ color: "#16A34A" }} /> Structured
+       <RefreshCw size={16} style={{ color: "var(--green-text)" }} /> Structured
        resolution flow
       </div>
       <div className="ba-item">
-       <Eye size={16} style={{ color: "#16A34A" }} /> Full transparency
+       <Eye size={16} style={{ color: "var(--green-text)" }} /> Full transparency
        end-to-end
       </div>
      </div>
@@ -918,7 +920,7 @@ function Comparison() {
       <p>
        Zonka measures satisfaction scores. FeedSolve measures Resolution Rate -
        did you actually fix it? Built for SMBs, not enterprise survey teams.
-       Branded QR codes. Free to start.
+       Branded QR codes. Free 7-day trial.
       </p>
       <Link href="/compare/feedsolve-vs-zonka/">
        FeedSolve vs Zonka Feedback: full comparison →
@@ -950,19 +952,22 @@ function FAQ() {
 const landingBlogCards = [
  {
   stripe: "var(--teal)",
-  tagStyle: { background: "var(--teal-pale)", color: "var(--teal)" } as React.CSSProperties,
+  avatar: "var(--teal-btn)",
+  tagStyle: { background: "var(--teal-pale)", color: "var(--teal-text)" } as React.CSSProperties,
   tagLabel: "Operations",
   blogId: 1,
  },
  {
   stripe: "#6366F1",
+  avatar: "#4f46e5",
   tagStyle: { background: "#EEF2FF", color: "#3730A3" } as React.CSSProperties,
   tagLabel: "QR Codes",
   blogId: 2,
  },
  {
   stripe: "#16A34A",
-  tagStyle: { background: "#F0FDF4", color: "#16A34A" } as React.CSSProperties,
+  avatar: "#15803d",
+  tagStyle: { background: "#F0FDF4", color: "var(--green-text)" } as React.CSSProperties,
   tagLabel: "Operations",
   blogId: 3,
  },
@@ -1033,7 +1038,7 @@ function Blog() {
         </div>
         <div
          className="visual-panel-row-text"
-         style={{ color: "rgba(255,255,255,0.55)" }}
+         style={{ color: "var(--muted-on-navy)" }}
         >
          Complaints via WhatsApp
         </div>
@@ -1056,7 +1061,7 @@ function Blog() {
         </div>
         <div
          className="visual-panel-row-text"
-         style={{ color: "rgba(255,255,255,0.55)" }}
+         style={{ color: "var(--muted-on-navy)" }}
         >
          Feedback buried in email
         </div>
@@ -1074,7 +1079,7 @@ function Blog() {
       <div className="visual-panel-block-solve">
        <div
         className="visual-panel-block-label"
-        style={{ color: "var(--teal-light)" }}
+        style={{ color: "var(--teal-on-navy)" }}
        >
         With FeedSolve
        </div>
@@ -1150,7 +1155,7 @@ function Blog() {
          <div className="blog-card-footer">
           <div
            className="blog-card-avatar"
-           style={{ background: card.stripe }}
+           style={{ background: card.avatar }}
           >
            M
           </div>
@@ -1222,6 +1227,20 @@ const websiteJsonLd = {
  },
 };
 
+// SoftwareApplication and Organization live on the homepage only - they describe
+// the product and the company once, rather than repeating on every page.
+const softwareApplicationJsonLd = generateSoftwareAppSchema();
+const organizationJsonLd = {
+ ...generateOrganizationSchema(),
+ description:
+  "FeedSolve is complaint management and digital suggestion box software for SMBs - collect feedback via branded QR codes, then assign, track, and resolve every complaint in one dashboard.",
+ contactPoint: {
+  "@type": "ContactPoint",
+  email: "hello@feedsolve.com",
+  contactType: "customer support",
+ },
+};
+
 export default function Home() {
  return (
   <>
@@ -1252,6 +1271,7 @@ export default function Home() {
     type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
    />
+   <JsonLdScript data={[softwareApplicationJsonLd, organizationJsonLd]} />
   </>
  );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { G2_PROFILE_URL, LINKEDIN_URL } from "@/lib/seo";
@@ -37,7 +35,7 @@ interface FooterProps {
 }
 
 export default function Footer({ variant = "home", logoSrc }: FooterProps) {
-  const resolvedLogo = logoSrc ?? "/logo.webp";
+  const resolvedLogo = logoSrc ?? "/brand-mark.webp";
 
   const productHref = variant === "blog" ? "/#solution" : "#solution";
   const pricingHref = variant === "blog" ? "/#pricing" : "#pricing";
@@ -93,21 +91,6 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
           </div>
         ))}
       </nav>
-      <div className="footer-badges">
-        <a
-          href="https://saasbrowser.com/en/saas/1518652/feedsolve"
-          target="_blank"
-          rel="noopener"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://static-files.saasbrowser.com/saas-browser-badge-16.svg"
-            alt="FeedSolve - SaaS search engine"
-            width={200}
-            height={54}
-          />
-        </a>
-      </div>
       <div className="footer-built-by">
         Built by the team at{" "}
         <a className="footer-company-link" href="https://www.lumoraventures.com/" target="_blank" rel="noopener noreferrer">

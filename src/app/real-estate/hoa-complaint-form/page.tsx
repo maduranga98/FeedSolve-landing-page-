@@ -22,7 +22,7 @@ const PAGE_URL = `https://feedsolve.com${PAGE_PATH}`;
 export const metadata = generatePageMetadata({
   title: "HOA Complaint Form: Route & Resolve Issues",
   description:
-    "An HOA complaint form that routes each submission to the board member on duty, tracks it to resolution, and gives residents a code to check status without calling.",
+    "An HOA complaint form that routes each submission to the board member on duty, tracks it to resolution and gives residents a code to check status.",
   path: PAGE_PATH,
 });
 
@@ -53,10 +53,9 @@ export default function RealEstateHoaComplaintForm() {
   return (
     <>
       {/*
-        SoftwareApplication + Offer schema is already emitted site-wide from
-        src/app/layout.tsx (see generateSoftwareAppSchema in @/lib/seo/schema
-        for the standalone version) - repeating it here would ship two
-        competing entities for the same product on one page.
+        SoftwareApplication + Offer schema lives on the homepage only (see
+        generateSoftwareAppSchema in @/lib/seo/schema) - repeating it here would
+        ship competing entities for the same product.
       */}
       <JsonLdScript
         data={[
@@ -227,7 +226,7 @@ export default function RealEstateHoaComplaintForm() {
         }
         faqs={faqs.map((faq) => ({ q: faq.question, a: faq.answer }))}
         ctaHeading="Give residents a complaint form that closes the loop."
-        ctaSub="Set up your community's complaint board in 2 minutes. Free to start."
+        ctaSub="Set up your community's complaint board in 2 minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/real-estate/tenant-feedback/",

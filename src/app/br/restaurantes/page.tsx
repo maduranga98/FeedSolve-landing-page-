@@ -94,7 +94,8 @@ export default function BrRestaurantsPage() {
             <Link href="/br/blog/avaliacao-negativa-restaurante-google-ifood/">
               como evitar e responder avaliação negativa no Google e no iFood
             </Link>
-            .
+            . Veja todos os artigos no{" "}
+            <Link href="/br/blog/">blog do FeedSolve Brasil</Link>.
           </p>
         </div>
       </section>

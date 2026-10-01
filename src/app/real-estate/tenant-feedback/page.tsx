@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo/metadata";
 import {
   Building2,
   Hash,
@@ -12,21 +12,12 @@ import VerticalProseSection from "@/components/VerticalProseSection";
 import { JsonLdScript } from "@/components/JsonLd";
 import { type FAQItem, generateFAQSchema } from "@/lib/seo/schema";
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: "Tenant Feedback Portal for Property Managers",
   description:
     "Give tenants and HOA residents a QR code to submit maintenance requests, community complaints, and shared-area issues without calling or emailing.",
-  openGraph: {
-    title: "Tenant Feedback Portal & HOA Complaint Form | FeedSolve",
-    description:
-      "QR-based tenant feedback portal and HOA complaint form for property managers. Zero login, tracking codes, audit trail.",
-    url: "https://feedsolve.com/real-estate/tenant-feedback/",
-    type: "website",
-  },
-  alternates: {
-    canonical: "https://feedsolve.com/real-estate/tenant-feedback/",
-  },
-};
+  path: "/real-estate/tenant-feedback/",
+});
 
 const faqs: FAQItem[] = [
   {
@@ -227,7 +218,7 @@ export default function RealEstateTenantFeedback() {
         }
         faqs={faqs.map((faq) => ({ q: faq.question, a: faq.answer }))}
         ctaHeading="Every maintenance request tracked. Every tenant and HOA resident heard."
-        ctaSub="Set up your first tenant feedback portal or HOA complaint form in 2 minutes. Free to start."
+        ctaSub="Set up your first tenant feedback portal or HOA complaint form in 2 minutes. Free 7-day trial."
         relatedLinks={[
           {
             href: "/real-estate/hoa-complaint-form/",

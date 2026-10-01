@@ -1,30 +1,43 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, DM_Sans, Lora } from "next/font/google";
 import Script from "next/script";
-import { ORGANIZATION_SAME_AS } from "@/lib/seo";
+import { OG_IMAGE_HEIGHT, OG_IMAGE_URL, OG_IMAGE_WIDTH } from "@/lib/seo/site";
 import "./globals.css";
 
+// Bricolage Grotesque and DM Sans are variable fonts: omitting `weight` loads a
+// single variable file per style instead of one file per weight. The CSS only
+// uses weights 400-800, inside both fonts' ranges.
 const bricolage = Bricolage_Grotesque({
  variable: "--font-display",
  subsets: ["latin"],
- weight: ["400", "500", "600", "700", "800"],
  display: "swap",
 });
 
 const dmSans = DM_Sans({
  variable: "--font-body",
  subsets: ["latin"],
- weight: ["300", "400", "500", "600", "700"],
- style: ["normal", "italic"],
  display: "swap",
 });
 
+// The only italic DM Sans on the site is `.punch p` (homepage). Loading it as
+// its own, non-preloaded family keeps it out of the critical path while the
+// real italic still renders.
+const dmSansItalic = DM_Sans({
+ variable: "--font-body-italic",
+ subsets: ["latin"],
+ style: ["italic"],
+ display: "swap",
+ preload: false,
+});
+
+// Lora is only used for long-form blog prose, and its italic is never rendered,
+// so: normal style only, and not preloaded on every page.
 const lora = Lora({
  variable: "--font-prose",
  subsets: ["latin"],
  weight: ["400", "600"],
- style: ["normal", "italic"],
  display: "swap",
+ preload: false,
 });
 
 const SITE_URL = "https://feedsolve.com";
@@ -36,31 +49,22 @@ export const metadata: Metadata = {
   template: "%s | FeedSolve",
  },
  description:
-  "FeedSolve helps SMBs collect customer feedback via QR code, then assign, track, and resolve every complaint from one dashboard. Free to start.",
+  "FeedSolve helps SMBs collect customer feedback via QR code, then assign, track, and resolve every complaint from one dashboard. Free 7-day trial.",
  applicationName: "FeedSolve",
- keywords: [
-  "FeedSolve",
-  "Feed Solve",
-  "feed solve app",
-  "feedsolve.com",
-  "complaint management software",
-  "digital suggestion box software",
-  "QR code feedback",
- ],
  openGraph: {
   title: "FeedSolve - Feedback Management & Complaint Tracking Software for SMBs",
   description:
-   "Collect feedback from customers and suppliers via branded QR codes. Assign, track, and resolve complaints - in any language. Free to start, no credit card.",
+   "Collect feedback from customers and suppliers via branded QR codes. Assign, track, and resolve complaints - in any language. Free 7-day trial.",
   url: `${SITE_URL}/`,
   siteName: "FeedSolve",
   locale: "en_US",
   type: "website",
   images: [
    {
-    url: `${SITE_URL}/feedsolve.webp`,
-    width: 1200,
-    height: 630,
-    alt: "FeedSolve dashboard - branded QR code feedback management and complaint tracking software for SMBs",
+    url: OG_IMAGE_URL,
+    width: OG_IMAGE_WIDTH,
+    height: OG_IMAGE_HEIGHT,
+    alt: "FeedSolve - feedback management and complaint tracking software for SMBs",
    },
   ],
  },
@@ -68,8 +72,8 @@ export const metadata: Metadata = {
   card: "summary_large_image",
   title: "FeedSolve - Feedback Management & Complaint Tracking Software for SMBs",
   description:
-   "Collect feedback from customers and suppliers via branded QR codes. Assign, track, and resolve complaints - in any language. Free to start, no credit card.",
-  images: [`${SITE_URL}/feedsolve.webp`],
+   "Collect feedback from customers and suppliers via branded QR codes. Assign, track, and resolve complaints - in any language. Free 7-day trial.",
+  images: [OG_IMAGE_URL],
  },
  manifest: "/manifest.json",
  robots: {
@@ -91,69 +95,6 @@ export const viewport: Viewport = {
  themeColor: "#1E3557",
 };
 
-const softwareApplicationJsonLd = {
- "@context": "https://schema.org",
- "@type": "SoftwareApplication",
- name: "FeedSolve",
- alternateName: ["Feed Solve", "FeedSolve Feedback & Complaint Management"],
- applicationCategory: "BusinessApplication",
- applicationSubCategory: "CustomerFeedbackSoftware",
- operatingSystem: "Web",
- description:
-  "FeedSolve is feedback management and complaint resolution software for SMBs. Collect feedback via branded QR codes or shareable links - no login needed for submitters. Assign issues to your team, resolve every submission, and let submitters track progress with a unique tracking code. Supports multi-language submission forms.",
- url: "https://feedsolve.com/",
- image: "https://feedsolve.com/feedsolve.webp",
- screenshot: "https://feedsolve.com/feedsolve.webp",
- inLanguage: ["en", "en-GB", "en-AU", "en-US", "pt-BR"],
- keywords:
-  "feedsolve, feed solve, feedback management software, complaint management software, QR code feedback, supplier feedback, tenant feedback, GDPR feedback management, customer complaint tracking, SMB feedback platform",
- featureList: [
-  "Branded QR code feedback collection",
-  "No-login submission for customers and suppliers",
-  "Unique tracking code for every submission",
-  "Kanban-style complaint resolution workflow",
-  "Multi-language submission forms",
-  "Team assignment and resolution audit trail",
-  "GDPR-aware data handling for EU teams",
- ],
- audience: {
-  "@type": "BusinessAudience",
-  audienceType:
-   "Small and mid-sized businesses in restaurants, manufacturing, logistics, real estate, and retail",
- },
- provider: {
-  "@type": "Organization",
-  name: "FeedSolve",
-  url: "https://feedsolve.com/",
-  // Same entity links as the standalone Organization node below - both are
-  // fed from ORGANIZATION_SAME_AS so they cannot drift apart.
-  sameAs: [...ORGANIZATION_SAME_AS],
- },
- offers: [
-  { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
-  { "@type": "Offer", name: "Starter", price: "19", priceCurrency: "USD", billingPeriod: "P1M", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
-  { "@type": "Offer", name: "Growth", price: "49", priceCurrency: "USD", billingPeriod: "P1M", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
-  { "@type": "Offer", name: "Pro", price: "79", priceCurrency: "USD", billingPeriod: "P1M", availability: "https://schema.org/InStock", url: "https://feedsolve.com/" },
- ],
-};
-
-const organizationJsonLd = {
- "@context": "https://schema.org",
- "@type": "Organization",
- name: "FeedSolve",
- alternateName: ["Feed Solve"],
- url: "https://feedsolve.com/",
- logo: "https://feedsolve.com/logo.webp",
- description:
-  "FeedSolve is complaint management and digital suggestion box software for SMBs - collect feedback via branded QR codes, then assign, track, and resolve every complaint in one dashboard.",
- contactPoint: {
-  "@type": "ContactPoint",
-  email: "hello@feedsolve.com",
-  contactType: "customer support",
- },
- sameAs: [...ORGANIZATION_SAME_AS],
-};
-
 export default function RootLayout({
  children,
 }: Readonly<{
@@ -161,13 +102,13 @@ export default function RootLayout({
 }>) {
  return (
   // lang is rewritten to pt-BR for /br/ by scripts/set-html-lang.mjs after export.
-  <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable}`}>
+  <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={`${bricolage.variable} ${dmSans.variable} ${lora.variable} ${dmSansItalic.variable}`}>
    <head />
    <body suppressHydrationWarning>
     {/* Google Tag Manager */}
     <Script
      id="gtm-script"
-     strategy="afterInteractive"
+     strategy="lazyOnload"
      dangerouslySetInnerHTML={{
       __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -187,14 +128,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      />
     </noscript>
     {/* End Google Tag Manager (noscript) */}
-    <script
-     type="application/ld+json"
-     dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationJsonLd) }}
-    />
-    <script
-     type="application/ld+json"
-     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-    />
     {children}
    </body>
   </html>
