@@ -1,3 +1,5 @@
+import type { ComparisonRow } from "@/components/ComparisonTable";
+
 export type AltFaq = { q: string; a: string };
 
 export type OtherAlternative = {
@@ -34,6 +36,10 @@ export type Alternative = {
   /** Link to a blog roundup of alternatives to this competitor, when one exists */
   roundupHref?: string;
   roundupLabel?: string;
+  /** Optional feature-by-feature table (competitor vs FeedSolve). */
+  comparisonRows?: ComparisonRow[];
+  /** Optional "who each tool is for" lists. */
+  bestFor?: { competitor: string[]; feedsolve: string[] };
 };
 
 export const FEEDSOLVE_HIGHLIGHTS = [
@@ -97,6 +103,29 @@ export const alternatives: Alternative[] = [
       "Quote-only. Typically annual enterprise contracts; no self-serve tier.",
     whereCompetitorWins:
       "Large enterprises with a dedicated CX function that need journey mapping, advanced analytics, and cross-source unification at scale. If you have CX analysts on staff and an enterprise budget, Medallia is a legitimate choice.",
+    comparisonRows: [
+      { label: "Typical buyer", left: "Large enterprise with a dedicated CX team", right: "Small and mid-size business, owner or operations lead" },
+      { label: "Pricing", left: "Quote-only, negotiated per contract", right: "Published: 7-day free trial, then $19 to $79 per month flat" },
+      { label: "Getting started", left: "Sales-led scoping and implementation project", right: "Self-serve: create a board, print the QR code" },
+      { label: "Collecting feedback", left: "Enterprise programs across many sources", right: "Zero-login QR code and link submission" },
+      { label: "After submission", left: "Analytics and program workflows for CX teams", right: "Assignment, Kanban status and documented resolution" },
+      { label: "Submitter visibility", left: "No public tracking code", right: "Unique #FSV-XXXX code and public tracking page" },
+      { label: "Headline metric", left: "Experience analytics and insight", right: "Resolution rate" },
+    ],
+    bestFor: {
+      competitor: [
+        "Enterprises with CX analysts on staff",
+        "Programs that unify feedback from dozens of sources",
+        "Journey mapping and text analytics at scale",
+        "Buyers who expect a procurement process and implementation partner",
+      ],
+      feedsolve: [
+        "Owners and operations leads who want feedback working this week, without a sales call",
+        "Teams collecting complaints from customers, suppliers or staff who will never log in",
+        "Businesses that care more about fixed issues than about analytics dashboards",
+        "Restaurants, manufacturers, property managers and retailers using a QR code at the point of experience",
+      ],
+    },
     otherAlternatives: [
       {
         name: "Qualtrics",
@@ -130,6 +159,14 @@ export const alternatives: Alternative[] = [
       {
         q: "Can I switch from Medallia to FeedSolve?",
         a: "There is nothing to migrate in the traditional sense - FeedSolve is not a data-warehouse CX suite. You create boards for each stakeholder type, print the QR codes, and new feedback starts flowing into the resolution workflow the same day. Many teams run it alongside an enterprise tool during transition.",
+      },
+      {
+        q: "Who should stay with Medallia?",
+        a: "Large enterprises with a dedicated CX function that need journey mapping, advanced analytics and cross-source unification. If you have analysts to run that program and an enterprise budget, Medallia is a legitimate choice. FeedSolve is for teams that mainly need to collect issues and make sure each one is fixed.",
+      },
+      {
+        q: "How long does FeedSolve take to set up compared with Medallia?",
+        a: "FeedSolve is self-serve. You start the free trial, create a board for each stakeholder type, and print or share the QR code, which takes minutes rather than a scoped implementation project. Medallia rollouts are typically projects with integrations and program design.",
       },
     ],
   },
@@ -263,6 +300,29 @@ export const alternatives: Alternative[] = [
       "Quote-only. Enterprise annual contracts sized to program scope.",
     whereCompetitorWins:
       "Enterprises that need to unify and analyze feedback signals across many channels with AI-supported analytics and program consulting. Genuine strengths - at enterprise scale and price.",
+    comparisonRows: [
+      { label: "Typical buyer", left: "Enterprise consolidating feedback signals across many sources", right: "Small and mid-size business, owner or operations lead" },
+      { label: "Pricing", left: "Quote-only, enterprise annual contracts", right: "Published: 7-day free trial, then $19 to $79 per month flat" },
+      { label: "Getting started", left: "Sales-led, with program consulting", right: "Self-serve: create a board, print the QR code" },
+      { label: "Collecting feedback", left: "Unified survey, review and social signals", right: "Zero-login QR code and link submission" },
+      { label: "After submission", left: "AI-driven analytics for a CX team", right: "Assignment, Kanban status and documented resolution" },
+      { label: "Submitter visibility", left: "No public tracking code", right: "Unique #FSV-XXXX code and public tracking page" },
+      { label: "Headline metric", left: "Analytics on unified feedback", right: "Resolution rate" },
+    ],
+    bestFor: {
+      competitor: [
+        "Enterprises unifying many feedback channels",
+        "Teams that want AI-supported analytics with managed program support",
+        "Organizations with a dedicated CX function",
+        "Buyers comfortable with quote-only enterprise contracts",
+      ],
+      feedsolve: [
+        "Owners and operations leads who want feedback working this week, without a sales call",
+        "Teams collecting complaints from customers, suppliers or staff who will never log in",
+        "Businesses that care more about fixed issues than about analytics dashboards",
+        "Restaurants, manufacturers, property managers and retailers using a QR code at the point of experience",
+      ],
+    },
     otherAlternatives: [
       {
         name: "Medallia",
@@ -296,6 +356,14 @@ export const alternatives: Alternative[] = [
       {
         q: "What does FeedSolve cost?",
         a: "There is a 7-day free trial to start, and paid tiers run from $19 to $79 per month, flat, based on features rather than response volume. No sales call, no annual lock-in required.",
+      },
+      {
+        q: "Who should stay with InMoment?",
+        a: "Enterprises that need to unify and analyze feedback signals across many channels, with AI-supported analytics and program consulting. Those are real strengths at enterprise scale and price. FeedSolve is the better fit when the job is collecting issues and driving each one to resolution.",
+      },
+      {
+        q: "Can FeedSolve work next to an enterprise CX platform?",
+        a: "They cover different jobs, so some teams use a lightweight tool at the front line, such as a QR code on a table or delivery note, while a larger program handles analytics. Treat them as separate systems: FeedSolve has its own boards, tracking codes and resolution workflow.",
       },
     ],
   },
@@ -593,6 +661,29 @@ export const alternatives: Alternative[] = [
       "From ~$55/user/month billed annually; higher tiers for workflow features.",
     whereCompetitorWins:
       "Professional research teams that need advanced survey logic, custom scripting, and complex questionnaire design.",
+    comparisonRows: [
+      { label: "Typical buyer", left: "Research teams whose job is designing and running surveys", right: "Small and mid-size business, owner or operations lead" },
+      { label: "Pricing", left: "Per user, from about $55 per user per month billed annually", right: "Flat: 7-day free trial, then $19 to $79 per month for the whole team" },
+      { label: "Core strength", left: "Advanced survey logic, piping and scripting", right: "Resolution loop: submitted, assigned, in progress, resolved" },
+      { label: "Collecting feedback", left: "Designed questionnaires", right: "Zero-login QR code and link submission" },
+      { label: "After submission", left: "Survey analysis and workflow add-ons", right: "Assignment, Kanban status and documented resolution" },
+      { label: "Submitter visibility", left: "No public tracking code", right: "Unique #FSV-XXXX code and public tracking page" },
+      { label: "Headline metric", left: "Survey results and analysis", right: "Resolution rate" },
+    ],
+    bestFor: {
+      competitor: [
+        "Professional researchers building complex questionnaires",
+        "Teams that need custom scripting and survey logic",
+        "Organizations with staff whose full-time job is running surveys",
+        "Research-heavy programs that can justify per-seat pricing",
+      ],
+      feedsolve: [
+        "Owners and operations leads who want feedback working this week, without a sales call",
+        "Teams collecting complaints from customers, suppliers or staff who will never log in",
+        "Businesses that care more about fixed issues than about analytics dashboards",
+        "Restaurants, manufacturers, property managers and retailers using a QR code at the point of experience",
+      ],
+    },
     otherAlternatives: [
       {
         name: "Qualtrics",
@@ -626,6 +717,14 @@ export const alternatives: Alternative[] = [
       {
         q: "How quickly can I get started with FeedSolve?",
         a: "Minutes. Start the free trial, create a board for each stakeholder type, and share the link or print the QR code. Submissions arrive with tracking codes and flow into the Kanban workflow immediately.",
+      },
+      {
+        q: "Who should stay with Alchemer?",
+        a: "Professional research teams that need advanced survey logic, custom scripting and complex questionnaire design. FeedSolve does not try to replace that. It collects open feedback and complaints and drives them to resolution.",
+      },
+      {
+        q: "Is FeedSolve a survey tool?",
+        a: "No. FeedSolve is built around the lifecycle of each item: submitted, assigned, in progress, resolved. If most of your surveys are really complaint or issue forms, a resolution board fits better than questionnaire logic.",
       },
     ],
   },
@@ -1131,9 +1230,9 @@ export const alternatives: Alternative[] = [
     categoryLabel: "Helpdesk / ticketing",
     roundupHref: "/blog/best-freshdesk-alternatives/",
     roundupLabel: "See all 6 Freshdesk alternatives compared",
-    metaTitle: "Freshdesk Alternative for Feedback Management",
+    metaTitle: "Freshdesk Alternative With No Per-Agent Fees",
     metaDescription:
-      "Freshdesk is a helpdesk priced per agent. FeedSolve is a QR-first, zero-login Freshdesk alternative for customer and supplier feedback, at a flat price.",
+      "A Freshdesk alternative for small business: QR-first, no-login feedback, no per-agent seats, flat $19-79/month. Start with a 7-day free trial.",
     heroSubtitle:
       "Freshdesk handles support tickets well and starts cheap. But it still assumes complaints arrive through support channels and agents work them in paid seats. FeedSolve is the front door for feedback that starts in the physical world - QR, zero-login, flat-priced.",
     quickAnswer: {
@@ -1386,9 +1485,9 @@ export const alternatives: Alternative[] = [
     name: "Uniqode",
     category: "qr-feedback",
     categoryLabel: "QR feedback tool",
-    metaTitle: "Best Uniqode Alternative for QR Feedback (2026)",
+    metaTitle: "Uniqode Alternative That Resolves QR Feedback",
     metaDescription:
-      "Uniqode handles QR intake but stops at submission. FeedSolve matches QR-first collection and adds assignment, status and tracking codes for every submitter.",
+      "Looking for a Uniqode alternative? FeedSolve keeps QR-first, no-login feedback and adds assignment, status and tracking codes. 7-day free trial.",
     heroSubtitle:
       "Uniqode (formerly Beaconstac) is the QR specialist: personalized codes, per-location analytics, multi-language forms. But it is still a survey tool - feedback goes in, nothing comes out. FeedSolve matches the QR-first intake and adds the entire resolution layer.",
     quickAnswer: {

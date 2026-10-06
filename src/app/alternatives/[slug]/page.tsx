@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ComparisonTable from "@/components/ComparisonTable";
 import {
   alternatives,
   getAlternative,
@@ -535,6 +536,54 @@ export default async function AlternativePage({
           </div>
         </div>
       </section>
+
+      {/* FEATURE TABLE + WHO IT'S FOR (only entries that define them) */}
+      {alt.comparisonRows && (
+        <section style={{ background: "white", padding: "72px 32px 24px" }}>
+          <div className="container">
+            <div style={{ textAlign: "center", marginBottom: 36 }}>
+              <h2 style={{ color: "var(--navy)" }}>
+                {alt.name} vs FeedSolve: feature comparison
+              </h2>
+            </div>
+            <ComparisonTable
+              caption={`${alt.name} compared with FeedSolve`}
+              leftHeader={alt.name}
+              rightHeader="FeedSolve"
+              rows={alt.comparisonRows}
+            />
+          </div>
+        </section>
+      )}
+      {alt.bestFor && (
+        <section style={{ background: "white", padding: "48px 32px 72px" }}>
+          <div className="container">
+            <div style={{ textAlign: "center", marginBottom: 36 }}>
+              <h2 style={{ color: "var(--navy)" }}>
+                Who {alt.name} and FeedSolve are each built for
+              </h2>
+            </div>
+            <div className="bestfor-grid">
+              <div className="bestfor-card">
+                <h3>{alt.name} fits best if you are</h3>
+                <ul>
+                  {alt.bestFor.competitor.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bestfor-card is-featured">
+                <h3>FeedSolve fits best if you are</h3>
+                <ul>
+                  {alt.bestFor.feedsolve.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* OTHER ALTERNATIVES */}
       <section style={{ background: "var(--bg)", padding: "72px 32px" }}>

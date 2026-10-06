@@ -21,15 +21,23 @@ export function generateFAQSchema(faqs: FAQItem[]) {
   };
 }
 
+/** Shared @id so every page that describes the product points at the same entity. */
+export const SOFTWARE_APP_ID = `${SITE_URL}/#software`;
+
 /**
- * SoftwareApplication + Offer schema. Emitted on the homepage only: the
- * product is one entity, and repeating it on every page ships competing
- * copies of it.
+ * SoftwareApplication + Offer schema. The product is one entity: it is emitted
+ * on the homepage and, with a page-specific description and feature list, on
+ * the digital suggestion box product page. Both share SOFTWARE_APP_ID so they
+ * describe the same node rather than competing copies. Do not add it to other
+ * pages; BR landing pages use a plain Thing for `about` on purpose.
  */
-export function generateSoftwareAppSchema() {
-  return {
+export function generateSoftwareAppSchema(
+  overrides: { description?: string; featureList?: string[] } = {},
+) {
+  const app = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": SOFTWARE_APP_ID,
     name: "FeedSolve",
     alternateName: ["Feed Solve", "FeedSolve Feedback & Complaint Management"],
     applicationCategory: "BusinessApplication",
@@ -63,6 +71,7 @@ export function generateSoftwareAppSchema() {
     // real G2/Capterra reviews exist. Add them from real data only - a fabricated or
     // self-written rating is a Google structured-data policy violation.
   };
+  return { ...app, ...overrides };
 }
 
 /**

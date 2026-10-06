@@ -10,16 +10,16 @@ import {
 import VerticalPage from "@/components/VerticalPage";
 
 export const metadata = generatePageMetadata({
-  title: "Supplier Fault Tracking for Manufacturers",
+  title: "Supplier Feedback & Fault Tracking Software",
   description:
-    "Supplier fault tracking software for manufacturers. Replace WhatsApp complaints and shop-floor logs with a QR feedback board, tracking codes and an audit trail.",
+    "Supplier feedback and fault tracking for manufacturers: replace WhatsApp complaints with a QR board, tracking codes and an audit trail. 7-day free trial.",
   path: "/manufacturing/supplier-feedback/",
 });
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Supplier Feedback Tool for Manufacturers",
+  name: "Supplier Feedback and Fault Tracking for Manufacturers",
   description:
     "FeedSolve supplier feedback and complaint tracking for manufacturing companies.",
   url: "https://feedsolve.com/manufacturing/supplier-feedback/",
@@ -65,7 +65,7 @@ export default function ManufacturingSupplierFeedback() {
         badge="Manufacturing · Supplier feedback"
         breadcrumbLabel="Supplier Feedback for Manufacturers"
         breadcrumbUrl="https://feedsolve.com/manufacturing/supplier-feedback/"
-        h1="Stop Managing Supplier Complaints Over WhatsApp"
+        h1="Supplier Feedback and Fault Tracking for Manufacturers"
         subheading="Give every supplier and shop floor team a QR code to report defects, delivery issues, quality concerns, and production line feedback - with a full resolution workflow and audit trail built in."
         quickAnswer="FeedSolve is a supplier feedback and complaint resolution platform built for manufacturing SMBs. Suppliers scan a QR code on a delivery note, while operators can submit a shop floor complaint or production line feedback from a shared QR code without logging in. Each submitter receives a tracking code. Your quality team manages every complaint through a Kanban dashboard - assign, resolve, document, and reply - with resolution rate visible at all times."
         stats={[
@@ -211,6 +211,11 @@ export default function ManufacturingSupplierFeedback() {
             href: "/blog/supplier-feedback-tool-manufacturers/",
             label: "Read the guide",
             sub: "Supplier feedback for manufacturers",
+          },
+          {
+            href: "/blog/vendor-approval-tracking-manufacturers/",
+            label: "Vendor approval tracking",
+            sub: "Move new suppliers through review",
           },
           {
             href: "/blog/delivery-complaint-tracking-software/",

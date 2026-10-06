@@ -40,7 +40,7 @@ export default function VerticalProseSection({
         </div>
         <h2 style={{ color: "var(--navy)", marginBottom: 28 }}>{heading}</h2>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+        <div className="vps-prose" style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           {paragraphs.map((p, i) => (
             <p
               key={i}

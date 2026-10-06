@@ -1109,6 +1109,34 @@ export default function UKComplaintManagementPage() {
 
       <UKComplaintFAQ />
 
+      {/* RELATED */}
+      <section className="mkt-section" style={{ background: "var(--bg)" }}>
+        <div className="container mkt-narrow">
+          <h2>Related complaint management guides</h2>
+          <ul className="mkt-links">
+            <li>
+              <Link href="/complaint-management-software/">Complaint management software overview</Link>
+            </li>
+            <li>
+              <Link href="/customer-complaint-software/">Customer complaint software</Link>
+            </li>
+            <li>
+              <Link href="/us/complaint-management-software/">Complaint management software for US small businesses</Link>
+            </li>
+            <li>
+              <Link href="/au/complaint-management-software/">Complaint management software in Australia</Link>
+            </li>
+            <li>
+              <Link href="/blog/complaint-management-solutions/">Complaint management solutions compared</Link>
+            </li>
+            <li>
+              <Link href="/alternatives/freshdesk/">Freshdesk alternative for small business</Link>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
       {/* CTA */}
       <section
         style={{

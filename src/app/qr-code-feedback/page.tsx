@@ -6,7 +6,7 @@ import VerticalPage from "@/components/VerticalPage";
 const URL = "https://feedsolve.com/qr-code-feedback/";
 
 export const metadata = generatePageMetadata({
-  title: "QR Code Feedback System | No-Login QR Feedback",
+  title: "QR Code Feedback System: No App, No Login",
   description:
     "Collect feedback with a QR code, no app or login. Customers scan, submit in any language and get a tracking code while you assign and resolve every issue.",
   path: "/qr-code-feedback/",

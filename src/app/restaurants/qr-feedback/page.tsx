@@ -13,9 +13,9 @@ import VerticalProseSection from "@/components/VerticalProseSection";
 import { clusterAlternates } from "@/lib/seo/hreflang";
 
 export const metadata = generatePageMetadata({
-  title: "QR Code Feedback for Restaurants in 30 Seconds",
+  title: "Restaurant Feedback QR Code: Catch Issues Early",
   description:
-    "Put a branded QR code on every table. Guests report an issue in 30 seconds and your team resolves it before anyone posts a review. Free 7-day trial.",
+    "Put a branded QR code on every table. Guests report a problem in seconds and your team resolves it before it becomes a public review. 7-day free trial.",
   path: "/restaurants/qr-feedback/",
   alternates: clusterAlternates("restaurants", "/restaurants/qr-feedback/"),
 });

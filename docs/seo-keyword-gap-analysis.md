@@ -1,6 +1,122 @@
 # FeedSolve — Competitive Keyword Gap Analysis
 
-_Last updated: 2026-06-30_
+_Last updated: 2026-10-06. The October 2026 snapshot is first; the June 2026 analysis follows unchanged as the baseline._
+
+## October 2026 snapshot (GSC, 6 Sep – 3 Oct 2026)
+
+Source: Google Search Console performance export, feedsolve.com, Web search,
+last 28 days. First-party data. Figures below are as exported; nothing here is
+estimated or invented.
+
+| Metric | Oct 2026 | June 2026 baseline |
+|---|---|---|
+| Clicks | 15 | ~4 |
+| Impressions | 3,513 | ~2,190 |
+| CTR | 0.43% | ~0.2% |
+| Avg position | 33.0 | ~40–50 |
+
+- **Countries (impressions):** US 1,931 (55%), UK 608, AU 188, India 185.
+- **Devices:** mobile CTR ~1.05% vs desktop ~0.28%.
+- **Excluded from optimisation:** ~25 long, prompt-style queries (for example
+  "which platform helps factories report…"). They look like AI or bot traffic and
+  are not targeted.
+
+### Complaint cluster (111 queries, ~1,255 impressions, avg position ~48)
+
+| Query | Impr | Pos |
+|---|---|---|
+| complaint management software | 160 | 43.9 |
+| complaints management software | 115 | 45.8 |
+| complaint tracking software | 97 | 43.9 |
+| complaint management solutions | 93 | 46.1 |
+| complaint software | 71 | 43.0 |
+| complaint handling software | 59 | 45.6 |
+| complaint management system software | 46 | 53.3 |
+
+Landing pages: `/complaint-management-software/` 909 impr (pos 45.7), `/uk/`
+473 (pos 50.3), `/au/` 140 (pos 54.9), `/us/` only 25 (pos 30.6) despite the US
+being 55% of impressions.
+
+### Other clusters
+
+- **Alternatives (page 1–2, zero clicks):** "uniqode alternative" 112 impr
+  (pos 8.75); "alternative to freshdesk" 47 (pos 14.6); InMoment, Medallia and
+  Alchemer alternatives around pos 25–28. `/alternatives/uniqode/` 115 impr
+  (pos 9.8), `/alternatives/freshdesk/` 101 impr (pos 19.9).
+- **Suggestion box:** `/digital-suggestion-box-software/` 418 impr, pos 32.5
+  (was ~57 in June). "suggestion box software" pos 15.0, "online suggestion box"
+  pos 42.3, "anonymous suggestion box" pos 63.9.
+- **Page-1 pages with ~zero clicks:** `/blog/qr-code-feedback-board/` (pos 7.6,
+  98 impr), `/blog/next-step-after-resolving-complaint/` (9.0, 86),
+  `/blog/supplier-feedback-tool-manufacturers/` (7.8, 151),
+  `/blog/vendor-approval-tracking-manufacturers/` (4.5, 126),
+  `/restaurants/qr-feedback/` (8.2, 34), `/qr-code-feedback/` (4.7, 10).
+- **Possible cannibalisation:** `/manufacturing/supplier-feedback/` shows only 17
+  impr at pos 9.3 while the supplier blog post has 151.
+
+### Phase 0 audit findings (built HTML, 6 Oct 2026)
+
+- **Word counts:** the homepage has about 2,000 words of body copy, not the ~156
+  an external crawler reported. Genuinely thin pages were `/us/…` (180),
+  `/compare/` (157), `/br/blog/` (308, fixed in an earlier change) and
+  `/authors/feedsolve-team/` (97, a profile page, left alone).
+- **Structured data:** every JSON-LD block parses; no required-field gaps found
+  on Organization, WebSite, FAQPage, BreadcrumbList or BlogPosting. The only node
+  an auditor can flag is the homepage `SoftwareApplication`, which has `offers`
+  but no `aggregateRating` or `review` (see caveats).
+- **Canonicals and trailing slashes:** consistent. Canonicals, sitemap entries,
+  JSON-LD URLs, hreflang and internal links all carry trailing slashes, and the
+  sitemap matches the built page set exactly. The slash-less URLs in GSC are
+  legacy; `trailingSlash: true` on Firebase Hosting redirects them.
+- **Supplier overlap:** the money page and the guide shared a WhatsApp H1, and
+  the money page's JSON-LD name duplicated the guide's title. Neither post linked
+  to the page from body copy.
+- **Suggestion Ox:** `/alternatives/suggestion-ox/` already exists.
+
+### What shipped (this change set)
+
+| Area | Change |
+|---|---|
+| Alternatives | Rewrote Uniqode and Freshdesk title/meta to query language. Added a feature table, "who it's for" and two FAQs each to Medallia, InMoment and Alchemer. Added every alternatives guide to `/compare/`, plus links from relevant blog posts. |
+| Page-1, low-CTR pages | Rewrote title/meta on the six pages listed above. |
+| US page | `/us/complaint-management-software/` rebuilt from a ~180-word wrapper into a US-specific page (~1,450 words): how it works, four industries, USD pricing table from real plan limits, documented-resolution framing with no legal-compliance claims, seven FAQs, WebPage + FAQPage + Breadcrumb schema. Implemented as optional props on `MarketLandingPage`. |
+| Complaint cluster | Worked the exact GSC variants into `/complaint-management-software/` (category and buyer intent) and `/customer-complaint-software/` (front-line and reputation intent), with new FAQs and reciprocal links to the US, UK and AU pages and blog posts. |
+| Suggestion box | Added a vs-free-tools comparison, three FAQs (online, anonymous, free) and a `SoftwareApplication` block to the product page. Expanded `/blog/online-suggestion-box-setup/` into a step-by-step guide (about 2,400 words). Varied the anchors pointing at the product page. |
+| Manufacturing | `/manufacturing/supplier-feedback/` is now the primary page (title and H1 around "supplier feedback and fault tracking"). Exact-match anchors from both supplier posts point up to it, and the guide's H1 is differentiated. Posts stay indexable. |
+| Thin pages | Added choosing guidance to `/compare/`. |
+
+Status of the June plan: Suggestion Ox page exists, supplier fault tracking
+strengthened, setup guide expanded and product page strengthened. **Not done:**
+healthcare patient-feedback landing page (Gap D) and the off-page work.
+
+### Caveats
+
+- **Semrush data is unverified.** Semrush API units were unavailable, so no
+  Semrush volumes or competitor keyword exports are used anywhere. GSC
+  impressions are the only demand signal, and no search volumes are invented.
+- **Results are not yet measured.** These changes shipped in October; judge them
+  on a fresh 28-day GSC window, not this snapshot. Title rewrites can move CTR
+  quickly, but ranking changes take longer.
+- **`SoftwareApplication` has no rating by design.** Google's rich result needs
+  `aggregateRating` or `review`. The homepage node and the suggestion box page
+  node (same `@id`) will keep being flagged by auditors such as Semrush until
+  real G2 or Capterra reviews exist. A fabricated or self-written rating would
+  violate Google's structured-data policy.
+- **Competitor claims are positioning-level.** Alternatives and comparison copy
+  states approach (quote-only vs published pricing, per-agent vs flat) and avoids
+  unverifiable specifics. Re-check competitor pricing before quoting numbers.
+- **Authority is still the ceiling.** As in June, head terms such as "complaint
+  management software" need links and time; on-page work gives marginal lift.
+- **Known inconsistencies left for follow-up (not changed here):** the AU page
+  says Starter has "unlimited team members on the board", but the plan table
+  gives Starter 3 team members. It also quotes Freshdesk per-agent prices that
+  should be re-verified, and its JSON-LD FAQ lists 3 of the 5 visible questions.
+  The legal-compliance framing on the UK and AU pages was not reviewed in this
+  pass.
+
+---
+
+# June 2026 baseline
 
 ## Method & data sources
 
