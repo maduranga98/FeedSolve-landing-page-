@@ -68,11 +68,13 @@ export default function BrLandingPage(props: BrLandingPageProps) {
       url,
       inLanguage: "pt-BR",
       isPartOf: { "@type": "WebSite", name: "FeedSolve", url: `${SITE_URL}/` },
+      // A plain Thing, not a SoftwareApplication: the full SoftwareApplication
+      // (with offers) lives on the homepage only. A nested copy here is audited
+      // as a rich-result candidate and fails for missing offers/rating/review.
       about: {
-        "@type": "SoftwareApplication",
+        "@type": "Thing",
         name: "FeedSolve",
-        applicationCategory: "BusinessApplication",
-        operatingSystem: "Web",
+        url: `${SITE_URL}/`,
       },
       publisher: generateOrganizationSchema({ standalone: false }),
     },

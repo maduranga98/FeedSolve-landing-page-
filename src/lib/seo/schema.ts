@@ -58,7 +58,10 @@ export function generateSoftwareAppSchema() {
     },
     offers: pricingOffers(),
     provider: generateOrganizationSchema({ standalone: false }),
-    // Add aggregateRating once real G2/Capterra reviews exist - never fabricate one.
+    // aggregateRating / review are intentionally absent. Google's SoftwareApplication
+    // rich result needs one of them, so Semrush reports this node as "invalid" until
+    // real G2/Capterra reviews exist. Add them from real data only - a fabricated or
+    // self-written rating is a Google structured-data policy violation.
   };
 }
 

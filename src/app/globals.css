@@ -946,6 +946,19 @@ textarea:focus-visible {
 .br-answer p { color: var(--text); font-size: 17px; line-height: 1.75; }
 .br-answer .br-answer-label { font-size: 12px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal-text); margin-bottom: 8px; }
 
+.br-prose p { color: var(--text-mid); font-size: 17px; line-height: 1.75; margin-bottom: 16px; }
+.br-prose .br-list { margin-top: 24px; }
+.br-list a { color: var(--teal-text); font-weight: 600; text-decoration: none; }
+.br-list a:hover { text-decoration: underline; }
+
+.author-posts { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 24px 0 0; padding: 0; }
+.author-posts li { border-top: 1px solid var(--border); padding-top: 14px; }
+.author-posts a { color: var(--navy); font-weight: 700; text-decoration: none; }
+.author-posts a:hover { color: var(--teal-text); }
+.author-posts p { color: var(--text-mid); font-size: 15px; line-height: 1.65; margin-top: 4px; }
+.author-posts-heading { color: var(--navy); margin: 40px 0 0; }
+.author-posts-intro { color: var(--text-mid); line-height: 1.75; margin-top: 10px; }
+
 .br-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
 .br-list li { display: flex; gap: 14px; align-items: flex-start; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; color: var(--text); line-height: 1.55; }
 .br-icon-bad { color: #C0392B; flex-shrink: 0; margin-top: 2px; }
