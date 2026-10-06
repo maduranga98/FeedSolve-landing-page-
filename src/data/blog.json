@@ -247,6 +247,10 @@
     {
      "anchor": "construction client feedback system",
      "url": "/blog/construction-client-feedback-system"
+    },
+    {
+     "anchor": "QR feedback tools compared: the Uniqode alternative",
+     "url": "/alternatives/uniqode"
     }
    ],
    "writer_notes": "Avoid the phrase 'digital transformation' — it reads as enterprise fluff to an SMB operations manager. Keep tone practical. Include a short visual description of what the QR code + form + tracking page flow looks like even if no actual image is placed — describe it so the reader can picture it.",
@@ -517,6 +521,10 @@
     {
      "anchor": "how to stop bad restaurant reviews before they are posted",
      "url": "/blog/stop-bad-restaurant-reviews-before-posted"
+    },
+    {
+     "anchor": "alternative to Uniqode for restaurants",
+     "url": "/alternatives/uniqode"
     }
    ],
    "writer_notes": "Lead with the emotional angle — a complaint that gets resolved is an opportunity, not a crisis. The Google Review angle is strong click-bait for this audience. Do not position this as a replacement for Google Reviews — frame it as a first-pass filter that gives the restaurant a chance to respond. Include a vivid example scenario (table 12, 8:45 PM) to make the workflow tangible.",
@@ -1224,6 +1232,10 @@
     {
      "anchor": "FeedSolve vs SurveyMonkey",
      "url": "/blog/feedsolve-vs-surveymonkey"
+    },
+    {
+     "anchor": "Alchemer alternative for resolving complaints",
+     "url": "/alternatives/alchemer"
     }
    ],
    "writer_notes": "Keep tone fair and factual — this is a comparison page, not a hit piece. Acknowledge Typeform's genuine strengths (conversational forms, conditional logic, NPS templates). The comparison table is the anchor of this post — make sure it renders cleanly. End with the 'Both if' use case recommendation to avoid appearing one-sided, which increases trust.",
@@ -1638,6 +1650,10 @@
     {
      "anchor": "google forms alternative with complaint tracking",
      "url": "/blog/google-forms-alternative-complaint-tracking"
+    },
+    {
+     "anchor": "Uniqode alternative that resolves QR feedback",
+     "url": "/alternatives/uniqode"
     }
    ],
    "writer_notes": "This is FeedSolve's flagship QR code post — it must own the 'QR code feedback system' keyword against all competitors. Avoid 'digital transformation' language; keep tone practical. The 2-minute setup claim must be substantiated with the actual step-by-step. Include the Southeast Asia/Middle East QR familiarity stat if sourced.",
@@ -1786,6 +1802,10 @@
     {
      "anchor": "FeedSolve vs Freshdesk",
      "url": "/blog/feedsolve-vs-freshdesk"
+    },
+    {
+     "anchor": "Freshdesk alternative with flat pricing",
+     "url": "/alternatives/freshdesk"
     }
    ],
    "writer_notes": "This is a direct comparison page — keep tone fair and factual. Acknowledge Zendesk's genuine strengths for enterprise use cases, then position FeedSolve as the purpose-built alternative for SMBs that need resolution, not tickets. The 'under 2 minutes' claim and flat pricing are the strongest differentiators.",
@@ -3268,6 +3288,10 @@
     {
      "anchor": "customer feedback software",
      "url": "/customer-feedback-software"
+    },
+    {
+     "anchor": "Alchemer alternative for complaint management",
+     "url": "/alternatives/alchemer"
     }
    ],
    "writer_notes": "Follow the same tone as the Typeform comparison post — fair, factual, and acknowledging of SurveyMonkey's genuine strengths. SurveyMonkey's weaknesses for complaint management are structural, not incidental — the platform was built for research, not resolution. The comparison table is the anchor. The 'Both if' recommendation builds trust and avoids appearing one-sided. Avoid the phrase 'industry-leading' when referencing SurveyMonkey.",
@@ -3465,6 +3489,10 @@
     {
      "anchor": "FeedSolve pricing",
      "url": "/"
+    },
+    {
+     "anchor": "Freshdesk alternative for small business",
+     "url": "/alternatives/freshdesk"
     }
    ],
    "writer_notes": "This comparison targets the Freshdesk alternative keyword. Keep tone fair — Freshdesk is genuinely strong for its intended use case (email-based support). The core argument is not that Freshdesk is bad but that it was designed for a different use case. The submitter model difference (email required vs zero-login QR) is the clearest differentiator — anchor the post here. Include the comparison table as the central asset.",
@@ -5064,6 +5092,14 @@
     {
      "anchor": "customer feedback software for SMBs",
      "url": "/customer-feedback-software"
+    },
+    {
+     "anchor": "InMoment alternative for small business",
+     "url": "/alternatives/inmoment"
+    },
+    {
+     "anchor": "Medallia alternative without the sales call",
+     "url": "/alternatives/medallia"
     }
    ],
    "key_takeaways": [

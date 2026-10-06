@@ -2,6 +2,7 @@ import { generatePageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { alternatives } from "@/data/alternatives";
 import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 
 const SITE_URL = "https://feedsolve.com";
@@ -97,14 +98,21 @@ export default function ComparePage() {
                 </Link>
               ))}
             </div>
-            <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: 16, padding: "24px 28px", marginTop: 28 }}>
-              <p style={{ color: "var(--text-mid)", fontSize: 15, lineHeight: 1.7, margin: 0 }}>
-                Switching away from a specific tool? Browse our{" "}
-                <Link href="/alternatives/" style={{ color: "var(--teal-text)", fontWeight: 700 }}>
-                  alternatives guides
-                </Link>{" "}
-                covering Medallia, Qualtrics, Zendesk, Canny, SurveyMonkey, and more.
+            <div className="alt-links">
+              <h2>Switching away from a specific tool?</h2>
+              <p>
+                The head-to-head pages above compare FeedSolve with the tools small teams most often shortlist.
+                If you are leaving a particular product, each{" "}
+                <Link href="/alternatives/">alternatives guide</Link> explains why teams look elsewhere, where
+                that tool still wins, what it costs, and how FeedSolve differs. Pick the tool you are replacing:
               </p>
+              <ul>
+                {alternatives.map((a) => (
+                  <li key={a.slug}>
+                    <Link href={`/alternatives/${a.slug}/`}>{a.name} alternative</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
