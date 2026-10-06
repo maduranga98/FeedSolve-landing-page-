@@ -4,6 +4,9 @@ import Link from "next/link";
 import { Lightbulb, EyeOff, QrCode, ListChecks, Languages, ShieldCheck } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
 import VerticalProseSection from "@/components/VerticalProseSection";
+import ComparisonTable from "@/components/ComparisonTable";
+import JsonLdScript from "@/components/JsonLd";
+import { generateSoftwareAppSchema } from "@/lib/seo";
 
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
@@ -23,6 +26,18 @@ const faqs = [
   {
     q: "Can suggestions be submitted anonymously?",
     a: "Yes. FeedSolve forms work without sign-up, so employees and customers can submit anonymously. Each submission still gets a unique tracking code, so the submitter can follow progress and you never lose the suggestion.",
+  },
+  {
+    q: "What is an online suggestion box?",
+    a: "An online suggestion box is a web-based version of the box on the wall. People submit ideas or concerns through a form, QR code or link instead of paper, and the owner reviews them in one place. Good online suggestion box software also assigns each suggestion to someone, tracks its status, and lets the submitter see what happened.",
+  },
+  {
+    q: "How do I set up an anonymous suggestion box online?",
+    a: "Create a board, switch on anonymous no-login submission, generate a QR code and link, and share them where people will see them, such as the break room, reception or your team chat. Each submission gets a tracking code so the person can follow progress without giving their name. Our step-by-step guide to setting up an online suggestion box covers it in about ten minutes.",
+  },
+  {
+    q: "Is there a free online suggestion box?",
+    a: "Free options exist: a paper box, or a free form such as Google Forms. They collect ideas, but they do not assign owners, track status or reply to the submitter. FeedSolve is a paid product with a free 7-day trial that includes full access, then plans from $19 per month. If you only collect occasional ideas, a free form may be enough. If you want every suggestion acted on and answered, you need a workflow.",
   },
   {
     q: "Is there a free suggestion box software option?",
@@ -75,6 +90,21 @@ export default function DigitalSuggestionBoxSoftware() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <JsonLdScript
+        data={generateSoftwareAppSchema({
+          description:
+            "FeedSolve is digital suggestion box software. Collect anonymous suggestions by QR code or link with no login, assign each one to an owner, and track it to resolution. 7-day free trial.",
+          featureList: [
+            "Anonymous, no-login suggestion submission",
+            "Branded QR code and shareable link",
+            "Tracking code for every submission",
+            "Assignment, internal notes and Kanban resolution workflow",
+            "Public replies to submitters",
+            "Resolution rate dashboard",
+            "Multi-language submission forms",
+          ],
+        })}
       />
       <VerticalPage
         badge="Digital Suggestion Box"
@@ -163,6 +193,38 @@ export default function DigitalSuggestionBoxSoftware() {
           },
         ]}
         extraSections={
+          <>
+          <section className="mkt-section">
+            <div className="container mkt-narrow">
+              <h2>FeedSolve vs free suggestion box tools</h2>
+              <p className="mkt-lead">
+                The usual free options are a paper box and a free form such as Google Forms. Both collect ideas. The
+                difference is what happens after someone submits.
+              </p>
+            </div>
+            <ComparisonTable
+              caption="FeedSolve compared with free suggestion box tools"
+              leftHeader="Free tools (paper box, form)"
+              rightHeader="FeedSolve"
+              rows={[
+                { label: "Collecting ideas", left: "A box on the wall, or a form that writes to a spreadsheet", right: "QR code or link, no login, in any language" },
+                { label: "Anonymity", left: "Often anonymous, though staff may doubt a form tied to a company account", right: "Anonymous mode: no login or contact details required" },
+                { label: "Ownership", left: "Entries sit in a stack or a sheet until someone reads them", right: "Assign each suggestion to an owner with a priority" },
+                { label: "Follow-up", left: "Submitters rarely hear what happened", right: "Tracking code and public replies show status without an account" },
+                { label: "Workflow", left: "Manual: spreadsheet filters or sticky notes", right: "Kanban board from submitted to resolved" },
+                { label: "Measuring", left: "A count of entries, if anyone counts", right: "Resolution rate on the dashboard" },
+                { label: "Cost", left: "Free", right: "Free 7-day trial, then from $19 per month" },
+              ]}
+            />
+            <div className="container mkt-narrow">
+              <p className="mkt-body">
+                A free tool is enough when a small team collects the occasional idea and one person reliably reads and
+                answers each one. It starts to fail when volume grows, when several people need to act on suggestions, or
+                when you want people to trust that the box leads to change. At that point the missing pieces are ownership,
+                status and a reply, which is what suggestion box software adds.
+              </p>
+            </div>
+          </section>
           <VerticalProseSection
             label="Choosing a tool"
             heading="How to choose suggestion box software (and what to read next)"
@@ -210,6 +272,7 @@ export default function DigitalSuggestionBoxSoftware() {
               </>,
             ]}
           />
+          </>
         }
         faqs={faqs}
         ctaHeading="Launch your digital suggestion box today"

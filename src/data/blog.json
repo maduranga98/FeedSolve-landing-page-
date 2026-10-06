@@ -4136,7 +4136,7 @@
    ],
    "internal_links": [
     {
-     "anchor": "digital suggestion box software",
+     "anchor": "suggestion box software",
      "url": "/digital-suggestion-box-software"
     },
     {
@@ -4167,9 +4167,9 @@
    "search_intent": "Informational - the reader wants a simple, practical how-to to stand up an online suggestion box",
    "funnel_stage": "TOFU",
    "content_type": "How-to",
-   "target_word_count": "1,200-1,500 words",
+   "target_word_count": "1,800-2,200 words",
    "date_published": "2026-06-10",
-   "date_modified": "2026-09-12",
+   "date_modified": "2026-10-06",
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
@@ -4179,7 +4179,9 @@
     "An online suggestion box should make submitting effortless and losing a suggestion impossible",
     "Anonymous, no-login submission is what keeps the box busy",
     "A QR code covers physical spaces; a link covers email, chat, and intranet",
-    "Closing the loop - even a short note - is what keeps people contributing"
+    "Closing the loop - even a short note - is what keeps people contributing",
+    "Decide who the box is for and who owns it before you build anything",
+    "Replying to every submission matters more than acting on every idea"
    ],
    "sections": [
     {
@@ -4187,6 +4189,14 @@
      "body": [
       "An online suggestion box - sometimes called a virtual or electronic suggestion box - should make it effortless to submit an idea and impossible for that idea to disappear. That means no-login submission, an anonymous option, and a way to actually act on what comes in. Those three requirements are what [online suggestion box](/digital-suggestion-box-software/) software exists for; a form builder only covers the first.",
       "Here is the fastest way to stand one up."
+     ]
+    },
+    {
+     "heading": "H2: Before you start: decide who the box is for",
+     "body": [
+      "The most common reason a suggestion box fails is that nobody decided what it was for. Before you build anything, answer three questions. Who will submit: your own staff, your customers, or both? What do you want to hear: ideas for improvement, problems, or both? And who is responsible for reading what comes in?",
+      "If you serve both staff and customers, make two boards rather than one. Staff will say different things when they know the box is internal, and customer suggestions are usually routed to different people. Each board gets its own QR code and link, so the two stay separate from the start.",
+      "Finally, name one owner and a rough response rhythm, such as a weekly review. You do not need a formal policy, but you do need a person. A suggestion box with no owner is a spreadsheet nobody opens."
      ]
     },
     {
@@ -4199,7 +4209,123 @@
       "Review and resolve: assign each suggestion to an owner and move it through to resolved."
      ],
      "body": [
-      "Each step takes a minute or two. The whole thing is realistically a 10-minute job, and none of it requires a developer or a sales call. The same board doubles as a [complaint tracking system](/complaint-management-software/) if you later want complaints and ideas in one place."
+      "Each step takes a minute or two. The whole thing is realistically a 10-minute job, and none of it requires a developer or a sales call. The same board doubles as a [complaint tracking system](/complaint-management-software/) if you later want complaints and ideas in one place. The sections below go into each step in detail."
+     ]
+    },
+    {
+     "heading": "H2: What to put on the form",
+     "body": [
+      "Keep the form short. Every extra field costs you submissions, and a suggestion box lives or dies on volume. A good starting point is a single free-text box for the suggestion, a category the person can pick, and nothing else that is required.",
+      "Contact details should be optional. If people can leave a name or email when they want a personal reply, but are never forced to, you get the best of both: honest anonymous input and the chance to follow up when someone chooses to be identified."
+     ],
+     "key_points": [
+      "A free-text field for the suggestion itself, with a prompt such as \"What would make this better?\"",
+      "A short category list that mirrors how you would route things, such as Ideas, Process, Equipment, People and Other",
+      "Optional contact details, never required",
+      "An optional file or photo upload, useful for a broken fixture or a confusing sign",
+      "The submission language chosen by the person, so staff and customers can write in the language they are most comfortable with"
+     ]
+    },
+    {
+     "heading": "H2: Where to put the QR code and the link",
+     "body": [
+      "People only use a suggestion box they notice at the moment they have a thought. Place the QR code where that happens, and keep the link wherever your team already talks. For anonymity, choose spots where nobody is watching who scans: a code mounted next to the manager's desk will not get used."
+     ],
+     "examples": [
+      "Break room or staff noticeboard: the natural home for an internal box",
+      "Reception or checkout counter: for customer suggestions, with a short line such as \"Tell us how we can improve\"",
+      "Receipts, packaging or table cards: so the code reaches people after the experience",
+      "Team chat and intranet: pin the link so remote staff have the same access as people on site",
+      "Your website: link a button or menu item straight to the form"
+     ]
+    },
+    {
+     "heading": "H2: Announce it in a way people will trust",
+     "body": [
+      "The announcement matters less than the first response, but it still sets expectations. Keep it to three short points: it is anonymous and needs no login, every submission is reviewed by a named person, and every submission gets a tracking code where you will post what happened.",
+      "Be honest about what you will and will not do. People forgive \"we looked at this and cannot do it because of cost\" far more readily than silence. If you promise action on every idea, the first ignored suggestion will undo the box. Promise a reply instead.",
+      "For a deeper look at what makes an employee channel feel safe, see our guide to running an [anonymous suggestion box](/blog/anonymous-suggestion-box/)."
+     ]
+    },
+    {
+     "heading": "H2: Your first 30 days",
+     "body": [
+      "The first month decides whether the box becomes a habit. The aim is to show, quickly and visibly, that suggestions lead somewhere."
+     ],
+     "checklist": [
+      "Day 1: publish the QR code and link, and send the announcement",
+      "Week 1: review submissions on a fixed day, assign an owner to each, and reply to every one, even if only to say it was received",
+      "Week 1: pick one quick, visible fix from the early suggestions, complete it, and post the result publicly with thanks",
+      "Week 2: tag recurring themes so you can see whether several people are raising the same issue",
+      "Week 3: review anything still open and give the submitter a status update",
+      "Week 4: look at your resolution rate and decide what to change, such as the form, the placement or the review day"
+     ]
+    },
+    {
+     "heading": "H2: Online suggestion box vs paper box vs a free form",
+     "body": [
+      "There are three common routes, and the right one depends on how much you want to act on what you hear. A paper box and a free form both cost nothing. They differ from purpose-built [suggestion box software](/digital-suggestion-box-software/) in what happens after the idea arrives."
+     ],
+     "comparison_table": {
+      "columns": [
+       "",
+       "Paper box",
+       "Free online form",
+       "Online suggestion box software"
+      ],
+      "rows": [
+       [
+        "Submitting",
+        "Needs someone on site",
+        "✅ Any phone or computer",
+        "✅ QR code or link, no login"
+       ],
+       [
+        "Anonymous",
+        "Depends: handwriting can identify people",
+        "Depends on how the form is set up",
+        "✅ Anonymous, no login required"
+       ],
+       [
+        "Assign an owner",
+        "❌ No",
+        "❌ Not built in",
+        "✅ Yes"
+       ],
+       [
+        "Submitter can check status",
+        "❌ No",
+        "❌ No",
+        "✅ Tracking code"
+       ],
+       [
+        "Measure results",
+        "❌ No",
+        "❌ Count of rows at most",
+        "✅ Resolution rate"
+       ],
+       [
+        "Cost",
+        "Free",
+        "Free",
+        "Free 7-day trial, then from $19 per month"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "H2: Common mistakes to avoid",
+     "body": [
+      "Most failed suggestion boxes fail in one of a handful of predictable ways. Check your own setup against this list before you launch."
+     ],
+     "checklist": [
+      "Launching without a named owner, so nothing is reviewed on a schedule",
+      "Requiring a name or login, which removes the people with the most honest input",
+      "Never replying, so people conclude the box goes nowhere",
+      "Promising to act on every idea instead of promising a response",
+      "Putting the QR code where people feel watched when they scan it",
+      "Making the form long, so only the most determined people finish it",
+      "Treating the launch as the finish line rather than the first closed loop"
      ]
     },
     {
@@ -4222,13 +4348,29 @@
       {
        "question": "Can an online suggestion box be anonymous?",
        "answer": "Yes. With no-login submission, people can submit anonymously while still receiving a tracking code to follow progress."
+      },
+      {
+       "question": "How do I make an online suggestion box anonymous?",
+       "answer": "Use a tool that does not require a login and does not ask for contact details. People submit through a QR code or link, and each submission gets a random tracking code they can use to check progress without revealing who they are."
+      },
+      {
+       "question": "Where should I put the QR code for an online suggestion box?",
+       "answer": "Put it where people have the thought and where they can scan without feeling watched: the break room, a staff noticeboard, reception, receipts or packaging. Share the link in your team chat and on your website for people who are not on site."
+      },
+      {
+       "question": "How often should I review suggestions?",
+       "answer": "Pick a fixed day each week. Reply to every submission, even if only to confirm it was received, and give a status update on anything still open. Regular review is what keeps people submitting."
+      },
+      {
+       "question": "Is an online suggestion box free?",
+       "answer": "You can build a basic one for free with a paper box or a free online form, but neither assigns owners, tracks status or lets the submitter follow up. FeedSolve offers a free 7-day trial with full access, then plans from $19 per month."
       }
      ]
     }
    ],
    "internal_links": [
     {
-     "anchor": "digital suggestion box software",
+     "anchor": "online suggestion box software",
      "url": "/digital-suggestion-box-software"
     },
     {
@@ -4238,6 +4380,18 @@
     {
      "anchor": "anonymous employee feedback tool",
      "url": "/blog/anonymous-employee-feedback-tool"
+    },
+    {
+     "anchor": "anonymous suggestion box guide",
+     "url": "/blog/anonymous-suggestion-box"
+    },
+    {
+     "anchor": "suggestion box software features that matter",
+     "url": "/blog/suggestion-box-software-features"
+    },
+    {
+     "anchor": "digital suggestion box for small business",
+     "url": "/blog/digital-suggestion-box-small-business"
     }
    ]
   }
@@ -5628,7 +5782,7 @@
    ],
    "internal_links": [
     {
-     "anchor": "digital suggestion box software",
+     "anchor": "anonymous suggestion box software",
      "url": "/digital-suggestion-box-software"
     },
     {

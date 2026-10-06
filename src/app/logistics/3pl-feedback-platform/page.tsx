@@ -53,7 +53,7 @@ export default function LogisticsThreePlFeedbackPlatform() {
   return (
     <>
       {/*
-        SoftwareApplication + Offer schema lives on the homepage only (see
+        SoftwareApplication + Offer schema lives on the homepage and the suggestion box product page only (see
         generateSoftwareAppSchema in @/lib/seo/schema) - repeating it here would
         ship competing entities for the same product.
       */}
