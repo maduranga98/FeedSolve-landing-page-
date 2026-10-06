@@ -99,6 +99,21 @@ export default function ComparePage() {
               ))}
             </div>
             <div className="alt-links">
+              <h2>How to choose between these tools</h2>
+              <p>
+                Each comparison asks the same five questions, so you can read them side by side. How do people submit,
+                and do they need an account? Does every complaint get a named owner and a visible status? Can the person
+                who reported it check progress? Is there a measure of how many issues were actually fixed? And is the price
+                published, and does it scale with agents or with your plan?
+              </p>
+              <p>
+                If you already collect feedback with a form builder, start with the Google Forms, Typeform or JotForm
+                comparison: they show what changes when each submission becomes an assigned, tracked item. If you are
+                weighing a survey platform with case management, the Zonka Feedback comparison is closest. If you are
+                leaving a larger or more specialised product, the alternatives guides below cover it.
+              </p>
+            </div>
+            <div className="alt-links">
               <h2>Switching away from a specific tool?</h2>
               <p>
                 The head-to-head pages above compare FeedSolve with the tools small teams most often shortlist.
