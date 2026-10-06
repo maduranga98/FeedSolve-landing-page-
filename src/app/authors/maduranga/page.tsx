@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JsonLdScript } from "@/components/JsonLd";
+import blogData from "@/data/blog.json";
 import { founderPersonJsonLd } from "@/lib/blog/authors";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/seo";
 import { generatePageMetadata } from "@/lib/seo/metadata";
@@ -13,6 +14,19 @@ export const metadata = generatePageMetadata({
     "Maduranga is the founder of FeedSolve and writes practical guides on feedback management, complaint tracking and QR feedback for SMBs.",
   path: "/authors/maduranga/",
 });
+
+const RECENT_COUNT = 12;
+
+// Every post in blog.json is credited to the founder, so the list is derived
+// from the data rather than maintained by hand. Newest first. meta.slug already
+// carries the "/blog/" prefix.
+const founderPosts = [...blogData]
+  .sort((a, b) => b.meta.date_published.localeCompare(a.meta.date_published))
+  .map((post) => ({
+    slug: post.meta.slug,
+    title: post.meta.title,
+    description: post.meta.meta_description,
+  }));
 
 export default function MadurangaAuthorPage() {
   return (
@@ -75,8 +89,21 @@ export default function MadurangaAuthorPage() {
                   </div>
                 ))}
               </div>
+              <h2 className="author-posts-heading">Latest articles by Maduranga</h2>
+              <p className="author-posts-intro">
+                {founderPosts.length} practical guides on feedback collection, complaint resolution and QR
+                feedback for small and mid-sized businesses. The most recent are below.
+              </p>
+              <ul className="author-posts">
+                {founderPosts.slice(0, RECENT_COUNT).map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`${post.slug}/`}>{post.title}</Link>
+                    <p>{post.description}</p>
+                  </li>
+                ))}
+              </ul>
               <Link href="/blog/" className="btn-primary teal" style={{ display: "inline-flex", marginTop: 30 }}>
-                Read FeedSolve articles <ArrowRight size={15} />
+                Read all {founderPosts.length} FeedSolve articles <ArrowRight size={15} />
               </Link>
             </div>
           </div>
