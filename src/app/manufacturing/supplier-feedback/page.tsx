@@ -12,7 +12,7 @@ import VerticalPage from "@/components/VerticalPage";
 export const metadata = generatePageMetadata({
   title: "Supplier Feedback & Fault Tracking Software",
   description:
-    "Supplier feedback and fault tracking for manufacturers. Replace WhatsApp complaints with a QR feedback board, tracking codes and an audit trail. 7-day free trial.",
+    "Supplier feedback and fault tracking for manufacturers: replace WhatsApp complaints with a QR board, tracking codes and an audit trail. 7-day free trial.",
   path: "/manufacturing/supplier-feedback/",
 });
 
