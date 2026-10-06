@@ -1035,6 +1035,10 @@
     {
      "anchor": "complaint management software",
      "url": "/complaint-management-software"
+    },
+    {
+     "anchor": "complaint tracking for US small businesses",
+     "url": "/us/complaint-management-software"
     }
    ],
    "writer_notes": "This is the most process-heavy post in the set — it should read like a practical operations guide, not a marketing piece. Use numbered lists liberally. The five-stage Kanban model should be described clearly enough that a reader could implement it in a spreadsheet if they wanted to — then the CTA shows them FeedSolve does it automatically. Avoid 'enterprise' framing entirely.",
@@ -2394,6 +2398,14 @@
     {
      "anchor": "how to respond to customer complaints",
      "url": "/blog/how-to-respond-to-customer-complaints"
+    },
+    {
+     "anchor": "complaint management software in the US",
+     "url": "/us/complaint-management-software"
+    },
+    {
+     "anchor": "customer complaint software",
+     "url": "/customer-complaint-software"
     }
    ],
    "writer_notes": "This is a high-commercial-intent post. The comparison table is the anchor - make it clean and factual. Acknowledge Google Forms and Typeform honestly (they do have zero-login submission) but show exactly where they fail (no resolution workflow, no tracking codes). End with a strong CTA: 'See FeedSolve's pricing - free to start, no per-seat fees.'",
@@ -3765,6 +3777,10 @@
     {
      "anchor": "customer complaint software",
      "url": "/customer-complaint-software"
+    },
+    {
+     "anchor": "complaint handling software",
+     "url": "/complaint-management-software"
     }
    ],
    "writer_notes": "This is the highest search-volume informational post in the set — 'how to respond to customer complaints' gets substantial monthly search volume globally. The tone should be practical and instructional, not theoretical. Real operational managers reading this want a process they can implement on Monday morning. Avoid customer experience jargon entirely. The four-step framework (Acknowledge, Investigate, Resolve, Confirm) is the article's spine — each step gets its own section. The false resolution problem (marking something resolved when the customer does not agree) is an underexplored angle worth developing.",
@@ -4755,6 +4771,10 @@
     {
      "anchor": "create a free feedback board",
      "url": "/"
+    },
+    {
+     "anchor": "customer complaint software for restaurants",
+     "url": "/customer-complaint-software"
     }
    ],
    "writer_notes": "TOFU how-to for the restaurant cluster — this is the post that earns links and ranks for advice queries, then feeds readers into the vertical posts (ids 32/33) and the QR landing page. The scripts in section 2 are the shareable core; keep them quotable and specific, never corporate. The two-windows frame in section 1 is the organising idea — everything else hangs off it. Product mentions stay light and structural (QR channel, Kanban log) — this reader is not evaluating software yet. Distinct from id 27 (general complaint response playbook): this one is restaurant-specific, at-the-table, service-night register throughout.",
@@ -5775,6 +5795,18 @@
     {
      "anchor": "complaint management software for small business",
      "url": "/blog/complaint-management-software-smb"
+    },
+    {
+     "anchor": "complaint management solutions for US teams",
+     "url": "/us/complaint-management-software"
+    },
+    {
+     "anchor": "complaints management software in the UK",
+     "url": "/uk/complaint-management-software"
+    },
+    {
+     "anchor": "complaint management software in Australia",
+     "url": "/au/complaint-management-software"
     }
    ],
    "key_takeaways": [
@@ -6102,6 +6134,10 @@
     {
      "anchor": "start a free FeedSolve board",
      "url": "/"
+    },
+    {
+     "anchor": "customer complaint software that protects your rating",
+     "url": "/customer-complaint-software"
     }
    ],
    "writer_notes": "This post replaces /blog/how-to-reduce-negative-online-reviews, which is 301 redirected here. Keep the 87%-contact-first statistic as the spine of the argument — it is the single fact that reframes reviews as an intake failure. Do not use review-gating language; the position is interception plus genuine resolution, not suppression."

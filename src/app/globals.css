@@ -1119,3 +1119,5 @@ footer { contain-intrinsic-size: auto 443px; }
 .mkt-links { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px 20px; }
 .mkt-links a { color: var(--teal-text); font-weight: 600; text-decoration: none; }
 .mkt-links a:hover { text-decoration: underline; }
+
+.vps-prose a { color: var(--teal-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

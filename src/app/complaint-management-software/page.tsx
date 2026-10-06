@@ -8,7 +8,9 @@ import {
   BarChart3,
   Globe,
 } from "lucide-react";
+import Link from "next/link";
 import VerticalPage from "@/components/VerticalPage";
+import VerticalProseSection from "@/components/VerticalProseSection";
 
 const URL = "https://feedsolve.com/complaint-management-software/";
 
@@ -40,6 +42,18 @@ const faqs = [
   {
     q: "Do customers need an account to submit a complaint?",
     a: "No. Customers, suppliers, and staff submit by scanning a QR code or opening a link - no login, no app. Each submission produces a unique tracking code so the submitter can follow progress while your team manages everything from one dashboard.",
+  },
+  {
+    q: "What is the difference between complaint tracking software and complaint management software?",
+    a: "Complaint tracking software keeps the record: each complaint has a status and a tracking code, so you can see what is open. Complaints management software adds the rest of the process on top of that record: assigning an owner, replying to the submitter, and reporting how many complaints were actually resolved. FeedSolve does both in one board.",
+  },
+  {
+    q: "What should complaint handling software include?",
+    a: "At minimum: an easy way for people to submit without an account, a named owner for every complaint, a visible status, a way to reply to the submitter, and a resolution rate so you can see whether the process works. FeedSolve includes all of these, plus internal notes, priority levels and multi-language forms.",
+  },
+  {
+    q: "What are complaint management solutions for a small business?",
+    a: "Complaint management solutions range from a shared inbox or spreadsheet, to helpdesks priced per agent, to enterprise suites sold through a sales process. For a small team, a complaint management system that is self-serve, flat-priced and built around one complaint board is usually the better fit. FeedSolve is designed for that case.",
   },
   {
     q: "Can I track whether complaints actually get resolved?",
@@ -103,7 +117,7 @@ export default function ComplaintManagementSoftware() {
         trackLabel="Every complaint gets a unique #FSV-XXXX tracking code, so submitters can check progress anytime without calling or emailing your team."
         assignLabel="Route each complaint to the right owner with a priority level and internal notes the customer never sees. One owner, one deadline."
         resolveLabel="Move it to Resolved, send a public reply, and close the loop. Your resolution rate updates automatically on the dashboard."
-        featuresHeading="Everything you need to manage complaints - nothing you don't"
+        featuresHeading="Complaint tracking and handling features - without the enterprise extras"
         features={[
           {
             icon: <QrCode size={24} />,
@@ -164,6 +178,69 @@ export default function ComplaintManagementSoftware() {
               "'Missing items refunded and dispatched. Sorry for the mix-up.' Resolution rate updates automatically.",
           },
         ]}
+        extraSections={
+          <>
+            <VerticalProseSection
+              label="Complaint management system software"
+              heading="Complaint management software, complaint tracking software and complaint handling: what each covers"
+              background="var(--bg)"
+              paragraphs={[
+                "People look for this category under several names: complaint management software, complaints management software, complaint tracking software, complaint handling software, complaint management solutions and complaint management system software. The names overlap, but they point at the same job: one system where every complaint is received, owned, worked and closed.",
+                "Complaint tracking software is the record. Every complaint has a status and a tracking code, so you can see what is open and what is not. Complaint handling is the work: assigning an owner, replying to the person who complained, and fixing the cause. Complaints management software joins the two with reporting, so you can see how many complaints were resolved and where they stall.",
+                "Many small businesses meet this need with a spreadsheet or a shared inbox first. Those hold the record, but they do not assign, remind or measure anything. A complaint management system adds that structure without the long rollout and quote-only pricing of an enterprise suite.",
+              ]}
+            />
+            <VerticalProseSection
+              label="Choosing complaint management solutions"
+              heading="What to look for in complaint management solutions for a small business"
+              paragraphs={[
+                "Start with intake. If people have to create an account to complain, many will not. Look for submission by QR code or link with no login, in the submitter's own language. Then look for ownership: every complaint needs a named person, a priority and a status, not just a row in a sheet.",
+                "Next, check what the submitter sees. A tracking code that lets them follow progress cuts the follow-up calls and emails. Finally, look at measurement and price. A resolution rate tells you whether complaints are actually being fixed, and published pricing means you can decide without a sales call.",
+              ]}
+              contrast={[
+                {
+                  title: "A shared inbox or spreadsheet",
+                  tone: "plain",
+                  points: [
+                    "Complaints arrive in several places",
+                    "No owner or status unless someone adds one",
+                    "The submitter cannot check progress",
+                    "Resolution rate is never measured",
+                  ],
+                },
+                {
+                  title: "A complaint management system like FeedSolve",
+                  tone: "feedsolve",
+                  points: [
+                    "One intake point by QR code or link, no login",
+                    "Owner, priority and Kanban status on every complaint",
+                    "A tracking code for every submission",
+                    "Resolution rate on the dashboard",
+                  ],
+                },
+              ]}
+            />
+            <VerticalProseSection
+              label="By market and use case"
+              heading="Complaint tracking software for your market and your team"
+              background="var(--bg)"
+              paragraphs={[
+                <>
+                  Teams in different markets use the same workflow. See how it applies to{" "}
+                  <Link href="/us/complaint-management-software/">complaint management software for US small businesses</Link>,{" "}
+                  <Link href="/uk/complaint-management-software/">complaints management software in the UK</Link>{" "}
+                  and <Link href="/au/complaint-management-software/">complaint management software in Australia</Link>.
+                </>,
+                <>
+                  If your focus is protecting reviews and front-line response, see{" "}
+                  <Link href="/customer-complaint-software/">customer complaint software</Link>. To compare options, read the{" "}
+                  <Link href="/blog/complaint-management-solutions/">guide to complaint management solutions</Link> or the{" "}
+                  <Link href="/blog/complaint-management-software-smb/">small business buyer&apos;s guide</Link>.
+                </>,
+              ]}
+            />
+          </>
+        }
         faqs={faqs}
         ctaHeading="Start managing complaints the right way today"
         ctaSub="Create a complaint board, generate a QR code, and start resolving in minutes. Free 7-day trial."
@@ -187,6 +264,26 @@ export default function ComplaintManagementSoftware() {
             href: "/uk/complaint-management-software/",
             label: "UK & regulated teams",
             sub: "Complaint handling in the UK",
+          },
+          {
+            href: "/us/complaint-management-software/",
+            label: "US small businesses",
+            sub: "Complaint tracking software in USD",
+          },
+          {
+            href: "/au/complaint-management-software/",
+            label: "Australian teams",
+            sub: "Complaint management in Australia",
+          },
+          {
+            href: "/customer-complaint-software/",
+            label: "Customer complaint software",
+            sub: "Protect reviews and respond faster",
+          },
+          {
+            href: "/blog/complaint-management-solutions/",
+            label: "Complaint management solutions",
+            sub: "How the options compare",
           },
           {
             href: "/blog/ecommerce-buyer-complaint-tracking/",

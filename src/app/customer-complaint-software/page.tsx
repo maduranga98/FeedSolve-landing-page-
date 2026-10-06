@@ -7,7 +7,9 @@ import {
   BarChart3,
   Star,
 } from "lucide-react";
+import Link from "next/link";
 import VerticalPage from "@/components/VerticalPage";
+import VerticalProseSection from "@/components/VerticalProseSection";
 
 const URL = "https://feedsolve.com/customer-complaint-software/";
 
@@ -26,6 +28,14 @@ const faqs = [
   {
     q: "How does it help reduce negative reviews?",
     a: "Most negative reviews happen because a customer felt ignored. By giving customers a fast, no-login way to complain directly to you - via a QR code or link - you capture the issue before it reaches Google, then resolve it and reply. Catching and closing complaints privately is the most reliable way to protect your rating.",
+  },
+  {
+    q: "What is complaint handling software?",
+    a: "Complaint handling software supports the front-line work of dealing with a complaint: logging it, assigning someone to own it, replying to the customer and recording the outcome. It is the day-to-day part of complaint management. FeedSolve gives customer-facing teams a single board for that work, with a tracking code the customer can use to check progress.",
+  },
+  {
+    q: "What is the difference between complaint software and complaint management software?",
+    a: "Complaint software is the everyday term for a tool that captures and resolves complaints. Complaint management software usually means the wider system: intake, ownership, workflow, reporting and resolution rate across the whole business. This page focuses on the customer-facing side, such as reviews and response. For the full system view, see our complaint management software overview.",
   },
   {
     q: "Is there free customer complaint software?",
@@ -151,6 +161,39 @@ export default function CustomerComplaintSoftware() {
               "'We've refunded your meal and retrained the team. Please come back - it's on us.' Resolution rate updates.",
           },
         ]}
+        extraSections={
+          <>
+            <VerticalProseSection
+              label="Complaint handling software"
+              heading="Complaint software and complaint handling software for customer-facing teams"
+              background="var(--bg)"
+              paragraphs={[
+                "Customer complaints are usually first heard by front-line staff: a server, a cashier, a driver or a support agent. What happens in the next few minutes decides whether the customer stays. Complaint handling software gives those staff a simple, shared way to log the problem, hand it to the right owner and tell the customer what is happening.",
+                "Good complaint handling follows the same pattern every time: acknowledge the problem, record it, assign an owner, fix it, and reply. When that pattern lives in people's heads, it changes from shift to shift. When it lives in a complaint board, new staff can follow it from day one and managers can see which complaints are still open.",
+                "It also matters for reviews. A customer with no way to reach you will often say it publicly instead. A QR code that goes straight to your complaint board gives them a private route, and a tracking code shows them it was received.",
+              ]}
+            />
+            <VerticalProseSection
+              label="Related guides"
+              heading="Complaint tracking software, in context"
+              paragraphs={[
+                <>
+                  This page covers the customer-facing side. For the full system, including intake, ownership, workflow and
+                  reporting, read our <Link href="/complaint-management-software/">complaint management software overview</Link>.
+                  See it applied for <Link href="/us/complaint-management-software/">US businesses</Link>,{" "}
+                  <Link href="/uk/complaint-management-software/">UK teams</Link> and{" "}
+                  <Link href="/au/complaint-management-software/">Australian teams</Link>.
+                </>,
+                <>
+                  For practical advice, see{" "}
+                  <Link href="/blog/how-to-respond-to-customer-complaints/">how to respond to customer complaints</Link>,{" "}
+                  <Link href="/blog/how-to-handle-restaurant-complaints/">how to handle restaurant complaints</Link> and{" "}
+                  <Link href="/blog/complaint-resolution-workflow-smb/">a complaint resolution workflow for small teams</Link>.
+                </>,
+              ]}
+            />
+          </>
+        }
         faqs={faqs}
         ctaHeading="Turn customer complaints into loyal customers"
         ctaSub="Create a complaint board, generate a QR code, and start resolving in minutes. Free 7-day trial."
@@ -174,6 +217,21 @@ export default function CustomerComplaintSoftware() {
             href: "/restaurants/qr-feedback/",
             label: "Restaurants & F&B",
             sub: "Table-side QR feedback",
+          },
+          {
+            href: "/us/complaint-management-software/",
+            label: "US small businesses",
+            sub: "Complaint tracking in USD",
+          },
+          {
+            href: "/uk/complaint-management-software/",
+            label: "UK businesses",
+            sub: "Complaints management in the UK",
+          },
+          {
+            href: "/au/complaint-management-software/",
+            label: "Australian businesses",
+            sub: "Complaint handling in Australia",
           },
         ]}
       />
