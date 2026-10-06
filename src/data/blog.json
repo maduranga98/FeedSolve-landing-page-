@@ -282,12 +282,12 @@
    "content_type": "Cluster / Landing Page",
    "target_word_count": "1,400–1,800 words",
    "date_published": "2025-11-15",
-   "date_modified": "2026-09-21",
+   "date_modified": "2026-10-06",
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
    "quick_answer_box": "A supplier feedback tool for manufacturers is a platform that lets suppliers, distributors, and internal quality teams submit complaints, defect reports, and improvement ideas through a structured channel — instead of informal WhatsApp messages or email threads. The best tools for SMB manufacturers combine a shareable submission link or QR code with a Kanban-style resolution workflow, so every complaint is assigned, tracked, and closed with a verifiable resolution rate.",
-   "h1": "Supplier Feedback Tool for Manufacturers: Stop Managing Quality Issues on WhatsApp",
+   "h1": "Supplier Feedback Tool for Manufacturers: How to Move Quality Issues Off WhatsApp",
    "sections": [
     {
      "heading": "H2: Why WhatsApp and Email Are Destroying Your Supplier Quality Data",
@@ -313,7 +313,7 @@
      ],
      "body": [
       "A working supplier feedback tool removes the friction between the moment a supplier notices a problem and the moment they report it. They scan a QR code on a delivery note or access a shared link, select a category (Delivery Delay, Defective Material, Packaging Issue), describe the issue, and submit. No login. No account. The report routes to your quality team automatically. The supplier receives a tracking code.",
-      "Behind the scenes, the quality manager opens a Kanban board, sees the new submission, assigns it to the quality officer with a priority level, and adds internal CAVA notes (invisible to the supplier). When the issue is resolved, the status changes to 'Resolved' and a public reply is sent: 'We've corrected our packaging process. Replacement shipment dispatched.' The supplier checks their tracking code and sees this confirmation. The loop closes. The next time they encounter a problem, they report it again instead of absorbing the cost."
+      "Behind the scenes, the quality manager opens a Kanban board, sees the new submission, assigns it to the quality officer with a priority level, and adds internal CAVA notes (invisible to the supplier). When the issue is resolved, the status changes to 'Resolved' and a public reply is sent: 'We've corrected our packaging process. Replacement shipment dispatched.' The supplier checks their tracking code and sees this confirmation. The loop closes. The next time they encounter a problem, they report it again instead of absorbing the cost. That end-to-end record is what [supplier fault tracking](/manufacturing/supplier-feedback/) software is built to produce."
      ]
     },
     {
@@ -340,7 +340,7 @@
      ],
      "body": [
       "Implementation is straightforward. Create your supplier issues board with categories relevant to your supply chain: Delivery Delay, Defective Material, Quantity Mismatch, Packaging, Invoice Discrepancy, Documentation Error. Download the QR code and print it on a poster for the goods-receiving bay where suppliers deliver materials. Alternatively, include the feedback link in your standard supplier onboarding email or supplier portal.",
-      "From that moment forward, every supplier issue is logged with a timestamp, assigned to your quality team, and tracked to resolution. No WhatsApp threads. No lost messages. No suppliers wondering whether anyone read their complaint. The entire deployment   from account setup to first QR code printed   takes under 30 minutes. No implementation consultants. No IT tickets. No months of planning."
+      "From that moment forward, every supplier issue is logged with a timestamp, assigned to your quality team, and tracked to resolution. No WhatsApp threads. No lost messages. No suppliers wondering whether anyone read their complaint. The entire deployment   from account setup to first QR code printed   takes under 30 minutes. No implementation consultants. No IT tickets. No months of planning. For the full product overview, including pricing and a worked example, see FeedSolve's [supplier feedback and fault tracking for manufacturers](/manufacturing/supplier-feedback/) page."
      ]
     },
     {
@@ -391,6 +391,10 @@
     {
      "anchor": "patient feedback system for clinics",
      "url": "/blog/healthcare-patient-feedback-system"
+    },
+    {
+     "anchor": "supplier feedback and fault tracking for manufacturers",
+     "url": "/manufacturing/supplier-feedback"
     }
    ],
    "writer_notes": "This is a buying-intent post — don't be shy about naming FeedSolve as the solution from H2 onwards. Reference the competitor comparison table to show why lightweight tools are better than QMS or help desks for this use case. Avoid 'digital transformation' and 'enterprise-grade.' Use concrete numbers (employee count, price point, setup time) to ground the SMB framing.",
@@ -8368,7 +8372,7 @@
    "content_type": "Pillar",
    "target_word_count": "1,700-2,000 words",
    "date_published": "2026-09-10",
-   "date_modified": "2026-09-10",
+   "date_modified": "2026-10-06",
    "author_name": "Maduranga, founder of FeedSolve"
   },
   "content": {
@@ -8415,7 +8419,7 @@
      ],
      "body": [
       "A spreadsheet fails quietly — a row goes unedited for two weeks and nobody notices because nothing alerts anyone. A tracked board with a status column fails loudly instead: an item sitting in 'Under Review' for two weeks is visible to whoever's watching the board, which is usually enough on its own to get someone to act on it.",
-      "Giving the vendor a tracking code also removes one whole category of interruption. Instead of a vendor emailing 'just checking in on our application,' they check their code and see exactly what stage they're at — without procurement needing to draft a status update every time someone asks.",
+      "Giving the vendor a tracking code also removes one whole category of interruption. Instead of a vendor emailing 'just checking in on our application,' they check their code and see exactly what stage they're at — without procurement needing to draft a status update every time someone asks. Once a vendor is approved, the same board keeps working: quality issues and late deliveries from that supplier go through [supplier feedback](/manufacturing/supplier-feedback/) tracking on the same tracking-code model.",
       "There's a relationship cost too. A prospective vendor left without any visibility into where they stand is more likely to walk away and pursue a competing opportunity, particularly if they're a supplier with other buyers actively courting them. Giving them a tracking code they can check costs nothing on your side and materially changes how the relationship starts — it signals a level of process maturity that pricing and terms alone don't communicate."
      ]
     },
