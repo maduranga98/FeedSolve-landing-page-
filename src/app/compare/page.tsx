@@ -110,7 +110,8 @@ export default function ComparePage() {
                 If you already collect feedback with a form builder, start with the Google Forms, Typeform or JotForm
                 comparison: they show what changes when each submission becomes an assigned, tracked item. If you are
                 weighing a survey platform with case management, the Zonka Feedback comparison is closest. If you are
-                leaving a larger or more specialised product, the alternatives guides below cover it.
+                leaving a larger or more specialised product, the alternatives guides below cover it, including our{" "}
+                <Link href="/alternatives/zendesk/">Zendesk alternative for complaint management</Link>.
               </p>
             </div>
             <div className="alt-links">

@@ -8,6 +8,7 @@ import {
   Globe,
 } from "lucide-react";
 import VerticalPage from "@/components/VerticalPage";
+import VerticalProseSection from "@/components/VerticalProseSection";
 
 export const metadata = generatePageMetadata({
   title: "Supplier Feedback & Fault Tracking Software",
@@ -163,6 +164,18 @@ export default function ManufacturingSupplierFeedback() {
               "Sees 'Resolved' with full timeline. Resolution rate dashboard updates automatically.",
           },
         ]}
+        extraSections={
+          <VerticalProseSection
+            label="Supplier non-conformance"
+            heading="Supplier compliance software for non-conformance and corrective issues"
+            background="var(--bg)"
+            paragraphs={[
+              "When a supplier delivers the wrong quantity, the wrong grade or a damaged batch, the issue is only half the problem. The other half is keeping a record that a named person owned it, that the supplier was told, and that someone confirmed it was closed. That record is what most teams mean by supplier compliance: not a certificate, but evidence that non-conformances were raised and followed up.",
+              "FeedSolve supports that part of supplier compliance management. Anyone can log a supplier issue by scanning a QR code or opening a link, with no login. Each issue gets a tracking code, an assigned owner, a priority and a status, and every change is timestamped in an audit trail. Corrective issues stay visible on the board until they are marked resolved, and the supplier can check progress with the tracking code.",
+              "It is not an audit, certification or document control system, and it does not replace a full quality management suite. If you are comparing supplier compliance software or supplier quality management tools, treat FeedSolve as the intake-to-resolution layer for supplier issues: simple enough for a small quality team to run without a rollout project.",
+            ]}
+          />
+        }
         faqs={[
           {
             q: "How does supplier fault tracking work in FeedSolve?",

@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/manufacturing/supplier-feedback", priority: 0.7, frequency: "monthly" as const },
     { path: "/real-estate/tenant-feedback", priority: 0.7, frequency: "monthly" as const },
     { path: "/real-estate/hoa-complaint-form", priority: 0.7, frequency: "monthly" as const },
+    { path: "/healthcare/patient-complaint-software", priority: 0.7, frequency: "monthly" as const },
     { path: "/restaurants/qr-feedback", priority: 0.7, frequency: "monthly" as const },
     { path: "/compare", priority: 0.7, frequency: "monthly" as const },
     { path: "/compare/feedsolve-vs-google-forms", priority: 0.6, frequency: "monthly" as const },

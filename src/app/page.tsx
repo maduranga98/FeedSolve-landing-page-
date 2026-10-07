@@ -93,9 +93,10 @@ function Hero() {
       <Link href="/complaint-management-software/">complaint management software</Link>{" "}
       and a{" "}
       <Link href="/digital-suggestion-box-software/">digital suggestion box</Link>{" "}
-      in one - used by teams in the{" "}
-      <Link href="/uk/complaint-management-software/">UK</Link>,{" "}
-      <Link href="/us/complaint-management-software/">US</Link>, and{" "}
+      in one - with a{" "}
+      <Link href="/us/complaint-management-software/">complaint management system for US small businesses</Link>{" "}
+      and versions for the{" "}
+      <Link href="/uk/complaint-management-software/">UK</Link> and{" "}
       <Link href="/au/complaint-management-software/">Australia</Link>.
      </p>
      <div className="hero-ctas">
@@ -715,8 +716,8 @@ function UseCases() {
       <p>
        Place a clinic feedback QR in reception and capture waiting-room feedback before small issues become public reviews.
       </p>
-      <Link href="/blog/healthcare-patient-feedback-system/">
-       See clinic feedback QR setup →
+      <Link href="/healthcare/patient-complaint-software/">
+       See hospital and clinic complaint management →
       </Link>
      </div>
      <div className="uc-card">

@@ -38,6 +38,7 @@ const SOLUTIONS_GROUPS: NavGroup[] = [
       { href: "/manufacturing/supplier-feedback/", label: "Manufacturing" },
       { href: "/logistics/delivery-feedback/", label: "Logistics" },
       { href: "/real-estate/tenant-feedback/", label: "Real Estate" },
+      { href: "/healthcare/patient-complaint-software/", label: "Healthcare" },
     ],
   },
 ];
