@@ -5,7 +5,7 @@ import { PRICING_TIERS } from "@/lib/seo/pricing";
 import type { FAQItem } from "@/lib/seo";
 
 const url = "https://feedsolve.com/us/complaint-management-software/";
-const title = "Complaint Management Software for US SMBs";
+const title = "Complaint Management System for US SMBs";
 const description =
   "Complaint management software for US small businesses: QR intake, tracking codes, assignment and resolution workflows. From $19/month, 7-day free trial.";
 

@@ -198,7 +198,14 @@ export default function AlternativesHub() {
                   detailed comparison pages
                 </Link>{" "}
                 for FeedSolve vs Google Forms, Typeform, Zonka Feedback, and
-                JotForm.
+                JotForm. Leaving a help desk instead? Start with the{" "}
+                <Link
+                  href="/alternatives/zendesk/"
+                  style={{ color: "var(--teal-text)", fontWeight: 700 }}
+                >
+                  Zendesk alternative for complaint management
+                </Link>
+                .
               </p>
             </div>
           </div>

@@ -13,9 +13,9 @@ import { JsonLdScript } from "@/components/JsonLd";
 import { type FAQItem, generateFAQSchema } from "@/lib/seo/schema";
 
 export const metadata = generatePageMetadata({
-  title: "Tenant Feedback Portal for Property Managers",
+  title: "Tenant Complaint Management & Feedback Portal",
   description:
-    "Give tenants and HOA residents a QR code to submit maintenance requests, community complaints, and shared-area issues without calling or emailing.",
+    "Tenant complaint management for property managers: a QR code for maintenance requests and complaints, tracking codes and an audit trail. Free 7-day trial.",
   path: "/real-estate/tenant-feedback/",
 });
 
@@ -25,6 +25,11 @@ const faqs: FAQItem[] = [
       "Do tenants need to download an app or create an account to submit a request?",
     answer:
       "No. Tenants access the feedback form by scanning a QR code in the lobby or clicking a link in their welcome pack. No app download, no login, no password required. After submitting, they receive a unique tracking code to check the status of their request from any browser at any time.",
+  },
+  {
+    question: "What is tenant complaint management?",
+    answer:
+      "Tenant complaint management is the process of receiving each complaint from a tenant, assigning it to someone, tracking it to a fix and telling the tenant what happened. In FeedSolve, tenants submit by QR code or link with no login, each complaint gets a tracking code, and the property manager assigns, updates and resolves it on one board.",
   },
   {
     question:
@@ -76,7 +81,7 @@ export default function RealEstateTenantFeedback() {
         breadcrumbUrl="https://feedsolve.com/real-estate/tenant-feedback/"
         h1="Tenant Feedback Portal and HOA Complaint Form"
         subheading="Give tenants a QR code in the lobby or welcome pack to submit requests without calling. HOAs can share the same flow as an HOA complaint form for community issues. Track every issue to resolution with a documented audit trail."
-        quickAnswer="FeedSolve is a tenant feedback portal and maintenance request tracking system for property managers, landlords, and HOA boards. Tenants scan a QR code in the lobby or click a link in their welcome letter - no login required. Residents can also use an HOA complaint form for noise, parking, landscaping, or shared-area concerns. Requests route to the property manager, who assigns to the right contractor, tracks resolution, and sends a confirmation reply. Tenants see their issue resolved via their tracking code. No phone tag. No lost work orders. Full audit trail."
+        quickAnswer="FeedSolve is a tenant feedback portal, a tenant complaint management tool and a maintenance request tracking system for property managers, landlords, and HOA boards. Tenants scan a QR code in the lobby or click a link in their welcome letter - no login required. Residents can also use an HOA complaint form for noise, parking, landscaping, or shared-area concerns. Requests route to the property manager, who assigns to the right contractor, tracks resolution, and sends a confirmation reply. Tenants see their issue resolved via their tracking code. No phone tag. No lost work orders. Full audit trail."
         stats={[
           {
             value: "2 min",

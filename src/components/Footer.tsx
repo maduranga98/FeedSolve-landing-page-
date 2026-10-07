@@ -14,12 +14,13 @@ const FOOTER_DIRECTORY: { title: string; links: FooterLink[] }[] = [
       { href: "/logistics/3pl-feedback-platform/", label: "3PL" },
       { href: "/real-estate/tenant-feedback/", label: "Property management" },
       { href: "/real-estate/hoa-complaint-form/", label: "HOA" },
+      { href: "/healthcare/patient-complaint-software/", label: "Healthcare" },
     ],
   },
   {
     title: "Markets",
     links: [
-      { href: "/us/complaint-management-software/", label: "United States" },
+      { href: "/us/complaint-management-software/", label: "US complaint management system" },
       { href: "/uk/complaint-management-software/", label: "United Kingdom" },
       { href: "/au/complaint-management-software/", label: "Australia" },
       { href: "/au/customer-feedback-software/", label: "Australia: feedback software" },

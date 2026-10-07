@@ -14,9 +14,9 @@ import VerticalProseSection from "@/components/VerticalProseSection";
 const URL = "https://feedsolve.com/customer-complaint-software/";
 
 export const metadata = generatePageMetadata({
-  title: "Customer Complaint Software: Track & Resolve",
+  title: "Customer Complaint Management Software",
   description:
-    "Customer complaint software that turns scattered complaints into resolved issues: no-login QR or link intake, tracking codes, assignment and a dashboard.",
+    "Customer complaint management software with no-login QR or link intake, tracking codes, assignment and a resolution dashboard. Free 7-day trial.",
   path: "/customer-complaint-software/",
 });
 
@@ -36,6 +36,14 @@ const faqs = [
   {
     q: "What is the difference between complaint software and complaint management software?",
     a: "Complaint software is the everyday term for a tool that captures and resolves complaints. Complaint management software usually means the wider system: intake, ownership, workflow, reporting and resolution rate across the whole business. This page focuses on the customer-facing side, such as reviews and response. For the full system view, see our complaint management software overview.",
+  },
+  {
+    q: "What is customer complaint management?",
+    a: "Customer complaint management is the process of receiving each customer complaint, assigning an owner, fixing the problem, replying to the customer and recording the outcome. Customer complaint management software keeps that process in one place, so you can run customer complaint management tracking from received to resolved instead of across inboxes and notes.",
+  },
+  {
+    q: "What is customer complaint tracking software?",
+    a: "Customer complaint tracking software records every complaint with a status and a tracking code, so you can see which are open, who owns them and how long they have waited. FeedSolve adds the rest of the process on the same board: assignment, replies to the customer and a resolution rate.",
   },
   {
     q: "Is there free customer complaint software?",
@@ -165,11 +173,12 @@ export default function CustomerComplaintSoftware() {
           <>
             <VerticalProseSection
               label="Complaint handling software"
-              heading="Complaint software and complaint handling software for customer-facing teams"
+              heading="Customer complaint management software and complaint handling for customer-facing teams"
               background="var(--bg)"
               paragraphs={[
                 "Customer complaints are usually first heard by front-line staff: a server, a cashier, a driver or a support agent. What happens in the next few minutes decides whether the customer stays. Complaint handling software gives those staff a simple, shared way to log the problem, hand it to the right owner and tell the customer what is happening.",
                 "Good complaint handling follows the same pattern every time: acknowledge the problem, record it, assign an owner, fix it, and reply. When that pattern lives in people's heads, it changes from shift to shift. When it lives in a complaint board, new staff can follow it from day one and managers can see which complaints are still open.",
+                "Customer complaint management tracking is what turns that pattern into numbers. Customer complaint tracking software shows how many complaints are open, who owns each one and how many have been resolved, so you can spot a branch, shift or product that keeps generating the same complaint.",
                 "It also matters for reviews. A customer with no way to reach you will often say it publicly instead. A QR code that goes straight to your complaint board gives them a private route, and a tracking code shows them it was received.",
               ]}
             />

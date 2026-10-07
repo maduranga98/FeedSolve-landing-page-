@@ -2972,6 +2972,10 @@
     {
      "anchor": "patient feedback systems for pharmacies and diagnostic clinics",
      "url": "/blog/pharmacy-patient-feedback"
+    },
+    {
+     "anchor": "hospital and clinic complaint management software",
+     "url": "/healthcare/patient-complaint-software"
     }
    ],
    "writer_notes": "This is the healthcare vertical post. Keep language accessible - the reader is a clinic owner or practice manager, not a healthcare IT professional. Emphasise the privacy-friendly design (optional contact fields, anonymous mode, no clinical data stored) early and clearly. The three-board setup (patient, supplier, staff) is the commercial hook - it shows FeedSolve as a complete operational feedback platform for clinics, not just a patient complaints form. Include the multi-language point prominently since South Asia and Middle East are primary target geographies for FeedSolve."
@@ -8877,6 +8881,309 @@
     "Turn every score of 2 or lower into a task with a named owner",
     "Track how many low scores you resolved, not just the average rating"
    ]
+  }
+ },
+ {
+  "id": 61,
+  "meta": {
+   "title": "Suggestion Box Ideas: Examples by Workplace",
+   "meta_description": "Suggestion box ideas with example suggestions for restaurants, factories, offices, schools and property managers, plus prompts that draw out better ideas.",
+   "slug": "/blog/suggestion-box-ideas",
+   "primary_keyword": "suggestion box ideas",
+   "secondary_keywords": [
+    "what to put in a suggestion box",
+    "suggestion box examples",
+    "employee suggestion box ideas",
+    "suggestion box prompts"
+   ],
+   "target_audience": "Managers, owners and team leads who already have or plan a suggestion box and want examples of the suggestions it should collect in their own workplace",
+   "search_intent": "Informational - the reader wants concrete examples and prompts for their type of workplace, not an argument for having a box",
+   "funnel_stage": "TOFU",
+   "content_type": "Listicle",
+   "target_word_count": "1,300-1,600 words",
+   "date_published": "2026-10-07",
+   "date_modified": "2026-10-07",
+   "author_name": "Maduranga, founder of FeedSolve"
+  },
+  "content": {
+   "quick_answer_box": "Good suggestion box ideas are specific to the workplace: a restaurant box collects prep and service fixes, a factory box collects safety and line improvements, an office box collects process and meeting changes, a school box collects student and parent ideas, and a property manager's box collects building and amenity requests. A prompt such as \"what is one thing that wastes your time?\" draws out more usable ideas than a blank form. Whatever the setting, each suggestion needs an owner and a reply.",
+   "h1": "Suggestion Box Ideas: Examples for Restaurants, Factories, Offices, Schools and Property Managers",
+   "key_takeaways": [
+    "A suggestion box collects better ideas when people know the kind of idea you want, so give each box a short prompt",
+    "The examples that work are small, specific and fixable: a broken light, a confusing step, a missing sign",
+    "Each workplace has its own typical suggestions, so write prompts that match the people who will use the box",
+    "Separate staff, customer and resident boards so the ideas do not get mixed up",
+    "Whatever the idea, name an owner and reply to the person who made it"
+   ],
+   "sections": [
+    {
+     "heading": "H2: What Makes a Good Suggestion Box Idea",
+     "body": [
+      "A suggestion is useful when someone can act on it this week. \"Communication needs to improve\" gives a manager nothing to do. \"The shift handover note is on a whiteboard that gets wiped before the next team arrives\" gives them a fix. The ideas below are written the second way, because that is the shape you want the box to collect.",
+      "The examples in this post are illustrative, not data. They show the kind of small, concrete suggestion each workplace tends to produce once people know the box is open and what it is for. Use them as prompts on the form itself, or as a starting list when you introduce the box to your team."
+     ]
+    },
+    {
+     "heading": "H2: Suggestion Box Ideas for Restaurants and Cafes",
+     "key_points": [
+      "Prep and kitchen flow: where the line slows down or ingredients run out mid-service",
+      "Front of house: menu wording, table turnover, booking mix-ups",
+      "Guest-facing ideas: allergen information, kids' options, accessibility",
+      "Staff ideas: rota swaps, uniform, break cover"
+     ],
+     "body": [
+      "Restaurants have two audiences with different ideas: the people cooking and serving, and the people eating. Staff see problems nobody at the table can: the walk-in that is organised in a way that wastes minutes at every rush, or the printer that jams on the busiest night. Guests see the rest: the menu item they could not understand, or the toilet sign that is hard to find.",
+      "Example staff suggestions: \"Put the garnish station on the left of the pass so it is not behind the fryer.\" \"Label the allergen cards by dish, not by category.\" Example guest suggestions: \"Offer a half portion of the pasta.\" \"Add a hook for bags under the bar.\" A short prompt on each board, such as \"what would make a Friday night easier?\" for staff, keeps the ideas practical."
+     ]
+    },
+    {
+     "heading": "H2: Suggestion Box Ideas for Factories and Warehouses",
+     "key_points": [
+      "Safety: trip hazards, lighting, signage, guarding",
+      "Line and process: awkward steps, rework, missing tools",
+      "Housekeeping: spills, waste, storage",
+      "Shift handover and communication between teams"
+     ],
+     "body": [
+      "On a shop floor the people doing the job notice the problem long before it appears in a report. The most valuable suggestions are often small and physical: a light out above a loading bay, a pallet route that crosses a walkway, a tool that is never where the checklist says it is. A QR code at the break room or the time clock lets someone raise it in the moment, rather than hoping to remember it at the next team meeting.",
+      "Example suggestions: \"Move the label printer closer to the packing bench so nobody walks the length of the line.\" \"Add a mirror at the corner by the forklift route.\" Because many of these touch safety, they need an owner quickly. An anonymous option helps when the concern is about a colleague or a supervisor and the person does not want to be named."
+     ]
+    },
+    {
+     "heading": "H2: Suggestion Box Ideas for Offices",
+     "key_points": [
+      "Meetings: length, frequency, who needs to be there",
+      "Tools and process: approvals that stall, systems that duplicate work",
+      "Workspace: noise, temperature, bookable rooms",
+      "Remote and hybrid working: scheduling, onboarding, documentation"
+     ],
+     "body": [
+      "Office ideas tend to be about process and environment. Staff see where a sign-off waits three days for no reason, or where two systems need the same data typed twice. They also notice the things that make a day harder: a meeting room that is always double booked, or a thermostat nobody can adjust.",
+      "Example suggestions: \"Make the Monday status meeting 15 minutes and cut the written update.\" \"Add a quiet booking option for the third-floor rooms.\" For hybrid teams, an online box that does not depend on being in the building matters more than the wall in the break room; our guide to [setting up an online suggestion box](/blog/online-suggestion-box-setup/) covers the practical steps."
+     ]
+    },
+    {
+     "heading": "H2: Suggestion Box Ideas for Schools",
+     "key_points": [
+      "Students: lunch, clubs, facilities, bullying concerns",
+      "Parents: communication, drop-off and pick-up, events",
+      "Staff: timetabling, resources, workload",
+      "Separate boards for each group, with different expectations of privacy"
+     ],
+     "body": [
+      "A school has at least three groups with different ideas, and they should not share one box. Students suggest clubs, facilities and lunch options. Parents raise communication and logistics, such as the drop-off queue. Staff raise timetable clashes and missing resources. Keeping the boards separate means each group sees prompts written for them and each set of ideas reaches the right person.",
+      "Example suggestions: \"Open the library at lunch on Fridays.\" \"Send the term calendar in one message instead of three.\" Anonymous submission is especially useful for students raising something sensitive, so check that your school's own safeguarding process is followed for anything that concerns a child's safety, rather than treating a suggestion box as the only route."
+     ]
+    },
+    {
+     "heading": "H2: Suggestion Box Ideas for Property Managers",
+     "key_points": [
+      "Tenants and residents: maintenance, noise, parking, shared spaces",
+      "Amenities: laundry, bike storage, deliveries",
+      "Communication: notices, contact points, events",
+      "On-site staff: cleaning schedules, access, contractor coordination"
+     ],
+     "body": [
+      "For a building, the box is a way for residents to say what would improve daily life, separate from urgent repair requests. Typical ideas concern shared spaces: a bike rack, a second bin store, a clearer parcel process. Treat urgent faults differently from suggestions, and make sure residents know which route to use for each.",
+      "Example suggestions: \"Add a notice board by the lift for building updates.\" \"Put a shelf by the mailboxes for parcels that do not fit.\" If you manage several properties, one board per building keeps the ideas tied to the right place. See the [tenant complaint management page](/real-estate/tenant-feedback/) for how that works in practice."
+     ]
+    },
+    {
+     "heading": "H2: Prompts That Draw Out Better Ideas",
+     "body": [
+      "A blank box invites vague answers. A short prompt narrows the question without limiting what people can say. Try one of these on the form, and rotate it every month or two:",
+      "\"What is one thing that wastes your time?\" \"What would you change about how we do X?\" \"What do customers ask for that we do not offer?\" \"What nearly went wrong this week?\" \"What would make your next shift or visit easier?\"",
+      "Prompts also help the person reading. If most replies to \"what wastes your time\" mention the same step, you have found a pattern worth fixing."
+     ]
+    },
+    {
+     "heading": "H2: Turning Ideas Into Action",
+     "body": [
+      "Collecting the ideas is the easy half. Each suggestion needs a named owner, a status and a reply, even if the reply is \"not now, and here is why\". That is what [suggestion box software](/digital-suggestion-box-software/) adds over a paper box or a form: assignment, a tracking code so people can follow what happened, and a view of how many suggestions were acted on.",
+      "If anonymity is a concern for your team, read our guide to running an [anonymous suggestion box](/blog/anonymous-suggestion-box/). A practical test of the whole programme is simple: pick one suggestion from this week and check whether the person who made it knows what happened."
+     ]
+    },
+    {
+     "heading": "H2: FAQs",
+     "faqs": [
+      {
+       "question": "What should you put in a suggestion box?",
+       "answer": "Anything that could improve how the place runs: process fixes, safety concerns, ideas for customers or residents, and small annoyances that waste time. A short prompt on the form helps people focus on ideas that someone can act on."
+      },
+      {
+       "question": "What are good suggestion box ideas for employees?",
+       "answer": "Employees tend to suggest process changes, tools that duplicate work, meeting changes, workspace fixes and safety concerns. Prompts such as \"what is one thing that wastes your time?\" draw out specific, fixable ideas."
+      },
+      {
+       "question": "Should students, parents and staff share one suggestion box?",
+       "answer": "No. Separate boards let each group see prompts written for them and let you send each set of ideas to the right owner. They can still be managed from one dashboard."
+      },
+      {
+       "question": "How often should you change the suggestion box prompt?",
+       "answer": "Every month or two is a reasonable rhythm. Rotating the prompt keeps the box fresh and lets you ask about the area you are working on now."
+      }
+     ]
+    }
+   ],
+   "internal_links": [
+    {
+     "anchor": "suggestion box software",
+     "url": "/digital-suggestion-box-software"
+    },
+    {
+     "anchor": "anonymous suggestion box",
+     "url": "/blog/anonymous-suggestion-box"
+    },
+    {
+     "anchor": "online suggestion box setup",
+     "url": "/blog/online-suggestion-box-setup"
+    },
+    {
+     "anchor": "tenant complaint management",
+     "url": "/real-estate/tenant-feedback"
+    }
+   ],
+   "writer_notes": "Idea-led post. Do not repeat the 'why suggestion boxes fail' argument or the 10-minute setup walkthrough; both are covered by the existing suggestion-box cluster (see docs/seo-cluster-notes.md). Keep all examples illustrative and say so. No statistics."
+  }
+ },
+ {
+  "id": 62,
+  "meta": {
+   "title": "QR Code Survey vs QR Code Feedback: Which to Use",
+   "meta_description": "A QR code survey scores satisfaction; QR code feedback with a resolution workflow fixes the problem. See when each is the right tool, and when to use both.",
+   "slug": "/blog/qr-code-feedback-vs-qr-code-survey",
+   "primary_keyword": "qr code survey",
+   "secondary_keywords": [
+    "qr survey",
+    "qr code for survey",
+    "survey qr code",
+    "survey with qr code"
+   ],
+   "target_audience": "Owners and managers deciding whether to put a QR code survey or a QR code feedback and complaint channel in a restaurant, shop, office or other physical space",
+   "search_intent": "Commercial investigation - the reader searches for a QR code survey and needs to know whether a survey is the right tool for the problem",
+   "funnel_stage": "MOFU",
+   "content_type": "Comparison",
+   "target_word_count": "1,300-1,600 words",
+   "date_published": "2026-10-07",
+   "date_modified": "2026-10-07",
+   "author_name": "Maduranga, founder of FeedSolve"
+  },
+  "content": {
+   "quick_answer_box": "A QR code survey asks people to rate or answer set questions, so it measures satisfaction across many respondents and shows trends over time. QR code feedback with a resolution workflow lets people report a specific problem, then assigns an owner, tracks status and replies, so the problem gets fixed. Use a survey when you need a score or a comparison. Use feedback with a workflow when you need a problem solved. Many teams use both.",
+   "h1": "QR Code Survey vs QR Code Feedback: Which One Do You Need?",
+   "key_takeaways": [
+    "A QR code survey measures: it produces scores you can compare across sites, shifts or months",
+    "QR code feedback with a workflow resolves: it turns one person's problem into an assigned, tracked fix",
+    "A survey is the right tool for trend measurement, event feedback and benchmarking",
+    "Feedback with a workflow is the right tool for complaints, safety issues and anything that needs a reply",
+    "A score without a fix leaves the person who gave a low rating with no answer"
+   ],
+   "sections": [
+    {
+     "heading": "H2: The Short Version",
+     "body": [
+      "A survey with a QR code answers the question \"how are we doing?\" across a group of people. A feedback channel with a resolution workflow answers a different question: \"what went wrong for this person, and who is fixing it?\" Both put a QR code on a table, receipt or door. What happens after the scan is what differs.",
+      "This post is about choosing between them. If you want the setup details for the feedback side, see our guides to a [QR code feedback system](/blog/qr-code-feedback-system/) and a [QR code feedback board](/blog/qr-code-feedback-board/), which also touches on how a feedback board differs from a QR survey. Here we focus on the decision."
+     ]
+    },
+    {
+     "heading": "H2: What a QR Code Survey Does Well",
+     "key_points": [
+      "Gives you a number you can track over time",
+      "Lets you compare sites, shifts or periods with the same questions",
+      "Works for structured questions such as rating scales and multiple choice",
+      "Suits events, training sessions and one-off research"
+     ],
+     "body": [
+      "A QR survey is the right choice when the goal is measurement. If you run several branches and want to see which one guests rate lowest on cleanliness, a consistent set of questions scored across all of them gives you that comparison. If you run a training day and want to know which sessions people valued, a short survey collects it in one go.",
+      "Surveys are also easier to analyse in bulk. Rating scales and multiple choice questions turn into charts. When the question is \"is satisfaction going up or down?\", a survey is the better instrument, and nothing in this post argues otherwise."
+     ]
+    },
+    {
+     "heading": "H2: Where a Survey Alone Falls Short",
+     "key_points": [
+      "A low score shows that something is wrong, not what or who",
+      "Anonymous ratings give you nobody to follow up with",
+      "Responses collect in a report, where nobody owns them",
+      "The person who flagged a problem hears nothing back"
+     ],
+     "body": [
+      "The weak point is the gap between the score and the fix. A guest who scores the visit two out of five and ticks \"service\" has told you something is wrong, but not what, and there is usually no route for you to ask. Someone has to read the results, decide which are worth acting on and work out who should do something. In a small business that step often does not happen.",
+      "The other side of that gap is the person who answered. They scanned a survey qr code, spent a minute on it and heard nothing. For a low rating that is a missed chance: the customer who is willing to tell you privately is the one most likely to post publicly if nobody responds."
+     ]
+    },
+    {
+     "heading": "H2: What QR Code Feedback With a Workflow Does Well",
+     "key_points": [
+      "Captures a specific problem in the person's own words",
+      "Gives each submission a tracking code, so the person can see progress without an account",
+      "Assigns an owner, priority and status",
+      "Lets you reply publicly and record the outcome"
+     ],
+     "body": [
+      "A feedback channel starts from the problem rather than the score. Someone at a table, a loading dock or a reception desk reports what happened. Each submission is logged, assigned to an owner and moved through a status such as received, in progress and resolved. The person can use a tracking code to check where it stands, and you can reply when it is closed.",
+      "This is the approach FeedSolve is built around. It is a complaint, suggestion and feedback resolution platform, not a survey tool, and it records how many submissions were resolved. It does not replace a survey if what you need is a satisfaction score across many respondents."
+     ]
+    },
+    {
+     "heading": "H2: How to Choose",
+     "body": [
+      "Ask what you will do with the answer. If the answer is \"compare it with last quarter\", you want a survey. If the answer is \"fix it and tell the person\", you want feedback with a workflow.",
+      "Choose a QR code survey when you need benchmarks across sites or periods, when you are gathering opinions after an event, or when you are asking structured questions of a large group. Choose QR code feedback with a workflow when you handle complaints, safety concerns, supplier issues or suggestions, and when you want every submission owned and answered."
+     ]
+    },
+    {
+     "heading": "H2: Using Both Without Duplicating Effort",
+     "body": [
+      "The two are not rivals. A restaurant group might run a short survey qr code on receipts to track satisfaction by location, and a separate complaint channel at the table so a problem can be raised and fixed during the meal. The survey tells you which site is slipping; the feedback board tells you why and gets it fixed.",
+      "Keep the two clearly labelled so people know which to use. A survey should say it is a quick rating. A feedback code should say it is for reporting a problem. For a worked example in a restaurant setting, see our guide to [restaurant customer satisfaction survey questions](/blog/restaurant-customer-satisfaction-survey-questions/), and for the broader picture see [QR code feedback](/qr-code-feedback/)."
+     ]
+    },
+    {
+     "heading": "H2: FAQs",
+     "faqs": [
+      {
+       "question": "What is a QR code survey?",
+       "answer": "A QR code survey is a survey that people open by scanning a QR code with their phone. It is used to collect ratings and answers to set questions, often in a restaurant, shop, event or office."
+      },
+      {
+       "question": "Is a QR code survey the same as QR code feedback?",
+       "answer": "Not quite. A survey measures satisfaction with set questions. QR code feedback with a resolution workflow lets people report a specific problem, which is then assigned, tracked and answered. Both use a QR code, but they serve different goals."
+      },
+      {
+       "question": "When should I use a survey with a QR code?",
+       "answer": "Use one when you need scores you can compare across locations, shifts or periods, when you want opinions after an event or training, or when you are asking structured questions of many people."
+      },
+      {
+       "question": "Can I use a QR survey and a feedback channel together?",
+       "answer": "Yes. Use the survey to measure satisfaction and the feedback channel to handle problems. Label each clearly so people know which to scan."
+      },
+      {
+       "question": "Does FeedSolve replace my survey?",
+       "answer": "No. FeedSolve is a complaint, suggestion and feedback resolution platform. It handles what happens after someone reports a problem. If you need a satisfaction score from many respondents, keep a survey for that."
+      }
+     ]
+    }
+   ],
+   "internal_links": [
+    {
+     "anchor": "QR code feedback system",
+     "url": "/blog/qr-code-feedback-system"
+    },
+    {
+     "anchor": "QR code feedback board",
+     "url": "/blog/qr-code-feedback-board"
+    },
+    {
+     "anchor": "QR code feedback",
+     "url": "/qr-code-feedback"
+    },
+    {
+     "anchor": "restaurant customer satisfaction survey questions",
+     "url": "/blog/restaurant-customer-satisfaction-survey-questions"
+    }
+   ],
+   "writer_notes": "Be fair to surveys: say when a survey is the right tool. Do not describe FeedSolve as a survey tool. Avoid duplicating the QR-vs-survey section in /blog/qr-code-feedback-board/ and the 'vs traditional survey tools' section in /blog/qr-code-feedback-system/; this post is a decision guide. No invented statistics."
   }
  }
 ]

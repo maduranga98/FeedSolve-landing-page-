@@ -11,9 +11,9 @@ import { generateSoftwareAppSchema } from "@/lib/seo";
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
 export const metadata = generatePageMetadata({
-  title: "Digital Suggestion Box Software",
+  title: "Suggestion Box Software: Digital & Anonymous",
   description:
-    "Suggestion box software that closes the loop. Collect anonymous suggestions via a QR code or link - no login, any language. Free 7-day trial.",
+    "Suggestion box software that closes the loop: a digital suggestions box with anonymous QR code or link submission, no login, tracking codes. Free 7-day trial.",
   path: "/digital-suggestion-box-software/",
   alternates: clusterAlternates("suggestionBox", "/digital-suggestion-box-software/"),
 });
@@ -49,7 +49,15 @@ const faqs = [
   },
   {
     q: "Can I use it as an employee suggestion box and a customer suggestion box?",
-    a: "Yes. Create separate boards for staff and customers, each with its own branded QR code or link. Multi-language forms mean everyone can submit in their own language while you manage in yours.",
+    a: "Yes. An employee suggestion box and a customer one are just two boards. Create separate boards for staff and customers, each with its own branded QR code or link. Multi-language forms mean everyone can submit in their own language while you manage in yours.",
+  },
+  {
+    q: "What is a virtual suggestion box?",
+    a: "A virtual suggestion box is a suggestion box that lives online instead of on a wall, which makes it a fit for remote and hybrid teams. People open a link or scan a QR code from wherever they work and submit a suggestion with no login. Your team assigns each one to an owner and tracks it to resolution from one dashboard.",
+  },
+  {
+    q: "How do suggestion boxes work when the suggestions go to one digital box?",
+    a: "A suggestions box in digital form gives every board its own QR code and link. Employees, customers or visitors submit to that board, and each submission gets a tracking code. Your team sees every suggestion in one place, assigns an owner, replies publicly and marks it resolved, so the person who made the suggestion can see what happened.",
   },
   {
     q: "Can I add a suggestion box to my website?",
@@ -110,7 +118,7 @@ export default function DigitalSuggestionBoxSoftware() {
         badge="Digital Suggestion Box"
         breadcrumbLabel="Digital Suggestion Box Software"
         breadcrumbUrl={URL}
-        h1="Digital Suggestion Box Software That Closes the Loop"
+        h1="Suggestion Box Software That Closes the Loop"
         quickSummary="FeedSolve is a digital suggestion box that lets employees and customers submit suggestions anonymously via QR code or link with no login, then tracks every one to resolution."
         subheading="Replace the dusty box on the wall - and the Google Form that goes nowhere - with an online suggestion box that turns ideas and complaints into resolved actions."
         quickAnswer="FeedSolve is a digital suggestion box for teams and customers. People submit anonymously via a QR code or link - no login, no app, in any language. Each submission gets a unique tracking code, then your team assigns, tracks, and resolves it on a Kanban board with a full audit trail. From an anonymous employee suggestion box on the shop floor to a virtual suggestion box for remote teams, one tool covers it - start with a free 7-day trial."
