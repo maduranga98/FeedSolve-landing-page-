@@ -242,6 +242,16 @@ export default function CustomerComplaintSoftware() {
             label: "Australian businesses",
             sub: "Complaint handling in Australia",
           },
+          {
+            href: "/alternatives/zendesk/",
+            label: "Zendesk alternative",
+            sub: "Complaints without a help desk",
+          },
+          {
+            href: "/compare/feedsolve-vs-jotform/",
+            label: "vs Jotform",
+            sub: "Complaint form vs complaint workflow",
+          },
         ]}
       />
     </>

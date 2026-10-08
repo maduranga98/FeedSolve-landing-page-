@@ -251,6 +251,10 @@
     {
      "anchor": "QR feedback tools compared: the Uniqode alternative",
      "url": "/alternatives/uniqode"
+    },
+    {
+     "anchor": "FeedSolve vs Google Forms",
+     "url": "/compare/feedsolve-vs-google-forms/"
     }
    ],
    "writer_notes": "Avoid the phrase 'digital transformation' — it reads as enterprise fluff to an SMB operations manager. Keep tone practical. Include a short visual description of what the QR code + form + tracking page flow looks like even if no actual image is placed — describe it so the reader can picture it.",
@@ -659,6 +663,10 @@
     {
      "anchor": "suggestion box software features",
      "url": "/blog/suggestion-box-software-features"
+    },
+    {
+     "anchor": "Suggestion Ox alternative",
+     "url": "/alternatives/suggestion-ox/"
     }
    ],
    "writer_notes": "The physical suggestion box metaphor is your strongest hook — lean into it hard in the intro. This is a TOFU post so the CTA should be soft: 'try a free board' rather than 'buy now.' Avoid enterprise language entirely. Use 'your team,' 'your business,' 'your customers' — not 'stakeholders' or 'end-users.'",
@@ -788,6 +796,10 @@
     {
      "anchor": "tenant feedback software",
      "url": "/real-estate/tenant-feedback"
+    },
+    {
+     "anchor": "FeedSolve vs Jotform",
+     "url": "/compare/feedsolve-vs-jotform/"
     }
    ],
    "writer_notes": "Use concrete scenario writing — the 'Unit 14B, #FSV-7734' example makes the workflow tangible. This post has high buying intent so the CTA should appear at least twice — once mid-article and once at the close. Keep the competitor comparison fair and factual — don't bash AppFolio; position FeedSolve as purpose-built for complaint resolution specifically.",
@@ -908,6 +920,14 @@
     {
      "anchor": "FeedSolve free trial",
      "url": "/"
+    },
+    {
+     "anchor": "FeedSolve vs Google Forms",
+     "url": "/compare/feedsolve-vs-google-forms/"
+    },
+    {
+     "anchor": "FeedSolve vs Jotform",
+     "url": "/compare/feedsolve-vs-jotform/"
     }
    ],
    "writer_notes": "This is an educational, empathy-led post — the reader is frustrated with low response rates and looking for validation that login requirements are the problem. Use strong before/after framing. The courier/parcel tracking analogy is your strongest trust-builder for the no-login mechanics — lean on it.",
@@ -1244,6 +1264,10 @@
     {
      "anchor": "Alchemer alternative for resolving complaints",
      "url": "/alternatives/alchemer"
+    },
+    {
+     "anchor": "FeedSolve vs Typeform",
+     "url": "/compare/feedsolve-vs-typeform/"
     }
    ],
    "writer_notes": "Keep tone fair and factual — this is a comparison page, not a hit piece. Acknowledge Typeform's genuine strengths (conversational forms, conditional logic, NPS templates). The comparison table is the anchor of this post — make sure it renders cleanly. End with the 'Both if' use case recommendation to avoid appearing one-sided, which increases trust.",
@@ -1662,6 +1686,10 @@
     {
      "anchor": "Uniqode alternative that resolves QR feedback",
      "url": "/alternatives/uniqode"
+    },
+    {
+     "anchor": "FeedSolve vs Zonka Feedback",
+     "url": "/compare/feedsolve-vs-zonka/"
     }
    ],
    "writer_notes": "This is FeedSolve's flagship QR code post — it must own the 'QR code feedback system' keyword against all competitors. Avoid 'digital transformation' language; keep tone practical. The 2-minute setup claim must be substantiated with the actual step-by-step. Include the Southeast Asia/Middle East QR familiarity stat if sourced.",
@@ -1814,6 +1842,10 @@
     {
      "anchor": "Freshdesk alternative with flat pricing",
      "url": "/alternatives/freshdesk"
+    },
+    {
+     "anchor": "Zendesk alternative for small teams",
+     "url": "/alternatives/zendesk/"
     }
    ],
    "writer_notes": "This is a direct comparison page — keep tone fair and factual. Acknowledge Zendesk's genuine strengths for enterprise use cases, then position FeedSolve as the purpose-built alternative for SMBs that need resolution, not tickets. The 'under 2 minutes' claim and flat pricing are the strongest differentiators.",
@@ -2217,6 +2249,18 @@
     {
      "anchor": "customer feedback software",
      "url": "/customer-feedback-software"
+    },
+    {
+     "anchor": "Medallia alternative for small business",
+     "url": "/alternatives/medallia/"
+    },
+    {
+     "anchor": "FeedSolve vs Typeform",
+     "url": "/compare/feedsolve-vs-typeform/"
+    },
+    {
+     "anchor": "FeedSolve vs Zonka Feedback",
+     "url": "/compare/feedsolve-vs-zonka/"
     }
    ],
    "writer_notes": "This is the homepage primary keyword post - it must rank for 'customer feedback management small business.' Lead with the 4-component framework prominently. The vertical examples section is critical for topical authority. Avoid enterprise language entirely. CTA should appear at least twice - once after the component framework and once at the close.",
@@ -2410,6 +2454,18 @@
     {
      "anchor": "customer complaint software",
      "url": "/customer-complaint-software"
+    },
+    {
+     "anchor": "Zendesk alternative for small teams",
+     "url": "/alternatives/zendesk/"
+    },
+    {
+     "anchor": "FeedSolve vs Google Forms",
+     "url": "/compare/feedsolve-vs-google-forms/"
+    },
+    {
+     "anchor": "FeedSolve vs Zonka Feedback",
+     "url": "/compare/feedsolve-vs-zonka/"
     }
    ],
    "writer_notes": "This is a high-commercial-intent post. The comparison table is the anchor - make it clean and factual. Acknowledge Google Forms and Typeform honestly (they do have zero-login submission) but show exactly where they fail (no resolution workflow, no tracking codes). End with a strong CTA: 'See FeedSolve's pricing - free to start, no per-seat fees.'",
@@ -2559,6 +2615,10 @@
     {
      "anchor": "FeedSolve pricing",
      "url": "/"
+    },
+    {
+     "anchor": "FeedSolve vs Jotform",
+     "url": "/compare/feedsolve-vs-jotform/"
     }
    ],
    "writer_notes": "This is the dual-positioning post - the most strategically important in the new set. It must clearly establish FeedSolve as both an external customer feedback tool AND an internal employee problem reporting tool. Lead with the emotional insight ('your employees have problems too') before explaining the mechanic. The 'one dashboard, two audiences' message is the commercial hook. Include at least 5 vertical examples. The FAQ answering 'Will my manager see who submitted?' is the trust-critical question - answer it directly and honestly.",
@@ -2687,6 +2747,14 @@
     {
      "anchor": "customer feedback software",
      "url": "/customer-feedback-software"
+    },
+    {
+     "anchor": "FeedSolve vs Google Forms",
+     "url": "/compare/feedsolve-vs-google-forms/"
+    },
+    {
+     "anchor": "FeedSolve vs Jotform",
+     "url": "/compare/feedsolve-vs-jotform/"
     }
    ],
    "writer_notes": "This is a deeper companion post to Blog 7 (no-login-feedback-form) - it targets a slightly different keyword variant and focuses more on the UX psychology and conversion rate angle. Lean into the courier/parcel tracking analogy as the trust-builder. The passive touchpoint angle (QR codes on physical surfaces) ties it back to FeedSolve's physical-world positioning. Keep tone empathetic - the reader is frustrated by low response rates and wants validation before they change tools.",
@@ -2821,6 +2889,14 @@
     {
      "anchor": "retail customer feedback system",
      "url": "/blog/retail-customer-feedback-system"
+    },
+    {
+     "anchor": "FeedSolve vs Google Forms",
+     "url": "/compare/feedsolve-vs-google-forms/"
+    },
+    {
+     "anchor": "FeedSolve vs Jotform",
+     "url": "/compare/feedsolve-vs-jotform/"
     }
    ],
    "writer_notes": "This is the highest-traffic BOFU post in the new set. The 'Google Forms collects, then what?' hook is strong - use it as the section title and the conversational thread throughout. The side-by-side supplier scenario is the most important section - make it vivid and specific. Keep the Google Forms comparison fair (acknowledge it is genuinely good for surveys and registrations) to build trust. End with a direct CTA: 'Try FeedSolve free - no credit card, setup in under 2 minutes.'",
@@ -3312,6 +3388,14 @@
     {
      "anchor": "Alchemer alternative for complaint management",
      "url": "/alternatives/alchemer"
+    },
+    {
+     "anchor": "FeedSolve vs Typeform",
+     "url": "/compare/feedsolve-vs-typeform/"
+    },
+    {
+     "anchor": "FeedSolve vs Zonka Feedback",
+     "url": "/compare/feedsolve-vs-zonka/"
     }
    ],
    "writer_notes": "Follow the same tone as the Typeform comparison post — fair, factual, and acknowledging of SurveyMonkey's genuine strengths. SurveyMonkey's weaknesses for complaint management are structural, not incidental — the platform was built for research, not resolution. The comparison table is the anchor. The 'Both if' recommendation builds trust and avoids appearing one-sided. Avoid the phrase 'industry-leading' when referencing SurveyMonkey.",
@@ -3513,6 +3597,10 @@
     {
      "anchor": "Freshdesk alternative for small business",
      "url": "/alternatives/freshdesk"
+    },
+    {
+     "anchor": "Zendesk alternative for small teams",
+     "url": "/alternatives/zendesk/"
     }
    ],
    "writer_notes": "This comparison targets the Freshdesk alternative keyword. Keep tone fair — Freshdesk is genuinely strong for its intended use case (email-based support). The core argument is not that Freshdesk is bad but that it was designed for a different use case. The submitter model difference (email required vs zero-login QR) is the clearest differentiator — anchor the post here. Include the comparison table as the central asset.",
@@ -3644,6 +3732,10 @@
     {
      "anchor": "customer complaint software",
      "url": "/customer-complaint-software"
+    },
+    {
+     "anchor": "FeedSolve vs Zonka Feedback",
+     "url": "/compare/feedsolve-vs-zonka/"
     }
    ],
    "writer_notes": "This is the retail vertical post. The mislabelled garment scenario connecting a customer complaint to a supplier quality issue is strong — it shows the value of both boards in one narrative. Avoid 'omnichannel' — retail operations managers recognise it as buzzword language. Use concrete scenarios with specific complaint categories. The multi-location resolution rate comparison is the strongest commercial angle for chain store operators.",
@@ -4154,6 +4246,10 @@
     {
      "anchor": "FeedSolve vs Google Forms",
      "url": "/compare/feedsolve-vs-google-forms"
+    },
+    {
+     "anchor": "Suggestion Ox alternative",
+     "url": "/alternatives/suggestion-ox/"
     }
    ]
   }
@@ -4400,6 +4496,10 @@
     {
      "anchor": "digital suggestion box for small business",
      "url": "/blog/digital-suggestion-box-small-business"
+    },
+    {
+     "anchor": "Suggestion Ox alternative",
+     "url": "/alternatives/suggestion-ox/"
     }
    ]
   }
@@ -4662,6 +4762,10 @@
     {
      "anchor": "complaint management software buyer's guide",
      "url": "/blog/complaint-management-software-smb"
+    },
+    {
+     "anchor": "FeedSolve vs Zonka Feedback",
+     "url": "/compare/feedsolve-vs-zonka/"
     }
    ],
    "writer_notes": "This is the restaurant-chain vertical post — the counterpart to the small-restaurant post (id 32). The reader is an operations director or area manager, so the register is managerial: information flow, comparability, leading vs lagging indicators. The core argument is 'head office finds out last' and the core payoff is resolution rate per branch. Keep branch managers sympathetic — the post should read as giving them a tool, not building a panopticon; the rollout section carries that framing and must not be cut. Mirror the multi-property section of the hotel post (id 23) without duplicating its examples.",
@@ -5470,6 +5574,10 @@
     {
      "anchor": "Google Forms alternative for complaint tracking",
      "url": "/blog/google-forms-alternative-complaint-tracking"
+    },
+    {
+     "anchor": "Zendesk alternative for small teams",
+     "url": "/alternatives/zendesk/"
     }
    ],
    "key_takeaways": [
@@ -5658,6 +5766,10 @@
     {
      "anchor": "what feedback resolution rate measures",
      "url": "/blog/feedback-resolution-rate"
+    },
+    {
+     "anchor": "FeedSolve vs Zonka Feedback",
+     "url": "/compare/feedsolve-vs-zonka/"
     }
    ],
    "key_takeaways": [
@@ -5808,6 +5920,10 @@
     {
      "anchor": "employee problem reporting tool",
      "url": "/blog/employee-problem-reporting-tool"
+    },
+    {
+     "anchor": "Suggestion Ox alternative",
+     "url": "/alternatives/suggestion-ox/"
     }
    ],
    "key_takeaways": [
@@ -5969,6 +6085,18 @@
     {
      "anchor": "complaint management software in Australia",
      "url": "/au/complaint-management-software"
+    },
+    {
+     "anchor": "Zendesk alternative for small teams",
+     "url": "/alternatives/zendesk/"
+    },
+    {
+     "anchor": "Medallia alternative for small business",
+     "url": "/alternatives/medallia/"
+    },
+    {
+     "anchor": "FeedSolve vs Google Forms",
+     "url": "/compare/feedsolve-vs-google-forms/"
     }
    ],
    "key_takeaways": [
@@ -8733,6 +8861,10 @@
     {
      "anchor": "tenant feedback software",
      "url": "/real-estate/tenant-feedback"
+    },
+    {
+     "anchor": "FeedSolve vs Jotform",
+     "url": "/compare/feedsolve-vs-jotform/"
     }
    ],
    "writer_notes": "Distinct from the existing tenant-complaint-portal-property-managers post — this is community-association/shared-amenity focused (pool, landscaping, common areas, board turnover) rather than individual tenant-unit maintenance. Emphasize volunteer board burnout as the emotional hook.",
@@ -8872,6 +9004,10 @@
     {
      "anchor": "stop bad restaurant reviews before they are posted",
      "url": "/blog/stop-bad-restaurant-reviews-before-posted"
+    },
+    {
+     "anchor": "FeedSolve vs Typeform",
+     "url": "/compare/feedsolve-vs-typeform/"
     }
    ],
    "writer_notes": "Template post for the restaurant cluster. Targets list/template intent ('restaurant survey questions') that no existing restaurant post covers. Paired via hreflang with the Portuguese /br/blog/pesquisa-de-satisfacao-restaurante-modelo/. No fabricated statistics.",
@@ -9041,6 +9177,10 @@
     {
      "anchor": "tenant complaint management",
      "url": "/real-estate/tenant-feedback"
+    },
+    {
+     "anchor": "Suggestion Ox alternative",
+     "url": "/alternatives/suggestion-ox/"
     }
    ],
    "writer_notes": "Idea-led post. Do not repeat the 'why suggestion boxes fail' argument or the 10-minute setup walkthrough; both are covered by the existing suggestion-box cluster (see docs/seo-cluster-notes.md). Keep all examples illustrative and say so. No statistics."
@@ -9181,6 +9321,10 @@
     {
      "anchor": "restaurant customer satisfaction survey questions",
      "url": "/blog/restaurant-customer-satisfaction-survey-questions"
+    },
+    {
+     "anchor": "FeedSolve vs Typeform",
+     "url": "/compare/feedsolve-vs-typeform/"
     }
    ],
    "writer_notes": "Be fair to surveys: say when a survey is the right tool. Do not describe FeedSolve as a survey tool. Avoid duplicating the QR-vs-survey section in /blog/qr-code-feedback-board/ and the 'vs traditional survey tools' section in /blog/qr-code-feedback-system/; this post is a decision guide. No invented statistics."

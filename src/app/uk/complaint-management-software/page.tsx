@@ -1132,6 +1132,12 @@ export default function UKComplaintManagementPage() {
             <li>
               <Link href="/alternatives/freshdesk/">Freshdesk alternative for small business</Link>
             </li>
+            <li>
+              <Link href="/alternatives/zendesk/">Zendesk alternative for complaint management</Link>
+            </li>
+            <li>
+              <Link href="/compare/feedsolve-vs-zonka/">FeedSolve vs Zonka Feedback</Link>
+            </li>
           </ul>
         </div>
       </section>

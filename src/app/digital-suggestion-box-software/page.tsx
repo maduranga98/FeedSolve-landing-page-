@@ -311,6 +311,16 @@ export default function DigitalSuggestionBoxSoftware() {
             label: "vs Google Forms",
             sub: "Why a form isn't enough",
           },
+          {
+            href: "/compare/feedsolve-vs-typeform/",
+            label: "vs Typeform",
+            sub: "Survey builder vs suggestion tracking",
+          },
+          {
+            href: "/alternatives/suggestion-ox/",
+            label: "Suggestion Ox alternative",
+            sub: "Collecting vs resolving",
+          },
         ]}
       />
     </>
