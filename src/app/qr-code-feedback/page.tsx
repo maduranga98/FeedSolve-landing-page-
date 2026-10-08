@@ -173,6 +173,21 @@ export default function QrCodeFeedback() {
             label: "Restaurant QR feedback",
             sub: "Table feedback that resolves",
           },
+          {
+            href: "/compare/feedsolve-vs-google-forms/",
+            label: "vs Google Forms",
+            sub: "QR to a form vs QR to a workflow",
+          },
+          {
+            href: "/compare/feedsolve-vs-typeform/",
+            label: "vs Typeform",
+            sub: "Survey QR codes compared",
+          },
+          {
+            href: "/compare/feedsolve-vs-jotform/",
+            label: "vs Jotform",
+            sub: "Form builder vs complaint tracking",
+          },
         ]}
       />
     </>

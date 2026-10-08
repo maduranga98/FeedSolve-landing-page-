@@ -182,6 +182,8 @@ export default function USComplaintManagementPage() {
           { href: "/blog/complaint-resolution-workflow-smb/", label: "A complaint resolution workflow for SMBs" },
           { href: "/alternatives/freshdesk/", label: "Freshdesk alternative for small business" },
           { href: "/compare/feedsolve-vs-google-forms/", label: "FeedSolve vs Google Forms for complaints" },
+          { href: "/compare/feedsolve-vs-typeform/", label: "FeedSolve vs Typeform for complaints" },
+          { href: "/alternatives/zendesk/", label: "Zendesk alternative for small business" },
           { href: "/uk/complaint-management-software/", label: "Complaint management software in the UK" },
           { href: "/au/complaint-management-software/", label: "Complaint management software in Australia" },
         ],

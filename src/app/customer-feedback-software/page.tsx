@@ -175,6 +175,21 @@ export default function CustomerFeedbackSoftware() {
             label: "vs Typeform",
             sub: "Survey tool vs resolution",
           },
+          {
+            href: "/compare/feedsolve-vs-zonka/",
+            label: "vs Zonka Feedback",
+            sub: "Feedback platform compared",
+          },
+          {
+            href: "/compare/feedsolve-vs-google-forms/",
+            label: "vs Google Forms",
+            sub: "Free form vs resolution tracking",
+          },
+          {
+            href: "/alternatives/medallia/",
+            label: "Medallia alternative",
+            sub: "Feedback without the enterprise price",
+          },
         ]}
       />
     </>

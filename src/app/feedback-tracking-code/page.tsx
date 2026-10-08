@@ -171,6 +171,21 @@ export default function FeedbackTrackingCode() {
             label: "No-login feedback",
             sub: "Why zero friction wins",
           },
+          {
+            href: "/alternatives/zendesk/",
+            label: "Zendesk alternative",
+            sub: "Tracking without a help desk",
+          },
+          {
+            href: "/compare/feedsolve-vs-google-forms/",
+            label: "vs Google Forms",
+            sub: "Forms give no tracking code",
+          },
+          {
+            href: "/compare/feedsolve-vs-jotform/",
+            label: "vs Jotform",
+            sub: "Form builder vs complaint tracking",
+          },
         ]}
       />
     </>

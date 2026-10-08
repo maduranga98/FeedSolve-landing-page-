@@ -15,9 +15,9 @@ import VerticalProseSection from "@/components/VerticalProseSection";
 const URL = "https://feedsolve.com/complaint-management-software/";
 
 export const metadata = generatePageMetadata({
-  title: "Complaint Management System & Software",
+  title: "Complaint Management Software - Free Trial",
   description:
-    "A complaint management system that collects, assigns, tracks and resolves every complaint. QR or link intake, no login, tracking codes. Free 7-day trial.",
+    "Complaint management software to collect, assign, track and resolve every complaint. QR or link intake, no login, tracking codes. Free 7-day trial.",
   path: "/complaint-management-software/",
   alternates: clusterAlternates("complaintManagement", "/complaint-management-software/"),
 });
@@ -243,6 +243,14 @@ export default function ComplaintManagementSoftware() {
                   <Link href="/blog/complaint-management-solutions/">guide to complaint management solutions</Link> or the{" "}
                   <Link href="/blog/complaint-management-software-smb/">small business buyer&apos;s guide</Link>.
                 </>,
+                <>
+                  Choosing between tools? See how FeedSolve compares as complaint management software with{" "}
+                  <Link href="/compare/feedsolve-vs-google-forms/">Google Forms</Link>,{" "}
+                  <Link href="/compare/feedsolve-vs-typeform/">Typeform</Link>,{" "}
+                  <Link href="/compare/feedsolve-vs-zonka/">Zonka Feedback</Link> and{" "}
+                  <Link href="/compare/feedsolve-vs-jotform/">Jotform</Link>, or read the{" "}
+                  <Link href="/alternatives/medallia/">Medallia alternative for small teams</Link>.
+                </>,
               ]}
             />
           </>
@@ -290,6 +298,21 @@ export default function ComplaintManagementSoftware() {
             href: "/blog/complaint-management-solutions/",
             label: "Complaint management solutions",
             sub: "How the options compare",
+          },
+          {
+            href: "/compare/feedsolve-vs-google-forms/",
+            label: "FeedSolve vs Google Forms",
+            sub: "Why a form is not a complaint system",
+          },
+          {
+            href: "/compare/feedsolve-vs-zonka/",
+            label: "FeedSolve vs Zonka",
+            sub: "Resolution workflow compared",
+          },
+          {
+            href: "/alternatives/medallia/",
+            label: "Medallia alternative",
+            sub: "Enterprise CX without the contract",
           },
           {
             href: "/blog/ecommerce-buyer-complaint-tracking/",
