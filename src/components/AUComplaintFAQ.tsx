@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Is FeedSolve cheaper than Freshdesk for Australian small businesses?",
-    a: "FeedSolve charges per feedback board, not per agent. The Starter plan is $19 USD/month (approx. A$29/month) with unlimited team members on that board. Freshdesk charges A$22–A$79 per agent per month — a 5-person team costs A$110–A$395/month. For most Australian SMBs, FeedSolve is significantly more cost-effective with no per-agent penalties as your team grows.",
+    a: "FeedSolve charges per feedback board, not per agent. The Starter plan is $19 USD/month (approx. A$29/month) with 3 team members included on that board, and higher tiers add more team members at no per-agent fee. Freshdesk charges A$22–A$79 per agent per month — a 5-person team costs A$110–A$395/month. For most Australian SMBs, FeedSolve is significantly more cost-effective as your team grows.",
   },
   {
     q: "Can Australian customers submit complaints anonymously?",

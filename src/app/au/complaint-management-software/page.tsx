@@ -49,7 +49,7 @@ const jsonLd = {
         name: "Is FeedSolve cheaper than Freshdesk for Australian small businesses?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "FeedSolve charges per feedback board, not per agent. The Starter plan is $19 USD/month (approximately A$29/month) with unlimited team members on the board. Freshdesk charges A$22–A$79 per agent per month — a 5-person Australian SMB team pays A$110–A$395/month. For most Australian SMBs, FeedSolve is significantly more cost-effective.",
+          text: "FeedSolve charges per feedback board, not per agent. The Starter plan is $19 USD/month (approximately A$29/month) with 3 team members included on the board, and higher tiers add more team members at no per-agent fee. Freshdesk charges A$22–A$79 per agent per month — a 5-person Australian SMB team pays A$110–A$395/month. For most Australian SMBs, FeedSolve is significantly more cost-effective.",
         },
       },
       {
@@ -63,29 +63,6 @@ const jsonLd = {
     ],
   },
 };
-
-const faqs = [
-  {
-    q: "Does FeedSolve help Australian businesses meet Australian Consumer Law (ACL) complaint requirements?",
-    a: "Australian Consumer Law (Schedule 2 of the Competition and Consumer Act 2010) requires that businesses handle consumer complaints accessibly and in a timely manner. FeedSolve's zero-login QR submission meets the accessibility standard. The full audit trail — timestamps, assignee history, and resolution confirmation — provides documented evidence of complaint handling consistent with ACL expectations and ACCC enforcement guidelines.",
-  },
-  {
-    q: "Is FeedSolve cheaper than Freshdesk for Australian small businesses?",
-    a: "FeedSolve charges per feedback board, not per agent. The Starter plan is $19 USD/month (approx. A$29/month) with unlimited team members on that board. Freshdesk charges A$22–A$79 per agent per month — a 5-person team costs A$110–A$395/month. For most Australian SMBs, FeedSolve is significantly more cost-effective with no per-seat penalty as your team grows.",
-  },
-  {
-    q: "Can Australian customers submit complaints anonymously?",
-    a: "Yes. FeedSolve's anonymous mode lets Australian customers, suppliers, and staff submit complaints without providing contact information. Under the Privacy Act 1988 (Cth), individuals have a right to interact anonymously where reasonably practicable. FeedSolve's anonymous submission mode directly supports this right — submitters still receive a tracking code to check resolution progress.",
-  },
-  {
-    q: "Does FeedSolve work for Australian hospitality businesses under ASIC or ACCC guidelines?",
-    a: "FeedSolve is general-purpose complaint management software for Australian SMBs — hospitality, manufacturing, logistics, retail, and property management. It is not a specialised compliance tool for ASIC-regulated financial services firms. For hospitality, retail, and operations businesses, FeedSolve provides the structured intake and documented resolution process that ACCC-aligned complaint handling requires.",
-  },
-  {
-    q: "Can I run separate complaint boards for different Australian locations or states?",
-    a: "Yes. Create a separate feedback board for each location, branch, or state. Each board has its own QR code, category set, and team routing. All submissions appear in one dashboard filtered by board, status, or date — ideal for Australian businesses operating across multiple states or territories.",
-  },
-];
 
 const comparisonRows = [
   {

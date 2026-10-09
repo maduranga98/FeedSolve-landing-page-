@@ -39,6 +39,6 @@ export default function robots(): MetadataRoute.Robots {
       ...AI_CRAWLERS.map((ua) => ({ userAgent: ua, allow: "/" })),
     ],
     sitemap: "https://feedsolve.com/sitemap.xml",
-    host: "https://feedsolve.com",
+    host: "feedsolve.com",
   };
 }
