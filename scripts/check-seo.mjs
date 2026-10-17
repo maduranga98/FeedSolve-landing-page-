@@ -120,21 +120,42 @@ if (!existsSync(sitemapPath)) {
   console.log(`[seo] ${locs.length} sitemap URLs checked`);
 }
 
-// 4. Every blog post must be linked from the /blog/ hub in the STATIC html.
-//    The hub grid is client-paginated, so a post that only appears on page 2+
-//    ships with no crawlable link from its own hub.
-const hubFile = join(OUT, "blog", "index.html");
-if (existsSync(hubFile)) {
-  const hub = readFileSync(hubFile, "utf8");
-  const linked = new Set([...hub.matchAll(/href="(\/blog\/[^"\/]+\/)"/g)].map((m) => m[1]));
-  const built = readdirSync(join(OUT, "blog"), { withFileTypes: true })
-    .filter((e) => e.isDirectory() && existsSync(join(OUT, "blog", e.name, "index.html")))
-    .map((e) => `/blog/${e.name}/`);
-  const orphans = built.filter((u) => !linked.has(u));
-  if (orphans.length) {
-    errors.push(`${orphans.length} blog post(s) not linked from /blog/: ${orphans.slice(0, 5).join(", ")}${orphans.length > 5 ? " ..." : ""}`);
+// 4. Every blog post must be reachable from the /blog/ hub through a chain of
+//    real static links in the HTML. The grid itself is client-paginated (only
+//    page 1 ships server-side on /blog/), but each page of the grid is also a
+//    real route (/blog/, /blog/page/2/, /blog/page/3/, ...), so a crawler can
+//    walk hub -> page 2 -> page 3 -> ... and reach every post. This does a
+//    breadth-first walk of that same chain rather than only checking the
+//    hub's own HTML, so it fails if a post is orphaned at any depth.
+const blogDir = join(OUT, "blog");
+if (existsSync(join(blogDir, "index.html"))) {
+  const postLinkRe = /href="(\/blog\/[^"\/]+\/)"/g;
+  const pageLinkRe = /href="(\/blog\/page\/\d+\/)"/g;
+
+  const linkedPosts = new Set();
+  const visitedPages = new Set();
+  const queue = ["/blog/"];
+  while (queue.length) {
+    const pagePath = queue.shift();
+    if (visitedPages.has(pagePath)) continue;
+    visitedPages.add(pagePath);
+    const file = join(OUT, pagePath.slice(1), "index.html");
+    if (!existsSync(file)) continue;
+    const html = readFileSync(file, "utf8");
+    for (const m of html.matchAll(postLinkRe)) linkedPosts.add(m[1]);
+    for (const m of html.matchAll(pageLinkRe)) {
+      if (!visitedPages.has(m[1])) queue.push(m[1]);
+    }
   }
-  console.log(`[seo] ${built.length} blog posts, ${built.length - orphans.length} linked from the hub`);
+
+  const built = readdirSync(blogDir, { withFileTypes: true })
+    .filter((e) => e.isDirectory() && e.name !== "page" && existsSync(join(blogDir, e.name, "index.html")))
+    .map((e) => `/blog/${e.name}/`);
+  const orphans = built.filter((u) => !linkedPosts.has(u));
+  if (orphans.length) {
+    errors.push(`${orphans.length} blog post(s) not reachable from /blog/ via pagination: ${orphans.slice(0, 5).join(", ")}${orphans.length > 5 ? " ..." : ""}`);
+  }
+  console.log(`[seo] ${built.length} blog posts, ${built.length - orphans.length} reachable from the hub via pagination`);
 }
 
 // 6. On-page basics: exactly one <h1> in the static HTML (not injected by
