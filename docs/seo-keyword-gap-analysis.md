@@ -1,6 +1,48 @@
 # FeedSolve — Competitive Keyword Gap Analysis
 
-_Last updated: 2026-10-06. The October 2026 snapshot is first; the June 2026 analysis follows unchanged as the baseline._
+_Last updated: 2026-10-17 (Semrush verification added). The October 2026 GSC
+snapshot is first; the June 2026 analysis follows unchanged as the baseline._
+
+## Semrush verification (2026-10-17)
+
+Semrush access became available after this analysis was written, which fills
+the "Semrush data is unverified" caveat below for the keywords that mattered
+most to the prioritization. All figures are live Semrush Keyword Overview
+pulls (US/UK/AU databases, as noted); nothing here is estimated.
+
+| Keyword | US vol/mo | US KD | UK vol/mo | UK KD | AU vol/mo | Notes |
+|---|---|---|---|---|---|---|
+| complaint management software | 720 | 26 | 390 | **9** | 50 | UK has a third of US demand but is far easier to rank (KD 9 vs 26) — the `/uk/` page may be the better near-term bet despite lower volume |
+| complaints management software | 260 | 17 | — | — | — | Real, separate-enough demand from the singular form to justify its own on-page targeting (already covered in `/complaint-management-software/`'s copy per the Oct shipped-changes table) |
+| complaint tracking software | 170 | 23 | — | — | — | Confirms the GSC cluster was not noise |
+| complaint management solutions | 170 | 18 | 30 | 0 | — | Matches `/blog/complaint-management-solutions/` already existing |
+| complaint software | 140 | 19 | — | — | — | |
+| complaint handling software | 110 | 17 | — | — | — | |
+| complaint management system software | 140 | 20 | — | — | — | |
+| uniqode alternative | 70 | 0 | — | — | — | Lower volume than the 112 GSC impressions suggested, but KD 0 confirms it's a soft target — the existing `/alternatives/uniqode/` page is the right call |
+| alternative to freshdesk | 140 | 17 | — | — | — | Real demand, moderate difficulty; the existing `/alternatives/freshdesk/` page is justified |
+| medallia alternative | 30 | — | — | — | — | CPC $89.95 — highest commercial intent of anything checked here, despite low volume. Worth protecting/strengthening `/alternatives/medallia/` rather than treating it as a minor page |
+| inmoment alternative | 10 | — | — | — | — | Low priority confirmed |
+| alchemer alternative | 10 | — | — | — | — | Low priority confirmed |
+| online suggestion box | 140 | 27 | 40 | 0 | — | |
+| suggestion box software | 30 | 0 | — | — | — | Lower than its GSC impression count (64) implied — impressions ≠ demand 1:1, GSC was likely counting broad-match variants |
+| anonymous suggestion box | 210 | 24 | 40 | 0 | — | Second-highest suggestion-box term after the generic "suggestion box" head term — supports keeping `anonymous-suggestion-box` as its own post per the Sept cannibalization review rather than merging it away |
+| free suggestion box | 170 | **36** | — | — | — | Highest difficulty of the suggestion-box set despite respectable volume — a harder climb than "anonymous" or "digital" |
+| digital suggestion box | 110 | 25 | 20 | 0 | — | |
+| suggestion ox (competitor brand) | 110 | 20 | 20 | 0 | — | Confirms Gap A was real, not a GSC artifact — brand-capture demand genuinely exists |
+| suggestion ox alternatives | 10 | 0 | — | — | — | Low volume but KD 0 and zero competition — cheap to hold even at low demand |
+| customer feedback platform australia | — | — | — | — | 20 | Lower than the 66 GSC impressions suggested; AU page is still justified given KD is negligible |
+| feedback software australia | — | — | — | — | 20 | Same pattern |
+
+**What this changes:** nothing in the prioritized action plan needs to be
+reversed — Semrush broadly confirms the GSC-based reads. The two things worth
+noting going forward: (1) the UK complaint-management term is a meaningfully
+easier ranking target than the US term despite lower volume, which the
+original analysis didn't have a difficulty figure to support; (2) the
+`medallia alternative` page sits on by far the highest commercial-intent
+keyword in this whole set (CPC $89.95) relative to its modest volume, so it's
+worth more on-page investment than its low impression count alone would
+suggest.
 
 ## October 2026 snapshot (GSC, 6 Sep – 3 Oct 2026)
 
@@ -91,9 +133,13 @@ healthcare patient-feedback landing page (Gap D) and the off-page work.
 
 ### Caveats
 
-- **Semrush data is unverified.** Semrush API units were unavailable, so no
-  Semrush volumes or competitor keyword exports are used anywhere. GSC
-  impressions are the only demand signal, and no search volumes are invented.
+- **Semrush data: now verified for the priority clusters.** At the time this
+  snapshot was written, Semrush API units were unavailable, so GSC impressions
+  were the only demand signal. See "Semrush verification (2026-10-17)" at the
+  top of this doc for real volumes and keyword difficulty on the complaint,
+  alternatives, and suggestion-box clusters — it confirms the GSC-based
+  prioritization rather than overturning it. Competitor keyword exports
+  (gap analysis against specific rival domains) are still not done.
 - **Results are not yet measured.** These changes shipped in October; judge them
   on a fresh 28-day GSC window, not this snapshot. Title rewrites can move CTR
   quickly, but ranking changes take longer.
