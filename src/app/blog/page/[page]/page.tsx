@@ -4,7 +4,8 @@ import blogData from "@/data/blog.json";
 import { JsonLdScript } from "@/components/JsonLd";
 import { breadcrumbJsonLd, SITE_URL } from "@/lib/seo";
 import { generatePageMetadata } from "@/lib/seo/metadata";
-import BlogHubClient, { POSTS_PER_PAGE } from "../../BlogHubClient";
+import BlogHubClient from "../../BlogHubClient";
+import { POSTS_PER_PAGE } from "../../constants";
 
 const TOTAL_PAGES = Math.max(1, Math.ceil(blogData.length / POSTS_PER_PAGE));
 

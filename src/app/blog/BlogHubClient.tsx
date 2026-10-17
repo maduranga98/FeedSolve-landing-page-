@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { POSTS_PER_PAGE } from "./constants";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -442,8 +443,6 @@ function buildPosts(blogs: HubPost[]) {
   };
  });
 }
-
-export const POSTS_PER_PAGE = 6;
 
 export default function BlogHubClient({ blogs, initialPage = 1 }: { blogs: HubPost[]; initialPage?: number }) {
  const posts = useMemo(() => buildPosts(blogs), [blogs]);
