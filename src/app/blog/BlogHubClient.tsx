@@ -443,13 +443,13 @@ function buildPosts(blogs: HubPost[]) {
  });
 }
 
-const POSTS_PER_PAGE = 6;
+export const POSTS_PER_PAGE = 6;
 
-export default function BlogHubClient({ blogs }: { blogs: HubPost[] }) {
+export default function BlogHubClient({ blogs, initialPage = 1 }: { blogs: HubPost[]; initialPage?: number }) {
  const posts = useMemo(() => buildPosts(blogs), [blogs]);
  const [activeCat, setActiveCat] = useState("all");
  const [searchQuery, setSearchQuery] = useState("");
- const [currentPage, setCurrentPage] = useState(1);
+ const [currentPage, setCurrentPage] = useState(initialPage);
 
  const filteredPosts = posts.filter((p) => {
   const matchesCat = activeCat === "all" || p.cat === activeCat;
@@ -472,6 +472,12 @@ export default function BlogHubClient({ blogs }: { blogs: HubPost[] }) {
   setSearchQuery(value);
   setCurrentPage(1);
  };
+
+ // Only the unfiltered "All Posts" listing has a real static route per page
+ // (see src/app/blog/page/[page]/page.tsx); a filtered or searched view has
+ // no route of its own, so its pagination stays client-side only.
+ const isDefaultView = activeCat === "all" && !searchQuery.trim();
+ const pageHref = (page: number) => (page <= 1 ? "/blog/" : `/blog/page/${page}/`);
 
  return (
   <>
@@ -628,34 +634,72 @@ export default function BlogHubClient({ blogs }: { blogs: HubPost[] }) {
      </div>
     )}
 
-    {/* PAGINATION */}
+    {/* PAGINATION
+        In the default view (All Posts, no search) each page of the grid is
+        also a real static route (/blog/, /blog/page/2/, ...), so every post
+        gets a crawlable link from somewhere in the static HTML without a
+        separate archive list. A real <Link href> is used instead of a plain
+        button whenever that route exists; filtered/search views still page
+        client-side only, since those subsets have no route of their own. */}
     {totalPages > 1 && (
      <div className="pagination">
-      <button
-       className="page-btn"
-       onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-       disabled={currentPage === 1}
-       style={{ opacity: currentPage === 1 ? 0.4 : 1 }}
-      >
-       <ChevronLeft size={14} />
-      </button>
-      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-       <button
-        key={page}
-        className={`page-btn${currentPage === page ? " active" : ""}`}
-        onClick={() => setCurrentPage(page)}
+      {isDefaultView ? (
+       <Link
+        href={pageHref(Math.max(1, currentPage - 1))}
+        className="page-btn"
+        aria-disabled={currentPage === 1}
+        style={{ opacity: currentPage === 1 ? 0.4 : 1, pointerEvents: currentPage === 1 ? "none" : "auto" }}
        >
-        {page}
+        <ChevronLeft size={14} />
+       </Link>
+      ) : (
+       <button
+        className="page-btn"
+        onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+        disabled={currentPage === 1}
+        style={{ opacity: currentPage === 1 ? 0.4 : 1 }}
+       >
+        <ChevronLeft size={14} />
        </button>
-      ))}
-      <button
-       className="page-btn"
-       onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-       disabled={currentPage === totalPages}
-       style={{ opacity: currentPage === totalPages ? 0.4 : 1 }}
-      >
-       <ChevronRight size={14} />
-      </button>
+      )}
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) =>
+       isDefaultView ? (
+        <Link
+         key={page}
+         href={pageHref(page)}
+         className={`page-btn${currentPage === page ? " active" : ""}`}
+        >
+         {page}
+        </Link>
+       ) : (
+        <button
+         key={page}
+         className={`page-btn${currentPage === page ? " active" : ""}`}
+         onClick={() => setCurrentPage(page)}
+        >
+         {page}
+        </button>
+       )
+      )}
+      {isDefaultView ? (
+       <Link
+        href={pageHref(Math.min(totalPages, currentPage + 1))}
+        className="page-btn"
+        aria-disabled={currentPage === totalPages}
+        style={{ opacity: currentPage === totalPages ? 0.4 : 1, pointerEvents: currentPage === totalPages ? "none" : "auto" }}
+       >
+        <ChevronRight size={14} />
+       </Link>
+      ) : (
+       <button
+        className="page-btn"
+        onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+        disabled={currentPage === totalPages}
+        style={{ opacity: currentPage === totalPages ? 0.4 : 1 }}
+       >
+        <ChevronRight size={14} />
+       </button>
+      )}
      </div>
     )}
 
