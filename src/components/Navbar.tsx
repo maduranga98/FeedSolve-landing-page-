@@ -99,15 +99,22 @@ function NavDropdown({
   return (
     <li
       className="nav-dropdown"
-      onMouseEnter={() => onOpen(id)}
-      onMouseLeave={onClose}
+      onPointerEnter={(e) => e.pointerType === "mouse" && onOpen(id)}
+      onPointerLeave={(e) => e.pointerType === "mouse" && onClose()}
     >
       <button
         type="button"
         className="nav-dropdown-trigger"
         aria-expanded={open}
         aria-controls={`nav-menu-${id}`}
-        onClick={() => (open ? onClose() : onOpen(id))}
+        onClick={(e) => {
+          // Mouse hover already opened the panel; a click must keep it open
+          // instead of toggling it shut. Touch/keyboard clicks still toggle.
+          const isMouse = (e.nativeEvent as PointerEvent).pointerType === "mouse";
+          if (isMouse) onOpen(id);
+          else if (open) onClose();
+          else onOpen(id);
+        }}
       >
         {label}
         <ChevronDown size={14} aria-hidden="true" />
