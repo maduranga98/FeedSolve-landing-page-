@@ -9329,5 +9329,132 @@
    ],
    "writer_notes": "Be fair to surveys: say when a survey is the right tool. Do not describe FeedSolve as a survey tool. Avoid duplicating the QR-vs-survey section in /blog/qr-code-feedback-board/ and the 'vs traditional survey tools' section in /blog/qr-code-feedback-system/; this post is a decision guide. No invented statistics."
   }
+ },
+ {
+  "id": 63,
+  "meta": {
+   "title": "Customer Satisfaction After Resolution: SMB Guide",
+   "meta_description": "Resolving a complaint isn't the same as satisfying the customer. How to ask a one-question satisfaction check on the tracking page.",
+   "slug": "/blog/customer-satisfaction-after-resolution",
+   "primary_keyword": "customer satisfaction after complaint resolution",
+   "secondary_keywords": [
+    "post-resolution feedback",
+    "did we solve your problem",
+    "satisfaction confirmation rate",
+    "feedback on resolved complaint"
+   ],
+   "target_audience": "SMB operations managers and business owners who already resolve complaints but have no way to confirm whether the resolution actually satisfied the person who raised it",
+   "search_intent": "Informational - the reader has a resolution process in place and wants to know how to verify it's actually working for the customer, not just closing tickets",
+   "funnel_stage": "MOFU",
+   "content_type": "Supporting",
+   "target_word_count": "1,500-1,800 words",
+   "date_published": "2026-11-01",
+   "date_modified": "2026-11-01",
+   "author_name": "Maduranga, founder of FeedSolve"
+  },
+  "content": {
+   "quick_answer_box": "Resolving a complaint and knowing whether it actually satisfied the customer are two different things. The simplest way to close that gap is to ask one short question the moment a submission moves to Resolved: did this solve your problem? A yes/no or quick rating, captured right on the public tracking page with no login and no separate survey, turns a one-sided resolution into confirmed customer satisfaction - and gives you a satisfaction number to sit next to your resolution rate.",
+   "h1": "How to Collect Customer Satisfaction Feedback on a Resolved Complaint",
+   "sections": [
+    {
+     "heading": "H2: Resolving an Issue and Satisfying the Customer Are Not the Same Metric",
+     "key_points": [
+      "Resolution rate measures what the team did; satisfaction measures whether the fix actually worked for the submitter",
+      "A complaint can be marked Resolved internally while the person who raised it still feels unheard",
+      "Without asking directly, there's no way to tell a real win from a quiet loss",
+      "The fix is a short satisfaction question tied to the resolution itself, not a separate survey program"
+     ],
+     "body": [
+      "A team can have a strong resolution rate and still be losing customers. The number only reflects what happened on the internal side - a status was changed, a reply was written, a ticket moved to the next column. None of that confirms the person who submitted the complaint agrees their problem is actually gone.",
+      "This gap is easy to miss because it's invisible from the inside. The team sees a clean, closed queue. The submitter, meanwhile, might have received a reply that didn't fully address what they reported, or a fix that solved part of the issue but not all of it. They rarely come back to argue the point - they just quietly stop reporting things, or take their business elsewhere. Resolution rate stays high. Trust erodes anyway.",
+      "The only reliable way to close that gap is to ask the submitter directly, at the moment their resolution is delivered, whether it actually worked. Not a quarterly NPS survey, not a generic 'how did we do' email - a single, specific question tied to the exact issue they reported."
+     ]
+    },
+    {
+     "heading": "H2: Where to Ask: The Tracking Page Is the Right Moment, Not a Follow-Up Email",
+     "key_points": [
+      "Submitters already return to the tracking page to check status, so that's where the question belongs",
+      "No login, no separate survey tool, and no extra step for the submitter to take",
+      "Asking right when status changes to Resolved captures feedback while the issue is still fresh",
+      "A follow-up email days later adds a second system to manage and gets a lower response rate"
+     ],
+     "body": [
+      "The submitter's tracking code already brings them back to one page to check on their complaint. That page is the natural place to ask the satisfaction question - not a separate email sent days later asking them to click through to a survey tool they've never seen before.",
+      "Timing matters as much as placement. The moment status changes to Resolved and the submitter checks their tracking code is the moment the resolution is freshest in their mind. Wait a week and send a generic satisfaction email instead, and most people either ignore it or can't recall the specifics of what was actually fixed well enough to answer honestly.",
+      "This also keeps the whole interaction inside one zero-friction flow. The submitter never created an account to report the issue in the first place - asking them to log into a separate feedback platform to confirm it was fixed breaks the same frictionless pattern that got them to submit the complaint at all."
+     ]
+    },
+    {
+     "heading": "H2: What to Actually Ask (Keep It to One Question)",
+     "key_points": [
+      "'Did this resolve your issue?' with a simple Yes / No, or a short 1-5 scale",
+      "Response rate drops sharply past one question - resist the urge to add a satisfaction survey here",
+      "On 'No,' give a one-line box to say what's still wrong and route it back into the workflow",
+      "On 'Yes,' that confirmation is what should move the ticket from Resolved to genuinely Closed"
+     ],
+     "body": [
+      "The question itself should mirror the complaint, not a generic customer experience survey. 'Did this resolve your issue?' with a Yes/No choice, or a lightweight 1-5 scale if more granularity is useful, is enough. Anything longer - multiple questions, open comment fields required before submitting, star ratings on five separate dimensions - drops response rates fast, because the submitter has already told you what was wrong once and doesn't want to repeat the exercise.",
+      "A 'No' answer is the most valuable data point in the whole system, so it needs a path forward, not a dead end. A single optional text box - 'what's still not right?' - captures enough to route the item back into the workflow without forcing the submitter to resubmit from scratch or track down the business through a different channel.",
+      "A 'Yes' answer is what should actually close the loop. As covered in the FeedSolve article on [what to do after resolving a complaint](/blog/next-step-after-resolving-complaint), 'Resolved' is an internal status - it's the submitter's confirmation that turns it into a genuinely closed, trustworthy number."
+     ]
+    },
+    {
+     "heading": "H2: Turning Individual Answers Into a Team-Level Satisfaction Number",
+     "key_points": [
+      "Track the percentage of Resolved items where the submitter confirmed satisfaction, not just the raw resolution count",
+      "Resolution rate shows volume closed; satisfaction confirmation rate shows quality of the close",
+      "A high resolution rate paired with a low satisfaction confirmation rate is a pattern that's invisible without asking",
+      "Break the number down by board or category rather than relying on one blended average"
+     ],
+     "body": [
+      "Once the question is in place, the individual Yes/No answers add up to something more useful than any single response: a satisfaction confirmation rate sitting right next to the [feedback resolution rate](/blog/feedback-resolution-rate). Resolution rate answers 'how much did we close?' Satisfaction confirmation rate answers 'how much of that was actually a good close?' A team can be strong on the first number and weak on the second without ever noticing, because nothing in a standard Kanban workflow surfaces that gap on its own.",
+      "The combination is what makes the number actionable. A supplier feedback board with an 85% resolution rate but only 50% confirmed satisfaction points at a specific, fixable problem - the team is taking action, but the action often isn't landing. That's a very different conversation from a board where both numbers are low, which usually points to a capacity or process problem instead.",
+      "Breaking satisfaction down by board, category, or the team member who resolved the item turns a single blended percentage into something a manager can actually act on - whether that's a product category with a recurring root cause, or a reminder that resolution replies need to be more specific about what was actually done, as covered in the [resolution workflow](/blog/complaint-resolution-workflow-smb) piece."
+     ]
+    },
+    {
+     "heading": "H2: FAQs",
+     "faqs": [
+      {
+       "question": "Does asking for satisfaction feedback require a separate survey tool?",
+       "answer": "No - it works best as one question built into the same tracking page the submitter already uses to check status, rather than a separate survey platform with its own link and login."
+      },
+      {
+       "question": "What's a reasonable satisfaction confirmation rate to aim for?",
+       "answer": "There's no universal benchmark yet, but the number that matters most is the gap between it and your resolution rate. A large gap - resolving items at a high rate but confirming satisfaction on far fewer - is the signal worth investigating first."
+      },
+      {
+       "question": "Should a 'No' response automatically reopen the complaint?",
+       "answer": "Generally yes. Treating a 'No' as a signal to move the item back into the workflow, rather than leaving it marked Resolved, keeps your resolution numbers honest and gives the submitter confidence that disagreeing with a resolution actually does something."
+      }
+     ]
+    }
+   ],
+   "internal_links": [
+    {
+     "anchor": "feedback resolution rate explained",
+     "url": "/blog/feedback-resolution-rate"
+    },
+    {
+     "anchor": "what to do after resolving a complaint",
+     "url": "/blog/next-step-after-resolving-complaint"
+    },
+    {
+     "anchor": "complaint resolution workflow",
+     "url": "/blog/complaint-resolution-workflow-smb"
+    },
+    {
+     "anchor": "FeedSolve tracking page overview",
+     "url": "/"
+    }
+   ],
+   "writer_notes": "This post is about the satisfaction *question* itself as a feature/practice - don't duplicate the root-cause-logging and reopen-workflow detail already covered in next-step-after-resolving-complaint; link to it instead. Keep the tone practical and feature-adjacent: the point is one question, asked in the right place, at the right moment - not a survey program.",
+   "key_takeaways": [
+    "A resolved complaint and a satisfied customer are not the same thing - only asking the submitter directly closes that gap",
+    "The right place to ask is the public tracking page the submitter already uses, at the moment status changes to Resolved - not a separate follow-up survey",
+    "Keep it to one question (did this resolve your issue?) with a Yes/No or short scale - response rates drop fast past one question",
+    "Track a satisfaction confirmation rate alongside resolution rate - a gap between the two is a pattern invisible until you start asking"
+   ]
+  }
  }
 ]
