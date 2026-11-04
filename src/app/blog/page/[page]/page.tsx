@@ -23,12 +23,16 @@ export async function generateMetadata({
  params: Promise<{ page: string }>;
 }): Promise<Metadata> {
  const { page } = await params;
- return generatePageMetadata({
-  title: `Blog - Page ${page}`,
-  description:
-   "Practical guides on complaint management, customer feedback, QR code surveys and suggestion boxes for small businesses, restaurants and operations teams.",
-  path: `/blog/page/${page}/`,
- });
+ return {
+  ...generatePageMetadata({
+   title: `Blog - Page ${page}`,
+   description: `Page ${page} of the FeedSolve blog: guides on complaint management, customer feedback, QR code surveys and suggestion boxes.`,
+   path: `/blog/page/${page}/`,
+  }),
+  // Archive pages duplicate the hub's content and are not in the sitemap. Keep
+  // them crawlable so every post stays linked, but out of the index.
+  robots: { index: false, follow: true },
+ };
 }
 
 export default async function BlogPageN({ params }: { params: Promise<{ page: string }> }) {
