@@ -118,6 +118,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      }}
     />
     {/* End Google Tag Manager */}
+    {/* OpenAI Ads pixel */}
+    <Script
+     id="oaiq-pixel"
+     strategy="lazyOnload"
+     dangerouslySetInnerHTML={{
+      __html: `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"H3M5ho5HsZQsG4VTmWcMCb",debug:true});`,
+     }}
+    />
+    {/* End OpenAI Ads pixel */}
     {/* Google Tag Manager (noscript) */}
     <noscript>
      <iframe
