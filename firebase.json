@@ -84,6 +84,15 @@
         ]
       },
       {
+        "source": "**/*.@(woff|woff2|ttf|otf)",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex"
+          }
+        ]
+      },
+      {
         "source": "/manifest.json",
         "headers": [
           {
