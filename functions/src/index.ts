@@ -77,7 +77,7 @@ const sha256 = (v: string) => createHash("sha256").update(v.trim().toLowerCase()
 
 export const redditConversion = onRequest(
   {
-    cors: ["https://feedsolve.com", "https://www.feedsolve.com", "https://feedsolve-e9483.web.app"],
+    cors: ["https://feedsolve.com", "https://www.feedsolve.com", "https://app.feedsolve.com", "https://feedsolve-e9483.web.app"],
     secrets: [redditToken],
     maxInstances: 5,
   },
