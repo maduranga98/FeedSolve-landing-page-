@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackRedditEvent } from "@/lib/redditPixel";
 import { Mail, Phone, MapPin, Globe, Send, CheckCircle } from "lucide-react";
 
 export default function ContactSection() {
@@ -24,6 +25,7 @@ export default function ContactSection() {
         }
       );
       if (res.ok) {
+        trackRedditEvent("Lead");
         setStatus("success");
         setForm({ name: "", email: "", company: "", message: "" });
       } else {

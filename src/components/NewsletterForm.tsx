@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackRedditEvent } from "@/lib/redditPixel";
 
 // The site is statically exported (output: "export"), so there is no server
 // API route. Subscriptions are POSTed directly to an external endpoint
@@ -27,6 +28,7 @@ export default function NewsletterForm() {
     body: JSON.stringify({ email }),
    });
    if (!res.ok) throw new Error(`Subscription failed: ${res.status}`);
+   trackRedditEvent("Lead");
    setStatus("success");
    setEmail("");
   } catch {
