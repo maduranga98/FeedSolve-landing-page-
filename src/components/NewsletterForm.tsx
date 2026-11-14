@@ -28,7 +28,7 @@ export default function NewsletterForm() {
     body: JSON.stringify({ email }),
    });
    if (!res.ok) throw new Error(`Subscription failed: ${res.status}`);
-   trackRedditEvent("Lead");
+   trackRedditEvent("Lead", { email: email });
    setStatus("success");
    setEmail("");
   } catch {

@@ -25,7 +25,7 @@ export default function ContactSection() {
         }
       );
       if (res.ok) {
-        trackRedditEvent("Lead");
+        trackRedditEvent("Lead", { email: form.email });
         setStatus("success");
         setForm({ name: "", email: "", company: "", message: "" });
       } else {
