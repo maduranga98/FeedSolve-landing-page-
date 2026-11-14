@@ -118,15 +118,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      }}
     />
     {/* End Google Tag Manager */}
-    {/* OpenAI Ads pixel */}
+    {/* Reddit Pixel */}
     <Script
-     id="oaiq-pixel"
-     strategy="lazyOnload"
+     id="reddit-pixel"
+     strategy="afterInteractive"
      dangerouslySetInnerHTML={{
-      __html: `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"H3M5ho5HsZQsG4VTmWcMCb",debug:true});`,
+      __html: `!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_k0igb2vwa0k3",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_k0igb2vwa0k3');rdt('track','PageVisit');`,
      }}
     />
-    {/* End OpenAI Ads pixel */}
+    {/* End Reddit Pixel */}
     {/* Google Tag Manager (noscript) */}
     <noscript>
      <iframe
