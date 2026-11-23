@@ -116,6 +116,7 @@ export default function AUComplaintManagementPage() {
         }}
       />
       <Navbar variant="blog" />
+      <main id="main-content">
 
       {/* HERO */}
       <section
@@ -254,7 +255,7 @@ export default function AUComplaintManagementPage() {
               Try FeedSolve Free <ArrowRight size={16} />
             </a>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               className="btn-outline"
               style={{ borderColor: "rgba(255,255,255,0.3)", color: "white" }}
             >
@@ -871,6 +872,8 @@ export default function AUComplaintManagementPage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer variant="blog" />
     </>

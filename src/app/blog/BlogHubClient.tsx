@@ -481,6 +481,7 @@ export default function BlogHubClient({ blogs, initialPage = 1 }: { blogs: HubPo
  return (
   <>
    <Navbar variant="blog" />
+   <main id="main-content">
 
    {/* HERO */}
    <div className="blog-page-hero">
@@ -715,6 +716,8 @@ export default function BlogHubClient({ blogs, initialPage = 1 }: { blogs: HubPo
      </div>
     </div>
    </div>
+
+   </main>
 
    <Footer variant="blog" />
   </>

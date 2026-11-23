@@ -19,7 +19,7 @@ export function pricingOffers() {
   const common = {
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
-    url: `${SITE_URL}/#pricing`,
+    url: `${SITE_URL}/pricing/`,
   };
   return [
     { "@type": "Offer", name: `Free ${TRIAL_DAYS}-day trial`, price: "0", ...common },

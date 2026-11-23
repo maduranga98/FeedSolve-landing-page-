@@ -266,7 +266,7 @@ if (existsSync(sitemapPath)) {
 // 5. Localized sections must ship the right <html lang>, and every hreflang
 //    annotation must be reciprocal: if A lists B, B must list A with the same
 //    map, or Google ignores the whole cluster.
-const LOCALIZED = { "/br/": "pt-BR" };
+const LOCALIZED = { "/br/": "pt-BR", "/ar-ae/": "ar-AE", "/ar-sa/": "ar-SA" };
 const hreflangByUrl = new Map();
 for (const file of pages) {
   const url = urlForFile(file);

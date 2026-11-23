@@ -46,6 +46,16 @@ const faqs: FAQItem[] = [
     answer:
       "Yes. The same QR code or link collects complaints, suggestions and general patient feedback. Your team assigns each item to an owner, replies, and marks it resolved, so patient feedback leads to action instead of sitting in a comment box.",
   },
+  {
+    question: "Can one tool manage patient grievances and feedback together?",
+    answer:
+      "Yes. Use one board for patient grievances and complaints and another for general feedback, or one board with categories. Both appear in the same dashboard, each item has an owner, a status, timestamps and an audit trail, and the patient can follow progress with a tracking code. FeedSolve records and tracks grievances; whether your process meets a regulator's grievance rules, such as response timelines, depends on how your organisation runs it, so check your own requirements.",
+  },
+  {
+    question: "How do you capture real-time patient feedback at the point of care?",
+    answer:
+      "Place a QR code where the experience happens: the waiting room, the treatment room, the discharge desk or the pharmacy counter. Patients scan it and submit from their own phone in under a minute, with no app or login, while the visit is still fresh. The submission reaches your team's dashboard straight away, so a problem can be fixed before the patient leaves or posts a review.",
+  },
 ];
 
 const webPageJsonLd = {

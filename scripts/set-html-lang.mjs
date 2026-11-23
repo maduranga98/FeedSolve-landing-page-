@@ -13,8 +13,12 @@ import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "
 import { join } from "node:path";
 
 const OUT = "out";
-/** Exported directory -> BCP 47 language tag. */
-const LOCALES = { br: "pt-BR" };
+/** Exported directory -> BCP 47 language tag and text direction. */
+const LOCALES = {
+  br: { lang: "pt-BR", dir: "ltr" },
+  "ar-ae": { lang: "ar-AE", dir: "rtl" },
+  "ar-sa": { lang: "ar-SA", dir: "rtl" },
+};
 
 function htmlFiles(dir, acc = []) {
   for (const entry of readdirSync(dir)) {
@@ -25,7 +29,7 @@ function htmlFiles(dir, acc = []) {
   return acc;
 }
 
-for (const [dir, lang] of Object.entries(LOCALES)) {
+for (const [dir, { lang, dir: textDir }] of Object.entries(LOCALES)) {
   const root = join(OUT, dir);
   if (!existsSync(root)) {
     console.error(`[lang] ${root}/ not found - run "next build" first.`);
@@ -34,7 +38,8 @@ for (const [dir, lang] of Object.entries(LOCALES)) {
   let count = 0;
   for (const file of htmlFiles(root)) {
     const html = readFileSync(file, "utf8");
-    const next = html.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`);
+    const attrs = textDir === "rtl" ? `lang="${lang}" dir="rtl"` : `lang="${lang}"`;
+    const next = html.replace(/<html lang="[^"]*"/, `<html ${attrs}`);
     if (next === html) {
       console.error(`[lang] no <html lang> found in ${file}`);
       process.exit(1);
@@ -42,5 +47,5 @@ for (const [dir, lang] of Object.entries(LOCALES)) {
     writeFileSync(file, next);
     count++;
   }
-  console.log(`[lang] ${count} page(s) under /${dir}/ set to lang="${lang}"`);
+  console.log(`[lang] ${count} page(s) under /${dir}/ set to lang="${lang}"${textDir === "rtl" ? ' dir="rtl"' : ""}`);
 }

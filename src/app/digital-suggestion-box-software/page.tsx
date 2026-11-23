@@ -11,9 +11,9 @@ import { generateSoftwareAppSchema } from "@/lib/seo";
 const URL = "https://feedsolve.com/digital-suggestion-box-software/";
 
 export const metadata = generatePageMetadata({
-  title: "Suggestion Box Software: Digital & Anonymous",
+  title: "Anonymous Online Suggestion Box Software",
   description:
-    "Suggestion box software that closes the loop: a digital suggestions box with anonymous QR code or link submission, no login, tracking codes. Free 7-day trial.",
+    "Run an anonymous online suggestion box for staff or customers. People submit by QR code or link, no login, and track your reply with a code. 7-day free trial.",
   path: "/digital-suggestion-box-software/",
   alternates: clusterAlternates("suggestionBox", "/digital-suggestion-box-software/"),
 });
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Can I use it as an employee suggestion box and a customer suggestion box?",
-    a: "Yes. An employee suggestion box and a customer one are just two boards. Create separate boards for staff and customers, each with its own branded QR code or link. Multi-language forms mean everyone can submit in their own language while you manage in yours.",
+    a: "Yes. An employee suggestion box and a customer one are just two boards. Create separate boards for staff and customers, each with its own branded QR code or link. Multi-language forms mean everyone can submit in their own language while you manage in yours. For a staff-only programme, see employee suggestion box software.",
   },
   {
     q: "What is a virtual suggestion box?",
@@ -269,6 +269,14 @@ export default function DigitalSuggestionBoxSoftware() {
                 covers where to put the code once you have one.
               </>,
               <>
+                Running a programme for staff only? The{" "}
+                <Link href="/employee-suggestion-box-software/">
+                  employee suggestion box
+                </Link>{" "}
+                page covers routing ideas to department owners, boards per site
+                or shift, and reaching frontline staff who have no company email.
+              </>,
+              <>
                 Comparing FeedSolve against a single-purpose anonymous
                 suggestion box? The{" "}
                 <Link href="/alternatives/suggestion-ox/">
@@ -286,6 +294,11 @@ export default function DigitalSuggestionBoxSoftware() {
         ctaHeading="Launch your digital suggestion box today"
         ctaSub="Create a board, generate a QR code, and start collecting suggestions in minutes. Free 7-day trial."
         relatedLinks={[
+          {
+            href: "/employee-suggestion-box-software/",
+            label: "Employee suggestion box",
+            sub: "Staff ideas routed to an owner",
+          },
           {
             href: "/blog/anonymous-suggestion-box/",
             label: "Anonymous suggestion box",

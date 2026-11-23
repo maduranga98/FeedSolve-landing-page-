@@ -130,6 +130,7 @@ export default function VerticalPage(props: VerticalProps) {
         />
       )}
       <Navbar variant="blog" />
+      <main id="main-content">
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section
@@ -300,7 +301,7 @@ export default function VerticalPage(props: VerticalProps) {
               Try FeedSolve Free <ArrowRight size={16} />
             </a>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               className="btn-outline"
               style={{ borderColor: "rgba(255,255,255,0.3)", color: "white" }}
             >
@@ -859,7 +860,7 @@ export default function VerticalPage(props: VerticalProps) {
               Try FeedSolve Free <ArrowRight size={17} />
             </a>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               className="btn-outline"
               style={{
                 borderColor: "rgba(255,255,255,0.3)",
@@ -943,6 +944,8 @@ export default function VerticalPage(props: VerticalProps) {
           </div>
         </section>
       )}
+
+      </main>
 
       <Footer variant="blog" />
     </>

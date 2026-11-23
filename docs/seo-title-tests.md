@@ -91,3 +91,60 @@ not on clicks:
    position moved more than ~3 places, the comparison is not clean.
 3. Revert any row where CTR drops. Nothing here changes the primary keyword, so
    a revert is a copy change only.
+
+---
+
+# Round 2 — 2026-11-23 (branch `seo/gsc-nov-ctr-geo`)
+
+Source: GSC export, last 3 months (2026-08-22 → 2026-11-21): 58 clicks,
+15,930 impressions, CTR 0.36%, average position improving 42 → 31 by month.
+
+Note: blog posts now render with the ` | FeedSolve` suffix (they go through
+`generatePageMetadata`), so the blog title budget is 48 characters, not 60.
+
+### 6. `/digital-suggestion-box-software/` — 2,233 impr, pos 21.7, 7 clicks
+
+| | Before | After |
+|---|---|---|
+| Title | Suggestion Box Software: Digital & Anonymous (56 rendered) | **Anonymous Online Suggestion Box Software** (52 rendered) |
+| Description | Suggestion box software that closes the loop: a digital suggestions box with anonymous QR code or link submission, no login, tracking codes. Free 7-day trial. | **Run an anonymous online suggestion box for staff or customers. People submit by QR code or link, no login, and track your reply with a code. 7-day free trial.** (158) |
+
+Why: Google already serves this page for the "online" and "anonymous" variants
+(online suggestion box 216 impr / pos 27.5, anonymous suggestion box 159 / 40,
+suggestion box online 89, suggestions box online 80). The old title never said
+"online". "digital" stays in the URL and body. Riskiest of the three — if the
+page drops more than 3 positions for `suggestion box software` (pos 12.8),
+revert.
+
+### 7. `/alternatives/uniqode/` — 203 impr, pos 10.7, 0 clicks
+
+| | Before | After |
+|---|---|---|
+| Title | Uniqode Alternative That Resolves QR Feedback | **Best Uniqode Alternative for QR Feedback** |
+| Description | Looking for a Uniqode alternative? … | **Need a Uniqode (Beaconstac) alternative? FeedSolve keeps no-login QR feedback and adds owners, status and a tracking code for every issue. 7-day free trial.** (156) |
+
+Why: the only alternatives page earning clicks is Medallia, titled "Best
+Medallia Alternative…" (query `best medallia alternative`: 2 clicks at pos 8.9).
+Same pattern here, where `uniqode alternative` sits at pos 8.7 with 0 clicks.
+"Beaconstac" catches searchers who still know the old brand name.
+
+### 8. `/blog/complaint-management-software-smb/` — 781 impr, pos 16.6, 0 clicks
+
+| | Before | After |
+|---|---|---|
+| Title | Complaint Management Software: SMB Buyer's Guide (60 rendered) | **Complaint Management Software for Small Business** (60 rendered) |
+| Description | … and how to start free. | **Which complaint management software fits a small business? The 5 features that matter, 3 enterprise extras to skip, and 6 tools compared side by side.** (150) |
+
+Why: searchers type "small business", not "SMB" (the post's own primary keyword
+is `complaint management software for small business`). The old description
+promised "start free" — there is no free plan, only a 7-day trial. This post
+outranks the `/complaint-management-software/` pillar (pos 42.7) — see the
+cannibalisation check below before doing anything else to either page.
+
+## Cannibalisation check to run in GSC (not doable from the export)
+
+Performance → Search results → Queries → filter query *contains*
+`complaint management software` → Pages tab. If the blog post and the pillar
+both appear for the same queries, keep the blog post as the informational
+"which tool" page and make sure its first in-body link to the pillar uses the
+anchor "complaint management software".

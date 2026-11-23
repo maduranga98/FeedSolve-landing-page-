@@ -88,7 +88,7 @@ export default function MarketLandingPage({
               <a href="https://app.feedsolve.com/signup" className="btn-primary teal" target="_blank" rel="noopener noreferrer">
                 Start free <ArrowRight size={15} />
               </a>
-              <Link href="/#pricing" className="btn-outline" style={{ color: "white", borderColor: "rgba(255,255,255,0.28)" }}>
+              <Link href="/pricing/" className="btn-outline" style={{ color: "white", borderColor: "rgba(255,255,255,0.28)" }}>
                 View pricing
               </Link>
             </div>
