@@ -235,6 +235,15 @@ export default function ComplaintManagementSoftware() {
                   (a complaint management system with plans in US dollars),{" "}
                   <Link href="/uk/complaint-management-software/">complaints management software in the UK</Link>{" "}
                   and <Link href="/au/complaint-management-software/">complaint management software in Australia</Link>.
+                  In Asia, see <Link href="/sg/complaint-management-software/">Singapore</Link>,{" "}
+                  <Link href="/my/complaint-management-software/">Malaysia</Link> and{" "}
+                  <Link href="/ph/complaint-management-software/">the Philippines</Link>; in Africa,{" "}
+                  <Link href="/za/complaint-management-software/">South Africa</Link>,{" "}
+                  <Link href="/ke/complaint-management-software/">Kenya</Link> and{" "}
+                  <Link href="/ng/complaint-management-software/">Nigeria</Link>; and{" "}
+                  <Link href="/ca/complaint-management-software/">Canada</Link>. Arabic pages cover the{" "}
+                  <Link href="/ar-ae/complaint-management-software/" hrefLang="ar-AE">UAE</Link> and{" "}
+                  <Link href="/ar-sa/complaint-management-software/" hrefLang="ar-SA">Saudi Arabia</Link>.
                 </>,
                 <>
                   If your focus is protecting reviews and front-line response, see{" "}

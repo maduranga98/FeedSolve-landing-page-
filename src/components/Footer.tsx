@@ -24,6 +24,15 @@ const FOOTER_DIRECTORY: { title: string; links: FooterLink[] }[] = [
       { href: "/uk/complaint-management-software/", label: "United Kingdom" },
       { href: "/au/complaint-management-software/", label: "Australia" },
       { href: "/au/customer-feedback-software/", label: "Australia: feedback software" },
+      { href: "/ca/complaint-management-software/", label: "Canada" },
+      { href: "/sg/complaint-management-software/", label: "Singapore" },
+      { href: "/my/complaint-management-software/", label: "Malaysia" },
+      { href: "/ph/complaint-management-software/", label: "Philippines" },
+      { href: "/za/complaint-management-software/", label: "South Africa" },
+      { href: "/ke/complaint-management-software/", label: "Kenya" },
+      { href: "/ng/complaint-management-software/", label: "Nigeria" },
+      { href: "/ar-ae/complaint-management-software/", label: "الإمارات (العربية)", lang: "ar-AE" },
+      { href: "/ar-sa/complaint-management-software/", label: "السعودية (العربية)", lang: "ar-SA" },
       { href: "/eu/gdpr-feedback-management/", label: "EU (GDPR)" },
       { href: "/br/", label: "Brasil (Português)", lang: "pt-BR" },
     ],
@@ -39,7 +48,7 @@ export default function Footer({ variant = "home", logoSrc }: FooterProps) {
   const resolvedLogo = logoSrc ?? "/brand-mark.webp";
 
   const productHref = variant === "blog" ? "/#solution" : "#solution";
-  const pricingHref = variant === "blog" ? "/#pricing" : "#pricing";
+  const pricingHref = variant === "blog" ? "/pricing/" : "#pricing";
 
   const LinkComponent = variant === "blog" ? Link : "a";
   const linkProps = (href: string) =>

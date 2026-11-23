@@ -26,6 +26,7 @@ const SOLUTIONS_GROUPS: NavGroup[] = [
     items: [
       { href: "/complaint-management-software/", label: "Complaint Management" },
       { href: "/digital-suggestion-box-software/", label: "Digital Suggestion Box" },
+      { href: "/employee-suggestion-box-software/", label: "Employee Suggestion Box" },
       { href: "/customer-feedback-software/", label: "Customer Feedback" },
       { href: "/qr-code-feedback/", label: "QR Code Feedback" },
       { href: "/feedback-tracking-code/", label: "Feedback Tracking Code" },
@@ -177,7 +178,7 @@ export default function Navbar({ variant = "home", logoSrc }: NavbarProps) {
   const navClass = variant === "home" ? (scrolled ? "scrolled" : "") : "scrolled";
 
   const productHref = variant === "blog" ? "/#solution" : "#solution";
-  const pricingHref = variant === "blog" ? "/#pricing" : "#pricing";
+  const pricingHref = variant === "blog" ? "/pricing/" : "#pricing";
   const demoHref = variant === "blog" ? "/#demo" : "#demo";
   const contactHref = variant === "blog" ? "/#contact" : "#contact";
   const heroHref = variant === "blog" ? "/" : "#hero";

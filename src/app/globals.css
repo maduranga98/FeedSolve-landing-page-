@@ -977,6 +977,16 @@ textarea:focus-visible {
 .br-card p { color: var(--text-mid); line-height: 1.65; font-size: 15px; }
 .br-card-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--teal-pale); color: var(--teal); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
 .br-card-link { text-decoration: none; transition: border-color var(--t), transform var(--t); }
+
+/* Arabic (RTL) pages: /ar-ae/ and /ar-sa/ reuse the br-* layout. Arabic script
+   needs an Arabic-capable font stack, no negative tracking and no uppercase
+   transforms, and accents that sit on the leading (right) edge. */
+.ar-page { font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro", "Arial", sans-serif; }
+.ar-page h1, .ar-page h2, .ar-page h3, .ar-page .br-step-num, .ar-page .br-answer-label, .ar-page .br-flag { letter-spacing: 0; text-transform: none; font-family: inherit; }
+.ar-page h1, .ar-page h2, .ar-page h3 { line-height: 1.35; }
+.ar-page .br-lead, .ar-page .br-answer p, .ar-page .br-card p, .ar-page .br-list li { line-height: 1.85; }
+.ar-page .br-answer { border-left: 1px solid var(--border); border-right: 4px solid var(--teal); }
+.ar-page [lang="en"] { font-family: var(--font-body), sans-serif; }
 .br-card-link:hover { border-color: var(--teal); transform: translateY(-2px); }
 
 .br-chips { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }

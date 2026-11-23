@@ -1485,9 +1485,9 @@ export const alternatives: Alternative[] = [
     name: "Uniqode",
     category: "qr-feedback",
     categoryLabel: "QR feedback tool",
-    metaTitle: "Uniqode Alternative That Resolves QR Feedback",
+    metaTitle: "Best Uniqode Alternative for QR Feedback",
     metaDescription:
-      "Looking for a Uniqode alternative? FeedSolve keeps QR-first, no-login feedback and adds assignment, status and tracking codes. 7-day free trial.",
+      "Need a Uniqode (Beaconstac) alternative? FeedSolve keeps no-login QR feedback and adds owners, status and a tracking code for every issue. 7-day free trial.",
     heroSubtitle:
       "Uniqode (formerly Beaconstac) is the QR specialist: personalized codes, per-location analytics, multi-language forms. But it is still a survey tool - feedback goes in, nothing comes out. FeedSolve matches the QR-first intake and adds the entire resolution layer.",
     quickAnswer: {

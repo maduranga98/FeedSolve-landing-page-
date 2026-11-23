@@ -143,6 +143,7 @@ export default function UKComplaintManagementPage() {
         }}
       />
       <Navbar variant="blog" />
+      <main id="main-content">
 
       {/* HERO */}
       <section
@@ -298,7 +299,7 @@ export default function UKComplaintManagementPage() {
               Try FeedSolve Free <ArrowRight size={16} />
             </a>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               className="btn-outline"
               style={{ borderColor: "rgba(255,255,255,0.3)", color: "white" }}
             >
@@ -1292,6 +1293,8 @@ export default function UKComplaintManagementPage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer variant="blog" />
     </>

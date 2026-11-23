@@ -97,6 +97,7 @@ export default function BrandedQRCodesClient() {
   return (
     <>
       <Navbar variant="blog" />
+      <main id="main-content">
 
       {/* HERO */}
       <section
@@ -226,7 +227,7 @@ export default function BrandedQRCodesClient() {
               Try FeedSolve Free <ArrowRight size={16} />
             </a>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               className="btn-outline"
               style={{ borderColor: "rgba(255,255,255,0.3)", color: "white" }}
             >
@@ -504,7 +505,7 @@ export default function BrandedQRCodesClient() {
           </div>
           <div style={{ textAlign: "center", marginTop: 24 }}>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               style={{
                 color: "var(--teal-text)",
                 fontSize: 15,
@@ -608,7 +609,7 @@ export default function BrandedQRCodesClient() {
               Try FeedSolve Free <ArrowRight size={17} />
             </a>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               className="btn-outline"
               style={{
                 borderColor: "rgba(255,255,255,0.3)",
@@ -710,6 +711,8 @@ export default function BrandedQRCodesClient() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer variant="blog" />
     </>

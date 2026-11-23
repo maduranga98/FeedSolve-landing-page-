@@ -73,7 +73,7 @@ function renderBody(text: string): React.ReactNode {
 }
 
 function normalizeInternalLink(url: string): string {
- if (url === "/pricing") return "/#pricing";
+ if (url === "/pricing") return "/pricing/";
  return url.endsWith("/") || url.includes("#") ? url : `${url}/`;
 }
 
@@ -111,6 +111,8 @@ export default function BlogPostView({
    <ReadingProgress />
 
    <Navbar variant="blog" />
+
+   <main id="main-content">
 
    <div className="article-wrap">
     {/* HERO */}
@@ -422,6 +424,8 @@ export default function BlogPostView({
      })}
     </div>
    </div>
+
+   </main>
 
    <Footer variant="blog" />
   </>

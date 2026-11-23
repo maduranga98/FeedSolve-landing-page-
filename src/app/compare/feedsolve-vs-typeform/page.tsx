@@ -181,6 +181,7 @@ export default function VsTypeform() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar variant="blog" />
+      <main id="main-content">
 
       {/* HERO */}
       <section
@@ -964,6 +965,8 @@ export default function VsTypeform() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer variant="blog" />
     </>

@@ -130,6 +130,7 @@ export default function EUGDPRFeedbackPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar variant="blog" />
+      <main id="main-content">
 
       {/* HERO */}
       <section
@@ -269,7 +270,7 @@ export default function EUGDPRFeedbackPage() {
               Try FeedSolve Free <ArrowRight size={16} />
             </a>
             <Link
-              href="/#pricing"
+              href="/pricing/"
               className="btn-outline"
               style={{ borderColor: "rgba(255,255,255,0.3)", color: "white" }}
             >
@@ -667,6 +668,8 @@ export default function EUGDPRFeedbackPage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer variant="blog" />
     </>

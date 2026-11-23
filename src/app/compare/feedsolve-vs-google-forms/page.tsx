@@ -175,6 +175,7 @@ export default function VsGoogleForms() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar variant="blog" />
+      <main id="main-content">
 
       {/* HERO */}
       <section
@@ -1119,6 +1120,8 @@ export default function VsGoogleForms() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer variant="blog" />
     </>
